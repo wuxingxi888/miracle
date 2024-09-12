@@ -1,0 +1,80 @@
+{
+  "name": "miracle",
+  "version": "0.0.1",
+  "description": "Mobile UI Components built on Vue",
+  "main": "lib/miracle.cjs.js",
+  "module": "es/index.mjs",
+  "style": "lib/index.css",
+  "typings": "lib/index.d.ts",
+  "unpkg": "lib/miracle.min.js",
+  "jsdelivr": "lib/miracle.min.js",
+  "files": [
+    "es",
+    "lib"
+  ],
+  "scripts": {
+    "dev": "miracle-cli dev",
+    "lint": "miracle-cli lint",
+    "test": "vitest run",
+    "build": "miracle-cli build",
+    "build:site": "miracle-cli build-site",
+    "release": "cp ../../README.md ./ && miracle-cli release --gitTag && rm ./README.md",
+    "release:site": "pnpm build:site && npx gh-pages -d site-dist --add",
+    "test:update": "vitest run -u",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "open:coverage": "open test/coverage/lcov-report/index.html"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wuxingxi888/miracle.git",
+    "directory": "packages/miracle"
+  },
+  "bugs": "https://github.com/wuxingxi888/miracle/issues",
+  "author": "TomCat",
+  "license": "MIT",
+  "keywords": [
+    "ui",
+    "vue",
+    "vue3",
+    "mobile",
+    "frontend",
+    "component",
+    "components"
+  ],
+  "dependencies": {
+    "@miracle/use": "workspace:^",
+    "@vue/shared": "^3.0.0"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.16.3",
+    "@miracle/cli": "workspace:*",
+    "@miracle/eslint-config": "workspace:*",
+    "@vitejs/plugin-vue": "^4.5.2",
+    "@vitejs/plugin-vue-jsx": "^3.1.0",
+    "@vitest/coverage-istanbul": "^1.1.3",
+    "@vue/runtime-core": "^3.4.13",
+    "@vue/test-utils": "^2.3.2",
+    "csstype": "^3.1.3",
+    "diffable-html": "^5.0.0",
+    "jsdom": "^22.1.0",
+    "typescript": "^5.0.4",
+    "vite": "^5.0.12",
+    "vitest": "^1.1.3",
+    "vitest-canvas-mock": "^0.3.3",
+    "vue": "^3.4.13",
+    "vue-router": "^4.1.6"
+  },
+  "sideEffects": [
+    "es/**/style/*",
+    "lib/**/style/*",
+    "*.css"
+  ],
+  "web-types": "lib/web-types.json"
+}

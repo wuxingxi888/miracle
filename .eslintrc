@@ -1,0 +1,7 @@
+{
+  "root": true,
+  "extends": ["@miracle"],
+  "rules": {
+    "prefer-object-spread": "off"
+  }
+}

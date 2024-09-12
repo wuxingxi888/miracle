@@ -1,0 +1,84 @@
+name: Deploy V4 Site
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'packages/miracle/docs/**'
+
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    if: github.repository == 'wuxingxi888/miracle'
+    runs-on: macos-14
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+        with:
+          ref: 'main'
+
+      - name: Install pnpm
+        run: corepack enable
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build Site
+        run: npm run build:site
+
+      # - name: Deploy for Gitee 🚀
+      #   uses: JamesIves/github-pages-deploy-action@v4.4.1
+      #   with:
+      #     branch: gh-pages
+      #     folder: packages/miracle/site-dist
+      #     # enable single-commit to reduce the repo size
+      #     single-commit: true
+      #     clean: true
+      #     clean-exclude: |
+      #       1.x/*
+      #       1.x/**/*
+      #       next/*
+      #       next/**/*
+      #       v1/*
+      #       v1/**/*
+      #       v2/*
+      #       v2/**/*
+      #       v3/*
+      #       v3/**/*
+      #       v4/*
+      #       v4/**/*
+      #       miracle-use/*
+      #       miracle-use/**/*
+
+      - name: Deploy for GitHub 🚀
+        uses: JamesIves/github-pages-deploy-action@v4.4.1
+        with:
+          branch: main
+          folder: packages/miracle/site-dist
+          token: ${{ secrets.MIRACLE_UI_TOKEN }}
+          repository-name: wuxingxi888/miracle
+          target-folder: miracle
+          # enable single-commit to reduce the repo size
+          single-commit: true
+          clean: true
+          clean-exclude: |
+            1.x/*
+            1.x/**/*
+            next/*
+            next/**/*
+            v1/*
+            v1/**/*
+            v2/*
+            v2/**/*
+            v3/*
+            v3/**/*
+            v4/*
+            v4/**/*
+            miracle-use/*
+            miracle-use/**/*
