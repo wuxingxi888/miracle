@@ -1,4 +1,4 @@
-name: Deploy V4 Site
+name: Deploy Web Site
 
 on:
   push:
@@ -61,7 +61,7 @@ jobs:
         with:
           branch: main
           folder: packages/miracle/site-dist
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.MIRACLE_UI_DEP_TOKEN }}
           repository-name: wuxingxi888/miracle
           target-folder: miracle
           # enable single-commit to reduce the repo size
