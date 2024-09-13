@@ -63,7 +63,7 @@ jobs:
           folder: packages/miracle/site-dist
           token: ${{ secrets.MIRACLE_UI_DEP_TOKEN }}
           repository-name: wuxingxi888/miracle
-          target-folder: miracle
+          target-folder: /
           # enable single-commit to reduce the repo size
           single-commit: true
           clean: true
