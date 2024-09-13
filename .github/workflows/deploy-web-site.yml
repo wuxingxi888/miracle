@@ -59,7 +59,7 @@ jobs:
       - name: Deploy for GitHub 🚀
         uses: JamesIves/github-pages-deploy-action@v4.4.1
         with:
-          branch: main
+          branch: gh-pages
           folder: packages/miracle/site-dist
           token: ${{ secrets.MIRACLE_UI_DEP_TOKEN }}
           repository-name: wuxingxi888/miracle
