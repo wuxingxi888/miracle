@@ -61,7 +61,7 @@ jobs:
         with:
           branch: main
           folder: packages/miracle/site-dist
-          token: ${{ secrets.MIRACLE_UI_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           repository-name: wuxingxi888/miracle
           target-folder: miracle
           # enable single-commit to reduce the repo size
