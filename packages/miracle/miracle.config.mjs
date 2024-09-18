@@ -51,43 +51,36 @@ export default {
           {
             title: '开发指南',
             items: [
-              {
-                path: 'home',
-                title: '介绍',
-              },
-              {
-                path: 'quickstart',
-                title: '快速上手',
-              },
-              {
-                path: 'advanced-usage',
-                title: '进阶用法',
-              },
-              {
-                path: 'faq',
-                title: '常见问题',
-              },
-              {
-                path: 'changelog',
-                title: '更新日志',
-              },
-              {
-                path: 'contribution',
-                title: '贡献指南',
-              },
-              {
-                path: 'locale',
-                title: '国际化',
-              },
+              { path: 'home', title: '介绍' },
+              { path: 'quickstart', title: '快速上手' },
+              { path: 'advanced-usage', title: '进阶用法' },
+              { path: 'faq', title: '常见问题' },
+              { path: 'changelog', title: '更新日志' },
+              { path: 'contribution', title: '贡献指南' },
+              { path: 'locale', title: '国际化' },
             ],
           },
           {
             title: '基础组件',
             items: [
-              // {
-              //   path: 'button',
-              //   title: 'Button 按钮',
-              // }
+              // { path: 'button', title: 'Button 按钮' }
+            ],
+          },
+          {
+            title: '组合式 API',
+            items: [
+              { path: 'use-intro', title: '介绍' },
+              { path: 'use-click-away', title: 'useClickAway' },
+              { path: 'use-count-down', title: 'useCountDown' },
+              { path: 'use-custom-field-value', title: 'useCustomFieldValue' },
+              { path: 'use-event-listener', title: 'useEventListener' },
+              { path: 'use-page-visibility', title: 'usePageVisibility' },
+              { path: 'use-rect', title: 'useRect' },
+              { path: 'use-relation', title: 'useRelation' },
+              { path: 'use-scroll-parent', title: 'useScrollParent' },
+              { path: 'use-toggle', title: 'useToggle' },
+              { path: 'use-window-size', title: 'useWindowSize' },
+              { path: 'use-raf', title: 'useRaf' },
             ],
           },
         ],
