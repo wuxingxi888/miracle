@@ -34,7 +34,6 @@ function getHTMLMeta(MiracleConfig: any) {
 
 export function getTemplateParams() {
   const miracleConfig = getMiracleConfig();
-  console.log('%c [ MiracleConfig ]-37', 'font-size:13px; background:pink; color:#bf2c9f;', miracleConfig)
   const siteConfig = getSiteConfig(miracleConfig);
   const title = getTitle(siteConfig);
   const headHtml = miracleConfig.site?.headHtml;

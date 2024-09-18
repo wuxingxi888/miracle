@@ -24,7 +24,7 @@ export default {
   },
   vanPagination: {
     prev: 'Précédent',
-    next: 'Suivant',
+    next: 'Suimiracle',
   },
   vanPullRefresh: {
     pulling: 'Tirer pour actualiser ...',

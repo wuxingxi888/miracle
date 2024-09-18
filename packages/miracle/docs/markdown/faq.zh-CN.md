@@ -1,10 +1,10 @@
 # 常见问题
 
-### 如何自定义 Vant 组件的样式？
+### 如何自定义 Miracle 组件的样式？
 
 #### 1. 主题定制
 
-Vant 基于 CSS 变量提供了主题定制的能力，可以对组件样式进行统一修改，详见 [ConfigProvider 全局配置](#/zh-CN/config-provider) 组件。
+Miracle 基于 CSS 变量提供了主题定制的能力，可以对组件样式进行统一修改，详见 [ConfigProvider 全局配置](#/zh-CN/config-provider) 组件。
 
 #### 2. 覆盖默认样式
 
@@ -12,7 +12,7 @@ Vant 基于 CSS 变量提供了主题定制的能力，可以对组件样式进�
 
 ```html
 <template>
-  <van-button class="my-button">按钮</van-button>
+  <mi-button class="my-button">按钮</mi-button>
 </template>
 
 <style>
@@ -22,7 +22,7 @@ Vant 基于 CSS 变量提供了主题定制的能力，可以对组件样式进�
   }
 
   /** 覆盖 Button 内部子元素的样式 */
-  .my-button .van-button__text {
+  .my-button .mi-button__text {
     color: red;
   }
 </style>
@@ -30,22 +30,22 @@ Vant 基于 CSS 变量提供了主题定制的能力，可以对组件样式进�
 
 ### 在 HTML 中无法正确渲染组件？
 
-在 HTML 中使用 Vant 组件时，你可能会碰到部分示例代码无法正确渲染的情况，比如下面的用法：
+在 HTML 中使用 Miracle 组件时，你可能会碰到部分示例代码无法正确渲染的情况，比如下面的用法：
 
 ```html
-<van-cell-group>
-  <van-cell title="单元格" value="内容" />
-  <van-cell title="单元格" value="内容" />
-</van-cell-group>
+<mi-cell-group>
+  <mi-cell title="单元格" value="内容" />
+  <mi-cell title="单元格" value="内容" />
+</mi-cell-group>
 ```
 
-这是因为 HTML 并不支持自闭合的自定义元素，也就是说 `<van-cell />` 这样的语法是不被识别的，使用完整的闭合标签可以避免这个问题：
+这是因为 HTML 并不支持自闭合的自定义元素，也就是说 `<mi-cell />` 这样的语法是不被识别的，使用完整的闭合标签可以避免这个问题：
 
 ```html
-<van-cell-group>
-  <van-cell title="单元格" value="内容"></van-cell>
-  <van-cell title="单元格" value="内容"></van-cell>
-</van-cell-group>
+<mi-cell-group>
+  <mi-cell title="单元格" value="内容"></mi-cell>
+  <mi-cell title="单元格" value="内容"></mi-cell>
+</mi-cell-group>
 ```
 
 在单文件组件、字符串模板和 JSX 中可以使用自闭合的自定义元素，因此不会出现这个问题。
@@ -70,9 +70,9 @@ Select 是桌面端常用的组件，但它的交互形式不适合移动端。
 
 ### 是否支持在 uni-app 中使用？
 
-Vant 所有组件都是基于 Vue 框架实现的，没有针对 uni-app 进行适配，因此不保证各个组件在 uni-app 下的可用性。
+Miracle 所有组件都是基于 Vue 框架实现的，没有针对 uni-app 进行适配，因此不保证各个组件在 uni-app 下的可用性。
 
-如果你在 uni-app 中使用 Vant 遇到问题，建议向 uni-app 进行反馈。
+如果你在 uni-app 中使用 Miracle 遇到问题，建议向 uni-app 进行反馈。
 
 ### 部分组件无法在桌面端进行操作？
 

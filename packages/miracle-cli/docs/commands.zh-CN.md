@@ -1,16 +1,16 @@
 # 命令
 
-Vant CLI 中内置了一系列的命令，可以将命令添加到 npm scripts 中进行使用。
+Miracle CLI 中内置了一系列的命令，可以将命令添加到 npm scripts 中进行使用。
 
 ```json
 // package.json
 {
   "scripts": {
-    "dev": "vant-cli dev",
-    "test": "vant-cli test",
-    "lint": "vant-cli lint",
-    "release": "vant-cli release",
-    "build-site": "vant-cli build-site"
+    "dev": "miracle-cli dev",
+    "test": "miracle-cli test",
+    "lint": "miracle-cli lint",
+    "release": "miracle-cli release",
+    "build-site": "miracle-cli build-site"
   }
 }
 ```
@@ -18,20 +18,20 @@ Vant CLI 中内置了一系列的命令，可以将命令添加到 npm scripts �
 也可以通过 npm 自带的 [npx](https://github.com/npm/npx) 直接执行某个命令：
 
 ```bash
-npx vant-cli dev
+npx miracle-cli dev
 ```
 
 ### dev
 
 运行本地开发环境。
 
-运行 dev 命令时，Vant CLI 会通过启动一个本地服务器，用于在开发过程中对文档和示例进行预览。
+运行 dev 命令时，Miracle CLI 会通过启动一个本地服务器，用于在开发过程中对文档和示例进行预览。
 
 ### build
 
 构建组件库。
 
-运行 build 命令会在 `es` 和 `lib` 目录下生成可用于生产环境的组件代码，详见 [目录结构](https://github.com/vant-ui/vant/tree/main/packages/vant-cli/docs/directory.zh-CN.md)。
+运行 build 命令会在 `es` 和 `lib` 目录下生成可用于生产环境的组件代码，详见 [目录结构](https://github.com/wuxingxi888/miracle/blob/main/packages/miracle-cli/docs/directory.zh-CN.md)。
 
 发布 npm 时，请将以下配置加入到 `package.json` 中，使 npm 包能被正确识别:
 
@@ -57,5 +57,5 @@ npx vant-cli dev
 校验 commit message 的格式是否符合规范，需要配合 `husky` 在提交 commit 时触发。
 
 ```bash
-npx husky add .husky/commit-msg 'npx --no-install vant-cli commit-lint $1'
+npx husky add .husky/commit-msg 'npx --no-install miracle-cli commit-lint $1'
 ```

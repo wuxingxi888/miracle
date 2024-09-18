@@ -9,7 +9,7 @@
 ### 基本用法
 
 ```js
-import { useToggle } from '@vant/use';
+import { useToggle } from '@miracle/use';
 
 export default {
   setup() {
@@ -30,7 +30,7 @@ export default {
 ### 设置默认值
 
 ```js
-import { useToggle } from '@vant/use';
+import { useToggle } from '@miracle/use';
 
 export default {
   setup() {

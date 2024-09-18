@@ -10,7 +10,8 @@
     "test:coverage": "pnpm --dir ./packages/miracle test:coverage",
     "build": "pnpm --dir ./packages/miracle build",
     "build:site": "pnpm --dir ./packages/miracle build:site",
-    "clean": "find ./ -type d -name 'node_modules' -exec rm -rf {} +"
+    "clean": "find ./ -type d -name 'node_modules' -exec rm -rf {} +",
+    "reboot": "pnpm clean && pnpm install && pnpm dev"
   },
   "nano-staged": {
     "*.md": "prettier --write",

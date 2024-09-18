@@ -10,7 +10,7 @@
 
 ```js
 import { watch } from 'vue';
-import { usePageVisibility } from '@vant/use';
+import { usePageVisibility } from '@miracle/use';
 
 export default {
   setup() {

@@ -50,7 +50,7 @@ npm create rsbuild@latest
 
 ### 维护状态
 
-目前 Vant 各个版本的维护状态如下：
+目前 Miracle 各个版本的维护状态如下：
 
 | 名称 | 框架 | 发布时间 | 最新版 | 维护状态 |
 | --- | --- | --- | --- | --- |
@@ -69,10 +69,9 @@ npm create rsbuild@latest
 
 ### 其他链接
 
-<!-- - [意见反馈](https://github.com/vant-ui/vant/issues) -->
-
+- [意见反馈](https://github.com/wuxingxi888/miracle/issues)
 - [更新日志](#/zh-CN/changelog)
-<!-- - [码云镜像仓库](https://gitee.com/vant-contrib/vant) -->
+- [码云镜像仓库](https://gitee.com/tianqijizhang/miracle.git)
 
 ## 贡献
 
@@ -84,19 +83,11 @@ npm create rsbuild@latest
 | :-: | :-: | :-: | :-: | :-: | :-: |
 | [Tom Cat](https://github.com/wuxingxi888/) |  |  |  |  |  |
 
-### 贡献者们
-
-感谢以下小伙伴们为 Miracle UI 发展做出的贡献： 暂无贡献者，欢迎大家踊跃贡献！
-
-<a href="" target="_black">
-  <!-- <img src="https://opencollective.com/vant/contributors.svg?width=890&button=false" alt="contributors" style="width: 100%; margin: 16px 0"> -->
-</a>
-
 ### 贡献指南
 
 贡献代码请阅读我们的[贡献指南](#/zh-CN/contribution)。
 
-<!-- 使用过程中发现任何问题都可以提 [Issue](https://github.com/vant-ui/vant/issues) 给我们，当然，我们也非常欢迎你给我们发 [PR](https://github.com/vant-ui/vant/pulls)。 -->
+使用过程中发现任何问题都可以提 [Issue](https://github.com/wuxingxi888/miracle/issues) 给我们，当然，我们也非常欢迎你给我们发 [PR](https://github.com/wuxingxi888/miracle/pulls)。
 
 ### 开源协议
 

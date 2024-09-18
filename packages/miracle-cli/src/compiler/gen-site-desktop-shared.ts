@@ -41,7 +41,7 @@ function resolveDocuments(components: string[]): DocumentItem[] {
   if (locales) {
     const langs = Object.keys(locales);
     langs.forEach((lang) => {
-      const fileName = lang === defaultLang ? 'README.md' : `README.${lang}.md`;
+      const fileName = lang === defaultLang ? `README.${lang}.md` : 'README.md';
       components.forEach((component) => {
         docs.push({
           name: formatName(component, lang),

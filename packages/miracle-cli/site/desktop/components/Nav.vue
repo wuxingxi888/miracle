@@ -71,7 +71,7 @@ export default {
   z-index: 1;
   min-width: var(--mi-doc-nav-width);
   max-width: var(--mi-doc-nav-width);
-  height: calc( 100vh - 95px - var(--mi-doc-padding));
+  height: calc(100vh - 95px - var(--mi-doc-padding));
   border-radius: var(--mi-doc-border-radius);
   overflow-y: scroll;
   background-color: var(--mi-doc-background-2);
@@ -85,6 +85,7 @@ export default {
     position: fixed;
     top: 95px;
   }
+
   &::-webkit-scrollbar {
     width: 6px;
     height: 6px;

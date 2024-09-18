@@ -11,7 +11,7 @@
 通过 `useRaf` 方法，可以在下一次浏览器重新绘制之前调用指定的函数。
 
 ```js
-import { useRaf } from '@vant/use';
+import { useRaf } from '@miracle/use';
 
 export default {
   setup() {
@@ -28,7 +28,7 @@ export default {
 通过开启 `isLoop` 选项，你可以按指定的间隔重复执行某个函数，直到被取消。
 
 ```js
-import { useRaf } from '@vant/use';
+import { useRaf } from '@miracle/use';
 
 export default {
   setup() {

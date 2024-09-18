@@ -26,6 +26,10 @@ module.exports = {
     'prefer-destructuring': ['error', { object: true, array: false }],
     // eslint-plugin-vue
     'vue/no-v-html': 'off',
+    'vue/no-v-text-v-html-on-component': [
+      'error',
+      { allow: ['router-link', 'nuxt-link'] },
+    ],
     'vue/attributes-order': 'off',
     'vue/require-v-for-key': 'off',
     'vue/require-default-prop': 'off',

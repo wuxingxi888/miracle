@@ -1,4 +1,4 @@
-import { inBrowser } from '@vant/use';
+import { inBrowser } from '@miracle/use';
 import Locale from '../../src/locale';
 import enUS from '../../src/locale/lang/en-US';
 import { camelize, createTranslate } from '../../src/utils';

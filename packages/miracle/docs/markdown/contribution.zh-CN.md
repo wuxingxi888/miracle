@@ -2,9 +2,9 @@
 
 ### 介绍
 
-感谢你使用 Vant。
+感谢你使用 Miracle。
 
-以下是关于向 Vant 提交反馈或代码的指南。在向 Vant 提交 issue 或者 PR 之前，请先花几分钟时间阅读以下内容。
+以下是关于向 Miracle 提交反馈或代码的指南。在向 Miracle 提交 issue 或者 PR 之前，请先花几分钟时间阅读以下内容。
 
 ### Issue 规范
 
@@ -17,11 +17,11 @@
 
 在进行本地开发前，请先确保你的开发环境中安装了 [Node.js >= 18](https://nodejs.org)。
 
-按照下面的步骤操作，即可在本地开发 Vant 组件。
+按照下面的步骤操作，即可在本地开发 Miracle 组件。
 
 ```bash
 # 克隆仓库
-git clone git@github.com:vant-ui/vant.git
+git https://github.com/wuxingxi888/miracle.git
 
 # 启用 pnpm 包管理器
 corepack enable
@@ -33,47 +33,41 @@ pnpm i
 pnpm dev
 ```
 
-仓库的不同分支对应不同的 Vant 版本，请切换到对应分支进行开发：
-
-- main 分支对应 Vant 4 版本，适用于 Vue 3
-- 3.x 分支对应 Vant 3 版本 ，适用于 Vue 3
-- 2.x 分支对应 Vant 2 版本，适用于 Vue 2
-
 ### 镜像仓库
 
-如果 GitHub 克隆速度较慢，你也可以直接克隆 Vant 在 gitee 上的[镜像仓库](https://gitee.com/vant-contrib/vant)：
+如果 GitHub 克隆速度较慢，你也可以直接克隆 Miracle 在 gitee 上的[镜像仓库](https://gitee.com/miracle/miracle)：
 
 ```bash
-git clone git@gitee.com:vant-contrib/vant.git
+git clone git@gitee.com:miracle/miracle.git
 ```
 
 镜像仓库仅用于加快国内的访问速度，请勿在镜像仓库中提 issue 和 Pull Request。
 
 ### 目录结构
 
-Vant 采用 monorepo 进行代码管理，所有子包在 `packages` 目录下:
+Miracle 采用 monorepo 进行代码管理，所有子包在 `packages` 目录下:
 
 ```
 root
 └─ packages
-   ├─ vant        # 组件库
-   ├─ vant-cli    # 脚手架
-   ├─ vant-icons  # 图标库
-   ├─ vant-use    # Composition API
+   ├─ miracle        # 组件库
+   ├─ miracle-cli    # 脚手架
+   ├─ miracle-icons  # 图标库
+   ├─ miracle-use    # Composition API
    └─ ....        # 其他周边 npm 包
 ```
 
-其中，`packages/vant` 目录为组件库的核心代码：
+其中，`packages/miracle` 目录为组件库的核心代码：
 
 ```
-vant
+miracle
 ├─ docs             # 文档
 ├─ src              # 组件源代码
 ├─ test             # 单测工具类
-└─ vant.config.mjs  # 文档网站配置
+└─ miracle.config.mjs  # 文档网站配置
 ```
 
-`packages/vant/src` 目录包含各个组件的源码，每个文件夹对应一个组件：
+`packages/miracle/src` 目录包含各个组件的源码，每个文件夹对应一个组件：
 
 ```
 src
@@ -118,7 +112,7 @@ src
 2. 基于 fork 后仓库的 main 分支新建一个分支，比如 `feature/button_color`。
 3. 在新分支上进行开发，开发完成后，提 Pull Request 到主仓库的 main 分支。
 4. Pull Request 会在 Review 通过后被合并到主仓库。
-5. 等待 Vant 发布新版本，一般是每周一次。
+5. 等待 Miracle 发布新版本。
 
 ### Pull Request 标题格式
 
@@ -157,7 +151,7 @@ type(ComponentName?)：commit message
 
 ```bash
 # 添加主仓库到 remote
-git remote add upstream git@github.com:vant-ui/vant.git
+git remote add upstream git@github.com:wuxingxi888/miracle.git
 
 # 拉取主仓库最新代码
 git fetch upstream

@@ -14,7 +14,7 @@
 
 ```js
 import { ref, watch } from 'vue';
-import { useScrollParent, useEventListener } from '@vant/use';
+import { useScrollParent, useEventListener } from '@miracle/use';
 
 export default {
   setup() {

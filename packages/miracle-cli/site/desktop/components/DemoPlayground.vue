@@ -72,22 +72,27 @@ export default {
   border: 1px solid #ebedf1;
   border-radius: 1px;
   margin: 24px 0;
+
   &.transform {
     transform: translate(0, 0);
   }
+
   &--previewer {
     padding: 40px 24px;
     border-bottom: 1px solid #ebedf1;
+
     &.compact {
       padding: 0;
     }
   }
+
   &--code {
     &--actions {
       display: flex;
       height: 40px;
       padding: 0 1em;
       align-items: center;
+
       > a:not(:last-child),
       > button:not(:last-child) {
         margin-right: 8px;
@@ -191,11 +196,14 @@ export default {
         display: inline-block;
       }
     }
+
     &--content {
       border-top: 1px dashed #ebedf1;
+
       :deep(pre) {
         margin: 0;
       }
+
       :deep(.language-html) {
         border-radius: 0;
       }

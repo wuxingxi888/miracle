@@ -17,7 +17,7 @@
 ```js
 // MyComponent.vue
 import { ref } from 'vue';
-import { useCustomFieldValue } from '@vant/use';
+import { useCustomFieldValue } from '@miracle/use';
 
 export default {
   setup() {

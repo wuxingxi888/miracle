@@ -2,32 +2,32 @@
 
 ### 介绍
 
-Vant 底层依赖了 `@vant/use` 包，其中内置了一系列的组合式 API。对于使用了 Vant 的项目，可以复用这些 API 进行开发。
+Miracle 底层依赖了 `@miracle/use` 包，其中内置了一系列的组合式 API。对于使用了 Miracle 的项目，可以复用这些 API 进行开发。
 
 ### 安装
 
-虽然 Vant 的依赖中已经包含了 `@vant/use`，但我们仍然推荐显式地安装它：
+虽然 Miracle 的依赖中已经包含了 `@miracle/use`，但我们仍然推荐显式地安装它：
 
 ```shell
 # with npm
-npm i @vant/use
+npm i @miracle/use
 
 # with yarn
-yarn add @vant/use
+yarn add @miracle/use
 
 # with pnpm
-pnpm add @vant/use
+pnpm add @miracle/use
 
 # with Bun
-bun add @vant/use
+bun add @miracle/use
 ```
 
 ### 示例
 
-下面是一个 Vant 组合式 API 的用法示例，我们从 `@vant/use` 这个包中引入 `useWindowSize` 方法，然后进行调用，即可获取到当前 Window 的宽度和高度。
+下面是一个 Miracle 组合式 API 的用法示例，我们从 `@miracle/use` 这个包中引入 `useWindowSize` 方法，然后进行调用，即可获取到当前 Window 的宽度和高度。
 
 ```js
-import { useWindowSize } from '@vant/use';
+import { useWindowSize } from '@miracle/use';
 
 const { width, height } = useWindowSize();
 
@@ -37,7 +37,7 @@ console.log(height.value); // -> 窗口高度
 
 ### API 列表
 
-下面是 Vant 对外提供的所有组合式 API，点击名称可以查看详细介绍：
+下面是 Miracle 对外提供的所有组合式 API，点击名称可以查看详细介绍：
 
 | 名称 | 描述 |
 | --- | --- |

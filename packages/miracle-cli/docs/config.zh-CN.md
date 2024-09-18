@@ -1,7 +1,7 @@
 # 配置指南
 
 - [配置指南](#----)
-  - [vant.config.mjs](#vantconfigmjs)
+  - [miracle.config.mjs](#miracleconfigmjs)
     - [name](#name)
     - [build.css.base](#buildcssbase)
     - [build.css.preprocessor](#buildcsspreprocessor)
@@ -24,9 +24,9 @@
     - [默认配置](#-----1)
   - [browserslist](#browserslist)
 
-## vant.config.mjs
+## miracle.config.mjs
 
-`vant.config.mjs` 中包含了 `vant-cli` 的打包配置和文档站点配置，请创建此文件并置于项目根目录下。下面是一份基本配置的示例：
+`miracle.config.mjs` 中包含了 `miracle-cli` 的打包配置和文档站点配置，请创建此文件并置于项目根目录下。下面是一份基本配置的示例：
 
 ```js
 export default {
@@ -43,7 +43,7 @@ export default {
     // 标题
     title: 'Demo UI',
     // 图标
-    logo: 'https://fastly.jsdelivr.net/npm/@vant/assets/logo.png',
+    logo: 'https://fastly.jsdelivr.net/npm/@miracle/assets/logo.png',
     // 描述
     description: '示例组件库',
     // 左侧导航
@@ -179,7 +179,7 @@ module.exports = {
 - Type: `(config: InlineConfig): InlineConfig | undefined`
 - Default: `undefined`
 
-vant-cli 使用 vite 来构建组件库和文档站点，通过 `configureVite` 选项可以自定义 [vite 配置](https://vitejs.dev/config/)（从 4.0.0 版本开始支持）。
+miracle-cli 使用 vite 来构建组件库和文档站点，通过 `configureVite` 选项可以自定义 [vite 配置](https://vitejs.dev/config/)（从 4.0.0 版本开始支持）。
 
 ```js
 module.exports = {
@@ -214,9 +214,9 @@ module.exports = {
 };
 ```
 
-注意，由于 `vant.config.mjs` 文件会被打包到文档网站的代码中，因此 `configureVite` 中不允许引用 vite 插件。
+注意，由于 `miracle.config.mjs` 文件会被打包到文档网站的代码中，因此 `configureVite` 中不允许引用 vite 插件。
 
-如果需要配置 vite 插件，可以在 `vant.config.mjs` 的同级目录下创建 `vite.config.ts` 文件，在该文件中你可以添加任意的 vite 配置（该特性从 @vant/cli 5.1.0 版本开始支持）。
+如果需要配置 vite 插件，可以在 `miracle.config.mjs` 的同级目录下创建 `vite.config.ts` 文件，在该文件中你可以添加任意的 vite 配置（该特性从 @miracle/cli 5.1.0 版本开始支持）。
 
 ### build.packageManager
 
@@ -328,8 +328,8 @@ module.exports = {
   site: {
     versions: [
       {
-        label: 'v1',
-        link: 'https://vant-ui.github.io/vant/v1/',
+        label: 'miracle-cli',
+        link: 'https://github.com/wuxingxi888/miracle/tree/main/packages/miracle-cli',
       },
     ],
   },
@@ -397,7 +397,7 @@ module.exports = {
 
 ### 默认配置
 
-`vant-cli` 中默认的 PostCSS 配置如下：
+`miracle-cli` 中默认的 PostCSS 配置如下：
 
 ```js
 module.exports = {
