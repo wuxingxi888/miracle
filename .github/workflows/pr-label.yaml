@@ -1,0 +1,21 @@
+# 在 PR 被打开或编辑时触发，并根据 .github/pr-labeler.yml 文件中的配置进行标签的同步和匹配。
+name: PR Labeler
+
+on:
+  pull_request_target:
+    types:
+      - opened
+      - edited
+
+jobs:
+  change-labeling:
+    name: Labeling for changes
+    runs-on: ubuntu-latest
+    steps:
+      - uses: github/issue-labeler@v3.2
+        with:
+          repo-token: '${{ secrets.GITHUB_TOKEN }}'
+          configuration-path: .github/pr-labeler.yml
+          enable-versioned-regex: 0
+          include-title: 1
+          sync-labels: 1

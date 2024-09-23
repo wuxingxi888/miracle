@@ -1,0 +1,49 @@
+{
+  "name": "@miracle/use",
+  "version": "1.6.0",
+  "description": "Miracle Composition API",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.mjs",
+  "typings": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.esm.mjs",
+      "require": "./dist/index.cjs.js"
+    }
+  },
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "dev": "node ./build.js -w",
+    "build:types": "tsc -p ./tsconfig.json --emitDeclarationOnly",
+    "build:bundle": "node ./build.js",
+    "build": "pnpm clean && pnpm build:bundle && pnpm build:types",
+    "release": "miracle-cli release",
+    "prepare": "pnpm build"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wuxingxi888/miracle.git",
+    "directory": "packages/miracle-use"
+  },
+  "bugs": "https://github.com/wuxingxi888/miracle/issues",
+  "author": "chenjiahan",
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "^0.23.1",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.5.4",
+    "vue": "^3.5.5"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  }
+}

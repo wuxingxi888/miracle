@@ -1,0 +1,36 @@
+{
+  "private": true,
+  "scripts": {
+    "prepare": "husky",
+    "dev": "pnpm --dir ./packages/miracle dev",
+    "lint": "eslint \"./packages/**/{src,test}/**/*.{vue,ts,tsx,js,mjs,cjs}\"",
+    "test": "pnpm --dir ./packages/miracle test",
+    "test:watch": "pnpm --dir ./packages/miracle test:watch",
+    "test:update": "pnpm --dir ./packages/miracle test:update",
+    "test:coverage": "pnpm --dir ./packages/miracle test:coverage",
+    "build": "pnpm --dir ./packages/miracle build",
+    "build:site": "pnpm --dir ./packages/miracle build:site",
+    "clean": "find ./ -type d -name 'node_modules' -exec rm -rf {} +",
+    "reboot": "pnpm clean && pnpm install && pnpm dev"
+  },
+  "nano-staged": {
+    "*.md": "prettier --write",
+    "*.{ts,tsx,js,vue,less}": "prettier --write",
+    "*.{ts,tsx,js,vue}": "eslint --fix"
+  },
+  "engines": {
+    "pnpm": ">= 9.9.0"
+  },
+  "packageManager": "pnpm@9.9.0",
+  "devDependencies": {
+    "@miracle/cli": "workspace:*",
+    "@miracle/eslint-config": "workspace:*",
+    "eslint": "^8.57.0",
+    "husky": "^9.1.6",
+    "nano-staged": "^0.8.0",
+    "prettier": "^3.3.3"
+  },
+  "overrides": {
+    "esbuild": "^0.23.1"
+  }
+}
