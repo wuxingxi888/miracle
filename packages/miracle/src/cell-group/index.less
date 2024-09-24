@@ -1,0 +1,32 @@
+:root,
+:host {
+  --mi-cell-group-background: var(--mi-background-2);
+  --mi-cell-group-title-color: var(--mi-text-color-2);
+  --mi-cell-group-title-padding: var(--mi-padding-md) var(--mi-padding-md);
+  --mi-cell-group-title-font-size: var(--mi-font-size-md);
+  --mi-cell-group-title-line-height: 16px;
+  --mi-cell-group-inset-padding: 0 var(--mi-padding-md);
+  --mi-cell-group-inset-radius: var(--mi-radius-lg);
+  --mi-cell-group-inset-title-padding: var(--mi-padding-md) var(--mi-padding-md);
+}
+
+.mi-cell-group {
+  background: var(--mi-cell-group-background);
+
+  &--inset {
+    margin: var(--mi-cell-group-inset-padding);
+    border-radius: var(--mi-cell-group-inset-radius);
+    overflow: hidden;
+  }
+
+  &__title {
+    padding: var(--mi-cell-group-title-padding);
+    color: var(--mi-cell-group-title-color);
+    font-size: var(--mi-cell-group-title-font-size);
+    line-height: var(--mi-cell-group-title-line-height);
+
+    &--inset {
+      padding: var(--mi-cell-group-inset-title-padding);
+    }
+  }
+}

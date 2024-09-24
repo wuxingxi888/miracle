@@ -1,5 +1,5 @@
 export default {
-  name: 'vant-icon',
+  name: 'miracle-icon',
   basic: [
     'arrow',
     'arrow-left',

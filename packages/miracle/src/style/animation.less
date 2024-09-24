@@ -1,52 +1,52 @@
-@keyframes van-slide-up-enter {
+@keyframes mi-slide-up-enter {
   from {
     transform: translate3d(0, 100%, 0);
   }
 }
 
-@keyframes van-slide-up-leave {
+@keyframes mi-slide-up-leave {
   to {
     transform: translate3d(0, 100%, 0);
   }
 }
 
-@keyframes van-slide-down-enter {
+@keyframes mi-slide-down-enter {
   from {
     transform: translate3d(0, -100%, 0);
   }
 }
 
-@keyframes van-slide-down-leave {
+@keyframes mi-slide-down-leave {
   to {
     transform: translate3d(0, -100%, 0);
   }
 }
 
-@keyframes van-slide-left-enter {
+@keyframes mi-slide-left-enter {
   from {
     transform: translate3d(-100%, 0, 0);
   }
 }
 
-@keyframes van-slide-left-leave {
+@keyframes mi-slide-left-leave {
   to {
     transform: translate3d(-100%, 0, 0);
   }
 }
 
-@keyframes van-slide-right-enter {
+@keyframes mi-slide-right-enter {
   from {
     transform: translate3d(100%, 0, 0);
   }
 }
 
-@keyframes van-slide-right-leave {
+@keyframes mi-slide-right-leave {
   to {
     transform: translate3d(100%, 0, 0);
   }
 }
 
-@keyframes van-fade-in {
+@keyframes mi-fade-in {
   from {
     opacity: 0;
   }
@@ -56,7 +56,7 @@
   }
 }
 
-@keyframes van-fade-out {
+@keyframes mi-fade-out {
   from {
     opacity: 1;
   }
@@ -66,7 +66,7 @@
   }
 }
 
-@keyframes van-rotate {
+@keyframes mi-rotate {
   from {
     transform: rotate(0deg);
   }
@@ -76,60 +76,58 @@
   }
 }
 
-.van-fade {
+.mi-fade {
   &-enter-active {
-    animation: var(--van-duration-base) van-fade-in both var(--van-ease-out);
+    animation: var(--mi-duration-base) mi-fade-in both var(--mi-ease-out);
   }
 
   &-leave-active {
-    animation: var(--van-duration-base) van-fade-out both var(--van-ease-in);
+    animation: var(--mi-duration-base) mi-fade-out both var(--mi-ease-in);
   }
 }
 
-.van-slide-up {
+.mi-slide-up {
   &-enter-active {
-    animation: van-slide-up-enter var(--van-duration-base) both
-      var(--van-ease-out);
+    animation: mi-slide-up-enter var(--mi-duration-base) both var(--mi-ease-out);
   }
 
   &-leave-active {
-    animation: van-slide-up-leave var(--van-duration-base) both
-      var(--van-ease-in);
+    animation: mi-slide-up-leave var(--mi-duration-base) both var(--mi-ease-in);
   }
 }
 
-.van-slide-down {
+.mi-slide-down {
   &-enter-active {
-    animation: van-slide-down-enter var(--van-duration-base) both
-      var(--van-ease-out);
+    animation: mi-slide-down-enter var(--mi-duration-base) both
+      var(--mi-ease-out);
   }
 
   &-leave-active {
-    animation: van-slide-down-leave var(--van-duration-base) both
-      var(--van-ease-in);
+    animation: mi-slide-down-leave var(--mi-duration-base) both
+      var(--mi-ease-in);
   }
 }
 
-.van-slide-left {
+.mi-slide-left {
   &-enter-active {
-    animation: van-slide-left-enter var(--van-duration-base) both
-      var(--van-ease-out);
+    animation: mi-slide-left-enter var(--mi-duration-base) both
+      var(--mi-ease-out);
   }
 
   &-leave-active {
-    animation: van-slide-left-leave var(--van-duration-base) both
-      var(--van-ease-in);
+    animation: mi-slide-left-leave var(--mi-duration-base) both
+      var(--mi-ease-in);
   }
 }
 
-.van-slide-right {
+.mi-slide-right {
   &-enter-active {
-    animation: van-slide-right-enter var(--van-duration-base) both
-      var(--van-ease-out);
+    animation: mi-slide-right-enter var(--mi-duration-base) both
+      var(--mi-ease-out);
   }
 
   &-leave-active {
-    animation: van-slide-right-leave var(--van-duration-base) both
-      var(--van-ease-in);
+    animation: mi-slide-right-leave var(--mi-duration-base) both
+      var(--mi-ease-in);
   }
 }

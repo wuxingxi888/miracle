@@ -8,6 +8,6 @@ export type { IconProps } from './Icon';
 
 declare module 'vue' {
   export interface GlobalComponents {
-    VanIcon: typeof Icon;
+    MiIcon: typeof Icon;
   }
 }

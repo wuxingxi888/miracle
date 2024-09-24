@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import VanIcon from '..';
+import MiIcon from '..';
 // import VanTabs from '../../tabs';
 // import VanTab from '../../tab';
 // import VanRow from '../../row';
@@ -68,7 +68,7 @@ const t = useTranslate({
 // const demoImage = cdnURL('icon-demo.png');
 
 const copy = (icon: string, option: Record<string, unknown> = {}) => {
-  let tag = `<van-icon name="${icon}"`;
+  let tag = `<mi-icon name="${icon}"`;
   if ('dot' in option) {
     tag = `${tag} ${option.dot ? 'dot' : ''}`;
   }
@@ -96,7 +96,7 @@ const copy = (icon: string, option: Record<string, unknown> = {}) => {
 <template>
   <demo-block :title="t('basic')">
     <div v-for="icon in icons.basic" :key="icon" span="6" @click="copy(icon)">
-      <van-icon :name="icon" />
+      <mi-icon :name="icon" />
       <span>{{ icon }}</span>
     </div>
   </demo-block>
@@ -195,7 +195,7 @@ const copy = (icon: string, option: Record<string, unknown> = {}) => {
   &-tab-panel {
     width: auto;
     margin: 20px;
-    background-color: var(--van-background-2);
+    background-color: var(--mi-background-2);
     border-radius: 12px;
   }
 
@@ -211,19 +211,19 @@ const copy = (icon: string, option: Record<string, unknown> = {}) => {
       height: 36px;
       margin: -4px 0 4px;
       padding: 0 5px;
-      color: var(--van-text-color);
+      color: var(--mi-text-color);
       font-size: 12px;
       line-height: 18px;
     }
 
     &:active {
-      background-color: var(--van-active-color);
+      background-color: var(--mi-active-color);
     }
   }
 
-  .van-icon {
+  .mi-icon {
     margin: 16px 0 16px;
-    color: var(--van-text-color);
+    color: var(--mi-text-color);
     font-size: 32px;
   }
 }

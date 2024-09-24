@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// import VanCell from '../../cell';
+import miCell from '../../cell';
 import { ref } from 'vue';
 import { useTranslate } from '../../../docs/site';
 
@@ -28,56 +28,56 @@ const t = useTranslate({
 const show = ref(false);
 const transitionName = ref('');
 
-// const animate = (newName: string) => {
-//   show.value = true;
-//   transitionName.value = newName;
+const animate = (newName: string) => {
+  show.value = true;
+  transitionName.value = newName;
 
-//   setTimeout(() => {
-//     show.value = false;
-//   }, 500);
-// };
+  setTimeout(() => {
+    show.value = false;
+  }, 500);
+};
 </script>
 
 <template>
-  <demo-block :title="t('ellipsis')">
-    <div class="van-ellipsis">{{ t('text1') }}</div>
-    <div class="van-multi-ellipsis--l2">{{ t('text2') }}</div>
+  <demo-block card :title="t('ellipsis')">
+    <div class="mi-ellipsis">{{ t('text1') }}</div>
+    <div class="mi-multi-ellipsis--l2">{{ t('text2') }}</div>
   </demo-block>
 
   <demo-block card :title="t('hairline')">
-    <div class="van-hairline--top" />
+    <div class="mi-hairline--top"></div>
   </demo-block>
 
   <demo-block card :title="t('animation')">
-    <!-- <van-cell is-link title="Fade" @click="animate('van-fade')" />
-    <van-cell is-link title="Slide Up" @click="animate('van-slide-up')" />
-    <van-cell is-link title="Slide Down" @click="animate('van-slide-down')" />
-    <van-cell is-link title="Slide Left" @click="animate('van-slide-left')" />
-    <van-cell is-link title="Slide Right" @click="animate('van-slide-right')" /> -->
+    <mi-cell is-link title="Fade" @click="animate('mi-fade')" />
+    <mi-cell is-link title="Slide Up" @click="animate('mi-slide-up')" />
+    <mi-cell is-link title="Slide Down" @click="animate('mi-slide-down')" />
+    <mi-cell is-link title="Slide Left" @click="animate('mi-slide-left')" />
+    <mi-cell is-link title="Slide Right" @click="animate('mi-slide-right')" />
   </demo-block>
 
   <transition :name="transitionName">
-    <div v-show="show" class="demo-animate-block" />
+    <div v-show="show" class="demo-animate-block"></div>
   </transition>
 </template>
 
 <style lang="less">
 .demo-style {
-  .van-ellipsis,
-  .van-multi-ellipsis--l2 {
+  .mi-ellipsis,
+  .mi-multi-ellipsis--l2 {
     max-width: 300px;
-    margin-left: var(--van-padding-md);
+    margin-left: var(--mi-padding-md);
     font-size: 14px;
     line-height: 18px;
   }
 
-  .van-ellipsis {
-    margin-bottom: var(--van-padding-md);
+  .mi-ellipsis {
+    margin-bottom: var(--mi-padding-md);
   }
 
-  .van-hairline--top {
+  .mi-hairline--top {
     height: 30px;
-    background-color: var(--van-background-2);
+    background-color: var(--mi-background-2);
 
     &::after {
       top: 5px;
@@ -91,7 +91,7 @@ const transitionName = ref('');
     width: 100px;
     height: 100px;
     margin: -50px 0 0 -50px;
-    background-color: var(--van-blue);
+    background-color: var(--mi-red);
     border-radius: 8px;
   }
 }

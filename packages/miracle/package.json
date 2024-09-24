@@ -1,6 +1,6 @@
 {
   "name": "miracle",
-  "version": "4.9.6",
+  "version": "0.0.1",
   "description": "Mobile UI Components built on Vue",
   "main": "lib/miracle.cjs.js",
   "module": "es/index.mjs",
