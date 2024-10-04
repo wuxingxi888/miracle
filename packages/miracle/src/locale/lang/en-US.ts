@@ -11,7 +11,7 @@ export default {
   nameEmpty: 'Please fill in the name',
   addContact: 'Add contact',
   telInvalid: 'Malformed phone number',
-  vanCalendar: {
+  miCalendar: {
     end: 'End',
     start: 'Start',
     title: 'Calendar',
@@ -19,44 +19,44 @@ export default {
     monthTitle: (year: number, month: number) => `${year}/${month}`,
     rangePrompt: (maxRange: number) => `Choose no more than ${maxRange} days`,
   },
-  vanCascader: {
+  miCascader: {
     select: 'Select',
   },
-  vanPagination: {
+  miPagination: {
     prev: 'Previous',
     next: 'Next',
   },
-  vanPullRefresh: {
+  miPullRefresh: {
     pulling: 'Pull to refresh...',
     loosing: 'Loose to refresh...',
   },
-  vanSubmitBar: {
+  miSubmitBar: {
     label: 'Total:',
   },
-  vanCoupon: {
+  miCoupon: {
     unlimited: 'Unlimited',
     discount: (discount: number) => `${discount * 10}% off`,
     condition: (condition: number) => `At least ${condition}`,
   },
-  vanCouponCell: {
+  miCouponCell: {
     title: 'Coupon',
     count: (count: number) => `You have ${count} coupons`,
   },
-  vanCouponList: {
+  miCouponList: {
     exchange: 'Exchange',
     close: 'Close',
     enable: 'Available',
     disabled: 'Unavailable',
     placeholder: 'Coupon code',
   },
-  vanAddressEdit: {
+  miAddressEdit: {
     area: 'Area',
     areaEmpty: 'Please select a receiving area',
     addressEmpty: 'Address can not be empty',
     addressDetail: 'Address',
     defaultAddress: 'Set as the default address',
   },
-  vanAddressList: {
+  miAddressList: {
     add: 'Add new address',
   },
 };

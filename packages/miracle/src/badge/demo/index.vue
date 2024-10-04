@@ -102,16 +102,16 @@ const t = useTranslate({
 
 <style lang="less">
 .demo-badge {
-  background-color: var(--van-background-2);
+  background-color: var(--mi-background-2);
 
-  .van-badge__wrapper {
-    margin-left: var(--van-padding-md);
+  .mi-badge__wrapper {
+    margin-left: var(--mi-padding-md);
   }
 
   .child {
     width: 40px;
     height: 40px;
-    background: var(--van-gray-2);
+    background: var(--mi-gray-2);
     border-radius: 4px;
   }
 

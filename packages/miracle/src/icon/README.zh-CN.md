@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Icon } from 'vant';
+import { Icon } from 'miracle';
 
 const app = createApp();
 app.use(Icon);
@@ -20,10 +20,10 @@ app.use(Icon);
 
 ### 基础用法
 
-通过 `name` 属性来指定需要使用的图标，Vant 内置了一套图标库（见右侧示例），可以直接传入对应的名称来使用。
+通过 `name` 属性来指定需要使用的图标，Miracle 内置了一套图标库（见右侧示例），可以直接传入对应的名称来使用。
 
 ```html
-<van-icon name="chat-o" />
+<mi-icon name="chat-o" />
 ```
 
 ### 使用图片 URL
@@ -31,7 +31,7 @@ app.use(Icon);
 你也可以直接在 `name` 属性中传入一个图片 URL 来作为图标。
 
 ```html
-<van-icon name="https://fastly.jsdelivr.net/npm/@vant/assets/icon-demo.png" />
+<mi-icon name="https://fastly.jsdelivr.net/npm/@vant/assets/icon-demo.png" />
 ```
 
 ### 徽标提示
@@ -39,9 +39,9 @@ app.use(Icon);
 设置 `dot` 属性后，会在图标右上角展示一个小红点；设置 `badge` 属性后，会在图标右上角展示相应的徽标。
 
 ```html
-<van-icon name="chat-o" dot />
-<van-icon name="chat-o" badge="9" />
-<van-icon name="chat-o" badge="99+" />
+<mi-icon name="chat-o" dot />
+<mi-icon name="chat-o" badge="9" />
+<mi-icon name="chat-o" badge="99+" />
 ```
 
 ### 图标颜色
@@ -49,8 +49,8 @@ app.use(Icon);
 通过 `color` 属性来设置图标的颜色。
 
 ```html
-<van-icon name="cart-o" color="#1989fa" />
-<van-icon name="fire-o" color="#ee0a24" />
+<mi-icon name="cart-o" color="#1989fa" />
+<mi-icon name="fire-o" color="#ee0a24" />
 ```
 
 ### 图标大小
@@ -59,9 +59,9 @@ app.use(Icon);
 
 ```html
 <!-- 不指定单位，默认使用 px -->
-<van-icon name="chat-o" size="40" />
+<mi-icon name="chat-o" size="40" />
 <!-- 指定使用 rem 单位 -->
-<van-icon name="chat-o" size="3rem" />
+<mi-icon name="chat-o" size="3rem" />
 ```
 
 ### 自定义图标
@@ -86,7 +86,7 @@ app.use(Icon);
 
 ```html
 <!-- 通过 class-prefix 指定类名为 my-icon -->
-<van-icon class-prefix="my-icon" name="extra" />
+<mi-icon class-prefix="my-icon" name="extra" />
 ```
 
 ## API
@@ -101,7 +101,7 @@ app.use(Icon);
 | badge-props | 自定义徽标的属性，传入的对象会被透传给 [Badge 组件的 props](#/zh-CN/badge#props) | _BadgeProps_ | - |
 | color | 图标颜色 | _string_ | `inherit` |
 | size | 图标大小，如 `20px` `2em`，默认单位为 `px` | _number \| string_ | `inherit` |
-| class-prefix | 类名前缀，用于使用自定义图标 | _string_ | `van-icon` |
+| class-prefix | 类名前缀，用于使用自定义图标 | _string_ | `mi-icon` |
 | tag | 根节点对应的 HTML 标签名 | _string_ | `i` |
 
 ### Events
@@ -115,7 +115,7 @@ app.use(Icon);
 组件导出以下类型定义：
 
 ```ts
-import type { IconProps } from 'vant';
+import type { IconProps } from 'miracle';
 ```
 
 ## 主题定制
@@ -124,6 +124,6 @@ import type { IconProps } from 'vant';
 
 组件提供了下列 CSS 变量，可用于自定义样式，使用方法请参考 [ConfigProvider 组件](#/zh-CN/config-provider)。
 
-| 名称                   | 默认值       | 描述 |
-| ---------------------- | ------------ | ---- |
-| --van-icon-font-family | _'van-icon'_ | -    |
+| 名称                  | 默认值      | 描述 |
+| --------------------- | ----------- | ---- |
+| --mi-icon-font-family | _'mi-icon'_ | -    |

@@ -2,4 +2,4 @@ export { useTranslate, initDemoLocale } from './use-translate';
 
 /** Generate the CDN URL of assets. */
 export const cdnURL = (path: string) =>
-  `https://fastly.jsdelivr.net/npm/@vant/assets/${path}`;
+  `https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/${path}`;

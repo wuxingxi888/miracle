@@ -59,7 +59,7 @@ function mapThemeVarsToCSSVars(themeVars: Record<string, Numeric>) {
   const cssVars: Record<string, Numeric> = {};
   Object.keys(themeVars).forEach((key) => {
     const formattedKey = insertDash(kebabCase(key));
-    cssVars[`--van-${formattedKey}`] = themeVars[key];
+    cssVars[`--mi-${formattedKey}`] = themeVars[key];
   });
   return cssVars;
 }
@@ -98,10 +98,10 @@ export default defineComponent({
 
     if (inBrowser) {
       const addTheme = () => {
-        document.documentElement.classList.add(`van-theme-${props.theme}`);
+        document.documentElement.classList.add(`mi-theme-${props.theme}`);
       };
       const removeTheme = (theme = props.theme) => {
-        document.documentElement.classList.remove(`van-theme-${theme}`);
+        document.documentElement.classList.remove(`mi-theme-${theme}`);
       };
 
       watch(

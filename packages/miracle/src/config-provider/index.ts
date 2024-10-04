@@ -13,6 +13,6 @@ export type { ConfigProviderThemeVars } from './types';
 
 declare module 'vue' {
   export interface GlobalComponents {
-    VanConfigProvider: typeof ConfigProvider;
+    MiConfigProvider: typeof ConfigProvider;
   }
 }

@@ -1,0 +1,60 @@
+:root,
+:host {
+  --mi-image-placeholder-text-color: var(--mi-text-color-2);
+  --mi-image-placeholder-font-size: var(--mi-font-size-md);
+  --mi-image-placeholder-background: var(--mi-background);
+  --mi-image-loading-icon-size: 32px;
+  --mi-image-loading-icon-color: var(--mi-gray-4);
+  --mi-image-error-icon-size: 32px;
+  --mi-image-error-icon-color: var(--mi-gray-4);
+}
+
+.mi-image {
+  position: relative;
+  display: inline-block;
+
+  &--round {
+    overflow: hidden;
+    border-radius: var(--mi-radius-max);
+
+    .mi-image__img {
+      border-radius: inherit;
+    }
+  }
+
+  &--block {
+    display: block;
+  }
+
+  &__img,
+  &__error,
+  &__loading {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__error,
+  &__loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--mi-image-placeholder-text-color);
+    font-size: var(--mi-image-placeholder-font-size);
+    background: var(--mi-image-placeholder-background);
+  }
+
+  &__loading-icon {
+    color: var(--mi-image-loading-icon-color);
+    font-size: var(--mi-image-loading-icon-size);
+  }
+
+  &__error-icon {
+    color: var(--mi-image-error-icon-color);
+    font-size: var(--mi-image-error-icon-size);
+  }
+}

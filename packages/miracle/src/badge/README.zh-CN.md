@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Badge } from 'vant';
+import { Badge } from 'miracle';
 
 const app = createApp();
 app.use(Badge);
@@ -23,18 +23,18 @@ app.use(Badge);
 设置 `content` 属性后，Badge 会在子元素的右上角显示对应的徽标，也可以通过 `dot` 来显示小红点。
 
 ```html
-<van-badge :content="5">
+<mi-badge :content="5">
   <div class="child" />
-</van-badge>
-<van-badge :content="10">
+</mi-badge>
+<mi-badge :content="10">
   <div class="child" />
-</van-badge>
-<van-badge content="Hot">
+</mi-badge>
+<mi-badge content="Hot">
   <div class="child" />
-</van-badge>
-<van-badge dot>
+</mi-badge>
+<mi-badge dot>
   <div class="child" />
-</van-badge>
+</mi-badge>
 
 <style>
   .child {
@@ -51,15 +51,15 @@ app.use(Badge);
 设置 `max` 属性后，当 `content` 的数值超过最大值时，会自动显示为 `{max}+`。
 
 ```html
-<van-badge :content="20" max="9">
+<mi-badge :content="20" max="9">
   <div class="child" />
-</van-badge>
-<van-badge :content="50" max="20">
+</mi-badge>
+<mi-badge :content="50" max="20">
   <div class="child" />
-</van-badge>
-<van-badge :content="200" max="99">
+</mi-badge>
+<mi-badge :content="200" max="99">
   <div class="child" />
-</van-badge>
+</mi-badge>
 ```
 
 ### 自定义颜色
@@ -67,15 +67,15 @@ app.use(Badge);
 通过 `color` 属性来设置徽标的颜色。
 
 ```html
-<van-badge :content="5" color="#1989fa">
+<mi-badge :content="5" color="#1989fa">
   <div class="child" />
-</van-badge>
-<van-badge :content="10" color="#1989fa">
+</mi-badge>
+<mi-badge :content="10" color="#1989fa">
   <div class="child" />
-</van-badge>
-<van-badge dot color="#1989fa">
+</mi-badge>
+<mi-badge dot color="#1989fa">
   <div class="child" />
-</van-badge>
+</mi-badge>
 ```
 
 ### 自定义徽标内容
@@ -83,24 +83,24 @@ app.use(Badge);
 通过 `content` 插槽可以自定义徽标的内容，比如插入一个图标。
 
 ```html
-<van-badge>
+<mi-badge>
   <div class="child" />
   <template #content>
-    <van-icon name="success" class="badge-icon" />
+    <mi-icon name="success" class="badge-icon" />
   </template>
-</van-badge>
-<van-badge>
+</mi-badge>
+<mi-badge>
   <div class="child" />
   <template #content>
-    <van-icon name="cross" class="badge-icon" />
+    <mi-icon name="cross" class="badge-icon" />
   </template>
-</van-badge>
-<van-badge>
+</mi-badge>
+<mi-badge>
   <div class="child" />
   <template #content>
-    <van-icon name="down" class="badge-icon" />
+    <mi-icon name="down" class="badge-icon" />
   </template>
-</van-badge>
+</mi-badge>
 ```
 
 ```css
@@ -116,15 +116,15 @@ app.use(Badge);
 通过 `position` 属性来设置徽标的位置。
 
 ```html
-<van-badge :content="10" position="top-left">
+<mi-badge :content="10" position="top-left">
   <div class="child" />
-</van-badge>
-<van-badge :content="10" position="bottom-left">
+</mi-badge>
+<mi-badge :content="10" position="bottom-left">
   <div class="child" />
-</van-badge>
-<van-badge :content="10" position="bottom-right">
+</mi-badge>
+<mi-badge :content="10" position="bottom-right">
   <div class="child" />
-</van-badge>
+</mi-badge>
 ```
 
 ### 独立展示
@@ -132,9 +132,9 @@ app.use(Badge);
 当 Badge 没有子元素时，会作为一个独立的元素进行展示。
 
 ```html
-<van-badge :content="20" />
+<mi-badge :content="20" />
 
-<van-badge :content="200" max="99" />
+<mi-badge :content="200" max="99" />
 ```
 
 ## API
@@ -163,7 +163,7 @@ app.use(Badge);
 组件导出以下类型定义：
 
 ```ts
-import type { BadgeProps, BadgePosition } from 'vant';
+import type { BadgeProps, BadgePosition } from 'miracle';
 ```
 
 ## 主题定制
@@ -174,13 +174,13 @@ import type { BadgeProps, BadgePosition } from 'vant';
 
 | 名称 | 默认值 | 描述 |
 | --- | --- | --- |
-| --van-badge-size | _16px_ | - |
-| --van-badge-color | _var(--van-white)_ | - |
-| --van-badge-padding | _0 3px_ | - |
-| --van-badge-font-size | _var(--van-font-size-sm)_ | - |
-| --van-badge-font-weight | _var(--van-font-bold)_ | - |
-| --van-badge-border-width | _var(--van-border-width)_ | - |
-| --van-badge-background | _var(--van-danger-color)_ | - |
-| --van-badge-dot-color | _var(--van-danger-color)_ | - |
-| --van-badge-dot-size | _8px_ | - |
-| --van-badge-font | _-apple-system-font, Helvetica Neue, Arial, sans-serif_ | - |
+| --mi-badge-size | _16px_ | - |
+| --mi-badge-color | _var(--mi-white)_ | - |
+| --mi-badge-padding | _0 3px_ | - |
+| --mi-badge-font-size | _var(--mi-font-size-sm)_ | - |
+| --mi-badge-font-weight | _var(--mi-font-bold)_ | - |
+| --mi-badge-border-width | _var(--mi-border-width)_ | - |
+| --mi-badge-background | _var(--mi-danger-color)_ | - |
+| --mi-badge-dot-color | _var(--mi-danger-color)_ | - |
+| --mi-badge-dot-size | _8px_ | - |
+| --mi-badge-font | _-apple-system-font, Helvetica Neue, Arial, sans-serif_ | - |

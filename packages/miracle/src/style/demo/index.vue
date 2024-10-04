@@ -12,6 +12,7 @@ const t = useTranslate({
     text1: '这是一段最多显示一行的文字，后面的内容会省略',
     text2:
       '这是一段最多显示两行的文字，后面的内容会省略。这是一段最多显示两行的文字，后面的内容会省略',
+    touch: '触感反馈',
   },
   'en-US': {
     hairline: 'Hairline',
@@ -22,6 +23,7 @@ const t = useTranslate({
       'This is a paragraph that displays up to one line of text, and the rest of the text will be omitted.',
     text2:
       'This is a paragraph that displays up to two lines of text, and the rest of the text will be omitted.',
+    touch: 'Touch feedback',
   },
 });
 
@@ -45,7 +47,7 @@ const animate = (newName: string) => {
   </demo-block>
 
   <demo-block card :title="t('hairline')">
-    <div class="mi-hairline--top"></div>
+    <div class="demo-box-block mi-hairline--top"></div>
   </demo-block>
 
   <demo-block card :title="t('animation')">
@@ -59,6 +61,10 @@ const animate = (newName: string) => {
   <transition :name="transitionName">
     <div v-show="show" class="demo-animate-block"></div>
   </transition>
+
+  <demo-block card :title="t('touch')">
+    <div class="demo-box-block mi-haptics-feedback"></div>
+  </demo-block>
 </template>
 
 <style lang="less">
@@ -76,12 +82,14 @@ const animate = (newName: string) => {
   }
 
   .mi-hairline--top {
-    height: 30px;
-    background-color: var(--mi-background-2);
-
     &::after {
       top: 5px;
     }
+  }
+
+  .demo-box-block {
+    height: 30px;
+    background-color: var(--mi-background-2);
   }
 
   .demo-animate-block {
