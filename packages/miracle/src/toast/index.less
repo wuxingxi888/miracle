@@ -1,0 +1,101 @@
+:root,
+:host {
+  --mi-toast-max-width: 70%;
+  --mi-toast-font-size: var(--mi-font-size-md);
+  --mi-toast-text-color: var(--mi-white);
+  --mi-toast-loading-icon-color: var(--mi-white);
+  --mi-toast-line-height: var(--mi-line-height-md);
+  --mi-toast-radius: var(--mi-radius-lg);
+  --mi-toast-background: rgba(0, 0, 0, 0.7);
+  --mi-toast-icon-size: 36px;
+  --mi-toast-text-min-width: 96px;
+  --mi-toast-text-padding: var(--mi-padding-xs) var(--mi-padding-sm);
+  --mi-toast-default-padding: var(--mi-padding-md);
+  --mi-toast-default-width: 88px;
+  --mi-toast-default-min-height: 88px;
+  --mi-toast-position-top-distance: 20%;
+  --mi-toast-position-bottom-distance: 20%;
+}
+
+.mi-toast {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: content-box;
+  transition: all var(--mi-duration-fast);
+
+  // hack for avoid max-width when use left & fixed
+  width: var(--mi-toast-default-width);
+  max-width: var(--mi-toast-max-width);
+  min-height: var(--mi-toast-default-min-height);
+  padding: var(--mi-toast-default-padding);
+  color: var(--mi-toast-text-color);
+  font-size: var(--mi-toast-font-size);
+  line-height: var(--mi-toast-line-height);
+
+  // allow newline character
+  white-space: pre-wrap;
+  word-break: break-all;
+  text-align: center;
+  background: var(--mi-toast-background);
+  border-radius: var(--mi-toast-radius);
+
+  &--break {
+    &-normal {
+      word-break: normal;
+      word-wrap: normal;
+    }
+
+    &-word {
+      word-break: normal;
+      word-wrap: break-word;
+    }
+  }
+
+  &--unclickable {
+    // lock scroll
+    overflow: hidden;
+    cursor: not-allowed;
+
+    // should not add pointer-events: none directly to body tag
+    // that will cause unexpected tap-highlight-color in mobile safari
+    * {
+      pointer-events: none;
+    }
+  }
+
+  &--text,
+  &--html {
+    width: fit-content;
+    min-width: var(--mi-toast-text-min-width);
+    min-height: 0;
+    padding: var(--mi-toast-text-padding);
+
+    .mi-toast__text {
+      margin-top: 0;
+    }
+  }
+
+  &--top {
+    top: var(--mi-toast-position-top-distance);
+  }
+
+  &--bottom {
+    top: auto;
+    bottom: var(--mi-toast-position-bottom-distance);
+  }
+
+  &__icon {
+    font-size: var(--mi-toast-icon-size);
+  }
+
+  &__loading {
+    padding: var(--mi-padding-base);
+    color: var(--mi-toast-loading-icon-color);
+  }
+
+  &__text {
+    margin-top: var(--mi-padding-xs);
+  }
+}

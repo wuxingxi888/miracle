@@ -4,45 +4,45 @@ exports[`should render demo and match snapshot 1`] = `
 <!--[-->
 <div>
   <!--[-->
-  <div class="van-badge__wrapper">
+  <div class="mi-badge__wrapper">
     <!--[-->
     <div class="child">
     </div>
     <div
-      class="van-badge van-badge--top-right van-badge--fixed"
+      class="mi-badge mi-badge--top-right mi-badge--fixed"
       style
     >
       5
     </div>
   </div>
-  <div class="van-badge__wrapper">
+  <div class="mi-badge__wrapper">
     <!--[-->
     <div class="child">
     </div>
     <div
-      class="van-badge van-badge--top-right van-badge--fixed"
+      class="mi-badge mi-badge--top-right mi-badge--fixed"
       style
     >
       10
     </div>
   </div>
-  <div class="van-badge__wrapper">
+  <div class="mi-badge__wrapper">
     <!--[-->
     <div class="child">
     </div>
     <div
-      class="van-badge van-badge--top-right van-badge--fixed"
+      class="mi-badge mi-badge--top-right mi-badge--fixed"
       style
     >
       Hot
     </div>
   </div>
-  <div class="van-badge__wrapper">
+  <div class="mi-badge__wrapper">
     <!--[-->
     <div class="child">
     </div>
     <div
-      class="van-badge van-badge--top-right van-badge--dot van-badge--fixed"
+      class="mi-badge mi-badge--top-right mi-badge--dot mi-badge--fixed"
       style
     >
     </div>
@@ -50,34 +50,34 @@ exports[`should render demo and match snapshot 1`] = `
 </div>
 <div>
   <!--[-->
-  <div class="van-badge__wrapper">
+  <div class="mi-badge__wrapper">
     <!--[-->
     <div class="child">
     </div>
     <div
-      class="van-badge van-badge--top-right van-badge--fixed"
+      class="mi-badge mi-badge--top-right mi-badge--fixed"
       style
     >
       9+
     </div>
   </div>
-  <div class="van-badge__wrapper">
+  <div class="mi-badge__wrapper">
     <!--[-->
     <div class="child">
     </div>
     <div
-      class="van-badge van-badge--top-right van-badge--fixed"
+      class="mi-badge mi-badge--top-right mi-badge--fixed"
       style
     >
       20+
     </div>
   </div>
-  <div class="van-badge__wrapper">
+  <div class="mi-badge__wrapper">
     <!--[-->
     <div class="child">
     </div>
     <div
-      class="van-badge van-badge--top-right van-badge--fixed"
+      class="mi-badge mi-badge--top-right mi-badge--fixed"
       style
     >
       99+
@@ -86,34 +86,34 @@ exports[`should render demo and match snapshot 1`] = `
 </div>
 <div>
   <!--[-->
-  <div class="van-badge__wrapper">
+  <div class="mi-badge__wrapper">
     <!--[-->
     <div class="child">
     </div>
     <div
-      class="van-badge van-badge--top-right van-badge--fixed"
+      class="mi-badge mi-badge--top-right mi-badge--fixed"
       style="background:#1989fa;"
     >
       5
     </div>
   </div>
-  <div class="van-badge__wrapper">
+  <div class="mi-badge__wrapper">
     <!--[-->
     <div class="child">
     </div>
     <div
-      class="van-badge van-badge--top-right van-badge--fixed"
+      class="mi-badge mi-badge--top-right mi-badge--fixed"
       style="background:#1989fa;"
     >
       10
     </div>
   </div>
-  <div class="van-badge__wrapper">
+  <div class="mi-badge__wrapper">
     <!--[-->
     <div class="child">
     </div>
     <div
-      class="van-badge van-badge--top-right van-badge--dot van-badge--fixed"
+      class="mi-badge mi-badge--top-right mi-badge--dot mi-badge--fixed"
       style="background:#1989fa;"
     >
     </div>
@@ -121,51 +121,51 @@ exports[`should render demo and match snapshot 1`] = `
 </div>
 <div>
   <!--[-->
-  <div class="van-badge__wrapper">
+  <div class="mi-badge__wrapper">
     <!--[-->
     <div class="child">
     </div>
     <div
-      class="van-badge van-badge--top-right van-badge--fixed"
+      class="mi-badge mi-badge--top-right mi-badge--fixed"
       style
     >
       <!--[-->
       <i
-        class="van-badge__wrapper van-icon van-icon-success badge-icon"
+        class="mi-badge__wrapper mi-icon mi-icon-success badge-icon"
         style
       >
         <!--[-->
       </i>
     </div>
   </div>
-  <div class="van-badge__wrapper">
+  <div class="mi-badge__wrapper">
     <!--[-->
     <div class="child">
     </div>
     <div
-      class="van-badge van-badge--top-right van-badge--fixed"
+      class="mi-badge mi-badge--top-right mi-badge--fixed"
       style
     >
       <!--[-->
       <i
-        class="van-badge__wrapper van-icon van-icon-cross badge-icon"
+        class="mi-badge__wrapper mi-icon mi-icon-cross badge-icon"
         style
       >
         <!--[-->
       </i>
     </div>
   </div>
-  <div class="van-badge__wrapper">
+  <div class="mi-badge__wrapper">
     <!--[-->
     <div class="child">
     </div>
     <div
-      class="van-badge van-badge--top-right van-badge--fixed"
+      class="mi-badge mi-badge--top-right mi-badge--fixed"
       style
     >
       <!--[-->
       <i
-        class="van-badge__wrapper van-icon van-icon-down badge-icon"
+        class="mi-badge__wrapper mi-icon mi-icon-down badge-icon"
         style
       >
         <!--[-->
@@ -175,34 +175,34 @@ exports[`should render demo and match snapshot 1`] = `
 </div>
 <div>
   <!--[-->
-  <div class="van-badge__wrapper">
+  <div class="mi-badge__wrapper">
     <!--[-->
     <div class="child">
     </div>
     <div
-      class="van-badge van-badge--top-left van-badge--fixed"
+      class="mi-badge mi-badge--top-left mi-badge--fixed"
       style
     >
       10
     </div>
   </div>
-  <div class="van-badge__wrapper">
+  <div class="mi-badge__wrapper">
     <!--[-->
     <div class="child">
     </div>
     <div
-      class="van-badge van-badge--bottom-left van-badge--fixed"
+      class="mi-badge mi-badge--bottom-left mi-badge--fixed"
       style
     >
       10
     </div>
   </div>
-  <div class="van-badge__wrapper">
+  <div class="mi-badge__wrapper">
     <!--[-->
     <div class="child">
     </div>
     <div
-      class="van-badge van-badge--bottom-right van-badge--fixed"
+      class="mi-badge mi-badge--bottom-right mi-badge--fixed"
       style
     >
       10
@@ -212,13 +212,13 @@ exports[`should render demo and match snapshot 1`] = `
 <div>
   <!--[-->
   <div
-    class="van-badge van-badge--top-right"
+    class="mi-badge mi-badge--top-right"
     style="margin-left:16px;"
   >
     20
   </div>
   <div
-    class="van-badge van-badge--top-right"
+    class="mi-badge mi-badge--top-right"
     style="margin-left:16px;"
   >
     99+

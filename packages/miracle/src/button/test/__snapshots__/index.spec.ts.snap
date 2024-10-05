@@ -3,10 +3,10 @@
 exports[`should change icon class prefix when using icon-prefix prop 1`] = `
 <button
   type="button"
-  class="van-button van-button--default van-button--normal"
+  class="mi-button mi-button--default mi-button--normal"
 >
-  <div class="van-button__content">
-    <i class="van-badge__wrapper my-icon my-icon-success van-button__icon">
+  <div class="mi-button__content">
+    <i class="mi-badge__wrapper my-icon my-icon-success mi-button__icon">
     </i>
   </div>
 </button>
@@ -15,10 +15,10 @@ exports[`should change icon class prefix when using icon-prefix prop 1`] = `
 exports[`should render icon in the right side when setting icon-position to right 1`] = `
 <button
   type="button"
-  class="van-button van-button--default van-button--normal"
+  class="mi-button mi-button--default mi-button--normal"
 >
-  <div class="van-button__content">
-    <i class="van-badge__wrapper van-icon van-icon-plus van-button__icon">
+  <div class="mi-button__content">
+    <i class="mi-badge__wrapper mi-icon mi-icon-plus mi-button__icon">
     </i>
   </div>
 </button>
@@ -27,13 +27,13 @@ exports[`should render icon in the right side when setting icon-position to righ
 exports[`should render icon slot correctly 1`] = `
 <button
   type="button"
-  class="van-button van-button--default van-button--normal"
+  class="mi-button mi-button--default mi-button--normal"
 >
-  <div class="van-button__content">
-    <div class="van-button__icon">
+  <div class="mi-button__content">
+    <div class="mi-button__icon">
       Custom Icon
     </div>
-    <span class="van-button__text">
+    <span class="mi-button__text">
       Text
     </span>
   </div>
@@ -43,9 +43,9 @@ exports[`should render icon slot correctly 1`] = `
 exports[`should render loading slot correctly 1`] = `
 <button
   type="button"
-  class="van-button van-button--default van-button--normal van-button--loading"
+  class="mi-button mi-button--default mi-button--normal mi-button--loading"
 >
-  <div class="van-button__content">
+  <div class="mi-button__content">
     Custom Loading
   </div>
 </button>

@@ -1,87 +1,87 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`should render Col correctly 1`] = `
-<div class="van-col van-col--8">
+<div class="mi-col mi-col--8">
 </div>
 `;
 
 exports[`should render gutter correctly 1`] = `
-<div class="van-row">
-  <div class="van-col van-col--24">
+<div class="mi-row">
+  <div class="mi-col mi-col--24">
     24
   </div>
-  <div class="van-col van-col--12">
+  <div class="mi-col mi-col--12">
     12
   </div>
   <div
     style="padding-left: 12px;"
-    class="van-col van-col--12"
+    class="mi-col mi-col--12"
   >
     12
   </div>
-  <div class="van-col van-col--8">
+  <div class="mi-col mi-col--8">
     8
   </div>
   <div
     style="padding-left: 12px;"
-    class="van-col van-col--8"
+    class="mi-col mi-col--8"
   >
     8
   </div>
   <div
     style="padding-left: 16px;"
-    class="van-col van-col--8"
+    class="mi-col mi-col--8"
   >
     8
   </div>
-  <div class="van-col van-col--6">
+  <div class="mi-col mi-col--6">
     6
   </div>
   <div
     style="padding-left: 12px;"
-    class="van-col van-col--6"
+    class="mi-col mi-col--6"
   >
     6
   </div>
   <div
     style="padding-left: 16px;"
-    class="van-col van-col--6"
+    class="mi-col mi-col--6"
   >
     6
   </div>
   <div
     style="padding-left: 18px;"
-    class="van-col van-col--6"
+    class="mi-col mi-col--6"
   >
     6
   </div>
-  <div class="van-col van-col--7">
+  <div class="mi-col mi-col--7">
     7
   </div>
   <div
     style="padding-left: 12px;"
-    class="van-col van-col--6"
+    class="mi-col mi-col--6"
   >
     6
   </div>
   <div
     style="padding-left: 16px;"
-    class="van-col van-col--5"
+    class="mi-col mi-col--5"
   >
     5
   </div>
   <div
     style="padding-left: 18px;"
-    class="van-col van-col--4"
+    class="mi-col mi-col--4"
   >
     4
   </div>
-  <div class="van-col van-col--3">
+  <div class="mi-col mi-col--3">
     3
   </div>
   <div
     style="padding-left: 12px;"
-    class="van-col van-col--2"
+    class="mi-col mi-col--2"
   >
     2
   </div>

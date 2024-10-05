@@ -5,16 +5,16 @@ exports[`should render demo and match snapshot 1`] = `
 <div>
   <!--[-->
   <div
-    class="van-loading van-loading--circular"
+    class="mi-loading mi-loading--circular"
     aria-live="polite"
     aria-busy="true"
   >
     <span
-      class="van-loading__spinner van-loading__spinner--circular"
+      class="mi-loading__spinner mi-loading__spinner--circular"
       style
     >
       <svg
-        class="van-loading__circular"
+        class="mi-loading__circular"
         viewbox="25 25 50 50"
       >
         <circle
@@ -28,38 +28,38 @@ exports[`should render demo and match snapshot 1`] = `
     </span>
   </div>
   <div
-    class="van-loading van-loading--spinner"
+    class="mi-loading mi-loading--spinner"
     aria-live="polite"
     aria-busy="true"
   >
     <span
-      class="van-loading__spinner van-loading__spinner--spinner"
+      class="mi-loading__spinner mi-loading__spinner--spinner"
       style
     >
       <!--[-->
-      <i class="van-loading__line van-loading__line--1">
+      <i class="mi-loading__line mi-loading__line--1">
       </i>
-      <i class="van-loading__line van-loading__line--2">
+      <i class="mi-loading__line mi-loading__line--2">
       </i>
-      <i class="van-loading__line van-loading__line--3">
+      <i class="mi-loading__line mi-loading__line--3">
       </i>
-      <i class="van-loading__line van-loading__line--4">
+      <i class="mi-loading__line mi-loading__line--4">
       </i>
-      <i class="van-loading__line van-loading__line--5">
+      <i class="mi-loading__line mi-loading__line--5">
       </i>
-      <i class="van-loading__line van-loading__line--6">
+      <i class="mi-loading__line mi-loading__line--6">
       </i>
-      <i class="van-loading__line van-loading__line--7">
+      <i class="mi-loading__line mi-loading__line--7">
       </i>
-      <i class="van-loading__line van-loading__line--8">
+      <i class="mi-loading__line mi-loading__line--8">
       </i>
-      <i class="van-loading__line van-loading__line--9">
+      <i class="mi-loading__line mi-loading__line--9">
       </i>
-      <i class="van-loading__line van-loading__line--10">
+      <i class="mi-loading__line mi-loading__line--10">
       </i>
-      <i class="van-loading__line van-loading__line--11">
+      <i class="mi-loading__line mi-loading__line--11">
       </i>
-      <i class="van-loading__line van-loading__line--12">
+      <i class="mi-loading__line mi-loading__line--12">
       </i>
     </span>
   </div>
@@ -67,16 +67,16 @@ exports[`should render demo and match snapshot 1`] = `
 <div>
   <!--[-->
   <div
-    class="van-loading van-loading--circular"
+    class="mi-loading mi-loading--circular"
     aria-live="polite"
     aria-busy="true"
   >
     <span
-      class="van-loading__spinner van-loading__spinner--circular"
+      class="mi-loading__spinner mi-loading__spinner--circular"
       style="color:#1989fa;"
     >
       <svg
-        class="van-loading__circular"
+        class="mi-loading__circular"
         viewbox="25 25 50 50"
       >
         <circle
@@ -90,38 +90,38 @@ exports[`should render demo and match snapshot 1`] = `
     </span>
   </div>
   <div
-    class="van-loading van-loading--spinner"
+    class="mi-loading mi-loading--spinner"
     aria-live="polite"
     aria-busy="true"
   >
     <span
-      class="van-loading__spinner van-loading__spinner--spinner"
+      class="mi-loading__spinner mi-loading__spinner--spinner"
       style="color:#1989fa;"
     >
       <!--[-->
-      <i class="van-loading__line van-loading__line--1">
+      <i class="mi-loading__line mi-loading__line--1">
       </i>
-      <i class="van-loading__line van-loading__line--2">
+      <i class="mi-loading__line mi-loading__line--2">
       </i>
-      <i class="van-loading__line van-loading__line--3">
+      <i class="mi-loading__line mi-loading__line--3">
       </i>
-      <i class="van-loading__line van-loading__line--4">
+      <i class="mi-loading__line mi-loading__line--4">
       </i>
-      <i class="van-loading__line van-loading__line--5">
+      <i class="mi-loading__line mi-loading__line--5">
       </i>
-      <i class="van-loading__line van-loading__line--6">
+      <i class="mi-loading__line mi-loading__line--6">
       </i>
-      <i class="van-loading__line van-loading__line--7">
+      <i class="mi-loading__line mi-loading__line--7">
       </i>
-      <i class="van-loading__line van-loading__line--8">
+      <i class="mi-loading__line mi-loading__line--8">
       </i>
-      <i class="van-loading__line van-loading__line--9">
+      <i class="mi-loading__line mi-loading__line--9">
       </i>
-      <i class="van-loading__line van-loading__line--10">
+      <i class="mi-loading__line mi-loading__line--10">
       </i>
-      <i class="van-loading__line van-loading__line--11">
+      <i class="mi-loading__line mi-loading__line--11">
       </i>
-      <i class="van-loading__line van-loading__line--12">
+      <i class="mi-loading__line mi-loading__line--12">
       </i>
     </span>
   </div>
@@ -129,16 +129,16 @@ exports[`should render demo and match snapshot 1`] = `
 <div>
   <!--[-->
   <div
-    class="van-loading van-loading--circular"
+    class="mi-loading mi-loading--circular"
     aria-live="polite"
     aria-busy="true"
   >
     <span
-      class="van-loading__spinner van-loading__spinner--circular"
+      class="mi-loading__spinner mi-loading__spinner--circular"
       style="width:24px;height:24px;"
     >
       <svg
-        class="van-loading__circular"
+        class="mi-loading__circular"
         viewbox="25 25 50 50"
       >
         <circle
@@ -152,38 +152,38 @@ exports[`should render demo and match snapshot 1`] = `
     </span>
   </div>
   <div
-    class="van-loading van-loading--spinner"
+    class="mi-loading mi-loading--spinner"
     aria-live="polite"
     aria-busy="true"
   >
     <span
-      class="van-loading__spinner van-loading__spinner--spinner"
+      class="mi-loading__spinner mi-loading__spinner--spinner"
       style="width:24px;height:24px;"
     >
       <!--[-->
-      <i class="van-loading__line van-loading__line--1">
+      <i class="mi-loading__line mi-loading__line--1">
       </i>
-      <i class="van-loading__line van-loading__line--2">
+      <i class="mi-loading__line mi-loading__line--2">
       </i>
-      <i class="van-loading__line van-loading__line--3">
+      <i class="mi-loading__line mi-loading__line--3">
       </i>
-      <i class="van-loading__line van-loading__line--4">
+      <i class="mi-loading__line mi-loading__line--4">
       </i>
-      <i class="van-loading__line van-loading__line--5">
+      <i class="mi-loading__line mi-loading__line--5">
       </i>
-      <i class="van-loading__line van-loading__line--6">
+      <i class="mi-loading__line mi-loading__line--6">
       </i>
-      <i class="van-loading__line van-loading__line--7">
+      <i class="mi-loading__line mi-loading__line--7">
       </i>
-      <i class="van-loading__line van-loading__line--8">
+      <i class="mi-loading__line mi-loading__line--8">
       </i>
-      <i class="van-loading__line van-loading__line--9">
+      <i class="mi-loading__line mi-loading__line--9">
       </i>
-      <i class="van-loading__line van-loading__line--10">
+      <i class="mi-loading__line mi-loading__line--10">
       </i>
-      <i class="van-loading__line van-loading__line--11">
+      <i class="mi-loading__line mi-loading__line--11">
       </i>
-      <i class="van-loading__line van-loading__line--12">
+      <i class="mi-loading__line mi-loading__line--12">
       </i>
     </span>
   </div>
@@ -191,16 +191,16 @@ exports[`should render demo and match snapshot 1`] = `
 <div>
   <!--[-->
   <div
-    class="van-loading van-loading--circular"
+    class="mi-loading mi-loading--circular"
     aria-live="polite"
     aria-busy="true"
   >
     <span
-      class="van-loading__spinner van-loading__spinner--circular"
+      class="mi-loading__spinner mi-loading__spinner--circular"
       style="width:24px;height:24px;"
     >
       <svg
-        class="van-loading__circular"
+        class="mi-loading__circular"
         viewbox="25 25 50 50"
       >
         <circle
@@ -213,7 +213,7 @@ exports[`should render demo and match snapshot 1`] = `
       </svg>
     </span>
     <span
-      class="van-loading__text"
+      class="mi-loading__text"
       style
     >
       <!--[-->
@@ -224,16 +224,16 @@ exports[`should render demo and match snapshot 1`] = `
 <div>
   <!--[-->
   <div
-    class="van-loading van-loading--circular van-loading--vertical"
+    class="mi-loading mi-loading--circular mi-loading--vertical"
     aria-live="polite"
     aria-busy="true"
   >
     <span
-      class="van-loading__spinner van-loading__spinner--circular"
+      class="mi-loading__spinner mi-loading__spinner--circular"
       style="width:24px;height:24px;"
     >
       <svg
-        class="van-loading__circular"
+        class="mi-loading__circular"
         viewbox="25 25 50 50"
       >
         <circle
@@ -246,7 +246,7 @@ exports[`should render demo and match snapshot 1`] = `
       </svg>
     </span>
     <span
-      class="van-loading__text"
+      class="mi-loading__text"
       style
     >
       <!--[-->
@@ -257,16 +257,16 @@ exports[`should render demo and match snapshot 1`] = `
 <div>
   <!--[-->
   <div
-    class="van-loading van-loading--circular van-loading--vertical"
+    class="mi-loading mi-loading--circular mi-loading--vertical"
     aria-live="polite"
     aria-busy="true"
   >
     <span
-      class="van-loading__spinner van-loading__spinner--circular"
+      class="mi-loading__spinner mi-loading__spinner--circular"
       style="color:#0094ff;width:24px;height:24px;"
     >
       <svg
-        class="van-loading__circular"
+        class="mi-loading__circular"
         viewbox="25 25 50 50"
       >
         <circle
@@ -279,7 +279,7 @@ exports[`should render demo and match snapshot 1`] = `
       </svg>
     </span>
     <span
-      class="van-loading__text"
+      class="mi-loading__text"
       style="color:#0094ff;"
     >
       <!--[-->
@@ -287,16 +287,16 @@ exports[`should render demo and match snapshot 1`] = `
     </span>
   </div>
   <div
-    class="van-loading van-loading--circular van-loading--vertical"
+    class="mi-loading mi-loading--circular mi-loading--vertical"
     aria-live="polite"
     aria-busy="true"
   >
     <span
-      class="van-loading__spinner van-loading__spinner--circular"
+      class="mi-loading__spinner mi-loading__spinner--circular"
       style="width:24px;height:24px;"
     >
       <svg
-        class="van-loading__circular"
+        class="mi-loading__circular"
         viewbox="25 25 50 50"
       >
         <circle
@@ -309,7 +309,7 @@ exports[`should render demo and match snapshot 1`] = `
       </svg>
     </span>
     <span
-      class="van-loading__text"
+      class="mi-loading__text"
       style="color:#0094ff;"
     >
       <!--[-->
@@ -320,24 +320,24 @@ exports[`should render demo and match snapshot 1`] = `
 <div>
   <!--[-->
   <div
-    class="van-loading van-loading--circular van-loading--vertical"
+    class="mi-loading mi-loading--circular mi-loading--vertical"
     aria-live="polite"
     aria-busy="true"
   >
     <span
-      class="van-loading__spinner van-loading__spinner--circular"
+      class="mi-loading__spinner mi-loading__spinner--circular"
       style
     >
       <!--[-->
       <i
-        class="van-badge__wrapper van-icon van-icon-star-o"
+        class="mi-badge__wrapper mi-icon mi-icon-star-o"
         style="font-size:30px;"
       >
         <!--[-->
       </i>
     </span>
     <span
-      class="van-loading__text"
+      class="mi-loading__text"
       style
     >
       <!--[-->

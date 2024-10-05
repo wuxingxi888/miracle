@@ -72,7 +72,7 @@ test('should render loading of a specific size when using loading-size prop', ()
     },
   });
 
-  const loading = wrapper.find('.van-loading__spinner');
+  const loading = wrapper.find('.mi-loading__spinner');
   expect(loading.style.width).toEqual('10px');
   expect(loading.style.height).toEqual('10px');
 });

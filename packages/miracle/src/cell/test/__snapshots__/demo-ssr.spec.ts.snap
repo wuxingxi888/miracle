@@ -4,36 +4,36 @@ exports[`should render demo and match snapshot 1`] = `
 <!--[-->
 <div>
   <!--[-->
-  <div class="van-cell-group van-hairline--top-bottom">
+  <div class="mi-cell-group mi-hairline--top-bottom">
     <!--[-->
-    <div class="van-cell">
+    <div class="mi-cell">
       <div
-        class="van-cell__title"
+        class="mi-cell__title"
         style
       >
         <span>
           Cell title
         </span>
       </div>
-      <div class="van-cell__value">
+      <div class="mi-cell__value">
         <span>
           Content
         </span>
       </div>
     </div>
-    <div class="van-cell">
+    <div class="mi-cell">
       <div
-        class="van-cell__title"
+        class="mi-cell__title"
         style
       >
         <span>
           Cell title
         </span>
-        <div class="van-cell__label">
+        <div class="mi-cell__label">
           Description
         </div>
       </div>
-      <div class="van-cell__value">
+      <div class="mi-cell__value">
         <span>
           Content
         </span>
@@ -43,36 +43,36 @@ exports[`should render demo and match snapshot 1`] = `
 </div>
 <div>
   <!--[-->
-  <div class="van-cell-group van-cell-group--inset">
+  <div class="mi-cell-group mi-cell-group--inset">
     <!--[-->
-    <div class="van-cell">
+    <div class="mi-cell">
       <div
-        class="van-cell__title"
+        class="mi-cell__title"
         style
       >
         <span>
           Cell title
         </span>
       </div>
-      <div class="van-cell__value">
+      <div class="mi-cell__value">
         <span>
           Content
         </span>
       </div>
     </div>
-    <div class="van-cell">
+    <div class="mi-cell">
       <div
-        class="van-cell__title"
+        class="mi-cell__title"
         style
       >
         <span>
           Cell title
         </span>
-        <div class="van-cell__label">
+        <div class="mi-cell__label">
           Description
         </div>
       </div>
-      <div class="van-cell__value">
+      <div class="mi-cell__value">
         <span>
           Content
         </span>
@@ -82,34 +82,34 @@ exports[`should render demo and match snapshot 1`] = `
 </div>
 <div>
   <!--[-->
-  <div class="van-cell van-cell--large">
+  <div class="mi-cell mi-cell--large">
     <div
-      class="van-cell__title"
+      class="mi-cell__title"
       style
     >
       <span>
         Cell title
       </span>
     </div>
-    <div class="van-cell__value">
+    <div class="mi-cell__value">
       <span>
         Content
       </span>
     </div>
   </div>
-  <div class="van-cell van-cell--large">
+  <div class="mi-cell mi-cell--large">
     <div
-      class="van-cell__title"
+      class="mi-cell__title"
       style
     >
       <span>
         Cell title
       </span>
-      <div class="van-cell__label">
+      <div class="mi-cell__label">
         Description
       </div>
     </div>
-    <div class="van-cell__value">
+    <div class="mi-cell__value">
       <span>
         Content
       </span>
@@ -118,22 +118,22 @@ exports[`should render demo and match snapshot 1`] = `
 </div>
 <div>
   <!--[-->
-  <div class="van-cell">
+  <div class="mi-cell">
     <i
-      class="van-badge__wrapper van-icon van-icon-location-o van-cell__left-icon"
+      class="mi-badge__wrapper mi-icon mi-icon-location-o mi-cell__left-icon"
       style
     >
       <!--[-->
     </i>
     <div
-      class="van-cell__title"
+      class="mi-cell__title"
       style
     >
       <span>
         Cell title
       </span>
     </div>
-    <div class="van-cell__value">
+    <div class="mi-cell__value">
       <span>
         Content
       </span>
@@ -143,12 +143,12 @@ exports[`should render demo and match snapshot 1`] = `
 <div>
   <!--[-->
   <div
-    class="van-cell van-cell--clickable"
+    class="mi-cell mi-cell--clickable"
     role="button"
     tabindex="0"
   >
     <div
-      class="van-cell__title"
+      class="mi-cell__title"
       style
     >
       <span>
@@ -156,57 +156,57 @@ exports[`should render demo and match snapshot 1`] = `
       </span>
     </div>
     <i
-      class="van-badge__wrapper van-icon van-icon-arrow van-cell__right-icon"
+      class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon"
       style
     >
       <!--[-->
     </i>
   </div>
   <div
-    class="van-cell van-cell--clickable"
+    class="mi-cell mi-cell--clickable"
     role="button"
     tabindex="0"
   >
     <div
-      class="van-cell__title"
+      class="mi-cell__title"
       style
     >
       <span>
         Cell title
       </span>
     </div>
-    <div class="van-cell__value">
+    <div class="mi-cell__value">
       <span>
         Content
       </span>
     </div>
     <i
-      class="van-badge__wrapper van-icon van-icon-arrow van-cell__right-icon"
+      class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon"
       style
     >
       <!--[-->
     </i>
   </div>
   <div
-    class="van-cell van-cell--clickable"
+    class="mi-cell mi-cell--clickable"
     role="button"
     tabindex="0"
   >
     <div
-      class="van-cell__title"
+      class="mi-cell__title"
       style
     >
       <span>
         Cell title
       </span>
     </div>
-    <div class="van-cell__value">
+    <div class="mi-cell__value">
       <span>
         Content
       </span>
     </div>
     <i
-      class="van-badge__wrapper van-icon van-icon-arrow-down van-cell__right-icon"
+      class="mi-badge__wrapper mi-icon mi-icon-arrow-down mi-cell__right-icon"
       style
     >
       <!--[-->
@@ -216,12 +216,12 @@ exports[`should render demo and match snapshot 1`] = `
 <div>
   <!--[-->
   <div
-    class="van-cell van-cell--clickable"
+    class="mi-cell mi-cell--clickable"
     role="button"
     tabindex="0"
   >
     <div
-      class="van-cell__title"
+      class="mi-cell__title"
       style
     >
       <span>
@@ -229,19 +229,19 @@ exports[`should render demo and match snapshot 1`] = `
       </span>
     </div>
     <i
-      class="van-badge__wrapper van-icon van-icon-arrow van-cell__right-icon"
+      class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon"
       style
     >
       <!--[-->
     </i>
   </div>
   <div
-    class="van-cell van-cell--clickable"
+    class="mi-cell mi-cell--clickable"
     role="button"
     tabindex="0"
   >
     <div
-      class="van-cell__title"
+      class="mi-cell__title"
       style
     >
       <span>
@@ -249,7 +249,7 @@ exports[`should render demo and match snapshot 1`] = `
       </span>
     </div>
     <i
-      class="van-badge__wrapper van-icon van-icon-arrow van-cell__right-icon"
+      class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon"
       style
     >
       <!--[-->
@@ -259,21 +259,21 @@ exports[`should render demo and match snapshot 1`] = `
 <div>
   <!--[-->
   <!--[-->
-  <div class="van-cell-group__title">
+  <div class="mi-cell-group__title">
     Group 1
   </div>
-  <div class="van-cell-group van-hairline--top-bottom">
+  <div class="mi-cell-group mi-hairline--top-bottom">
     <!--[-->
-    <div class="van-cell">
+    <div class="mi-cell">
       <div
-        class="van-cell__title"
+        class="mi-cell__title"
         style
       >
         <span>
           Cell title
         </span>
       </div>
-      <div class="van-cell__value">
+      <div class="mi-cell__value">
         <span>
           Content
         </span>
@@ -281,21 +281,21 @@ exports[`should render demo and match snapshot 1`] = `
     </div>
   </div>
   <!--[-->
-  <div class="van-cell-group__title">
+  <div class="mi-cell-group__title">
     Group 2
   </div>
-  <div class="van-cell-group van-hairline--top-bottom">
+  <div class="mi-cell-group mi-hairline--top-bottom">
     <!--[-->
-    <div class="van-cell">
+    <div class="mi-cell">
       <div
-        class="van-cell__title"
+        class="mi-cell__title"
         style
       >
         <span>
           Cell title
         </span>
       </div>
-      <div class="van-cell__value">
+      <div class="mi-cell__value">
         <span>
           Content
         </span>
@@ -306,12 +306,12 @@ exports[`should render demo and match snapshot 1`] = `
 <div>
   <!--[-->
   <div
-    class="van-cell van-cell--clickable"
+    class="mi-cell mi-cell--clickable"
     role="button"
     tabindex="0"
   >
     <div
-      class="van-cell__title"
+      class="mi-cell__title"
       style
     >
       <!--[-->
@@ -320,33 +320,33 @@ exports[`should render demo and match snapshot 1`] = `
       </span>
       <span
         style
-        class="van-tag van-tag--primary"
+        class="mi-tag mi-tag--primary"
       >
         <!--[-->
         Tag
       </span>
     </div>
-    <div class="van-cell__value">
+    <div class="mi-cell__value">
       <span>
         Content
       </span>
     </div>
     <i
-      class="van-badge__wrapper van-icon van-icon-arrow van-cell__right-icon"
+      class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon"
       style
     >
       <!--[-->
     </i>
   </div>
-  <div class="van-cell">
+  <div class="mi-cell">
     <i
-      class="van-badge__wrapper van-icon van-icon-shop-o van-cell__left-icon"
+      class="mi-badge__wrapper mi-icon mi-icon-shop-o mi-cell__left-icon"
       style
     >
       <!--[-->
     </i>
     <div
-      class="van-cell__title"
+      class="mi-cell__title"
       style
     >
       <span>
@@ -355,7 +355,7 @@ exports[`should render demo and match snapshot 1`] = `
     </div>
     <!--[-->
     <i
-      class="van-badge__wrapper van-icon van-icon-search search-icon"
+      class="mi-badge__wrapper mi-icon mi-icon-search search-icon"
       style
     >
       <!--[-->
@@ -364,19 +364,19 @@ exports[`should render demo and match snapshot 1`] = `
 </div>
 <div>
   <!--[-->
-  <div class="van-cell van-cell--center">
+  <div class="mi-cell mi-cell--center">
     <div
-      class="van-cell__title"
+      class="mi-cell__title"
       style
     >
       <span>
         Cell title
       </span>
-      <div class="van-cell__label">
+      <div class="mi-cell__label">
         Description
       </div>
     </div>
-    <div class="van-cell__value">
+    <div class="mi-cell__value">
       <span>
         Content
       </span>

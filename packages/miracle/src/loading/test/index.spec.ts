@@ -8,7 +8,7 @@ test('should change loading size when using size prop', () => {
     },
   });
 
-  const spinner = wrapper.find('.van-loading__spinner');
+  const spinner = wrapper.find('.mi-loading__spinner');
   expect(spinner.style.width).toEqual('20px');
   expect(spinner.style.height).toEqual('20px');
 });
@@ -23,7 +23,7 @@ test('should change text font-size when using text-size prop', () => {
     },
   });
 
-  expect(wrapper.find('.van-loading__text').style.fontSize).toEqual('20px');
+  expect(wrapper.find('.mi-loading__text').style.fontSize).toEqual('20px');
 });
 
 test('should change text color when using text-color prop', async () => {
@@ -36,7 +36,7 @@ test('should change text color when using text-color prop', async () => {
     },
   });
 
-  expect(wrapper.find('.van-loading__text').style.color).toBe('red');
+  expect(wrapper.find('.mi-loading__text').style.color).toBe('red');
 });
 
 test('should change text color when using color prop', async () => {
@@ -49,7 +49,7 @@ test('should change text color when using color prop', async () => {
     },
   });
 
-  expect(wrapper.find('.van-loading__text').style.color).toBe('green');
+  expect(wrapper.find('.mi-loading__text').style.color).toBe('green');
 });
 
 test('should change text color to textColor when using color & textColor prop', async () => {
@@ -63,5 +63,5 @@ test('should change text color to textColor when using color & textColor prop', 
     },
   });
 
-  expect(wrapper.find('.van-loading__text').style.color).toBe('red');
+  expect(wrapper.find('.mi-loading__text').style.color).toBe('red');
 });

@@ -52,7 +52,7 @@ test('should change dot position when using offset prop', async () => {
     },
   });
 
-  const badge = wrapper.find('.van-badge');
+  const badge = wrapper.find('.mi-badge');
   expect(badge.style.top).toEqual('4px');
   expect(badge.style.right).toEqual('-2px');
 
@@ -74,7 +74,7 @@ test('should change dot position when using offset prop with custom unit', async
     },
   });
 
-  const badge = wrapper.find('.van-badge');
+  const badge = wrapper.find('.mi-badge');
   expect(badge.style.top).toEqual('4em');
   expect(badge.style.right).toEqual('-2rem');
 
@@ -93,7 +93,7 @@ test('should change dot position when using offset prop without children', () =>
     },
   });
 
-  const badge = wrapper.find('.van-badge');
+  const badge = wrapper.find('.mi-badge');
   expect(badge.style.marginTop).toEqual('4px');
   expect(badge.style.marginLeft).toEqual('2px');
 });
@@ -110,7 +110,7 @@ test('should change dot position when using offset prop and position is bottom-r
     },
   });
 
-  const badge = wrapper.find('.van-badge');
+  const badge = wrapper.find('.mi-badge');
   expect(badge.style.bottom).toEqual('4rem');
   expect(badge.style.right).toEqual('-2px');
 });
@@ -127,7 +127,7 @@ test('should change dot position when using offset prop and position is bottom-l
     },
   });
 
-  const badge = wrapper.find('.van-badge');
+  const badge = wrapper.find('.mi-badge');
   expect(badge.style.bottom).toEqual('4rem');
   expect(badge.style.left).toEqual('2px');
 });
@@ -144,7 +144,7 @@ test('should change dot position when using offset prop and position is top-left
     },
   });
 
-  const badge = wrapper.find('.van-badge');
+  const badge = wrapper.find('.mi-badge');
   expect(badge.style.top).toEqual('-4rem');
   expect(badge.style.left).toEqual('2px');
 });
@@ -156,8 +156,8 @@ test('should not render zero when show-zero is false', async () => {
     },
   });
 
-  expect(wrapper.find('.van-badge').exists()).toBeTruthy();
+  expect(wrapper.find('.mi-badge').exists()).toBeTruthy();
 
   await wrapper.setProps({ showZero: false });
-  expect(wrapper.find('.van-badge').exists()).toBeFalsy();
+  expect(wrapper.find('.mi-badge').exists()).toBeFalsy();
 });

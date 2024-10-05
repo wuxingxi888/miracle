@@ -70,12 +70,12 @@ test('should render loading placeholder when using lazy-load prop', () => {
 
 test('should not render loading placeholder when show-loading prop is false', async () => {
   const wrapper = mount(VanImage);
-  expect(wrapper.find('.van-image__loading').exists()).toBeTruthy();
+  expect(wrapper.find('.mi-image__loading').exists()).toBeTruthy();
 
   await wrapper.setProps({
     showLoading: false,
   });
-  expect(wrapper.find('.van-image__loading').exists()).toBeFalsy();
+  expect(wrapper.find('.mi-image__loading').exists()).toBeFalsy();
 });
 
 test('should not render error placeholder when show-error prop is false', async () => {
@@ -86,12 +86,12 @@ test('should not render error placeholder when show-error prop is false', async 
   });
 
   await wrapper.find('img').trigger('error');
-  expect(wrapper.find('.van-image__error').exists()).toBeTruthy();
+  expect(wrapper.find('.mi-image__error').exists()).toBeTruthy();
 
   await wrapper.setProps({
     showError: false,
   });
-  expect(wrapper.find('.van-image__error').exists()).toBeFalsy();
+  expect(wrapper.find('.mi-image__error').exists()).toBeFalsy();
 });
 
 test('should change error icon when using error-icon prop', async () => {
@@ -103,7 +103,7 @@ test('should change error icon when using error-icon prop', async () => {
   });
 
   await wrapper.find('img').trigger('error');
-  expect(wrapper.find('.van-icon-error').exists()).toBeTruthy();
+  expect(wrapper.find('.mi-icon-error').exists()).toBeTruthy();
 });
 
 test('should change loading icon when using loading-icon prop', () => {
@@ -113,7 +113,7 @@ test('should change loading icon when using loading-icon prop', () => {
     },
   });
 
-  expect(wrapper.find('.van-icon-success').exists()).toBeTruthy();
+  expect(wrapper.find('.mi-icon-success').exists()).toBeTruthy();
 });
 
 test('should apply icon-prefix prop to error-icon', async () => {
@@ -126,7 +126,7 @@ test('should apply icon-prefix prop to error-icon', async () => {
   });
 
   await wrapper.find('img').trigger('error');
-  expect(wrapper.find('.van-image__error-icon').html()).toMatchSnapshot();
+  expect(wrapper.find('.mi-image__error-icon').html()).toMatchSnapshot();
 });
 
 test('should apply icon-prefix prop to loading-icon', () => {
@@ -137,7 +137,7 @@ test('should apply icon-prefix prop to loading-icon', () => {
     },
   });
 
-  expect(wrapper.find('.van-image__loading-icon').html()).toMatchSnapshot();
+  expect(wrapper.find('.mi-image__loading-icon').html()).toMatchSnapshot();
 });
 
 test('should change border radius when using border-radius prop', () => {
@@ -158,7 +158,7 @@ test('should change loading icon size when using icon-size prop', () => {
       loadingIcon: 'success',
     },
   });
-  expect(wrapper.find('.van-image__loading-icon').style.fontSize).toEqual(
+  expect(wrapper.find('.mi-image__loading-icon').style.fontSize).toEqual(
     '3rem',
   );
 });
@@ -172,7 +172,7 @@ test('should change error icon size when using icon-size prop', async () => {
     },
   });
   await wrapper.find('img').trigger('error');
-  expect(wrapper.find('.van-image__error-icon').style.fontSize).toEqual('3rem');
+  expect(wrapper.find('.mi-image__error-icon').style.fontSize).toEqual('3rem');
 });
 
 test('should render default slot correctly', () => {

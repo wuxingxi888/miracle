@@ -56,7 +56,7 @@ test('should render dot correctly', () => {
       dot: true,
     },
   });
-  expect(wrapper.find('.van-badge').html()).toMatchSnapshot();
+  expect(wrapper.find('.mi-badge').html()).toMatchSnapshot();
 });
 
 test('should render badge correctly', () => {
@@ -65,7 +65,7 @@ test('should render badge correctly', () => {
       badge: '1',
     },
   });
-  expect(wrapper.find('.van-badge').html()).toMatchSnapshot();
+  expect(wrapper.find('.mi-badge').html()).toMatchSnapshot();
 });
 
 test('should change icon size when using size prop', () => {
@@ -87,6 +87,6 @@ test('should render badge-props prop correctly', async () => {
     },
   });
 
-  const badge = wrapper.find('.van-badge');
+  const badge = wrapper.find('.mi-badge');
   expect(badge.style.backgroundColor).toEqual('blue');
 });

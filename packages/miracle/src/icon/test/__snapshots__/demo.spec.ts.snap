@@ -1,66 +1,66 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`should render demo and match snapshot 1`] = `
-<div class="van-tabs van-tabs--line">
+<div class="mi-tabs mi-tabs--line">
   <div>
-    <div class="van-sticky">
+    <div class="mi-sticky">
       <div>
-        <div class="van-tabs__wrap">
+        <div class="mi-tabs__wrap">
           <div
             role="tablist"
-            class="van-tabs__nav van-tabs__nav--line"
+            class="mi-tabs__nav mi-tabs__nav--line"
             aria-orientation="horizontal"
           >
             <div
-              id="van-tabs-0"
+              id="mi-tabs-0"
               role="tab"
-              class="van-tab van-tab--line van-tab--active"
+              class="mi-tab mi-tab--line mi-tab--active"
               tabindex="0"
               aria-selected="true"
-              aria-controls="van-tab"
+              aria-controls="mi-tab"
             >
-              <span class="van-tab__text van-tab__text--ellipsis">
+              <span class="mi-tab__text mi-tab__text--ellipsis">
                 Demo
               </span>
             </div>
             <div
-              id="van-tabs-1"
+              id="mi-tabs-1"
               role="tab"
-              class="van-tab van-tab--line"
+              class="mi-tab mi-tab--line"
               tabindex="-1"
               aria-selected="false"
-              aria-controls="van-tab"
+              aria-controls="mi-tab"
             >
-              <span class="van-tab__text van-tab__text--ellipsis">
+              <span class="mi-tab__text mi-tab__text--ellipsis">
                 Basic
               </span>
             </div>
             <div
-              id="van-tabs-2"
+              id="mi-tabs-2"
               role="tab"
-              class="van-tab van-tab--line"
+              class="mi-tab mi-tab--line"
               tabindex="-1"
               aria-selected="false"
-              aria-controls="van-tab"
+              aria-controls="mi-tab"
             >
-              <span class="van-tab__text van-tab__text--ellipsis">
+              <span class="mi-tab__text mi-tab__text--ellipsis">
                 Outline
               </span>
             </div>
             <div
-              id="van-tabs-3"
+              id="mi-tabs-3"
               role="tab"
-              class="van-tab van-tab--line"
+              class="mi-tab mi-tab--line"
               tabindex="-1"
               aria-selected="false"
-              aria-controls="van-tab"
+              aria-controls="mi-tab"
             >
-              <span class="van-tab__text van-tab__text--ellipsis">
+              <span class="mi-tab__text mi-tab__text--ellipsis">
                 Filled
               </span>
             </div>
             <div
-              class="van-tabs__line"
+              class="mi-tabs__line"
               style="transform: translateX(50px) translateX(-50%);"
             >
             </div>
@@ -69,29 +69,29 @@ exports[`should render demo and match snapshot 1`] = `
       </div>
     </div>
   </div>
-  <div class="van-tabs__content">
+  <div class="mi-tabs__content">
     <div
-      id="van-tab"
+      id="mi-tab"
       role="tabpanel"
-      class="van-tab__panel demo-icon-tab-panel"
+      class="mi-tab__panel demo-icon-tab-panel"
       tabindex="0"
-      aria-labelledby="van-tabs-0"
+      aria-labelledby="mi-tabs-0"
       style
     >
       <div>
-        <div class="van-row">
-          <div class="van-col van-col--6">
-            <i class="van-badge__wrapper van-icon van-icon-chat-o">
+        <div class="mi-row">
+          <div class="mi-col mi-col--6">
+            <i class="mi-badge__wrapper mi-icon mi-icon-chat-o">
             </i>
           </div>
         </div>
       </div>
       <div>
-        <div class="van-row">
-          <div class="van-col van-col--6">
-            <i class="van-badge__wrapper van-icon">
+        <div class="mi-row">
+          <div class="mi-col mi-col--6">
+            <i class="mi-badge__wrapper mi-icon">
               <img
-                class="van-icon__image"
+                class="mi-icon__image"
                 src="https://fastly.jsdelivr.net/npm/@vant/assets/icon-demo.png"
               >
             </i>
@@ -99,23 +99,23 @@ exports[`should render demo and match snapshot 1`] = `
         </div>
       </div>
       <div>
-        <div class="van-row">
-          <div class="van-col van-col--6">
-            <i class="van-badge__wrapper van-icon van-icon-chat-o">
-              <div class="van-badge van-badge--top-right van-badge--dot van-badge--fixed">
+        <div class="mi-row">
+          <div class="mi-col mi-col--6">
+            <i class="mi-badge__wrapper mi-icon mi-icon-chat-o">
+              <div class="mi-badge mi-badge--top-right mi-badge--dot mi-badge--fixed">
               </div>
             </i>
           </div>
-          <div class="van-col van-col--6">
-            <i class="van-badge__wrapper van-icon van-icon-chat-o">
-              <div class="van-badge van-badge--top-right van-badge--fixed">
+          <div class="mi-col mi-col--6">
+            <i class="mi-badge__wrapper mi-icon mi-icon-chat-o">
+              <div class="mi-badge mi-badge--top-right mi-badge--fixed">
                 9
               </div>
             </i>
           </div>
-          <div class="van-col van-col--6">
-            <i class="van-badge__wrapper van-icon van-icon-chat-o">
-              <div class="van-badge van-badge--top-right van-badge--fixed">
+          <div class="mi-col mi-col--6">
+            <i class="mi-badge__wrapper mi-icon mi-icon-chat-o">
+              <div class="mi-badge mi-badge--top-right mi-badge--fixed">
                 99+
               </div>
             </i>
@@ -123,17 +123,17 @@ exports[`should render demo and match snapshot 1`] = `
         </div>
       </div>
       <div>
-        <div class="van-row">
-          <div class="van-col van-col--6">
+        <div class="mi-row">
+          <div class="mi-col mi-col--6">
             <i
-              class="van-badge__wrapper van-icon van-icon-cart-o"
+              class="mi-badge__wrapper mi-icon mi-icon-cart-o"
               style="color: rgb(25, 137, 250);"
             >
             </i>
           </div>
-          <div class="van-col van-col--6">
+          <div class="mi-col mi-col--6">
             <i
-              class="van-badge__wrapper van-icon van-icon-fire-o"
+              class="mi-badge__wrapper mi-icon mi-icon-fire-o"
               style="color: rgb(238, 10, 36);"
             >
             </i>
@@ -141,17 +141,17 @@ exports[`should render demo and match snapshot 1`] = `
         </div>
       </div>
       <div>
-        <div class="van-row">
-          <div class="van-col van-col--6">
+        <div class="mi-row">
+          <div class="mi-col mi-col--6">
             <i
-              class="van-badge__wrapper van-icon van-icon-chat-o"
+              class="mi-badge__wrapper mi-icon mi-icon-chat-o"
               style="font-size: 40px;"
             >
             </i>
           </div>
-          <div class="van-col van-col--6">
+          <div class="mi-col mi-col--6">
             <i
-              class="van-badge__wrapper van-icon van-icon-chat-o"
+              class="mi-badge__wrapper mi-icon mi-icon-chat-o"
               style="font-size: 3rem;"
             >
             </i>
@@ -160,29 +160,29 @@ exports[`should render demo and match snapshot 1`] = `
       </div>
     </div>
     <div
-      id="van-tab"
+      id="mi-tab"
       role="tabpanel"
-      class="van-tab__panel demo-icon-tab-panel"
+      class="mi-tab__panel demo-icon-tab-panel"
       tabindex="-1"
-      aria-labelledby="van-tabs-1"
+      aria-labelledby="mi-tabs-1"
       style="display: none;"
     >
     </div>
     <div
-      id="van-tab"
+      id="mi-tab"
       role="tabpanel"
-      class="van-tab__panel demo-icon-tab-panel"
+      class="mi-tab__panel demo-icon-tab-panel"
       tabindex="-1"
-      aria-labelledby="van-tabs-2"
+      aria-labelledby="mi-tabs-2"
       style="display: none;"
     >
     </div>
     <div
-      id="van-tab"
+      id="mi-tab"
       role="tabpanel"
-      class="van-tab__panel demo-icon-tab-panel"
+      class="mi-tab__panel demo-icon-tab-panel"
       tabindex="-1"
-      aria-labelledby="van-tabs-3"
+      aria-labelledby="mi-tabs-3"
       style="display: none;"
     >
     </div>

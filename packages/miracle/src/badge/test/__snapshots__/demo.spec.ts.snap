@@ -2,146 +2,146 @@
 
 exports[`should render demo and match snapshot 1`] = `
 <div>
-  <div class="van-badge__wrapper">
+  <div class="mi-badge__wrapper">
     <div class="child">
     </div>
-    <div class="van-badge van-badge--top-right van-badge--fixed">
+    <div class="mi-badge mi-badge--top-right mi-badge--fixed">
       5
     </div>
   </div>
-  <div class="van-badge__wrapper">
+  <div class="mi-badge__wrapper">
     <div class="child">
     </div>
-    <div class="van-badge van-badge--top-right van-badge--fixed">
+    <div class="mi-badge mi-badge--top-right mi-badge--fixed">
       10
     </div>
   </div>
-  <div class="van-badge__wrapper">
+  <div class="mi-badge__wrapper">
     <div class="child">
     </div>
-    <div class="van-badge van-badge--top-right van-badge--fixed">
+    <div class="mi-badge mi-badge--top-right mi-badge--fixed">
       Hot
     </div>
   </div>
-  <div class="van-badge__wrapper">
+  <div class="mi-badge__wrapper">
     <div class="child">
     </div>
-    <div class="van-badge van-badge--top-right van-badge--dot van-badge--fixed">
+    <div class="mi-badge mi-badge--top-right mi-badge--dot mi-badge--fixed">
     </div>
   </div>
 </div>
 <div>
-  <div class="van-badge__wrapper">
+  <div class="mi-badge__wrapper">
     <div class="child">
     </div>
-    <div class="van-badge van-badge--top-right van-badge--fixed">
+    <div class="mi-badge mi-badge--top-right mi-badge--fixed">
       9+
     </div>
   </div>
-  <div class="van-badge__wrapper">
+  <div class="mi-badge__wrapper">
     <div class="child">
     </div>
-    <div class="van-badge van-badge--top-right van-badge--fixed">
+    <div class="mi-badge mi-badge--top-right mi-badge--fixed">
       20+
     </div>
   </div>
-  <div class="van-badge__wrapper">
+  <div class="mi-badge__wrapper">
     <div class="child">
     </div>
-    <div class="van-badge van-badge--top-right van-badge--fixed">
+    <div class="mi-badge mi-badge--top-right mi-badge--fixed">
       99+
     </div>
   </div>
 </div>
 <div>
-  <div class="van-badge__wrapper">
+  <div class="mi-badge__wrapper">
     <div class="child">
     </div>
     <div
-      class="van-badge van-badge--top-right van-badge--fixed"
+      class="mi-badge mi-badge--top-right mi-badge--fixed"
       style="background: rgb(25, 137, 250);"
     >
       5
     </div>
   </div>
-  <div class="van-badge__wrapper">
+  <div class="mi-badge__wrapper">
     <div class="child">
     </div>
     <div
-      class="van-badge van-badge--top-right van-badge--fixed"
+      class="mi-badge mi-badge--top-right mi-badge--fixed"
       style="background: rgb(25, 137, 250);"
     >
       10
     </div>
   </div>
-  <div class="van-badge__wrapper">
+  <div class="mi-badge__wrapper">
     <div class="child">
     </div>
     <div
-      class="van-badge van-badge--top-right van-badge--dot van-badge--fixed"
+      class="mi-badge mi-badge--top-right mi-badge--dot mi-badge--fixed"
       style="background: rgb(25, 137, 250);"
     >
     </div>
   </div>
 </div>
 <div>
-  <div class="van-badge__wrapper">
+  <div class="mi-badge__wrapper">
     <div class="child">
     </div>
-    <div class="van-badge van-badge--top-right van-badge--fixed">
-      <i class="van-badge__wrapper van-icon van-icon-success badge-icon">
+    <div class="mi-badge mi-badge--top-right mi-badge--fixed">
+      <i class="mi-badge__wrapper mi-icon mi-icon-success badge-icon">
       </i>
     </div>
   </div>
-  <div class="van-badge__wrapper">
+  <div class="mi-badge__wrapper">
     <div class="child">
     </div>
-    <div class="van-badge van-badge--top-right van-badge--fixed">
-      <i class="van-badge__wrapper van-icon van-icon-cross badge-icon">
+    <div class="mi-badge mi-badge--top-right mi-badge--fixed">
+      <i class="mi-badge__wrapper mi-icon mi-icon-cross badge-icon">
       </i>
     </div>
   </div>
-  <div class="van-badge__wrapper">
+  <div class="mi-badge__wrapper">
     <div class="child">
     </div>
-    <div class="van-badge van-badge--top-right van-badge--fixed">
-      <i class="van-badge__wrapper van-icon van-icon-down badge-icon">
+    <div class="mi-badge mi-badge--top-right mi-badge--fixed">
+      <i class="mi-badge__wrapper mi-icon mi-icon-down badge-icon">
       </i>
     </div>
   </div>
 </div>
 <div>
-  <div class="van-badge__wrapper">
+  <div class="mi-badge__wrapper">
     <div class="child">
     </div>
-    <div class="van-badge van-badge--top-left van-badge--fixed">
+    <div class="mi-badge mi-badge--top-left mi-badge--fixed">
       10
     </div>
   </div>
-  <div class="van-badge__wrapper">
+  <div class="mi-badge__wrapper">
     <div class="child">
     </div>
-    <div class="van-badge van-badge--bottom-left van-badge--fixed">
+    <div class="mi-badge mi-badge--bottom-left mi-badge--fixed">
       10
     </div>
   </div>
-  <div class="van-badge__wrapper">
+  <div class="mi-badge__wrapper">
     <div class="child">
     </div>
-    <div class="van-badge van-badge--bottom-right van-badge--fixed">
+    <div class="mi-badge mi-badge--bottom-right mi-badge--fixed">
       10
     </div>
   </div>
 </div>
 <div>
   <div
-    class="van-badge van-badge--top-right"
+    class="mi-badge mi-badge--top-right"
     style="margin-left: 16px;"
   >
     20
   </div>
   <div
-    class="van-badge van-badge--top-right"
+    class="mi-badge mi-badge--top-right"
     style="margin-left: 16px;"
   >
     99+

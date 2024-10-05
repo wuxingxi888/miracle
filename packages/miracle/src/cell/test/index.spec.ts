@@ -57,7 +57,7 @@ test('should change arrow direction when using arrow-direction prop', () => {
     },
   });
 
-  expect(wrapper.find('.van-cell__right-icon').html()).toMatchSnapshot();
+  expect(wrapper.find('.mi-cell__right-icon').html()).toMatchSnapshot();
 });
 
 test('should change title style when using title-style prop', () => {
@@ -70,7 +70,7 @@ test('should change title style when using title-style prop', () => {
     },
   });
 
-  const title = wrapper.find('.van-cell__title');
+  const title = wrapper.find('.mi-cell__title');
   expect(title.style.color).toEqual('red');
 });
 
@@ -92,7 +92,7 @@ test('should allow to disable clickable when using is-link prop', () => {
       clickable: false,
     },
   });
-  expect(wrapper.classes()).not.toContain('van-cell--clickable');
+  expect(wrapper.classes()).not.toContain('mi-cell--clickable');
 });
 
 test('should render tag prop correctly', () => {

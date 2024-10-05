@@ -2,39 +2,39 @@
 
 exports[`should render demo and match snapshot 1`] = `
 <div>
-  <div class="van-row">
+  <div class="mi-row">
     <div
-      class="van-image"
+      class="mi-image"
       style="width: 100px; height: 100px;"
     >
       <img
         src="https://fastly.jsdelivr.net/npm/@vant/assets/cat.jpeg"
-        class="van-image__img"
+        class="mi-image__img"
       >
-      <div class="van-image__loading">
-        <i class="van-badge__wrapper van-icon van-icon-photo van-image__loading-icon">
+      <div class="mi-image__loading">
+        <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon">
         </i>
       </div>
     </div>
   </div>
 </div>
 <div>
-  <div class="van-row">
+  <div class="mi-row">
     <div
-      class="van-col van-col--8"
+      class="mi-col mi-col--8"
       style="padding-right: 13.333333333333334px;"
     >
       <div
-        class="van-image"
+        class="mi-image"
         style="width: 100%; height: 27vw;"
       >
         <img
           src="https://fastly.jsdelivr.net/npm/@vant/assets/cat.jpeg"
-          class="van-image__img"
+          class="mi-image__img"
           style="object-fit: contain;"
         >
-        <div class="van-image__loading">
-          <i class="van-badge__wrapper van-icon van-icon-photo van-image__loading-icon">
+        <div class="mi-image__loading">
+          <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon">
           </i>
         </div>
       </div>
@@ -44,19 +44,19 @@ exports[`should render demo and match snapshot 1`] = `
     </div>
     <div
       style="padding-left: 6.666666666666666px; padding-right: 6.666666666666668px;"
-      class="van-col van-col--8"
+      class="mi-col mi-col--8"
     >
       <div
-        class="van-image"
+        class="mi-image"
         style="width: 100%; height: 27vw;"
       >
         <img
           src="https://fastly.jsdelivr.net/npm/@vant/assets/cat.jpeg"
-          class="van-image__img"
+          class="mi-image__img"
           style="object-fit: cover;"
         >
-        <div class="van-image__loading">
-          <i class="van-badge__wrapper van-icon van-icon-photo van-image__loading-icon">
+        <div class="mi-image__loading">
+          <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon">
           </i>
         </div>
       </div>
@@ -66,19 +66,19 @@ exports[`should render demo and match snapshot 1`] = `
     </div>
     <div
       style="padding-left: 13.333333333333332px;"
-      class="van-col van-col--8"
+      class="mi-col mi-col--8"
     >
       <div
-        class="van-image"
+        class="mi-image"
         style="width: 100%; height: 27vw;"
       >
         <img
           src="https://fastly.jsdelivr.net/npm/@vant/assets/cat.jpeg"
-          class="van-image__img"
+          class="mi-image__img"
           style="object-fit: fill;"
         >
-        <div class="van-image__loading">
-          <i class="van-badge__wrapper van-icon van-icon-photo van-image__loading-icon">
+        <div class="mi-image__loading">
+          <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon">
           </i>
         </div>
       </div>
@@ -87,20 +87,20 @@ exports[`should render demo and match snapshot 1`] = `
       </div>
     </div>
     <div
-      class="van-col van-col--8"
+      class="mi-col mi-col--8"
       style="padding-right: 10px;"
     >
       <div
-        class="van-image"
+        class="mi-image"
         style="width: 100%; height: 27vw;"
       >
         <img
           src="https://fastly.jsdelivr.net/npm/@vant/assets/cat.jpeg"
-          class="van-image__img"
+          class="mi-image__img"
           style="object-fit: none;"
         >
-        <div class="van-image__loading">
-          <i class="van-badge__wrapper van-icon van-icon-photo van-image__loading-icon">
+        <div class="mi-image__loading">
+          <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon">
           </i>
         </div>
       </div>
@@ -110,19 +110,19 @@ exports[`should render demo and match snapshot 1`] = `
     </div>
     <div
       style="padding-left: 10px;"
-      class="van-col van-col--8"
+      class="mi-col mi-col--8"
     >
       <div
-        class="van-image"
+        class="mi-image"
         style="width: 100%; height: 27vw;"
       >
         <img
           src="https://fastly.jsdelivr.net/npm/@vant/assets/cat.jpeg"
-          class="van-image__img"
+          class="mi-image__img"
           style="object-fit: scale-down;"
         >
-        <div class="van-image__loading">
-          <i class="van-badge__wrapper van-icon van-icon-photo van-image__loading-icon">
+        <div class="mi-image__loading">
+          <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon">
           </i>
         </div>
       </div>
@@ -133,22 +133,22 @@ exports[`should render demo and match snapshot 1`] = `
   </div>
 </div>
 <div>
-  <div class="van-row">
+  <div class="mi-row">
     <div
-      class="van-col van-col--8"
+      class="mi-col mi-col--8"
       style="padding-right: 13.333333333333334px;"
     >
       <div
-        class="van-image"
+        class="mi-image"
         style="width: 100%; height: 27vw;"
       >
         <img
           src="https://fastly.jsdelivr.net/npm/@vant/assets/cat.jpeg"
-          class="van-image__img"
+          class="mi-image__img"
           style="object-fit: cover; object-position: left;"
         >
-        <div class="van-image__loading">
-          <i class="van-badge__wrapper van-icon van-icon-photo van-image__loading-icon">
+        <div class="mi-image__loading">
+          <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon">
           </i>
         </div>
       </div>
@@ -161,19 +161,19 @@ exports[`should render demo and match snapshot 1`] = `
     </div>
     <div
       style="padding-left: 6.666666666666666px; padding-right: 6.666666666666668px;"
-      class="van-col van-col--8"
+      class="mi-col mi-col--8"
     >
       <div
-        class="van-image"
+        class="mi-image"
         style="width: 100%; height: 27vw;"
       >
         <img
           src="https://fastly.jsdelivr.net/npm/@vant/assets/cat.jpeg"
-          class="van-image__img"
+          class="mi-image__img"
           style="object-fit: cover; object-position: center;"
         >
-        <div class="van-image__loading">
-          <i class="van-badge__wrapper van-icon van-icon-photo van-image__loading-icon">
+        <div class="mi-image__loading">
+          <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon">
           </i>
         </div>
       </div>
@@ -186,19 +186,19 @@ exports[`should render demo and match snapshot 1`] = `
     </div>
     <div
       style="padding-left: 13.333333333333332px;"
-      class="van-col van-col--8"
+      class="mi-col mi-col--8"
     >
       <div
-        class="van-image"
+        class="mi-image"
         style="width: 100%; height: 27vw;"
       >
         <img
           src="https://fastly.jsdelivr.net/npm/@vant/assets/cat.jpeg"
-          class="van-image__img"
+          class="mi-image__img"
           style="object-fit: cover; object-position: right;"
         >
-        <div class="van-image__loading">
-          <i class="van-badge__wrapper van-icon van-icon-photo van-image__loading-icon">
+        <div class="mi-image__loading">
+          <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon">
           </i>
         </div>
       </div>
@@ -210,20 +210,20 @@ exports[`should render demo and match snapshot 1`] = `
       </div>
     </div>
     <div
-      class="van-col van-col--8"
+      class="mi-col mi-col--8"
       style="padding-right: 13.333333333333334px;"
     >
       <div
-        class="van-image"
+        class="mi-image"
         style="width: 100%; height: 27vw;"
       >
         <img
           src="https://fastly.jsdelivr.net/npm/@vant/assets/cat.jpeg"
-          class="van-image__img"
+          class="mi-image__img"
           style="object-fit: contain; object-position: top;"
         >
-        <div class="van-image__loading">
-          <i class="van-badge__wrapper van-icon van-icon-photo van-image__loading-icon">
+        <div class="mi-image__loading">
+          <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon">
           </i>
         </div>
       </div>
@@ -236,19 +236,19 @@ exports[`should render demo and match snapshot 1`] = `
     </div>
     <div
       style="padding-left: 6.666666666666666px; padding-right: 6.666666666666668px;"
-      class="van-col van-col--8"
+      class="mi-col mi-col--8"
     >
       <div
-        class="van-image"
+        class="mi-image"
         style="width: 100%; height: 27vw;"
       >
         <img
           src="https://fastly.jsdelivr.net/npm/@vant/assets/cat.jpeg"
-          class="van-image__img"
+          class="mi-image__img"
           style="object-fit: contain; object-position: center;"
         >
-        <div class="van-image__loading">
-          <i class="van-badge__wrapper van-icon van-icon-photo van-image__loading-icon">
+        <div class="mi-image__loading">
+          <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon">
           </i>
         </div>
       </div>
@@ -261,19 +261,19 @@ exports[`should render demo and match snapshot 1`] = `
     </div>
     <div
       style="padding-left: 13.333333333333332px;"
-      class="van-col van-col--8"
+      class="mi-col mi-col--8"
     >
       <div
-        class="van-image"
+        class="mi-image"
         style="width: 100%; height: 27vw;"
       >
         <img
           src="https://fastly.jsdelivr.net/npm/@vant/assets/cat.jpeg"
-          class="van-image__img"
+          class="mi-image__img"
           style="object-fit: contain; object-position: bottom;"
         >
-        <div class="van-image__loading">
-          <i class="van-badge__wrapper van-icon van-icon-photo van-image__loading-icon">
+        <div class="mi-image__loading">
+          <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon">
           </i>
         </div>
       </div>
@@ -287,22 +287,22 @@ exports[`should render demo and match snapshot 1`] = `
   </div>
 </div>
 <div>
-  <div class="van-row">
+  <div class="mi-row">
     <div
-      class="van-col van-col--8"
+      class="mi-col mi-col--8"
       style="padding-right: 13.333333333333334px;"
     >
       <div
-        class="van-image van-image--round"
+        class="mi-image mi-image--round"
         style="width: 100%; height: 27vw;"
       >
         <img
           src="https://fastly.jsdelivr.net/npm/@vant/assets/cat.jpeg"
-          class="van-image__img"
+          class="mi-image__img"
           style="object-fit: contain;"
         >
-        <div class="van-image__loading">
-          <i class="van-badge__wrapper van-icon van-icon-photo van-image__loading-icon">
+        <div class="mi-image__loading">
+          <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon">
           </i>
         </div>
       </div>
@@ -312,19 +312,19 @@ exports[`should render demo and match snapshot 1`] = `
     </div>
     <div
       style="padding-left: 6.666666666666666px; padding-right: 6.666666666666668px;"
-      class="van-col van-col--8"
+      class="mi-col mi-col--8"
     >
       <div
-        class="van-image van-image--round"
+        class="mi-image mi-image--round"
         style="width: 100%; height: 27vw;"
       >
         <img
           src="https://fastly.jsdelivr.net/npm/@vant/assets/cat.jpeg"
-          class="van-image__img"
+          class="mi-image__img"
           style="object-fit: cover;"
         >
-        <div class="van-image__loading">
-          <i class="van-badge__wrapper van-icon van-icon-photo van-image__loading-icon">
+        <div class="mi-image__loading">
+          <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon">
           </i>
         </div>
       </div>
@@ -334,19 +334,19 @@ exports[`should render demo and match snapshot 1`] = `
     </div>
     <div
       style="padding-left: 13.333333333333332px;"
-      class="van-col van-col--8"
+      class="mi-col mi-col--8"
     >
       <div
-        class="van-image van-image--round"
+        class="mi-image mi-image--round"
         style="width: 100%; height: 27vw;"
       >
         <img
           src="https://fastly.jsdelivr.net/npm/@vant/assets/cat.jpeg"
-          class="van-image__img"
+          class="mi-image__img"
           style="object-fit: fill;"
         >
-        <div class="van-image__loading">
-          <i class="van-badge__wrapper van-icon van-icon-photo van-image__loading-icon">
+        <div class="mi-image__loading">
+          <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon">
           </i>
         </div>
       </div>
@@ -355,20 +355,20 @@ exports[`should render demo and match snapshot 1`] = `
       </div>
     </div>
     <div
-      class="van-col van-col--8"
+      class="mi-col mi-col--8"
       style="padding-right: 10px;"
     >
       <div
-        class="van-image van-image--round"
+        class="mi-image mi-image--round"
         style="width: 100%; height: 27vw;"
       >
         <img
           src="https://fastly.jsdelivr.net/npm/@vant/assets/cat.jpeg"
-          class="van-image__img"
+          class="mi-image__img"
           style="object-fit: none;"
         >
-        <div class="van-image__loading">
-          <i class="van-badge__wrapper van-icon van-icon-photo van-image__loading-icon">
+        <div class="mi-image__loading">
+          <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon">
           </i>
         </div>
       </div>
@@ -378,19 +378,19 @@ exports[`should render demo and match snapshot 1`] = `
     </div>
     <div
       style="padding-left: 10px;"
-      class="van-col van-col--8"
+      class="mi-col mi-col--8"
     >
       <div
-        class="van-image van-image--round"
+        class="mi-image mi-image--round"
         style="width: 100%; height: 27vw;"
       >
         <img
           src="https://fastly.jsdelivr.net/npm/@vant/assets/cat.jpeg"
-          class="van-image__img"
+          class="mi-image__img"
           style="object-fit: scale-down;"
         >
-        <div class="van-image__loading">
-          <i class="van-badge__wrapper van-icon van-icon-photo van-image__loading-icon">
+        <div class="mi-image__loading">
+          <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon">
           </i>
         </div>
       </div>
@@ -401,17 +401,17 @@ exports[`should render demo and match snapshot 1`] = `
   </div>
 </div>
 <div>
-  <div class="van-row">
+  <div class="mi-row">
     <div
-      class="van-col van-col--8"
+      class="mi-col mi-col--8"
       style="padding-right: 10px;"
     >
       <div
-        class="van-image"
+        class="mi-image"
         style="width: 100%; height: 27vw;"
       >
-        <div class="van-image__loading">
-          <i class="van-badge__wrapper van-icon van-icon-photo van-image__loading-icon">
+        <div class="mi-image__loading">
+          <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon">
           </i>
         </div>
       </div>
@@ -421,45 +421,45 @@ exports[`should render demo and match snapshot 1`] = `
     </div>
     <div
       style="padding-left: 10px;"
-      class="van-col van-col--8"
+      class="mi-col mi-col--8"
     >
       <div
-        class="van-image"
+        class="mi-image"
         style="width: 100%; height: 27vw;"
       >
-        <div class="van-image__loading">
+        <div class="mi-image__loading">
           <div
-            class="van-loading van-loading--spinner"
+            class="mi-loading mi-loading--spinner"
             aria-live="polite"
             aria-busy="true"
           >
             <span
-              class="van-loading__spinner van-loading__spinner--spinner"
+              class="mi-loading__spinner mi-loading__spinner--spinner"
               style="width: 20px; height: 20px;"
             >
-              <i class="van-loading__line van-loading__line--1">
+              <i class="mi-loading__line mi-loading__line--1">
               </i>
-              <i class="van-loading__line van-loading__line--2">
+              <i class="mi-loading__line mi-loading__line--2">
               </i>
-              <i class="van-loading__line van-loading__line--3">
+              <i class="mi-loading__line mi-loading__line--3">
               </i>
-              <i class="van-loading__line van-loading__line--4">
+              <i class="mi-loading__line mi-loading__line--4">
               </i>
-              <i class="van-loading__line van-loading__line--5">
+              <i class="mi-loading__line mi-loading__line--5">
               </i>
-              <i class="van-loading__line van-loading__line--6">
+              <i class="mi-loading__line mi-loading__line--6">
               </i>
-              <i class="van-loading__line van-loading__line--7">
+              <i class="mi-loading__line mi-loading__line--7">
               </i>
-              <i class="van-loading__line van-loading__line--8">
+              <i class="mi-loading__line mi-loading__line--8">
               </i>
-              <i class="van-loading__line van-loading__line--9">
+              <i class="mi-loading__line mi-loading__line--9">
               </i>
-              <i class="van-loading__line van-loading__line--10">
+              <i class="mi-loading__line mi-loading__line--10">
               </i>
-              <i class="van-loading__line van-loading__line--11">
+              <i class="mi-loading__line mi-loading__line--11">
               </i>
-              <i class="van-loading__line van-loading__line--12">
+              <i class="mi-loading__line mi-loading__line--12">
               </i>
             </span>
           </div>
@@ -472,21 +472,21 @@ exports[`should render demo and match snapshot 1`] = `
   </div>
 </div>
 <div>
-  <div class="van-row">
+  <div class="mi-row">
     <div
-      class="van-col van-col--8"
+      class="mi-col mi-col--8"
       style="padding-right: 10px;"
     >
       <div
-        class="van-image"
+        class="mi-image"
         style="width: 100%; height: 27vw;"
       >
         <img
           src="http://x"
-          class="van-image__img"
+          class="mi-image__img"
         >
-        <div class="van-image__loading">
-          <i class="van-badge__wrapper van-icon van-icon-photo van-image__loading-icon">
+        <div class="mi-image__loading">
+          <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon">
           </i>
         </div>
       </div>
@@ -496,18 +496,18 @@ exports[`should render demo and match snapshot 1`] = `
     </div>
     <div
       style="padding-left: 10px;"
-      class="van-col van-col--8"
+      class="mi-col mi-col--8"
     >
       <div
-        class="van-image"
+        class="mi-image"
         style="width: 100%; height: 27vw;"
       >
         <img
           src="http://x"
-          class="van-image__img"
+          class="mi-image__img"
         >
-        <div class="van-image__loading">
-          <i class="van-badge__wrapper van-icon van-icon-photo van-image__loading-icon">
+        <div class="mi-image__loading">
+          <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon">
           </i>
         </div>
       </div>

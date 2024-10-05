@@ -1,0 +1,525 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render demo and match snapshot 1`] = `
+<!--[-->
+<div>
+  <!--[-->
+  <div class="mi-space mi-space--horizontal mi-space--align-center">
+    <!--[-->
+    <div
+      class="mi-space-item"
+      style="margin-right:8px;"
+    >
+      <button
+        type="button"
+        class="mi-button mi-button--primary mi-button--normal"
+        style
+      >
+        <div class="mi-button__content">
+          <span class="mi-button__text">
+            <!--[-->
+            Button
+          </span>
+        </div>
+      </button>
+    </div>
+    <div
+      class="mi-space-item"
+      style="margin-right:8px;"
+    >
+      <button
+        type="button"
+        class="mi-button mi-button--primary mi-button--normal"
+        style
+      >
+        <div class="mi-button__content">
+          <span class="mi-button__text">
+            <!--[-->
+            Button
+          </span>
+        </div>
+      </button>
+    </div>
+    <div
+      class="mi-space-item"
+      style="margin-right:8px;"
+    >
+      <button
+        type="button"
+        class="mi-button mi-button--primary mi-button--normal"
+        style
+      >
+        <div class="mi-button__content">
+          <span class="mi-button__text">
+            <!--[-->
+            Button
+          </span>
+        </div>
+      </button>
+    </div>
+    <div
+      class="mi-space-item"
+      style
+    >
+      <button
+        type="button"
+        class="mi-button mi-button--primary mi-button--normal"
+        style
+      >
+        <div class="mi-button__content">
+          <span class="mi-button__text">
+            <!--[-->
+            Button
+          </span>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div class="mi-space mi-space--vertical mi-space--fill">
+    <!--[-->
+    <div
+      class="mi-space-item"
+      style="margin-bottom:8px;"
+    >
+      <button
+        type="button"
+        class="mi-button mi-button--primary mi-button--normal mi-button--block"
+        style
+      >
+        <div class="mi-button__content">
+          <span class="mi-button__text">
+            <!--[-->
+            Button
+          </span>
+        </div>
+      </button>
+    </div>
+    <div
+      class="mi-space-item"
+      style="margin-bottom:8px;"
+    >
+      <button
+        type="button"
+        class="mi-button mi-button--primary mi-button--normal mi-button--block"
+        style
+      >
+        <div class="mi-button__content">
+          <span class="mi-button__text">
+            <!--[-->
+            Button
+          </span>
+        </div>
+      </button>
+    </div>
+    <div
+      class="mi-space-item"
+      style
+    >
+      <button
+        type="button"
+        class="mi-button mi-button--primary mi-button--normal mi-button--block"
+        style
+      >
+        <div class="mi-button__content">
+          <span class="mi-button__text">
+            <!--[-->
+            Button
+          </span>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div
+    class="mi-space mi-space--horizontal mi-space--align-center"
+    style="margin-bottom:16px;"
+  >
+    <!--[-->
+    <div
+      class="mi-space-item"
+      style="margin-right:20px;"
+    >
+      <button
+        type="button"
+        class="mi-button mi-button--primary mi-button--normal"
+        style
+      >
+        <div class="mi-button__content">
+          <span class="mi-button__text">
+            <!--[-->
+            Button
+          </span>
+        </div>
+      </button>
+    </div>
+    <div
+      class="mi-space-item"
+      style="margin-right:20px;"
+    >
+      <button
+        type="button"
+        class="mi-button mi-button--primary mi-button--normal"
+        style
+      >
+        <div class="mi-button__content">
+          <span class="mi-button__text">
+            <!--[-->
+            Button
+          </span>
+        </div>
+      </button>
+    </div>
+    <div
+      class="mi-space-item"
+      style
+    >
+      <button
+        type="button"
+        class="mi-button mi-button--primary mi-button--normal"
+        style
+      >
+        <div class="mi-button__content">
+          <span class="mi-button__text">
+            <!--[-->
+            Button
+          </span>
+        </div>
+      </button>
+    </div>
+  </div>
+  <div class="mi-space mi-space--horizontal mi-space--align-center">
+    <!--[-->
+    <div
+      class="mi-space-item"
+      style="margin-right:3rem;"
+    >
+      <button
+        type="button"
+        class="mi-button mi-button--primary mi-button--normal"
+        style
+      >
+        <div class="mi-button__content">
+          <span class="mi-button__text">
+            <!--[-->
+            Button
+          </span>
+        </div>
+      </button>
+    </div>
+    <div
+      class="mi-space-item"
+      style="margin-right:3rem;"
+    >
+      <button
+        type="button"
+        class="mi-button mi-button--primary mi-button--normal"
+        style
+      >
+        <div class="mi-button__content">
+          <span class="mi-button__text">
+            <!--[-->
+            Button
+          </span>
+        </div>
+      </button>
+    </div>
+    <div
+      class="mi-space-item"
+      style
+    >
+      <button
+        type="button"
+        class="mi-button mi-button--primary mi-button--normal"
+        style
+      >
+        <div class="mi-button__content">
+          <span class="mi-button__text">
+            <!--[-->
+            Button
+          </span>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div
+    class="mi-radio-group mi-radio-group--horizontal"
+    role="radiogroup"
+    style="margin-bottom:16px;"
+  >
+    <!--[-->
+    <div
+      role="radio"
+      class="mi-radio mi-radio--horizontal"
+      tabindex="0"
+      aria-checked="false"
+    >
+      <!--[-->
+      <div
+        class="mi-radio__icon mi-radio__icon--round"
+        style
+      >
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-success"
+          style
+        >
+          <!--[-->
+        </i>
+      </div>
+      <span class="mi-radio__label">
+        <!--[-->
+        start
+      </span>
+    </div>
+    <div
+      role="radio"
+      class="mi-radio mi-radio--horizontal"
+      tabindex="0"
+      aria-checked="true"
+    >
+      <!--[-->
+      <div
+        class="mi-radio__icon mi-radio__icon--round mi-radio__icon--checked"
+        style
+      >
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-success"
+          style
+        >
+          <!--[-->
+        </i>
+      </div>
+      <span class="mi-radio__label">
+        <!--[-->
+        center
+      </span>
+    </div>
+    <div
+      role="radio"
+      class="mi-radio mi-radio--horizontal"
+      tabindex="0"
+      aria-checked="false"
+    >
+      <!--[-->
+      <div
+        class="mi-radio__icon mi-radio__icon--round"
+        style
+      >
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-success"
+          style
+        >
+          <!--[-->
+        </i>
+      </div>
+      <span class="mi-radio__label">
+        <!--[-->
+        end
+      </span>
+    </div>
+    <div
+      role="radio"
+      class="mi-radio mi-radio--horizontal"
+      tabindex="0"
+      aria-checked="false"
+    >
+      <!--[-->
+      <div
+        class="mi-radio__icon mi-radio__icon--round"
+        style
+      >
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-success"
+          style
+        >
+          <!--[-->
+        </i>
+      </div>
+      <span class="mi-radio__label">
+        <!--[-->
+        baseline
+      </span>
+    </div>
+  </div>
+  <div
+    class="mi-space mi-space--horizontal mi-space--align-center"
+    style="padding:16px;background:#f3f2f5;"
+  >
+    <!--[-->
+    <div
+      class="mi-space-item"
+      style="margin-right:8px;"
+    >
+      <button
+        type="button"
+        class="mi-button mi-button--primary mi-button--normal"
+        style
+      >
+        <div class="mi-button__content">
+          <span class="mi-button__text">
+            <!--[-->
+            center
+          </span>
+        </div>
+      </button>
+    </div>
+    <div
+      class="mi-space-item"
+      style
+    >
+      <div style="padding:40px 20px;background:#fff;">
+        Block
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div class="mi-space mi-space--horizontal mi-space--align-center mi-space--wrap">
+    <!--[-->
+    <div
+      class="mi-space-item"
+      style="margin-right:8px;margin-bottom:8px;"
+    >
+      <button
+        type="button"
+        class="mi-button mi-button--primary mi-button--normal mi-button--block"
+        style
+      >
+        <div class="mi-button__content">
+          <span class="mi-button__text">
+            <!--[-->
+            Button
+          </span>
+        </div>
+      </button>
+    </div>
+    <div
+      class="mi-space-item"
+      style="margin-right:8px;margin-bottom:8px;"
+    >
+      <button
+        type="button"
+        class="mi-button mi-button--primary mi-button--normal mi-button--block"
+        style
+      >
+        <div class="mi-button__content">
+          <span class="mi-button__text">
+            <!--[-->
+            Button
+          </span>
+        </div>
+      </button>
+    </div>
+    <div
+      class="mi-space-item"
+      style="margin-right:8px;margin-bottom:8px;"
+    >
+      <button
+        type="button"
+        class="mi-button mi-button--primary mi-button--normal mi-button--block"
+        style
+      >
+        <div class="mi-button__content">
+          <span class="mi-button__text">
+            <!--[-->
+            Button
+          </span>
+        </div>
+      </button>
+    </div>
+    <div
+      class="mi-space-item"
+      style="margin-right:8px;margin-bottom:8px;"
+    >
+      <button
+        type="button"
+        class="mi-button mi-button--primary mi-button--normal mi-button--block"
+        style
+      >
+        <div class="mi-button__content">
+          <span class="mi-button__text">
+            <!--[-->
+            Button
+          </span>
+        </div>
+      </button>
+    </div>
+    <div
+      class="mi-space-item"
+      style="margin-right:8px;margin-bottom:8px;"
+    >
+      <button
+        type="button"
+        class="mi-button mi-button--primary mi-button--normal mi-button--block"
+        style
+      >
+        <div class="mi-button__content">
+          <span class="mi-button__text">
+            <!--[-->
+            Button
+          </span>
+        </div>
+      </button>
+    </div>
+    <div
+      class="mi-space-item"
+      style="margin-right:8px;margin-bottom:8px;"
+    >
+      <button
+        type="button"
+        class="mi-button mi-button--primary mi-button--normal mi-button--block"
+        style
+      >
+        <div class="mi-button__content">
+          <span class="mi-button__text">
+            <!--[-->
+            Button
+          </span>
+        </div>
+      </button>
+    </div>
+    <div
+      class="mi-space-item"
+      style="margin-right:8px;margin-bottom:8px;"
+    >
+      <button
+        type="button"
+        class="mi-button mi-button--primary mi-button--normal mi-button--block"
+        style
+      >
+        <div class="mi-button__content">
+          <span class="mi-button__text">
+            <!--[-->
+            Button
+          </span>
+        </div>
+      </button>
+    </div>
+    <div
+      class="mi-space-item"
+      style="margin-bottom:8px;"
+    >
+      <button
+        type="button"
+        class="mi-button mi-button--primary mi-button--normal mi-button--block"
+        style
+      >
+        <div class="mi-button__content">
+          <span class="mi-button__text">
+            <!--[-->
+            Button
+          </span>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+`;

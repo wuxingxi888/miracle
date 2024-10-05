@@ -55,7 +55,7 @@ test('should render vertical space when gutter is an array and provide the secon
     ),
   });
 
-  const fields = wrapper.findAll('.van-col');
+  const fields = wrapper.findAll('.mi-col');
   await nextTick();
   expect(fields[0].style.marginBottom).toEqual('20px');
   expect(fields[1].style.marginBottom).toEqual('20px');
@@ -75,7 +75,7 @@ test('should not render vertical space when gutter is an array and provide the s
     ),
   });
 
-  const fields = wrapper.findAll('.van-col');
+  const fields = wrapper.findAll('.mi-col');
   await nextTick();
   fields.forEach((field) => {
     expect(field.style.marginBottom).toBeFalsy();
@@ -94,7 +94,7 @@ test('should not render space when gutter is an empty array', async () => {
     ),
   });
 
-  const field = wrapper.findAll('.van-col')[0];
+  const field = wrapper.findAll('.mi-col')[0];
   await nextTick();
   expect(field.style.paddingRight).toBeFalsy();
   expect(field.style.marginBottom).toBeFalsy();
@@ -112,7 +112,7 @@ test('should not render vertical space when gutter is an array and provide the s
     ),
   });
 
-  const field = wrapper.findAll('.van-col')[0];
+  const field = wrapper.findAll('.mi-col')[0];
   await nextTick();
   expect(field.style.marginBottom).toBeFalsy();
 });

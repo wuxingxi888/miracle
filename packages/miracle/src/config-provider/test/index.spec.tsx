@@ -39,7 +39,7 @@ test('should change global z-index when using z-index prop', async () => {
   });
 
   await later();
-  expect(wrapper.find('.van-popup').style.zIndex).toEqual('1');
+  expect(wrapper.find('.mi-popup').style.zIndex).toEqual('1');
 });
 
 test('should apply theme-vars-light in light mode', () => {
@@ -56,7 +56,7 @@ test('should apply theme-vars-light in light mode', () => {
   });
 
   expect(wrapper.element.getAttribute('style')).toEqual(
-    '--van-rate-icon-full-color: blue;',
+    '--mi-rate-icon-full-color: blue;',
   );
 });
 
@@ -72,7 +72,7 @@ test('should apply basic theme vars correctly', () => {
   });
 
   expect(wrapper.element.getAttribute('style')).toEqual(
-    '--van-gray-1: #111; --van-background-2: red;',
+    '--mi-gray-1: #111; --mi-background-2: red;',
   );
 });
 
@@ -91,7 +91,7 @@ test('should apply theme-vars-dark in dark mode', () => {
   });
 
   expect(wrapper.element.getAttribute('style')).toEqual(
-    '--van-rate-icon-full-color: green;',
+    '--mi-rate-icon-full-color: green;',
   );
 });
 
@@ -111,11 +111,11 @@ test('should apply theme-vars-scope enable root affects', async () => {
   });
 
   expect(document.documentElement.getAttribute('style')).toEqual(
-    '--van-rate-icon-full-color: green;',
+    '--mi-rate-icon-full-color: green;',
   );
   expect(
     wrapper.element.getAttribute('style') ===
-      '--van-rate-icon-full-color: green;',
+      '--mi-rate-icon-full-color: green;',
   ).toBeFalsy();
 
   await wrapper.setProps({
@@ -123,11 +123,11 @@ test('should apply theme-vars-scope enable root affects', async () => {
   });
 
   expect(wrapper.element.getAttribute('style')).toEqual(
-    '--van-rate-icon-full-color: green;',
+    '--mi-rate-icon-full-color: green;',
   );
   expect(
     document.documentElement.getAttribute('style') ===
-      '--van-rate-icon-full-color: green;',
+      '--mi-rate-icon-full-color: green;',
   ).toBeFalsy();
 });
 
@@ -145,7 +145,7 @@ test('should apply theme-vars-scope enable root affects and sync theme vars', as
   });
 
   expect(document.documentElement.getAttribute('style')).toEqual(
-    '--van-rate-icon-full-color: red;',
+    '--mi-rate-icon-full-color: red;',
   );
 
   await wrapper.setProps({
@@ -156,7 +156,7 @@ test('should apply theme-vars-scope enable root affects and sync theme vars', as
   });
 
   expect(document.documentElement.getAttribute('style')).toEqual(
-    '--van-rate-icon-full-color: red; --van-button-primary-color: red;',
+    '--mi-rate-icon-full-color: red; --mi-button-primary-color: red;',
   );
 
   await wrapper.setProps({
@@ -166,6 +166,6 @@ test('should apply theme-vars-scope enable root affects and sync theme vars', as
   });
 
   expect(document.documentElement.getAttribute('style')).toEqual(
-    '--van-button-primary-color: red;',
+    '--mi-button-primary-color: red;',
   );
 });

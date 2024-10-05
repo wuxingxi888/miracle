@@ -4,52 +4,52 @@ exports[`should render demo and match snapshot 1`] = `
 <!--[-->
 <div>
   <!--[-->
-  <div class="van-row">
+  <div class="mi-row">
     <!--[-->
     <div
       style
-      class="van-col van-col--8"
+      class="mi-col mi-col--8"
     >
       <!--[-->
       span: 8
     </div>
     <div
       style
-      class="van-col van-col--8"
+      class="mi-col mi-col--8"
     >
       <!--[-->
       span: 8
     </div>
     <div
       style
-      class="van-col van-col--8"
+      class="mi-col mi-col--8"
     >
       <!--[-->
       span: 8
     </div>
   </div>
-  <div class="van-row">
+  <div class="mi-row">
     <!--[-->
     <div
       style
-      class="van-col van-col--4"
+      class="mi-col mi-col--4"
     >
       <!--[-->
       span: 4
     </div>
     <div
       style
-      class="van-col van-col--10 van-col--offset-4"
+      class="mi-col mi-col--10 mi-col--offset-4"
     >
       <!--[-->
       offset: 4, span: 10
     </div>
   </div>
-  <div class="van-row">
+  <div class="mi-row">
     <!--[-->
     <div
       style
-      class="van-col van-col--12 van-col--offset-12"
+      class="mi-col mi-col--12 mi-col--offset-12"
     >
       <!--[-->
       offset: 12, span: 12
@@ -58,25 +58,25 @@ exports[`should render demo and match snapshot 1`] = `
 </div>
 <div>
   <!--[-->
-  <div class="van-row">
+  <div class="mi-row">
     <!--[-->
     <div
       style
-      class="van-col van-col--8"
+      class="mi-col mi-col--8"
     >
       <!--[-->
       span: 8
     </div>
     <div
       style="padding-left:10px;"
-      class="van-col van-col--8"
+      class="mi-col mi-col--8"
     >
       <!--[-->
       span: 8
     </div>
     <div
       style="padding-left:13.333333333333332px;padding-right:1.7763568394002505e-15px;"
-      class="van-col van-col--8"
+      class="mi-col mi-col--8"
     >
       <!--[-->
       span: 8
@@ -86,32 +86,32 @@ exports[`should render demo and match snapshot 1`] = `
 <div>
   <!--[-->
   <div class="demo-vertical-space">
-    <div class="van-row">
+    <div class="mi-row">
       <!--[-->
       <div
         style
-        class="van-col van-col--12"
+        class="mi-col mi-col--12"
       >
         <!--[-->
         span: 12
       </div>
       <div
         style="padding-left:10px;"
-        class="van-col van-col--12"
+        class="mi-col mi-col--12"
       >
         <!--[-->
         span: 12
       </div>
       <div
         style
-        class="van-col van-col--12"
+        class="mi-col mi-col--12"
       >
         <!--[-->
         span: 12
       </div>
       <div
         style="padding-left:10px;"
-        class="van-col van-col--12"
+        class="mi-col mi-col--12"
       >
         <!--[-->
         span: 12
@@ -121,97 +121,97 @@ exports[`should render demo and match snapshot 1`] = `
 </div>
 <div>
   <!--[-->
-  <div class="van-row van-row--justify-center">
+  <div class="mi-row mi-row--justify-center">
     <!--[-->
     <div
       style
-      class="van-col van-col--6"
+      class="mi-col mi-col--6"
     >
       <!--[-->
       span: 6
     </div>
     <div
       style
-      class="van-col van-col--6"
+      class="mi-col mi-col--6"
     >
       <!--[-->
       span: 6
     </div>
     <div
       style
-      class="van-col van-col--6"
+      class="mi-col mi-col--6"
     >
       <!--[-->
       span: 6
     </div>
   </div>
-  <div class="van-row van-row--justify-end">
+  <div class="mi-row mi-row--justify-end">
     <!--[-->
     <div
       style
-      class="van-col van-col--6"
+      class="mi-col mi-col--6"
     >
       <!--[-->
       span: 6
     </div>
     <div
       style
-      class="van-col van-col--6"
+      class="mi-col mi-col--6"
     >
       <!--[-->
       span: 6
     </div>
     <div
       style
-      class="van-col van-col--6"
+      class="mi-col mi-col--6"
     >
       <!--[-->
       span: 6
     </div>
   </div>
-  <div class="van-row van-row--justify-space-between">
+  <div class="mi-row mi-row--justify-space-between">
     <!--[-->
     <div
       style
-      class="van-col van-col--6"
+      class="mi-col mi-col--6"
     >
       <!--[-->
       span: 6
     </div>
     <div
       style
-      class="van-col van-col--6"
+      class="mi-col mi-col--6"
     >
       <!--[-->
       span: 6
     </div>
     <div
       style
-      class="van-col van-col--6"
+      class="mi-col mi-col--6"
     >
       <!--[-->
       span: 6
     </div>
   </div>
-  <div class="van-row van-row--justify-space-around">
+  <div class="mi-row mi-row--justify-space-around">
     <!--[-->
     <div
       style
-      class="van-col van-col--6"
+      class="mi-col mi-col--6"
     >
       <!--[-->
       span: 6
     </div>
     <div
       style
-      class="van-col van-col--6"
+      class="mi-col mi-col--6"
     >
       <!--[-->
       span: 6
     </div>
     <div
       style
-      class="van-col van-col--6"
+      class="mi-col mi-col--6"
     >
       <!--[-->
       span: 6
