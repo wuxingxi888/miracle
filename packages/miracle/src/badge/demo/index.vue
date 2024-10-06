@@ -102,8 +102,6 @@ const t = useTranslate({
 
 <style lang="less">
 .demo-badge {
-  background-color: var(--mi-background-2);
-
   .mi-badge__wrapper {
     margin-left: var(--mi-padding-md);
   }
@@ -111,7 +109,7 @@ const t = useTranslate({
   .child {
     width: 40px;
     height: 40px;
-    background: var(--mi-gray-2);
+    background: var(--mi-white);
     border-radius: 4px;
   }
 

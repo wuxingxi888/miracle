@@ -1,0 +1,116 @@
+:root,
+:host {
+  --mi-tag-padding: 0 var(--mi-padding-base);
+  --mi-tag-text-color: var(--mi-white);
+  --mi-tag-font-size: var(--mi-font-size-sm);
+  --mi-tag-radius: 2px;
+  --mi-tag-line-height: 16px;
+  --mi-tag-medium-padding: 2px 6px;
+  --mi-tag-large-padding: var(--mi-padding-base) var(--mi-padding-xs);
+  --mi-tag-large-radius: var(--mi-radius-md);
+  --mi-tag-large-font-size: var(--mi-font-size-md);
+  --mi-tag-round-radius: var(--mi-radius-max);
+  --mi-tag-danger-color: var(--mi-danger-color);
+  --mi-tag-primary-color: var(--mi-primary-color);
+  --mi-tag-success-color: var(--mi-success-color);
+  --mi-tag-warning-color: var(--mi-warning-color);
+  --mi-tag-default-color: var(--mi-gray-6);
+  --mi-tag-plain-background: var(--mi-background-2);
+}
+
+.mi-tag {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: var(--mi-tag-padding);
+  color: var(--mi-tag-text-color);
+  font-size: var(--mi-tag-font-size);
+  line-height: var(--mi-tag-line-height);
+  border-radius: var(--mi-tag-radius);
+
+  &--default {
+    background: var(--mi-tag-default-color);
+
+    &.mi-tag--plain {
+      color: var(--mi-tag-default-color);
+    }
+  }
+
+  &--danger {
+    background: var(--mi-tag-danger-color);
+
+    &.mi-tag--plain {
+      color: var(--mi-tag-danger-color);
+    }
+  }
+
+  &--primary {
+    background: var(--mi-tag-primary-color);
+
+    &.mi-tag--plain {
+      color: var(--mi-tag-primary-color);
+    }
+  }
+
+  &--success {
+    background: var(--mi-tag-success-color);
+
+    &.mi-tag--plain {
+      color: var(--mi-tag-success-color);
+    }
+  }
+
+  &--warning {
+    background: var(--mi-tag-warning-color);
+
+    &.mi-tag--plain {
+      color: var(--mi-tag-warning-color);
+    }
+  }
+
+  &--plain {
+    background: var(--mi-tag-plain-background);
+    border-color: currentColor;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border: 1px solid;
+      border-color: inherit;
+      border-radius: inherit;
+      content: '';
+      pointer-events: none;
+    }
+  }
+
+  &--medium {
+    padding: var(--mi-tag-medium-padding);
+  }
+
+  &--large {
+    padding: var(--mi-tag-large-padding);
+    font-size: var(--mi-tag-large-font-size);
+    border-radius: var(--mi-tag-large-radius);
+  }
+
+  &--mark {
+    border-radius: 0 var(--mi-tag-round-radius) var(--mi-tag-round-radius) 0;
+
+    &::after {
+      display: block;
+      width: 2px;
+      content: '';
+    }
+  }
+
+  &--round {
+    border-radius: var(--mi-tag-round-radius);
+  }
+
+  &__close {
+    margin-left: 2px;
+  }
+}

@@ -1,0 +1,46 @@
+:root,
+:host {
+  --mi-empty-padding: var(--mi-padding-xl) 0;
+  --mi-empty-image-size: 160px;
+  --mi-empty-description-margin-top: var(--mi-padding-md);
+  --mi-empty-description-padding: 0 60px;
+  --mi-empty-description-color: var(--mi-text-color-2);
+  --mi-empty-description-font-size: var(--mi-font-size-md);
+  --mi-empty-description-line-height: var(--mi-line-height-md);
+  --mi-empty-bottom-margin-top: 24px;
+}
+
+.mi-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: var(--mi-empty-padding);
+
+  &__image {
+    width: var(--mi-empty-image-size);
+    height: var(--mi-empty-image-size);
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__description {
+    margin-top: var(--mi-empty-description-margin-top);
+    padding: var(--mi-empty-description-padding);
+    color: var(--mi-empty-description-color);
+    font-size: var(--mi-empty-description-font-size);
+    line-height: var(--mi-empty-description-line-height);
+  }
+
+  &__bottom {
+    margin-top: var(--mi-empty-bottom-margin-top);
+  }
+}
+
+.mi-theme-dark .mi-empty {
+  opacity: 0.5;
+}
