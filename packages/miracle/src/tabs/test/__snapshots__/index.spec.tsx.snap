@@ -1,0 +1,672 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should allow to disable lazy-render prop 1`] = `
+<div class="mi-tabs__content">
+  <div
+    id="mi-tab"
+    role="tabpanel"
+    class="mi-tab__panel"
+    tabindex="-1"
+    aria-labelledby="mi-tabs-0"
+    style="display: none;"
+  >
+  </div>
+  <div
+    id="mi-tab"
+    role="tabpanel"
+    class="mi-tab__panel"
+    tabindex="-1"
+    aria-labelledby="mi-tabs-1"
+    style="display: none;"
+  >
+  </div>
+</div>
+`;
+
+exports[`should allow to disable lazy-render prop 2`] = `
+<div class="mi-tabs__content">
+  <div
+    id="mi-tab"
+    role="tabpanel"
+    class="mi-tab__panel"
+    tabindex="0"
+    aria-labelledby="mi-tabs-0"
+    style
+  >
+    Text
+  </div>
+  <div
+    id="mi-tab"
+    role="tabpanel"
+    class="mi-tab__panel"
+    tabindex="-1"
+    aria-labelledby="mi-tabs-1"
+    style="display: none;"
+  >
+    Text
+  </div>
+</div>
+`;
+
+exports[`should allow to set name prop 1`] = `
+<div class="mi-tabs mi-tabs--line">
+  <div class="mi-tabs__wrap">
+    <div
+      role="tablist"
+      class="mi-tabs__nav mi-tabs__nav--line"
+      aria-orientation="horizontal"
+    >
+      <div
+        id="mi-tabs-0"
+        role="tab"
+        class="mi-tab mi-tab--line mi-tab--active"
+        tabindex="0"
+        aria-selected="true"
+        aria-controls="mi-tab"
+      >
+        <span class="mi-tab__text mi-tab__text--ellipsis">
+          title1
+        </span>
+      </div>
+      <div
+        id="mi-tabs-1"
+        role="tab"
+        class="mi-tab mi-tab--line"
+        tabindex="-1"
+        aria-selected="false"
+        aria-controls="mi-tab"
+      >
+        <span class="mi-tab__text mi-tab__text--ellipsis">
+          title2
+        </span>
+      </div>
+      <div
+        id="mi-tabs-2"
+        role="tab"
+        class="mi-tab mi-tab--line mi-tab--disabled"
+        aria-selected="false"
+        aria-disabled="true"
+        aria-controls="mi-tab"
+      >
+        <span class="mi-tab__text mi-tab__text--ellipsis">
+          title3
+        </span>
+      </div>
+      <div
+        class="mi-tabs__line"
+        style="transform: translateX(50px) translateX(-50%);"
+      >
+      </div>
+    </div>
+  </div>
+  <div class="mi-tabs__content">
+    <div
+      id="mi-tab"
+      role="tabpanel"
+      class="mi-tab__panel"
+      tabindex="0"
+      aria-labelledby="mi-tabs-0"
+      style
+    >
+      Text
+    </div>
+    <div
+      id="mi-tab"
+      role="tabpanel"
+      class="mi-tab__panel"
+      tabindex="-1"
+      aria-labelledby="mi-tabs-1"
+      style="display: none;"
+    >
+    </div>
+    <div
+      id="mi-tab"
+      role="tabpanel"
+      class="mi-tab__panel"
+      tabindex="-1"
+      aria-labelledby="mi-tabs-2"
+      style="display: none;"
+    >
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should emit rendered event after tab is rendered 1`] = `
+<div
+  id="mi-tab"
+  role="tabpanel"
+  class="mi-tab__panel"
+  tabindex="0"
+  aria-labelledby="mi-tabs-0"
+  style
+>
+  Text
+</div>
+`;
+
+exports[`should not render empty tab 1`] = `
+<div class="mi-tabs__content">
+</div>
+`;
+
+exports[`should render badge prop correctly 1`] = `
+<div
+  id="mi-tabs-0"
+  role="tab"
+  class="mi-tab mi-tab--line mi-tab--active"
+  tabindex="0"
+  aria-selected="true"
+  aria-controls="mi-tab"
+>
+  <div class="mi-badge__wrapper">
+    <span class="mi-tab__text mi-tab__text--ellipsis">
+    </span>
+    <div class="mi-badge mi-badge--top-right mi-badge--fixed">
+      10
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should render nav-left、nav-right slot correctly 1`] = `
+<div class="mi-tabs__wrap">
+  <div
+    role="tablist"
+    class="mi-tabs__nav mi-tabs__nav--line"
+    aria-orientation="horizontal"
+  >
+    Custom nav left
+    <div
+      id="mi-tabs-0"
+      role="tab"
+      class="mi-tab mi-tab--line mi-tab--active"
+      tabindex="0"
+      aria-selected="true"
+      aria-controls="mi-tab"
+    >
+      <span class="mi-tab__text mi-tab__text--ellipsis">
+        Title
+      </span>
+    </div>
+    <div
+      class="mi-tabs__line"
+      style="transform: translateX(50px) translateX(-50%);"
+    >
+    </div>
+    Custom nav right
+  </div>
+</div>
+`;
+
+exports[`should switch tab after click the tab title 1`] = `
+<div class="mi-tabs mi-tabs--line">
+  <div class="mi-tabs__wrap">
+    <div
+      role="tablist"
+      class="mi-tabs__nav mi-tabs__nav--line"
+      aria-orientation="horizontal"
+    >
+      <div
+        id="mi-tabs-0"
+        role="tab"
+        class="mi-tab mi-tab--line mi-tab--active"
+        tabindex="0"
+        aria-selected="true"
+        aria-controls="mi-tab"
+      >
+        <span class="mi-tab__text mi-tab__text--ellipsis">
+          title1
+        </span>
+      </div>
+      <div
+        id="mi-tabs-1"
+        role="tab"
+        class="mi-tab mi-tab--line"
+        tabindex="-1"
+        aria-selected="false"
+        aria-controls="mi-tab"
+      >
+        <span class="mi-tab__text mi-tab__text--ellipsis">
+          title2
+        </span>
+      </div>
+      <div
+        id="mi-tabs-2"
+        role="tab"
+        class="mi-tab mi-tab--line mi-tab--disabled"
+        aria-selected="false"
+        aria-disabled="true"
+        aria-controls="mi-tab"
+      >
+        <span class="mi-tab__text mi-tab__text--ellipsis">
+          title3
+        </span>
+      </div>
+      <div
+        class="mi-tabs__line"
+        style="transform: translateX(50px) translateX(-50%);"
+      >
+      </div>
+    </div>
+  </div>
+  <div class="mi-tabs__content">
+    <div
+      id="mi-tab"
+      role="tabpanel"
+      class="mi-tab__panel"
+      tabindex="0"
+      aria-labelledby="mi-tabs-0"
+      style
+    >
+      Text
+    </div>
+    <div
+      id="mi-tab"
+      role="tabpanel"
+      class="mi-tab__panel"
+      tabindex="-1"
+      aria-labelledby="mi-tabs-1"
+      style="display: none;"
+    >
+    </div>
+    <div
+      id="mi-tab"
+      role="tabpanel"
+      class="mi-tab__panel"
+      tabindex="-1"
+      aria-labelledby="mi-tabs-2"
+      style="display: none;"
+    >
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should switch tab after click the tab title 2`] = `
+<div class="mi-tabs mi-tabs--line">
+  <div class="mi-tabs__wrap">
+    <div
+      role="tablist"
+      class="mi-tabs__nav mi-tabs__nav--line"
+      aria-orientation="horizontal"
+    >
+      <div
+        id="mi-tabs-0"
+        role="tab"
+        class="mi-tab mi-tab--line"
+        tabindex="-1"
+        aria-selected="false"
+        aria-controls="mi-tab"
+      >
+        <span class="mi-tab__text mi-tab__text--ellipsis">
+          title1
+        </span>
+      </div>
+      <div
+        id="mi-tabs-1"
+        role="tab"
+        class="mi-tab mi-tab--line mi-tab--active"
+        tabindex="0"
+        aria-selected="true"
+        aria-controls="mi-tab"
+      >
+        <span class="mi-tab__text mi-tab__text--ellipsis">
+          title2
+        </span>
+      </div>
+      <div
+        id="mi-tabs-2"
+        role="tab"
+        class="mi-tab mi-tab--line mi-tab--disabled"
+        aria-selected="false"
+        aria-disabled="true"
+        aria-controls="mi-tab"
+      >
+        <span class="mi-tab__text mi-tab__text--ellipsis">
+          title3
+        </span>
+      </div>
+      <div
+        class="mi-tabs__line"
+        style="transform: translateX(50px) translateX(-50%); transition-duration: 0.3s;"
+      >
+      </div>
+    </div>
+  </div>
+  <div class="mi-tabs__content">
+    <div
+      id="mi-tab"
+      role="tabpanel"
+      class="mi-tab__panel"
+      tabindex="-1"
+      aria-labelledby="mi-tabs-0"
+      style="display: none;"
+    >
+      Text
+    </div>
+    <div
+      id="mi-tab"
+      role="tabpanel"
+      class="mi-tab__panel"
+      tabindex="0"
+      aria-labelledby="mi-tabs-1"
+      style
+    >
+      Text
+    </div>
+    <div
+      id="mi-tab"
+      role="tabpanel"
+      class="mi-tab__panel"
+      tabindex="-1"
+      aria-labelledby="mi-tabs-2"
+      style="display: none;"
+    >
+    </div>
+  </div>
+</div>
+`;
+
+exports[`swipe switch tab after swiping tab content 1`] = `
+<div class="mi-tabs mi-tabs--line">
+  <div class="mi-tabs__wrap">
+    <div
+      role="tablist"
+      class="mi-tabs__nav mi-tabs__nav--line"
+      aria-orientation="horizontal"
+    >
+      <div
+        id="mi-tabs-0"
+        role="tab"
+        class="mi-tab mi-tab--line mi-tab--active"
+        tabindex="0"
+        aria-selected="true"
+        aria-controls="mi-tab"
+      >
+        <span class="mi-tab__text mi-tab__text--ellipsis">
+          title1
+        </span>
+      </div>
+      <div
+        id="mi-tabs-1"
+        role="tab"
+        class="mi-tab mi-tab--line"
+        tabindex="-1"
+        aria-selected="false"
+        aria-controls="mi-tab"
+      >
+        <span class="mi-tab__text mi-tab__text--ellipsis">
+          title2
+        </span>
+      </div>
+      <div
+        id="mi-tabs-2"
+        role="tab"
+        class="mi-tab mi-tab--line mi-tab--disabled"
+        aria-selected="false"
+        aria-disabled="true"
+        aria-controls="mi-tab"
+      >
+        <span class="mi-tab__text mi-tab__text--ellipsis">
+          title3
+        </span>
+      </div>
+      <div
+        class="mi-tabs__line"
+        style="transform: translateX(50px) translateX(-50%);"
+      >
+      </div>
+    </div>
+  </div>
+  <div class="mi-tabs__content mi-tabs__content--animated">
+    <div class="mi-swipe mi-tabs__track">
+      <div
+        style="transition-duration: 0ms; transform: translateX(0px); width: 300px;"
+        class="mi-swipe__track"
+      >
+        <div
+          class="mi-swipe-item mi-tab__panel-wrapper"
+          id="mi-tab"
+          role="tabpanel"
+          tabindex="0"
+          aria-hidden="false"
+          aria-labelledby="mi-tabs-0"
+          style="width: 100px;"
+        >
+          <div class="mi-tab__panel">
+            Text
+          </div>
+        </div>
+        <div
+          class="mi-swipe-item mi-tab__panel-wrapper mi-tab__panel-wrapper--inactive"
+          id="mi-tab"
+          role="tabpanel"
+          tabindex="-1"
+          aria-hidden="true"
+          aria-labelledby="mi-tabs-1"
+          style="width: 100px;"
+        >
+          <div class="mi-tab__panel">
+            Text
+          </div>
+        </div>
+        <div
+          class="mi-swipe-item mi-tab__panel-wrapper mi-tab__panel-wrapper--inactive"
+          id="mi-tab"
+          role="tabpanel"
+          tabindex="-1"
+          aria-hidden="true"
+          aria-labelledby="mi-tabs-2"
+          style="width: 100px;"
+        >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`swipe switch tab after swiping tab content 2`] = `
+<div class="mi-tabs mi-tabs--line">
+  <div class="mi-tabs__wrap">
+    <div
+      role="tablist"
+      class="mi-tabs__nav mi-tabs__nav--line"
+      aria-orientation="horizontal"
+    >
+      <div
+        id="mi-tabs-0"
+        role="tab"
+        class="mi-tab mi-tab--line"
+        tabindex="-1"
+        aria-selected="false"
+        aria-controls="mi-tab"
+      >
+        <span class="mi-tab__text mi-tab__text--ellipsis">
+          title1
+        </span>
+      </div>
+      <div
+        id="mi-tabs-1"
+        role="tab"
+        class="mi-tab mi-tab--line mi-tab--active"
+        tabindex="0"
+        aria-selected="true"
+        aria-controls="mi-tab"
+      >
+        <span class="mi-tab__text mi-tab__text--ellipsis">
+          title2
+        </span>
+      </div>
+      <div
+        id="mi-tabs-2"
+        role="tab"
+        class="mi-tab mi-tab--line mi-tab--disabled"
+        aria-selected="false"
+        aria-disabled="true"
+        aria-controls="mi-tab"
+      >
+        <span class="mi-tab__text mi-tab__text--ellipsis">
+          title3
+        </span>
+      </div>
+      <div
+        class="mi-tabs__line"
+        style="transform: translateX(50px) translateX(-50%);"
+      >
+      </div>
+    </div>
+  </div>
+  <div class="mi-tabs__content mi-tabs__content--animated">
+    <div class="mi-swipe mi-tabs__track">
+      <div
+        style="transition-duration: 300ms; transform: translateX(-100px); width: 300px;"
+        class="mi-swipe__track"
+      >
+        <div
+          class="mi-swipe-item mi-tab__panel-wrapper"
+          id="mi-tab"
+          role="tabpanel"
+          tabindex="-1"
+          aria-hidden="true"
+          aria-labelledby="mi-tabs-0"
+          style="width: 100px;"
+        >
+          <div class="mi-tab__panel">
+            Text
+          </div>
+        </div>
+        <div
+          class="mi-swipe-item mi-tab__panel-wrapper"
+          id="mi-tab"
+          role="tabpanel"
+          tabindex="0"
+          aria-hidden="false"
+          aria-labelledby="mi-tabs-1"
+          style="width: 100px;"
+        >
+          <div class="mi-tab__panel">
+            Text
+          </div>
+        </div>
+        <div
+          class="mi-swipe-item mi-tab__panel-wrapper mi-tab__panel-wrapper--inactive"
+          id="mi-tab"
+          role="tabpanel"
+          tabindex="-1"
+          aria-hidden="true"
+          aria-labelledby="mi-tabs-2"
+          style="width: 100px;"
+        >
+          <div class="mi-tab__panel">
+            Text
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`swipe switch tab after swiping tab content 3`] = `
+<div class="mi-tabs mi-tabs--line">
+  <div class="mi-tabs__wrap">
+    <div
+      role="tablist"
+      class="mi-tabs__nav mi-tabs__nav--line"
+      aria-orientation="horizontal"
+    >
+      <div
+        id="mi-tabs-0"
+        role="tab"
+        class="mi-tab mi-tab--line"
+        tabindex="-1"
+        aria-selected="false"
+        aria-controls="mi-tab"
+      >
+        <span class="mi-tab__text mi-tab__text--ellipsis">
+          title1
+        </span>
+      </div>
+      <div
+        id="mi-tabs-1"
+        role="tab"
+        class="mi-tab mi-tab--line mi-tab--active"
+        tabindex="0"
+        aria-selected="true"
+        aria-controls="mi-tab"
+      >
+        <span class="mi-tab__text mi-tab__text--ellipsis">
+          title2
+        </span>
+      </div>
+      <div
+        id="mi-tabs-2"
+        role="tab"
+        class="mi-tab mi-tab--line mi-tab--disabled"
+        aria-selected="false"
+        aria-disabled="true"
+        aria-controls="mi-tab"
+      >
+        <span class="mi-tab__text mi-tab__text--ellipsis">
+          title3
+        </span>
+      </div>
+      <div
+        class="mi-tabs__line"
+        style="transform: translateX(50px) translateX(-50%); transition-duration: 0.3s;"
+      >
+      </div>
+    </div>
+  </div>
+  <div class="mi-tabs__content mi-tabs__content--animated">
+    <div class="mi-swipe mi-tabs__track">
+      <div
+        style="transition-duration: 300ms; transform: translateX(-200px); width: 300px;"
+        class="mi-swipe__track"
+      >
+        <div
+          class="mi-swipe-item mi-tab__panel-wrapper"
+          id="mi-tab"
+          role="tabpanel"
+          tabindex="-1"
+          aria-hidden="true"
+          aria-labelledby="mi-tabs-0"
+          style="width: 100px;"
+        >
+          <div class="mi-tab__panel">
+            Text
+          </div>
+        </div>
+        <div
+          class="mi-swipe-item mi-tab__panel-wrapper"
+          id="mi-tab"
+          role="tabpanel"
+          tabindex="0"
+          aria-hidden="false"
+          aria-labelledby="mi-tabs-1"
+          style="width: 100px;"
+        >
+          <div class="mi-tab__panel">
+            Text
+          </div>
+        </div>
+        <div
+          class="mi-swipe-item mi-tab__panel-wrapper mi-tab__panel-wrapper--inactive"
+          id="mi-tab"
+          role="tabpanel"
+          tabindex="-1"
+          aria-hidden="true"
+          aria-labelledby="mi-tabs-2"
+          style="width: 100px;"
+        >
+          <div class="mi-tab__panel">
+            Text
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -23,8 +23,8 @@ export default {
   },
   site: {
     defaultLang: 'en-US',
-    darkModeClass: 'van-theme-dark',
-    lightModeClass: 'van-theme-light',
+    darkModeClass: 'mi-theme-dark',
+    lightModeClass: 'mi-theme-light',
     enableVConsole: false,
     versions: [
       // { label: 'v1', link: '/miracle/v1/' },
@@ -42,15 +42,15 @@ export default {
         title: 'Miracle UI',
         subtitle: '（适用于 Vue 3）',
         description: '轻量、可定制的移动端组件库',
-        logo: 'https://s2.loli.net/2024/03/01/iBCSOVqbj6LTDfA.png',
+        logo: 'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/logo.png',
         langLabel: '中',
         links: [
           {
-            logo: 'https://s2.loli.net/2024/03/01/xOQs6Nf3GKZcRdW.png',
+            logo: 'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/blog.png',
             url: 'https://wuxingxi.top/',
           },
           {
-            logo: 'https://s2.loli.net/2024/03/02/u8gestT2OGzE1A5.png',
+            logo: 'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/github.png',
             url: 'https://github.com/wuxingxi888',
           },
         ],
@@ -134,7 +134,7 @@ export default {
               { path: 'empty', title: 'Empty 空状态' },
               { path: 'highlight', title: 'Highlight 高亮文本' },
               { path: 'image-preview', title: 'ImagePreview 图片预览' },
-              // { path: 'lazyload', title: 'Lazyload 懒加载' },
+              { path: 'lazyload', title: 'Lazyload 懒加载' },
               // { path: 'list', title: 'List 列表' },
               // { path: 'notice-bar', title: 'NoticeBar 通知栏' },
               // { path: 'popover', title: 'Popover 气泡弹出框' },
@@ -142,7 +142,7 @@ export default {
               // { path: 'rolling-text', title: 'RollingText 翻滚文本' },
               // { path: 'skeleton', title: 'Skeleton 骨架屏' },
               // { path: 'steps', title: 'Steps 步骤条' },
-              // { path: 'sticky', title: 'Sticky 粘性布局' },
+              { path: 'sticky', title: 'Sticky 粘性布局' },
               { path: 'swipe', title: 'Swipe 轮播' },
               { path: 'tag', title: 'Tag 标签' },
               { path: 'text-ellipsis', title: 'TextEllipsis 文本省略' },
@@ -153,14 +153,14 @@ export default {
             title: '导航组件',
             items: [
               //     { path: 'action-bar', title: 'ActionBar 动作栏' },
-              //     { path: 'back-top', title: 'BackTop 回到顶部' },
+              { path: 'back-top', title: 'BackTop 回到顶部' },
               { path: 'grid', title: 'Grid 宫格' },
-              //     { path: 'index-bar', title: 'IndexBar 索引栏' },
-              //     { path: 'nav-bar', title: 'NavBar 导航栏' },
+              { path: 'index-bar', title: 'IndexBar 索引栏' },
+              { path: 'nav-bar', title: 'NavBar 导航栏' },
               //     { path: 'pagination', title: 'Pagination 分页' },
               //     { path: 'sidebar', title: 'Sidebar 侧边导航' },
-              //     { path: 'tab', title: 'Tab 标签页' },
-              //     { path: 'tabbar', title: 'Tabbar 标签栏' },
+              { path: 'tabs', title: 'Tab 标签页' },
+              { path: 'tabbar', title: 'Tabbar 标签栏' },
               //     { path: 'tree-select', title: 'TreeSelect 分类选择' },
             ],
           },
@@ -202,7 +202,7 @@ export default {
         subtitle: ' (for Vue 3)',
         description:
           'A lightweight, customizable Vue UI library for mobile web apps.',
-        logo: 'https://s2.loli.net/2024/03/01/iBCSOVqbj6LTDfA.png',
+        logo: 'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/logo.png',
         langLabel: 'EN',
         links: [
           {

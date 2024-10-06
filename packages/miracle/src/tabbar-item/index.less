@@ -1,0 +1,45 @@
+:root,
+:host {
+  --mi-tabbar-item-font-size: var(--mi-font-size-sm);
+  --mi-tabbar-item-text-color: var(--mi-text-color);
+  --mi-tabbar-item-active-color: var(--mi-primary-color);
+  --mi-tabbar-item-active-background: var(--mi-background-2);
+  --mi-tabbar-item-line-height: 1;
+  --mi-tabbar-item-icon-size: 22px;
+  --mi-tabbar-item-icon-margin-bottom: var(--mi-padding-base);
+}
+
+.mi-tabbar-item {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--mi-tabbar-item-text-color);
+  font-size: var(--mi-tabbar-item-font-size);
+  line-height: var(--mi-tabbar-item-line-height);
+  cursor: pointer;
+
+  &__icon {
+    margin-bottom: var(--mi-tabbar-item-icon-margin-bottom);
+    font-size: var(--mi-tabbar-item-icon-size);
+
+    .mi-icon {
+      display: block;
+    }
+
+    .mi-badge {
+      margin-top: var(--mi-padding-base);
+    }
+
+    img {
+      display: block;
+      height: 20px;
+    }
+  }
+
+  &--active {
+    color: var(--mi-tabbar-item-active-color);
+    background-color: var(--mi-tabbar-item-active-background);
+  }
+}

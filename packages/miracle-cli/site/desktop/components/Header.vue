@@ -105,16 +105,16 @@ export default {
 
     themeImg() {
       if (this.currentTheme === 'light') {
-        return 'https://b.yzcdn.cn/vant/dark-theme.svg';
+        return 'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/dark-theme.svg';
       }
-      return 'https://b.yzcdn.cn/vant/light-theme.svg';
+      return 'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/light-theme.svg';
     },
   },
 
   watch: {
     currentTheme: {
       handler(newVal, oldVal) {
-        window.localStorage.setItem('vantTheme', newVal);
+        window.localStorage.setItem('miracleTheme', newVal);
         document.documentElement.classList.remove(`mi-doc-theme-${oldVal}`);
         document.documentElement.classList.add(`mi-doc-theme-${newVal}`);
         syncThemeToChild(newVal);

@@ -75,7 +75,7 @@ export function syncThemeToChild(theme) {
 }
 
 export function getDefaultTheme() {
-  const cache = window.localStorage.getItem('vantTheme');
+  const cache = window.localStorage.getItem('miracleTheme');
 
   if (cache) {
     return cache;

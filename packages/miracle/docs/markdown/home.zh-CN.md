@@ -1,6 +1,6 @@
 <div class="mi-doc-card">
   <div class="mi-doc-intro">
-    <img class="mi-doc-intro__logo" style="width: 120px; height: 120px;" src="https://s2.loli.net/2024/03/01/iBCSOVqbj6LTDfA.png">
+    <img class="mi-doc-intro__logo" style="width: 120px; height: 120px;" src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/logo.png">
     <h2 style="margin: 0; font-size: 36px; line-height: 60px;">Miracle UI</h2>
     <p>轻量、可定制的移动端 Vue 组件库</p>
   </div>
