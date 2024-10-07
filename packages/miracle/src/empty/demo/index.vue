@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import MiEmpty from '..';
-// import MiTabs from '../../tabs';
-// import MiTab from '../../tab';
+import MiTabs from '../../tabs';
+import MiTab from '../../tab';
 import MiButton from '../../button';
-// import { ref } from 'vue';
+import { ref } from 'vue';
 import { cdnURL, useTranslate } from '../../../docs/site';
 
 const t = useTranslate({
@@ -29,7 +29,7 @@ const t = useTranslate({
   },
 });
 
-// const active = ref('error');
+const active = ref('error');
 </script>
 
 <template>
@@ -38,7 +38,7 @@ const t = useTranslate({
   </demo-block>
 
   <demo-block :title="t('imageType')">
-    <!-- <mi-tabs v-model:active="active">
+    <mi-tabs v-model:active="active">
       <mi-tab name="error" :title="t('error')">
         <mi-empty image="error" :description="t('description')" />
       </mi-tab>
@@ -48,10 +48,7 @@ const t = useTranslate({
       <mi-tab name="search" :title="t('search')">
         <mi-empty image="search" :description="t('description')" />
       </mi-tab>
-    </mi-tabs> -->
-    <mi-empty image="error" :description="t('description')" />
-    <mi-empty image="network" :description="t('description')" />
-    <mi-empty image="search" :description="t('description')" />
+    </mi-tabs>
   </demo-block>
 
   <demo-block :title="t('customSize')">

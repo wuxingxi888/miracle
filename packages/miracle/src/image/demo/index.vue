@@ -7,6 +7,7 @@ import { cdnURL, useTranslate } from '../../../docs/site';
 
 const t = useTranslate({
   'zh-CN': {
+    preview: '预览模式',
     fitMode: '填充模式',
     position: '图片位置',
     round: '圆形图片',
@@ -17,6 +18,7 @@ const t = useTranslate({
     loadFail: '加载失败',
   },
   'en-US': {
+    preview: 'Preview Mode',
     fitMode: 'Fit Mode',
     position: 'Position',
     round: 'Round',
@@ -38,6 +40,12 @@ const positions2 = ['top', 'center', 'bottom'] as const;
   <demo-block :title="t('basicUsage')">
     <mi-row>
       <mi-image width="100" height="100" :src="image" />
+    </mi-row>
+  </demo-block>
+
+  <demo-block :title="t('preview')">
+    <mi-row>
+      <mi-image width="100" height="100" :src="image" enable-preview />
     </mi-row>
   </demo-block>
 

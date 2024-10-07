@@ -28,6 +28,8 @@ import {
 // Components
 import { Icon } from '../icon';
 
+import { showImagePreview } from '../image-preview';
+
 const [name, bem] = createNamespace('image');
 
 // Types
@@ -52,6 +54,7 @@ export const imageProps = {
   loadingIcon: makeStringProp('photo'),
   crossorigin: String as PropType<ImgHTMLAttributes['crossorigin']>,
   referrerpolicy: String as PropType<ImgHTMLAttributes['referrerpolicy']>,
+  enablePreview: Boolean,
 };
 
 export type ImageProps = ExtractPropTypes<typeof imageProps>;
@@ -114,6 +117,15 @@ export default defineComponent({
       emit('error', event);
     };
 
+    const onEnablePreview = () => {
+      if (props.enablePreview && props.src) {
+        showImagePreview({
+          images: [props.src],
+          closeable: true,
+        });
+      }
+    };
+
     const renderIcon = (name: string, className: unknown, slot?: Slot) => {
       if (slot) {
         return slot();
@@ -169,6 +181,7 @@ export default defineComponent({
         <img
           ref={imageRef}
           src={props.src}
+          onClick={onEnablePreview}
           onLoad={onLoad}
           onError={onError}
           {...attrs}

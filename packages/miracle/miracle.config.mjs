@@ -116,7 +116,7 @@ export default {
               //     { path: 'floating-panel', title: 'FloatingPanel 浮动面板' },
               //     { path: 'floating-bubble', title: 'FloatingBubble 浮动气泡' },
               { path: 'loading', title: 'Loading 加载' },
-              //     { path: 'notify', title: 'Notify 消息通知' },
+              { path: 'notify', title: 'Notify 消息通知' },
               { path: 'overlay', title: 'Overlay 遮罩层' },
               //     { path: 'pull-refresh', title: 'PullRefresh 下拉刷新' },
               //     { path: 'share-sheet', title: 'ShareSheet 分享面板' },

@@ -1,15 +1,14 @@
 <script setup lang="ts">
 import MiIcon from '..';
-// import VanTabs from '../../tabs';
-// import VanTab from '../../tab';
-// import VanRow from '../../row';
-// import VanCol from '../../col';
+import MiTabs from '../../tabs';
+import MiTab from '../../tab';
+import MiRow from '../../row';
+import MiCol from '../../col';
 import icons from '@miracle/icons';
-// import { ref } from 'vue';
-// import { cdnURL, useTranslate } from '../../../docs/site';
-import { useTranslate } from '../../../docs/site';
+import { ref } from 'vue';
+import { cdnURL, useTranslate } from '../../../docs/site';
 
-// import { showNotify } from '../../notify';
+import { showNotify } from '../../notify';
 
 // from https://30secondsofcode.org
 function copyToClipboard(str: string) {
@@ -63,9 +62,9 @@ const t = useTranslate({
   },
 });
 
-// const tab = ref(0);
-// const demoIcon = 'chat-o';
-// const demoImage = cdnURL('icon-demo.png');
+const tab = ref(0);
+const demoIcon = 'chat-o';
+const demoImage = cdnURL('avatar.jpg');
 
 const copy = (icon: string, option: Record<string, unknown> = {}) => {
   let tag = `<mi-icon name="${icon}"`;
@@ -84,104 +83,113 @@ const copy = (icon: string, option: Record<string, unknown> = {}) => {
   tag = `${tag} />`;
   copyToClipboard(tag);
 
-  // showNotify({
-  //   type: 'success',
-  //   duration: 1500,
-  //   className: 'demo-icon-notify',
-  //   message: `${t('copied')}：${tag}`,
-  // });
+  showNotify({
+    type: 'success',
+    duration: 1500,
+    className: 'demo-icon-notify',
+    message: `${t('copied')}：${tag}`,
+  });
 };
 </script>
 
 <template>
-  <demo-block :title="t('basic')">
-    <div v-for="icon in icons.basic" :key="icon" span="6" @click="copy(icon)">
-      <mi-icon :name="icon" />
-      <span>{{ icon }}</span>
-    </div>
-  </demo-block>
-  <!-- <van-tabs v-model:active="tab" sticky>
-    <van-tab class="demo-icon-tab-panel" :title="t('demo')">
+  <mi-tabs v-model:active="tab" sticky>
+    <mi-tab class="demo-icon-tab-panel" :title="t('demo')">
       <demo-block :title="t('basicUsage')">
-        <van-row>
-          <van-col span="6" @click="copy(demoIcon)">
-            <van-icon :name="demoIcon" />
-          </van-col>
-        </van-row>
+        <mi-row>
+          <mi-col span="6" @click="copy(demoIcon)">
+            <mi-icon :name="demoIcon" />
+          </mi-col>
+        </mi-row>
       </demo-block>
 
       <demo-block :title="t('usingUrl')">
-        <van-row>
-          <van-col span="6" @click="copy(demoImage)">
-            <van-icon :name="demoImage" />
-          </van-col>
-        </van-row>
+        <mi-row>
+          <mi-col span="6" @click="copy(demoImage)">
+            <mi-icon :name="demoImage" />
+          </mi-col>
+        </mi-row>
       </demo-block>
 
       <demo-block :title="t('badge')">
-        <van-row>
-          <van-col span="6" @click="copy(demoIcon, { dot: true })">
-            <van-icon :name="demoIcon" dot />
-          </van-col>
-          <van-col span="6" @click="copy(demoIcon, { badge: '9' })">
-            <van-icon :name="demoIcon" badge="9" />
-          </van-col>
-          <van-col span="6" @click="copy(demoIcon, { badge: '99+' })">
-            <van-icon :name="demoIcon" badge="99+" />
-          </van-col>
-        </van-row>
+        <mi-row>
+          <mi-col span="6" @click="copy(demoIcon, { dot: true })">
+            <mi-icon :name="demoIcon" dot />
+          </mi-col>
+          <mi-col span="6" @click="copy(demoIcon, { badge: '9' })">
+            <mi-icon :name="demoIcon" badge="9" />
+          </mi-col>
+          <mi-col span="6" @click="copy(demoIcon, { badge: '99+' })">
+            <mi-icon :name="demoIcon" badge="99+" />
+          </mi-col>
+        </mi-row>
       </demo-block>
 
       <demo-block :title="t('color')">
-        <van-row>
-          <van-col span="6" @click="copy('cart-o', { color: '#1989fa' })">
-            <van-icon name="cart-o" color="#1989fa" />
-          </van-col>
-          <van-col span="6" @click="copy('fire-o', { color: '#ee0a24' })">
-            <van-icon name="fire-o" color="#ee0a24" />
-          </van-col>
-        </van-row>
+        <mi-row>
+          <mi-col span="6" @click="copy('cart-o', { color: '#1989fa' })">
+            <mi-icon name="cart-o" color="#1989fa" />
+          </mi-col>
+          <mi-col span="6" @click="copy('fire-o', { color: '#ee0a24' })">
+            <mi-icon name="fire-o" color="#ee0a24" />
+          </mi-col>
+        </mi-row>
       </demo-block>
 
       <demo-block :title="t('size')">
-        <van-row>
-          <van-col span="6" @click="copy(demoIcon, { size: '40' })">
-            <van-icon :name="demoIcon" size="40" />
-          </van-col>
-          <van-col span="6" @click="copy(demoIcon, { size: '3rem' })">
-            <van-icon :name="demoIcon" size="3rem" />
-          </van-col>
-        </van-row>
+        <mi-row>
+          <mi-col span="6" @click="copy(demoIcon, { size: '40' })">
+            <mi-icon :name="demoIcon" size="40" />
+          </mi-col>
+          <mi-col span="6" @click="copy(demoIcon, { size: '3rem' })">
+            <mi-icon :name="demoIcon" size="3rem" />
+          </mi-col>
+        </mi-row>
       </demo-block>
-    </van-tab>
+    </mi-tab>
 
-    <van-tab class="demo-icon-tab-panel" :title="t('basic')">
-      <van-row>
-        <van-col v-for="icon in icons.basic" :key="icon" span="6" @click="copy(icon)">
-          <van-icon :name="icon" />
+    <mi-tab class="demo-icon-tab-panel" :title="t('basic')">
+      <mi-row>
+        <mi-col
+          v-for="icon in icons.basic"
+          :key="icon"
+          span="6"
+          @click="copy(icon)"
+        >
+          <mi-icon :name="icon" />
           <span>{{ icon }}</span>
-        </van-col>
-      </van-row>
-    </van-tab>
+        </mi-col>
+      </mi-row>
+    </mi-tab>
 
-    <van-tab class="demo-icon-tab-panel" :title="t('outline')">
-      <van-row>
-        <van-col v-for="icon in icons.outline" :key="icon" span="6" @click="copy(icon)">
-          <van-icon :name="icon" />
+    <mi-tab class="demo-icon-tab-panel" :title="t('outline')">
+      <mi-row>
+        <mi-col
+          v-for="icon in icons.outline"
+          :key="icon"
+          span="6"
+          @click="copy(icon)"
+        >
+          <mi-icon :name="icon" />
           <span>{{ icon }}</span>
-        </van-col>
-      </van-row>
-    </van-tab>
+        </mi-col>
+      </mi-row>
+    </mi-tab>
 
-    <van-tab class="demo-icon-tab-panel" :title="t('filled')">
-      <van-row>
-        <van-col v-for="icon in icons.filled" :key="icon" span="6" @click="copy(icon)">
-          <van-icon :name="icon" />
+    <mi-tab class="demo-icon-tab-panel" :title="t('filled')">
+      <mi-row>
+        <mi-col
+          v-for="icon in icons.filled"
+          :key="icon"
+          span="6"
+          @click="copy(icon)"
+        >
+          <mi-icon :name="icon" />
           <span>{{ icon }}</span>
-        </van-col>
-      </van-row>
-    </van-tab>
-  </van-tabs> -->
+        </mi-col>
+      </mi-row>
+    </mi-tab>
+  </mi-tabs>
 </template>
 
 <style lang="less">
@@ -199,7 +207,7 @@ const copy = (icon: string, option: Record<string, unknown> = {}) => {
     border-radius: 12px;
   }
 
-  .van-col {
+  .mi-col {
     display: inline-block;
     float: none;
     text-align: center;

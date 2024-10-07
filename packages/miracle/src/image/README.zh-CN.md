@@ -30,6 +30,19 @@ app.use(MiImage);
 />
 ```
 
+### 预览模式
+
+通过 `enable-preview` 属性可以开启图片预览模式，点击图片会自动预览，预览时图片会自动填充屏幕。
+
+```html
+<mi-image
+  width="100"
+  height="100"
+  src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg"
+  enable-preview
+/>
+```
+
 ### 填充模式
 
 通过 `fit` 属性可以设置图片填充模式，等同于原生的 [object-fit](https://developer.mozilla.org/zh-CN/docs/Web/CSS/object-fit) 属性，可选值见下方表格。
@@ -124,6 +137,7 @@ app.use(Lazyload);
 | 参数 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- |
 | src | 图片链接 | _string_ | - |
+| enable-preview | 是否开启图片预览模式 | _boolean_ | `false` |
 | fit | 图片填充模式，等同于原生的 [object-fit](https://developer.mozilla.org/zh-CN/docs/Web/CSS/object-fit) 属性 | _string_ | `fill` |
 | position | 图片位置，等同于原生的 [object-position](https://developer.mozilla.org/zh-CN/docs/Web/CSS/object-position) 属性，可选值为 `top` `right` `bottom` `left` 或 `string` | _string_ | `center` |
 | alt | 替代文本 | _string_ | - |
