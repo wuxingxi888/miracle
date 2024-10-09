@@ -1,0 +1,91 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render page slot correctly 1`] = `
+<nav
+  role="navigation"
+  class="mi-pagination"
+>
+  <ul class="mi-pagination__items">
+    <li class="mi-pagination__item mi-pagination__item--prev mi-hairline--surround">
+      <button type="button">
+        Previous
+      </button>
+    </li>
+    <li class="mi-pagination__item mi-pagination__item--page mi-hairline--surround">
+      <button type="button">
+        foo 1
+      </button>
+    </li>
+    <li class="mi-pagination__item mi-pagination__item--page mi-hairline--surround">
+      <button type="button">
+        foo 2
+      </button>
+    </li>
+    <li class="mi-pagination__item mi-pagination__item--page mi-hairline--surround">
+      <button type="button">
+        foo 3
+      </button>
+    </li>
+    <li class="mi-pagination__item mi-pagination__item--page mi-hairline--surround">
+      <button type="button">
+        foo 4
+      </button>
+    </li>
+    <li class="mi-pagination__item mi-pagination__item--page mi-hairline--surround">
+      <button type="button">
+        foo 5
+      </button>
+    </li>
+    <li class="mi-pagination__item mi-pagination__item--next mi-hairline--surround">
+      <button type="button">
+        Next
+      </button>
+    </li>
+  </ul>
+</nav>
+`;
+
+exports[`should render prev-text、next-text slot correctly 1`] = `
+<nav
+  role="navigation"
+  class="mi-pagination"
+>
+  <ul class="mi-pagination__items">
+    <li class="mi-pagination__item mi-pagination__item--prev mi-hairline--surround">
+      <button type="button">
+        Custom PrevText
+      </button>
+    </li>
+    <li class="mi-pagination__item mi-pagination__item--page mi-hairline--surround">
+      <button type="button">
+        1
+      </button>
+    </li>
+    <li class="mi-pagination__item mi-pagination__item--page mi-hairline--surround">
+      <button type="button">
+        2
+      </button>
+    </li>
+    <li class="mi-pagination__item mi-pagination__item--page mi-hairline--surround">
+      <button type="button">
+        3
+      </button>
+    </li>
+    <li class="mi-pagination__item mi-pagination__item--page mi-hairline--surround">
+      <button type="button">
+        4
+      </button>
+    </li>
+    <li class="mi-pagination__item mi-pagination__item--page mi-hairline--surround">
+      <button type="button">
+        5
+      </button>
+    </li>
+    <li class="mi-pagination__item mi-pagination__item--next mi-hairline--surround">
+      <button type="button">
+        Custom NextText
+      </button>
+    </li>
+  </ul>
+</nav>
+`;

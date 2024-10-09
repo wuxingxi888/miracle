@@ -1,0 +1,73 @@
+:root,
+:host {
+  --mi-sidebar-font-size: var(--mi-font-size-md);
+  --mi-sidebar-line-height: var(--mi-line-height-md);
+  --mi-sidebar-text-color: var(--mi-text-color);
+  --mi-sidebar-disabled-text-color: var(--mi-text-color-3);
+  --mi-sidebar-padding: 20px var(--mi-padding-sm);
+  --mi-sidebar-active-color: var(--mi-active-color);
+  --mi-sidebar-background: var(--mi-background);
+  --mi-sidebar-selected-font-weight: var(--mi-font-bold);
+  --mi-sidebar-selected-text-color: var(--mi-text-color);
+  --mi-sidebar-selected-border-width: 4px;
+  --mi-sidebar-selected-border-height: 16px;
+  --mi-sidebar-selected-border-color: var(--mi-primary-color);
+  --mi-sidebar-selected-background: var(--mi-background-2);
+}
+
+.mi-sidebar-item {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  padding: var(--mi-sidebar-padding);
+  overflow: hidden;
+  color: var(--mi-sidebar-text-color);
+  font-size: var(--mi-sidebar-font-size);
+  line-height: var(--mi-sidebar-line-height);
+  background: var(--mi-sidebar-background);
+  cursor: pointer;
+  user-select: none;
+
+  &:active {
+    background-color: var(--mi-sidebar-active-color);
+  }
+
+  &:not(:last-child)::after {
+    border-bottom-width: 1px;
+  }
+
+  &__text {
+    // https://github.com/wuxingxi888/miracle/issues/7455
+    word-break: break-all;
+  }
+
+  &--select {
+    color: var(--mi-sidebar-selected-text-color);
+    font-weight: var(--mi-sidebar-selected-font-weight);
+
+    &,
+    &:active {
+      background-color: var(--mi-sidebar-selected-background);
+    }
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: var(--mi-sidebar-selected-border-width);
+      height: var(--mi-sidebar-selected-border-height);
+      background-color: var(--mi-sidebar-selected-border-color);
+      transform: translateY(-50%);
+      content: '';
+    }
+  }
+
+  &--disabled {
+    color: var(--mi-sidebar-disabled-text-color);
+    cursor: not-allowed;
+
+    &:active {
+      background-color: var(--mi-sidebar-background);
+    }
+  }
+}

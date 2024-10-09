@@ -1,0 +1,205 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render demo and match snapshot 1`] = `
+<div>
+  <div class="mi-action-bar mi-safe-area-bottom">
+    <div
+      role="button"
+      class="mi-action-bar-icon"
+      tabindex="0"
+    >
+      <div class="mi-badge__wrapper mi-icon mi-icon-chat-o mi-action-bar-icon__icon">
+      </div>
+      Icon1
+    </div>
+    <div
+      role="button"
+      class="mi-action-bar-icon"
+      tabindex="0"
+    >
+      <div class="mi-badge__wrapper mi-icon mi-icon-cart-o mi-action-bar-icon__icon">
+      </div>
+      Icon2
+    </div>
+    <div
+      role="button"
+      class="mi-action-bar-icon"
+      tabindex="0"
+    >
+      <div class="mi-badge__wrapper mi-icon mi-icon-shop-o mi-action-bar-icon__icon">
+      </div>
+      Icon3
+    </div>
+    <button
+      type="button"
+      class="mi-button mi-button--danger mi-button--large mi-action-bar-button mi-action-bar-button--danger mi-action-bar-button--last mi-action-bar-button--first"
+    >
+      <div class="mi-button__content">
+        <span class="mi-button__text">
+          Button
+        </span>
+      </div>
+    </button>
+  </div>
+</div>
+<div>
+  <div class="mi-action-bar mi-safe-area-bottom">
+    <div
+      role="button"
+      class="mi-action-bar-icon"
+      tabindex="0"
+    >
+      <div class="mi-badge__wrapper mi-icon mi-icon-chat-o mi-action-bar-icon__icon">
+        <div class="mi-badge mi-badge--top-right mi-badge--dot mi-badge--fixed">
+        </div>
+      </div>
+      Icon1
+    </div>
+    <div
+      role="button"
+      class="mi-action-bar-icon"
+      tabindex="0"
+    >
+      <div class="mi-badge__wrapper mi-icon mi-icon-cart-o mi-action-bar-icon__icon">
+        <div class="mi-badge mi-badge--top-right mi-badge--fixed">
+          5
+        </div>
+      </div>
+      Icon2
+    </div>
+    <div
+      role="button"
+      class="mi-action-bar-icon"
+      tabindex="0"
+    >
+      <div class="mi-badge__wrapper mi-icon mi-icon-shop-o mi-action-bar-icon__icon">
+        <div class="mi-badge mi-badge--top-right mi-badge--fixed">
+          12
+        </div>
+      </div>
+      Icon3
+    </div>
+    <button
+      type="button"
+      class="mi-button mi-button--warning mi-button--large mi-action-bar-button mi-action-bar-button--warning mi-action-bar-button--first"
+    >
+      <div class="mi-button__content">
+        <span class="mi-button__text">
+          Button
+        </span>
+      </div>
+    </button>
+    <button
+      type="button"
+      class="mi-button mi-button--danger mi-button--large mi-action-bar-button mi-action-bar-button--danger mi-action-bar-button--last"
+    >
+      <div class="mi-button__content">
+        <span class="mi-button__text">
+          Button
+        </span>
+      </div>
+    </button>
+  </div>
+</div>
+<div>
+  <div class="mi-action-bar mi-safe-area-bottom">
+    <div
+      role="button"
+      class="mi-action-bar-icon"
+      tabindex="0"
+    >
+      <div
+        class="mi-badge__wrapper mi-icon mi-icon-chat-o mi-action-bar-icon__icon"
+        style="color: rgb(238, 10, 36);"
+      >
+      </div>
+      Icon1
+    </div>
+    <div
+      role="button"
+      class="mi-action-bar-icon"
+      tabindex="0"
+    >
+      <div class="mi-badge__wrapper mi-icon mi-icon-cart-o mi-action-bar-icon__icon">
+      </div>
+      Icon2
+    </div>
+    <div
+      role="button"
+      class="mi-action-bar-icon"
+      tabindex="0"
+    >
+      <div
+        class="mi-badge__wrapper mi-icon mi-icon-star mi-action-bar-icon__icon"
+        style="color: rgb(255, 80, 0);"
+      >
+      </div>
+      Collected
+    </div>
+    <button
+      type="button"
+      class="mi-button mi-button--warning mi-button--large mi-action-bar-button mi-action-bar-button--warning mi-action-bar-button--first"
+    >
+      <div class="mi-button__content">
+        <span class="mi-button__text">
+          Button
+        </span>
+      </div>
+    </button>
+    <button
+      type="button"
+      class="mi-button mi-button--danger mi-button--large mi-action-bar-button mi-action-bar-button--danger mi-action-bar-button--last"
+    >
+      <div class="mi-button__content">
+        <span class="mi-button__text">
+          Button
+        </span>
+      </div>
+    </button>
+  </div>
+</div>
+<div>
+  <div class="mi-action-bar mi-safe-area-bottom">
+    <div
+      role="button"
+      class="mi-action-bar-icon"
+      tabindex="0"
+    >
+      <div class="mi-badge__wrapper mi-icon mi-icon-chat-o mi-action-bar-icon__icon">
+      </div>
+      Icon1
+    </div>
+    <div
+      role="button"
+      class="mi-action-bar-icon"
+      tabindex="0"
+    >
+      <div class="mi-badge__wrapper mi-icon mi-icon-cart-o mi-action-bar-icon__icon">
+      </div>
+      Icon2
+    </div>
+    <button
+      type="button"
+      class="mi-button mi-button--warning mi-button--large mi-action-bar-button mi-action-bar-button--warning mi-action-bar-button--first"
+      style="color: white; border-color: #be99ff; background: rgb(190, 153, 255);"
+    >
+      <div class="mi-button__content">
+        <span class="mi-button__text">
+          Button
+        </span>
+      </div>
+    </button>
+    <button
+      type="button"
+      class="mi-button mi-button--danger mi-button--large mi-action-bar-button mi-action-bar-button--danger mi-action-bar-button--last"
+      style="color: white; background: rgb(114, 50, 221); border-color: #7232dd;"
+    >
+      <div class="mi-button__content">
+        <span class="mi-button__text">
+          Button
+        </span>
+      </div>
+    </button>
+  </div>
+</div>
+`;

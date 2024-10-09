@@ -1,0 +1,35 @@
+:root,
+:host {
+  --mi-action-bar-icon-width: 48px;
+  --mi-action-bar-icon-height: 100%;
+  --mi-action-bar-icon-color: var(--mi-text-color);
+  --mi-action-bar-icon-size: 18px;
+  --mi-action-bar-icon-font-size: var(--mi-font-size-xs);
+  --mi-action-bar-icon-active-color: var(--mi-active-color);
+  --mi-action-bar-icon-text-color: var(--mi-text-color);
+  --mi-action-bar-icon-background: var(--mi-background-2);
+}
+
+.mi-action-bar-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: var(--mi-action-bar-icon-width);
+  height: var(--mi-action-bar-icon-height);
+  color: var(--mi-action-bar-icon-text-color);
+  font-size: var(--mi-action-bar-icon-font-size);
+  line-height: 1;
+  text-align: center;
+  background: var(--mi-action-bar-icon-background);
+  cursor: pointer;
+
+  &:active {
+    background-color: var(--mi-action-bar-icon-active-color);
+  }
+
+  &__icon {
+    margin: 0 auto var(--mi-padding-base);
+    color: var(--mi-action-bar-icon-color);
+    font-size: var(--mi-action-bar-icon-size);
+  }
+}

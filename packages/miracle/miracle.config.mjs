@@ -109,7 +109,7 @@ export default {
           {
             title: '反馈组件',
             items: [
-              //     { path: 'action-sheet', title: 'ActionSheet 动作面板' },
+              { path: 'action-sheet', title: 'ActionSheet 动作面板' },
               //     { path: 'barrage', title: 'Barrage 弹幕' },
               //     { path: 'dialog', title: 'Dialog 弹出框' },
               //     { path: 'dropdown-menu', title: 'DropdownMenu 下拉菜单' },
@@ -119,7 +119,7 @@ export default {
               { path: 'notify', title: 'Notify 消息通知' },
               { path: 'overlay', title: 'Overlay 遮罩层' },
               //     { path: 'pull-refresh', title: 'PullRefresh 下拉刷新' },
-              //     { path: 'share-sheet', title: 'ShareSheet 分享面板' },
+              { path: 'share-sheet', title: 'ShareSheet 分享面板' },
               //     { path: 'swipe-cell', title: 'SwipeCell 滑动单元格' },
             ],
           },
@@ -152,16 +152,16 @@ export default {
           {
             title: '导航组件',
             items: [
-              //     { path: 'action-bar', title: 'ActionBar 动作栏' },
+              { path: 'action-bar', title: 'ActionBar 动作栏' },
               { path: 'back-top', title: 'BackTop 回到顶部' },
               { path: 'grid', title: 'Grid 宫格' },
               { path: 'index-bar', title: 'IndexBar 索引栏' },
               { path: 'nav-bar', title: 'NavBar 导航栏' },
-              //     { path: 'pagination', title: 'Pagination 分页' },
-              //     { path: 'sidebar', title: 'Sidebar 侧边导航' },
+              { path: 'pagination', title: 'Pagination 分页' },
+              { path: 'sidebar', title: 'Sidebar 侧边导航' },
               { path: 'tabs', title: 'Tab 标签页' },
               { path: 'tabbar', title: 'Tabbar 标签栏' },
-              //     { path: 'tree-select', title: 'TreeSelect 分类选择' },
+              { path: 'tree-select', title: 'TreeSelect 分类选择' },
             ],
           },
           // {

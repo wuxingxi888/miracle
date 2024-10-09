@@ -26,7 +26,7 @@ app.use(MiImage);
 <mi-image
   width="100"
   height="100"
-  src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg"
+  src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg"
 />
 ```
 
@@ -38,7 +38,7 @@ app.use(MiImage);
 <mi-image
   width="100"
   height="100"
-  src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg"
+  src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg"
   enable-preview
 />
 ```
@@ -52,7 +52,7 @@ app.use(MiImage);
   width="10rem"
   height="10rem"
   fit="contain"
-  src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg"
+  src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg"
 />
 ```
 
@@ -66,7 +66,7 @@ app.use(MiImage);
   height="10rem"
   fit="cover"
   position="left"
-  src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg"
+  src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg"
 />
 ```
 
@@ -79,7 +79,7 @@ app.use(MiImage);
   round
   width="10rem"
   height="10rem"
-  src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg"
+  src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg"
 />
 ```
 
@@ -92,7 +92,7 @@ app.use(MiImage);
   width="100"
   height="100"
   lazy-load
-  src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg"
+  src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg"
 />
 ```
 
@@ -109,9 +109,7 @@ app.use(Lazyload);
 `Image` 组件提供了默认的加载中提示，支持通过 `loading` 插槽自定义内容。
 
 ```html
-<mi-image
-  src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg"
->
+<mi-image src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg">
   <template v-slot:loading>
     <mi-loading type="spinner" size="20" />
   </template>
@@ -123,9 +121,7 @@ app.use(Lazyload);
 `Image` 组件提供了默认的加载失败提示，支持通过 `error` 插槽自定义内容。
 
 ```html
-<mi-image
-  src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg"
->
+<mi-image src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg">
   <template v-slot:error>加载失败</template>
 </mi-image>
 ```

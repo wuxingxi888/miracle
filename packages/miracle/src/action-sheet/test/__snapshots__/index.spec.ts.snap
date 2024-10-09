@@ -1,0 +1,88 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should allow to custom close icon with closeIcon prop 1`] = `
+"<i class="mi-badge__wrapper mi-icon mi-icon-cross mi-action-sheet__close mi-haptics-feedback">
+  <!---->
+  <!---->
+  <!---->
+</i>"
+`;
+
+exports[`should render action slot correctly 1`] = `
+<button
+  type="button"
+  class="mi-action-sheet__item"
+>
+  name: Option, index: 0
+</button>
+`;
+
+exports[`should render cancel slot correctly 1`] = `
+<button
+  type="button"
+  class="mi-action-sheet__cancel"
+>
+  Custom Cancel
+</button>
+`;
+
+exports[`should render default slot correctly 1`] = `
+<transition-stub
+  name="mi-fade"
+  appear="true"
+  persisted="false"
+  css="true"
+  role="button"
+  tabindex="0"
+>
+  <div class="mi-overlay">
+  </div>
+</transition-stub>
+<transition-stub
+  name="mi-popup-slide-bottom"
+  appear="false"
+  persisted="false"
+  css="true"
+>
+  <div
+    role="dialog"
+    tabindex="0"
+    class="mi-popup mi-popup--round mi-popup--bottom mi-safe-area-bottom mi-action-sheet"
+  >
+    <div class="mi-action-sheet__header">
+      Title
+      <i class="mi-badge__wrapper mi-icon mi-icon-cross mi-action-sheet__close mi-haptics-feedback">
+      </i>
+    </div>
+    <div class="mi-action-sheet__content">
+      Default
+    </div>
+  </div>
+</transition-stub>
+`;
+
+exports[`should render description correctly 1`] = `
+<div class="mi-action-sheet__description">
+  This is a description
+</div>
+`;
+
+exports[`should render description slot when match snapshot 1`] = `
+<div class="mi-action-sheet__description">
+  Custom Description
+</div>
+`;
+
+exports[`should render subname correctly 1`] = `
+<button
+  type="button"
+  class="mi-action-sheet__item"
+>
+  <span class="mi-action-sheet__name">
+    Option
+  </span>
+  <div class="mi-action-sheet__subname">
+    Subname
+  </div>
+</button>
+`;
