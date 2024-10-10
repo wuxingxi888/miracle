@@ -1,0 +1,57 @@
+:root,
+:host {
+  --mi-floating-panel-border-radius: 16px;
+  --mi-floating-panel-header-height: 30px;
+  --mi-floating-panel-z-index: 999;
+  --mi-floating-panel-background: var(--mi-background-2);
+  --mi-floating-panel-bar-width: 20px;
+  --mi-floating-panel-bar-height: 3px;
+  --mi-floating-panel-bar-color: var(--mi-gray-5);
+}
+
+.mi-floating-panel {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  z-index: var(--mi-floating-panel-z-index);
+  display: flex;
+  flex-direction: column;
+  touch-action: none;
+  border-top-left-radius: var(--mi-floating-panel-border-radius);
+  border-top-right-radius: var(--mi-floating-panel-border-radius);
+  background: var(--mi-floating-panel-background);
+  will-change: transform;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -100vh;
+    height: 100vh;
+    width: 100vw;
+    background-color: inherit;
+  }
+
+  &__header {
+    height: var(--mi-floating-panel-header-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: grab;
+    user-select: none;
+
+    &-bar {
+      height: var(--mi-floating-panel-bar-height);
+      width: var(--mi-floating-panel-bar-width);
+      border-radius: var(--mi-radius-md);
+      background: var(--mi-floating-panel-bar-color);
+    }
+  }
+
+  &__content {
+    flex: 1;
+    overflow-y: auto;
+    background-color: var(--mi-floating-panel-background);
+  }
+}

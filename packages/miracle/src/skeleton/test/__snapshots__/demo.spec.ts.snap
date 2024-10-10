@@ -1,0 +1,118 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render demo and match snapshot 1`] = `
+<div>
+  <div class="mi-skeleton mi-skeleton--animate">
+    <div class="mi-skeleton__content">
+      <h3 class="mi-skeleton-title">
+      </h3>
+      <div
+        class="mi-skeleton-paragraph"
+        style="width: 100%;"
+      >
+      </div>
+      <div
+        class="mi-skeleton-paragraph"
+        style="width: 100%;"
+      >
+      </div>
+      <div
+        class="mi-skeleton-paragraph"
+        style="width: 60%;"
+      >
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="mi-skeleton mi-skeleton--animate">
+    <div class="mi-skeleton-avatar mi-skeleton-avatar--round">
+    </div>
+    <div class="mi-skeleton__content">
+      <h3 class="mi-skeleton-title">
+      </h3>
+      <div
+        class="mi-skeleton-paragraph"
+        style="width: 100%;"
+      >
+      </div>
+      <div
+        class="mi-skeleton-paragraph"
+        style="width: 100%;"
+      >
+      </div>
+      <div
+        class="mi-skeleton-paragraph"
+        style="width: 60%;"
+      >
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div
+    role="switch"
+    class="mi-switch"
+    tabindex="0"
+    aria-checked="false"
+  >
+    <div class="mi-switch__node">
+    </div>
+  </div>
+  <div class="mi-skeleton mi-skeleton--animate">
+    <div class="mi-skeleton-avatar mi-skeleton-avatar--round">
+    </div>
+    <div class="mi-skeleton__content">
+      <h3 class="mi-skeleton-title">
+      </h3>
+      <div
+        class="mi-skeleton-paragraph"
+        style="width: 100%;"
+      >
+      </div>
+      <div
+        class="mi-skeleton-paragraph"
+        style="width: 100%;"
+      >
+      </div>
+      <div
+        class="mi-skeleton-paragraph"
+        style="width: 60%;"
+      >
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="mi-skeleton mi-skeleton--animate">
+    <div style="display: flex; width: 100%;">
+      <div class="mi-skeleton-image mi-skeleton-image--square">
+        <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-skeleton-image__icon">
+        </i>
+      </div>
+      <div style="flex: 1; margin-left: 16px;">
+        <div
+          class="mi-skeleton-paragraph"
+          style="width: 60%;"
+        >
+        </div>
+        <div
+          class="mi-skeleton-paragraph"
+          style="width: 100%;"
+        >
+        </div>
+        <div
+          class="mi-skeleton-paragraph"
+          style="width: 100%;"
+        >
+        </div>
+        <div
+          class="mi-skeleton-paragraph"
+          style="width: 100%;"
+        >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

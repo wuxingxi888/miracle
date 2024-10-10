@@ -1,0 +1,174 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render demo and match snapshot 1`] = `
+<div>
+  <div class="mi-swipe-cell">
+    <div
+      class="mi-swipe-cell__wrapper"
+      style="transform: translate3d(0px, 0, 0); transition-duration: .6s;"
+    >
+      <div class="mi-swipe-cell__left">
+        <button
+          type="button"
+          class="mi-button mi-button--primary mi-button--normal mi-button--square"
+        >
+          <div class="mi-button__content">
+            <span class="mi-button__text">
+              Select
+            </span>
+          </div>
+        </button>
+      </div>
+      <div class="mi-cell mi-cell--borderless">
+        <div class="mi-cell__title">
+          <span>
+            Cell
+          </span>
+        </div>
+        <div class="mi-cell__value">
+          <span>
+            Content
+          </span>
+        </div>
+      </div>
+      <div class="mi-swipe-cell__right">
+        <button
+          type="button"
+          class="mi-button mi-button--danger mi-button--normal mi-button--square"
+        >
+          <div class="mi-button__content">
+            <span class="mi-button__text">
+              Delete
+            </span>
+          </div>
+        </button>
+        <button
+          type="button"
+          class="mi-button mi-button--primary mi-button--normal mi-button--square"
+        >
+          <div class="mi-button__content">
+            <span class="mi-button__text">
+              Collect
+            </span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="mi-swipe-cell">
+    <div
+      class="mi-swipe-cell__wrapper"
+      style="transform: translate3d(0px, 0, 0); transition-duration: .6s;"
+    >
+      <div class="mi-card">
+        <div class="mi-card__header">
+          <a class="mi-card__thumb">
+            <div
+              class="mi-image"
+              style="width: 100%; height: 100%;"
+            >
+              <img
+                src="https://fastly.jsdelivr.net/npm/@vant/assets/ipad.jpeg"
+                class="mi-image__img"
+                style="object-fit: cover;"
+              >
+              <div class="mi-image__loading">
+                <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon">
+                </i>
+              </div>
+            </div>
+          </a>
+          <div class="mi-card__content">
+            <div>
+              <div class="mi-card__title mi-multi-ellipsis--l2">
+                Title
+              </div>
+              <div class="mi-card__desc mi-ellipsis">
+                Description
+              </div>
+            </div>
+            <div class="mi-card__bottom">
+              <div class="mi-card__price">
+                <div>
+                  <span class="mi-card__price-currency">
+                    ¥
+                  </span>
+                  <span class="mi-card__price-integer">
+                    2
+                  </span>
+                  .
+                  <span class="mi-card__price-decimal">
+                    00
+                  </span>
+                </div>
+              </div>
+              <div class="mi-card__num">
+                x2
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mi-swipe-cell__right">
+        <button
+          type="button"
+          class="mi-button mi-button--danger mi-button--normal mi-button--square delete-button"
+        >
+          <div class="mi-button__content">
+            <span class="mi-button__text">
+              Delete
+            </span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="mi-swipe-cell">
+    <div
+      class="mi-swipe-cell__wrapper"
+      style="transform: translate3d(0px, 0, 0); transition-duration: .6s;"
+    >
+      <div class="mi-swipe-cell__left">
+        <button
+          type="button"
+          class="mi-button mi-button--primary mi-button--normal mi-button--square"
+        >
+          <div class="mi-button__content">
+            <span class="mi-button__text">
+              Select
+            </span>
+          </div>
+        </button>
+      </div>
+      <div class="mi-cell mi-cell--borderless">
+        <div class="mi-cell__title">
+          <span>
+            Cell
+          </span>
+        </div>
+        <div class="mi-cell__value">
+          <span>
+            Content
+          </span>
+        </div>
+      </div>
+      <div class="mi-swipe-cell__right">
+        <button
+          type="button"
+          class="mi-button mi-button--danger mi-button--normal mi-button--square"
+        >
+          <div class="mi-button__content">
+            <span class="mi-button__text">
+              Delete
+            </span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

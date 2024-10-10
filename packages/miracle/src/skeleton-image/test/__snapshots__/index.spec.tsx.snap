@@ -1,0 +1,8 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should skeleton image render correctly 1`] = `
+<div class="mi-skeleton-image mi-skeleton-image--square">
+  <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-skeleton-image__icon">
+  </i>
+</div>
+`;

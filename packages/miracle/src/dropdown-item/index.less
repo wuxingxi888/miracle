@@ -1,0 +1,50 @@
+:root,
+:host {
+  --mi-dropdown-item-z-index: 10;
+}
+
+.mi-dropdown-item {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: var(--mi-dropdown-item-z-index);
+  overflow: hidden;
+
+  &__icon {
+    display: block;
+    line-height: inherit;
+  }
+
+  &__option {
+    text-align: left;
+
+    &--active {
+      color: var(--mi-dropdown-menu-option-active-color);
+
+      .mi-dropdown-item__icon {
+        color: var(--mi-dropdown-menu-option-active-color);
+      }
+    }
+
+    &--disabled {
+      color: var(--mi-dropdown-menu-option-disabled-color);
+
+      .mi-dropdown-item__icon {
+        color: var(--mi-dropdown-menu-option-disabled-color);
+      }
+    }
+  }
+
+  &--up {
+    top: 0;
+  }
+
+  &--down {
+    bottom: 0;
+  }
+
+  &__content {
+    position: absolute;
+    max-height: var(--mi-dropdown-menu-content-max-height);
+  }
+}

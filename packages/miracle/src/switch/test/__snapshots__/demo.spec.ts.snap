@@ -1,0 +1,124 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render demo and match snapshot 1`] = `
+<div>
+  <div
+    role="switch"
+    class="mi-switch mi-switch--on"
+    tabindex="0"
+    aria-checked="true"
+  >
+    <div class="mi-switch__node">
+    </div>
+  </div>
+</div>
+<div>
+  <div
+    role="switch"
+    class="mi-switch mi-switch--on mi-switch--disabled"
+    aria-checked="true"
+  >
+    <div class="mi-switch__node">
+    </div>
+  </div>
+</div>
+<div>
+  <div
+    role="switch"
+    class="mi-switch mi-switch--on mi-switch--loading"
+    tabindex="0"
+    aria-checked="true"
+  >
+    <div class="mi-switch__node">
+      <div
+        class="mi-loading mi-loading--circular mi-switch__loading"
+        aria-live="polite"
+        aria-busy="true"
+      >
+        <span class="mi-loading__spinner mi-loading__spinner--circular">
+          <svg
+            class="mi-loading__circular"
+            viewbox="25 25 50 50"
+          >
+            <circle
+              cx="50"
+              cy="50"
+              r="20"
+              fill="none"
+            >
+            </circle>
+          </svg>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div
+    role="switch"
+    class="mi-switch mi-switch--on"
+    style="font-size: 22px;"
+    tabindex="0"
+    aria-checked="true"
+  >
+    <div class="mi-switch__node">
+    </div>
+  </div>
+</div>
+<div>
+  <div
+    role="switch"
+    class="mi-switch mi-switch--on"
+    style="background-color: rgb(238, 10, 36);"
+    tabindex="0"
+    aria-checked="true"
+  >
+    <div class="mi-switch__node">
+    </div>
+  </div>
+</div>
+<div>
+  <div
+    role="switch"
+    class="mi-switch mi-switch--on"
+    tabindex="0"
+    aria-checked="true"
+  >
+    <div class="mi-switch__node">
+      <div class="icon-wrapper">
+        <i class="mi-badge__wrapper mi-icon mi-icon-success">
+        </i>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div
+    role="switch"
+    class="mi-switch mi-switch--on"
+    tabindex="0"
+    aria-checked="true"
+  >
+    <div class="mi-switch__node">
+    </div>
+  </div>
+</div>
+<div>
+  <div class="mi-cell mi-cell--center">
+    <div class="mi-cell__title">
+      <span>
+        Title
+      </span>
+    </div>
+    <div
+      role="switch"
+      class="mi-switch mi-switch--on"
+      tabindex="0"
+      aria-checked="true"
+    >
+      <div class="mi-switch__node">
+      </div>
+    </div>
+  </div>
+</div>
+`;

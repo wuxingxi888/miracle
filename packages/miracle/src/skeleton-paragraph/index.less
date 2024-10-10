@@ -1,0 +1,21 @@
+:root,
+:host {
+  --mi-skeleton-paragraph-height: 16px;
+  --mi-skeleton-paragraph-background: var(--mi-active-color);
+  --mi-skeleton-paragraph-margin-top: var(--mi-padding-sm);
+}
+
+.mi-skeleton {
+  &-paragraph {
+    height: var(--mi-skeleton-paragraph-height);
+    background: var(--mi-skeleton-paragraph-background);
+
+    &--round {
+      border-radius: var(--mi-radius-max);
+    }
+
+    &:not(:first-child) {
+      margin-top: var(--mi-skeleton-paragraph-margin-top);
+    }
+  }
+}

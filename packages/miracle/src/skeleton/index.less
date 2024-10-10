@@ -1,0 +1,24 @@
+:root,
+:host {
+  --mi-skeleton-duration: 1.2s;
+}
+
+.mi-skeleton {
+  display: flex;
+  padding: 0 var(--mi-padding-md);
+
+  &__content {
+    width: 100%;
+  }
+
+  &--animate {
+    animation: mi-skeleton-blink var(--mi-skeleton-duration) ease-in-out
+      infinite;
+  }
+}
+
+@keyframes mi-skeleton-blink {
+  50% {
+    opacity: 0.6;
+  }
+}

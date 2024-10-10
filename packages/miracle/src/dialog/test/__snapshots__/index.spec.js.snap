@@ -1,0 +1,54 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render button text correctly 1`] = `
+<div class="mi-hairline--top mi-dialog__footer">
+  <button
+    type="button"
+    class="mi-button mi-button--default mi-button--large mi-dialog__cancel"
+  >
+    <div class="mi-button__content">
+      <span class="mi-button__text">
+        Custom Cancel
+      </span>
+    </div>
+  </button>
+  <button
+    type="button"
+    class="mi-button mi-button--default mi-button--large mi-dialog__confirm mi-hairline--left"
+  >
+    <div class="mi-button__content">
+      <span class="mi-button__text">
+        Custom Confirm
+      </span>
+    </div>
+  </button>
+</div>
+`;
+
+exports[`should render default slot correctly 1`] = `
+<div class="mi-dialog__content">
+  Custom Message
+</div>
+`;
+
+exports[`should render footer slot correctly 1`] = `
+<div
+  role="dialog"
+  tabindex="0"
+  class="mi-popup mi-popup--center mi-dialog"
+  aria-labelledby="message"
+>
+  <div class="mi-dialog__content mi-dialog__content--isolated">
+    <div class="mi-dialog__message">
+      message
+    </div>
+  </div>
+  Custom Footer
+</div>
+`;
+
+exports[`should render title slot correctly 1`] = `
+<div class="mi-dialog__header mi-dialog__header--isolated">
+  Custom Title
+</div>
+`;
