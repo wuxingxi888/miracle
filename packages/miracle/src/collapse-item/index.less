@@ -1,0 +1,75 @@
+@import '../style/mixins/hairline';
+
+:root,
+:host {
+  --mi-collapse-item-duration: var(--mi-duration-base);
+  --mi-collapse-item-content-padding: var(--mi-padding-sm) var(--mi-padding-md);
+  --mi-collapse-item-content-font-size: var(--mi-font-size-md);
+  --mi-collapse-item-content-line-height: 1.5;
+  --mi-collapse-item-content-text-color: var(--mi-text-color-2);
+  --mi-collapse-item-content-background: var(--mi-background-2);
+  --mi-collapse-item-title-disabled-color: var(--mi-text-color-3);
+}
+
+.mi-collapse-item {
+  position: relative;
+
+  &--border {
+    &::after {
+      .hairline-top(var(--mi-border-color), var(--mi-padding-md), var(--mi-padding-md));
+    }
+  }
+
+  &__title {
+    .mi-cell__right-icon::before {
+      // using translateZ to fix safari rendering issues
+      // see: https://github.com/wuxingxi888/miracle/issues/8608
+      transform: rotate(90deg) translateZ(0);
+      transition: transform var(--mi-collapse-item-duration);
+    }
+
+    &::after {
+      right: var(--mi-padding-md);
+      display: none;
+    }
+
+    &--expanded {
+      .mi-cell__right-icon::before {
+        transform: rotate(-90deg);
+      }
+
+      &::after {
+        display: block;
+      }
+    }
+
+    &--borderless {
+      &::after {
+        display: none;
+      }
+    }
+
+    &--disabled {
+      cursor: not-allowed;
+
+      &,
+      & .mi-cell__right-icon {
+        color: var(--mi-collapse-item-title-disabled-color);
+      }
+    }
+  }
+
+  &__wrapper {
+    overflow: hidden;
+    transition: height var(--mi-collapse-item-duration) ease-in-out;
+    will-change: height;
+  }
+
+  &__content {
+    padding: var(--mi-collapse-item-content-padding);
+    color: var(--mi-collapse-item-content-text-color);
+    font-size: var(--mi-collapse-item-content-font-size);
+    line-height: var(--mi-collapse-item-content-line-height);
+    background: var(--mi-collapse-item-content-background);
+  }
+}

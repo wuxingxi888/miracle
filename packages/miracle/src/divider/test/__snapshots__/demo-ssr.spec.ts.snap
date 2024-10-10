@@ -1,0 +1,90 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render demo and match snapshot 1`] = `
+<!--[-->
+<div>
+  <!--[-->
+  <div
+    role="separator"
+    class="mi-divider mi-divider--hairline"
+  >
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div
+    role="separator"
+    class="mi-divider mi-divider--hairline mi-divider--content-center"
+  >
+    <!--[-->
+    Text
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div
+    role="separator"
+    class="mi-divider mi-divider--hairline mi-divider--content-left"
+  >
+    <!--[-->
+    Text
+  </div>
+  <div
+    role="separator"
+    class="mi-divider mi-divider--hairline mi-divider--content-right"
+  >
+    <!--[-->
+    Text
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div
+    role="separator"
+    class="mi-divider mi-divider--dashed mi-divider--content-center"
+  >
+    <!--[-->
+    Text
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div
+    role="separator"
+    class="mi-divider mi-divider--hairline mi-divider--content-center"
+    style="border-color:#1989fa;color:#1989fa;padding:0 16px;"
+  >
+    <!--[-->
+    Text
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div class="content">
+    <div
+      role="separator"
+      class="mi-divider mi-divider--hairline mi-divider--vertical"
+    >
+    </div>
+    Text
+    <div
+      role="separator"
+      class="mi-divider mi-divider--dashed mi-divider--hairline mi-divider--vertical"
+    >
+    </div>
+    Text
+    <div
+      role="separator"
+      class="mi-divider mi-divider--vertical"
+    >
+    </div>
+    Text
+    <div
+      role="separator"
+      class="mi-divider mi-divider--hairline mi-divider--vertical"
+      style="border-color:#1989fa;"
+    >
+    </div>
+  </div>
+</div>
+`;

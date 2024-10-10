@@ -1,0 +1,415 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render demo and match snapshot 1`] = `
+<!--[-->
+<div>
+  <!--[-->
+  <div class="mi-collapse mi-hairline--top-bottom">
+    <!--[-->
+    <div class="mi-collapse-item">
+      <div
+        class="mi-cell mi-cell--clickable mi-collapse-item__title mi-collapse-item__title--expanded"
+        role="button"
+        tabindex="0"
+        aria-expanded="true"
+      >
+        <div
+          class="mi-cell__title"
+          style
+        >
+          <span>
+            Title1
+          </span>
+        </div>
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon"
+          style
+        >
+          <!--[-->
+        </i>
+      </div>
+      <div class="mi-collapse-item__wrapper">
+        <div class="mi-collapse-item__content">
+          <!--[-->
+          The code is written for people to see and can be run on a machine.
+        </div>
+      </div>
+    </div>
+    <div class="mi-collapse-item mi-collapse-item--border">
+      <div
+        class="mi-cell mi-cell--clickable mi-collapse-item__title"
+        role="button"
+        tabindex="0"
+        aria-expanded="false"
+      >
+        <div
+          class="mi-cell__title"
+          style
+        >
+          <span>
+            Title2
+          </span>
+        </div>
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon"
+          style
+        >
+          <!--[-->
+        </i>
+      </div>
+    </div>
+    <div class="mi-collapse-item mi-collapse-item--border">
+      <div
+        class="mi-cell mi-cell--clickable mi-collapse-item__title"
+        role="button"
+        tabindex="0"
+        aria-expanded="false"
+      >
+        <div
+          class="mi-cell__title"
+          style
+        >
+          <span>
+            Title3
+          </span>
+        </div>
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon"
+          style
+        >
+          <!--[-->
+        </i>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div class="mi-collapse mi-hairline--top-bottom">
+    <!--[-->
+    <div class="mi-collapse-item">
+      <div
+        class="mi-cell mi-cell--clickable mi-collapse-item__title mi-collapse-item__title--expanded"
+        role="button"
+        tabindex="0"
+        aria-expanded="true"
+      >
+        <div
+          class="mi-cell__title"
+          style
+        >
+          <span>
+            Title1
+          </span>
+        </div>
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon"
+          style
+        >
+          <!--[-->
+        </i>
+      </div>
+      <div class="mi-collapse-item__wrapper">
+        <div class="mi-collapse-item__content">
+          <!--[-->
+          The code is written for people to see and can be run on a machine.
+        </div>
+      </div>
+    </div>
+    <div class="mi-collapse-item mi-collapse-item--border">
+      <div
+        class="mi-cell mi-cell--clickable mi-collapse-item__title"
+        role="button"
+        tabindex="0"
+        aria-expanded="false"
+      >
+        <div
+          class="mi-cell__title"
+          style
+        >
+          <span>
+            Title2
+          </span>
+        </div>
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon"
+          style
+        >
+          <!--[-->
+        </i>
+      </div>
+    </div>
+    <div class="mi-collapse-item mi-collapse-item--border">
+      <div
+        class="mi-cell mi-cell--clickable mi-collapse-item__title"
+        role="button"
+        tabindex="0"
+        aria-expanded="false"
+      >
+        <div
+          class="mi-cell__title"
+          style
+        >
+          <span>
+            Title3
+          </span>
+        </div>
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon"
+          style
+        >
+          <!--[-->
+        </i>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div class="mi-collapse mi-hairline--top-bottom">
+    <!--[-->
+    <div class="mi-collapse-item">
+      <div
+        class="mi-cell mi-cell--clickable mi-collapse-item__title"
+        role="button"
+        tabindex="0"
+        aria-expanded="false"
+      >
+        <div
+          class="mi-cell__title"
+          style
+        >
+          <span>
+            Title1
+          </span>
+        </div>
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon"
+          style
+        >
+          <!--[-->
+        </i>
+      </div>
+    </div>
+    <div class="mi-collapse-item mi-collapse-item--border">
+      <div
+        class="mi-cell mi-collapse-item__title mi-collapse-item__title--disabled"
+        role="button"
+        aria-expanded="false"
+      >
+        <div
+          class="mi-cell__title"
+          style
+        >
+          <span>
+            Title2
+          </span>
+        </div>
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon"
+          style
+        >
+          <!--[-->
+        </i>
+      </div>
+    </div>
+    <div class="mi-collapse-item mi-collapse-item--border">
+      <div
+        class="mi-cell mi-collapse-item__title mi-collapse-item__title--disabled"
+        role="button"
+        aria-expanded="false"
+      >
+        <div
+          class="mi-cell__title"
+          style
+        >
+          <span>
+            Title3
+          </span>
+        </div>
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon"
+          style
+        >
+          <!--[-->
+        </i>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div class="mi-collapse mi-hairline--top-bottom">
+    <!--[-->
+    <div class="mi-collapse-item">
+      <div
+        class="mi-cell mi-cell--clickable mi-collapse-item__title"
+        role="button"
+        tabindex="0"
+        aria-expanded="false"
+      >
+        <div
+          class="mi-cell__title"
+          style
+        >
+          <!--[-->
+          Title1
+          <i
+            class="mi-badge__wrapper mi-icon mi-icon-question-o"
+            style
+          >
+            <!--[-->
+          </i>
+        </div>
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon"
+          style
+        >
+          <!--[-->
+        </i>
+      </div>
+    </div>
+    <div class="mi-collapse-item mi-collapse-item--border">
+      <div
+        class="mi-cell mi-cell--clickable mi-collapse-item__title"
+        role="button"
+        tabindex="0"
+        aria-expanded="false"
+      >
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-shop-o mi-cell__left-icon"
+          style
+        >
+          <!--[-->
+        </i>
+        <div
+          class="mi-cell__title"
+          style
+        >
+          <span>
+            Title2
+          </span>
+        </div>
+        <div class="mi-cell__value">
+          <span>
+            Content
+          </span>
+        </div>
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon"
+          style
+        >
+          <!--[-->
+        </i>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div class="mi-collapse mi-hairline--top-bottom">
+    <!--[-->
+    <div class="mi-collapse-item">
+      <div
+        class="mi-cell mi-cell--clickable mi-collapse-item__title mi-collapse-item__title--expanded"
+        role="button"
+        tabindex="0"
+        aria-expanded="true"
+      >
+        <div
+          class="mi-cell__title"
+          style
+        >
+          <span>
+            Title1
+          </span>
+        </div>
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon"
+          style
+        >
+          <!--[-->
+        </i>
+      </div>
+      <div class="mi-collapse-item__wrapper">
+        <div class="mi-collapse-item__content">
+          <!--[-->
+          The code is written for people to see and can be run on a machine.
+        </div>
+      </div>
+    </div>
+    <div class="mi-collapse-item mi-collapse-item--border">
+      <div
+        class="mi-cell mi-cell--clickable mi-collapse-item__title"
+        role="button"
+        tabindex="0"
+        aria-expanded="false"
+      >
+        <div
+          class="mi-cell__title"
+          style
+        >
+          <span>
+            Title2
+          </span>
+        </div>
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon"
+          style
+        >
+          <!--[-->
+        </i>
+      </div>
+    </div>
+    <div class="mi-collapse-item mi-collapse-item--border">
+      <div
+        class="mi-cell mi-cell--clickable mi-collapse-item__title"
+        role="button"
+        tabindex="0"
+        aria-expanded="false"
+      >
+        <div
+          class="mi-cell__title"
+          style
+        >
+          <span>
+            Title3
+          </span>
+        </div>
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon"
+          style
+        >
+          <!--[-->
+        </i>
+      </div>
+    </div>
+  </div>
+  <div class="demo-collapse-buttons">
+    <button
+      type="button"
+      class="mi-button mi-button--primary mi-button--normal"
+      style
+    >
+      <div class="mi-button__content">
+        <span class="mi-button__text">
+          <!--[-->
+          Open All
+        </span>
+      </div>
+    </button>
+    <button
+      type="button"
+      class="mi-button mi-button--primary mi-button--normal"
+      style
+    >
+      <div class="mi-button__content">
+        <span class="mi-button__text">
+          <!--[-->
+          Toggle All
+        </span>
+      </div>
+    </button>
+  </div>
+</div>
+`;

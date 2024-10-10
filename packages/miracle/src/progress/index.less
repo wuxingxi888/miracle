@@ -1,0 +1,54 @@
+:root,
+:host {
+  --mi-progress-height: 4px;
+  --mi-progress-color: var(--mi-primary-color);
+  --mi-progress-inactive-color: var(--mi-gray-5);
+  --mi-progress-background: var(--mi-gray-3);
+  --mi-progress-pivot-padding: 0 5px;
+  --mi-progress-pivot-text-color: var(--mi-white);
+  --mi-progress-pivot-font-size: var(--mi-font-size-xs);
+  --mi-progress-pivot-line-height: 1.6;
+  --mi-progress-pivot-background: var(--mi-primary-color);
+}
+
+.mi-progress {
+  position: relative;
+  height: var(--mi-progress-height);
+  background: var(--mi-progress-background);
+  border-radius: var(--mi-progress-height);
+
+  &__portion {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--mi-progress-color);
+    border-radius: inherit;
+    transform-origin: 0;
+    transition: all var(--mi-duration-base) var(--mi-ease-out);
+
+    &--inactive {
+      background: var(--mi-progress-inactive-color);
+    }
+  }
+
+  &__pivot {
+    position: absolute;
+    top: 50%;
+    box-sizing: border-box;
+    min-width: 3.6em;
+    padding: var(--mi-progress-pivot-padding);
+    color: var(--mi-progress-pivot-text-color);
+    font-size: var(--mi-progress-pivot-font-size);
+    line-height: var(--mi-progress-pivot-line-height);
+    text-align: center;
+    word-break: keep-all;
+    background: var(--mi-progress-pivot-background);
+    border-radius: 1em;
+    transition: all var(--mi-duration-base) var(--mi-ease-out);
+
+    &--inactive {
+      background: var(--mi-progress-inactive-color);
+    }
+  }
+}

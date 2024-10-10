@@ -1,0 +1,98 @@
+:root,
+:host {
+  --mi-divider-margin: var(--mi-padding-md) 0;
+  --mi-divider-vertical-margin: 0 var(--mi-padding-xs);
+  --mi-divider-text-color: var(--mi-text-color-2);
+  --mi-divider-font-size: var(--mi-font-size-md);
+  --mi-divider-line-height: 24px;
+  --mi-divider-border-color: var(--mi-border-color);
+  --mi-divider-content-padding: var(--mi-padding-md);
+  --mi-divider-content-left-width: 10%;
+  --mi-divider-content-right-width: 10%;
+}
+
+.mi-divider {
+  display: flex;
+  align-items: center;
+  margin: var(--mi-divider-margin);
+  color: var(--mi-divider-text-color);
+  font-size: var(--mi-divider-font-size);
+  line-height: var(--mi-divider-line-height);
+  border-color: var(--mi-divider-border-color);
+  border-style: solid;
+  border-width: 0;
+
+  &::before,
+  &::after {
+    display: block;
+    flex: 1;
+    box-sizing: border-box;
+    height: 1px;
+    border-color: inherit;
+    border-style: inherit;
+    border-width: var(--mi-border-width) 0 0;
+  }
+
+  &::before {
+    content: '';
+  }
+
+  &--hairline {
+    &::before,
+    &::after {
+      transform: scaleY(0.5);
+    }
+  }
+
+  &--dashed {
+    border-style: dashed;
+  }
+
+  &--content-center,
+  &--content-left,
+  &--content-right {
+    &::before {
+      margin-right: var(--mi-divider-content-padding);
+    }
+
+    &::after {
+      margin-left: var(--mi-divider-content-padding);
+      content: '';
+    }
+  }
+
+  &--content-left {
+    &::before {
+      max-width: var(--mi-divider-content-left-width);
+    }
+  }
+
+  &--content-right {
+    &::after {
+      max-width: var(--mi-divider-content-right-width);
+    }
+  }
+
+  &--vertical {
+    display: inline-block;
+    width: var(--mi-border-width);
+    height: 1em;
+    margin: var(--mi-divider-vertical-margin);
+    vertical-align: middle;
+
+    &::before {
+      height: 100%;
+      border-width: 0 0 0 var(--mi-border-width);
+    }
+
+    &::after {
+      display: none;
+    }
+
+    &.mi-divider--hairline {
+      &::before {
+        transform: scaleX(0.5);
+      }
+    }
+  }
+}

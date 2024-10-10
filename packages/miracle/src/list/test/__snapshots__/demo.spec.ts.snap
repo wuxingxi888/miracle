@@ -1,0 +1,117 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render demo and match snapshot 1`] = `
+<div class="mi-tabs mi-tabs--line">
+  <div class="mi-tabs__wrap">
+    <div
+      role="tablist"
+      class="mi-tabs__nav mi-tabs__nav--line"
+      aria-orientation="horizontal"
+    >
+      <div
+        id="mi-tabs-0"
+        role="tab"
+        class="mi-tab mi-tab--line mi-tab--active"
+        tabindex="0"
+        aria-selected="true"
+        aria-controls="mi-tab"
+      >
+        <span class="mi-tab__text mi-tab__text--ellipsis">
+          Basic Usage
+        </span>
+      </div>
+      <div
+        id="mi-tabs-1"
+        role="tab"
+        class="mi-tab mi-tab--line"
+        tabindex="-1"
+        aria-selected="false"
+        aria-controls="mi-tab"
+      >
+        <span class="mi-tab__text mi-tab__text--ellipsis">
+          Error Info
+        </span>
+      </div>
+      <div
+        id="mi-tabs-2"
+        role="tab"
+        class="mi-tab mi-tab--line"
+        tabindex="-1"
+        aria-selected="false"
+        aria-controls="mi-tab"
+      >
+        <span class="mi-tab__text mi-tab__text--ellipsis">
+          PullRefresh
+        </span>
+      </div>
+      <div
+        class="mi-tabs__line"
+        style="transform: translateX(50px) translateX(-50%);"
+      >
+      </div>
+    </div>
+  </div>
+  <div class="mi-tabs__content">
+    <div
+      id="mi-tab"
+      role="tabpanel"
+      class="mi-tab__panel"
+      tabindex="0"
+      aria-labelledby="mi-tabs-0"
+      style
+    >
+      <div
+        role="feed"
+        class="mi-list"
+        aria-busy="true"
+      >
+        <div class="mi-list__loading">
+          <div
+            class="mi-loading mi-loading--circular mi-list__loading-icon"
+            aria-live="polite"
+            aria-busy="true"
+          >
+            <span class="mi-loading__spinner mi-loading__spinner--circular">
+              <svg
+                class="mi-loading__circular"
+                viewbox="25 25 50 50"
+              >
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="20"
+                  fill="none"
+                >
+                </circle>
+              </svg>
+            </span>
+            <span class="mi-loading__text">
+              Loading...
+            </span>
+          </div>
+        </div>
+        <div class="mi-list__placeholder">
+        </div>
+      </div>
+    </div>
+    <div
+      id="mi-tab"
+      role="tabpanel"
+      class="mi-tab__panel"
+      tabindex="-1"
+      aria-labelledby="mi-tabs-1"
+      style="display: none;"
+    >
+    </div>
+    <div
+      id="mi-tab"
+      role="tabpanel"
+      class="mi-tab__panel"
+      tabindex="-1"
+      aria-labelledby="mi-tabs-2"
+      style="display: none;"
+    >
+    </div>
+  </div>
+</div>
+`;
