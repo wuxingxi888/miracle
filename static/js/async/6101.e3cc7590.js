@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk=self.webpackChunk||[]).push([["6101"],{5202:function(e,u,n){n.r(u),n.d(u,{default:()=>s});var a=n("6448");let l=(0,a.aZ)({__name:"index",setup:e=>(e,u)=>((0,a.wg)(),(0,a.iD)("div",null,"demo编写中。。。"))}),s=l}}]);
