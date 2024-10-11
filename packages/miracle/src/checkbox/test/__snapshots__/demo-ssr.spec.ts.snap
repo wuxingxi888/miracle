@@ -1,0 +1,738 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render demo and match snapshot 1`] = `
+<!--[-->
+<div>
+  <!--[-->
+  <div
+    role="checkbox"
+    class="mi-checkbox"
+    tabindex="0"
+    aria-checked="true"
+  >
+    <!--[-->
+    <div
+      class="mi-checkbox__icon mi-checkbox__icon--round mi-checkbox__icon--checked"
+      style
+    >
+      <i
+        class="mi-badge__wrapper mi-icon mi-icon-success"
+        style
+      >
+        <!--[-->
+      </i>
+    </div>
+    <span class="mi-checkbox__label">
+      <!--[-->
+      Checkbox
+    </span>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div
+    role="checkbox"
+    class="mi-checkbox mi-checkbox--disabled"
+    aria-checked="false"
+  >
+    <!--[-->
+    <div
+      class="mi-checkbox__icon mi-checkbox__icon--round mi-checkbox__icon--disabled"
+      style
+    >
+      <i
+        class="mi-badge__wrapper mi-icon mi-icon-success"
+        style
+      >
+        <!--[-->
+      </i>
+    </div>
+    <span class="mi-checkbox__label mi-checkbox__label--disabled">
+      <!--[-->
+      Checkbox
+    </span>
+  </div>
+  <div
+    role="checkbox"
+    class="mi-checkbox mi-checkbox--disabled"
+    aria-checked="true"
+  >
+    <!--[-->
+    <div
+      class="mi-checkbox__icon mi-checkbox__icon--round mi-checkbox__icon--disabled mi-checkbox__icon--checked"
+      style
+    >
+      <i
+        class="mi-badge__wrapper mi-icon mi-icon-success"
+        style
+      >
+        <!--[-->
+      </i>
+    </div>
+    <span class="mi-checkbox__label mi-checkbox__label--disabled">
+      <!--[-->
+      Checkbox
+    </span>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div class="mi-checkbox-group">
+    <!--[-->
+    <div
+      role="checkbox"
+      class="mi-checkbox"
+      tabindex="0"
+      aria-checked="true"
+    >
+      <!--[-->
+      <div
+        class="mi-checkbox__icon mi-checkbox__icon--square mi-checkbox__icon--checked"
+        style
+      >
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-success"
+          style
+        >
+          <!--[-->
+        </i>
+      </div>
+      <span class="mi-checkbox__label">
+        <!--[-->
+        Custom Shape a
+      </span>
+    </div>
+    <div
+      role="checkbox"
+      class="mi-checkbox"
+      tabindex="0"
+      aria-checked="true"
+    >
+      <!--[-->
+      <div
+        class="mi-checkbox__icon mi-checkbox__icon--square mi-checkbox__icon--checked"
+        style
+      >
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-success"
+          style
+        >
+          <!--[-->
+        </i>
+      </div>
+      <span class="mi-checkbox__label">
+        <!--[-->
+        Custom Shape b
+      </span>
+    </div>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div
+    role="checkbox"
+    class="mi-checkbox"
+    tabindex="0"
+    aria-checked="true"
+  >
+    <!--[-->
+    <div
+      class="mi-checkbox__icon mi-checkbox__icon--round mi-checkbox__icon--checked"
+      style
+    >
+      <i
+        class="mi-badge__wrapper mi-icon mi-icon-success"
+        style="border-color:#ee0a24;background-color:#ee0a24;"
+      >
+        <!--[-->
+      </i>
+    </div>
+    <span class="mi-checkbox__label">
+      <!--[-->
+      Custom Color
+    </span>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div
+    role="checkbox"
+    class="mi-checkbox"
+    tabindex="0"
+    aria-checked="true"
+  >
+    <!--[-->
+    <div
+      class="mi-checkbox__icon mi-checkbox__icon--round mi-checkbox__icon--checked"
+      style="font-size:24px;"
+    >
+      <i
+        class="mi-badge__wrapper mi-icon mi-icon-success"
+        style
+      >
+        <!--[-->
+      </i>
+    </div>
+    <span class="mi-checkbox__label">
+      <!--[-->
+      Custom Icon Size
+    </span>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div
+    role="checkbox"
+    class="mi-checkbox"
+    tabindex="0"
+    aria-checked="true"
+  >
+    <!--[-->
+    <div
+      class="mi-checkbox__icon mi-checkbox__icon--round mi-checkbox__icon--checked"
+      style
+    >
+      <!--[-->
+      <img src="https://fastly.jsdelivr.net/npm/@vant/assets/user-active.png">
+    </div>
+    <span class="mi-checkbox__label">
+      <!--[-->
+      Custom Icon
+    </span>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div
+    role="checkbox"
+    class="mi-checkbox"
+    tabindex="0"
+    aria-checked="false"
+  >
+    <!--[-->
+    <span class="mi-checkbox__label mi-checkbox__label--left">
+      <!--[-->
+      Left Label
+    </span>
+    <div
+      class="mi-checkbox__icon mi-checkbox__icon--round"
+      style
+    >
+      <i
+        class="mi-badge__wrapper mi-icon mi-icon-success"
+        style
+      >
+        <!--[-->
+      </i>
+    </div>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div
+    role="checkbox"
+    class="mi-checkbox mi-checkbox--label-disabled"
+    tabindex="0"
+    aria-checked="true"
+  >
+    <!--[-->
+    <div
+      class="mi-checkbox__icon mi-checkbox__icon--round mi-checkbox__icon--checked"
+      style
+    >
+      <i
+        class="mi-badge__wrapper mi-icon mi-icon-success"
+        style
+      >
+        <!--[-->
+      </i>
+    </div>
+    <span class="mi-checkbox__label">
+      <!--[-->
+      Checkbox
+    </span>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div class="mi-checkbox-group">
+    <!--[-->
+    <div
+      role="checkbox"
+      class="mi-checkbox"
+      tabindex="0"
+      aria-checked="true"
+    >
+      <!--[-->
+      <div
+        class="mi-checkbox__icon mi-checkbox__icon--round mi-checkbox__icon--checked"
+        style
+      >
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-success"
+          style
+        >
+          <!--[-->
+        </i>
+      </div>
+      <span class="mi-checkbox__label">
+        <!--[-->
+        Checkbox a
+      </span>
+    </div>
+    <div
+      role="checkbox"
+      class="mi-checkbox"
+      tabindex="0"
+      aria-checked="true"
+    >
+      <!--[-->
+      <div
+        class="mi-checkbox__icon mi-checkbox__icon--round mi-checkbox__icon--checked"
+        style
+      >
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-success"
+          style
+        >
+          <!--[-->
+        </i>
+      </div>
+      <span class="mi-checkbox__label">
+        <!--[-->
+        Checkbox b
+      </span>
+    </div>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div class="mi-checkbox-group mi-checkbox-group--horizontal">
+    <!--[-->
+    <div
+      role="checkbox"
+      class="mi-checkbox mi-checkbox--horizontal"
+      tabindex="0"
+      aria-checked="false"
+    >
+      <!--[-->
+      <div
+        class="mi-checkbox__icon mi-checkbox__icon--round"
+        style
+      >
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-success"
+          style
+        >
+          <!--[-->
+        </i>
+      </div>
+      <span class="mi-checkbox__label">
+        <!--[-->
+        Checkbox a
+      </span>
+    </div>
+    <div
+      role="checkbox"
+      class="mi-checkbox mi-checkbox--horizontal"
+      tabindex="0"
+      aria-checked="false"
+    >
+      <!--[-->
+      <div
+        class="mi-checkbox__icon mi-checkbox__icon--round"
+        style
+      >
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-success"
+          style
+        >
+          <!--[-->
+        </i>
+      </div>
+      <span class="mi-checkbox__label">
+        <!--[-->
+        Checkbox b
+      </span>
+    </div>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div class="mi-checkbox-group">
+    <!--[-->
+    <div
+      role="checkbox"
+      class="mi-checkbox"
+      tabindex="0"
+      aria-checked="false"
+    >
+      <!--[-->
+      <div
+        class="mi-checkbox__icon mi-checkbox__icon--round"
+        style
+      >
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-success"
+          style
+        >
+          <!--[-->
+        </i>
+      </div>
+      <span class="mi-checkbox__label">
+        <!--[-->
+        Checkbox a
+      </span>
+    </div>
+    <div
+      role="checkbox"
+      class="mi-checkbox"
+      tabindex="0"
+      aria-checked="false"
+    >
+      <!--[-->
+      <div
+        class="mi-checkbox__icon mi-checkbox__icon--round"
+        style
+      >
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-success"
+          style
+        >
+          <!--[-->
+        </i>
+      </div>
+      <span class="mi-checkbox__label">
+        <!--[-->
+        Checkbox b
+      </span>
+    </div>
+    <div
+      role="checkbox"
+      class="mi-checkbox"
+      tabindex="0"
+      aria-checked="false"
+    >
+      <!--[-->
+      <div
+        class="mi-checkbox__icon mi-checkbox__icon--round"
+        style
+      >
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-success"
+          style
+        >
+          <!--[-->
+        </i>
+      </div>
+      <span class="mi-checkbox__label">
+        <!--[-->
+        Checkbox c
+      </span>
+    </div>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div class="mi-checkbox-group">
+    <!--[-->
+    <div
+      role="checkbox"
+      class="mi-checkbox"
+      tabindex="0"
+      aria-checked="false"
+    >
+      <!--[-->
+      <div
+        class="mi-checkbox__icon mi-checkbox__icon--round"
+        style
+      >
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-success"
+          style
+        >
+          <!--[-->
+        </i>
+      </div>
+      <span class="mi-checkbox__label">
+        <!--[-->
+        Checkbox a
+      </span>
+    </div>
+    <div
+      role="checkbox"
+      class="mi-checkbox"
+      tabindex="0"
+      aria-checked="false"
+    >
+      <!--[-->
+      <div
+        class="mi-checkbox__icon mi-checkbox__icon--round"
+        style
+      >
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-success"
+          style
+        >
+          <!--[-->
+        </i>
+      </div>
+      <span class="mi-checkbox__label">
+        <!--[-->
+        Checkbox b
+      </span>
+    </div>
+    <div
+      role="checkbox"
+      class="mi-checkbox"
+      tabindex="0"
+      aria-checked="false"
+    >
+      <!--[-->
+      <div
+        class="mi-checkbox__icon mi-checkbox__icon--round"
+        style
+      >
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-success"
+          style
+        >
+          <!--[-->
+        </i>
+      </div>
+      <span class="mi-checkbox__label">
+        <!--[-->
+        Checkbox c
+      </span>
+    </div>
+  </div>
+  <div class="demo-checkbox-buttons">
+    <button
+      type="button"
+      class="mi-button mi-button--primary mi-button--normal"
+      style
+    >
+      <div class="mi-button__content">
+        <span class="mi-button__text">
+          <!--[-->
+          Check All
+        </span>
+      </div>
+    </button>
+    <button
+      type="button"
+      class="mi-button mi-button--primary mi-button--normal"
+      style
+    >
+      <div class="mi-button__content">
+        <span class="mi-button__text">
+          <!--[-->
+          Inverse
+        </span>
+      </div>
+    </button>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div class="mi-checkbox-group">
+    <!--[-->
+    <div class="mi-cell-group mi-cell-group--inset">
+      <!--[-->
+      <!--[-->
+      <div
+        class="mi-cell mi-cell--clickable"
+        role="button"
+        tabindex="0"
+      >
+        <div
+          class="mi-cell__title"
+          style
+        >
+          <span>
+            Checkbox a
+          </span>
+        </div>
+        <!--[-->
+        <div
+          role="checkbox"
+          class="mi-checkbox"
+          tabindex="0"
+          aria-checked="false"
+        >
+          <!--[-->
+          <div
+            class="mi-checkbox__icon mi-checkbox__icon--round"
+            style
+          >
+            <i
+              class="mi-badge__wrapper mi-icon mi-icon-success"
+              style
+            >
+              <!--[-->
+            </i>
+          </div>
+        </div>
+      </div>
+      <div
+        class="mi-cell mi-cell--clickable"
+        role="button"
+        tabindex="0"
+      >
+        <div
+          class="mi-cell__title"
+          style
+        >
+          <span>
+            Checkbox b
+          </span>
+        </div>
+        <!--[-->
+        <div
+          role="checkbox"
+          class="mi-checkbox"
+          tabindex="0"
+          aria-checked="false"
+        >
+          <!--[-->
+          <div
+            class="mi-checkbox__icon mi-checkbox__icon--round"
+            style
+          >
+            <i
+              class="mi-badge__wrapper mi-icon mi-icon-success"
+              style
+            >
+              <!--[-->
+            </i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div
+    role="checkbox"
+    class="mi-checkbox"
+    tabindex="0"
+    aria-checked="false"
+  >
+    <!--[-->
+    <div
+      class="mi-checkbox__icon mi-checkbox__icon--round mi-checkbox__icon--indeterminate"
+      style
+    >
+      <i
+        class="mi-badge__wrapper mi-icon mi-icon-minus"
+        style
+      >
+        <!--[-->
+      </i>
+    </div>
+    <span class="mi-checkbox__label">
+      <!--[-->
+      Check All
+    </span>
+  </div>
+  <div class="divider">
+  </div>
+  <div class="mi-checkbox-group">
+    <!--[-->
+    <!--[-->
+    <div
+      role="checkbox"
+      class="mi-checkbox"
+      tabindex="0"
+      aria-checked="true"
+    >
+      <!--[-->
+      <div
+        class="mi-checkbox__icon mi-checkbox__icon--round mi-checkbox__icon--checked"
+        style
+      >
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-success"
+          style
+        >
+          <!--[-->
+        </i>
+      </div>
+      <span class="mi-checkbox__label">
+        <!--[-->
+        Checkbox a
+      </span>
+    </div>
+    <div
+      role="checkbox"
+      class="mi-checkbox"
+      tabindex="0"
+      aria-checked="true"
+    >
+      <!--[-->
+      <div
+        class="mi-checkbox__icon mi-checkbox__icon--round mi-checkbox__icon--checked"
+        style
+      >
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-success"
+          style
+        >
+          <!--[-->
+        </i>
+      </div>
+      <span class="mi-checkbox__label">
+        <!--[-->
+        Checkbox b
+      </span>
+    </div>
+    <div
+      role="checkbox"
+      class="mi-checkbox"
+      tabindex="0"
+      aria-checked="false"
+    >
+      <!--[-->
+      <div
+        class="mi-checkbox__icon mi-checkbox__icon--round"
+        style
+      >
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-success"
+          style
+        >
+          <!--[-->
+        </i>
+      </div>
+      <span class="mi-checkbox__label">
+        <!--[-->
+        Checkbox c
+      </span>
+    </div>
+    <div
+      role="checkbox"
+      class="mi-checkbox"
+      tabindex="0"
+      aria-checked="true"
+    >
+      <!--[-->
+      <div
+        class="mi-checkbox__icon mi-checkbox__icon--round mi-checkbox__icon--checked"
+        style
+      >
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-success"
+          style
+        >
+          <!--[-->
+        </i>
+      </div>
+      <span class="mi-checkbox__label">
+        <!--[-->
+        Checkbox d
+      </span>
+    </div>
+  </div>
+</div>
+`;

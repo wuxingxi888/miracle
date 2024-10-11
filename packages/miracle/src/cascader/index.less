@@ -1,0 +1,93 @@
+:root,
+:host {
+  --mi-cascader-header-height: 48px;
+  --mi-cascader-header-padding: 0 var(--mi-padding-md);
+  --mi-cascader-title-font-size: var(--mi-font-size-lg);
+  --mi-cascader-title-line-height: 20px;
+  --mi-cascader-close-icon-size: 22px;
+  --mi-cascader-close-icon-color: var(--mi-gray-5);
+  --mi-cascader-selected-icon-size: 18px;
+  --mi-cascader-tabs-height: 48px;
+  --mi-cascader-active-color: var(--mi-primary-color);
+  --mi-cascader-options-height: 384px;
+  --mi-cascader-option-disabled-color: var(--mi-text-color-3);
+  --mi-cascader-tab-color: var(--mi-text-color);
+  --mi-cascader-unselected-tab-color: var(--mi-text-color-2);
+}
+
+.mi-cascader {
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--mi-cascader-header-height);
+    padding: var(--mi-cascader-header-padding);
+  }
+
+  &__title {
+    font-weight: var(--mi-font-bold);
+    font-size: var(--mi-cascader-title-font-size);
+    line-height: var(--mi-cascader-title-line-height);
+  }
+
+  &__close-icon {
+    color: var(--mi-cascader-close-icon-color);
+    font-size: var(--mi-cascader-close-icon-size);
+  }
+
+  &__tabs {
+    &.mi-tabs--line .mi-tabs__wrap {
+      height: var(--mi-cascader-tabs-height);
+    }
+  }
+
+  &__tab {
+    color: var(--mi-cascader-tab-color);
+    font-weight: var(--mi-font-bold);
+
+    &--unselected {
+      color: var(--mi-cascader-unselected-tab-color);
+      font-weight: normal;
+    }
+  }
+
+  &__option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px var(--mi-padding-md);
+    font-size: var(--mi-font-size-md);
+    line-height: var(--mi-line-height-md);
+    cursor: pointer;
+
+    &:active {
+      background-color: var(--mi-active-color);
+    }
+
+    &--selected {
+      color: var(--mi-cascader-active-color);
+      font-weight: var(--mi-font-bold);
+    }
+
+    &--disabled {
+      color: var(--mi-cascader-option-disabled-color);
+      cursor: not-allowed;
+
+      &:active {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &__selected-icon {
+    font-size: var(--mi-cascader-selected-icon-size);
+  }
+
+  &__options {
+    box-sizing: border-box;
+    height: var(--mi-cascader-options-height);
+    padding-top: 6px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}

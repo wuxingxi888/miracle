@@ -1,0 +1,234 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render colon when using colon prop 1`] = `
+<form class="mi-form">
+  <div class="mi-cell mi-field">
+    <div class="mi-cell__title mi-field__label">
+      <label
+        id="mi-field-label"
+        for="mi-field-input"
+      >
+        Label:
+      </label>
+    </div>
+    <div class="mi-cell__value mi-field__value">
+      <div class="mi-field__body">
+        <input
+          type="text"
+          id="mi-field-input"
+          class="mi-field__control"
+          aria-labelledby="mi-field-label"
+        >
+      </div>
+    </div>
+  </div>
+  <div class="mi-cell mi-field">
+    <div class="mi-cell__title mi-field__label">
+      Custom Label:
+    </div>
+    <div class="mi-cell__value mi-field__value">
+      <div class="mi-field__body">
+        <input
+          type="text"
+          id="mi-field-input"
+          class="mi-field__control"
+        >
+      </div>
+    </div>
+  </div>
+</form>
+`;
+
+exports[`should render error-message-align prop correctly 1`] = `
+<form class="mi-form">
+  <div class="mi-cell mi-field">
+    <div class="mi-cell__value mi-field__value">
+      <div class="mi-field__body">
+        <input
+          type="text"
+          id="mi-field-input"
+          class="mi-field__control"
+        >
+      </div>
+      <div class="mi-field__error-message mi-field__error-message--right">
+        Error
+      </div>
+    </div>
+  </div>
+</form>
+`;
+
+exports[`should render input-align prop correctly 1`] = `
+<form class="mi-form">
+  <div class="mi-cell mi-field">
+    <div class="mi-cell__value mi-field__value">
+      <div class="mi-field__body">
+        <input
+          type="text"
+          id="mi-field-input"
+          class="mi-field__control mi-field__control--right"
+        >
+      </div>
+    </div>
+  </div>
+  <div class="mi-cell mi-field">
+    <div class="mi-cell__value mi-field__value">
+      <div class="mi-field__body">
+        <div class="mi-field__control mi-field__control--right mi-field__control--custom">
+          <div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+`;
+
+exports[`should render label-align prop correctly 1`] = `
+<form class="mi-form">
+  <div class="mi-cell mi-field mi-field--label-right">
+    <div class="mi-cell__title mi-field__label mi-field__label--right">
+      <label
+        id="mi-field-label"
+        for="mi-field-input"
+      >
+        Label
+      </label>
+    </div>
+    <div class="mi-cell__value mi-field__value">
+      <div class="mi-field__body">
+        <input
+          type="text"
+          id="mi-field-input"
+          class="mi-field__control"
+          aria-labelledby="mi-field-label"
+        >
+      </div>
+    </div>
+  </div>
+  <div class="mi-cell mi-field mi-field--label-center">
+    <div class="mi-cell__title mi-field__label mi-field__label--center">
+      <label
+        id="mi-field-label"
+        for="mi-field-input"
+      >
+        Label
+      </label>
+    </div>
+    <div class="mi-cell__value mi-field__value">
+      <div class="mi-field__body">
+        <input
+          type="text"
+          id="mi-field-input"
+          class="mi-field__control"
+          aria-labelledby="mi-field-label"
+        >
+      </div>
+    </div>
+  </div>
+</form>
+`;
+
+exports[`should render label-width prop correctly 1`] = `
+<form class="mi-form">
+  <div class="mi-cell mi-field">
+    <div
+      class="mi-cell__title mi-field__label"
+      style="width: 5rem;"
+    >
+      <label
+        id="mi-field-label"
+        for="mi-field-input"
+      >
+        Label
+      </label>
+    </div>
+    <div class="mi-cell__value mi-field__value">
+      <div class="mi-field__body">
+        <input
+          type="text"
+          id="mi-field-input"
+          class="mi-field__control"
+          aria-labelledby="mi-field-label"
+        >
+      </div>
+    </div>
+  </div>
+  <div class="mi-cell mi-field">
+    <div
+      class="mi-cell__title mi-field__label"
+      style="width: 10vw;"
+    >
+      <label
+        id="mi-field-label"
+        for="mi-field-input"
+      >
+        Label
+      </label>
+    </div>
+    <div class="mi-cell__value mi-field__value">
+      <div class="mi-field__body">
+        <input
+          type="text"
+          id="mi-field-input"
+          class="mi-field__control"
+          aria-labelledby="mi-field-label"
+        >
+      </div>
+    </div>
+  </div>
+  <div class="mi-cell mi-field mi-field--label-top">
+    <div class="mi-cell__title mi-field__label mi-field__label--top">
+      <label
+        id="mi-field-label"
+        for="mi-field-input"
+        style="width: 10vw;"
+      >
+        Label
+      </label>
+    </div>
+    <div class="mi-cell__value mi-field__value">
+      <div class="mi-field__body">
+        <input
+          type="text"
+          id="mi-field-input"
+          class="mi-field__control"
+          aria-labelledby="mi-field-label"
+        >
+      </div>
+    </div>
+  </div>
+</form>
+`;
+
+exports[`should validate first field when using validate-first prop 1`] = `
+<form class="mi-form">
+  <div class="mi-cell mi-field">
+    <div class="mi-cell__value mi-field__value">
+      <div class="mi-field__body">
+        <input
+          type="text"
+          id="mi-field-input"
+          name="A"
+          class="mi-field__control"
+        >
+      </div>
+      <div class="mi-field__error-message">
+        A failed
+      </div>
+    </div>
+  </div>
+  <div class="mi-cell mi-field">
+    <div class="mi-cell__value mi-field__value">
+      <div class="mi-field__body">
+        <input
+          type="text"
+          id="mi-field-input"
+          name="B"
+          class="mi-field__control"
+        >
+      </div>
+    </div>
+  </div>
+</form>
+`;

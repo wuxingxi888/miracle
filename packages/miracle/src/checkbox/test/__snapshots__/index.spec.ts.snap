@@ -1,0 +1,24 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should adjust label position when using label-position prop 1`] = `
+<div
+  role="checkbox"
+  class="mi-checkbox"
+  tabindex="0"
+  aria-checked="false"
+>
+  <span class="mi-checkbox__label mi-checkbox__label--left">
+    Label
+  </span>
+  <div class="mi-checkbox__icon mi-checkbox__icon--round">
+    <i class="mi-badge__wrapper mi-icon mi-icon-success">
+    </i>
+  </div>
+</div>
+`;
+
+exports[`should render icon slot correctly 1`] = `
+<div class="mi-checkbox__icon mi-checkbox__icon--round">
+  checked: false, disabled: false
+</div>
+`;

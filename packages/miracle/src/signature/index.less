@@ -1,0 +1,38 @@
+:root,
+:host {
+  --mi-signature-padding: var(--mi-padding-xs);
+  --mi-signature-content-height: 200px;
+  --mi-signature-content-background: var(--mi-background-2);
+  --mi-signature-content-border: 1px dotted #dadada;
+}
+
+.mi-signature {
+  padding: var(--mi-signature-padding);
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--mi-signature-content-height);
+    background-color: var(--mi-signature-content-background);
+    border: var(--mi-signature-content-border);
+    border-radius: var(--mi-radius-lg);
+    overflow: hidden;
+
+    canvas {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+
+    .mi-button {
+      padding: 0 var(--mi-padding-md);
+      margin-top: var(--mi-padding-xs);
+      margin-left: var(--mi-padding-xs);
+    }
+  }
+}

@@ -1,0 +1,223 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render demo and match snapshot 1`] = `
+<!--[-->
+<div>
+  <!--[-->
+  <div
+    class="mi-search"
+    style
+  >
+    <div class="mi-search__content mi-search__content--square">
+      <div class="mi-cell mi-cell--borderless mi-field mi-search__field">
+        <!--[-->
+        <div class="mi-field__left-icon">
+          <i
+            class="mi-badge__wrapper mi-icon mi-icon-search"
+            style
+          >
+            <!--[-->
+          </i>
+        </div>
+        <div class="mi-cell__value mi-field__value">
+          <!--[-->
+          <div class="mi-field__body">
+            <input
+              type="search"
+              id="mi-search-input"
+              class="mi-field__control"
+              placeholder="Placeholder"
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <form action="/">
+    <div
+      class="mi-search mi-search--show-action"
+      style
+    >
+      <div class="mi-search__content mi-search__content--square">
+        <div class="mi-cell mi-cell--borderless mi-field mi-search__field">
+          <!--[-->
+          <div class="mi-field__left-icon">
+            <i
+              class="mi-badge__wrapper mi-icon mi-icon-search"
+              style
+            >
+              <!--[-->
+            </i>
+          </div>
+          <div class="mi-cell__value mi-field__value">
+            <!--[-->
+            <div class="mi-field__body">
+              <input
+                type="search"
+                id="mi-search-input"
+                class="mi-field__control"
+                placeholder="Placeholder"
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="mi-search__action"
+        role="button"
+        tabindex="0"
+      >
+        Cancel
+      </div>
+    </div>
+  </form>
+</div>
+<div>
+  <!--[-->
+  <div
+    class="mi-search"
+    style
+  >
+    <div class="mi-search__content mi-search__content--square">
+      <div class="mi-cell mi-cell--borderless mi-field mi-search__field">
+        <!--[-->
+        <div class="mi-field__left-icon">
+          <i
+            class="mi-badge__wrapper mi-icon mi-icon-search"
+            style
+          >
+            <!--[-->
+          </i>
+        </div>
+        <div class="mi-cell__value mi-field__value">
+          <!--[-->
+          <div class="mi-field__body">
+            <input
+              type="search"
+              id="mi-search-input"
+              class="mi-field__control mi-field__control--center"
+              placeholder="Placeholder"
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div
+    class="mi-search"
+    style
+  >
+    <div class="mi-search__content mi-search__content--square">
+      <div class="mi-cell mi-cell--borderless mi-field mi-field--disabled mi-search__field">
+        <!--[-->
+        <div class="mi-field__left-icon">
+          <i
+            class="mi-badge__wrapper mi-icon mi-icon-search"
+            style
+          >
+            <!--[-->
+          </i>
+        </div>
+        <div class="mi-cell__value mi-field__value">
+          <!--[-->
+          <div class="mi-field__body">
+            <input
+              type="search"
+              id="mi-search-input"
+              class="mi-field__control"
+              disabled
+              placeholder="Placeholder"
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div
+    class="mi-search"
+    style="background:#4fc08d;"
+  >
+    <div class="mi-search__content mi-search__content--round">
+      <div class="mi-cell mi-cell--borderless mi-field mi-search__field">
+        <!--[-->
+        <div class="mi-field__left-icon">
+          <i
+            class="mi-badge__wrapper mi-icon mi-icon-search"
+            style
+          >
+            <!--[-->
+          </i>
+        </div>
+        <div class="mi-cell__value mi-field__value">
+          <!--[-->
+          <div class="mi-field__body">
+            <input
+              type="search"
+              id="mi-search-input"
+              class="mi-field__control"
+              placeholder="Placeholder"
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div
+    class="mi-search mi-search--show-action"
+    style
+  >
+    <div class="mi-search__content mi-search__content--square">
+      <label
+        class="mi-search__label"
+        for="mi-search-input"
+      >
+        Address
+      </label>
+      <div class="mi-cell mi-cell--borderless mi-field mi-search__field">
+        <!--[-->
+        <div class="mi-field__left-icon">
+          <i
+            class="mi-badge__wrapper mi-icon mi-icon-search"
+            style
+          >
+            <!--[-->
+          </i>
+        </div>
+        <div class="mi-cell__value mi-field__value">
+          <!--[-->
+          <div class="mi-field__body">
+            <input
+              type="search"
+              id="mi-search-input"
+              class="mi-field__control"
+              placeholder="Placeholder"
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="mi-search__action"
+      role="button"
+      tabindex="0"
+    >
+      <!--[-->
+      <div>
+        Search
+      </div>
+    </div>
+  </div>
+</div>
+`;

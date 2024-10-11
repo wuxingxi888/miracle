@@ -1,0 +1,145 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render demo and match snapshot 1`] = `
+<!--[-->
+<div>
+  <!--[-->
+  <div class="mi-signature">
+    <div class="mi-signature__content">
+      <canvas>
+      </canvas>
+    </div>
+    <div class="mi-signature__footer">
+      <button
+        type="button"
+        class="mi-button mi-button--default mi-button--small"
+        style
+      >
+        <div class="mi-button__content">
+          <span class="mi-button__text">
+            <!--[-->
+            Clear
+          </span>
+        </div>
+      </button>
+      <button
+        type="button"
+        class="mi-button mi-button--primary mi-button--small"
+        style
+      >
+        <div class="mi-button__content">
+          <span class="mi-button__text">
+            <!--[-->
+            Confirm
+          </span>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div class="mi-signature">
+    <div class="mi-signature__content">
+      <canvas>
+      </canvas>
+    </div>
+    <div class="mi-signature__footer">
+      <button
+        type="button"
+        class="mi-button mi-button--default mi-button--small"
+        style
+      >
+        <div class="mi-button__content">
+          <span class="mi-button__text">
+            <!--[-->
+            Clear
+          </span>
+        </div>
+      </button>
+      <button
+        type="button"
+        class="mi-button mi-button--primary mi-button--small"
+        style
+      >
+        <div class="mi-button__content">
+          <span class="mi-button__text">
+            <!--[-->
+            Confirm
+          </span>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div class="mi-signature">
+    <div class="mi-signature__content">
+      <canvas>
+      </canvas>
+    </div>
+    <div class="mi-signature__footer">
+      <button
+        type="button"
+        class="mi-button mi-button--default mi-button--small"
+        style
+      >
+        <div class="mi-button__content">
+          <span class="mi-button__text">
+            <!--[-->
+            Clear
+          </span>
+        </div>
+      </button>
+      <button
+        type="button"
+        class="mi-button mi-button--primary mi-button--small"
+        style
+      >
+        <div class="mi-button__content">
+          <span class="mi-button__text">
+            <!--[-->
+            Confirm
+          </span>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div class="mi-signature">
+    <div class="mi-signature__content">
+      <canvas>
+      </canvas>
+    </div>
+    <div class="mi-signature__footer">
+      <button
+        type="button"
+        class="mi-button mi-button--default mi-button--small"
+        style
+      >
+        <div class="mi-button__content">
+          <span class="mi-button__text">
+            <!--[-->
+            Clear
+          </span>
+        </div>
+      </button>
+      <button
+        type="button"
+        class="mi-button mi-button--primary mi-button--small"
+        style
+      >
+        <div class="mi-button__content">
+          <span class="mi-button__text">
+            <!--[-->
+            Confirm
+          </span>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+`;

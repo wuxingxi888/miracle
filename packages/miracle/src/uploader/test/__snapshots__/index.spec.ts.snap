@@ -1,0 +1,267 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`delete preview image 1`] = `
+<div class="mi-uploader">
+  <div class="mi-uploader__wrapper">
+    <div class="mi-uploader__preview">
+      <div
+        class="mi-image mi-uploader__preview-image"
+        style="width: 30px; height: 30px;"
+      >
+        <img
+          src="https://fastly.jsdelivr.net/npm/@vant/assets/cat.jpeg"
+          class="mi-image__img"
+          style="object-fit: cover;"
+        >
+        <div class="mi-image__loading">
+          <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon">
+          </i>
+        </div>
+      </div>
+      <div
+        role="button"
+        class="mi-uploader__preview-delete mi-uploader__preview-delete--shadow"
+        tabindex="0"
+        aria-label="Delete"
+      >
+        <i class="mi-badge__wrapper mi-icon mi-icon-cross mi-uploader__preview-delete-icon">
+        </i>
+      </div>
+    </div>
+    <div
+      class="mi-uploader__upload"
+      style="width: 30px; height: 30px;"
+    >
+      <i class="mi-badge__wrapper mi-icon mi-icon-photograph mi-uploader__upload-icon">
+      </i>
+      <input
+        type="file"
+        class="mi-uploader__input"
+        accept="image/*"
+      >
+    </div>
+  </div>
+</div>
+`;
+
+exports[`disable preview image 1`] = `
+<div class="mi-uploader">
+  <div class="mi-uploader__wrapper">
+    <div class="mi-uploader__upload">
+      <i class="mi-badge__wrapper mi-icon mi-icon-photograph mi-uploader__upload-icon">
+      </i>
+      <input
+        type="file"
+        class="mi-uploader__input"
+        accept="image/*"
+      >
+    </div>
+  </div>
+</div>
+`;
+
+exports[`disable preview image 2`] = `
+<div class="mi-uploader">
+  <div class="mi-uploader__wrapper">
+    <div class="mi-uploader__preview">
+      <div class="mi-uploader__file">
+        <i class="mi-badge__wrapper mi-icon mi-icon-description mi-uploader__file-icon">
+        </i>
+        <div class="mi-uploader__file-name mi-ellipsis">
+          test.jpg
+        </div>
+      </div>
+      <div
+        role="button"
+        class="mi-uploader__preview-delete mi-uploader__preview-delete--shadow"
+        tabindex="0"
+        aria-label="Delete"
+      >
+        <i class="mi-badge__wrapper mi-icon mi-icon-cross mi-uploader__preview-delete-icon">
+        </i>
+      </div>
+    </div>
+    <div class="mi-uploader__upload">
+      <i class="mi-badge__wrapper mi-icon mi-icon-photograph mi-uploader__upload-icon">
+      </i>
+      <input
+        type="file"
+        class="mi-uploader__input"
+        accept="image/*"
+      >
+    </div>
+  </div>
+</div>
+`;
+
+exports[`file message should be reactive 1`] = `
+<div class="mi-uploader">
+  <div class="mi-uploader__wrapper">
+    <div class="mi-uploader__upload">
+      <i class="mi-badge__wrapper mi-icon mi-icon-photograph mi-uploader__upload-icon">
+      </i>
+      <input
+        type="file"
+        class="mi-uploader__input"
+        accept="image/*"
+      >
+    </div>
+  </div>
+</div>
+`;
+
+exports[`image-fit prop 1`] = `
+<div class="mi-uploader">
+  <div class="mi-uploader__wrapper">
+    <div class="mi-uploader__preview">
+      <div class="mi-image mi-uploader__preview-image">
+        <img
+          src="https://fastly.jsdelivr.net/npm/@vant/assets/cat.jpeg"
+          class="mi-image__img"
+          style="object-fit: contain;"
+        >
+        <div class="mi-image__loading">
+          <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon">
+          </i>
+        </div>
+      </div>
+      <div
+        role="button"
+        class="mi-uploader__preview-delete mi-uploader__preview-delete--shadow"
+        tabindex="0"
+        aria-label="Delete"
+      >
+        <i class="mi-badge__wrapper mi-icon mi-icon-cross mi-uploader__preview-delete-icon">
+        </i>
+      </div>
+    </div>
+    <div class="mi-uploader__upload">
+      <i class="mi-badge__wrapper mi-icon mi-icon-photograph mi-uploader__upload-icon">
+      </i>
+      <input
+        type="file"
+        class="mi-uploader__input"
+        accept="image/*"
+      >
+    </div>
+  </div>
+</div>
+`;
+
+exports[`render preview image 1`] = `
+<div class="mi-uploader">
+  <div class="mi-uploader__wrapper">
+    <div class="mi-uploader__preview">
+      <div class="mi-image mi-uploader__preview-image">
+        <img
+          src="https://fastly.jsdelivr.net/npm/@vant/assets/cat.jpeg"
+          class="mi-image__img"
+          style="object-fit: cover;"
+        >
+        <div class="mi-image__loading">
+          <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon">
+          </i>
+        </div>
+      </div>
+      <div
+        role="button"
+        class="mi-uploader__preview-delete mi-uploader__preview-delete--shadow"
+        tabindex="0"
+        aria-label="Delete"
+      >
+        <i class="mi-badge__wrapper mi-icon mi-icon-cross mi-uploader__preview-delete-icon">
+        </i>
+      </div>
+    </div>
+    <div class="mi-uploader__preview">
+      <div class="mi-uploader__file">
+        <i class="mi-badge__wrapper mi-icon mi-icon-description mi-uploader__file-icon">
+        </i>
+        <div class="mi-uploader__file-name mi-ellipsis">
+          https://fastly.jsdelivr.net/npm/@vant/assets/test.pdf
+        </div>
+      </div>
+      <div
+        role="button"
+        class="mi-uploader__preview-delete mi-uploader__preview-delete--shadow"
+        tabindex="0"
+        aria-label="Delete"
+      >
+        <i class="mi-badge__wrapper mi-icon mi-icon-cross mi-uploader__preview-delete-icon">
+        </i>
+      </div>
+    </div>
+    <div class="mi-uploader__preview">
+      <div class="mi-uploader__file">
+        <i class="mi-badge__wrapper mi-icon mi-icon-description mi-uploader__file-icon">
+        </i>
+        <div class="mi-uploader__file-name mi-ellipsis">
+          test.jpg
+        </div>
+      </div>
+      <div
+        role="button"
+        class="mi-uploader__preview-delete mi-uploader__preview-delete--shadow"
+        tabindex="0"
+        aria-label="Delete"
+      >
+        <i class="mi-badge__wrapper mi-icon mi-icon-cross mi-uploader__preview-delete-icon">
+        </i>
+      </div>
+    </div>
+    <div class="mi-uploader__upload">
+      <i class="mi-badge__wrapper mi-icon mi-icon-photograph mi-uploader__upload-icon">
+      </i>
+      <input
+        type="file"
+        class="mi-uploader__input"
+        accept="image/*"
+      >
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should not render upload input when using readonly prop 1`] = `
+<div class="mi-uploader">
+  <div class="mi-uploader__wrapper">
+    <div class="mi-uploader__upload mi-uploader__upload--readonly">
+      <i class="mi-badge__wrapper mi-icon mi-icon-photograph mi-uploader__upload-icon">
+      </i>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should render preview-cover slot correctly 1`] = `
+<div class="mi-uploader__preview-cover">
+  Custom Preview Cover
+</div>
+`;
+
+exports[`should render preview-delete slot correctly 1`] = `
+<div
+  role="button"
+  class="mi-uploader__preview-delete"
+  tabindex="0"
+  aria-label="Delete"
+>
+  Custom Preview Delete
+</div>
+`;
+
+exports[`upload-icon prop 1`] = `
+<div class="mi-uploader">
+  <div class="mi-uploader__wrapper">
+    <div class="mi-uploader__upload">
+      <i class="mi-badge__wrapper mi-icon mi-icon-add mi-uploader__upload-icon">
+      </i>
+      <input
+        type="file"
+        class="mi-uploader__input"
+        accept="image/*"
+      >
+    </div>
+  </div>
+</div>
+`;
