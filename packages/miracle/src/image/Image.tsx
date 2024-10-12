@@ -23,6 +23,7 @@ import {
   numericProp,
   makeStringProp,
   createNamespace,
+  extend,
 } from '../utils';
 
 // Components
@@ -118,11 +119,19 @@ export default defineComponent({
     };
 
     const onEnablePreview = () => {
-      if (props.enablePreview && props.src) {
-        showImagePreview({
-          images: [props.src],
-          closeable: true,
-        });
+      if (error.value || !props.src) {
+        return;
+      }
+
+      if (props.enablePreview) {
+        showImagePreview(
+          extend({
+            images: [props.src],
+            closeable: true,
+            closeOnClickImage: false,
+            closeOnClickOverlay: false,
+          }),
+        );
       }
     };
 

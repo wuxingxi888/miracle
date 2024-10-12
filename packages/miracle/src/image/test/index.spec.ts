@@ -1,12 +1,12 @@
 import 'vitest-canvas-mock';
 import { mount } from '../../../test';
 import { Lazyload } from '../../lazyload';
-import VanImage from '..';
+import MiImage from '..';
 
 const IMAGE_URL = 'https://img.com';
 
 test('should emit load event after image loaded', async () => {
-  const wrapper = mount(VanImage, {
+  const wrapper = mount(MiImage, {
     props: {
       src: IMAGE_URL,
     },
@@ -19,7 +19,7 @@ test('should emit load event after image loaded', async () => {
 });
 
 test('should pass props to img', async () => {
-  const wrapper = mount(VanImage, {
+  const wrapper = mount(MiImage, {
     props: {
       src: IMAGE_URL,
       referrerpolicy: 'no-referrer',
@@ -32,7 +32,7 @@ test('should pass props to img', async () => {
 });
 
 test('should watch src and reset', async () => {
-  const wrapper = mount(VanImage, {
+  const wrapper = mount(MiImage, {
     props: {
       src: IMAGE_URL,
     },
@@ -44,7 +44,7 @@ test('should watch src and reset', async () => {
 });
 
 test('should emit error event when load image failed', () => {
-  const wrapper = mount(VanImage, {
+  const wrapper = mount(MiImage, {
     props: {
       src: IMAGE_URL,
     },
@@ -55,7 +55,7 @@ test('should emit error event when load image failed', () => {
 });
 
 test('should render loading placeholder when using lazy-load prop', () => {
-  const wrapper = mount(VanImage, {
+  const wrapper = mount(MiImage, {
     props: {
       src: IMAGE_URL,
       lazyLoad: true,
@@ -69,7 +69,7 @@ test('should render loading placeholder when using lazy-load prop', () => {
 });
 
 test('should not render loading placeholder when show-loading prop is false', async () => {
-  const wrapper = mount(VanImage);
+  const wrapper = mount(MiImage);
   expect(wrapper.find('.mi-image__loading').exists()).toBeTruthy();
 
   await wrapper.setProps({
@@ -79,7 +79,7 @@ test('should not render loading placeholder when show-loading prop is false', as
 });
 
 test('should not render error placeholder when show-error prop is false', async () => {
-  const wrapper = mount(VanImage, {
+  const wrapper = mount(MiImage, {
     props: {
       src: IMAGE_URL,
     },
@@ -95,7 +95,7 @@ test('should not render error placeholder when show-error prop is false', async 
 });
 
 test('should change error icon when using error-icon prop', async () => {
-  const wrapper = mount(VanImage, {
+  const wrapper = mount(MiImage, {
     props: {
       errorIcon: 'error',
       src: IMAGE_URL,
@@ -107,7 +107,7 @@ test('should change error icon when using error-icon prop', async () => {
 });
 
 test('should change loading icon when using loading-icon prop', () => {
-  const wrapper = mount(VanImage, {
+  const wrapper = mount(MiImage, {
     props: {
       loadingIcon: 'success',
     },
@@ -117,7 +117,7 @@ test('should change loading icon when using loading-icon prop', () => {
 });
 
 test('should apply icon-prefix prop to error-icon', async () => {
-  const wrapper = mount(VanImage, {
+  const wrapper = mount(MiImage, {
     props: {
       errorIcon: 'error',
       iconPrefix: 'my-icon',
@@ -130,7 +130,7 @@ test('should apply icon-prefix prop to error-icon', async () => {
 });
 
 test('should apply icon-prefix prop to loading-icon', () => {
-  const wrapper = mount(VanImage, {
+  const wrapper = mount(MiImage, {
     props: {
       loadingIcon: 'success',
       iconPrefix: 'my-icon',
@@ -141,7 +141,7 @@ test('should apply icon-prefix prop to loading-icon', () => {
 });
 
 test('should change border radius when using border-radius prop', () => {
-  const wrapper = mount(VanImage, {
+  const wrapper = mount(MiImage, {
     props: {
       radius: 3,
     },
@@ -152,7 +152,7 @@ test('should change border radius when using border-radius prop', () => {
 });
 
 test('should change loading icon size when using icon-size prop', () => {
-  const wrapper = mount(VanImage, {
+  const wrapper = mount(MiImage, {
     props: {
       iconSize: '3rem',
       loadingIcon: 'success',
@@ -164,7 +164,7 @@ test('should change loading icon size when using icon-size prop', () => {
 });
 
 test('should change error icon size when using icon-size prop', async () => {
-  const wrapper = mount(VanImage, {
+  const wrapper = mount(MiImage, {
     props: {
       src: IMAGE_URL,
       iconSize: '3rem',
@@ -176,7 +176,7 @@ test('should change error icon size when using icon-size prop', async () => {
 });
 
 test('should render default slot correctly', () => {
-  const wrapper = mount(VanImage, {
+  const wrapper = mount(MiImage, {
     props: {
       src: IMAGE_URL,
     },
@@ -190,7 +190,7 @@ test('should render default slot correctly', () => {
 
 // TODO
 // test('should emit load event when using lazy-load prop and image loaded', (done) => {
-//   const wrapper = mount(VanImage, {
+//   const wrapper = mount(MiImage, {
 //     props: {
 //       lazyLoad: true,
 //       src: IMAGE_URL,
@@ -220,7 +220,7 @@ test('should render default slot correctly', () => {
 // });
 
 // test('lazy-load error event', (done) => {
-//   const wrapper = mount(VanImage, {
+//   const wrapper = mount(MiImage, {
 //     props: {
 //       lazyLoad: true,
 //     },

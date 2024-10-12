@@ -1,7 +1,6 @@
 import { camelize } from './format';
 import type { App, Component } from 'vue';
 
-// https://github.com/wuxingxi888/miracle/issues/8302
 type EventShim = {
   new (...args: any[]): {
     $props: {

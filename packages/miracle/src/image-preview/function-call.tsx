@@ -1,6 +1,6 @@
 import { extend, inBrowser, ComponentInstance } from '../utils';
 import { mountComponent, usePopupState } from '../utils/mount-component';
-import MiImagePreview from './ImagePreview';
+import ImagePreview from './ImagePreview';
 import type { ImagePreviewOptions } from './types';
 
 let instance: ComponentInstance;
@@ -41,7 +41,7 @@ function initInstance() {
       };
 
       return () => (
-        <MiImagePreview {...state} onClosed={onClosed} onUpdate:show={toggle} />
+        <ImagePreview {...state} onClosed={onClosed} onUpdate:show={toggle} />
       );
     },
   }));
