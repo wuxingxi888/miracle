@@ -391,7 +391,6 @@ test('should be displayed correctly whhen the component is reused', async () => 
   ).toEqual(['1992', '03']);
 
   // Test the scenario when a component is assigned multiple times in multiple columns
-  // https://github.com/youzan/vant/issues/11644
   await wrapper.setProps({ modelValue: ['1990', '01'] });
   await wrapper.find('.mi-picker__confirm').trigger('click');
   expect(

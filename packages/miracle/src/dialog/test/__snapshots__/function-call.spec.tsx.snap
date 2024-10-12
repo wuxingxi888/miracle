@@ -1,9 +1,0 @@
-// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
-
-exports[`should allow to render JSX message 1`] = `
-<div class="mi-dialog__message">
-  <div>
-    foo
-  </div>
-</div>
-`;

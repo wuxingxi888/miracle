@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import MiCellGroup from '../../cell-group';
 import MiCell from '..';
-// import VanTag from '../../tag';
 import MiIcon from '../../icon';
 import { useTranslate } from '../../../docs/site';
 

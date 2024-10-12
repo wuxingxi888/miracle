@@ -14,7 +14,7 @@ test('should auto play when only list props', async () => {
             { id: 102, text: '移动端' },
             { id: 103, text: 'Vue' },
             { id: 104, text: '组件库' },
-            { id: 105, text: 'VantUI' },
+            { id: 105, text: 'MiracleUI' },
             { id: 106, text: '666' },
           ]}
         >
@@ -43,7 +43,7 @@ test('should not auto play use play function when use play function', async () =
             { id: 102, text: '移动端' },
             { id: 103, text: 'Vue' },
             { id: 104, text: '组件库' },
-            { id: 105, text: 'VantUI' },
+            { id: 105, text: 'MiracleUI' },
             { id: 106, text: '666' },
           ]}
         >
@@ -91,7 +91,7 @@ test('should emit "update:modelValue" when animationend', async () => {
             { id: 102, text: '移动端' },
             { id: 103, text: 'Vue' },
             { id: 104, text: '组件库' },
-            { id: 105, text: 'VantUI' },
+            { id: 105, text: 'MiracleUI' },
             { id: 106, text: '666' },
           ]}
           onUpdate:modelValue={(value) => this.$emit('change', value)}
@@ -120,7 +120,7 @@ test('should emit "update:modelValue" when animationend', async () => {
       { id: 102, text: '移动端' },
       { id: 103, text: 'Vue' },
       { id: 104, text: '组件库' },
-      { id: 105, text: 'VantUI' },
+      { id: 105, text: 'MiracleUI' },
       { id: 106, text: '666' },
       { id: 107, text: 'Barrage' },
     ],
@@ -138,7 +138,7 @@ test('should emit "update:modelValue" when animationend', async () => {
     { id: 102, text: '移动端' },
     { id: 103, text: 'Vue' },
     { id: 104, text: '组件库' },
-    { id: 105, text: 'VantUI' },
+    { id: 105, text: 'MiracleUI' },
     { id: 106, text: '666' },
     { id: 107, text: 'Barrage' },
   ]);

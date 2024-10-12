@@ -34,7 +34,7 @@
     "directory": "packages/miracle-popperjs"
   },
   "bugs": "https://github.com/wuxingxi888/miracle/issues",
-  "author": "chenjiahan",
+  "author": "TomCat",
   "license": "MIT",
   "devDependencies": {
     "@popperjs/core": "^2.11.8",

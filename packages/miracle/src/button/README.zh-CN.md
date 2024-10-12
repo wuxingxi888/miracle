@@ -85,7 +85,7 @@ app.use(Button);
 <mi-button icon="plus" type="primary">按钮</mi-button>
 <mi-button
   plain
-  icon="https://fastly.jsdelivr.net/npm/@vant/assets/user-active.png"
+  icon="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/logo.png"
   type="primary"
 >
   按钮

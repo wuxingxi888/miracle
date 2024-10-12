@@ -32,7 +32,7 @@ app.use(Watermark);
 
 ```html
 <mi-watermark
-  image="https://fastly.jsdelivr.net/npm/@vant/assets/vant-watermark.png"
+  image="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/miracle-watermark.png"
   opacity="0.2"
 />
 ```
@@ -43,7 +43,7 @@ app.use(Watermark);
 
 ```html
 <mi-watermark
-  image="https://fastly.jsdelivr.net/npm/@vant/assets/vant-watermark.png"
+  image="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/miracle-watermark.png"
   :gap-x="30"
   :gap-y="10"
   opacity="0.2"
@@ -56,7 +56,7 @@ app.use(Watermark);
 
 ```html
 <mi-watermark
-  image="https://fastly.jsdelivr.net/npm/@vant/assets/vant-watermark.png"
+  image="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/miracle-watermark.png"
   rotate="22"
   opacity="0.2"
 />
@@ -68,7 +68,7 @@ app.use(Watermark);
 
 ```html
 <mi-watermark
-  image="https://fastly.jsdelivr.net/npm/@vant/assets/vant-watermark.png"
+  image="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/miracle-watermark.png"
   opacity="0.2"
   :full-page="true"
 />

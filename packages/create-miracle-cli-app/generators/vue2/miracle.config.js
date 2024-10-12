@@ -10,7 +10,7 @@ module.exports = {
   },
   site: {
     title: '<%= name %>',
-    logo: 'https://fastly.jsdelivr.net/npm/@vant/assets/logo.png',
+    logo: 'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/logo.png',
     nav: [
       {
         title: '开发指南',

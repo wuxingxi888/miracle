@@ -2,7 +2,7 @@
 
 ## 设计稿
 
-Vant 图标库托管在 [iconfont.cn](https://iconfont.cn) 上，同时仓库中保留了一份完整的 Sketch 设计稿。
+Miracle 图标库托管在 [iconfont.cn](https://iconfont.cn) 上，同时仓库中保留了一份完整的 Sketch 设计稿。
 
 [在线预览链接](https://iconfont.cn/collections/detail?cid=31945)
 

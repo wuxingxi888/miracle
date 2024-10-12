@@ -1,4 +1,4 @@
-export interface VantResolverOptions {
+export interface MiracleResolverOptions {
   /**
    * Whether to automatically import the corresponding styles of the components.
    *
@@ -7,7 +7,7 @@ export interface VantResolverOptions {
   importStyle?:
     | boolean
     | 'css'
-    /** Compatible with Vant 2.x / 3.x */
+    /** Compatible with Miracle */
     | 'less';
 
   /**
@@ -23,7 +23,10 @@ export interface VantResolverOptions {
   ssr?: boolean;
 }
 
-export type VantImportsOptions = Pick<VantResolverOptions, 'module' | 'ssr'>;
+export type MiracleImportsOptions = Pick<
+  MiracleResolverOptions,
+  'module' | 'ssr'
+>;
 
 /**
  * Button->button; ButtonGroup->button-group
@@ -33,7 +36,7 @@ function kebabCase(key: string) {
   return result.split(' ').join('-').toLowerCase();
 }
 
-function getModuleType(options: VantResolverOptions): string {
+function getModuleType(options: MiracleResolverOptions): string {
   const { ssr, module = 'esm' } = options;
 
   // compatible with the deprecated `ssr` option
@@ -44,7 +47,7 @@ function getModuleType(options: VantResolverOptions): string {
   return module === 'cjs' ? 'lib' : 'es';
 }
 
-function getSideEffects(dirName: string, options: VantResolverOptions) {
+function getSideEffects(dirName: string, options: MiracleResolverOptions) {
   const { importStyle = true } = options;
 
   if (!importStyle) {
@@ -53,9 +56,10 @@ function getSideEffects(dirName: string, options: VantResolverOptions) {
 
   const moduleType = getModuleType(options);
 
-  if (importStyle === 'less') return `vant/${moduleType}/${dirName}/style/less`;
+  if (importStyle === 'less')
+    return `miracle/${moduleType}/${dirName}/style/less`;
 
-  return `vant/${moduleType}/${dirName}/style/index`;
+  return `miracle/${moduleType}/${dirName}/style/index`;
 }
 
 function getAPIMap() {
@@ -97,7 +101,7 @@ function getAPIMap() {
   return apiMap;
 }
 
-export function VantResolver(options: VantResolverOptions = {}) {
+export function MiracleResolver(options: MiracleResolverOptions = {}) {
   const moduleType = getModuleType(options);
   const apiMap = getAPIMap();
 
@@ -105,11 +109,11 @@ export function VantResolver(options: VantResolverOptions = {}) {
     type: 'component' as const,
 
     resolve: (name: string) => {
-      if (name.startsWith('Van')) {
-        const partialName = name.slice(3);
+      if (name.startsWith('Mi')) {
+        const partialName = name.slice(2);
         return {
           name: partialName,
-          from: `vant/${moduleType}`,
+          from: `miracle/${moduleType}`,
           sideEffects: getSideEffects(kebabCase(partialName), options),
         };
       }
@@ -119,7 +123,7 @@ export function VantResolver(options: VantResolverOptions = {}) {
         const partialName = apiMap.get(name)!;
         return {
           name,
-          from: `vant/${moduleType}`,
+          from: `miracle/${moduleType}`,
           sideEffects: getSideEffects(kebabCase(partialName), options),
         };
       }
@@ -127,10 +131,10 @@ export function VantResolver(options: VantResolverOptions = {}) {
   };
 }
 
-export function VantImports(options: VantImportsOptions = {}) {
+export function MiracleImports(options: MiracleImportsOptions = {}) {
   const moduleType = getModuleType(options);
 
   return {
-    [`vant/${moduleType}`]: [...getAPIMap().keys()],
+    [`miracle/${moduleType}`]: [...getAPIMap().keys()],
   };
 }

@@ -35,7 +35,7 @@
     "directory": "packages/miracle-use"
   },
   "bugs": "https://github.com/wuxingxi888/miracle/issues",
-  "author": "chenjiahan",
+  "author": "TomCat",
   "license": "MIT",
   "devDependencies": {
     "esbuild": "^0.23.1",

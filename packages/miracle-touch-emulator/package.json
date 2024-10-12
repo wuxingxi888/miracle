@@ -1,6 +1,6 @@
 {
   "name": "@miracle/touch-emulator",
-  "version": "1.4.0",
+  "version": "0.0.1",
   "description": "Miracle touch emulator",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -18,6 +18,6 @@
     "directory": "packages/miracle-touch-emulator"
   },
   "bugs": "https://github.com/wuxingxi888/miracle/issues",
-  "author": "chenjiahan",
+  "author": "TomCat",
   "license": "MIT"
 }

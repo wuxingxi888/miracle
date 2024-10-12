@@ -1,4 +1,4 @@
-# Vant Icons
+# Miracle Icons
 
 ## Install
 

@@ -104,9 +104,10 @@ export default {
   setup() {
     const active = ref(0);
     const icon = {
-      active: 'https://fastly.jsdelivr.net/npm/@vant/assets/user-active.png',
+      active:
+        'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/home-active.png',
       inactive:
-        'https://fastly.jsdelivr.net/npm/@vant/assets/user-inactive.png',
+        'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/home-inactive.png',
     };
     return {
       icon,

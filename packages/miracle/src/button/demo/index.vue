@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import MiButton from '..';
-// import VanSwipe from '../../swipe';
-// import VanSwipeItem from '../../swipe-item';
+import MiSwipe from '../../swipe';
+import MiSwipeItem from '../../swipe-item';
 import { cdnURL, useTranslate } from '../../../docs/site';
 
 const t = useTranslate({
@@ -135,7 +135,7 @@ const t = useTranslate({
     <mi-button
       :text="t('urlRoute')"
       type="primary"
-      url="https://github.com/vant-ui/vant"
+      url="https://github.com/wuxingxi888/miracle"
     />
     <mi-button :text="t('vueRoute')" type="primary" to="index" />
   </demo-block>
@@ -149,7 +149,7 @@ const t = useTranslate({
     />
   </demo-block>
 
-  <!-- <demo-block :title="t('animatedButton')">
+  <demo-block :title="t('animatedButton')">
     <mi-button type="danger" round>
       <mi-swipe
         vertical
@@ -162,7 +162,7 @@ const t = useTranslate({
         <mi-swipe-item>{{ t('lottery') }}</mi-swipe-item>
       </mi-swipe>
     </mi-button>
-  </demo-block> -->
+  </demo-block>
 </template>
 
 <style lang="less">

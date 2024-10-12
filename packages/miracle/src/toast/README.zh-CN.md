@@ -78,7 +78,7 @@ showToast({
 
 showToast({
   message: '自定义图片',
-  icon: 'https://fastly.jsdelivr.net/npm/@vant/assets/logo.png',
+  icon: 'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/logo.png',
 });
 ```
 

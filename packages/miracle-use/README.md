@@ -1,6 +1,6 @@
-# Vant Use
+# Miracle Use
 
-Built-in composition APIs of Vant.
+Built-in composition APIs of Miracle.
 
 ## Install
 

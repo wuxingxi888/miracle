@@ -110,3 +110,17 @@ export default {
   },
 };
 </script>
+
+<style lang="less">
+@media (max-width: 768px) {
+  .mi-doc-nav,
+  .mi-doc-container {
+    display: none;
+  }
+
+  .mi-doc-simulator {
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+</style>

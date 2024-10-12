@@ -1,5 +1,0 @@
-// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
-
-exports[`should skeleton title works 1`] = `"<h3 class="mi-skeleton-title"></h3>"`;
-
-exports[`should skeleton title works with props 1`] = `"<h3 class="mi-skeleton-title mi-skeleton-title--round" style="width: 200rem;"></h3>"`;

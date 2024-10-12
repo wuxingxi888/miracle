@@ -31,7 +31,7 @@ app.use(Icon);
 你也可以直接在 `name` 属性中传入一个图片 URL 来作为图标。
 
 ```html
-<mi-icon name="https://fastly.jsdelivr.net/npm/@vant/assets/icon-demo.png" />
+<mi-icon name="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/logo.png" />
 ```
 
 ### 徽标提示

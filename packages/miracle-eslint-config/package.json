@@ -17,7 +17,7 @@
     "directory": "packages/miracle-eslint-config"
   },
   "bugs": "https://github.com/wuxingxi888/miracle/issues",
-  "author": "chenjiahan",
+  "author": "TomCat",
   "license": "MIT",
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^6.21.0",

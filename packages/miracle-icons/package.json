@@ -1,6 +1,6 @@
 {
   "name": "@miracle/icons",
-  "version": "3.0.2",
+  "version": "0.0.1",
   "description": "miracle icons",
   "main": "./src/config.js",
   "types": "./src/config.d.ts",

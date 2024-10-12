@@ -35,7 +35,7 @@
     "directory": "packages/miracle-cli"
   },
   "bugs": "https://github.com/wuxingxi888/miracle/issues",
-  "author": "chenjiahan",
+  "author": "TomCat",
   "license": "MIT",
   "devDependencies": {
     "@types/fs-extra": "^11.0.4",

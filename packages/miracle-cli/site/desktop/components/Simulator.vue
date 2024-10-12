@@ -57,15 +57,15 @@ export default {
   background: var(--mi-doc-background-2);
   border-radius: var(--mi-doc-border-radius);
 
-  @media (max-width: 1100px) {
-    right: auto;
-    left: 750px;
-  }
+  // @media (max-width: 1100px) {
+  //   right: auto;
+  //   left: 750px;
+  // }
 
-  @media (min-width: var(--mi-doc-row-max-width)) {
-    right: 50%;
-    margin-right: calc(var(--mi-doc-row-max-width) / 2 * -1 + 24px);
-  }
+  // @media (min-width: var(--mi-doc-row-max-width)) {
+  //   right: 50%;
+  //   margin-right: calc(var(--mi-doc-row-max-width) / 2 * -1 + 24px);
+  // }
 
   &-fixed {
     position: fixed;
