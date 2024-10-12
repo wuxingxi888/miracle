@@ -76,27 +76,27 @@ export type ConfigProviderThemeVars = BaseThemeVars &
   import('../action-bar-button').ActionBarButtonThemeVars &
   import('../action-bar-icon').ActionBarIconThemeVars &
   import('../action-sheet').ActionSheetThemeVars &
-  import('../address-edit').AddressEditThemeVars &
-  import('../address-list').AddressListThemeVars &
+  // import('../address-edit').AddressEditThemeVars &
+  // import('../address-list').AddressListThemeVars &
   import('../back-top').BackTopThemeVars &
   import('../badge').BadgeThemeVars &
   import('../barrage').BarrageThemeVars &
   import('../button').ButtonThemeVars &
   import('../calendar').CalendarThemeVars &
-  import('../card').CardThemeVars &
+  // import('../card').CardThemeVars &
   import('../cascader').CascaderThemeVars &
   import('../cell').CellThemeVars &
   import('../cell-group').CellGroupThemeVars &
   import('../checkbox').CheckboxThemeVars &
   import('../circle').CircleThemeVars &
   import('../collapse-item').CollapseItemThemeVars &
-  import('../contact-card').ContactCardThemeVars &
-  import('../contact-edit').ContactEditThemeVars &
-  import('../contact-list').ContactListThemeVars &
+  // import('../contact-card').ContactCardThemeVars &
+  // import('../contact-edit').ContactEditThemeVars &
+  // import('../contact-list').ContactListThemeVars &
   import('../count-down').CountDownThemeVars &
-  import('../coupon').CouponThemeVars &
-  import('../coupon-cell').CouponCellThemeVars &
-  import('../coupon-list').CouponListThemeVars &
+  // import('../coupon').CouponThemeVars &
+  // import('../coupon-cell').CouponCellThemeVars &
+  // import('../coupon-list').CouponListThemeVars &
   import('../dialog').DialogThemeVars &
   import('../divider').DividerThemeVars &
   import('../dropdown-item').DropdownItemThemeVars &
@@ -140,7 +140,7 @@ export type ConfigProviderThemeVars = BaseThemeVars &
   import('../stepper').StepperThemeVars &
   import('../steps').StepsThemeVars &
   import('../sticky').StickyThemeVars &
-  import('../submit-bar').SubmitBarThemeVars &
+  // import('../submit-bar').SubmitBarThemeVars &
   import('../swipe').SwipeThemeVars &
   import('../switch').SwitchThemeVars &
   import('../tabbar').TabbarThemeVars &
