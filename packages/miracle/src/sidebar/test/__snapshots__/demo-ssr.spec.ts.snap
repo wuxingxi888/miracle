@@ -1,0 +1,232 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render demo and match snapshot 1`] = `
+<div
+  style
+  class="mi-grid"
+>
+  <!--[-->
+  <div
+    class="mi-grid-item"
+    style="flex-basis:50%;"
+  >
+    <div
+      class="mi-grid-item__content mi-grid-item__content--center"
+      style
+    >
+      <!--[-->
+      <h3 class="demo-sidebar-title">
+        Basic Usage
+      </h3>
+      <div
+        role="tablist"
+        class="mi-sidebar"
+      >
+        <!--[-->
+        <div
+          role="tab"
+          class="mi-sidebar-item mi-sidebar-item--select"
+          tabindex="0"
+          aria-selected="true"
+        >
+          <div class="mi-badge__wrapper mi-sidebar-item__text">
+            <!--[-->
+            Title
+          </div>
+        </div>
+        <div
+          role="tab"
+          class="mi-sidebar-item"
+          tabindex="0"
+          aria-selected="false"
+        >
+          <div class="mi-badge__wrapper mi-sidebar-item__text">
+            <!--[-->
+            Title
+          </div>
+        </div>
+        <div
+          role="tab"
+          class="mi-sidebar-item"
+          tabindex="0"
+          aria-selected="false"
+        >
+          <div class="mi-badge__wrapper mi-sidebar-item__text">
+            <!--[-->
+            Title
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="mi-grid-item"
+    style="flex-basis:50%;"
+  >
+    <div
+      class="mi-grid-item__content mi-grid-item__content--center"
+      style
+    >
+      <!--[-->
+      <h3 class="demo-sidebar-title">
+        Show Badge
+      </h3>
+      <div
+        role="tablist"
+        class="mi-sidebar"
+      >
+        <!--[-->
+        <div
+          role="tab"
+          class="mi-sidebar-item mi-sidebar-item--select"
+          tabindex="0"
+          aria-selected="true"
+        >
+          <div class="mi-badge__wrapper mi-sidebar-item__text">
+            <!--[-->
+            Title
+            <div
+              class="mi-badge mi-badge--top-right mi-badge--dot mi-badge--fixed"
+              style
+            >
+            </div>
+          </div>
+        </div>
+        <div
+          role="tab"
+          class="mi-sidebar-item"
+          tabindex="0"
+          aria-selected="false"
+        >
+          <div class="mi-badge__wrapper mi-sidebar-item__text">
+            <!--[-->
+            Title
+            <div
+              class="mi-badge mi-badge--top-right mi-badge--fixed"
+              style
+            >
+              5
+            </div>
+          </div>
+        </div>
+        <div
+          role="tab"
+          class="mi-sidebar-item"
+          tabindex="0"
+          aria-selected="false"
+        >
+          <div class="mi-badge__wrapper mi-sidebar-item__text">
+            <!--[-->
+            Title
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="mi-grid-item"
+    style="flex-basis:50%;"
+  >
+    <div
+      class="mi-grid-item__content mi-grid-item__content--center"
+      style
+    >
+      <!--[-->
+      <h3 class="demo-sidebar-title">
+        Disabled
+      </h3>
+      <div
+        role="tablist"
+        class="mi-sidebar"
+      >
+        <!--[-->
+        <div
+          role="tab"
+          class="mi-sidebar-item mi-sidebar-item--select"
+          tabindex="0"
+          aria-selected="true"
+        >
+          <div class="mi-badge__wrapper mi-sidebar-item__text">
+            <!--[-->
+            Title
+          </div>
+        </div>
+        <div
+          role="tab"
+          class="mi-sidebar-item mi-sidebar-item--disabled"
+          aria-selected="false"
+        >
+          <div class="mi-badge__wrapper mi-sidebar-item__text">
+            <!--[-->
+            Title
+          </div>
+        </div>
+        <div
+          role="tab"
+          class="mi-sidebar-item"
+          tabindex="0"
+          aria-selected="false"
+        >
+          <div class="mi-badge__wrapper mi-sidebar-item__text">
+            <!--[-->
+            Title
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="mi-grid-item"
+    style="flex-basis:50%;"
+  >
+    <div
+      class="mi-grid-item__content mi-grid-item__content--center"
+      style
+    >
+      <!--[-->
+      <h3 class="demo-sidebar-title">
+        Change Event
+      </h3>
+      <div
+        role="tablist"
+        class="mi-sidebar"
+      >
+        <!--[-->
+        <div
+          role="tab"
+          class="mi-sidebar-item mi-sidebar-item--select"
+          tabindex="0"
+          aria-selected="true"
+        >
+          <div class="mi-badge__wrapper mi-sidebar-item__text">
+            <!--[-->
+            Title 1
+          </div>
+        </div>
+        <div
+          role="tab"
+          class="mi-sidebar-item"
+          tabindex="0"
+          aria-selected="false"
+        >
+          <div class="mi-badge__wrapper mi-sidebar-item__text">
+            <!--[-->
+            Title 2
+          </div>
+        </div>
+        <div
+          role="tab"
+          class="mi-sidebar-item"
+          tabindex="0"
+          aria-selected="false"
+        >
+          <div class="mi-badge__wrapper mi-sidebar-item__text">
+            <!--[-->
+            Title 3
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

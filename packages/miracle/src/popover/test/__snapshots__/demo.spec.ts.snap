@@ -1,0 +1,132 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render demo and match snapshot 1`] = `
+<div>
+  <span class="mi-popover__wrapper">
+    <button
+      type="button"
+      class="mi-button mi-button--primary mi-button--normal"
+    >
+      <div class="mi-button__content">
+        <span class="mi-button__text">
+          Light Theme
+        </span>
+      </div>
+    </button>
+  </span>
+  <span class="mi-popover__wrapper">
+    <button
+      type="button"
+      class="mi-button mi-button--primary mi-button--normal"
+    >
+      <div class="mi-button__content">
+        <span class="mi-button__text">
+          Dark Theme
+        </span>
+      </div>
+    </button>
+  </span>
+</div>
+<div>
+  <mi-field
+    is-link
+    readonly
+    name="picker"
+    label="Placement"
+  >
+  </mi-field>
+  <div
+    class="mi-cell mi-cell--clickable"
+    role="button"
+    tabindex="0"
+  >
+    <div class="mi-cell__title">
+      <span>
+        Placement
+      </span>
+    </div>
+    <i class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon">
+    </i>
+  </div>
+</div>
+<div>
+  <span class="mi-popover__wrapper">
+    <button
+      type="button"
+      class="mi-button mi-button--primary mi-button--normal"
+    >
+      <div class="mi-button__content">
+        <span class="mi-button__text">
+          Horizontal
+        </span>
+      </div>
+    </button>
+  </span>
+  <span class="mi-popover__wrapper">
+    <button
+      type="button"
+      class="mi-button mi-button--primary mi-button--normal"
+    >
+      <div class="mi-button__content">
+        <span class="mi-button__text">
+          Vertical
+        </span>
+      </div>
+    </button>
+  </span>
+</div>
+<div>
+  <span class="mi-popover__wrapper">
+    <button
+      type="button"
+      class="mi-button mi-button--primary mi-button--normal"
+    >
+      <div class="mi-button__content">
+        <span class="mi-button__text">
+          Show Icon
+        </span>
+      </div>
+    </button>
+  </span>
+  <span class="mi-popover__wrapper">
+    <button
+      type="button"
+      class="mi-button mi-button--primary mi-button--normal"
+    >
+      <div class="mi-button__content">
+        <span class="mi-button__text">
+          Disable Action
+        </span>
+      </div>
+    </button>
+  </span>
+</div>
+<div>
+  <span class="mi-popover__wrapper">
+    <button
+      type="button"
+      class="mi-button mi-button--primary mi-button--normal"
+    >
+      <div class="mi-button__content">
+        <span class="mi-button__text">
+          Custom Content
+        </span>
+      </div>
+    </button>
+  </span>
+</div>
+<div>
+  <span class="mi-popover__wrapper">
+    <button
+      type="button"
+      class="mi-button mi-button--primary mi-button--normal"
+    >
+      <div class="mi-button__content">
+        <span class="mi-button__text">
+          Uncontrolled
+        </span>
+      </div>
+    </button>
+  </span>
+</div>
+`;

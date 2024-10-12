@@ -12,7 +12,7 @@ import {
   ES_DIR,
   SRC_DIR,
   LIB_DIR,
-  getVantConfig,
+  getMiracleConfig,
   STYLE_DEPS_JSON_FILE,
 } from '../common/constant.js';
 
@@ -88,10 +88,10 @@ export function genComponentStyle(
     delete require.cache[STYLE_DEPS_JSON_FILE];
   }
 
-  const vantConfig = getVantConfig();
+  const miracleConfig = getMiracleConfig();
   const components = getComponents();
   const baseFile = getCssBaseFile();
-  const hasSourceFile = vantConfig.build?.css?.removeSourceFile !== true;
+  const hasSourceFile = miracleConfig.build?.css?.removeSourceFile !== true;
 
   components.forEach((component) => {
     genEntry({

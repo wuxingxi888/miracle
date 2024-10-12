@@ -1,0 +1,533 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render demo and match snapshot 1`] = `
+<div>
+  <div class="mi-dropdown-menu">
+    <div class="mi-dropdown-menu__bar">
+      <div
+        id="mi-dropdown-menu-0"
+        role="button"
+        tabindex="0"
+        class="mi-dropdown-menu__item mi-haptics-feedback"
+      >
+        <span class="mi-dropdown-menu__title">
+          <div class="mi-ellipsis">
+            Option1
+          </div>
+        </span>
+      </div>
+      <div
+        id="mi-dropdown-menu-1"
+        role="button"
+        tabindex="0"
+        class="mi-dropdown-menu__item mi-haptics-feedback"
+      >
+        <span class="mi-dropdown-menu__title">
+          <div class="mi-ellipsis">
+            Option A
+          </div>
+        </span>
+      </div>
+    </div>
+    <div
+      style="top: 0px; display: none;"
+      class="mi-dropdown-item mi-dropdown-item--down"
+    >
+      <transition-stub
+        name="mi-fade"
+        appear="true"
+        persisted="false"
+        css="true"
+        role="button"
+        tabindex="0"
+      >
+      </transition-stub>
+      <transition-stub
+        name="mi-popup-slide-top"
+        appear="false"
+        persisted="false"
+        css="true"
+      >
+      </transition-stub>
+    </div>
+    <div
+      style="top: 0px; display: none;"
+      class="mi-dropdown-item mi-dropdown-item--down"
+    >
+      <transition-stub
+        name="mi-fade"
+        appear="true"
+        persisted="false"
+        css="true"
+        role="button"
+        tabindex="0"
+      >
+      </transition-stub>
+      <transition-stub
+        name="mi-popup-slide-top"
+        appear="false"
+        persisted="false"
+        css="true"
+      >
+      </transition-stub>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="mi-dropdown-menu">
+    <div class="mi-dropdown-menu__bar">
+      <div
+        id="mi-dropdown-menu-0"
+        role="button"
+        tabindex="0"
+        class="mi-dropdown-menu__item mi-haptics-feedback"
+      >
+        <span class="mi-dropdown-menu__title">
+          <div class="mi-ellipsis">
+            Option1
+          </div>
+        </span>
+      </div>
+      <div
+        id="mi-dropdown-menu-1"
+        role="button"
+        tabindex="0"
+        class="mi-dropdown-menu__item mi-haptics-feedback"
+      >
+        <span class="mi-dropdown-menu__title">
+          <div class="mi-ellipsis">
+            Title
+          </div>
+        </span>
+      </div>
+    </div>
+    <div
+      style="top: 0px; display: none;"
+      class="mi-dropdown-item mi-dropdown-item--down"
+    >
+      <transition-stub
+        name="mi-fade"
+        appear="true"
+        persisted="false"
+        css="true"
+        role="button"
+        tabindex="0"
+      >
+      </transition-stub>
+      <transition-stub
+        name="mi-popup-slide-top"
+        appear="false"
+        persisted="false"
+        css="true"
+      >
+      </transition-stub>
+    </div>
+    <div
+      style="top: 0px; display: none;"
+      class="mi-dropdown-item mi-dropdown-item--down"
+    >
+      <transition-stub
+        name="mi-fade"
+        appear="true"
+        persisted="false"
+        css="true"
+        role="button"
+        tabindex="0"
+      >
+      </transition-stub>
+      <transition-stub
+        name="mi-popup-slide-top"
+        appear="false"
+        persisted="false"
+        css="true"
+      >
+      </transition-stub>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="mi-dropdown-menu">
+    <div class="mi-dropdown-menu__bar">
+      <div
+        id="mi-dropdown-menu-0"
+        role="button"
+        tabindex="0"
+        class="mi-dropdown-menu__item mi-haptics-feedback"
+      >
+        <span class="mi-dropdown-menu__title">
+          <div class="mi-ellipsis">
+            Option1
+          </div>
+        </span>
+      </div>
+      <div
+        id="mi-dropdown-menu-1"
+        role="button"
+        tabindex="0"
+        class="mi-dropdown-menu__item mi-haptics-feedback"
+      >
+        <span class="mi-dropdown-menu__title">
+          <div class="mi-ellipsis">
+            Option A
+          </div>
+        </span>
+      </div>
+    </div>
+    <div
+      style="top: 0px; display: none;"
+      class="mi-dropdown-item mi-dropdown-item--down"
+    >
+      <transition-stub
+        name="mi-fade"
+        appear="true"
+        persisted="false"
+        css="true"
+        role="button"
+        tabindex="0"
+      >
+      </transition-stub>
+      <transition-stub
+        name="mi-popup-slide-top"
+        appear="false"
+        persisted="false"
+        css="true"
+      >
+      </transition-stub>
+    </div>
+    <div
+      style="top: 0px; display: none;"
+      class="mi-dropdown-item mi-dropdown-item--down"
+    >
+      <transition-stub
+        name="mi-fade"
+        appear="true"
+        persisted="false"
+        css="true"
+        role="button"
+        tabindex="0"
+      >
+      </transition-stub>
+      <transition-stub
+        name="mi-popup-slide-top"
+        appear="false"
+        persisted="false"
+        css="true"
+      >
+      </transition-stub>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="mi-dropdown-menu">
+    <div class="mi-dropdown-menu__bar mi-dropdown-menu__bar--scrollable">
+      <div
+        id="mi-dropdown-menu-0"
+        role="button"
+        tabindex="0"
+        class="mi-dropdown-menu__item mi-dropdown-menu__item--grow mi-haptics-feedback"
+      >
+        <span class="mi-dropdown-menu__title">
+          <div class="mi-ellipsis">
+            Option1
+          </div>
+        </span>
+      </div>
+      <div
+        id="mi-dropdown-menu-1"
+        role="button"
+        tabindex="0"
+        class="mi-dropdown-menu__item mi-dropdown-menu__item--grow mi-haptics-feedback"
+      >
+        <span class="mi-dropdown-menu__title">
+          <div class="mi-ellipsis">
+            Option A
+          </div>
+        </span>
+      </div>
+      <div
+        id="mi-dropdown-menu-2"
+        role="button"
+        tabindex="0"
+        class="mi-dropdown-menu__item mi-dropdown-menu__item--grow mi-haptics-feedback"
+      >
+        <span class="mi-dropdown-menu__title">
+          <div class="mi-ellipsis">
+            Option A
+          </div>
+        </span>
+      </div>
+      <div
+        id="mi-dropdown-menu-3"
+        role="button"
+        tabindex="0"
+        class="mi-dropdown-menu__item mi-dropdown-menu__item--grow mi-haptics-feedback"
+      >
+        <span class="mi-dropdown-menu__title">
+          <div class="mi-ellipsis">
+            Option A
+          </div>
+        </span>
+      </div>
+      <div
+        id="mi-dropdown-menu-4"
+        role="button"
+        tabindex="0"
+        class="mi-dropdown-menu__item mi-dropdown-menu__item--grow mi-haptics-feedback"
+      >
+        <span class="mi-dropdown-menu__title">
+          <div class="mi-ellipsis">
+            Option A
+          </div>
+        </span>
+      </div>
+    </div>
+    <div
+      style="top: 0px; display: none;"
+      class="mi-dropdown-item mi-dropdown-item--down"
+    >
+      <transition-stub
+        name="mi-fade"
+        appear="true"
+        persisted="false"
+        css="true"
+        role="button"
+        tabindex="0"
+      >
+      </transition-stub>
+      <transition-stub
+        name="mi-popup-slide-top"
+        appear="false"
+        persisted="false"
+        css="true"
+      >
+      </transition-stub>
+    </div>
+    <div
+      style="top: 0px; display: none;"
+      class="mi-dropdown-item mi-dropdown-item--down"
+    >
+      <transition-stub
+        name="mi-fade"
+        appear="true"
+        persisted="false"
+        css="true"
+        role="button"
+        tabindex="0"
+      >
+      </transition-stub>
+      <transition-stub
+        name="mi-popup-slide-top"
+        appear="false"
+        persisted="false"
+        css="true"
+      >
+      </transition-stub>
+    </div>
+    <div
+      style="top: 0px; display: none;"
+      class="mi-dropdown-item mi-dropdown-item--down"
+    >
+      <transition-stub
+        name="mi-fade"
+        appear="true"
+        persisted="false"
+        css="true"
+        role="button"
+        tabindex="0"
+      >
+      </transition-stub>
+      <transition-stub
+        name="mi-popup-slide-top"
+        appear="false"
+        persisted="false"
+        css="true"
+      >
+      </transition-stub>
+    </div>
+    <div
+      style="top: 0px; display: none;"
+      class="mi-dropdown-item mi-dropdown-item--down"
+    >
+      <transition-stub
+        name="mi-fade"
+        appear="true"
+        persisted="false"
+        css="true"
+        role="button"
+        tabindex="0"
+      >
+      </transition-stub>
+      <transition-stub
+        name="mi-popup-slide-top"
+        appear="false"
+        persisted="false"
+        css="true"
+      >
+      </transition-stub>
+    </div>
+    <div
+      style="top: 0px; display: none;"
+      class="mi-dropdown-item mi-dropdown-item--down"
+    >
+      <transition-stub
+        name="mi-fade"
+        appear="true"
+        persisted="false"
+        css="true"
+        role="button"
+        tabindex="0"
+      >
+      </transition-stub>
+      <transition-stub
+        name="mi-popup-slide-top"
+        appear="false"
+        persisted="false"
+        css="true"
+      >
+      </transition-stub>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="mi-dropdown-menu">
+    <div class="mi-dropdown-menu__bar">
+      <div
+        id="mi-dropdown-menu-0"
+        role="button"
+        tabindex="0"
+        class="mi-dropdown-menu__item mi-haptics-feedback"
+      >
+        <span class="mi-dropdown-menu__title mi-dropdown-menu__title--down">
+          <div class="mi-ellipsis">
+            Option1
+          </div>
+        </span>
+      </div>
+      <div
+        id="mi-dropdown-menu-1"
+        role="button"
+        tabindex="0"
+        class="mi-dropdown-menu__item mi-haptics-feedback"
+      >
+        <span class="mi-dropdown-menu__title mi-dropdown-menu__title--down">
+          <div class="mi-ellipsis">
+            Option A
+          </div>
+        </span>
+      </div>
+    </div>
+    <div
+      style="bottom: 0px; display: none;"
+      class="mi-dropdown-item mi-dropdown-item--up"
+    >
+      <transition-stub
+        name="mi-fade"
+        appear="true"
+        persisted="false"
+        css="true"
+        role="button"
+        tabindex="0"
+      >
+      </transition-stub>
+      <transition-stub
+        name="mi-popup-slide-bottom"
+        appear="false"
+        persisted="false"
+        css="true"
+      >
+      </transition-stub>
+    </div>
+    <div
+      style="bottom: 0px; display: none;"
+      class="mi-dropdown-item mi-dropdown-item--up"
+    >
+      <transition-stub
+        name="mi-fade"
+        appear="true"
+        persisted="false"
+        css="true"
+        role="button"
+        tabindex="0"
+      >
+      </transition-stub>
+      <transition-stub
+        name="mi-popup-slide-bottom"
+        appear="false"
+        persisted="false"
+        css="true"
+      >
+      </transition-stub>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="mi-dropdown-menu">
+    <div class="mi-dropdown-menu__bar">
+      <div
+        id="mi-dropdown-menu-0"
+        role="button"
+        class="mi-dropdown-menu__item mi-dropdown-menu__item--disabled"
+      >
+        <span class="mi-dropdown-menu__title">
+          <div class="mi-ellipsis">
+            Option1
+          </div>
+        </span>
+      </div>
+      <div
+        id="mi-dropdown-menu-1"
+        role="button"
+        class="mi-dropdown-menu__item mi-dropdown-menu__item--disabled"
+      >
+        <span class="mi-dropdown-menu__title">
+          <div class="mi-ellipsis">
+            Option A
+          </div>
+        </span>
+      </div>
+    </div>
+    <div
+      style="top: 0px; display: none;"
+      class="mi-dropdown-item mi-dropdown-item--down"
+    >
+      <transition-stub
+        name="mi-fade"
+        appear="true"
+        persisted="false"
+        css="true"
+        role="button"
+        tabindex="0"
+      >
+      </transition-stub>
+      <transition-stub
+        name="mi-popup-slide-top"
+        appear="false"
+        persisted="false"
+        css="true"
+      >
+      </transition-stub>
+    </div>
+    <div
+      style="top: 0px; display: none;"
+      class="mi-dropdown-item mi-dropdown-item--down"
+    >
+      <transition-stub
+        name="mi-fade"
+        appear="true"
+        persisted="false"
+        css="true"
+        role="button"
+        tabindex="0"
+      >
+      </transition-stub>
+      <transition-stub
+        name="mi-popup-slide-top"
+        appear="false"
+        persisted="false"
+        css="true"
+      >
+      </transition-stub>
+    </div>
+  </div>
+</div>
+`;

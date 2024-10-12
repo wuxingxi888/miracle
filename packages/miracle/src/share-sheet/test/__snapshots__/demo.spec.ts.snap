@@ -1,0 +1,128 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render demo and match snapshot 1`] = `
+<div>
+  <div
+    class="mi-cell mi-cell--clickable"
+    role="button"
+    tabindex="0"
+  >
+    <div class="mi-cell__title">
+      <span>
+        Show ShareSheet
+      </span>
+    </div>
+    <i class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon">
+    </i>
+  </div>
+  <transition-stub
+    name="mi-fade"
+    appear="true"
+    persisted="false"
+    css="true"
+    role="button"
+    tabindex="0"
+  >
+  </transition-stub>
+  <transition-stub
+    name="mi-popup-slide-bottom"
+    appear="false"
+    persisted="false"
+    css="true"
+  >
+  </transition-stub>
+</div>
+<div>
+  <div
+    class="mi-cell mi-cell--clickable"
+    role="button"
+    tabindex="0"
+  >
+    <div class="mi-cell__title">
+      <span>
+        Show ShareSheet
+      </span>
+    </div>
+    <i class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon">
+    </i>
+  </div>
+  <transition-stub
+    name="mi-fade"
+    appear="true"
+    persisted="false"
+    css="true"
+    role="button"
+    tabindex="0"
+  >
+  </transition-stub>
+  <transition-stub
+    name="mi-popup-slide-bottom"
+    appear="false"
+    persisted="false"
+    css="true"
+  >
+  </transition-stub>
+</div>
+<div>
+  <div
+    class="mi-cell mi-cell--clickable"
+    role="button"
+    tabindex="0"
+  >
+    <div class="mi-cell__title">
+      <span>
+        Show ShareSheet
+      </span>
+    </div>
+    <i class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon">
+    </i>
+  </div>
+  <transition-stub
+    name="mi-fade"
+    appear="true"
+    persisted="false"
+    css="true"
+    role="button"
+    tabindex="0"
+  >
+  </transition-stub>
+  <transition-stub
+    name="mi-popup-slide-bottom"
+    appear="false"
+    persisted="false"
+    css="true"
+  >
+  </transition-stub>
+</div>
+<div>
+  <div
+    class="mi-cell mi-cell--clickable"
+    role="button"
+    tabindex="0"
+  >
+    <div class="mi-cell__title">
+      <span>
+        Show ShareSheet
+      </span>
+    </div>
+    <i class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon">
+    </i>
+  </div>
+  <transition-stub
+    name="mi-fade"
+    appear="true"
+    persisted="false"
+    css="true"
+    role="button"
+    tabindex="0"
+  >
+  </transition-stub>
+  <transition-stub
+    name="mi-popup-slide-bottom"
+    appear="false"
+    persisted="false"
+    css="true"
+  >
+  </transition-stub>
+</div>
+`;

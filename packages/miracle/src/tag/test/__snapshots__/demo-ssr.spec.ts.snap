@@ -1,0 +1,303 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render demo and match snapshot 1`] = `
+<!--[-->
+<div>
+  <!--[-->
+  <div class="mi-cell">
+    <div
+      class="mi-cell__title"
+      style
+    >
+      <span>
+        primary
+      </span>
+    </div>
+    <div class="mi-cell__value">
+      <!--[-->
+      <span
+        style
+        class="mi-tag mi-tag--primary"
+      >
+        <!--[-->
+        Tag
+      </span>
+    </div>
+  </div>
+  <div class="mi-cell">
+    <div
+      class="mi-cell__title"
+      style
+    >
+      <span>
+        success
+      </span>
+    </div>
+    <div class="mi-cell__value">
+      <!--[-->
+      <span
+        style
+        class="mi-tag mi-tag--success"
+      >
+        <!--[-->
+        Tag
+      </span>
+    </div>
+  </div>
+  <div class="mi-cell">
+    <div
+      class="mi-cell__title"
+      style
+    >
+      <span>
+        danger
+      </span>
+    </div>
+    <div class="mi-cell__value">
+      <!--[-->
+      <span
+        style
+        class="mi-tag mi-tag--danger"
+      >
+        <!--[-->
+        Tag
+      </span>
+    </div>
+  </div>
+  <div class="mi-cell">
+    <div
+      class="mi-cell__title"
+      style
+    >
+      <span>
+        warning
+      </span>
+    </div>
+    <div class="mi-cell__value">
+      <!--[-->
+      <span
+        style
+        class="mi-tag mi-tag--warning"
+      >
+        <!--[-->
+        Tag
+      </span>
+    </div>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div class="mi-cell">
+    <div
+      class="mi-cell__title"
+      style
+    >
+      <span>
+        Plain style
+      </span>
+    </div>
+    <div class="mi-cell__value">
+      <!--[-->
+      <span
+        style
+        class="mi-tag mi-tag--plain mi-tag--primary"
+      >
+        <!--[-->
+        Tag
+      </span>
+    </div>
+  </div>
+  <div class="mi-cell">
+    <div
+      class="mi-cell__title"
+      style
+    >
+      <span>
+        Round style
+      </span>
+    </div>
+    <div class="mi-cell__value">
+      <!--[-->
+      <span
+        style
+        class="mi-tag mi-tag--round mi-tag--primary"
+      >
+        <!--[-->
+        Tag
+      </span>
+    </div>
+  </div>
+  <div class="mi-cell">
+    <div
+      class="mi-cell__title"
+      style
+    >
+      <span>
+        Mark style
+      </span>
+    </div>
+    <div class="mi-cell__value">
+      <!--[-->
+      <span
+        style
+        class="mi-tag mi-tag--mark mi-tag--primary"
+      >
+        <!--[-->
+        Tag
+      </span>
+    </div>
+  </div>
+  <div class="mi-cell">
+    <div
+      class="mi-cell__title"
+      style
+    >
+      <span>
+        Closeable
+      </span>
+    </div>
+    <div class="mi-cell__value">
+      <!--[-->
+      <span
+        style
+        class="mi-tag mi-tag--medium mi-tag--primary"
+      >
+        <!--[-->
+        Tag
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-cross mi-tag__close mi-haptics-feedback"
+          style
+        >
+          <!--[-->
+        </i>
+      </span>
+    </div>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div class="mi-cell">
+    <div
+      class="mi-cell__title"
+      style
+    >
+      <span>
+        Small Size
+      </span>
+    </div>
+    <div class="mi-cell__value">
+      <!--[-->
+      <span
+        style
+        class="mi-tag mi-tag--primary"
+      >
+        <!--[-->
+        Tag
+      </span>
+    </div>
+  </div>
+  <div class="mi-cell">
+    <div
+      class="mi-cell__title"
+      style
+    >
+      <span>
+        Medium Size
+      </span>
+    </div>
+    <div class="mi-cell__value">
+      <!--[-->
+      <span
+        style
+        class="mi-tag mi-tag--medium mi-tag--primary"
+      >
+        <!--[-->
+        Tag
+      </span>
+    </div>
+  </div>
+  <div class="mi-cell">
+    <div
+      class="mi-cell__title"
+      style
+    >
+      <span>
+        Large Size
+      </span>
+    </div>
+    <div class="mi-cell__value">
+      <!--[-->
+      <span
+        style
+        class="mi-tag mi-tag--large mi-tag--primary"
+      >
+        <!--[-->
+        Tag
+      </span>
+    </div>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div class="mi-cell">
+    <div
+      class="mi-cell__title"
+      style
+    >
+      <span>
+        Background Color
+      </span>
+    </div>
+    <div class="mi-cell__value">
+      <!--[-->
+      <span
+        style="background:#7232dd;"
+        class="mi-tag mi-tag--default"
+      >
+        <!--[-->
+        Tag
+      </span>
+    </div>
+  </div>
+  <div class="mi-cell">
+    <div
+      class="mi-cell__title"
+      style
+    >
+      <span>
+        Text Color
+      </span>
+    </div>
+    <div class="mi-cell__value">
+      <!--[-->
+      <span
+        style="color:#ad0000;background:#ffe1e1;"
+        class="mi-tag mi-tag--default"
+      >
+        <!--[-->
+        Tag
+      </span>
+    </div>
+  </div>
+  <div class="mi-cell">
+    <div
+      class="mi-cell__title"
+      style
+    >
+      <span>
+        Plain Color
+      </span>
+    </div>
+    <div class="mi-cell__value">
+      <!--[-->
+      <span
+        style="color:#7232dd;border-color:#7232dd;"
+        class="mi-tag mi-tag--plain mi-tag--default"
+      >
+        <!--[-->
+        Tag
+      </span>
+    </div>
+  </div>
+</div>
+`;

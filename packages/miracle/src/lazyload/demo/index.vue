@@ -52,24 +52,24 @@ const componentImageList = [cdnURL('avatar.jpg'), cdnURL('avatar.jpg')];
 
 <style lang="less">
 .demo-lazyload {
-  padding-right: var(--van-padding-md);
-  padding-left: var(--van-padding-md);
+  padding-right: var(--mi-padding-md);
+  padding-left: var(--mi-padding-md);
 
   img,
   div[lazy] {
     box-sizing: border-box;
     width: 100%;
     height: 250px;
-    margin-bottom: var(--van-padding-md);
-    padding: var(--van-padding-md);
+    margin-bottom: var(--mi-padding-md);
+    padding: var(--mi-padding-md);
     background-color: white;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     border-radius: 12px;
   }
 
-  .van-doc-demo-block__title,
-  .van-doc-demo-section__title {
+  .mi-doc-demo-block__title,
+  .mi-doc-demo-section__title {
     padding-left: 0;
   }
 }

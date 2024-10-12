@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import MiBadge from '..';
-import VanIcon from '../../icon';
+import MiIcon from '../../icon';
 import { useTranslate } from '../../../docs/site';
 
 const t = useTranslate({
@@ -65,19 +65,19 @@ const t = useTranslate({
     <mi-badge>
       <div class="child" />
       <template #content>
-        <van-icon name="success" class="badge-icon" />
+        <mi-icon name="success" class="badge-icon" />
       </template>
     </mi-badge>
     <mi-badge>
       <div class="child" />
       <template #content>
-        <van-icon name="cross" class="badge-icon" />
+        <mi-icon name="cross" class="badge-icon" />
       </template>
     </mi-badge>
     <mi-badge>
       <div class="child" />
       <template #content>
-        <van-icon name="down" class="badge-icon" />
+        <mi-icon name="down" class="badge-icon" />
       </template>
     </mi-badge>
   </demo-block>

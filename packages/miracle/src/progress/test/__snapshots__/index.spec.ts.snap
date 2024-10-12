@@ -1,0 +1,27 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should re-calc width if showing pivot dynamically 1`] = `
+<div class="mi-progress">
+  <span
+    class="mi-progress__portion"
+    style="width: 100%;"
+  >
+  </span>
+</div>
+`;
+
+exports[`should re-calc width if showing pivot dynamically 2`] = `
+<div class="mi-progress">
+  <span
+    class="mi-progress__portion"
+    style="width: 100%;"
+  >
+  </span>
+  <span
+    style="left: 100%; transform: translate(-100%,-50%);"
+    class="mi-progress__pivot"
+  >
+    test
+  </span>
+</div>
+`;

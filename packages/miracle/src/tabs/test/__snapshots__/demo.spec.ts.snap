@@ -1,0 +1,1516 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render demo and match snapshot 1`] = `
+<div>
+  <div class="mi-tabs mi-tabs--line">
+    <div class="mi-tabs__wrap">
+      <div
+        role="tablist"
+        class="mi-tabs__nav mi-tabs__nav--line"
+        aria-orientation="horizontal"
+      >
+        <div
+          id="mi-tabs-0"
+          role="tab"
+          class="mi-tab mi-tab--line mi-tab--active"
+          tabindex="0"
+          aria-selected="true"
+          aria-controls="mi-tab"
+        >
+          <span class="mi-tab__text mi-tab__text--ellipsis">
+            Tab 1
+          </span>
+        </div>
+        <div
+          id="mi-tabs-1"
+          role="tab"
+          class="mi-tab mi-tab--line"
+          tabindex="-1"
+          aria-selected="false"
+          aria-controls="mi-tab"
+        >
+          <span class="mi-tab__text mi-tab__text--ellipsis">
+            Tab 2
+          </span>
+        </div>
+        <div
+          id="mi-tabs-2"
+          role="tab"
+          class="mi-tab mi-tab--line"
+          tabindex="-1"
+          aria-selected="false"
+          aria-controls="mi-tab"
+        >
+          <span class="mi-tab__text mi-tab__text--ellipsis">
+            Tab 3
+          </span>
+        </div>
+        <div
+          id="mi-tabs-3"
+          role="tab"
+          class="mi-tab mi-tab--line"
+          tabindex="-1"
+          aria-selected="false"
+          aria-controls="mi-tab"
+        >
+          <span class="mi-tab__text mi-tab__text--ellipsis">
+            Tab 4
+          </span>
+        </div>
+        <div
+          class="mi-tabs__line"
+          style="transform: translateX(50px) translateX(-50%);"
+        >
+        </div>
+      </div>
+    </div>
+    <div class="mi-tabs__content">
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="0"
+        aria-labelledby="mi-tabs-0"
+        style
+      >
+        content of tab 1
+      </div>
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="-1"
+        aria-labelledby="mi-tabs-1"
+        style="display: none;"
+      >
+      </div>
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="-1"
+        aria-labelledby="mi-tabs-2"
+        style="display: none;"
+      >
+      </div>
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="-1"
+        aria-labelledby="mi-tabs-3"
+        style="display: none;"
+      >
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="mi-tabs mi-tabs--line">
+    <div class="mi-tabs__wrap">
+      <div
+        role="tablist"
+        class="mi-tabs__nav mi-tabs__nav--line"
+        aria-orientation="horizontal"
+      >
+        <div
+          id="mi-tabs-0"
+          role="tab"
+          class="mi-tab mi-tab--line"
+          tabindex="-1"
+          aria-selected="false"
+          aria-controls="mi-tab"
+        >
+          <span class="mi-tab__text mi-tab__text--ellipsis">
+            Tab 1
+          </span>
+        </div>
+        <div
+          id="mi-tabs-1"
+          role="tab"
+          class="mi-tab mi-tab--line mi-tab--active"
+          tabindex="0"
+          aria-selected="true"
+          aria-controls="mi-tab"
+        >
+          <span class="mi-tab__text mi-tab__text--ellipsis">
+            Tab 2
+          </span>
+        </div>
+        <div
+          id="mi-tabs-2"
+          role="tab"
+          class="mi-tab mi-tab--line"
+          tabindex="-1"
+          aria-selected="false"
+          aria-controls="mi-tab"
+        >
+          <span class="mi-tab__text mi-tab__text--ellipsis">
+            Tab 3
+          </span>
+        </div>
+        <div
+          class="mi-tabs__line"
+          style="transform: translateX(50px) translateX(-50%);"
+        >
+        </div>
+      </div>
+    </div>
+    <div class="mi-tabs__content">
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="-1"
+        aria-labelledby="mi-tabs-0"
+        style="display: none;"
+      >
+      </div>
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="0"
+        aria-labelledby="mi-tabs-1"
+        style
+      >
+        content of tab 2
+      </div>
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="-1"
+        aria-labelledby="mi-tabs-2"
+        style="display: none;"
+      >
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="mi-tabs mi-tabs--line">
+    <div class="mi-tabs__wrap">
+      <div
+        role="tablist"
+        class="mi-tabs__nav mi-tabs__nav--line mi-tabs__nav--complete"
+        aria-orientation="horizontal"
+      >
+        <div
+          id="mi-tabs-0"
+          role="tab"
+          class="mi-tab mi-tab--line mi-tab--grow mi-tab--active"
+          tabindex="0"
+          aria-selected="true"
+          aria-controls="mi-tab"
+        >
+          <span class="mi-tab__text">
+            Tab 1
+          </span>
+        </div>
+        <div
+          id="mi-tabs-1"
+          role="tab"
+          class="mi-tab mi-tab--line mi-tab--grow"
+          tabindex="-1"
+          aria-selected="false"
+          aria-controls="mi-tab"
+        >
+          <span class="mi-tab__text">
+            Tab 2
+          </span>
+        </div>
+        <div
+          id="mi-tabs-2"
+          role="tab"
+          class="mi-tab mi-tab--line mi-tab--grow"
+          tabindex="-1"
+          aria-selected="false"
+          aria-controls="mi-tab"
+        >
+          <span class="mi-tab__text">
+            Tab 3
+          </span>
+        </div>
+        <div
+          id="mi-tabs-3"
+          role="tab"
+          class="mi-tab mi-tab--line mi-tab--grow"
+          tabindex="-1"
+          aria-selected="false"
+          aria-controls="mi-tab"
+        >
+          <span class="mi-tab__text">
+            Tab 4
+          </span>
+        </div>
+        <div
+          id="mi-tabs-4"
+          role="tab"
+          class="mi-tab mi-tab--line mi-tab--grow"
+          tabindex="-1"
+          aria-selected="false"
+          aria-controls="mi-tab"
+        >
+          <span class="mi-tab__text">
+            Tab 5
+          </span>
+        </div>
+        <div
+          id="mi-tabs-5"
+          role="tab"
+          class="mi-tab mi-tab--line mi-tab--grow"
+          tabindex="-1"
+          aria-selected="false"
+          aria-controls="mi-tab"
+        >
+          <span class="mi-tab__text">
+            Tab 6
+          </span>
+        </div>
+        <div
+          id="mi-tabs-6"
+          role="tab"
+          class="mi-tab mi-tab--line mi-tab--grow"
+          tabindex="-1"
+          aria-selected="false"
+          aria-controls="mi-tab"
+        >
+          <span class="mi-tab__text">
+            Tab 7
+          </span>
+        </div>
+        <div
+          id="mi-tabs-7"
+          role="tab"
+          class="mi-tab mi-tab--line mi-tab--grow"
+          tabindex="-1"
+          aria-selected="false"
+          aria-controls="mi-tab"
+        >
+          <span class="mi-tab__text">
+            Tab 8
+          </span>
+        </div>
+        <div
+          class="mi-tabs__line"
+          style="transform: translateX(50px) translateX(-50%);"
+        >
+        </div>
+      </div>
+    </div>
+    <div class="mi-tabs__content">
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="0"
+        aria-labelledby="mi-tabs-0"
+        style
+      >
+        content of tab 1
+      </div>
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="-1"
+        aria-labelledby="mi-tabs-1"
+        style="display: none;"
+      >
+      </div>
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="-1"
+        aria-labelledby="mi-tabs-2"
+        style="display: none;"
+      >
+      </div>
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="-1"
+        aria-labelledby="mi-tabs-3"
+        style="display: none;"
+      >
+      </div>
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="-1"
+        aria-labelledby="mi-tabs-4"
+        style="display: none;"
+      >
+      </div>
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="-1"
+        aria-labelledby="mi-tabs-5"
+        style="display: none;"
+      >
+      </div>
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="-1"
+        aria-labelledby="mi-tabs-6"
+        style="display: none;"
+      >
+      </div>
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="-1"
+        aria-labelledby="mi-tabs-7"
+        style="display: none;"
+      >
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="mi-tabs mi-tabs--line">
+    <div class="mi-tabs__wrap">
+      <div
+        role="tablist"
+        class="mi-tabs__nav mi-tabs__nav--line"
+        aria-orientation="horizontal"
+      >
+        <div
+          id="mi-tabs-0"
+          role="tab"
+          class="mi-tab mi-tab--line mi-tab--active"
+          tabindex="0"
+          aria-selected="true"
+          aria-controls="mi-tab"
+        >
+          <span class="mi-tab__text mi-tab__text--ellipsis">
+            Tab 1
+          </span>
+        </div>
+        <div
+          id="mi-tabs-1"
+          role="tab"
+          class="mi-tab mi-tab--line mi-tab--disabled"
+          aria-selected="false"
+          aria-disabled="true"
+          aria-controls="mi-tab"
+        >
+          <span class="mi-tab__text mi-tab__text--ellipsis">
+            Tab 2
+          </span>
+        </div>
+        <div
+          id="mi-tabs-2"
+          role="tab"
+          class="mi-tab mi-tab--line"
+          tabindex="-1"
+          aria-selected="false"
+          aria-controls="mi-tab"
+        >
+          <span class="mi-tab__text mi-tab__text--ellipsis">
+            Tab 3
+          </span>
+        </div>
+        <div
+          class="mi-tabs__line"
+          style="transform: translateX(50px) translateX(-50%);"
+        >
+        </div>
+      </div>
+    </div>
+    <div class="mi-tabs__content">
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="0"
+        aria-labelledby="mi-tabs-0"
+        style
+      >
+        content of tab 1
+      </div>
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="-1"
+        aria-labelledby="mi-tabs-1"
+        style="display: none;"
+      >
+      </div>
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="-1"
+        aria-labelledby="mi-tabs-2"
+        style="display: none;"
+      >
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="mi-tabs mi-tabs--card">
+    <div class="mi-tabs__wrap">
+      <div
+        role="tablist"
+        class="mi-tabs__nav mi-tabs__nav--card"
+        aria-orientation="horizontal"
+      >
+        <div
+          id="mi-tabs-0"
+          role="tab"
+          class="mi-tab mi-tab--card mi-tab--active"
+          tabindex="0"
+          aria-selected="true"
+          aria-controls="mi-tab"
+        >
+          <span class="mi-tab__text mi-tab__text--ellipsis">
+            Tab 1
+          </span>
+        </div>
+        <div
+          id="mi-tabs-1"
+          role="tab"
+          class="mi-tab mi-tab--card"
+          tabindex="-1"
+          aria-selected="false"
+          aria-controls="mi-tab"
+        >
+          <span class="mi-tab__text mi-tab__text--ellipsis">
+            Tab 2
+          </span>
+        </div>
+        <div
+          id="mi-tabs-2"
+          role="tab"
+          class="mi-tab mi-tab--card"
+          tabindex="-1"
+          aria-selected="false"
+          aria-controls="mi-tab"
+        >
+          <span class="mi-tab__text mi-tab__text--ellipsis">
+            Tab 3
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="mi-tabs__content">
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="0"
+        aria-labelledby="mi-tabs-0"
+        style
+      >
+        content of tab 1
+      </div>
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="-1"
+        aria-labelledby="mi-tabs-1"
+        style="display: none;"
+      >
+      </div>
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="-1"
+        aria-labelledby="mi-tabs-2"
+        style="display: none;"
+      >
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="mi-tabs mi-tabs--line">
+    <div class="mi-tabs__wrap">
+      <div
+        role="tablist"
+        class="mi-tabs__nav mi-tabs__nav--line"
+        aria-orientation="horizontal"
+      >
+        <div
+          id="mi-tabs-0"
+          role="tab"
+          class="mi-tab mi-tab--line mi-tab--active"
+          tabindex="0"
+          aria-selected="true"
+          aria-controls="mi-tab"
+        >
+          <span class="mi-tab__text mi-tab__text--ellipsis">
+            Tab 1
+          </span>
+        </div>
+        <div
+          id="mi-tabs-1"
+          role="tab"
+          class="mi-tab mi-tab--line"
+          tabindex="-1"
+          aria-selected="false"
+          aria-controls="mi-tab"
+        >
+          <span class="mi-tab__text mi-tab__text--ellipsis">
+            Tab 2
+          </span>
+        </div>
+        <div
+          class="mi-tabs__line"
+          style="transform: translateX(50px) translateX(-50%);"
+        >
+        </div>
+      </div>
+    </div>
+    <div class="mi-tabs__content">
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="0"
+        aria-labelledby="mi-tabs-0"
+        style
+      >
+        content of tab 1
+      </div>
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="-1"
+        aria-labelledby="mi-tabs-1"
+        style="display: none;"
+      >
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="mi-tabs mi-tabs--line">
+    <div>
+      <div class="mi-sticky">
+        <div>
+          <div class="mi-tabs__wrap">
+            <div
+              role="tablist"
+              class="mi-tabs__nav mi-tabs__nav--line"
+              aria-orientation="horizontal"
+            >
+              <div
+                id="mi-tabs-0"
+                role="tab"
+                class="mi-tab mi-tab--line mi-tab--active"
+                tabindex="0"
+                aria-selected="true"
+                aria-controls="mi-tab"
+              >
+                <span class="mi-tab__text mi-tab__text--ellipsis">
+                  Tab 1
+                </span>
+              </div>
+              <div
+                id="mi-tabs-1"
+                role="tab"
+                class="mi-tab mi-tab--line"
+                tabindex="-1"
+                aria-selected="false"
+                aria-controls="mi-tab"
+              >
+                <span class="mi-tab__text mi-tab__text--ellipsis">
+                  Tab 2
+                </span>
+              </div>
+              <div
+                id="mi-tabs-2"
+                role="tab"
+                class="mi-tab mi-tab--line"
+                tabindex="-1"
+                aria-selected="false"
+                aria-controls="mi-tab"
+              >
+                <span class="mi-tab__text mi-tab__text--ellipsis">
+                  Tab 3
+                </span>
+              </div>
+              <div
+                id="mi-tabs-3"
+                role="tab"
+                class="mi-tab mi-tab--line"
+                tabindex="-1"
+                aria-selected="false"
+                aria-controls="mi-tab"
+              >
+                <span class="mi-tab__text mi-tab__text--ellipsis">
+                  Tab 4
+                </span>
+              </div>
+              <div
+                class="mi-tabs__line"
+                style="transform: translateX(50px) translateX(-50%);"
+              >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mi-tabs__content">
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="0"
+        aria-labelledby="mi-tabs-0"
+        style
+      >
+        content of tab 1
+      </div>
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="-1"
+        aria-labelledby="mi-tabs-1"
+        style="display: none;"
+      >
+      </div>
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="-1"
+        aria-labelledby="mi-tabs-2"
+        style="display: none;"
+      >
+      </div>
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="-1"
+        aria-labelledby="mi-tabs-3"
+        style="display: none;"
+      >
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="mi-tabs mi-tabs--line">
+    <div class="mi-tabs__wrap">
+      <div
+        role="tablist"
+        class="mi-tabs__nav mi-tabs__nav--line mi-tabs__nav--shrink mi-tabs__nav--complete"
+        aria-orientation="horizontal"
+      >
+        <div
+          id="mi-tabs-0"
+          role="tab"
+          class="mi-tab mi-tab--line mi-tab--shrink mi-tab--active"
+          tabindex="0"
+          aria-selected="true"
+          aria-controls="mi-tab"
+        >
+          <span class="mi-tab__text">
+            Tab 1
+          </span>
+        </div>
+        <div
+          id="mi-tabs-1"
+          role="tab"
+          class="mi-tab mi-tab--line mi-tab--shrink"
+          tabindex="-1"
+          aria-selected="false"
+          aria-controls="mi-tab"
+        >
+          <span class="mi-tab__text">
+            Tab 2
+          </span>
+        </div>
+        <div
+          id="mi-tabs-2"
+          role="tab"
+          class="mi-tab mi-tab--line mi-tab--shrink"
+          tabindex="-1"
+          aria-selected="false"
+          aria-controls="mi-tab"
+        >
+          <span class="mi-tab__text">
+            Tab 3
+          </span>
+        </div>
+        <div
+          id="mi-tabs-3"
+          role="tab"
+          class="mi-tab mi-tab--line mi-tab--shrink"
+          tabindex="-1"
+          aria-selected="false"
+          aria-controls="mi-tab"
+        >
+          <span class="mi-tab__text">
+            Tab 4
+          </span>
+        </div>
+        <div
+          class="mi-tabs__line"
+          style="transform: translateX(50px) translateX(-50%);"
+        >
+        </div>
+      </div>
+    </div>
+    <div class="mi-tabs__content">
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="0"
+        aria-labelledby="mi-tabs-0"
+        style
+      >
+        content of tab 1
+      </div>
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="-1"
+        aria-labelledby="mi-tabs-1"
+        style="display: none;"
+      >
+      </div>
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="-1"
+        aria-labelledby="mi-tabs-2"
+        style="display: none;"
+      >
+      </div>
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="-1"
+        aria-labelledby="mi-tabs-3"
+        style="display: none;"
+      >
+      </div>
+    </div>
+  </div>
+  <div class="mi-tabs mi-tabs--card">
+    <div class="mi-tabs__wrap">
+      <div
+        role="tablist"
+        class="mi-tabs__nav mi-tabs__nav--card mi-tabs__nav--shrink mi-tabs__nav--complete"
+        aria-orientation="horizontal"
+      >
+        <div
+          id="mi-tabs-0"
+          role="tab"
+          class="mi-tab mi-tab--card mi-tab--shrink mi-tab--active"
+          tabindex="0"
+          aria-selected="true"
+          aria-controls="mi-tab"
+        >
+          <span class="mi-tab__text">
+            Tab 1
+          </span>
+        </div>
+        <div
+          id="mi-tabs-1"
+          role="tab"
+          class="mi-tab mi-tab--card mi-tab--shrink"
+          tabindex="-1"
+          aria-selected="false"
+          aria-controls="mi-tab"
+        >
+          <span class="mi-tab__text">
+            Tab 2
+          </span>
+        </div>
+        <div
+          id="mi-tabs-2"
+          role="tab"
+          class="mi-tab mi-tab--card mi-tab--shrink"
+          tabindex="-1"
+          aria-selected="false"
+          aria-controls="mi-tab"
+        >
+          <span class="mi-tab__text">
+            Tab 3
+          </span>
+        </div>
+        <div
+          id="mi-tabs-3"
+          role="tab"
+          class="mi-tab mi-tab--card mi-tab--shrink"
+          tabindex="-1"
+          aria-selected="false"
+          aria-controls="mi-tab"
+        >
+          <span class="mi-tab__text">
+            Tab 4
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="mi-tabs__content">
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="0"
+        aria-labelledby="mi-tabs-0"
+        style
+      >
+        content of tab 1
+      </div>
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="-1"
+        aria-labelledby="mi-tabs-1"
+        style="display: none;"
+      >
+      </div>
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="-1"
+        aria-labelledby="mi-tabs-2"
+        style="display: none;"
+      >
+      </div>
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="-1"
+        aria-labelledby="mi-tabs-3"
+        style="display: none;"
+      >
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="mi-tabs mi-tabs--line">
+    <div class="mi-tabs__wrap">
+      <div
+        role="tablist"
+        class="mi-tabs__nav mi-tabs__nav--line"
+        aria-orientation="horizontal"
+      >
+        <div
+          id="mi-tabs-0"
+          role="tab"
+          class="mi-tab mi-tab--line mi-tab--active"
+          tabindex="0"
+          aria-selected="true"
+          aria-controls="mi-tab"
+        >
+          <span class="mi-tab__text mi-tab__text--ellipsis">
+            <i class="mi-badge__wrapper mi-icon mi-icon-more-o">
+            </i>
+            Tab
+          </span>
+        </div>
+        <div
+          id="mi-tabs-1"
+          role="tab"
+          class="mi-tab mi-tab--line"
+          tabindex="-1"
+          aria-selected="false"
+          aria-controls="mi-tab"
+        >
+          <span class="mi-tab__text mi-tab__text--ellipsis">
+            <i class="mi-badge__wrapper mi-icon mi-icon-more-o">
+            </i>
+            Tab
+          </span>
+        </div>
+        <div
+          class="mi-tabs__line"
+          style="transform: translateX(50px) translateX(-50%);"
+        >
+        </div>
+      </div>
+    </div>
+    <div class="mi-tabs__content">
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="0"
+        aria-labelledby="mi-tabs-0"
+        style
+      >
+        content of tab 1
+      </div>
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="-1"
+        aria-labelledby="mi-tabs-1"
+        style="display: none;"
+      >
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="mi-tabs mi-tabs--line">
+    <div class="mi-tabs__wrap">
+      <div
+        role="tablist"
+        class="mi-tabs__nav mi-tabs__nav--line"
+        aria-orientation="horizontal"
+      >
+        <div
+          id="mi-tabs-0"
+          role="tab"
+          class="mi-tab mi-tab--line mi-tab--active"
+          tabindex="0"
+          aria-selected="true"
+          aria-controls="mi-tab"
+        >
+          <span class="mi-tab__text mi-tab__text--ellipsis">
+            Tab 1
+          </span>
+        </div>
+        <div
+          id="mi-tabs-1"
+          role="tab"
+          class="mi-tab mi-tab--line"
+          tabindex="-1"
+          aria-selected="false"
+          aria-controls="mi-tab"
+        >
+          <span class="mi-tab__text mi-tab__text--ellipsis">
+            Tab 2
+          </span>
+        </div>
+        <div
+          id="mi-tabs-2"
+          role="tab"
+          class="mi-tab mi-tab--line"
+          tabindex="-1"
+          aria-selected="false"
+          aria-controls="mi-tab"
+        >
+          <span class="mi-tab__text mi-tab__text--ellipsis">
+            Tab 3
+          </span>
+        </div>
+        <div
+          id="mi-tabs-3"
+          role="tab"
+          class="mi-tab mi-tab--line"
+          tabindex="-1"
+          aria-selected="false"
+          aria-controls="mi-tab"
+        >
+          <span class="mi-tab__text mi-tab__text--ellipsis">
+            Tab 4
+          </span>
+        </div>
+        <div
+          class="mi-tabs__line"
+          style="transform: translateX(50px) translateX(-50%);"
+        >
+        </div>
+      </div>
+    </div>
+    <div class="mi-tabs__content mi-tabs__content--animated">
+      <div class="mi-swipe mi-tabs__track">
+        <div
+          style="transition-duration: 0ms; transform: translateX(0px); width: 400px;"
+          class="mi-swipe__track"
+        >
+          <div
+            class="mi-swipe-item mi-tab__panel-wrapper"
+            id="mi-tab"
+            role="tabpanel"
+            tabindex="0"
+            aria-hidden="false"
+            aria-labelledby="mi-tabs-0"
+            style="width: 100px;"
+          >
+            <div class="mi-tab__panel">
+              content of tab 1
+            </div>
+          </div>
+          <div
+            class="mi-swipe-item mi-tab__panel-wrapper mi-tab__panel-wrapper--inactive"
+            id="mi-tab"
+            role="tabpanel"
+            tabindex="-1"
+            aria-hidden="true"
+            aria-labelledby="mi-tabs-1"
+            style="width: 100px;"
+          >
+            <div class="mi-tab__panel">
+              content of tab 2
+            </div>
+          </div>
+          <div
+            class="mi-swipe-item mi-tab__panel-wrapper mi-tab__panel-wrapper--inactive"
+            id="mi-tab"
+            role="tabpanel"
+            tabindex="-1"
+            aria-hidden="true"
+            aria-labelledby="mi-tabs-2"
+            style="width: 100px;"
+          >
+          </div>
+          <div
+            class="mi-swipe-item mi-tab__panel-wrapper mi-tab__panel-wrapper--inactive"
+            id="mi-tab"
+            role="tabpanel"
+            tabindex="-1"
+            aria-hidden="true"
+            aria-labelledby="mi-tabs-3"
+            style="width: 100px;"
+          >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="mi-tabs mi-tabs--line">
+    <div class="mi-tabs__wrap">
+      <div
+        role="tablist"
+        class="mi-tabs__nav mi-tabs__nav--line"
+        aria-orientation="horizontal"
+      >
+        <div
+          id="mi-tabs-0"
+          role="tab"
+          class="mi-tab mi-tab--line mi-tab--active"
+          tabindex="0"
+          aria-selected="true"
+          aria-controls="mi-tab"
+        >
+          <span class="mi-tab__text mi-tab__text--ellipsis">
+            Tab 1
+          </span>
+        </div>
+        <div
+          id="mi-tabs-1"
+          role="tab"
+          class="mi-tab mi-tab--line"
+          tabindex="-1"
+          aria-selected="false"
+          aria-controls="mi-tab"
+        >
+          <span class="mi-tab__text mi-tab__text--ellipsis">
+            Tab 2
+          </span>
+        </div>
+        <div
+          id="mi-tabs-2"
+          role="tab"
+          class="mi-tab mi-tab--line"
+          tabindex="-1"
+          aria-selected="false"
+          aria-controls="mi-tab"
+        >
+          <span class="mi-tab__text mi-tab__text--ellipsis">
+            Tab 3
+          </span>
+        </div>
+        <div
+          id="mi-tabs-3"
+          role="tab"
+          class="mi-tab mi-tab--line"
+          tabindex="-1"
+          aria-selected="false"
+          aria-controls="mi-tab"
+        >
+          <span class="mi-tab__text mi-tab__text--ellipsis">
+            Tab 4
+          </span>
+        </div>
+        <div
+          class="mi-tabs__line"
+          style="transform: translateX(50px) translateX(-50%);"
+        >
+        </div>
+      </div>
+    </div>
+    <div class="mi-tabs__content mi-tabs__content--animated">
+      <div class="mi-swipe mi-tabs__track">
+        <div
+          style="transition-duration: 0ms; transform: translateX(0px); width: 400px;"
+          class="mi-swipe__track"
+        >
+          <div
+            class="mi-swipe-item mi-tab__panel-wrapper"
+            id="mi-tab"
+            role="tabpanel"
+            tabindex="0"
+            aria-hidden="false"
+            aria-labelledby="mi-tabs-0"
+            style="width: 100px;"
+          >
+            <div class="mi-tab__panel">
+              content of tab 1
+            </div>
+          </div>
+          <div
+            class="mi-swipe-item mi-tab__panel-wrapper mi-tab__panel-wrapper--inactive"
+            id="mi-tab"
+            role="tabpanel"
+            tabindex="-1"
+            aria-hidden="true"
+            aria-labelledby="mi-tabs-1"
+            style="width: 100px;"
+          >
+            <div class="mi-tab__panel">
+              content of tab 2
+            </div>
+          </div>
+          <div
+            class="mi-swipe-item mi-tab__panel-wrapper mi-tab__panel-wrapper--inactive"
+            id="mi-tab"
+            role="tabpanel"
+            tabindex="-1"
+            aria-hidden="true"
+            aria-labelledby="mi-tabs-2"
+            style="width: 100px;"
+          >
+          </div>
+          <div
+            class="mi-swipe-item mi-tab__panel-wrapper mi-tab__panel-wrapper--inactive"
+            id="mi-tab"
+            role="tabpanel"
+            tabindex="-1"
+            aria-hidden="true"
+            aria-labelledby="mi-tabs-3"
+            style="width: 100px;"
+          >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="mi-tabs mi-tabs--line">
+    <div>
+      <div class="mi-sticky">
+        <div>
+          <div class="mi-tabs__wrap">
+            <div
+              role="tablist"
+              class="mi-tabs__nav mi-tabs__nav--line mi-tabs__nav--complete"
+              aria-orientation="horizontal"
+            >
+              <div
+                id="mi-tabs-0"
+                role="tab"
+                class="mi-tab mi-tab--line mi-tab--grow mi-tab--active"
+                tabindex="0"
+                aria-selected="true"
+                aria-controls="mi-tab"
+              >
+                <span class="mi-tab__text">
+                  Tab 1
+                </span>
+              </div>
+              <div
+                id="mi-tabs-1"
+                role="tab"
+                class="mi-tab mi-tab--line mi-tab--grow"
+                tabindex="-1"
+                aria-selected="false"
+                aria-controls="mi-tab"
+              >
+                <span class="mi-tab__text">
+                  Tab 2
+                </span>
+              </div>
+              <div
+                id="mi-tabs-2"
+                role="tab"
+                class="mi-tab mi-tab--line mi-tab--grow"
+                tabindex="-1"
+                aria-selected="false"
+                aria-controls="mi-tab"
+              >
+                <span class="mi-tab__text">
+                  Tab 3
+                </span>
+              </div>
+              <div
+                id="mi-tabs-3"
+                role="tab"
+                class="mi-tab mi-tab--line mi-tab--grow"
+                tabindex="-1"
+                aria-selected="false"
+                aria-controls="mi-tab"
+              >
+                <span class="mi-tab__text">
+                  Tab 4
+                </span>
+              </div>
+              <div
+                id="mi-tabs-4"
+                role="tab"
+                class="mi-tab mi-tab--line mi-tab--grow"
+                tabindex="-1"
+                aria-selected="false"
+                aria-controls="mi-tab"
+              >
+                <span class="mi-tab__text">
+                  Tab 5
+                </span>
+              </div>
+              <div
+                id="mi-tabs-5"
+                role="tab"
+                class="mi-tab mi-tab--line mi-tab--grow"
+                tabindex="-1"
+                aria-selected="false"
+                aria-controls="mi-tab"
+              >
+                <span class="mi-tab__text">
+                  Tab 6
+                </span>
+              </div>
+              <div
+                id="mi-tabs-6"
+                role="tab"
+                class="mi-tab mi-tab--line mi-tab--grow"
+                tabindex="-1"
+                aria-selected="false"
+                aria-controls="mi-tab"
+              >
+                <span class="mi-tab__text">
+                  Tab 7
+                </span>
+              </div>
+              <div
+                id="mi-tabs-7"
+                role="tab"
+                class="mi-tab mi-tab--line mi-tab--grow"
+                tabindex="-1"
+                aria-selected="false"
+                aria-controls="mi-tab"
+              >
+                <span class="mi-tab__text">
+                  Tab 8
+                </span>
+              </div>
+              <div
+                class="mi-tabs__line"
+                style="transform: translateX(50px) translateX(-50%);"
+              >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mi-tabs__content">
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="0"
+        aria-labelledby="mi-tabs-0"
+      >
+        content of tab 1
+      </div>
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="0"
+        aria-labelledby="mi-tabs-1"
+      >
+        content of tab 2
+      </div>
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="0"
+        aria-labelledby="mi-tabs-2"
+      >
+        content of tab 3
+      </div>
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="0"
+        aria-labelledby="mi-tabs-3"
+      >
+        content of tab 4
+      </div>
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="0"
+        aria-labelledby="mi-tabs-4"
+      >
+        content of tab 5
+      </div>
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="0"
+        aria-labelledby="mi-tabs-5"
+      >
+        content of tab 6
+      </div>
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="0"
+        aria-labelledby="mi-tabs-6"
+      >
+        content of tab 7
+      </div>
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="0"
+        aria-labelledby="mi-tabs-7"
+      >
+        content of tab 8
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="mi-tabs mi-tabs--line">
+    <div class="mi-tabs__wrap">
+      <div
+        role="tablist"
+        class="mi-tabs__nav mi-tabs__nav--line"
+        aria-orientation="horizontal"
+      >
+        <div
+          id="mi-tabs-0"
+          role="tab"
+          class="mi-tab mi-tab--line mi-tab--active"
+          tabindex="0"
+          aria-selected="true"
+          aria-controls="mi-tab"
+        >
+          <span class="mi-tab__text mi-tab__text--ellipsis">
+            Tab 1
+          </span>
+        </div>
+        <div
+          id="mi-tabs-1"
+          role="tab"
+          class="mi-tab mi-tab--line"
+          tabindex="-1"
+          aria-selected="false"
+          aria-controls="mi-tab"
+        >
+          <span class="mi-tab__text mi-tab__text--ellipsis">
+            Tab 2
+          </span>
+        </div>
+        <div
+          id="mi-tabs-2"
+          role="tab"
+          class="mi-tab mi-tab--line"
+          tabindex="-1"
+          aria-selected="false"
+          aria-controls="mi-tab"
+        >
+          <span class="mi-tab__text mi-tab__text--ellipsis">
+            Tab 3
+          </span>
+        </div>
+        <div
+          id="mi-tabs-3"
+          role="tab"
+          class="mi-tab mi-tab--line"
+          tabindex="-1"
+          aria-selected="false"
+          aria-controls="mi-tab"
+        >
+          <span class="mi-tab__text mi-tab__text--ellipsis">
+            Tab 4
+          </span>
+        </div>
+        <div
+          class="mi-tabs__line"
+          style="transform: translateX(50px) translateX(-50%);"
+        >
+        </div>
+      </div>
+    </div>
+    <div class="mi-tabs__content">
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="0"
+        aria-labelledby="mi-tabs-0"
+        style
+      >
+        content of tab 1
+      </div>
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="-1"
+        aria-labelledby="mi-tabs-1"
+        style="display: none;"
+      >
+      </div>
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="-1"
+        aria-labelledby="mi-tabs-2"
+        style="display: none;"
+      >
+      </div>
+      <div
+        id="mi-tab"
+        role="tabpanel"
+        class="mi-tab__panel"
+        tabindex="-1"
+        aria-labelledby="mi-tabs-3"
+        style="display: none;"
+      >
+      </div>
+    </div>
+  </div>
+</div>
+`;

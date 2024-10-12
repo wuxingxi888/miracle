@@ -1,0 +1,636 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render demo and match snapshot 1`] = `
+<div>
+  <div class="mi-cell-group mi-cell-group--inset">
+    <div class="mi-cell mi-field">
+      <div class="mi-cell__title mi-field__label">
+        <label
+          id="mi-field-label"
+          for="mi-field-input"
+        >
+          Label
+        </label>
+      </div>
+      <div class="mi-cell__value mi-field__value">
+        <div class="mi-field__body">
+          <input
+            type="text"
+            id="mi-field-input"
+            class="mi-field__control"
+            placeholder="Text"
+            aria-labelledby="mi-field-label"
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="mi-cell-group mi-cell-group--inset">
+    <div class="mi-cell mi-field">
+      <div class="mi-cell__title mi-field__label">
+        <label
+          id="mi-field-label"
+          for="mi-field-input"
+        >
+          Text
+        </label>
+      </div>
+      <div class="mi-cell__value mi-field__value">
+        <div class="mi-field__body">
+          <input
+            type="text"
+            id="mi-field-input"
+            class="mi-field__control"
+            placeholder="Text"
+            autocomplete="off"
+            aria-labelledby="mi-field-label"
+          >
+        </div>
+      </div>
+    </div>
+    <div class="mi-cell mi-field">
+      <div class="mi-cell__title mi-field__label">
+        <label
+          id="mi-field-label"
+          for="mi-field-input"
+        >
+          Phone
+        </label>
+      </div>
+      <div class="mi-cell__value mi-field__value">
+        <div class="mi-field__body">
+          <input
+            type="tel"
+            id="mi-field-input"
+            class="mi-field__control"
+            placeholder="Phone"
+            aria-labelledby="mi-field-label"
+          >
+        </div>
+      </div>
+    </div>
+    <div class="mi-cell mi-field">
+      <div class="mi-cell__title mi-field__label">
+        <label
+          id="mi-field-label"
+          for="mi-field-input"
+        >
+          Digit
+        </label>
+      </div>
+      <div class="mi-cell__value mi-field__value">
+        <div class="mi-field__body">
+          <input
+            type="tel"
+            inputmode="numeric"
+            id="mi-field-input"
+            class="mi-field__control"
+            placeholder="Digit"
+            aria-labelledby="mi-field-label"
+          >
+        </div>
+      </div>
+    </div>
+    <div class="mi-cell mi-field">
+      <div class="mi-cell__title mi-field__label">
+        <label
+          id="mi-field-label"
+          for="mi-field-input"
+        >
+          Number
+        </label>
+      </div>
+      <div class="mi-cell__value mi-field__value">
+        <div class="mi-field__body">
+          <input
+            type="text"
+            inputmode="decimal"
+            id="mi-field-input"
+            class="mi-field__control"
+            placeholder="Number"
+            aria-labelledby="mi-field-label"
+          >
+        </div>
+      </div>
+    </div>
+    <div class="mi-cell mi-field">
+      <div class="mi-cell__title mi-field__label">
+        <label
+          id="mi-field-label"
+          for="mi-field-input"
+        >
+          Password
+        </label>
+      </div>
+      <div class="mi-cell__value mi-field__value">
+        <div class="mi-field__body">
+          <input
+            type="password"
+            id="mi-field-input"
+            class="mi-field__control"
+            placeholder="Password"
+            autocomplete="off"
+            aria-labelledby="mi-field-label"
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="mi-cell-group mi-cell-group--inset">
+    <div class="mi-cell mi-field">
+      <div class="mi-cell__title mi-field__label">
+        <label
+          id="mi-field-label"
+          for="mi-field-input"
+        >
+          Text
+        </label>
+      </div>
+      <div class="mi-cell__value mi-field__value">
+        <div class="mi-field__body">
+          <input
+            type="text"
+            id="mi-field-input"
+            class="mi-field__control"
+            readonly
+            aria-labelledby="mi-field-label"
+          >
+        </div>
+      </div>
+    </div>
+    <div class="mi-cell mi-field mi-field--disabled">
+      <div class="mi-cell__title mi-field__label">
+        <label
+          id="mi-field-label"
+          for="mi-field-input"
+        >
+          Text
+        </label>
+      </div>
+      <div class="mi-cell__value mi-field__value">
+        <div class="mi-field__body">
+          <input
+            type="text"
+            id="mi-field-input"
+            class="mi-field__control"
+            disabled
+            aria-labelledby="mi-field-label"
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="mi-cell-group mi-cell-group--inset">
+    <div class="mi-cell mi-field">
+      <div class="mi-field__left-icon">
+        <i class="mi-badge__wrapper mi-icon mi-icon-smile-o">
+        </i>
+      </div>
+      <div class="mi-cell__title mi-field__label">
+        <label
+          id="mi-field-label"
+          for="mi-field-input"
+        >
+          Text
+        </label>
+      </div>
+      <div class="mi-cell__value mi-field__value">
+        <div class="mi-field__body">
+          <input
+            type="text"
+            id="mi-field-input"
+            class="mi-field__control"
+            placeholder="Show Icon"
+            aria-labelledby="mi-field-label"
+          >
+          <div class="mi-field__right-icon">
+            <i class="mi-badge__wrapper mi-icon mi-icon-warning-o">
+            </i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mi-cell mi-field">
+      <div class="mi-field__left-icon">
+        <i class="mi-badge__wrapper mi-icon mi-icon-music-o">
+        </i>
+      </div>
+      <div class="mi-cell__title mi-field__label">
+        <label
+          id="mi-field-label"
+          for="mi-field-input"
+        >
+          Text
+        </label>
+      </div>
+      <div class="mi-cell__value mi-field__value">
+        <div class="mi-field__body">
+          <input
+            type="text"
+            id="mi-field-input"
+            class="mi-field__control"
+            placeholder="Show Clear Icon"
+            aria-labelledby="mi-field-label"
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="mi-cell-group mi-cell-group--inset">
+    <div class="mi-cell mi-field">
+      <div class="mi-cell__title mi-field__label mi-field__label--required">
+        <label
+          id="mi-field-label"
+          for="mi-field-input"
+        >
+          Username
+        </label>
+      </div>
+      <div class="mi-cell__value mi-field__value">
+        <div class="mi-field__body">
+          <input
+            type="text"
+            id="mi-field-input"
+            class="mi-field__control"
+            placeholder="Username"
+            aria-labelledby="mi-field-label"
+          >
+        </div>
+      </div>
+    </div>
+    <div class="mi-cell mi-field">
+      <div class="mi-cell__title mi-field__label mi-field__label--required">
+        <label
+          id="mi-field-label"
+          for="mi-field-input"
+        >
+          Phone
+        </label>
+      </div>
+      <div class="mi-cell__value mi-field__value">
+        <div class="mi-field__body">
+          <input
+            type="text"
+            id="mi-field-input"
+            class="mi-field__control"
+            placeholder="Phone"
+            aria-labelledby="mi-field-label"
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="mi-cell-group mi-cell-group--inset">
+    <form class="mi-form">
+      <div class="mi-cell mi-field">
+        <div class="mi-cell__title mi-field__label mi-field__label--required">
+          <label
+            id="mi-field-label"
+            for="mi-field-input"
+          >
+            Username
+          </label>
+        </div>
+        <div class="mi-cell__value mi-field__value">
+          <div class="mi-field__body">
+            <input
+              type="text"
+              id="mi-field-input"
+              class="mi-field__control"
+              placeholder="Username"
+              aria-labelledby="mi-field-label"
+            >
+          </div>
+        </div>
+      </div>
+      <div class="mi-cell mi-field">
+        <div class="mi-cell__title mi-field__label">
+          <label
+            id="mi-field-label"
+            for="mi-field-input"
+          >
+            Phone
+          </label>
+        </div>
+        <div class="mi-cell__value mi-field__value">
+          <div class="mi-field__body">
+            <input
+              type="text"
+              id="mi-field-input"
+              class="mi-field__control"
+              placeholder="Phone"
+              aria-labelledby="mi-field-label"
+            >
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<div>
+  <div class="mi-cell-group mi-cell-group--inset">
+    <div class="mi-cell mi-field mi-field--error">
+      <div class="mi-cell__title mi-field__label">
+        <label
+          id="mi-field-label"
+          for="mi-field-input"
+        >
+          Username
+        </label>
+      </div>
+      <div class="mi-cell__value mi-field__value">
+        <div class="mi-field__body">
+          <input
+            type="text"
+            id="mi-field-input"
+            class="mi-field__control mi-field__control--error"
+            placeholder="Username"
+            aria-labelledby="mi-field-label"
+          >
+        </div>
+      </div>
+    </div>
+    <div class="mi-cell mi-field">
+      <div class="mi-cell__title mi-field__label">
+        <label
+          id="mi-field-label"
+          for="mi-field-input"
+        >
+          Phone
+        </label>
+      </div>
+      <div class="mi-cell__value mi-field__value">
+        <div class="mi-field__body">
+          <input
+            type="text"
+            id="mi-field-input"
+            class="mi-field__control"
+            placeholder="Phone"
+            aria-labelledby="mi-field-label"
+          >
+        </div>
+        <div class="mi-field__error-message">
+          Invalid phone
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="mi-cell-group mi-cell-group--inset">
+    <div class="mi-cell mi-cell--center mi-field">
+      <div class="mi-cell__title mi-field__label">
+        <label
+          id="mi-field-label"
+          for="mi-field-input"
+        >
+          SMS
+        </label>
+      </div>
+      <div class="mi-cell__value mi-field__value">
+        <div class="mi-field__body">
+          <input
+            type="text"
+            id="mi-field-input"
+            class="mi-field__control"
+            placeholder="SMS"
+            aria-labelledby="mi-field-label"
+          >
+          <div class="mi-field__button">
+            <button
+              type="button"
+              class="mi-button mi-button--primary mi-button--small"
+            >
+              <div class="mi-button__content">
+                <span class="mi-button__text">
+                  Send SMS
+                </span>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="mi-cell-group mi-cell-group--inset">
+    <div class="mi-cell mi-field">
+      <div class="mi-cell__title mi-field__label">
+        <label
+          id="mi-field-label"
+          for="mi-field-input"
+        >
+          Text
+        </label>
+      </div>
+      <div class="mi-cell__value mi-field__value">
+        <div class="mi-field__body">
+          <input
+            type="text"
+            id="mi-field-input"
+            class="mi-field__control"
+            placeholder="Format On Change"
+            aria-labelledby="mi-field-label"
+          >
+        </div>
+      </div>
+    </div>
+    <div class="mi-cell mi-field">
+      <div class="mi-cell__title mi-field__label">
+        <label
+          id="mi-field-label"
+          for="mi-field-input"
+        >
+          Text
+        </label>
+      </div>
+      <div class="mi-cell__value mi-field__value">
+        <div class="mi-field__body">
+          <input
+            type="text"
+            id="mi-field-input"
+            class="mi-field__control"
+            placeholder="Format On Blur"
+            aria-labelledby="mi-field-label"
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="mi-cell-group mi-cell-group--inset">
+    <div class="mi-cell mi-field">
+      <div class="mi-cell__value mi-field__value">
+        <div class="mi-field__body">
+          <textarea
+            id="mi-field-input"
+            rows="1"
+            class="mi-field__control"
+            placeholder="Message"
+            style="height: auto;"
+          >
+          </textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="mi-cell-group mi-cell-group--inset">
+    <div class="mi-cell mi-field">
+      <div class="mi-cell__title mi-field__label">
+        <label
+          id="mi-field-label"
+          for="mi-field-input"
+        >
+          Message
+        </label>
+      </div>
+      <div class="mi-cell__value mi-field__value">
+        <div class="mi-field__body">
+          <textarea
+            id="mi-field-input"
+            rows="2"
+            class="mi-field__control"
+            placeholder="Message"
+            aria-labelledby="mi-field-label"
+            style="height: auto;"
+          >
+          </textarea>
+        </div>
+        <div class="mi-field__word-limit">
+          <span class="mi-field__word-num">
+            0
+          </span>
+          /50
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="mi-cell-group mi-cell-group--inset">
+    <div class="mi-cell mi-field">
+      <div class="mi-cell__title mi-field__label">
+        <label
+          id="mi-field-label"
+          for="mi-field-input"
+        >
+          Text
+        </label>
+      </div>
+      <div class="mi-cell__value mi-field__value">
+        <div class="mi-field__body">
+          <input
+            type="text"
+            id="mi-field-input"
+            class="mi-field__control mi-field__control--right"
+            placeholder="Input Align Right"
+            aria-labelledby="mi-field-label"
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="mi-cell-group mi-cell-group--inset">
+    <div class="mi-cell mi-field mi-field--label-top">
+      <div class="mi-cell__title mi-field__label mi-field__label--top">
+        <label
+          id="mi-field-label"
+          for="mi-field-input"
+        >
+          Label
+        </label>
+      </div>
+      <div class="mi-cell__value mi-field__value">
+        <div class="mi-field__body">
+          <input
+            type="text"
+            id="mi-field-input"
+            class="mi-field__control"
+            placeholder="Align Top"
+            aria-labelledby="mi-field-label"
+          >
+        </div>
+      </div>
+    </div>
+    <div class="mi-cell mi-field mi-field--label-left">
+      <div class="mi-cell__title mi-field__label mi-field__label--left">
+        <label
+          id="mi-field-label"
+          for="mi-field-input"
+        >
+          Label
+        </label>
+      </div>
+      <div class="mi-cell__value mi-field__value">
+        <div class="mi-field__body">
+          <input
+            type="text"
+            id="mi-field-input"
+            class="mi-field__control"
+            placeholder="Align Left"
+            aria-labelledby="mi-field-label"
+          >
+        </div>
+      </div>
+    </div>
+    <div class="mi-cell mi-field mi-field--label-center">
+      <div class="mi-cell__title mi-field__label mi-field__label--center">
+        <label
+          id="mi-field-label"
+          for="mi-field-input"
+        >
+          Label
+        </label>
+      </div>
+      <div class="mi-cell__value mi-field__value">
+        <div class="mi-field__body">
+          <input
+            type="text"
+            id="mi-field-input"
+            class="mi-field__control"
+            placeholder="Align Center"
+            aria-labelledby="mi-field-label"
+          >
+        </div>
+      </div>
+    </div>
+    <div class="mi-cell mi-field mi-field--label-right">
+      <div class="mi-cell__title mi-field__label mi-field__label--right">
+        <label
+          id="mi-field-label"
+          for="mi-field-input"
+        >
+          Label
+        </label>
+      </div>
+      <div class="mi-cell__value mi-field__value">
+        <div class="mi-field__body">
+          <input
+            type="text"
+            id="mi-field-input"
+            class="mi-field__control"
+            placeholder="Align Right"
+            aria-labelledby="mi-field-label"
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

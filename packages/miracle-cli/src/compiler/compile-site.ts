@@ -1,5 +1,5 @@
 import { join } from 'path';
-import { getVantConfig, setBuildTarget } from '../common/index.js';
+import { getMiracleConfig, setBuildTarget } from '../common/index.js';
 import { getTemplateParams } from './get-template-params.js';
 import { genPackageEntry } from './gen-package-entry.js';
 import { genStyleDepsMap } from './gen-style-deps-map.js';
@@ -48,8 +48,8 @@ export async function compileSite(isProd = false) {
 
   await genSiteEntry();
 
-  const vantConfig = getVantConfig();
-  const assetPrefix = vantConfig.build?.site?.publicPath || '/';
+  const miracleConfig = getMiracleConfig();
+  const assetPrefix = miracleConfig.build?.site?.publicPath || '/';
 
   const rsbuildConfig: RsbuildConfig = {
     plugins: [
@@ -79,7 +79,7 @@ export async function compileSite(isProd = false) {
         css: false,
       },
       distPath: {
-        root: vantConfig.build?.site?.outputDir || SITE_DIST_DIR,
+        root: miracleConfig.build?.site?.outputDir || SITE_DIST_DIR,
       },
       cleanDistPath: true,
     },

@@ -1,0 +1,753 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render demo and match snapshot 1`] = `
+<!--[-->
+<div>
+  <!--[-->
+  <div class="mi-picker">
+    <div class="mi-picker__toolbar">
+      <!--[-->
+      <button
+        type="button"
+        class="mi-picker__cancel mi-haptics-feedback"
+      >
+        Cancel
+      </button>
+      <div class="mi-picker__title mi-ellipsis">
+        Title
+      </div>
+      <button
+        type="button"
+        class="mi-picker__confirm mi-haptics-feedback"
+      >
+        Confirm
+      </button>
+    </div>
+    <div
+      class="mi-picker__columns"
+      style="height:264px;"
+    >
+      <!--[-->
+      <div class="mi-picker-column">
+        <ul
+          style="transform:translate3d(0, 110px, 0);transition-duration:0ms;transition-property:none;"
+          class="mi-picker-column__wrapper"
+        >
+          <!--[-->
+          <li
+            role="button"
+            style="height:44px;"
+            tabindex="0"
+            class="mi-picker-column__item mi-picker-column__item--selected"
+          >
+            <div class="mi-ellipsis">
+              Delaware
+            </div>
+          </li>
+          <li
+            role="button"
+            style="height:44px;"
+            tabindex="0"
+            class="mi-picker-column__item"
+          >
+            <div class="mi-ellipsis">
+              Florida
+            </div>
+          </li>
+          <li
+            role="button"
+            style="height:44px;"
+            tabindex="0"
+            class="mi-picker-column__item"
+          >
+            <div class="mi-ellipsis">
+              Wenzhou
+            </div>
+          </li>
+          <li
+            role="button"
+            style="height:44px;"
+            tabindex="0"
+            class="mi-picker-column__item"
+          >
+            <div class="mi-ellipsis">
+              Indiana
+            </div>
+          </li>
+          <li
+            role="button"
+            style="height:44px;"
+            tabindex="0"
+            class="mi-picker-column__item"
+          >
+            <div class="mi-ellipsis">
+              Maine
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!--[-->
+      <div
+        class="mi-picker__mask"
+        style="background-size:100% 110px;"
+      >
+      </div>
+      <div
+        class="mi-hairline-unset--top-bottom mi-picker__frame"
+        style="height:44px;"
+      >
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div
+    class="mi-cell mi-cell--clickable"
+    role="button"
+    tabindex="0"
+    modelvalue
+  >
+    <div
+      class="mi-cell__title"
+      style
+    >
+      <span>
+        City
+      </span>
+    </div>
+    <div class="mi-cell__value">
+      <span>
+        Choose City
+      </span>
+    </div>
+    <i
+      class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon"
+      style
+    >
+      <!--[-->
+    </i>
+  </div>
+  <!--[-->
+</div>
+<div>
+  <!--[-->
+  <div class="mi-picker">
+    <div class="mi-picker__toolbar">
+      <!--[-->
+      <button
+        type="button"
+        class="mi-picker__cancel mi-haptics-feedback"
+      >
+        Cancel
+      </button>
+      <div class="mi-picker__title mi-ellipsis">
+        Title
+      </div>
+      <button
+        type="button"
+        class="mi-picker__confirm mi-haptics-feedback"
+      >
+        Confirm
+      </button>
+    </div>
+    <div
+      class="mi-picker__columns"
+      style="height:264px;"
+    >
+      <!--[-->
+      <div class="mi-picker-column">
+        <ul
+          style="transform:translate3d(0, 22px, 0);transition-duration:0ms;transition-property:none;"
+          class="mi-picker-column__wrapper"
+        >
+          <!--[-->
+          <li
+            role="button"
+            style="height:44px;"
+            tabindex="0"
+            class="mi-picker-column__item"
+          >
+            <div class="mi-ellipsis">
+              Delaware
+            </div>
+          </li>
+          <li
+            role="button"
+            style="height:44px;"
+            tabindex="0"
+            class="mi-picker-column__item"
+          >
+            <div class="mi-ellipsis">
+              Florida
+            </div>
+          </li>
+          <li
+            role="button"
+            style="height:44px;"
+            tabindex="0"
+            class="mi-picker-column__item mi-picker-column__item--selected"
+          >
+            <div class="mi-ellipsis">
+              Wenzhou
+            </div>
+          </li>
+          <li
+            role="button"
+            style="height:44px;"
+            tabindex="0"
+            class="mi-picker-column__item"
+          >
+            <div class="mi-ellipsis">
+              Indiana
+            </div>
+          </li>
+          <li
+            role="button"
+            style="height:44px;"
+            tabindex="0"
+            class="mi-picker-column__item"
+          >
+            <div class="mi-ellipsis">
+              Maine
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!--[-->
+      <div
+        class="mi-picker__mask"
+        style="background-size:100% 110px;"
+      >
+      </div>
+      <div
+        class="mi-hairline-unset--top-bottom mi-picker__frame"
+        style="height:44px;"
+      >
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div class="mi-picker">
+    <div class="mi-picker__toolbar">
+      <!--[-->
+      <button
+        type="button"
+        class="mi-picker__cancel mi-haptics-feedback"
+      >
+        Cancel
+      </button>
+      <div class="mi-picker__title mi-ellipsis">
+        Title
+      </div>
+      <button
+        type="button"
+        class="mi-picker__confirm mi-haptics-feedback"
+      >
+        Confirm
+      </button>
+    </div>
+    <div
+      class="mi-picker__columns"
+      style="height:264px;"
+    >
+      <!--[-->
+      <div class="mi-picker-column">
+        <ul
+          style="transform:translate3d(0, 110px, 0);transition-duration:0ms;transition-property:none;"
+          class="mi-picker-column__wrapper"
+        >
+          <!--[-->
+          <li
+            role="button"
+            style="height:44px;"
+            tabindex="0"
+            class="mi-picker-column__item mi-picker-column__item--selected"
+          >
+            <div class="mi-ellipsis">
+              Monday
+            </div>
+          </li>
+          <li
+            role="button"
+            style="height:44px;"
+            tabindex="0"
+            class="mi-picker-column__item"
+          >
+            <div class="mi-ellipsis">
+              Tuesday
+            </div>
+          </li>
+          <li
+            role="button"
+            style="height:44px;"
+            tabindex="0"
+            class="mi-picker-column__item"
+          >
+            <div class="mi-ellipsis">
+              Wednesday
+            </div>
+          </li>
+          <li
+            role="button"
+            style="height:44px;"
+            tabindex="0"
+            class="mi-picker-column__item"
+          >
+            <div class="mi-ellipsis">
+              Thursday
+            </div>
+          </li>
+          <li
+            role="button"
+            style="height:44px;"
+            tabindex="0"
+            class="mi-picker-column__item"
+          >
+            <div class="mi-ellipsis">
+              Friday
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="mi-picker-column">
+        <ul
+          style="transform:translate3d(0, 110px, 0);transition-duration:0ms;transition-property:none;"
+          class="mi-picker-column__wrapper"
+        >
+          <!--[-->
+          <li
+            role="button"
+            style="height:44px;"
+            tabindex="0"
+            class="mi-picker-column__item mi-picker-column__item--selected"
+          >
+            <div class="mi-ellipsis">
+              Morning
+            </div>
+          </li>
+          <li
+            role="button"
+            style="height:44px;"
+            tabindex="0"
+            class="mi-picker-column__item"
+          >
+            <div class="mi-ellipsis">
+              Afternoon
+            </div>
+          </li>
+          <li
+            role="button"
+            style="height:44px;"
+            tabindex="0"
+            class="mi-picker-column__item"
+          >
+            <div class="mi-ellipsis">
+              Evening
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!--[-->
+      <div
+        class="mi-picker__mask"
+        style="background-size:100% 110px;"
+      >
+      </div>
+      <div
+        class="mi-hairline-unset--top-bottom mi-picker__frame"
+        style="height:44px;"
+      >
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div class="mi-picker">
+    <div class="mi-picker__toolbar">
+      <!--[-->
+      <button
+        type="button"
+        class="mi-picker__cancel mi-haptics-feedback"
+      >
+        Cancel
+      </button>
+      <div class="mi-picker__title mi-ellipsis">
+        Title
+      </div>
+      <button
+        type="button"
+        class="mi-picker__confirm mi-haptics-feedback"
+      >
+        Confirm
+      </button>
+    </div>
+    <div
+      class="mi-picker__columns"
+      style="height:264px;"
+    >
+      <!--[-->
+      <div class="mi-picker-column">
+        <ul
+          style="transform:translate3d(0, 110px, 0);transition-duration:0ms;transition-property:none;"
+          class="mi-picker-column__wrapper"
+        >
+          <!--[-->
+          <li
+            role="button"
+            style="height:44px;"
+            tabindex="0"
+            class="mi-picker-column__item mi-picker-column__item--selected"
+          >
+            <div class="mi-ellipsis">
+              Zhejiang
+            </div>
+          </li>
+          <li
+            role="button"
+            style="height:44px;"
+            tabindex="0"
+            class="mi-picker-column__item"
+          >
+            <div class="mi-ellipsis">
+              Fujian
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="mi-picker-column">
+        <ul
+          style="transform:translate3d(0, 110px, 0);transition-duration:0ms;transition-property:none;"
+          class="mi-picker-column__wrapper"
+        >
+          <!--[-->
+          <li
+            role="button"
+            style="height:44px;"
+            tabindex="0"
+            class="mi-picker-column__item mi-picker-column__item--selected"
+          >
+            <div class="mi-ellipsis">
+              Hangzhou
+            </div>
+          </li>
+          <li
+            role="button"
+            style="height:44px;"
+            tabindex="0"
+            class="mi-picker-column__item"
+          >
+            <div class="mi-ellipsis">
+              Wenzhou
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="mi-picker-column">
+        <ul
+          style="transform:translate3d(0, 110px, 0);transition-duration:0ms;transition-property:none;"
+          class="mi-picker-column__wrapper"
+        >
+          <!--[-->
+          <li
+            role="button"
+            style="height:44px;"
+            tabindex="0"
+            class="mi-picker-column__item mi-picker-column__item--selected"
+          >
+            <div class="mi-ellipsis">
+              Xihu
+            </div>
+          </li>
+          <li
+            role="button"
+            style="height:44px;"
+            tabindex="0"
+            class="mi-picker-column__item"
+          >
+            <div class="mi-ellipsis">
+              Yuhang
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!--[-->
+      <div
+        class="mi-picker__mask"
+        style="background-size:100% 110px;"
+      >
+      </div>
+      <div
+        class="mi-hairline-unset--top-bottom mi-picker__frame"
+        style="height:44px;"
+      >
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div class="mi-picker">
+    <div class="mi-picker__toolbar">
+      <!--[-->
+      <button
+        type="button"
+        class="mi-picker__cancel mi-haptics-feedback"
+      >
+        Cancel
+      </button>
+      <div class="mi-picker__title mi-ellipsis">
+        Title
+      </div>
+      <button
+        type="button"
+        class="mi-picker__confirm mi-haptics-feedback"
+      >
+        Confirm
+      </button>
+    </div>
+    <div
+      class="mi-picker__columns"
+      style="height:264px;"
+    >
+      <!--[-->
+      <div class="mi-picker-column">
+        <ul
+          style="transform:translate3d(0, 66px, 0);transition-duration:0ms;transition-property:none;"
+          class="mi-picker-column__wrapper"
+        >
+          <!--[-->
+          <li
+            role="button"
+            style="height:44px;"
+            tabindex="-1"
+            class="mi-picker-column__item mi-picker-column__item--disabled"
+          >
+            <div class="mi-ellipsis">
+              Delaware
+            </div>
+          </li>
+          <li
+            role="button"
+            style="height:44px;"
+            tabindex="0"
+            class="mi-picker-column__item mi-picker-column__item--selected"
+          >
+            <div class="mi-ellipsis">
+              Florida
+            </div>
+          </li>
+          <li
+            role="button"
+            style="height:44px;"
+            tabindex="0"
+            class="mi-picker-column__item"
+          >
+            <div class="mi-ellipsis">
+              Wenzhou
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!--[-->
+      <div
+        class="mi-picker__mask"
+        style="background-size:100% 110px;"
+      >
+      </div>
+      <div
+        class="mi-hairline-unset--top-bottom mi-picker__frame"
+        style="height:44px;"
+      >
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div class="mi-picker">
+    <div class="mi-picker__toolbar">
+      <!--[-->
+      <button
+        type="button"
+        class="mi-picker__cancel mi-haptics-feedback"
+      >
+        Cancel
+      </button>
+      <div class="mi-picker__title mi-ellipsis">
+        Title
+      </div>
+      <button
+        type="button"
+        class="mi-picker__confirm mi-haptics-feedback"
+      >
+        Confirm
+      </button>
+    </div>
+    <div
+      class="mi-loading mi-loading--circular mi-picker__loading"
+      aria-live="polite"
+      aria-busy="true"
+    >
+      <span
+        class="mi-loading__spinner mi-loading__spinner--circular"
+        style
+      >
+        <svg
+          class="mi-loading__circular"
+          viewbox="25 25 50 50"
+        >
+          <circle
+            cx="50"
+            cy="50"
+            r="20"
+            fill="none"
+          >
+          </circle>
+        </svg>
+      </span>
+    </div>
+    <div
+      class="mi-picker__columns"
+      style="height:264px;"
+    >
+      <!--[-->
+      <div class="mi-picker-column">
+        <ul
+          style="transform:translate3d(0, 110px, 0);transition-duration:0ms;transition-property:none;"
+          class="mi-picker-column__wrapper"
+        >
+          <!--[-->
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div class="mi-picker">
+    <div class="mi-picker__toolbar">
+      <!--[-->
+      <button
+        type="button"
+        class="mi-picker__cancel mi-haptics-feedback"
+      >
+        Cancel
+      </button>
+      <div class="mi-picker__title mi-ellipsis">
+        Title
+      </div>
+      <button
+        type="button"
+        class="mi-picker__confirm mi-haptics-feedback"
+      >
+        Confirm
+      </button>
+    </div>
+    <div
+      class="mi-picker__columns"
+      style="height:264px;"
+    >
+      <!--[-->
+      <div class="mi-picker-column">
+        <ul
+          style="transform:translate3d(0, 110px, 0);transition-duration:0ms;transition-property:none;"
+          class="mi-picker-column__wrapper"
+        >
+          <!--[-->
+          <li
+            role="button"
+            style="height:44px;"
+            tabindex="0"
+            class="mi-picker-column__item mi-picker-column__item--selected"
+          >
+            <div class="mi-ellipsis">
+              Zhejiang
+            </div>
+          </li>
+          <li
+            role="button"
+            style="height:44px;"
+            tabindex="0"
+            class="mi-picker-column__item"
+          >
+            <div class="mi-ellipsis">
+              Fujian
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="mi-picker-column">
+        <ul
+          style="transform:translate3d(0, 110px, 0);transition-duration:0ms;transition-property:none;"
+          class="mi-picker-column__wrapper"
+        >
+          <!--[-->
+          <li
+            role="button"
+            style="height:44px;"
+            tabindex="0"
+            class="mi-picker-column__item mi-picker-column__item--selected"
+          >
+            <div class="mi-ellipsis">
+              Hangzhou
+            </div>
+          </li>
+          <li
+            role="button"
+            style="height:44px;"
+            tabindex="0"
+            class="mi-picker-column__item"
+          >
+            <div class="mi-ellipsis">
+              Wenzhou
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="mi-picker-column">
+        <ul
+          style="transform:translate3d(0, 110px, 0);transition-duration:0ms;transition-property:none;"
+          class="mi-picker-column__wrapper"
+        >
+          <!--[-->
+          <li
+            role="button"
+            style="height:44px;"
+            tabindex="0"
+            class="mi-picker-column__item mi-picker-column__item--selected"
+          >
+            <div class="mi-ellipsis">
+              Xihu
+            </div>
+          </li>
+          <li
+            role="button"
+            style="height:44px;"
+            tabindex="0"
+            class="mi-picker-column__item"
+          >
+            <div class="mi-ellipsis">
+              Yuhang
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!--[-->
+      <div
+        class="mi-picker__mask"
+        style="background-size:100% 110px;"
+      >
+      </div>
+      <div
+        class="mi-hairline-unset--top-bottom mi-picker__frame"
+        style="height:44px;"
+      >
+      </div>
+    </div>
+  </div>
+</div>
+`;

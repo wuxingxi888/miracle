@@ -1,7 +1,7 @@
 import glob from 'fast-glob';
 import { join, parse } from 'node:path';
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
-import { pascalize, getVantConfig, normalizePath } from '../common/index.js';
+import { pascalize, getMiracleConfig, normalizePath } from '../common/index.js';
 import {
   SRC_DIR,
   DOCS_DIR,
@@ -33,8 +33,8 @@ function formatName(component: string, lang?: string) {
  *   - action-sheet/README.md => ActionSheet
  */
 function resolveDocuments(components: string[]): DocumentItem[] {
-  const vantConfig = getVantConfig();
-  const { locales, defaultLang } = vantConfig.site;
+  const miracleConfig = getMiracleConfig();
+  const { locales, defaultLang } = miracleConfig.site;
 
   const docs: DocumentItem[] = [];
 

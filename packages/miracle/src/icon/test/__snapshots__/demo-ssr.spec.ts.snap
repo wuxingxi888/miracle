@@ -1,0 +1,67 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render demo and match snapshot 1`] = `
+<div class="mi-tabs mi-tabs--line">
+  <div style>
+    <div
+      class="mi-sticky"
+      style
+    >
+      <!--[-->
+      <div>
+        <!--[-->
+        <div class="mi-tabs__wrap">
+          <div
+            role="tablist"
+            class="mi-tabs__nav mi-tabs__nav--line"
+            style
+            aria-orientation="horizontal"
+          >
+            <!--[-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mi-tabs__content">
+    <!--[-->
+    <!--[-->
+    <div
+      id="mi-tab"
+      role="tabpanel"
+      class="mi-tab__panel demo-icon-tab-panel"
+      tabindex="-1"
+      aria-labelledby="mi-tabs-0"
+      style="display:none;"
+    >
+    </div>
+    <div
+      id="mi-tab"
+      role="tabpanel"
+      class="mi-tab__panel demo-icon-tab-panel"
+      tabindex="-1"
+      aria-labelledby="mi-tabs-1"
+      style="display:none;"
+    >
+    </div>
+    <div
+      id="mi-tab"
+      role="tabpanel"
+      class="mi-tab__panel demo-icon-tab-panel"
+      tabindex="-1"
+      aria-labelledby="mi-tabs-2"
+      style="display:none;"
+    >
+    </div>
+    <div
+      id="mi-tab"
+      role="tabpanel"
+      class="mi-tab__panel demo-icon-tab-panel"
+      tabindex="-1"
+      aria-labelledby="mi-tabs-3"
+      style="display:none;"
+    >
+    </div>
+  </div>
+</div>
+`;

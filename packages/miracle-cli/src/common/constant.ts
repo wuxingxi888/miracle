@@ -59,7 +59,7 @@ export function getPackageJson() {
   return JSON.parse(rawJson);
 }
 
-async function getVantConfigAsync() {
+async function getMiracleConfigAsync() {
   try {
     // https://github.com/nodejs/node/issues/31710
     // absolute file paths don't work on Windows
@@ -69,15 +69,15 @@ async function getVantConfigAsync() {
   }
 }
 
-const vantConfig = await getVantConfigAsync();
+const miracleConfig = await getMiracleConfigAsync();
 
-export function getVantConfig() {
-  return vantConfig;
+export function getMiracleConfig() {
+  return miracleConfig;
 }
 
 function getSrcDir() {
-  const vantConfig = getVantConfig();
-  const srcDir = vantConfig.build?.srcDir;
+  const miracleConfig = getMiracleConfig();
+  const srcDir = miracleConfig.build?.srcDir;
 
   if (srcDir) {
     if (isAbsolute(srcDir)) {

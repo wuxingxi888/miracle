@@ -1,0 +1,295 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render demo and match snapshot 1`] = `
+<!--[-->
+<div>
+  <!--[-->
+  <div
+    class="mi-cell mi-cell--clickable"
+    role="button"
+    tabindex="0"
+  >
+    <div
+      class="mi-cell__title"
+      style
+    >
+      <span>
+        Show Popup
+      </span>
+    </div>
+    <i
+      class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon"
+      style
+    >
+      <!--[-->
+    </i>
+  </div>
+  <!--[-->
+</div>
+<div>
+  <!--[-->
+  <div
+    class="mi-cell mi-cell--clickable"
+    role="button"
+    tabindex="0"
+  >
+    <div
+      class="mi-cell__title"
+      style
+    >
+      <span>
+        From Top
+      </span>
+    </div>
+    <i
+      class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon"
+      style
+    >
+      <!--[-->
+    </i>
+  </div>
+  <div
+    class="mi-cell mi-cell--clickable"
+    role="button"
+    tabindex="0"
+  >
+    <div
+      class="mi-cell__title"
+      style
+    >
+      <span>
+        From Bottom
+      </span>
+    </div>
+    <i
+      class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon"
+      style
+    >
+      <!--[-->
+    </i>
+  </div>
+  <div
+    class="mi-cell mi-cell--clickable"
+    role="button"
+    tabindex="0"
+  >
+    <div
+      class="mi-cell__title"
+      style
+    >
+      <span>
+        From Left
+      </span>
+    </div>
+    <i
+      class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon"
+      style
+    >
+      <!--[-->
+    </i>
+  </div>
+  <div
+    class="mi-cell mi-cell--clickable"
+    role="button"
+    tabindex="0"
+  >
+    <div
+      class="mi-cell__title"
+      style
+    >
+      <span>
+        From Right
+      </span>
+    </div>
+    <i
+      class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon"
+      style
+    >
+      <!--[-->
+    </i>
+  </div>
+  <!--[-->
+  <!--[-->
+  <!--[-->
+  <!--[-->
+</div>
+<div>
+  <!--[-->
+  <div
+    class="mi-cell mi-cell--clickable"
+    role="button"
+    tabindex="0"
+  >
+    <div
+      class="mi-cell__title"
+      style
+    >
+      <span>
+        Close Icon
+      </span>
+    </div>
+    <i
+      class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon"
+      style
+    >
+      <!--[-->
+    </i>
+  </div>
+  <div
+    class="mi-cell mi-cell--clickable"
+    role="button"
+    tabindex="0"
+  >
+    <div
+      class="mi-cell__title"
+      style
+    >
+      <span>
+        Custom Icon
+      </span>
+    </div>
+    <i
+      class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon"
+      style
+    >
+      <!--[-->
+    </i>
+  </div>
+  <div
+    class="mi-cell mi-cell--clickable"
+    role="button"
+    tabindex="0"
+  >
+    <div
+      class="mi-cell__title"
+      style
+    >
+      <span>
+        Icon Position
+      </span>
+    </div>
+    <i
+      class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon"
+      style
+    >
+      <!--[-->
+    </i>
+  </div>
+  <!--[-->
+  <!--[-->
+  <!--[-->
+</div>
+<div>
+  <!--[-->
+  <div
+    class="mi-cell mi-cell--clickable"
+    role="button"
+    tabindex="0"
+  >
+    <div
+      class="mi-cell__title"
+      style
+    >
+      <span>
+        Round Corner (center)
+      </span>
+    </div>
+    <i
+      class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon"
+      style
+    >
+      <!--[-->
+    </i>
+  </div>
+  <!--[-->
+  <div
+    class="mi-cell mi-cell--clickable"
+    role="button"
+    tabindex="0"
+  >
+    <div
+      class="mi-cell__title"
+      style
+    >
+      <span>
+        Round Corner (bottom)
+      </span>
+    </div>
+    <i
+      class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon"
+      style
+    >
+      <!--[-->
+    </i>
+  </div>
+  <!--[-->
+</div>
+<div>
+  <!--[-->
+  <div
+    class="mi-cell mi-cell--clickable"
+    role="button"
+    tabindex="0"
+  >
+    <div
+      class="mi-cell__title"
+      style
+    >
+      <span>
+        Listen To Click Events
+      </span>
+    </div>
+    <i
+      class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon"
+      style
+    >
+      <!--[-->
+    </i>
+  </div>
+  <!--[-->
+  <div
+    class="mi-cell mi-cell--clickable"
+    role="button"
+    tabindex="0"
+  >
+    <div
+      class="mi-cell__title"
+      style
+    >
+      <span>
+        Listen To Display Events
+      </span>
+    </div>
+    <i
+      class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon"
+      style
+    >
+      <!--[-->
+    </i>
+  </div>
+  <!--[-->
+</div>
+<div>
+  <!--[-->
+  <div
+    class="mi-cell mi-cell--clickable"
+    role="button"
+    tabindex="0"
+  >
+    <div
+      class="mi-cell__title"
+      style
+    >
+      <span>
+        Get Container
+      </span>
+    </div>
+    <i
+      class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon"
+      style
+    >
+      <!--[-->
+    </i>
+  </div>
+</div>
+`;

@@ -1,0 +1,951 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render demo and match snapshot 1`] = `
+<div class="mi-tabs mi-tabs--line">
+  <div class="mi-tabs__wrap">
+    <div
+      role="tablist"
+      class="mi-tabs__nav mi-tabs__nav--line"
+      aria-orientation="horizontal"
+    >
+      <div
+        id="mi-tabs-0"
+        role="tab"
+        class="mi-tab mi-tab--line mi-tab--active"
+        tabindex="0"
+        aria-selected="true"
+        aria-controls="mi-tab"
+      >
+        <span class="mi-tab__text mi-tab__text--ellipsis">
+          Basic Usage
+        </span>
+      </div>
+      <div
+        id="mi-tabs-1"
+        role="tab"
+        class="mi-tab mi-tab--line"
+        tabindex="-1"
+        aria-selected="false"
+        aria-controls="mi-tab"
+      >
+        <span class="mi-tab__text mi-tab__text--ellipsis">
+          Custom Index List
+        </span>
+      </div>
+      <div
+        class="mi-tabs__line"
+        style="transform: translateX(50px) translateX(-50%);"
+      >
+      </div>
+    </div>
+  </div>
+  <div class="mi-tabs__content">
+    <div
+      id="mi-tab"
+      role="tabpanel"
+      class="mi-tab__panel"
+      tabindex="0"
+      aria-labelledby="mi-tabs-0"
+      style
+    >
+      <div class="mi-index-bar">
+        <div class="mi-index-bar__sidebar">
+          <span
+            class="mi-index-bar__index"
+            data-index="A"
+          >
+            A
+          </span>
+          <span
+            class="mi-index-bar__index"
+            data-index="B"
+          >
+            B
+          </span>
+          <span
+            class="mi-index-bar__index"
+            data-index="C"
+          >
+            C
+          </span>
+          <span
+            class="mi-index-bar__index"
+            data-index="D"
+          >
+            D
+          </span>
+          <span
+            class="mi-index-bar__index"
+            data-index="E"
+          >
+            E
+          </span>
+          <span
+            class="mi-index-bar__index"
+            data-index="F"
+          >
+            F
+          </span>
+          <span
+            class="mi-index-bar__index"
+            data-index="G"
+          >
+            G
+          </span>
+          <span
+            class="mi-index-bar__index"
+            data-index="H"
+          >
+            H
+          </span>
+          <span
+            class="mi-index-bar__index"
+            data-index="I"
+          >
+            I
+          </span>
+          <span
+            class="mi-index-bar__index"
+            data-index="J"
+          >
+            J
+          </span>
+          <span
+            class="mi-index-bar__index"
+            data-index="K"
+          >
+            K
+          </span>
+          <span
+            class="mi-index-bar__index"
+            data-index="L"
+          >
+            L
+          </span>
+          <span
+            class="mi-index-bar__index"
+            data-index="M"
+          >
+            M
+          </span>
+          <span
+            class="mi-index-bar__index"
+            data-index="N"
+          >
+            N
+          </span>
+          <span
+            class="mi-index-bar__index"
+            data-index="O"
+          >
+            O
+          </span>
+          <span
+            class="mi-index-bar__index"
+            data-index="P"
+          >
+            P
+          </span>
+          <span
+            class="mi-index-bar__index"
+            data-index="Q"
+          >
+            Q
+          </span>
+          <span
+            class="mi-index-bar__index"
+            data-index="R"
+          >
+            R
+          </span>
+          <span
+            class="mi-index-bar__index"
+            data-index="S"
+          >
+            S
+          </span>
+          <span
+            class="mi-index-bar__index"
+            data-index="T"
+          >
+            T
+          </span>
+          <span
+            class="mi-index-bar__index"
+            data-index="U"
+          >
+            U
+          </span>
+          <span
+            class="mi-index-bar__index"
+            data-index="V"
+          >
+            V
+          </span>
+          <span
+            class="mi-index-bar__index"
+            data-index="W"
+          >
+            W
+          </span>
+          <span
+            class="mi-index-bar__index"
+            data-index="X"
+          >
+            X
+          </span>
+          <span
+            class="mi-index-bar__index"
+            data-index="Y"
+          >
+            Y
+          </span>
+          <span
+            class="mi-index-bar__index mi-index-bar__index--active"
+            data-index="Z"
+          >
+            Z
+          </span>
+        </div>
+        <div>
+          <div>
+            <div class="mi-index-anchor">
+              A
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div class="mi-index-anchor">
+              B
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div class="mi-index-anchor">
+              C
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div class="mi-index-anchor">
+              D
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div class="mi-index-anchor">
+              E
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div class="mi-index-anchor">
+              F
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div class="mi-index-anchor">
+              G
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div class="mi-index-anchor">
+              H
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div class="mi-index-anchor">
+              I
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div class="mi-index-anchor">
+              J
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div class="mi-index-anchor">
+              K
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div class="mi-index-anchor">
+              L
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div class="mi-index-anchor">
+              M
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div class="mi-index-anchor">
+              N
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div class="mi-index-anchor">
+              O
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div class="mi-index-anchor">
+              P
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div class="mi-index-anchor">
+              Q
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div class="mi-index-anchor">
+              R
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div class="mi-index-anchor">
+              S
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div class="mi-index-anchor">
+              T
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div class="mi-index-anchor">
+              U
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div class="mi-index-anchor">
+              V
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div class="mi-index-anchor">
+              W
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div class="mi-index-anchor">
+              X
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div class="mi-index-anchor">
+              Y
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div style="height: 0px;">
+            <div class="mi-index-anchor mi-index-anchor--sticky mi-hairline--bottom">
+              Z
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+          <div class="mi-cell">
+            <div class="mi-cell__title">
+              <span>
+                Text
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      id="mi-tab"
+      role="tabpanel"
+      class="mi-tab__panel"
+      tabindex="-1"
+      aria-labelledby="mi-tabs-1"
+      style="display: none;"
+    >
+    </div>
+  </div>
+</div>
+`;

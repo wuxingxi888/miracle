@@ -1,7 +1,7 @@
 import { parse } from 'node:path';
 import fse from 'fs-extra';
 import { logger } from 'rslog';
-import { getVantConfig, replaceExt } from '../common/index.js';
+import { getMiracleConfig, replaceExt } from '../common/index.js';
 import { compileCss } from './compile-css.js';
 import { compileLess } from './compile-less.js';
 import { compileSass } from './compile-sass.js';
@@ -32,9 +32,9 @@ async function compileFile(filePath: string) {
 
 export async function compileStyle(filePath: string) {
   const css = await compileFile(filePath);
-  const vantConfig = getVantConfig();
+  const miracleConfig = getMiracleConfig();
 
-  if (vantConfig.build?.css?.removeSourceFile) {
+  if (miracleConfig.build?.css?.removeSourceFile) {
     removeSync(filePath);
   }
 

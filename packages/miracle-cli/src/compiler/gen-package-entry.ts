@@ -5,7 +5,11 @@ import {
   smartOutputFile,
   normalizePath,
 } from '../common/index.js';
-import { SRC_DIR, getPackageJson, getVantConfig } from '../common/constant.js';
+import {
+  SRC_DIR,
+  getPackageJson,
+  getMiracleConfig,
+} from '../common/constant.js';
 
 type PathResolver = (path: string) => string;
 
@@ -69,10 +73,10 @@ export function genPackageEntry({
   pathResolver?: PathResolver;
 }) {
   const names = getComponents();
-  const vantConfig = getVantConfig();
+  const miracleConfig = getMiracleConfig();
 
-  const namedExport = vantConfig.build?.namedExport || false;
-  const skipInstall = (vantConfig.build?.skipInstall || []).map(pascalize);
+  const namedExport = miracleConfig.build?.namedExport || false;
+  const skipInstall = (miracleConfig.build?.skipInstall || []).map(pascalize);
 
   const version = process.env.PACKAGE_VERSION || getPackageJson().version;
 

@@ -1,5 +1,5 @@
 import { build } from 'vite';
-import { getPackageJson, getVantConfig } from '../common/constant.js';
+import { getPackageJson, getMiracleConfig } from '../common/constant.js';
 import { mergeCustomViteConfig } from '../common/index.js';
 import { getViteConfigForPackage } from '../config/vite.package.js';
 import type { LibraryFormats } from 'vite';
@@ -31,7 +31,7 @@ export async function compileBundles() {
   ];
 
   const bundleOptions: BundleOption[] =
-    getVantConfig().build?.bundleOptions || DEFAULT_OPTIONS;
+    getMiracleConfig().build?.bundleOptions || DEFAULT_OPTIONS;
 
   await Promise.all(
     bundleOptions.map(async (config) =>

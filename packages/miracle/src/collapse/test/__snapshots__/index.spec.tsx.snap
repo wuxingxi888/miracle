@@ -1,0 +1,26 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render slots of CollapseItem correctly 1`] = `
+<div class="mi-collapse mi-hairline--top-bottom">
+  <div class="mi-collapse-item">
+    <div
+      class="mi-cell mi-cell--clickable mi-collapse-item__title"
+      role="button"
+      tabindex="0"
+      aria-expanded="false"
+    >
+      this is icon
+      <div class="mi-cell__title">
+        this is title
+        <div class="mi-cell__label">
+          this is label
+        </div>
+      </div>
+      <div class="mi-cell__value">
+        this is value
+      </div>
+      this is right icon
+    </div>
+  </div>
+</div>
+`;

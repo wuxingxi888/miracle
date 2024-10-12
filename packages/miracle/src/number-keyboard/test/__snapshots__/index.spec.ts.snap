@@ -1,0 +1,73 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render delete slot correctly 1`] = `
+<div
+  role="button"
+  tabindex="0"
+  class="mi-key mi-key--delete"
+>
+  Custom Delete Key
+</div>
+`;
+
+exports[`should render delete slot correctly when theme is custom 1`] = `
+<div
+  role="button"
+  tabindex="0"
+  class="mi-key mi-key--large mi-key--delete"
+>
+  Custom Delete Key
+</div>
+`;
+
+exports[`should render extra key correctly when using extra-key prop 1`] = `
+<div
+  role="button"
+  tabindex="0"
+  class="mi-key"
+>
+  foo
+</div>
+`;
+
+exports[`should render extra-key slot correctly 1`] = `
+<div
+  role="button"
+  tabindex="0"
+  class="mi-key"
+>
+  Custom Extra Key
+</div>
+`;
+
+exports[`should render title and close button correctly 1`] = `
+<div class="mi-number-keyboard__header">
+  <h2 class="mi-number-keyboard__title">
+    Title
+  </h2>
+  <button
+    type="button"
+    class="mi-number-keyboard__close mi-haptics-feedback"
+  >
+    Close
+  </button>
+</div>
+`;
+
+exports[`should render title-left slot correctly 1`] = `
+<div class="mi-number-keyboard__header">
+  <span class="mi-number-keyboard__title-left">
+    Custom Title Left
+  </span>
+</div>
+`;
+
+exports[`should render zero key correctly when extra-key prop is an empty array 1`] = `
+<div
+  role="button"
+  tabindex="0"
+  class="mi-key"
+>
+  0
+</div>
+`;

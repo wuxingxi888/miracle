@@ -1,0 +1,179 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render columns-top、columns-bottom slot correctly 1`] = `
+<div class="mi-picker mi-area">
+  <div class="mi-picker__toolbar">
+    <button
+      type="button"
+      class="mi-picker__cancel mi-haptics-feedback"
+    >
+      Cancel
+    </button>
+    <button
+      type="button"
+      class="mi-picker__confirm mi-haptics-feedback"
+    >
+      Confirm
+    </button>
+  </div>
+  Top
+  <div
+    class="mi-picker__columns"
+    style="height: 264px;"
+  >
+    <div class="mi-picker-column">
+      <ul
+        style="transform: translate3d(0, 110px, 0); transition-duration: 0ms; transition-property: none;"
+        class="mi-picker-column__wrapper"
+      >
+      </ul>
+    </div>
+  </div>
+  Bottom
+</div>
+`;
+
+exports[`should render title slot correctly 1`] = `
+<div class="mi-picker__toolbar">
+  <button
+    type="button"
+    class="mi-picker__cancel mi-haptics-feedback"
+  >
+    Cancel
+  </button>
+  Custom Title
+  <button
+    type="button"
+    class="mi-picker__confirm mi-haptics-feedback"
+  >
+    Confirm
+  </button>
+</div>
+`;
+
+exports[`should render two columns when columns-num prop is two 1`] = `
+<div class="mi-picker mi-area">
+  <div class="mi-picker__toolbar">
+    <button
+      type="button"
+      class="mi-picker__cancel mi-haptics-feedback"
+    >
+      Cancel
+    </button>
+    <button
+      type="button"
+      class="mi-picker__confirm mi-haptics-feedback"
+    >
+      Confirm
+    </button>
+  </div>
+  <div
+    class="mi-picker__columns"
+    style="height: 264px;"
+  >
+    <div class="mi-picker-column">
+      <ul
+        style="transform: translate3d(0, 110px, 0); transition-duration: 0ms; transition-property: none;"
+        class="mi-picker-column__wrapper"
+      >
+        <li
+          role="button"
+          style="height: 44px;"
+          tabindex="0"
+          class="mi-picker-column__item mi-picker-column__item--selected"
+        >
+          <div class="mi-ellipsis">
+            北京市
+          </div>
+        </li>
+        <li
+          role="button"
+          style="height: 44px;"
+          tabindex="0"
+          class="mi-picker-column__item"
+        >
+          <div class="mi-ellipsis">
+            天津市
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="mi-picker-column">
+      <ul
+        style="transform: translate3d(0, 110px, 0); transition-duration: 0ms; transition-property: none;"
+        class="mi-picker-column__wrapper"
+      >
+        <li
+          role="button"
+          style="height: 44px;"
+          tabindex="0"
+          class="mi-picker-column__item mi-picker-column__item--selected"
+        >
+          <div class="mi-ellipsis">
+            北京市
+          </div>
+        </li>
+        <li
+          role="button"
+          style="height: 44px;"
+          tabindex="0"
+          class="mi-picker-column__item"
+        >
+          <div class="mi-ellipsis">
+            县
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div
+      class="mi-picker__mask"
+      style="background-size: 100% 110px;"
+    >
+    </div>
+    <div
+      class="mi-hairline-unset--top-bottom mi-picker__frame"
+      style="height: 44px;"
+    >
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should watch modelValue prop and render correctly 1`] = `
+<li
+  role="button"
+  style="height: 44px;"
+  tabindex="0"
+  class="mi-picker-column__item mi-picker-column__item--selected"
+>
+  <div class="mi-ellipsis">
+    北京市
+  </div>
+</li>
+`;
+
+exports[`should watch modelValue prop and render correctly 2`] = `
+<li
+  role="button"
+  style="height: 44px;"
+  tabindex="0"
+  class="mi-picker-column__item mi-picker-column__item--selected"
+>
+  <div class="mi-ellipsis">
+    天津市
+  </div>
+</li>
+`;
+
+exports[`should watch modelValue prop and render correctly 3`] = `
+<li
+  role="button"
+  style="height: 44px;"
+  tabindex="0"
+  class="mi-picker-column__item mi-picker-column__item--selected"
+>
+  <div class="mi-ellipsis">
+    北京市
+  </div>
+</li>
+`;

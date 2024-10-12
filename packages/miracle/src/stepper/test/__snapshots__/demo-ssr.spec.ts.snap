@@ -1,0 +1,441 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render demo and match snapshot 1`] = `
+<div>
+  <!--[-->
+  <div class="mi-cell mi-cell--center">
+    <div
+      class="mi-cell__title"
+      style
+    >
+      <span>
+        Basic Usage
+      </span>
+    </div>
+    <div class="mi-cell__value">
+      <!--[-->
+      <div
+        role="group"
+        class="mi-stepper"
+      >
+        <button
+          type="button"
+          style
+          class="mi-stepper__minus mi-stepper__minus--disabled"
+          aria-disabled="true"
+        >
+        </button>
+        <input
+          type="text"
+          role="spinbutton"
+          class="mi-stepper__input"
+          value="1"
+          style
+          inputmode="decimal"
+          autocomplete="off"
+          aria-valuemax="Infinity"
+          aria-valuemin="1"
+          aria-valuenow="1"
+        >
+        <button
+          type="button"
+          style
+          class="mi-stepper__plus mi-haptics-feedback"
+        >
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="mi-cell mi-cell--center">
+    <div
+      class="mi-cell__title"
+      style
+    >
+      <span>
+        Step
+      </span>
+    </div>
+    <div class="mi-cell__value">
+      <!--[-->
+      <div
+        role="group"
+        class="mi-stepper"
+      >
+        <button
+          type="button"
+          style
+          class="mi-stepper__minus mi-stepper__minus--disabled"
+          aria-disabled="true"
+        >
+        </button>
+        <input
+          type="text"
+          role="spinbutton"
+          class="mi-stepper__input"
+          value="1"
+          style
+          inputmode="decimal"
+          autocomplete="off"
+          aria-valuemax="Infinity"
+          aria-valuemin="1"
+          aria-valuenow="1"
+        >
+        <button
+          type="button"
+          style
+          class="mi-stepper__plus mi-haptics-feedback"
+        >
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="mi-cell mi-cell--center">
+    <div
+      class="mi-cell__title"
+      style
+    >
+      <span>
+        Range
+      </span>
+    </div>
+    <div class="mi-cell__value">
+      <!--[-->
+      <div
+        role="group"
+        class="mi-stepper"
+      >
+        <button
+          type="button"
+          style
+          class="mi-stepper__minus mi-stepper__minus--disabled"
+          aria-disabled="true"
+        >
+        </button>
+        <input
+          type="text"
+          role="spinbutton"
+          class="mi-stepper__input"
+          value="5"
+          style
+          inputmode="decimal"
+          autocomplete="off"
+          aria-valuemax="8"
+          aria-valuemin="5"
+          aria-valuenow="5"
+        >
+        <button
+          type="button"
+          style
+          class="mi-stepper__plus mi-haptics-feedback"
+        >
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="mi-cell mi-cell--center">
+    <div
+      class="mi-cell__title"
+      style
+    >
+      <span>
+        Integer
+      </span>
+    </div>
+    <div class="mi-cell__value">
+      <!--[-->
+      <div
+        role="group"
+        class="mi-stepper"
+      >
+        <button
+          type="button"
+          style
+          class="mi-stepper__minus mi-stepper__minus--disabled"
+          aria-disabled="true"
+        >
+        </button>
+        <input
+          type="tel"
+          role="spinbutton"
+          class="mi-stepper__input"
+          value="1"
+          style
+          inputmode="numeric"
+          autocomplete="off"
+          aria-valuemax="Infinity"
+          aria-valuemin="1"
+          aria-valuenow="1"
+        >
+        <button
+          type="button"
+          style
+          class="mi-stepper__plus mi-haptics-feedback"
+        >
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="mi-cell mi-cell--center">
+    <div
+      class="mi-cell__title"
+      style
+    >
+      <span>
+        Disabled
+      </span>
+    </div>
+    <div class="mi-cell__value">
+      <!--[-->
+      <div
+        role="group"
+        class="mi-stepper"
+      >
+        <button
+          type="button"
+          style
+          class="mi-stepper__minus mi-stepper__minus--disabled"
+          aria-disabled="true"
+        >
+        </button>
+        <input
+          type="text"
+          role="spinbutton"
+          class="mi-stepper__input"
+          value="1"
+          style
+          disabled
+          inputmode="decimal"
+          autocomplete="off"
+          aria-valuemax="Infinity"
+          aria-valuemin="1"
+          aria-valuenow="1"
+        >
+        <button
+          type="button"
+          style
+          class="mi-stepper__plus mi-stepper__plus--disabled"
+          aria-disabled="true"
+        >
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="mi-cell mi-cell--center">
+    <div
+      class="mi-cell__title"
+      style
+    >
+      <span>
+        Disable Input
+      </span>
+    </div>
+    <div class="mi-cell__value">
+      <!--[-->
+      <div
+        role="group"
+        class="mi-stepper"
+      >
+        <button
+          type="button"
+          style
+          class="mi-stepper__minus mi-stepper__minus--disabled"
+          aria-disabled="true"
+        >
+        </button>
+        <input
+          type="text"
+          role="spinbutton"
+          class="mi-stepper__input"
+          value="1"
+          style
+          readonly
+          inputmode="decimal"
+          autocomplete="off"
+          aria-valuemax="Infinity"
+          aria-valuemin="1"
+          aria-valuenow="1"
+        >
+        <button
+          type="button"
+          style
+          class="mi-stepper__plus mi-haptics-feedback"
+        >
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="mi-cell mi-cell--center">
+    <div
+      class="mi-cell__title"
+      style
+    >
+      <span>
+        Decimal Length
+      </span>
+    </div>
+    <div class="mi-cell__value">
+      <!--[-->
+      <div
+        role="group"
+        class="mi-stepper"
+      >
+        <button
+          type="button"
+          style
+          class="mi-stepper__minus mi-stepper__minus--disabled"
+          aria-disabled="true"
+        >
+        </button>
+        <input
+          type="text"
+          role="spinbutton"
+          class="mi-stepper__input"
+          value="1.0"
+          style
+          inputmode="decimal"
+          autocomplete="off"
+          aria-valuemax="Infinity"
+          aria-valuemin="1"
+          aria-valuenow="1.0"
+        >
+        <button
+          type="button"
+          style
+          class="mi-stepper__plus mi-haptics-feedback"
+        >
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="mi-cell mi-cell--center">
+    <div
+      class="mi-cell__title"
+      style
+    >
+      <span>
+        Custom Size
+      </span>
+    </div>
+    <div class="mi-cell__value">
+      <!--[-->
+      <div
+        role="group"
+        class="mi-stepper"
+      >
+        <button
+          type="button"
+          style="width:32px;height:32px;"
+          class="mi-stepper__minus mi-stepper__minus--disabled"
+          aria-disabled="true"
+        >
+        </button>
+        <input
+          type="text"
+          role="spinbutton"
+          class="mi-stepper__input"
+          value="1"
+          style="width:40px;height:32px;"
+          inputmode="decimal"
+          autocomplete="off"
+          aria-valuemax="Infinity"
+          aria-valuemin="1"
+          aria-valuenow="1"
+        >
+        <button
+          type="button"
+          style="width:32px;height:32px;"
+          class="mi-stepper__plus mi-haptics-feedback"
+        >
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="mi-cell mi-cell--center">
+    <div
+      class="mi-cell__title"
+      style
+    >
+      <span>
+        Before Change
+      </span>
+    </div>
+    <div class="mi-cell__value">
+      <!--[-->
+      <div
+        role="group"
+        class="mi-stepper"
+      >
+        <button
+          type="button"
+          style
+          class="mi-stepper__minus mi-stepper__minus--disabled"
+          aria-disabled="true"
+        >
+        </button>
+        <input
+          type="text"
+          role="spinbutton"
+          class="mi-stepper__input"
+          value="1"
+          style
+          inputmode="decimal"
+          autocomplete="off"
+          aria-valuemax="Infinity"
+          aria-valuemin="1"
+          aria-valuenow="1"
+        >
+        <button
+          type="button"
+          style
+          class="mi-stepper__plus mi-haptics-feedback"
+        >
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="mi-cell mi-cell--center">
+    <div
+      class="mi-cell__title"
+      style
+    >
+      <span>
+        Round Theme
+      </span>
+    </div>
+    <div class="mi-cell__value">
+      <!--[-->
+      <div
+        role="group"
+        class="mi-stepper mi-stepper--round"
+      >
+        <button
+          type="button"
+          style="width:22px;height:22px;"
+          class="mi-stepper__minus mi-stepper__minus--disabled"
+          aria-disabled="true"
+        >
+        </button>
+        <input
+          type="text"
+          role="spinbutton"
+          class="mi-stepper__input"
+          value="1"
+          style="height:22px;"
+          readonly
+          inputmode="decimal"
+          autocomplete="off"
+          aria-valuemax="Infinity"
+          aria-valuemin="1"
+          aria-valuenow="1"
+        >
+        <button
+          type="button"
+          style="width:22px;height:22px;"
+          class="mi-stepper__plus mi-haptics-feedback"
+        >
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

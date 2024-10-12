@@ -5,7 +5,7 @@ import { preventDefault } from '../utils';
 
 let totalLockCount = 0;
 
-const BODY_LOCK_CLASS = 'van-overflow-hidden';
+const BODY_LOCK_CLASS = 'mi-overflow-hidden';
 
 export function useLockScroll(
   rootRef: Ref<HTMLElement | undefined>,

@@ -5,7 +5,7 @@ import {
   pascalize,
   removeExt,
   decamelize,
-  getVantConfig,
+  getMiracleConfig,
   normalizePath,
 } from '../common/index.js';
 import { CSS_LANG } from '../common/css.js';
@@ -32,7 +32,7 @@ function genExports(demos: DemoItem[]) {
 }
 
 function genConfig(demos: DemoItem[]) {
-  const vantConfig = getVantConfig();
+  const miracleConfig = getMiracleConfig();
   const demoNames = demos.map((item) => decamelize(item.name));
 
   function demoFilter(nav: any[]) {
@@ -44,7 +44,7 @@ function genConfig(demos: DemoItem[]) {
     });
   }
 
-  const { nav, locales } = vantConfig.site;
+  const { nav, locales } = miracleConfig.site;
   if (locales) {
     Object.keys(locales).forEach((lang: string) => {
       if (locales[lang].nav) {
@@ -52,10 +52,10 @@ function genConfig(demos: DemoItem[]) {
       }
     });
   } else if (nav) {
-    vantConfig.site.nav = demoFilter(nav);
+    miracleConfig.site.nav = demoFilter(nav);
   }
 
-  return `export const config = ${JSON.stringify(vantConfig, null, 2)}`;
+  return `export const config = ${JSON.stringify(miracleConfig, null, 2)}`;
 }
 
 function genCode(components: string[]) {

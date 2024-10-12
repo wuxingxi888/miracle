@@ -1,0 +1,279 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render demo and match snapshot 1`] = `
+<div class="mi-tabs mi-tabs--line">
+  <div class="mi-tabs__wrap">
+    <div
+      role="tablist"
+      class="mi-tabs__nav mi-tabs__nav--line"
+      aria-orientation="horizontal"
+    >
+      <div
+        id="mi-tabs-0"
+        role="tab"
+        class="mi-tab mi-tab--line mi-tab--active"
+        tabindex="0"
+        aria-selected="true"
+        aria-controls="mi-tab"
+      >
+        <span class="mi-tab__text mi-tab__text--ellipsis">
+          Basic Usage
+        </span>
+      </div>
+      <div
+        id="mi-tabs-1"
+        role="tab"
+        class="mi-tab mi-tab--line"
+        tabindex="-1"
+        aria-selected="false"
+        aria-controls="mi-tab"
+      >
+        <span class="mi-tab__text mi-tab__text--ellipsis">
+          Custom Anchors
+        </span>
+      </div>
+      <div
+        id="mi-tabs-2"
+        role="tab"
+        class="mi-tab mi-tab--line"
+        tabindex="-1"
+        aria-selected="false"
+        aria-controls="mi-tab"
+      >
+        <span class="mi-tab__text mi-tab__text--ellipsis">
+          Head Drag Only
+        </span>
+      </div>
+      <div
+        class="mi-tabs__line"
+        style="transform: translateX(50px) translateX(-50%);"
+      >
+      </div>
+    </div>
+  </div>
+  <div class="mi-tabs__content">
+    <div
+      id="mi-tab"
+      role="tabpanel"
+      class="mi-tab__panel"
+      tabindex="0"
+      aria-labelledby="mi-tabs-0"
+      style
+    >
+      <div
+        class="mi-floating-panel mi-safe-area-bottom"
+        style="height: 461px; transform: translateY(calc(100% + -100px)); transition: transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);"
+      >
+        <div class="mi-floating-panel__header">
+          <div class="mi-floating-panel__header-bar">
+          </div>
+        </div>
+        <div class="mi-floating-panel__content">
+          <div class="mi-cell-group mi-hairline--top-bottom">
+            <div class="mi-cell mi-cell--large">
+              <div class="mi-cell__title">
+                <span>
+                  A
+                </span>
+              </div>
+            </div>
+            <div class="mi-cell mi-cell--large">
+              <div class="mi-cell__title">
+                <span>
+                  B
+                </span>
+              </div>
+            </div>
+            <div class="mi-cell mi-cell--large">
+              <div class="mi-cell__title">
+                <span>
+                  C
+                </span>
+              </div>
+            </div>
+            <div class="mi-cell mi-cell--large">
+              <div class="mi-cell__title">
+                <span>
+                  D
+                </span>
+              </div>
+            </div>
+            <div class="mi-cell mi-cell--large">
+              <div class="mi-cell__title">
+                <span>
+                  E
+                </span>
+              </div>
+            </div>
+            <div class="mi-cell mi-cell--large">
+              <div class="mi-cell__title">
+                <span>
+                  F
+                </span>
+              </div>
+            </div>
+            <div class="mi-cell mi-cell--large">
+              <div class="mi-cell__title">
+                <span>
+                  G
+                </span>
+              </div>
+            </div>
+            <div class="mi-cell mi-cell--large">
+              <div class="mi-cell__title">
+                <span>
+                  H
+                </span>
+              </div>
+            </div>
+            <div class="mi-cell mi-cell--large">
+              <div class="mi-cell__title">
+                <span>
+                  I
+                </span>
+              </div>
+            </div>
+            <div class="mi-cell mi-cell--large">
+              <div class="mi-cell__title">
+                <span>
+                  J
+                </span>
+              </div>
+            </div>
+            <div class="mi-cell mi-cell--large">
+              <div class="mi-cell__title">
+                <span>
+                  K
+                </span>
+              </div>
+            </div>
+            <div class="mi-cell mi-cell--large">
+              <div class="mi-cell__title">
+                <span>
+                  L
+                </span>
+              </div>
+            </div>
+            <div class="mi-cell mi-cell--large">
+              <div class="mi-cell__title">
+                <span>
+                  M
+                </span>
+              </div>
+            </div>
+            <div class="mi-cell mi-cell--large">
+              <div class="mi-cell__title">
+                <span>
+                  N
+                </span>
+              </div>
+            </div>
+            <div class="mi-cell mi-cell--large">
+              <div class="mi-cell__title">
+                <span>
+                  O
+                </span>
+              </div>
+            </div>
+            <div class="mi-cell mi-cell--large">
+              <div class="mi-cell__title">
+                <span>
+                  P
+                </span>
+              </div>
+            </div>
+            <div class="mi-cell mi-cell--large">
+              <div class="mi-cell__title">
+                <span>
+                  Q
+                </span>
+              </div>
+            </div>
+            <div class="mi-cell mi-cell--large">
+              <div class="mi-cell__title">
+                <span>
+                  R
+                </span>
+              </div>
+            </div>
+            <div class="mi-cell mi-cell--large">
+              <div class="mi-cell__title">
+                <span>
+                  S
+                </span>
+              </div>
+            </div>
+            <div class="mi-cell mi-cell--large">
+              <div class="mi-cell__title">
+                <span>
+                  T
+                </span>
+              </div>
+            </div>
+            <div class="mi-cell mi-cell--large">
+              <div class="mi-cell__title">
+                <span>
+                  U
+                </span>
+              </div>
+            </div>
+            <div class="mi-cell mi-cell--large">
+              <div class="mi-cell__title">
+                <span>
+                  V
+                </span>
+              </div>
+            </div>
+            <div class="mi-cell mi-cell--large">
+              <div class="mi-cell__title">
+                <span>
+                  W
+                </span>
+              </div>
+            </div>
+            <div class="mi-cell mi-cell--large">
+              <div class="mi-cell__title">
+                <span>
+                  X
+                </span>
+              </div>
+            </div>
+            <div class="mi-cell mi-cell--large">
+              <div class="mi-cell__title">
+                <span>
+                  Y
+                </span>
+              </div>
+            </div>
+            <div class="mi-cell mi-cell--large">
+              <div class="mi-cell__title">
+                <span>
+                  Z
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      id="mi-tab"
+      role="tabpanel"
+      class="mi-tab__panel"
+      tabindex="-1"
+      aria-labelledby="mi-tabs-1"
+      style="display: none;"
+    >
+    </div>
+    <div
+      id="mi-tab"
+      role="tabpanel"
+      class="mi-tab__panel"
+      tabindex="-1"
+      aria-labelledby="mi-tabs-2"
+      style="display: none;"
+    >
+    </div>
+  </div>
+</div>
+`;

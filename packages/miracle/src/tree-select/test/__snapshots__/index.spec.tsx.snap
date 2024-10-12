@@ -1,0 +1,116 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should change selected icon when using selected-icon prop 1`] = `
+<div class="mi-ellipsis mi-tree-select__item mi-tree-select__item--active">
+  city1
+  <i class="mi-badge__wrapper mi-icon mi-icon-foo mi-tree-select__selected">
+  </i>
+</div>
+`;
+
+exports[`should render content slot correctly 1`] = `
+<div
+  class="mi-tree-select"
+  style="height: 300px;"
+>
+  <div
+    role="tablist"
+    class="mi-sidebar mi-tree-select__nav"
+  >
+    <div
+      role="tab"
+      class="mi-sidebar-item mi-sidebar-item--select mi-tree-select__nav-item"
+      tabindex="0"
+      aria-selected="true"
+    >
+      <div class="mi-badge__wrapper mi-sidebar-item__text">
+        group1
+      </div>
+    </div>
+  </div>
+  <div class="mi-tree-select__content">
+    Custom Content
+  </div>
+</div>
+`;
+
+exports[`should render empty TreeSelect correctly 1`] = `
+<div
+  class="mi-tree-select"
+  style="height: 300px;"
+>
+  <div
+    role="tablist"
+    class="mi-sidebar mi-tree-select__nav"
+  >
+  </div>
+  <div class="mi-tree-select__content">
+  </div>
+</div>
+`;
+
+exports[`should render nav badge correctly 1`] = `
+<div
+  class="mi-tree-select"
+  style="height: 300px;"
+>
+  <div
+    role="tablist"
+    class="mi-sidebar mi-tree-select__nav"
+  >
+    <div
+      role="tab"
+      class="mi-sidebar-item mi-sidebar-item--select mi-tree-select__nav-item"
+      tabindex="0"
+      aria-selected="true"
+    >
+      <div class="mi-badge__wrapper mi-sidebar-item__text">
+        group1
+        <div class="mi-badge mi-badge--top-right mi-badge--fixed">
+          3
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mi-tree-select__content">
+  </div>
+</div>
+`;
+
+exports[`should render nav-text slot correctly 1`] = `
+<div
+  class="mi-tree-select"
+  style="height: 300px;"
+>
+  <div
+    role="tablist"
+    class="mi-sidebar mi-tree-select__nav"
+  >
+    <div
+      role="tab"
+      class="mi-sidebar-item mi-sidebar-item--select mi-tree-select__nav-item"
+      tabindex="0"
+      aria-selected="true"
+    >
+      <div class="mi-badge__wrapper mi-sidebar-item__text">
+        Custom nav text, group1
+      </div>
+    </div>
+    <div
+      role="tab"
+      class="mi-sidebar-item mi-tree-select__nav-item"
+      tabindex="0"
+      aria-selected="false"
+    >
+      <div class="mi-badge__wrapper mi-sidebar-item__text">
+        Custom nav text, group2
+      </div>
+    </div>
+  </div>
+  <div class="mi-tree-select__content">
+    <div class="mi-ellipsis mi-tree-select__item">
+      city1
+    </div>
+  </div>
+</div>
+`;

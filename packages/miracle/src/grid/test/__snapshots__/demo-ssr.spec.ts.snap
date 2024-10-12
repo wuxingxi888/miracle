@@ -1,0 +1,843 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render demo and match snapshot 1`] = `
+<!--[-->
+<div>
+  <!--[-->
+  <div
+    style
+    class="mi-grid mi-hairline--top"
+  >
+    <!--[-->
+    <!--[-->
+    <div
+      class="mi-grid-item"
+      style="flex-basis:25%;"
+    >
+      <div
+        class="mi-grid-item__content mi-grid-item__content--center mi-hairline"
+        style
+      >
+        <!--[-->
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-photo-o mi-grid-item__icon"
+          style
+        >
+          <!--[-->
+        </i>
+        <span class="mi-grid-item__text">
+          Text
+        </span>
+      </div>
+    </div>
+    <div
+      class="mi-grid-item"
+      style="flex-basis:25%;"
+    >
+      <div
+        class="mi-grid-item__content mi-grid-item__content--center mi-hairline"
+        style
+      >
+        <!--[-->
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-photo-o mi-grid-item__icon"
+          style
+        >
+          <!--[-->
+        </i>
+        <span class="mi-grid-item__text">
+          Text
+        </span>
+      </div>
+    </div>
+    <div
+      class="mi-grid-item"
+      style="flex-basis:25%;"
+    >
+      <div
+        class="mi-grid-item__content mi-grid-item__content--center mi-hairline"
+        style
+      >
+        <!--[-->
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-photo-o mi-grid-item__icon"
+          style
+        >
+          <!--[-->
+        </i>
+        <span class="mi-grid-item__text">
+          Text
+        </span>
+      </div>
+    </div>
+    <div
+      class="mi-grid-item"
+      style="flex-basis:25%;"
+    >
+      <div
+        class="mi-grid-item__content mi-grid-item__content--center mi-hairline"
+        style
+      >
+        <!--[-->
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-photo-o mi-grid-item__icon"
+          style
+        >
+          <!--[-->
+        </i>
+        <span class="mi-grid-item__text">
+          Text
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div
+    style
+    class="mi-grid mi-hairline--top"
+  >
+    <!--[-->
+    <!--[-->
+    <div
+      class="mi-grid-item"
+      style="flex-basis:33.333333333333336%;"
+    >
+      <div
+        class="mi-grid-item__content mi-grid-item__content--center mi-hairline"
+        style
+      >
+        <!--[-->
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-photo-o mi-grid-item__icon"
+          style
+        >
+          <!--[-->
+        </i>
+        <span class="mi-grid-item__text">
+          Text
+        </span>
+      </div>
+    </div>
+    <div
+      class="mi-grid-item"
+      style="flex-basis:33.333333333333336%;"
+    >
+      <div
+        class="mi-grid-item__content mi-grid-item__content--center mi-hairline"
+        style
+      >
+        <!--[-->
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-photo-o mi-grid-item__icon"
+          style
+        >
+          <!--[-->
+        </i>
+        <span class="mi-grid-item__text">
+          Text
+        </span>
+      </div>
+    </div>
+    <div
+      class="mi-grid-item"
+      style="flex-basis:33.333333333333336%;"
+    >
+      <div
+        class="mi-grid-item__content mi-grid-item__content--center mi-hairline"
+        style
+      >
+        <!--[-->
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-photo-o mi-grid-item__icon"
+          style
+        >
+          <!--[-->
+        </i>
+        <span class="mi-grid-item__text">
+          Text
+        </span>
+      </div>
+    </div>
+    <div
+      class="mi-grid-item"
+      style="flex-basis:33.333333333333336%;"
+    >
+      <div
+        class="mi-grid-item__content mi-grid-item__content--center mi-hairline"
+        style
+      >
+        <!--[-->
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-photo-o mi-grid-item__icon"
+          style
+        >
+          <!--[-->
+        </i>
+        <span class="mi-grid-item__text">
+          Text
+        </span>
+      </div>
+    </div>
+    <div
+      class="mi-grid-item"
+      style="flex-basis:33.333333333333336%;"
+    >
+      <div
+        class="mi-grid-item__content mi-grid-item__content--center mi-hairline"
+        style
+      >
+        <!--[-->
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-photo-o mi-grid-item__icon"
+          style
+        >
+          <!--[-->
+        </i>
+        <span class="mi-grid-item__text">
+          Text
+        </span>
+      </div>
+    </div>
+    <div
+      class="mi-grid-item"
+      style="flex-basis:33.333333333333336%;"
+    >
+      <div
+        class="mi-grid-item__content mi-grid-item__content--center mi-hairline"
+        style
+      >
+        <!--[-->
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-photo-o mi-grid-item__icon"
+          style
+        >
+          <!--[-->
+        </i>
+        <span class="mi-grid-item__text">
+          Text
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div
+    style
+    class="mi-grid"
+  >
+    <!--[-->
+    <div
+      class="mi-grid-item"
+      style="flex-basis:33.333333333333336%;"
+    >
+      <div
+        class="mi-grid-item__content mi-grid-item__content--center"
+        style
+      >
+        <!--[-->
+        <div
+          class="mi-image"
+          style
+        >
+          <img
+            src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg"
+            class="mi-image__img"
+            style="object-fit:contain;"
+          >
+          <div class="mi-image__loading">
+            <i
+              class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon"
+              style
+            >
+              <!--[-->
+            </i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="mi-grid-item"
+      style="flex-basis:33.333333333333336%;"
+    >
+      <div
+        class="mi-grid-item__content mi-grid-item__content--center"
+        style
+      >
+        <!--[-->
+        <div
+          class="mi-image"
+          style
+        >
+          <img
+            src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg"
+            class="mi-image__img"
+            style="object-fit:contain;"
+          >
+          <div class="mi-image__loading">
+            <i
+              class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon"
+              style
+            >
+              <!--[-->
+            </i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="mi-grid-item"
+      style="flex-basis:33.333333333333336%;"
+    >
+      <div
+        class="mi-grid-item__content mi-grid-item__content--center"
+        style
+      >
+        <!--[-->
+        <div
+          class="mi-image"
+          style
+        >
+          <img
+            src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg"
+            class="mi-image__img"
+            style="object-fit:contain;"
+          >
+          <div class="mi-image__loading">
+            <i
+              class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon"
+              style
+            >
+              <!--[-->
+            </i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div
+    style
+    class="mi-grid mi-hairline--top"
+  >
+    <!--[-->
+    <!--[-->
+    <div
+      class="mi-grid-item mi-grid-item--square"
+      style="flex-basis:25%;padding-top:25%;"
+    >
+      <div
+        class="mi-grid-item__content mi-grid-item__content--center mi-grid-item__content--square mi-hairline"
+        style
+      >
+        <!--[-->
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-photo-o mi-grid-item__icon"
+          style
+        >
+          <!--[-->
+        </i>
+        <span class="mi-grid-item__text">
+          Text
+        </span>
+      </div>
+    </div>
+    <div
+      class="mi-grid-item mi-grid-item--square"
+      style="flex-basis:25%;padding-top:25%;"
+    >
+      <div
+        class="mi-grid-item__content mi-grid-item__content--center mi-grid-item__content--square mi-hairline"
+        style
+      >
+        <!--[-->
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-photo-o mi-grid-item__icon"
+          style
+        >
+          <!--[-->
+        </i>
+        <span class="mi-grid-item__text">
+          Text
+        </span>
+      </div>
+    </div>
+    <div
+      class="mi-grid-item mi-grid-item--square"
+      style="flex-basis:25%;padding-top:25%;"
+    >
+      <div
+        class="mi-grid-item__content mi-grid-item__content--center mi-grid-item__content--square mi-hairline"
+        style
+      >
+        <!--[-->
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-photo-o mi-grid-item__icon"
+          style
+        >
+          <!--[-->
+        </i>
+        <span class="mi-grid-item__text">
+          Text
+        </span>
+      </div>
+    </div>
+    <div
+      class="mi-grid-item mi-grid-item--square"
+      style="flex-basis:25%;padding-top:25%;"
+    >
+      <div
+        class="mi-grid-item__content mi-grid-item__content--center mi-grid-item__content--square mi-hairline"
+        style
+      >
+        <!--[-->
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-photo-o mi-grid-item__icon"
+          style
+        >
+          <!--[-->
+        </i>
+        <span class="mi-grid-item__text">
+          Text
+        </span>
+      </div>
+    </div>
+    <div
+      class="mi-grid-item mi-grid-item--square"
+      style="flex-basis:25%;padding-top:25%;"
+    >
+      <div
+        class="mi-grid-item__content mi-grid-item__content--center mi-grid-item__content--square mi-hairline"
+        style
+      >
+        <!--[-->
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-photo-o mi-grid-item__icon"
+          style
+        >
+          <!--[-->
+        </i>
+        <span class="mi-grid-item__text">
+          Text
+        </span>
+      </div>
+    </div>
+    <div
+      class="mi-grid-item mi-grid-item--square"
+      style="flex-basis:25%;padding-top:25%;"
+    >
+      <div
+        class="mi-grid-item__content mi-grid-item__content--center mi-grid-item__content--square mi-hairline"
+        style
+      >
+        <!--[-->
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-photo-o mi-grid-item__icon"
+          style
+        >
+          <!--[-->
+        </i>
+        <span class="mi-grid-item__text">
+          Text
+        </span>
+      </div>
+    </div>
+    <div
+      class="mi-grid-item mi-grid-item--square"
+      style="flex-basis:25%;padding-top:25%;"
+    >
+      <div
+        class="mi-grid-item__content mi-grid-item__content--center mi-grid-item__content--square mi-hairline"
+        style
+      >
+        <!--[-->
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-photo-o mi-grid-item__icon"
+          style
+        >
+          <!--[-->
+        </i>
+        <span class="mi-grid-item__text">
+          Text
+        </span>
+      </div>
+    </div>
+    <div
+      class="mi-grid-item mi-grid-item--square"
+      style="flex-basis:25%;padding-top:25%;"
+    >
+      <div
+        class="mi-grid-item__content mi-grid-item__content--center mi-grid-item__content--square mi-hairline"
+        style
+      >
+        <!--[-->
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-photo-o mi-grid-item__icon"
+          style
+        >
+          <!--[-->
+        </i>
+        <span class="mi-grid-item__text">
+          Text
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div
+    style="padding-left:10px;"
+    class="mi-grid"
+  >
+    <!--[-->
+    <!--[-->
+    <div
+      class="mi-grid-item"
+      style="flex-basis:25%;padding-right:10px;"
+    >
+      <div
+        class="mi-grid-item__content mi-grid-item__content--center mi-grid-item__content--surround mi-hairline"
+        style
+      >
+        <!--[-->
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-photo-o mi-grid-item__icon"
+          style
+        >
+          <!--[-->
+        </i>
+        <span class="mi-grid-item__text">
+          Text
+        </span>
+      </div>
+    </div>
+    <div
+      class="mi-grid-item"
+      style="flex-basis:25%;padding-right:10px;"
+    >
+      <div
+        class="mi-grid-item__content mi-grid-item__content--center mi-grid-item__content--surround mi-hairline"
+        style
+      >
+        <!--[-->
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-photo-o mi-grid-item__icon"
+          style
+        >
+          <!--[-->
+        </i>
+        <span class="mi-grid-item__text">
+          Text
+        </span>
+      </div>
+    </div>
+    <div
+      class="mi-grid-item"
+      style="flex-basis:25%;padding-right:10px;"
+    >
+      <div
+        class="mi-grid-item__content mi-grid-item__content--center mi-grid-item__content--surround mi-hairline"
+        style
+      >
+        <!--[-->
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-photo-o mi-grid-item__icon"
+          style
+        >
+          <!--[-->
+        </i>
+        <span class="mi-grid-item__text">
+          Text
+        </span>
+      </div>
+    </div>
+    <div
+      class="mi-grid-item"
+      style="flex-basis:25%;padding-right:10px;"
+    >
+      <div
+        class="mi-grid-item__content mi-grid-item__content--center mi-grid-item__content--surround mi-hairline"
+        style
+      >
+        <!--[-->
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-photo-o mi-grid-item__icon"
+          style
+        >
+          <!--[-->
+        </i>
+        <span class="mi-grid-item__text">
+          Text
+        </span>
+      </div>
+    </div>
+    <div
+      class="mi-grid-item"
+      style="flex-basis:25%;padding-right:10px;margin-top:10px;"
+    >
+      <div
+        class="mi-grid-item__content mi-grid-item__content--center mi-grid-item__content--surround mi-hairline"
+        style
+      >
+        <!--[-->
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-photo-o mi-grid-item__icon"
+          style
+        >
+          <!--[-->
+        </i>
+        <span class="mi-grid-item__text">
+          Text
+        </span>
+      </div>
+    </div>
+    <div
+      class="mi-grid-item"
+      style="flex-basis:25%;padding-right:10px;margin-top:10px;"
+    >
+      <div
+        class="mi-grid-item__content mi-grid-item__content--center mi-grid-item__content--surround mi-hairline"
+        style
+      >
+        <!--[-->
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-photo-o mi-grid-item__icon"
+          style
+        >
+          <!--[-->
+        </i>
+        <span class="mi-grid-item__text">
+          Text
+        </span>
+      </div>
+    </div>
+    <div
+      class="mi-grid-item"
+      style="flex-basis:25%;padding-right:10px;margin-top:10px;"
+    >
+      <div
+        class="mi-grid-item__content mi-grid-item__content--center mi-grid-item__content--surround mi-hairline"
+        style
+      >
+        <!--[-->
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-photo-o mi-grid-item__icon"
+          style
+        >
+          <!--[-->
+        </i>
+        <span class="mi-grid-item__text">
+          Text
+        </span>
+      </div>
+    </div>
+    <div
+      class="mi-grid-item"
+      style="flex-basis:25%;padding-right:10px;margin-top:10px;"
+    >
+      <div
+        class="mi-grid-item__content mi-grid-item__content--center mi-grid-item__content--surround mi-hairline"
+        style
+      >
+        <!--[-->
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-photo-o mi-grid-item__icon"
+          style
+        >
+          <!--[-->
+        </i>
+        <span class="mi-grid-item__text">
+          Text
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div
+    style
+    class="mi-grid mi-hairline--top"
+  >
+    <!--[-->
+    <div
+      class="mi-grid-item"
+      style="flex-basis:33.333333333333336%;"
+    >
+      <div
+        class="mi-grid-item__content mi-grid-item__content--horizontal mi-grid-item__content--center mi-hairline"
+        style
+      >
+        <!--[-->
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-photo-o mi-grid-item__icon"
+          style
+        >
+          <!--[-->
+        </i>
+        <span class="mi-grid-item__text">
+          Text
+        </span>
+      </div>
+    </div>
+    <div
+      class="mi-grid-item"
+      style="flex-basis:33.333333333333336%;"
+    >
+      <div
+        class="mi-grid-item__content mi-grid-item__content--horizontal mi-grid-item__content--center mi-hairline"
+        style
+      >
+        <!--[-->
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-photo-o mi-grid-item__icon"
+          style
+        >
+          <!--[-->
+        </i>
+        <span class="mi-grid-item__text">
+          Text
+        </span>
+      </div>
+    </div>
+    <div
+      class="mi-grid-item"
+      style="flex-basis:33.333333333333336%;"
+    >
+      <div
+        class="mi-grid-item__content mi-grid-item__content--horizontal mi-grid-item__content--center mi-hairline"
+        style
+      >
+        <!--[-->
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-photo-o mi-grid-item__icon"
+          style
+        >
+          <!--[-->
+        </i>
+        <span class="mi-grid-item__text">
+          Text
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div
+    style
+    class="mi-grid mi-hairline--top"
+  >
+    <!--[-->
+    <div
+      class="mi-grid-item"
+      style="flex-basis:50%;"
+    >
+      <div
+        role="button"
+        class="mi-grid-item__content mi-grid-item__content--center mi-grid-item__content--clickable mi-hairline"
+        style
+        tabindex="0"
+      >
+        <!--[-->
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-home-o mi-grid-item__icon"
+          style
+        >
+          <!--[-->
+        </i>
+        <span class="mi-grid-item__text">
+          Vue Router
+        </span>
+      </div>
+    </div>
+    <div
+      class="mi-grid-item"
+      style="flex-basis:50%;"
+    >
+      <div
+        role="button"
+        class="mi-grid-item__content mi-grid-item__content--center mi-grid-item__content--clickable mi-hairline"
+        style
+        tabindex="0"
+      >
+        <!--[-->
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-search mi-grid-item__icon"
+          style
+        >
+          <!--[-->
+        </i>
+        <span class="mi-grid-item__text">
+          URL
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div
+    style
+    class="mi-grid mi-hairline--top"
+  >
+    <!--[-->
+    <div
+      class="mi-grid-item"
+      style="flex-basis:50%;"
+    >
+      <div
+        class="mi-grid-item__content mi-grid-item__content--center mi-hairline"
+        style
+      >
+        <!--[-->
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-home-o mi-grid-item__icon"
+          style
+        >
+          <!--[-->
+          <div
+            class="mi-badge mi-badge--top-right mi-badge--dot mi-badge--fixed"
+            style
+          >
+          </div>
+        </i>
+        <span class="mi-grid-item__text">
+          Text
+        </span>
+      </div>
+    </div>
+    <div
+      class="mi-grid-item"
+      style="flex-basis:50%;"
+    >
+      <div
+        class="mi-grid-item__content mi-grid-item__content--center mi-hairline"
+        style
+      >
+        <!--[-->
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-search mi-grid-item__icon"
+          style
+        >
+          <!--[-->
+          <div
+            class="mi-badge mi-badge--top-right mi-badge--fixed"
+            style
+          >
+            99+
+          </div>
+        </i>
+        <span class="mi-grid-item__text">
+          Text
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,15 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render correctly when SSR 1`] = `
+<div
+  class="mi-back-top"
+  style
+>
+  <i
+    class="mi-badge__wrapper mi-icon mi-icon-back-top mi-back-top__icon"
+    style
+  >
+    <!--[-->
+  </i>
+</div>
+`;

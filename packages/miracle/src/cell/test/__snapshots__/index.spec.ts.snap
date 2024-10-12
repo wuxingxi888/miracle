@@ -1,0 +1,67 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should change arrow direction when using arrow-direction prop 1`] = `
+"<i class="mi-badge__wrapper mi-icon mi-icon-arrow-down mi-cell__right-icon">
+  <!---->
+  <!---->
+  <!---->
+</i>"
+`;
+
+exports[`should change icon class prefix when using icon-prefix prop 1`] = `
+<div class="mi-cell">
+  <i class="mi-badge__wrapper my-icon my-icon-success mi-cell__left-icon">
+  </i>
+</div>
+`;
+
+exports[`should render extra slot correctly 1`] = `
+<div class="mi-cell">
+  Custom Extra
+</div>
+`;
+
+exports[`should render icon slot correctly 1`] = `
+<div class="mi-cell">
+  Custom Icon
+</div>
+`;
+
+exports[`should render label slot correctly 1`] = `
+<div class="mi-cell">
+  <div class="mi-cell__title">
+    <span>
+      Title
+    </span>
+    <div class="mi-cell__label">
+      Custom Label
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should render tag prop correctly 1`] = `
+"<a class="mi-cell">
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+</a>"
+`;
+
+exports[`should render title slot correctly 1`] = `
+<div class="mi-cell">
+  <div class="mi-cell__title">
+    Custom Title
+  </div>
+</div>
+`;
+
+exports[`should render value slot correctly 1`] = `
+<div class="mi-cell">
+  <div class="mi-cell__value">
+    Custom Value
+  </div>
+</div>
+`;

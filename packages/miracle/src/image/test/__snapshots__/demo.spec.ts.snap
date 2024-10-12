@@ -1,0 +1,537 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render demo and match snapshot 1`] = `
+<div>
+  <div class="mi-row">
+    <div
+      class="mi-image"
+      style="width: 100px; height: 100px;"
+    >
+      <img
+        src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg"
+        class="mi-image__img"
+      >
+      <div class="mi-image__loading">
+        <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon">
+        </i>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="mi-row">
+    <div
+      class="mi-image"
+      style="width: 100px; height: 100px;"
+    >
+      <img
+        src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg"
+        class="mi-image__img"
+      >
+      <div class="mi-image__loading">
+        <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon">
+        </i>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="mi-row">
+    <div
+      class="mi-col mi-col--8"
+      style="padding-right: 13.333333333333334px;"
+    >
+      <div
+        class="mi-image"
+        style="width: 100%; height: 27vw;"
+      >
+        <img
+          src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg"
+          class="mi-image__img"
+          style="object-fit: contain;"
+        >
+        <div class="mi-image__loading">
+          <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon">
+          </i>
+        </div>
+      </div>
+      <div class="text">
+        contain
+      </div>
+    </div>
+    <div
+      style="padding-left: 6.666666666666666px; padding-right: 6.666666666666668px;"
+      class="mi-col mi-col--8"
+    >
+      <div
+        class="mi-image"
+        style="width: 100%; height: 27vw;"
+      >
+        <img
+          src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg"
+          class="mi-image__img"
+          style="object-fit: cover;"
+        >
+        <div class="mi-image__loading">
+          <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon">
+          </i>
+        </div>
+      </div>
+      <div class="text">
+        cover
+      </div>
+    </div>
+    <div
+      style="padding-left: 13.333333333333332px;"
+      class="mi-col mi-col--8"
+    >
+      <div
+        class="mi-image"
+        style="width: 100%; height: 27vw;"
+      >
+        <img
+          src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg"
+          class="mi-image__img"
+          style="object-fit: fill;"
+        >
+        <div class="mi-image__loading">
+          <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon">
+          </i>
+        </div>
+      </div>
+      <div class="text">
+        fill
+      </div>
+    </div>
+    <div
+      class="mi-col mi-col--8"
+      style="padding-right: 10px;"
+    >
+      <div
+        class="mi-image"
+        style="width: 100%; height: 27vw;"
+      >
+        <img
+          src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg"
+          class="mi-image__img"
+          style="object-fit: none;"
+        >
+        <div class="mi-image__loading">
+          <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon">
+          </i>
+        </div>
+      </div>
+      <div class="text">
+        none
+      </div>
+    </div>
+    <div
+      style="padding-left: 10px;"
+      class="mi-col mi-col--8"
+    >
+      <div
+        class="mi-image"
+        style="width: 100%; height: 27vw;"
+      >
+        <img
+          src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg"
+          class="mi-image__img"
+          style="object-fit: scale-down;"
+        >
+        <div class="mi-image__loading">
+          <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon">
+          </i>
+        </div>
+      </div>
+      <div class="text">
+        scale-down
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="mi-row">
+    <div
+      class="mi-col mi-col--8"
+      style="padding-right: 13.333333333333334px;"
+    >
+      <div
+        class="mi-image"
+        style="width: 100%; height: 27vw;"
+      >
+        <img
+          src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg"
+          class="mi-image__img"
+          style="object-fit: cover; object-position: left;"
+        >
+        <div class="mi-image__loading">
+          <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon">
+          </i>
+        </div>
+      </div>
+      <div class="text">
+        cover
+      </div>
+      <div class="text">
+        left
+      </div>
+    </div>
+    <div
+      style="padding-left: 6.666666666666666px; padding-right: 6.666666666666668px;"
+      class="mi-col mi-col--8"
+    >
+      <div
+        class="mi-image"
+        style="width: 100%; height: 27vw;"
+      >
+        <img
+          src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg"
+          class="mi-image__img"
+          style="object-fit: cover; object-position: center;"
+        >
+        <div class="mi-image__loading">
+          <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon">
+          </i>
+        </div>
+      </div>
+      <div class="text">
+        cover
+      </div>
+      <div class="text">
+        center
+      </div>
+    </div>
+    <div
+      style="padding-left: 13.333333333333332px;"
+      class="mi-col mi-col--8"
+    >
+      <div
+        class="mi-image"
+        style="width: 100%; height: 27vw;"
+      >
+        <img
+          src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg"
+          class="mi-image__img"
+          style="object-fit: cover; object-position: right;"
+        >
+        <div class="mi-image__loading">
+          <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon">
+          </i>
+        </div>
+      </div>
+      <div class="text">
+        cover
+      </div>
+      <div class="text">
+        right
+      </div>
+    </div>
+    <div
+      class="mi-col mi-col--8"
+      style="padding-right: 13.333333333333334px;"
+    >
+      <div
+        class="mi-image"
+        style="width: 100%; height: 27vw;"
+      >
+        <img
+          src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg"
+          class="mi-image__img"
+          style="object-fit: contain; object-position: top;"
+        >
+        <div class="mi-image__loading">
+          <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon">
+          </i>
+        </div>
+      </div>
+      <div class="text">
+        contain
+      </div>
+      <div class="text">
+        top
+      </div>
+    </div>
+    <div
+      style="padding-left: 6.666666666666666px; padding-right: 6.666666666666668px;"
+      class="mi-col mi-col--8"
+    >
+      <div
+        class="mi-image"
+        style="width: 100%; height: 27vw;"
+      >
+        <img
+          src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg"
+          class="mi-image__img"
+          style="object-fit: contain; object-position: center;"
+        >
+        <div class="mi-image__loading">
+          <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon">
+          </i>
+        </div>
+      </div>
+      <div class="text">
+        contain
+      </div>
+      <div class="text">
+        center
+      </div>
+    </div>
+    <div
+      style="padding-left: 13.333333333333332px;"
+      class="mi-col mi-col--8"
+    >
+      <div
+        class="mi-image"
+        style="width: 100%; height: 27vw;"
+      >
+        <img
+          src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg"
+          class="mi-image__img"
+          style="object-fit: contain; object-position: bottom;"
+        >
+        <div class="mi-image__loading">
+          <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon">
+          </i>
+        </div>
+      </div>
+      <div class="text">
+        contain
+      </div>
+      <div class="text">
+        bottom
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="mi-row">
+    <div
+      class="mi-col mi-col--8"
+      style="padding-right: 13.333333333333334px;"
+    >
+      <div
+        class="mi-image mi-image--round"
+        style="width: 100%; height: 27vw;"
+      >
+        <img
+          src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg"
+          class="mi-image__img"
+          style="object-fit: contain;"
+        >
+        <div class="mi-image__loading">
+          <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon">
+          </i>
+        </div>
+      </div>
+      <div class="text">
+        contain
+      </div>
+    </div>
+    <div
+      style="padding-left: 6.666666666666666px; padding-right: 6.666666666666668px;"
+      class="mi-col mi-col--8"
+    >
+      <div
+        class="mi-image mi-image--round"
+        style="width: 100%; height: 27vw;"
+      >
+        <img
+          src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg"
+          class="mi-image__img"
+          style="object-fit: cover;"
+        >
+        <div class="mi-image__loading">
+          <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon">
+          </i>
+        </div>
+      </div>
+      <div class="text">
+        cover
+      </div>
+    </div>
+    <div
+      style="padding-left: 13.333333333333332px;"
+      class="mi-col mi-col--8"
+    >
+      <div
+        class="mi-image mi-image--round"
+        style="width: 100%; height: 27vw;"
+      >
+        <img
+          src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg"
+          class="mi-image__img"
+          style="object-fit: fill;"
+        >
+        <div class="mi-image__loading">
+          <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon">
+          </i>
+        </div>
+      </div>
+      <div class="text">
+        fill
+      </div>
+    </div>
+    <div
+      class="mi-col mi-col--8"
+      style="padding-right: 10px;"
+    >
+      <div
+        class="mi-image mi-image--round"
+        style="width: 100%; height: 27vw;"
+      >
+        <img
+          src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg"
+          class="mi-image__img"
+          style="object-fit: none;"
+        >
+        <div class="mi-image__loading">
+          <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon">
+          </i>
+        </div>
+      </div>
+      <div class="text">
+        none
+      </div>
+    </div>
+    <div
+      style="padding-left: 10px;"
+      class="mi-col mi-col--8"
+    >
+      <div
+        class="mi-image mi-image--round"
+        style="width: 100%; height: 27vw;"
+      >
+        <img
+          src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg"
+          class="mi-image__img"
+          style="object-fit: scale-down;"
+        >
+        <div class="mi-image__loading">
+          <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon">
+          </i>
+        </div>
+      </div>
+      <div class="text">
+        scale-down
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="mi-row">
+    <div
+      class="mi-col mi-col--8"
+      style="padding-right: 10px;"
+    >
+      <div
+        class="mi-image"
+        style="width: 100%; height: 27vw;"
+      >
+        <div class="mi-image__loading">
+          <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon">
+          </i>
+        </div>
+      </div>
+      <div class="text">
+        Default Tip
+      </div>
+    </div>
+    <div
+      style="padding-left: 10px;"
+      class="mi-col mi-col--8"
+    >
+      <div
+        class="mi-image"
+        style="width: 100%; height: 27vw;"
+      >
+        <div class="mi-image__loading">
+          <div
+            class="mi-loading mi-loading--spinner"
+            aria-live="polite"
+            aria-busy="true"
+          >
+            <span
+              class="mi-loading__spinner mi-loading__spinner--spinner"
+              style="width: 20px; height: 20px;"
+            >
+              <i class="mi-loading__line mi-loading__line--1">
+              </i>
+              <i class="mi-loading__line mi-loading__line--2">
+              </i>
+              <i class="mi-loading__line mi-loading__line--3">
+              </i>
+              <i class="mi-loading__line mi-loading__line--4">
+              </i>
+              <i class="mi-loading__line mi-loading__line--5">
+              </i>
+              <i class="mi-loading__line mi-loading__line--6">
+              </i>
+              <i class="mi-loading__line mi-loading__line--7">
+              </i>
+              <i class="mi-loading__line mi-loading__line--8">
+              </i>
+              <i class="mi-loading__line mi-loading__line--9">
+              </i>
+              <i class="mi-loading__line mi-loading__line--10">
+              </i>
+              <i class="mi-loading__line mi-loading__line--11">
+              </i>
+              <i class="mi-loading__line mi-loading__line--12">
+              </i>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="text">
+        Custom Tip
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div class="mi-row">
+    <div
+      class="mi-col mi-col--8"
+      style="padding-right: 10px;"
+    >
+      <div
+        class="mi-image"
+        style="width: 100%; height: 27vw;"
+      >
+        <img
+          src="http://x"
+          class="mi-image__img"
+        >
+        <div class="mi-image__loading">
+          <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon">
+          </i>
+        </div>
+      </div>
+      <div class="text">
+        Default Tip
+      </div>
+    </div>
+    <div
+      style="padding-left: 10px;"
+      class="mi-col mi-col--8"
+    >
+      <div
+        class="mi-image"
+        style="width: 100%; height: 27vw;"
+      >
+        <img
+          src="http://x"
+          class="mi-image__img"
+        >
+        <div class="mi-image__loading">
+          <i class="mi-badge__wrapper mi-icon mi-icon-photo mi-image__loading-icon">
+          </i>
+        </div>
+      </div>
+      <div class="text">
+        Custom Tip
+      </div>
+    </div>
+  </div>
+</div>
+`;

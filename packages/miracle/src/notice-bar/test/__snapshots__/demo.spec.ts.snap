@@ -1,0 +1,179 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render demo and match snapshot 1`] = `
+<div>
+  <div
+    role="alert"
+    class="mi-notice-bar"
+  >
+    <i class="mi-badge__wrapper mi-icon mi-icon-volume-o mi-notice-bar__left-icon">
+    </i>
+    <div
+      role="marquee"
+      class="mi-notice-bar__wrap"
+    >
+      <div
+        style="transition-duration: 0s;"
+        class="mi-notice-bar__content"
+      >
+        Technology is the common soul of the people who developed it.
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div
+    role="alert"
+    class="mi-notice-bar"
+  >
+    <div
+      role="marquee"
+      class="mi-notice-bar__wrap"
+    >
+      <div
+        style="transition-duration: 0s;"
+        class="mi-notice-bar__content"
+      >
+        Short Content
+      </div>
+    </div>
+  </div>
+  <div
+    role="alert"
+    class="mi-notice-bar"
+  >
+    <div
+      role="marquee"
+      class="mi-notice-bar__wrap"
+    >
+      <div
+        style="transition-duration: 0s;"
+        class="mi-notice-bar__content mi-ellipsis"
+      >
+        Technology is the common soul of the people who developed it.
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div
+    role="alert"
+    class="mi-notice-bar mi-notice-bar--wrapable"
+  >
+    <div
+      role="marquee"
+      class="mi-notice-bar__wrap"
+    >
+      <div
+        style="transition-duration: 0s;"
+        class="mi-notice-bar__content"
+      >
+        Technology is the common soul of the people who developed it.
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div
+    role="alert"
+    class="mi-notice-bar"
+  >
+    <div
+      role="marquee"
+      class="mi-notice-bar__wrap"
+    >
+      <div
+        style="transition-duration: 0s;"
+        class="mi-notice-bar__content"
+      >
+        Short Content
+      </div>
+    </div>
+    <i class="mi-badge__wrapper mi-icon mi-icon-cross mi-notice-bar__right-icon">
+    </i>
+  </div>
+  <div
+    role="alert"
+    class="mi-notice-bar"
+  >
+    <div
+      role="marquee"
+      class="mi-notice-bar__wrap"
+    >
+      <div
+        style="transition-duration: 0s;"
+        class="mi-notice-bar__content"
+      >
+        Short Content
+      </div>
+    </div>
+    <i class="mi-badge__wrapper mi-icon mi-icon-arrow mi-notice-bar__right-icon">
+    </i>
+  </div>
+</div>
+<div>
+  <div
+    role="alert"
+    class="mi-notice-bar"
+    style="color: rgb(25, 137, 250); background: rgb(236, 249, 255);"
+  >
+    <i class="mi-badge__wrapper mi-icon mi-icon-info-o mi-notice-bar__left-icon">
+    </i>
+    <div
+      role="marquee"
+      class="mi-notice-bar__wrap"
+    >
+      <div
+        style="transition-duration: 0s;"
+        class="mi-notice-bar__content"
+      >
+        Short Content
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <div
+    role="alert"
+    class="mi-notice-bar"
+  >
+    <i class="mi-badge__wrapper mi-icon mi-icon-volume-o mi-notice-bar__left-icon">
+    </i>
+    <div
+      role="marquee"
+      class="mi-notice-bar__wrap"
+    >
+      <div
+        style="transition-duration: 0s;"
+        class="mi-notice-bar__content mi-ellipsis"
+      >
+        <div class="mi-swipe notice-swipe">
+          <div
+            style="transition-duration: 0ms; transform: translateY(0px); height: 300px;"
+            class="mi-swipe__track mi-swipe__track--vertical"
+          >
+            <div
+              class="mi-swipe-item"
+              style="height: 100px;"
+            >
+              Content 1
+            </div>
+            <div
+              class="mi-swipe-item"
+              style="height: 100px;"
+            >
+              Content 2
+            </div>
+            <div
+              class="mi-swipe-item"
+              style="height: 100px;"
+            >
+              Content 3
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

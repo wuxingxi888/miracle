@@ -1,6 +1,6 @@
 import { logger } from 'rslog';
 import { execSync } from 'child_process';
-import { getVantConfig } from './constant.js';
+import { getMiracleConfig } from './constant.js';
 
 let hasYarnCache: boolean;
 
@@ -18,7 +18,7 @@ export function hasYarn() {
 }
 
 export function getPackageManager() {
-  const { build } = getVantConfig();
+  const { build } = getMiracleConfig();
 
   if (build?.packageManager) {
     return build?.packageManager;

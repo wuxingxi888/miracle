@@ -9,7 +9,7 @@ import { normalizePath } from './utils.js';
 import {
   SRC_DIR,
   LIB_DIR,
-  getVantConfig,
+  getMiracleConfig,
   getPackageJson,
 } from '../../common/constant.js';
 
@@ -43,10 +43,10 @@ export async function parseAndWrite(options: Options) {
 
 export function genWebStormTypes(tagPrefix?: string) {
   const pkgJson = getPackageJson();
-  const vantConfig = getVantConfig();
+  const miracleConfig = getMiracleConfig();
 
   parseAndWrite({
-    name: vantConfig.name,
+    name: miracleConfig.name,
     path: SRC_DIR,
     test: /README\.md/,
     version: pkgJson.version,

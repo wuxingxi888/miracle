@@ -1,0 +1,36 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should emit failed event when validating failed 1`] = `
+<form class="mi-form">
+  <div class="mi-cell mi-field">
+    <div class="mi-cell__value mi-field__value">
+      <div class="mi-field__body">
+        <input
+          type="text"
+          id="mi-field-input"
+          name="A"
+          class="mi-field__control"
+        >
+      </div>
+      <div class="mi-field__error-message">
+        A failed
+      </div>
+    </div>
+  </div>
+  <div class="mi-cell mi-field">
+    <div class="mi-cell__value mi-field__value">
+      <div class="mi-field__body">
+        <input
+          type="text"
+          id="mi-field-input"
+          name="B"
+          class="mi-field__control"
+        >
+      </div>
+      <div class="mi-field__error-message">
+        B failed
+      </div>
+    </div>
+  </div>
+</form>
+`;

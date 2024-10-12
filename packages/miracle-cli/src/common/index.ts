@@ -1,6 +1,6 @@
 import fse from 'fs-extra';
 import { sep, join } from 'node:path';
-import { SRC_DIR, getVantConfig } from './constant.js';
+import { SRC_DIR, getMiracleConfig } from './constant.js';
 import { type InlineConfig, loadConfigFromFile, mergeConfig } from 'vite';
 
 const { lstatSync, existsSync, readdirSync, readFileSync, outputFileSync } =
@@ -122,8 +122,8 @@ export async function mergeCustomViteConfig(
   config: InlineConfig,
   mode: 'production' | 'development',
 ): Promise<InlineConfig> {
-  const vantConfig = getVantConfig();
-  const configureVite = vantConfig.build?.configureVite;
+  const miracleConfig = getMiracleConfig();
+  const configureVite = miracleConfig.build?.configureVite;
 
   const userConfig = await loadConfigFromFile(
     {
@@ -148,4 +148,4 @@ export async function mergeCustomViteConfig(
   return config;
 }
 
-export { getVantConfig };
+export { getMiracleConfig };

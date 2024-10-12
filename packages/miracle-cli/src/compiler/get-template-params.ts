@@ -1,7 +1,7 @@
-import { getVantConfig, isDev } from '../common/index.js';
+import { getMiracleConfig, isDev } from '../common/index.js';
 
-function getSiteConfig(vantConfig: any) {
-  const siteConfig = vantConfig.site;
+function getSiteConfig(miracleConfig: any) {
+  const siteConfig = miracleConfig.site;
 
   if (siteConfig.locales) {
     return siteConfig.locales[siteConfig.defaultLang || 'en-US'];
@@ -20,8 +20,8 @@ function getTitle(config: { title: string; description?: string }) {
   return title;
 }
 
-function getHTMLMeta(vantConfig: any) {
-  const meta = vantConfig.site?.htmlMeta;
+function getHTMLMeta(miracleConfig: any) {
+  const meta = miracleConfig.site?.htmlMeta;
 
   if (meta) {
     return Object.keys(meta)
@@ -33,12 +33,12 @@ function getHTMLMeta(vantConfig: any) {
 }
 
 export function getTemplateParams() {
-  const vantConfig = getVantConfig();
-  const siteConfig = getSiteConfig(vantConfig);
+  const miracleConfig = getMiracleConfig();
+  const siteConfig = getSiteConfig(miracleConfig);
   const title = getTitle(siteConfig);
-  const headHtml = vantConfig.site?.headHtml;
-  const baiduAnalytics = vantConfig.site?.baiduAnalytics;
-  const enableVConsole = isDev() && vantConfig.site?.enableVConsole;
+  const headHtml = miracleConfig.site?.headHtml;
+  const baiduAnalytics = miracleConfig.site?.baiduAnalytics;
+  const enableVConsole = isDev() && miracleConfig.site?.enableVConsole;
 
   return {
     ...siteConfig,
@@ -49,6 +49,6 @@ export function getTemplateParams() {
     headHtml,
     baiduAnalytics,
     enableVConsole,
-    meta: getHTMLMeta(vantConfig),
+    meta: getHTMLMeta(miracleConfig),
   };
 }

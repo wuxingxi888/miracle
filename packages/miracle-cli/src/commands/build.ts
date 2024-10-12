@@ -12,7 +12,12 @@ import { compileBundles } from '../compiler/compile-bundles.js';
 import { genPackageEntry } from '../compiler/gen-package-entry.js';
 import { genStyleDepsMap } from '../compiler/gen-style-deps-map.js';
 import { genComponentStyle } from '../compiler/gen-component-style.js';
-import { SRC_DIR, LIB_DIR, ES_DIR, getVantConfig } from '../common/constant.js';
+import {
+  SRC_DIR,
+  LIB_DIR,
+  ES_DIR,
+  getMiracleConfig,
+} from '../common/constant.js';
 import { genPackageStyle } from '../compiler/gen-package-style.js';
 import { genWebStormTypes } from '../compiler/web-types/index.js';
 import {
@@ -137,7 +142,7 @@ async function buildPackageStyleEntry() {
 }
 
 async function buildBundledOutputs() {
-  const config = getVantConfig();
+  const config = getMiracleConfig();
   setModuleEnv('esmodule');
   await compileBundles();
   genWebStormTypes(config.build?.tagPrefix);

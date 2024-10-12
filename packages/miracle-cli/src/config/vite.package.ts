@@ -1,6 +1,6 @@
 import { join } from 'node:path';
 import { setBuildTarget } from '../common/index.js';
-import { CWD, ES_DIR, getVantConfig, LIB_DIR } from '../common/constant.js';
+import { CWD, ES_DIR, getMiracleConfig, LIB_DIR } from '../common/constant.js';
 import type { InlineConfig } from 'vite';
 import type { BundleOption } from '../compiler/compile-bundles.js';
 
@@ -11,7 +11,7 @@ export function getViteConfigForPackage({
 }: BundleOption): InlineConfig {
   setBuildTarget('package');
 
-  const { name, build } = getVantConfig();
+  const { name, build } = getMiracleConfig();
   const entryExtension = build?.extensions?.esm || '.js';
   const entry = join(ES_DIR, `index${entryExtension}`);
   const shouldReplaceEnv = minify || formats?.includes('umd');

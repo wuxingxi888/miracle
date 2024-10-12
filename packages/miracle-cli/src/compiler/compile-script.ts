@@ -2,7 +2,7 @@ import fse from 'fs-extra';
 import babel from '@babel/core';
 import esbuild, { type Format } from 'esbuild';
 import { sep } from 'node:path';
-import { isJsx, replaceExt, getVantConfig } from '../common/index.js';
+import { isJsx, replaceExt, getMiracleConfig } from '../common/index.js';
 import { replaceCSSImportExt } from '../common/css.js';
 import { replaceScriptImportExt } from './get-deps.js';
 
@@ -16,7 +16,7 @@ export async function compileScript(
     return;
   }
 
-  const extensionMap = getVantConfig().build?.extensions;
+  const extensionMap = getMiracleConfig().build?.extensions;
   const extension = extensionMap?.[format] || '.js';
 
   let code = readFileSync(filePath, 'utf-8');

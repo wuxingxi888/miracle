@@ -1,0 +1,218 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render demo and match snapshot 1`] = `
+<!--[-->
+<div>
+  <!--[-->
+  <div
+    role="alert"
+    class="mi-notice-bar"
+    style
+  >
+    <i
+      class="mi-badge__wrapper mi-icon mi-icon-volume-o mi-notice-bar__left-icon"
+      style
+    >
+      <!--[-->
+    </i>
+    <div
+      role="marquee"
+      class="mi-notice-bar__wrap"
+    >
+      <div
+        style="transform:;transition-duration:0s;"
+        class="mi-notice-bar__content"
+      >
+        Technology is the common soul of the people who developed it.
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div
+    role="alert"
+    class="mi-notice-bar"
+    style
+  >
+    <div
+      role="marquee"
+      class="mi-notice-bar__wrap"
+    >
+      <div
+        style="transform:;transition-duration:0s;"
+        class="mi-notice-bar__content"
+      >
+        Short Content
+      </div>
+    </div>
+  </div>
+  <div
+    role="alert"
+    class="mi-notice-bar"
+    style
+  >
+    <div
+      role="marquee"
+      class="mi-notice-bar__wrap"
+    >
+      <div
+        style="transform:;transition-duration:0s;"
+        class="mi-notice-bar__content mi-ellipsis"
+      >
+        Technology is the common soul of the people who developed it.
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div
+    role="alert"
+    class="mi-notice-bar mi-notice-bar--wrapable"
+    style
+  >
+    <div
+      role="marquee"
+      class="mi-notice-bar__wrap"
+    >
+      <div
+        style="transform:;transition-duration:0s;"
+        class="mi-notice-bar__content"
+      >
+        Technology is the common soul of the people who developed it.
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div
+    role="alert"
+    class="mi-notice-bar"
+    style
+  >
+    <div
+      role="marquee"
+      class="mi-notice-bar__wrap"
+    >
+      <div
+        style="transform:;transition-duration:0s;"
+        class="mi-notice-bar__content"
+      >
+        Short Content
+      </div>
+    </div>
+    <i
+      class="mi-badge__wrapper mi-icon mi-icon-cross mi-notice-bar__right-icon"
+      style
+    >
+      <!--[-->
+    </i>
+  </div>
+  <div
+    role="alert"
+    class="mi-notice-bar"
+    style
+  >
+    <div
+      role="marquee"
+      class="mi-notice-bar__wrap"
+    >
+      <div
+        style="transform:;transition-duration:0s;"
+        class="mi-notice-bar__content"
+      >
+        Short Content
+      </div>
+    </div>
+    <i
+      class="mi-badge__wrapper mi-icon mi-icon-arrow mi-notice-bar__right-icon"
+      style
+    >
+      <!--[-->
+    </i>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div
+    role="alert"
+    class="mi-notice-bar"
+    style="color:#1989fa;background:#ecf9ff;"
+  >
+    <i
+      class="mi-badge__wrapper mi-icon mi-icon-info-o mi-notice-bar__left-icon"
+      style
+    >
+      <!--[-->
+    </i>
+    <div
+      role="marquee"
+      class="mi-notice-bar__wrap"
+    >
+      <div
+        style="transform:;transition-duration:0s;"
+        class="mi-notice-bar__content"
+      >
+        Short Content
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div
+    role="alert"
+    class="mi-notice-bar"
+    style
+  >
+    <i
+      class="mi-badge__wrapper mi-icon mi-icon-volume-o mi-notice-bar__left-icon"
+      style
+    >
+      <!--[-->
+    </i>
+    <div
+      role="marquee"
+      class="mi-notice-bar__wrap"
+    >
+      <div
+        style="transform:;transition-duration:0s;"
+        class="mi-notice-bar__content mi-ellipsis"
+      >
+        <!--[-->
+        <div class="mi-swipe notice-swipe">
+          <div
+            style="transition-duration:500ms;transform:translateY(0px);"
+            class="mi-swipe__track mi-swipe__track--vertical"
+          >
+            <!--[-->
+            <div
+              class="mi-swipe-item"
+              style
+            >
+              <!--[-->
+              Content 1
+            </div>
+            <div
+              class="mi-swipe-item"
+              style
+            >
+              <!--[-->
+              Content 2
+            </div>
+            <div
+              class="mi-swipe-item"
+              style
+            >
+              <!--[-->
+              Content 3
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

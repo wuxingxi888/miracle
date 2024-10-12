@@ -1,0 +1,377 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render demo and match snapshot 1`] = `
+<div>
+  <div
+    class="mi-cell mi-cell--clickable"
+    role="button"
+    tabindex="0"
+  >
+    <div class="mi-cell__title">
+      <span>
+        Show Popup
+      </span>
+    </div>
+    <i class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon">
+    </i>
+  </div>
+  <transition-stub
+    name="mi-fade"
+    appear="true"
+    persisted="false"
+    css="true"
+    role="button"
+    tabindex="0"
+  >
+  </transition-stub>
+  <transition-stub
+    name="mi-fade"
+    appear="false"
+    persisted="false"
+    css="true"
+  >
+  </transition-stub>
+</div>
+<div>
+  <div
+    class="mi-cell mi-cell--clickable"
+    role="button"
+    tabindex="0"
+  >
+    <div class="mi-cell__title">
+      <span>
+        From Top
+      </span>
+    </div>
+    <i class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon">
+    </i>
+  </div>
+  <div
+    class="mi-cell mi-cell--clickable"
+    role="button"
+    tabindex="0"
+  >
+    <div class="mi-cell__title">
+      <span>
+        From Bottom
+      </span>
+    </div>
+    <i class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon">
+    </i>
+  </div>
+  <div
+    class="mi-cell mi-cell--clickable"
+    role="button"
+    tabindex="0"
+  >
+    <div class="mi-cell__title">
+      <span>
+        From Left
+      </span>
+    </div>
+    <i class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon">
+    </i>
+  </div>
+  <div
+    class="mi-cell mi-cell--clickable"
+    role="button"
+    tabindex="0"
+  >
+    <div class="mi-cell__title">
+      <span>
+        From Right
+      </span>
+    </div>
+    <i class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon">
+    </i>
+  </div>
+  <transition-stub
+    name="mi-fade"
+    appear="true"
+    persisted="false"
+    css="true"
+    role="button"
+    tabindex="0"
+  >
+  </transition-stub>
+  <transition-stub
+    name="mi-popup-slide-top"
+    appear="false"
+    persisted="false"
+    css="true"
+  >
+  </transition-stub>
+  <transition-stub
+    name="mi-fade"
+    appear="true"
+    persisted="false"
+    css="true"
+    role="button"
+    tabindex="0"
+  >
+  </transition-stub>
+  <transition-stub
+    name="mi-popup-slide-bottom"
+    appear="false"
+    persisted="false"
+    css="true"
+  >
+  </transition-stub>
+  <transition-stub
+    name="mi-fade"
+    appear="true"
+    persisted="false"
+    css="true"
+    role="button"
+    tabindex="0"
+  >
+  </transition-stub>
+  <transition-stub
+    name="mi-popup-slide-left"
+    appear="false"
+    persisted="false"
+    css="true"
+  >
+  </transition-stub>
+  <transition-stub
+    name="mi-fade"
+    appear="true"
+    persisted="false"
+    css="true"
+    role="button"
+    tabindex="0"
+  >
+  </transition-stub>
+  <transition-stub
+    name="mi-popup-slide-right"
+    appear="false"
+    persisted="false"
+    css="true"
+  >
+  </transition-stub>
+</div>
+<div>
+  <div
+    class="mi-cell mi-cell--clickable"
+    role="button"
+    tabindex="0"
+  >
+    <div class="mi-cell__title">
+      <span>
+        Close Icon
+      </span>
+    </div>
+    <i class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon">
+    </i>
+  </div>
+  <div
+    class="mi-cell mi-cell--clickable"
+    role="button"
+    tabindex="0"
+  >
+    <div class="mi-cell__title">
+      <span>
+        Custom Icon
+      </span>
+    </div>
+    <i class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon">
+    </i>
+  </div>
+  <div
+    class="mi-cell mi-cell--clickable"
+    role="button"
+    tabindex="0"
+  >
+    <div class="mi-cell__title">
+      <span>
+        Icon Position
+      </span>
+    </div>
+    <i class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon">
+    </i>
+  </div>
+  <transition-stub
+    name="mi-fade"
+    appear="true"
+    persisted="false"
+    css="true"
+    role="button"
+    tabindex="0"
+  >
+  </transition-stub>
+  <transition-stub
+    name="mi-popup-slide-bottom"
+    appear="false"
+    persisted="false"
+    css="true"
+  >
+  </transition-stub>
+  <transition-stub
+    name="mi-fade"
+    appear="true"
+    persisted="false"
+    css="true"
+    role="button"
+    tabindex="0"
+  >
+  </transition-stub>
+  <transition-stub
+    name="mi-popup-slide-bottom"
+    appear="false"
+    persisted="false"
+    css="true"
+  >
+  </transition-stub>
+  <transition-stub
+    name="mi-fade"
+    appear="true"
+    persisted="false"
+    css="true"
+    role="button"
+    tabindex="0"
+  >
+  </transition-stub>
+  <transition-stub
+    name="mi-popup-slide-bottom"
+    appear="false"
+    persisted="false"
+    css="true"
+  >
+  </transition-stub>
+</div>
+<div>
+  <div
+    class="mi-cell mi-cell--clickable"
+    role="button"
+    tabindex="0"
+  >
+    <div class="mi-cell__title">
+      <span>
+        Round Corner (center)
+      </span>
+    </div>
+    <i class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon">
+    </i>
+  </div>
+  <transition-stub
+    name="mi-fade"
+    appear="true"
+    persisted="false"
+    css="true"
+    role="button"
+    tabindex="0"
+  >
+  </transition-stub>
+  <transition-stub
+    name="mi-fade"
+    appear="false"
+    persisted="false"
+    css="true"
+  >
+  </transition-stub>
+  <div
+    class="mi-cell mi-cell--clickable"
+    role="button"
+    tabindex="0"
+  >
+    <div class="mi-cell__title">
+      <span>
+        Round Corner (bottom)
+      </span>
+    </div>
+    <i class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon">
+    </i>
+  </div>
+  <transition-stub
+    name="mi-fade"
+    appear="true"
+    persisted="false"
+    css="true"
+    role="button"
+    tabindex="0"
+  >
+  </transition-stub>
+  <transition-stub
+    name="mi-popup-slide-bottom"
+    appear="false"
+    persisted="false"
+    css="true"
+  >
+  </transition-stub>
+</div>
+<div>
+  <div
+    class="mi-cell mi-cell--clickable"
+    role="button"
+    tabindex="0"
+  >
+    <div class="mi-cell__title">
+      <span>
+        Listen To Click Events
+      </span>
+    </div>
+    <i class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon">
+    </i>
+  </div>
+  <transition-stub
+    name="mi-fade"
+    appear="true"
+    persisted="false"
+    css="true"
+    role="button"
+    tabindex="0"
+  >
+  </transition-stub>
+  <transition-stub
+    name="mi-popup-slide-bottom"
+    appear="false"
+    persisted="false"
+    css="true"
+  >
+  </transition-stub>
+  <div
+    class="mi-cell mi-cell--clickable"
+    role="button"
+    tabindex="0"
+  >
+    <div class="mi-cell__title">
+      <span>
+        Listen To Display Events
+      </span>
+    </div>
+    <i class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon">
+    </i>
+  </div>
+  <transition-stub
+    name="mi-fade"
+    appear="true"
+    persisted="false"
+    css="true"
+    role="button"
+    tabindex="0"
+  >
+  </transition-stub>
+  <transition-stub
+    name="mi-popup-slide-bottom"
+    appear="false"
+    persisted="false"
+    css="true"
+  >
+  </transition-stub>
+</div>
+<div>
+  <div
+    class="mi-cell mi-cell--clickable"
+    role="button"
+    tabindex="0"
+  >
+    <div class="mi-cell__title">
+      <span>
+        Get Container
+      </span>
+    </div>
+    <i class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon">
+    </i>
+  </div>
+</div>
+`;

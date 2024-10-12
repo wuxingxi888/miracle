@@ -1,0 +1,124 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render demo and match snapshot 1`] = `
+<!--[-->
+<div>
+  <!--[-->
+  <div class="mi-swipe-cell">
+    <div
+      class="mi-swipe-cell__wrapper"
+      style="transform:translate3d(0px, 0, 0);transition-duration:.6s;"
+    >
+      <div class="mi-swipe-cell__left">
+        <!--[-->
+        <button
+          type="button"
+          class="mi-button mi-button--primary mi-button--normal mi-button--square"
+          style
+        >
+          <div class="mi-button__content">
+            <span class="mi-button__text">
+              Select
+            </span>
+          </div>
+        </button>
+      </div>
+      <!--[-->
+      <div class="mi-cell mi-cell--borderless">
+        <div
+          class="mi-cell__title"
+          style
+        >
+          <span>
+            Cell
+          </span>
+        </div>
+        <div class="mi-cell__value">
+          <span>
+            Content
+          </span>
+        </div>
+      </div>
+      <div class="mi-swipe-cell__right">
+        <!--[-->
+        <button
+          type="button"
+          class="mi-button mi-button--danger mi-button--normal mi-button--square"
+          style
+        >
+          <div class="mi-button__content">
+            <span class="mi-button__text">
+              Delete
+            </span>
+          </div>
+        </button>
+        <button
+          type="button"
+          class="mi-button mi-button--primary mi-button--normal mi-button--square"
+          style
+        >
+          <div class="mi-button__content">
+            <span class="mi-button__text">
+              Collect
+            </span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div class="mi-swipe-cell">
+    <div
+      class="mi-swipe-cell__wrapper"
+      style="transform:translate3d(0px, 0, 0);transition-duration:.6s;"
+    >
+      <div class="mi-swipe-cell__left">
+        <!--[-->
+        <button
+          type="button"
+          class="mi-button mi-button--primary mi-button--normal mi-button--square"
+          style
+        >
+          <div class="mi-button__content">
+            <span class="mi-button__text">
+              Select
+            </span>
+          </div>
+        </button>
+      </div>
+      <!--[-->
+      <div class="mi-cell mi-cell--borderless">
+        <div
+          class="mi-cell__title"
+          style
+        >
+          <span>
+            Cell
+          </span>
+        </div>
+        <div class="mi-cell__value">
+          <span>
+            Content
+          </span>
+        </div>
+      </div>
+      <div class="mi-swipe-cell__right">
+        <!--[-->
+        <button
+          type="button"
+          class="mi-button mi-button--danger mi-button--normal mi-button--square"
+          style
+        >
+          <div class="mi-button__content">
+            <span class="mi-button__text">
+              Delete
+            </span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

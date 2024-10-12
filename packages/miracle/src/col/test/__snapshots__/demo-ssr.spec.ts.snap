@@ -1,0 +1,221 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render demo and match snapshot 1`] = `
+<!--[-->
+<div>
+  <!--[-->
+  <div class="mi-row">
+    <!--[-->
+    <div
+      style
+      class="mi-col mi-col--8"
+    >
+      <!--[-->
+      span: 8
+    </div>
+    <div
+      style
+      class="mi-col mi-col--8"
+    >
+      <!--[-->
+      span: 8
+    </div>
+    <div
+      style
+      class="mi-col mi-col--8"
+    >
+      <!--[-->
+      span: 8
+    </div>
+  </div>
+  <div class="mi-row">
+    <!--[-->
+    <div
+      style
+      class="mi-col mi-col--4"
+    >
+      <!--[-->
+      span: 4
+    </div>
+    <div
+      style
+      class="mi-col mi-col--10 mi-col--offset-4"
+    >
+      <!--[-->
+      offset: 4, span: 10
+    </div>
+  </div>
+  <div class="mi-row">
+    <!--[-->
+    <div
+      style
+      class="mi-col mi-col--12 mi-col--offset-12"
+    >
+      <!--[-->
+      offset: 12, span: 12
+    </div>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div class="mi-row">
+    <!--[-->
+    <div
+      style
+      class="mi-col mi-col--8"
+    >
+      <!--[-->
+      span: 8
+    </div>
+    <div
+      style="padding-left:10px;"
+      class="mi-col mi-col--8"
+    >
+      <!--[-->
+      span: 8
+    </div>
+    <div
+      style="padding-left:13.333333333333332px;padding-right:1.7763568394002505e-15px;"
+      class="mi-col mi-col--8"
+    >
+      <!--[-->
+      span: 8
+    </div>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div class="demo-vertical-space">
+    <div class="mi-row">
+      <!--[-->
+      <div
+        style
+        class="mi-col mi-col--12"
+      >
+        <!--[-->
+        span: 12
+      </div>
+      <div
+        style="padding-left:10px;"
+        class="mi-col mi-col--12"
+      >
+        <!--[-->
+        span: 12
+      </div>
+      <div
+        style
+        class="mi-col mi-col--12"
+      >
+        <!--[-->
+        span: 12
+      </div>
+      <div
+        style="padding-left:10px;"
+        class="mi-col mi-col--12"
+      >
+        <!--[-->
+        span: 12
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <!--[-->
+  <div class="mi-row mi-row--justify-center">
+    <!--[-->
+    <div
+      style
+      class="mi-col mi-col--6"
+    >
+      <!--[-->
+      span: 6
+    </div>
+    <div
+      style
+      class="mi-col mi-col--6"
+    >
+      <!--[-->
+      span: 6
+    </div>
+    <div
+      style
+      class="mi-col mi-col--6"
+    >
+      <!--[-->
+      span: 6
+    </div>
+  </div>
+  <div class="mi-row mi-row--justify-end">
+    <!--[-->
+    <div
+      style
+      class="mi-col mi-col--6"
+    >
+      <!--[-->
+      span: 6
+    </div>
+    <div
+      style
+      class="mi-col mi-col--6"
+    >
+      <!--[-->
+      span: 6
+    </div>
+    <div
+      style
+      class="mi-col mi-col--6"
+    >
+      <!--[-->
+      span: 6
+    </div>
+  </div>
+  <div class="mi-row mi-row--justify-space-between">
+    <!--[-->
+    <div
+      style
+      class="mi-col mi-col--6"
+    >
+      <!--[-->
+      span: 6
+    </div>
+    <div
+      style
+      class="mi-col mi-col--6"
+    >
+      <!--[-->
+      span: 6
+    </div>
+    <div
+      style
+      class="mi-col mi-col--6"
+    >
+      <!--[-->
+      span: 6
+    </div>
+  </div>
+  <div class="mi-row mi-row--justify-space-around">
+    <!--[-->
+    <div
+      style
+      class="mi-col mi-col--6"
+    >
+      <!--[-->
+      span: 6
+    </div>
+    <div
+      style
+      class="mi-col mi-col--6"
+    >
+      <!--[-->
+      span: 6
+    </div>
+    <div
+      style
+      class="mi-col mi-col--6"
+    >
+      <!--[-->
+      span: 6
+    </div>
+  </div>
+</div>
+`;
