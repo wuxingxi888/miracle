@@ -23,13 +23,12 @@ import {
   numericProp,
   makeStringProp,
   createNamespace,
-  extend,
 } from '../utils';
 
 // Components
 import { Icon } from '../icon';
 
-import { showImagePreview } from '../image-preview';
+import { showImagePreview } from '../image-preview/function-call';
 
 const [name, bem] = createNamespace('image');
 
@@ -124,14 +123,12 @@ export default defineComponent({
       }
 
       if (props.enablePreview) {
-        showImagePreview(
-          extend({
-            images: [props.src],
-            closeable: true,
-            closeOnClickImage: false,
-            closeOnClickOverlay: false,
-          }),
-        );
+        showImagePreview({
+          images: [props.src],
+          closeable: true,
+          closeOnClickImage: false,
+          closeOnClickOverlay: false,
+        });
       }
     };
 
