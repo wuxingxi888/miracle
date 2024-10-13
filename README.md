@@ -1,10 +1,23 @@
-<div class="mi-doc-card">
-  <div class="mi-doc-intro">
-    <img class="mi-doc-intro__logo" style="width: 120px; height: 120px;" src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/logo.png">
-    <h2 style="margin: 0; font-size: 36px; line-height: 60px;">Miracle UI</h2>
-    <p>轻量、可定制的移动端 Vue 组件库</p>
-  </div>
-</div>
+<p align="center">
+    <img alt="logo" src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/logo.png" width="120" height="120" style="margin-bottom: 10px;">
+</p>
+
+<h1 align="center">Miracle UI</h1>
+
+<p align="center">轻量、可定制的移动端 Vue 组件库</p>
+
+<p align="center">
+    <img src="https://img.shields.io/npm/v/@miracle/ui?style=flat-square" alt="npm version" />
+   <img src="https://codecov.io/gh/wuxingxi888/miracle/graph/badge.svg?token=FP2KLT5VRY"/> 
+    
+</p>
+
+<p align="center">
+  <a href="https://wuxingxi.top/miracle/">文档网站</a>
+  &nbsp;
+</p>
+
+---
 
 ### 介绍
 

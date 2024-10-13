@@ -1,6 +1,6 @@
 {
   "name": "@miracle/eslint-config",
-  "version": "4.0.0",
+  "version": "0.0.1",
   "description": "eslint config of Miracle",
   "main": "index.js",
   "publishConfig": {

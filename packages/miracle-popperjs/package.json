@@ -1,6 +1,6 @@
 {
   "name": "@miracle/popperjs",
-  "version": "1.3.0",
+  "version": "0.0.1",
   "description": "Pre-compiled popperjs core",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.mjs",
