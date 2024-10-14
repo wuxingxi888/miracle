@@ -1,5 +1,5 @@
 {
-  "name": "@miracle/ui",
+  "name": "@miracle-web/ui",
   "version": "0.0.1",
   "description": "Mobile UI Components built on Vue",
   "main": "lib/miracle.cjs.js",
@@ -26,6 +26,7 @@
     "open:coverage": "open test/coverage/lcov-report/index.html"
   },
   "publishConfig": {
+    "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
   "repository": {
