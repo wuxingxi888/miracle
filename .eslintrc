@@ -1,6 +1,6 @@
 {
   "root": true,
-  "extends": ["@miracle"],
+  "extends": ["@miracle-web"],
   "rules": {
     "prefer-object-spread": "off"
   }
