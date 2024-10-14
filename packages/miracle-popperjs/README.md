@@ -1,4 +1,4 @@
-# @miracle/popperjs
+# @miracle-web/popperjs
 
 @popperjs/core in commonjs format, added Object.assign polyfill.
 
@@ -6,16 +6,16 @@
 
 ```shell
 # with npm
-npm i @miracle/popperjs
+npm i @miracle-web/popperjs
 
 # with yarn
-yarn add @miracle/popperjs
+yarn add @miracle-web/popperjs
 
 # with pnpm
-pnpm add @miracle/popperjs
+pnpm add @miracle-web/popperjs
 
 # with Bun
-bun add @miracle/popperjs
+bun add @miracle-web/popperjs
 ```
 
 ## Usage

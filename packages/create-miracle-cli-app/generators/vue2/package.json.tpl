@@ -32,7 +32,7 @@
     "vue-template-compiler": "^2.6.11"
   },
   "devDependencies": {
-    "@miracle/cli": "^2.0.0",
+    "@miracle-web/cli": "^2.0.0",
     "vue": "^2.6.11",
     "vue-template-compiler": "^2.6.11"
   },

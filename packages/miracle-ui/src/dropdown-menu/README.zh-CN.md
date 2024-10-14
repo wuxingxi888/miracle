@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { DropdownMenu, DropdownItem } from 'miracle';
+import { DropdownMenu, DropdownItem } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(DropdownMenu);
@@ -235,14 +235,17 @@ import type {
   DropdownItemInstance,
   DropdownMenuInstance,
   DropdownMenuDirection,
-} from 'miracle';
+} from '@miracle-web/ui';
 ```
 
 `DropdownMenuInstance` 和 `DropdownItemInstance` 是组件实例的类型，用法如下：
 
 ```ts
 import { ref } from 'vue';
-import type { DropdownMenuInstance, DropdownItemInstance } from 'miracle';
+import type {
+  DropdownMenuInstance,
+  DropdownItemInstance,
+} from '@miracle-web/ui';
 
 const dropdownMenuRef = ref<DropdownMenuInstance>();
 const dropdownItemRef = ref<DropdownItemInstance>();

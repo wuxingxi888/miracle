@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Loading } from 'miracle';
+import { Loading } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(Loading);
@@ -114,7 +114,7 @@ app.use(Loading);
 组件导出以下类型定义：
 
 ```ts
-import type { LoadingType, LoadingProps } from 'miracle';
+import type { LoadingType, LoadingProps } from '@miracle-web/ui';
 ```
 
 ## 主题定制

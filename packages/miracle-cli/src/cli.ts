@@ -4,7 +4,7 @@ import { cliVersion } from './index.js';
 
 const program = new Command();
 
-program.version(`@miracle/cli ${cliVersion}`);
+program.version(`@miracle-web/cli ${cliVersion}`);
 
 program
   .command('dev')

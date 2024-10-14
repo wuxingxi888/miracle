@@ -2,7 +2,7 @@
 
 [English](./README.md) | 简体中文
 
-`@miracle/auto-import-resolver` 是 [unplugin-vue-components](https://github.com/unplugin/unplugin-vue-components) 的一个解析器，用于实现 Miracle 按需引入。
+`@miracle-web/auto-import-resolver` 是 [unplugin-vue-components](https://github.com/unplugin/unplugin-vue-components) 的一个解析器，用于实现 Miracle 按需引入。
 
 ### 特性
 
@@ -14,16 +14,16 @@
 
 ```shell
 # via npm
-npm i @miracle/auto-import-resolver unplugin-vue-components unplugin-auto-import -D
+npm i @miracle-web/auto-import-resolver unplugin-vue-components unplugin-auto-import -D
 
 # via yarn
-yarn add @miracle/auto-import-resolver unplugin-vue-components unplugin-auto-import -D
+yarn add @miracle-web/auto-import-resolver unplugin-vue-components unplugin-auto-import -D
 
 # via pnpm
-pnpm add @miracle/auto-import-resolver unplugin-vue-components unplugin-auto-import -D
+pnpm add @miracle-web/auto-import-resolver unplugin-vue-components unplugin-auto-import -D
 
 # via Bun
-bun add @miracle/auto-import-resolver unplugin-vue-components unplugin-auto-import -D
+bun add @miracle-web/auto-import-resolver unplugin-vue-components unplugin-auto-import -D
 ```
 
 ## 使用
@@ -34,7 +34,7 @@ bun add @miracle/auto-import-resolver unplugin-vue-components unplugin-auto-impo
 // vite.config.ts
 import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
-import { MiracleResolver } from '@miracle/auto-import-resolver';
+import { MiracleResolver } from '@miracle-web/auto-import-resolver';
 
 export default defineConfig({
   plugins: [
@@ -54,7 +54,7 @@ export default defineConfig({
 // rollup.config.js
 import AutoImport from 'unplugin-auto-import/rollup';
 import Components from 'unplugin-vue-components/rollup';
-import { MiracleResolver } from '@miracle/auto-import-resolver';
+import { MiracleResolver } from '@miracle-web/auto-import-resolver';
 
 export default {
   plugins: [
@@ -74,7 +74,7 @@ export default {
 // webpack.config.js
 import AutoImport from 'unplugin-auto-import/webpack';
 import Components from 'unplugin-vue-components/webpack';
-import { MiracleResolver } from '@miracle/auto-import-resolver';
+import { MiracleResolver } from '@miracle-web/auto-import-resolver';
 
 module.exports = {
   plugins: [
@@ -94,7 +94,7 @@ module.exports = {
 // rspack.config.js
 import AutoImport from 'unplugin-auto-import/rspack';
 import Components from 'unplugin-vue-components/rspack';
-import { MiracleResolver } from '@miracle/auto-import-resolver';
+import { MiracleResolver } from '@miracle-web/auto-import-resolver';
 
 module.exports = {
   plugins: [
@@ -114,7 +114,7 @@ module.exports = {
 // vue.config.js
 import AutoImport from 'unplugin-auto-import/webpack';
 import Components from 'unplugin-vue-components/webpack';
-import { MiracleResolver } from '@miracle/auto-import-resolver';
+import { MiracleResolver } from '@miracle-web/auto-import-resolver';
 
 module.exports = {
   configureWebpack: {
@@ -137,7 +137,7 @@ module.exports = {
 import { build } from 'esbuild';
 import AutoImport from 'unplugin-auto-import/esbuild';
 import Components from 'unplugin-vue-components/esbuild';
-import { MiracleResolver } from '@miracle/auto-import-resolver';
+import { MiracleResolver } from '@miracle-web/auto-import-resolver';
 
 build({
   plugins: [

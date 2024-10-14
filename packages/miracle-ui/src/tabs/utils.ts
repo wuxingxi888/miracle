@@ -1,4 +1,4 @@
-import { raf, cancelRaf } from '@miracle/use';
+import { raf, cancelRaf } from '@miracle-web/use';
 import { ScrollElement, getScrollTop, setScrollTop } from '../utils';
 
 export function scrollLeftTo(

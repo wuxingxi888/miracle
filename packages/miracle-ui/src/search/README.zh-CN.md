@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Search } from 'miracle';
+import { Search } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(Search);
@@ -55,7 +55,7 @@ Search 组件提供了 `search` 和 `cancel` 事件，`search` 事件在点击�
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'miracle';
+import { showToast } from '@miracle-web/ui';
 
 export default {
   setup() {
@@ -126,7 +126,7 @@ export default {
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'miracle';
+import { showToast } from '@miracle-web/ui';
 
 export default {
   setup() {
@@ -201,14 +201,14 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { SearchProps, SearchShape, SearchInstance } from 'miracle';
+import type { SearchProps, SearchShape, SearchInstance } from '@miracle-web/ui';
 ```
 
 `SearchInstance` 是组件实例的类型，用法如下：
 
 ```ts
 import { ref } from 'vue';
-import type { SearchInstance } from 'miracle';
+import type { SearchInstance } from '@miracle-web/ui';
 
 const searchRef = ref<SearchInstance>();
 

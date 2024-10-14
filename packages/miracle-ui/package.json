@@ -47,8 +47,8 @@
     "components"
   ],
   "dependencies": {
-    "@miracle/popperjs": "workspace:^",
-    "@miracle/use": "workspace:^",
+    "@miracle-web/popperjs": "workspace:^",
+    "@miracle-web/use": "workspace:^",
     "@vue/shared": "^3.5.5"
   },
   "peerDependencies": {
@@ -56,10 +56,10 @@
   },
   "devDependencies": {
     "@types/node": "^20.16.5",
-    "@miracle/area-data": "workspace:*",
-    "@miracle/cli": "workspace:*",
-    "@miracle/eslint-config": "workspace:*",
-    "@miracle/icons": "workspace:*",
+    "@miracle-web/area-data": "workspace:*",
+    "@miracle-web/cli": "workspace:*",
+    "@miracle-web/eslint-config": "workspace:*",
+    "@miracle-web/icons": "workspace:*",
     "@vitejs/plugin-vue": "^5.1.3",
     "@vitejs/plugin-vue-jsx": "^4.0.1",
     "@vitest/coverage-istanbul": "^1.6.0",

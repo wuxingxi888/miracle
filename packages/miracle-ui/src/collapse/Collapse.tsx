@@ -11,7 +11,7 @@ import {
   BORDER_TOP_BOTTOM,
   type Numeric,
 } from '../utils';
-import { useChildren } from '@miracle/use';
+import { useChildren } from '@miracle-web/use';
 import { useExpose } from '../composables/use-expose';
 
 const [name, bem] = createNamespace('collapse');

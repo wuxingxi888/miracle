@@ -12,7 +12,7 @@ import {
   makeNumericProp,
 } from '../utils';
 import { BORDER_TOP } from '../utils/constant';
-import { useChildren } from '@miracle/use';
+import { useChildren } from '@miracle-web/use';
 
 const [name, bem] = createNamespace('grid');
 

@@ -10,7 +10,7 @@
 
 ```js
 import { ref } from 'vue';
-import { useEventListener } from '@miracle/use';
+import { useEventListener } from '@miracle-web/use';
 
 export default {
   setup() {
@@ -38,7 +38,7 @@ export default {
 
 ```js
 import { ref } from 'vue';
-import { useEventListener } from '@miracle/use';
+import { useEventListener } from '@miracle-web/use';
 
 export default {
   setup() {

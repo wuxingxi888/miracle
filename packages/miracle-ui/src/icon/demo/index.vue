@@ -4,7 +4,7 @@ import MiTabs from '../../tabs';
 import MiTab from '../../tab';
 import MiRow from '../../row';
 import MiCol from '../../col';
-import icons from '@miracle/icons';
+import icons from '@miracle-web/icons';
 import { ref } from 'vue';
 import { cdnURL, useTranslate } from '../../../docs/site';
 

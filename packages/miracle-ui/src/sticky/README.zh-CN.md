@@ -10,7 +10,7 @@ Sticky 组件与 CSS 中 `position: sticky` 属性实现的效果一致，当组
 
 ```js
 import { createApp } from 'vue';
-import { Sticky } from 'miracle';
+import { Sticky } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(Sticky);
@@ -93,7 +93,7 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { StickyProps, StickyPosition } from 'miracle';
+import type { StickyProps, StickyPosition } from '@miracle-web/ui';
 ```
 
 ## 主题定制

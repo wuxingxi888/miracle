@@ -7,7 +7,7 @@
 <p align="center">轻量、可定制的移动端 Vue 组件库</p>
 
 <p align="center">
-    <img src="https://img.shields.io/npm/v/@miracle/ui?style=flat-square" alt="npm version" />
+    <img src="https://img.shields.io/npm/v/@miracle-web/ui?style=flat-square" alt="npm version" />
    <img src="https://codecov.io/gh/wuxingxi888/miracle/graph/badge.svg?token=FP2KLT5VRY"/> 
     
 </p>
@@ -67,7 +67,7 @@ npm create rsbuild@latest
 
 | 名称 | 框架 | 发布时间 | 最新版 | 维护状态 |
 | --- | --- | --- | --- | --- |
-| Miracle UI 1 | Vue 3 | `2024.3` | ![](https://img.shields.io/npm/v/vant/latest?style=flat-square) | 开发中，持续迭代新功能 |
+| Miracle UI 1 | Vue 3 | `2024.3` | ![](https://img.shields.io/npm/v/@miracle-web/ui?style=flat-square) | 开发中，持续迭代新功能 |
 
 ## 链接
 

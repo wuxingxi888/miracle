@@ -14,7 +14,7 @@
 
 ```js
 import { ref, onMounted } from 'vue';
-import { useRect } from '@miracle/use';
+import { useRect } from '@miracle-web/use';
 
 export default {
   setup() {

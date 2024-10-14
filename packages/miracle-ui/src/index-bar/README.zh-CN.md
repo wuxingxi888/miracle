@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { IndexBar, IndexAnchor } from 'miracle';
+import { IndexBar, IndexAnchor } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(IndexBar);
@@ -112,14 +112,14 @@ import type {
   IndexBarProps,
   IndexAnchorProps,
   IndexBarInstance,
-} from 'miracle';
+} from '@miracle-web/ui';
 ```
 
 `IndexBarInstance` 是组件实例的类型，用法如下：
 
 ```ts
 import { ref } from 'vue';
-import type { IndexBarInstance } from 'miracle';
+import type { IndexBarInstance } from '@miracle-web/ui';
 
 const indexBarRef = ref<IndexBarInstance>();
 

@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Picker } from 'miracle';
+import { Picker } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(Picker);
@@ -39,7 +39,7 @@ Picker 组件通过 `columns` 属性配置选项数据，`columns` 是一个包�
 ```
 
 ```js
-import { showToast } from 'miracle';
+import { showToast } from '@miracle-web/ui';
 
 export default {
   setup() {
@@ -131,7 +131,7 @@ export default {
 ```
 
 ```js
-import { showToast } from 'miracle';
+import { showToast } from '@miracle-web/ui';
 
 export default {
   setup() {
@@ -430,14 +430,14 @@ import type {
   PickerCancelEventParams,
   PickerChangeEventParams,
   PickerConfirmEventParams,
-} from 'miracle';
+} from '@miracle-web/ui';
 ```
 
 `PickerInstance` 是组件实例的类型，用法如下：
 
 ```ts
 import { ref } from 'vue';
-import type { PickerInstance } from 'miracle';
+import type { PickerInstance } from '@miracle-web/ui';
 
 const pickerRef = ref<PickerInstance>();
 

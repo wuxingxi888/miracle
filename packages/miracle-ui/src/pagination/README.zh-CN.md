@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Pagination } from 'miracle';
+import { Pagination } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(Pagination);
@@ -111,7 +111,7 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { PaginationMode, PaginationProps } from 'miracle';
+import type { PaginationMode, PaginationProps } from '@miracle-web/ui';
 ```
 
 ## 主题定制

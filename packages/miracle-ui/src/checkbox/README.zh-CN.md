@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Checkbox, CheckboxGroup } from 'miracle';
+import { Checkbox, CheckboxGroup } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(Checkbox);
@@ -397,7 +397,7 @@ export default {
 
 ```js
 import { ref } from 'vue';
-import type { CheckboxGroupInstance } from 'miracle';
+import type { CheckboxGroupInstance } from '@miracle-web/ui';
 
 const checkboxGroupRef = ref<CheckboxGroupInstance>();
 
@@ -441,14 +441,14 @@ import type {
   CheckboxGroupInstance,
   CheckboxGroupDirection,
   CheckboxGroupToggleAllOptions,
-} from 'miracle';
+} from '@miracle-web/ui';
 ```
 
 `CheckboxInstance` 和 `CheckboxGroupInstance` 是组件实例的类型，用法如下：
 
 ```ts
 import { ref } from 'vue';
-import type { CheckboxInstance, CheckboxGroupInstance } from 'miracle';
+import type { CheckboxInstance, CheckboxGroupInstance } from '@miracle-web/ui';
 
 const checkboxRef = ref<CheckboxInstance>();
 const checkboxGroupRef = ref<CheckboxGroupInstance>();

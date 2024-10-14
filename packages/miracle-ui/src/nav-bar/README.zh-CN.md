@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { NavBar } from 'miracle';
+import { NavBar } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(NavBar);
@@ -66,7 +66,7 @@ export default {
 ```
 
 ```js
-import { showToast } from 'miracle';
+import { showToast } from '@miracle-web/ui';
 
 export default {
   setup() {
@@ -146,7 +146,7 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { NavBarProps } from 'miracle';
+import type { NavBarProps } from '@miracle-web/ui';
 ```
 
 ## 主题定制

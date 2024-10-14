@@ -26,7 +26,7 @@ import {
 } from './utils';
 
 // Composables
-import { useRect, useToggle } from '@miracle/use';
+import { useRect, useToggle } from '@miracle-web/use';
 import { useExpose } from '../composables/use-expose';
 import { useHeight } from '../composables/use-height';
 

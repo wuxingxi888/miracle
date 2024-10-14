@@ -216,7 +216,7 @@ module.exports = {
 
 注意，由于 `miracle.config.mjs` 文件会被打包到文档网站的代码中，因此 `configureVite` 中不允许引用 vite 插件。
 
-如果需要配置 vite 插件，可以在 `miracle.config.mjs` 的同级目录下创建 `vite.config.ts` 文件，在该文件中你可以添加任意的 vite 配置（该特性从 @miracle/cli 5.1.0 版本开始支持）。
+如果需要配置 vite 插件，可以在 `miracle.config.mjs` 的同级目录下创建 `vite.config.ts` 文件，在该文件中你可以添加任意的 vite 配置
 
 ### build.packageManager
 

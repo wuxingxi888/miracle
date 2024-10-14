@@ -19,7 +19,7 @@ import {
 import { COLLAPSE_KEY } from '../collapse/Collapse';
 
 // Composables
-import { raf, doubleRaf, useParent } from '@miracle/use';
+import { raf, doubleRaf, useParent } from '@miracle-web/use';
 import { useExpose } from '../composables/use-expose';
 import { useLazyRender } from '../composables/use-lazy-render';
 

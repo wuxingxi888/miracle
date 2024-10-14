@@ -17,7 +17,7 @@ import {
 } from '../utils';
 
 // Composables
-import { useEventListener, useScrollParent } from '@miracle/use';
+import { useEventListener, useScrollParent } from '@miracle-web/use';
 import { useTouch } from '../composables/use-touch';
 
 // Components

@@ -13,7 +13,11 @@ import {
 } from '../utils';
 
 // Composables
-import { useRect, useCustomFieldValue, useEventListener } from '@miracle/use';
+import {
+  useRect,
+  useCustomFieldValue,
+  useEventListener,
+} from '@miracle-web/use';
 import { useRefs } from '../composables/use-refs';
 import { useTouch } from '../composables/use-touch';
 

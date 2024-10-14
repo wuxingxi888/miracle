@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Button } from 'miracle';
+import { Button } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(Button);
@@ -213,7 +213,7 @@ import type {
   ButtonProps,
   ButtonNativeType,
   ButtonIconPosition,
-} from 'miracle';
+} from '@miracle-web/ui';
 ```
 
 ## 主题定制

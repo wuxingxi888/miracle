@@ -4,14 +4,14 @@
 
 ```shell
 # with npm
-npm i @miracle/icons
+npm i @miracle-web/icons
 
 # with yarn
-yarn add @miracle/icons
+yarn add @miracle-web/icons
 
 # with pnpm
-pnpm add @miracle/icons
+pnpm add @miracle-web/icons
 
 # with Bun
-bun add @miracle/icons
+bun add @miracle-web/icons
 ```

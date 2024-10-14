@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Form, Field, CellGroup } from 'miracle';
+import { Form, Field, CellGroup } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(Form);
@@ -117,7 +117,7 @@ export default {
 
 ```js
 import { ref } from 'vue';
-import { closeToast, showLoadingToast } from 'miracle';
+import { closeToast, showLoadingToast } from '@miracle-web/ui';
 
 export default {
   setup() {
@@ -458,7 +458,7 @@ export default {
 
 ```js
 import { ref } from 'vue';
-import { areaList } from '@miracle/area-data';
+import { areaList } from '@miracle-web/area-data';
 
 export default {
   setup() {
@@ -590,14 +590,14 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { FormProps, FormInstance } from 'miracle';
+import type { FormProps, FormInstance } from '@miracle-web/ui';
 ```
 
 `FormInstance` 是组件实例的类型，用法如下：
 
 ```ts
 import { ref } from 'vue';
-import type { FormInstance } from 'miracle';
+import type { FormInstance } from '@miracle-web/ui';
 
 const formRef = ref<FormInstance>();
 

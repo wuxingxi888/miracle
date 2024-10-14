@@ -4,7 +4,7 @@ import MiButton from '../../button';
 import MiSpace from '../../space';
 import { useTranslate } from '../../../docs/site';
 import { ref, watch } from 'vue';
-import { useToggle } from '@miracle/use';
+import { useToggle } from '@miracle-web/use';
 
 const t = useTranslate({
   'zh-CN': {

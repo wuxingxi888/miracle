@@ -6,16 +6,16 @@
 
 ```shell
 # with npm
-npm i @miracle/touch-emulator
+npm i @miracle-web/touch-emulator
 
 # with yarn
-yarn add @miracle/touch-emulator
+yarn add @miracle-web/touch-emulator
 
 # with pnpm
-pnpm add @miracle/touch-emulator
+pnpm add @miracle-web/touch-emulator
 
 # with Bun
-bun add @miracle/touch-emulator
+bun add @miracle-web/touch-emulator
 ```
 
 ## 使用指南
@@ -23,13 +23,13 @@ bun add @miracle/touch-emulator
 直接在代码中引入模块即可，模块会自动完成初始化并生效
 
 ```js
-import '@miracle/touch-emulator';
+import '@miracle-web/touch-emulator';
 ```
 
 ## CDN 引入
 
 ```html
-<script src="https://fastly.jsdelivr.net/npm/@miracle/touch-emulator"></script>
+<script src="https://fastly.jsdelivr.net/npm/@miracle-web/touch-emulator"></script>
 ```
 
 ## 禁用 touch 模拟

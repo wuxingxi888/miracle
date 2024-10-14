@@ -12,7 +12,7 @@ import { createNamespace } from '../utils';
 import { SWIPE_KEY } from '../swipe/Swipe';
 
 // Composables
-import { useParent } from '@miracle/use';
+import { useParent } from '@miracle-web/use';
 import { useExpose } from '../composables/use-expose';
 
 const [name, bem] = createNamespace('swipe-item');

@@ -3,7 +3,7 @@
  * license at https://github.com/hilongjw/vue-lazyload/blob/master/LICENSE
  */
 
-import { inBrowser } from '@miracle/use';
+import { inBrowser } from '@miracle-web/use';
 
 export const hasIntersectionObserver =
   inBrowser &&

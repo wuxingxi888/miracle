@@ -6,7 +6,7 @@ import {
   makeStringProp,
   extend,
 } from '../utils';
-import { useParent } from '@miracle/use';
+import { useParent } from '@miracle-web/use';
 import { ROW_KEY } from '../row/Row';
 
 const [name, bem] = createNamespace('col');

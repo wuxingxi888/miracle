@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { FloatingBubble } from 'miracle';
+import { FloatingBubble } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(FloatingBubble);
@@ -27,7 +27,7 @@ app.use(FloatingBubble);
 ```
 
 ```js
-import { showToast } from 'miracle';
+import { showToast } from '@miracle-web/ui';
 
 export default {
   setup() {
@@ -53,7 +53,7 @@ export default {
 ```
 
 ```js
-import { showToast } from 'miracle';
+import { showToast } from '@miracle-web/ui';
 
 export default {
   setup() {
@@ -120,7 +120,7 @@ export type {
   FloatingBubbleAxis,
   FloatingBubbleMagnetic,
   FloatingBubbleOffset,
-} from 'miracle';
+} from '@miracle-web/ui';
 ```
 
 ## 主题定制

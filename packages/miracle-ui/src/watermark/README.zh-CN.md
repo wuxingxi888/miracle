@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Watermark } from 'miracle';
+import { Watermark } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(Watermark);
@@ -117,7 +117,7 @@ app.use(Watermark);
 组件导出以下类型定义：
 
 ```ts
-import type { WaterProps } from 'miracle';
+import type { WaterProps } from '@miracle-web/ui';
 ```
 
 ## 主题定制

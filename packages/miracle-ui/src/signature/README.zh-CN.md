@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Signature } from 'miracle';
+import { Signature } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(Signature);
@@ -32,7 +32,7 @@ app.use(Signature);
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'miracle';
+import { showToast } from '@miracle-web/ui';
 
 export default {
   setup() {
@@ -114,14 +114,14 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { SignatureProps, SignatureInstance } from 'miracle';
+import type { SignatureProps, SignatureInstance } from '@miracle-web/ui';
 ```
 
 `SignatureInstance` 是组件实例的类型，用法如下：
 
 ```ts
 import { ref } from 'vue';
-import type { SignatureInstance } from 'miracle';
+import type { SignatureInstance } from '@miracle-web/ui';
 
 const signatureRef = ref<SignatureInstance>();
 

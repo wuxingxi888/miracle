@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Tabbar, TabbarItem } from 'miracle';
+import { Tabbar, TabbarItem } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(Tabbar);
@@ -145,7 +145,7 @@ export default {
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'miracle';
+import { showToast } from '@miracle-web/ui';
 
 export default {
   setup() {
@@ -220,7 +220,7 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { TabbarProps, TabbarItemProps } from 'miracle';
+import type { TabbarProps, TabbarItemProps } from '@miracle-web/ui';
 ```
 
 ## 主题定制

@@ -11,7 +11,7 @@ import { createNamespace, extend, isObject, numericProp } from '../utils';
 import { TABBAR_KEY } from '../tabbar/Tabbar';
 
 // Composables
-import { useParent } from '@miracle/use';
+import { useParent } from '@miracle-web/use';
 import { routeProps, useRoute } from '../composables/use-route';
 
 // Components

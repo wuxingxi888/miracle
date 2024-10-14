@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { PullRefresh } from 'miracle';
+import { PullRefresh } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(PullRefresh);
@@ -30,7 +30,7 @@ app.use(PullRefresh);
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'miracle';
+import { showToast } from '@miracle-web/ui';
 
 export default {
   setup() {
@@ -218,7 +218,7 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { PullRefreshProps } from 'miracle';
+import type { PullRefreshProps } from '@miracle-web/ui';
 ```
 
 ## 主题定制

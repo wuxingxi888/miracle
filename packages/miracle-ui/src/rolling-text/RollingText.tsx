@@ -7,7 +7,7 @@ import {
 } from 'vue';
 
 // Utils
-import { raf } from '@miracle/use';
+import { raf } from '@miracle-web/use';
 import {
   createNamespace,
   makeArrayProp,

@@ -1,6 +1,6 @@
 import { nextTick } from 'vue';
 import { trigger } from './event';
-import { inBrowser } from '@miracle/use';
+import { inBrowser } from '@miracle-web/use';
 import { vi } from 'vitest';
 
 function mockHTMLElementOffset() {

@@ -16,7 +16,7 @@ import {
   SkeletonImage,
   SkeletonAvatar,
   SkeletonParagraph,
-} from 'miracle';
+} from '@miracle-web/ui';
 
 const app = createApp();
 app.use(Skeleton);
@@ -156,7 +156,7 @@ import type {
   SkeletonImageShape,
   SkeletonAvatarShape,
   SkeletonParagraphProps,
-} from 'miracle';
+} from '@miracle-web/ui';
 ```
 
 ## 主题定制

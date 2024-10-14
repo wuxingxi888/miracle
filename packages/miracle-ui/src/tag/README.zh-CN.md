@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Tag } from 'miracle';
+import { Tag } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(Tag);
@@ -135,7 +135,7 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { TagSize, TagType, TagProps } from 'miracle';
+import type { TagSize, TagType, TagProps } from '@miracle-web/ui';
 ```
 
 ## 主题定制

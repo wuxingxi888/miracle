@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Divider } from 'miracle';
+import { Divider } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(Divider);
@@ -97,7 +97,7 @@ app.use(Divider);
 组件导出以下类型定义：
 
 ```ts
-import type { DividerProps, DividerContentPosition } from 'miracle';
+import type { DividerProps, DividerContentPosition } from '@miracle-web/ui';
 ```
 
 ## 主题定制

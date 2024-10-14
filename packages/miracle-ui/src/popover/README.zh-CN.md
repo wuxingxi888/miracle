@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Popover } from 'miracle';
+import { Popover } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(Popover);
@@ -32,7 +32,7 @@ app.use(Popover);
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'miracle';
+import { showToast } from '@miracle-web/ui';
 
 export default {
   setup() {
@@ -267,7 +267,7 @@ export default {
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'miracle';
+import { showToast } from '@miracle-web/ui';
 
 export default {
   setup() {
@@ -352,7 +352,7 @@ import type {
   PopoverActionsDirection,
   PopoverTrigger,
   PopoverPlacement,
-} from 'miracle';
+} from '@miracle-web/ui';
 ```
 
 ## 主题定制

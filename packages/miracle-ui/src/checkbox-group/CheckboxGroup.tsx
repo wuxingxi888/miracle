@@ -15,7 +15,7 @@ import {
 } from '../utils';
 
 // Composables
-import { useChildren, useCustomFieldValue } from '@miracle/use';
+import { useChildren, useCustomFieldValue } from '@miracle-web/use';
 import { useExpose } from '../composables/use-expose';
 
 // Types

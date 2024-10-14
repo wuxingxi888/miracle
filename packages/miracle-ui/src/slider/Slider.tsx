@@ -22,7 +22,11 @@ import {
 } from '../utils';
 
 // Composables
-import { useRect, useCustomFieldValue, useEventListener } from '@miracle/use';
+import {
+  useRect,
+  useCustomFieldValue,
+  useEventListener,
+} from '@miracle-web/use';
 import { useTouch } from '../composables/use-touch';
 
 const [name, bem] = createNamespace('slider');

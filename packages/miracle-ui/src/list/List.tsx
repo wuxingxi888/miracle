@@ -20,7 +20,7 @@ import {
 } from '../utils';
 
 // Composables
-import { useRect, useScrollParent, useEventListener } from '@miracle/use';
+import { useRect, useScrollParent, useEventListener } from '@miracle-web/use';
 import { useExpose } from '../composables/use-expose';
 import { useTabStatus } from '../composables/use-tab-status';
 

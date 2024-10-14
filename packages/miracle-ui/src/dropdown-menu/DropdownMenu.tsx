@@ -29,7 +29,7 @@ import {
   useClickAway,
   useScrollParent,
   useEventListener,
-} from '@miracle/use';
+} from '@miracle-web/use';
 
 // Types
 import type { DropdownMenuProvide, DropdownMenuDirection } from './types';

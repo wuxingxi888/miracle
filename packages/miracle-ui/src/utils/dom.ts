@@ -1,4 +1,4 @@
-import { useRect, useWindowSize } from '@miracle/use';
+import { useRect, useWindowSize } from '@miracle-web/use';
 import { unref, Ref } from 'vue';
 import { isIOS as checkIsIOS } from './basic';
 

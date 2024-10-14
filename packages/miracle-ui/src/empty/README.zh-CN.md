@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Empty } from 'miracle';
+import { Empty } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(Empty);
@@ -106,7 +106,7 @@ Empty 组件内置了多种占位图片类型，可以在不同业务场景下�
 组件导出以下类型定义：
 
 ```ts
-import type { EmptyProps } from 'miracle';
+import type { EmptyProps } from '@miracle-web/ui';
 ```
 
 ## 主题定制

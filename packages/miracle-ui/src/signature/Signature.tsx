@@ -18,7 +18,7 @@ import {
 } from '../utils';
 
 // Composables
-import { useRect } from '@miracle/use';
+import { useRect } from '@miracle-web/use';
 import { useExpose } from '../composables/use-expose';
 
 // Components

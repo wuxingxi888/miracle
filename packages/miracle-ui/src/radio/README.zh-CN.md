@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { RadioGroup, Radio } from 'miracle';
+import { RadioGroup, Radio } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(Radio);
@@ -243,7 +243,7 @@ import type {
   RadioGroupProps,
   RadioLabelPosition,
   RadioGroupDirection,
-} from 'miracle';
+} from '@miracle-web/ui';
 ```
 
 ## 主题定制

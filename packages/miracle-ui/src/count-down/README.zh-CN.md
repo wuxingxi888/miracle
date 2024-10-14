@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { CountDown } from 'miracle';
+import { CountDown } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(CountDown);
@@ -106,7 +106,7 @@ export default {
 ```
 
 ```js
-import { showToast } from 'miracle';
+import { showToast } from '@miracle-web/ui';
 
 export default {
   setup() {
@@ -200,14 +200,14 @@ import type {
   CountDownProps,
   CountDownInstance,
   CountDownCurrentTime,
-} from 'miracle';
+} from '@miracle-web/ui';
 ```
 
 `CountDownInstance` 是组件实例的类型，用法如下：
 
 ```ts
 import { ref } from 'vue';
-import type { CountDownInstance } from 'miracle';
+import type { CountDownInstance } from '@miracle-web/ui';
 
 const countDownRef = ref<CountDownInstance>();
 

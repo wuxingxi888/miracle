@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Notify } from 'miracle';
+import { Notify } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(Notify);
@@ -23,7 +23,7 @@ app.use(Notify);
 比如使用 `showNotify` 函数，调用后会直接在页面中渲染对应的提示。
 
 ```js
-import { showNotify } from 'miracle';
+import { showNotify } from '@miracle-web/ui';
 
 showNotify({ message: '提示' });
 ```
@@ -33,7 +33,7 @@ showNotify({ message: '提示' });
 ### 基础用法
 
 ```js
-import { showNotify, closeNotify } from 'miracle';
+import { showNotify, closeNotify } from '@miracle-web/ui';
 
 // 3 秒后自动关闭
 showNotify('通知内容');
@@ -47,7 +47,7 @@ closeNotify();
 支持 `primary`、`success`、`warning`、`danger` 四种通知类型，默认为 `danger`。
 
 ```js
-import { showNotify } from 'miracle';
+import { showNotify } from '@miracle-web/ui';
 
 // 主要通知
 showNotify({ type: 'primary', message: '通知内容' });
@@ -67,7 +67,7 @@ showNotify({ type: 'warning', message: '通知内容' });
 自定义消息通知的颜色、位置和展示时长。
 
 ```js
-import { showNotify } from 'miracle';
+import { showNotify } from '@miracle-web/ui';
 
 showNotify({
   message: '自定义颜色',
@@ -198,7 +198,7 @@ import type {
   NotifyProps,
   NotifyOptions,
   NotifyPosition,
-} from 'miracle';
+} from '@miracle-web/ui';
 ```
 
 ## 主题定制

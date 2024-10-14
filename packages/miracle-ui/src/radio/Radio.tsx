@@ -5,7 +5,7 @@ import { pick, extend, createNamespace } from '../utils';
 import { RADIO_KEY } from '../radio-group/RadioGroup';
 
 // Composables
-import { useParent } from '@miracle/use';
+import { useParent } from '@miracle-web/use';
 
 // Components
 import Checker, {

@@ -12,20 +12,20 @@
 
 ```bash
 # Vue 3 项目，安装最新版 Miracle
-npm i miracle
+npm i @miracle-web/ui
 ```
 
 当然，你也可以通过 `yarn`、`pnpm` 或 `bun` 进行安装：
 
 ```bash
 # 通过 yarn 安装
-yarn add Miracle
+yarn add @miracle-web/ui
 
 # 通过 pnpm 安装
-pnpm add Miracle
+pnpm add @miracle-web/ui
 
 # 通过 Bun 安装
-bun add Miracle
+bun add @miracle-web/ui
 ```
 
 ### 通过 CDN 安装
@@ -36,12 +36,12 @@ bun add Miracle
 <!-- 引入样式文件 -->
 <link
   rel="stylesheet"
-  href="https://fastly.jsdelivr.net/npm/miracle/lib/index.css"
+  href="https://fastly.jsdelivr.net/npm/@miracle-web/ui/lib/index.css"
 />
 
 <!-- 引入 Vue 和 Miracle 的 JS 文件 -->
 <script src="https://fastly.jsdelivr.net/npm/vue@3"></script>
-<script src="https://fastly.jsdelivr.net/npm/miracle/lib/miracle.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/@miracle-web/ui/lib/miracle.min.js"></script>
 
 <script>
   // 在 #app 标签下渲染一个按钮组件
@@ -65,8 +65,8 @@ bun add Miracle
 
 你可以通过以下免费 CDN 服务来使用 Miracle:
 
-- [jsdelivr](https://www.jsdelivr.com/package/npm/miracle)
-- [cdnjs](https://cdnjs.com/libraries/miracle)
+- [jsdelivr](https://www.jsdelivr.com/package/npm/@miracle-web/ui)
+- [cdnjs](https://cdnjs.com/libraries/@miracle-web/ui)
 - [unpkg](https://unpkg.com/)
 
 注意：免费 CDN 一般用于制作原型或个人小型项目，不推荐在企业生产环境中使用免费 CDN。
@@ -85,9 +85,9 @@ bun add Miracle
 ```js
 import { createApp } from 'vue';
 // 1. 引入你需要的组件
-import { Button } from 'miracle';
+import { Button } from '@miracle-web/ui';
 // 2. 引入组件样式
-import 'miracle/lib/index.css';
+import '@miracle-web/ui/lib/index.css';
 
 const app = createApp();
 
@@ -103,7 +103,7 @@ Miracle 支持多种组件注册方式，除了在 app 上全局注册组件，�
 
 在基于 Rsbuild、Vite、webpack 或 vue-cli 的项目中使用 Miracle 时，可以使用 [unplugin-vue-components](https://github.com/unplugin/unplugin-vue-components) 插件，它可以自动引入组件。
 
-Miracle 官方基于 `unplugin-vue-components` 提供了自动导入样式的解析器 [@miracle/auto-import-resolver]()，两者可以配合使用。
+Miracle 官方基于 `unplugin-vue-components` 提供了自动导入样式的解析器 [@miracle-web/auto-import-resolver]()，两者可以配合使用。
 
 相比于常规用法，这种方式可以按需引入组件的 CSS 样式，从而减少一部分代码体积，但使用起来会变得繁琐一些。如果业务对 CSS 的体积要求不是特别极致，我们推荐使用更简便的常规用法。
 
@@ -111,16 +111,16 @@ Miracle 官方基于 `unplugin-vue-components` 提供了自动导入样式的解
 
 ```bash
 # 通过 npm 安装
-npm i @miracle/auto-import-resolver unplugin-vue-components -D
+npm i @miracle-web/auto-import-resolver unplugin-vue-components -D
 
 # 通过 yarn 安装
-yarn add @miracle/auto-import-resolver unplugin-vue-components -D
+yarn add @miracle-web/auto-import-resolver unplugin-vue-components -D
 
 # 通过 pnpm 安装
-pnpm add @miracle/auto-import-resolver unplugin-vue-components -D
+pnpm add @miracle-web/auto-import-resolver unplugin-vue-components -D
 
 # 通过 bun 安装
-bun add @miracle/auto-import-resolver unplugin-vue-components -D
+bun add @miracle-web/auto-import-resolver unplugin-vue-components -D
 ```
 
 #### 2. 配置插件
@@ -130,7 +130,7 @@ bun add @miracle/auto-import-resolver unplugin-vue-components -D
 ```js
 import vue from '@vitejs/plugin-vue';
 import Components from 'unplugin-vue-components/vite';
-import { MiracleResolver } from '@miracle/auto-import-resolver';
+import { MiracleResolver } from '@miracle-web/auto-import-resolver';
 
 export default {
   plugins: [
@@ -145,7 +145,7 @@ export default {
 如果是基于 vue-cli 的项目，在 `vue.config.js` 文件中配置插件：
 
 ```js
-const { MiracleResolver } = require('@miracle/auto-import-resolver');
+const { MiracleResolver } = require('@miracle-web/auto-import-resolver');
 const ComponentsPlugin = require('unplugin-vue-components/webpack');
 
 module.exports = {
@@ -163,7 +163,7 @@ module.exports = {
 如果是基于 webpack 的项目，在 `webpack.config.js` 文件中配置插件：
 
 ```js
-const { MiracleResolver } = require('@miracle/auto-import-resolver');
+const { MiracleResolver } = require('@miracle-web/auto-import-resolver');
 const ComponentsPlugin = require('unplugin-vue-components/webpack');
 
 module.exports = {
@@ -178,7 +178,7 @@ module.exports = {
 
 #### 3. 使用组件
 
-完成以上两步，就可以直接在模板中使用 Miracle 组件了，`unplugin-vue-components` 会解析模板并自动注册对应的组件, `@miracle/auto-import-resolver` 会自动引入对应的组件样式。
+完成以上两步，就可以直接在模板中使用 Miracle 组件了，`unplugin-vue-components` 会解析模板并自动注册对应的组件, `@miracle-web/auto-import-resolver` 会自动引入对应的组件样式。
 
 ```html
 <template>
@@ -188,23 +188,23 @@ module.exports = {
 
 #### 4. 引入函数组件的样式
 
-Miracle 中有个别组件是以函数的形式提供的，包括 `Toast`，`Dialog`，`Notify` 和 `ImagePreview` 组件。在使用函数组件时，`unplugin-vue-components` 无法解析自动注册组件，导致 `@miracle/auto-import-resolver` 无法解析样式，因此需要手动引入样式。
+Miracle 中有个别组件是以函数的形式提供的，包括 `Toast`，`Dialog`，`Notify` 和 `ImagePreview` 组件。在使用函数组件时，`unplugin-vue-components` 无法解析自动注册组件，导致 `@miracle-web/auto-import-resolver` 无法解析样式，因此需要手动引入样式。
 
 ```js
 // Toast
-import { showToast } from 'miracle';
+import { showToast } from '@miracle-web/ui';
 import 'miracle/es/toast/style';
 
 // Dialog
-import { showDialog } from 'miracle';
+import { showDialog } from '@miracle-web/ui';
 import 'miracle/es/dialog/style';
 
 // Notify
-import { showNotify } from 'miracle';
+import { showNotify } from '@miracle-web/ui';
 import 'miracle/es/notify/style';
 
 // ImagePreview
-import { showImagePreview } from 'miracle';
+import { showImagePreview } from '@miracle-web/ui';
 import 'miracle/es/image-preview/style';
 ```
 
@@ -215,7 +215,7 @@ import 'miracle/es/image-preview/style';
 - 请避免同时使用「全量引入」和「按需引入」这两种引入方式，否则会导致代码重复、样式错乱等问题。
 - 在使用过程中，如果你遇到组件不能导入的问题，因为 unplugin-vue-components 并不是 Miracle 官方维护的插件，所以建议到 [unplugin/unplugin-vue-components](https://github.com/unplugin/unplugin-vue-components) 仓库下反馈。
 - 当 `unplugin-vue-components` 的版本号 >= 0.26.0 时，对于 `webpack`、`vue-cli` 和 `rspack`，你需要使用 `ComponentsPlugin.default` 进行注册。
-- `@miracle/auto-import-resolver` 提供了一些配置项，请参考 [README 文档]() 来了解更多。
+- `@miracle-web/auto-import-resolver` 提供了一些配置项，请参考 [README 文档]() 来了解更多。
 - 如果是样式不生效的相关问题，你可以在 Miracle 仓库下反馈。
 
 ## 迁移提示
@@ -246,5 +246,5 @@ module.exports = {
 - 不再受到 `babel-plugin-import` 的 import 写法限制，可以从 miracle 中导入除了组件以外的其他内容，比如 Miracle 中新增的 `showToast` 等方法。
 
 ```ts
-import { showToast, showDialog } from 'miracle';
+import { showToast, showDialog } from '@miracle-web/ui';
 ```

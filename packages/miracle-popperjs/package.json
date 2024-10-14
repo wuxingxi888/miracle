@@ -1,5 +1,5 @@
 {
-  "name": "@miracle/popperjs",
+  "name": "@miracle-web/popperjs",
   "version": "0.0.1",
   "description": "Pre-compiled popperjs core",
   "main": "dist/index.cjs.js",

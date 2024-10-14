@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { TimePicker } from 'miracle';
+import { TimePicker } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(TimePicker);
@@ -294,14 +294,14 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { TimePickerProps, TimePickerColumnType } from 'miracle';
+import type { TimePickerProps, TimePickerColumnType } from '@miracle-web/ui';
 ```
 
 `TimePickerInstance` 是组件实例的类型，用法如下：
 
 ```ts
 import { ref } from 'vue';
-import type { TimePickerInstance } from 'miracle';
+import type { TimePickerInstance } from '@miracle-web/ui';
 
 const timePickerRef = ref<TimePickerInstance>();
 

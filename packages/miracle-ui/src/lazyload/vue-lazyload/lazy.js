@@ -4,7 +4,7 @@
  */
 
 import { nextTick } from 'vue';
-import { inBrowser, getScrollParent } from '@miracle/use';
+import { inBrowser, getScrollParent } from '@miracle-web/use';
 import {
   remove,
   on,

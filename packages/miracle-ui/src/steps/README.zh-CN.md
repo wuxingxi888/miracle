@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Step, Steps } from 'miracle';
+import { Step, Steps } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(Step);
@@ -112,7 +112,7 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { StepsProps, StepsDirection } from 'miracle';
+import type { StepsProps, StepsDirection } from '@miracle-web/ui';
 ```
 
 ## 主题定制

@@ -6,7 +6,7 @@ import MiCell from '../../cell';
 import MiCellGroup from '../../cell-group';
 import MiFloatingPanel from '..';
 import { useTranslate } from '../../../docs/site';
-import { useWindowSize } from '@miracle/use';
+import { useWindowSize } from '@miracle-web/use';
 
 const { height: windowHeight } = useWindowSize();
 

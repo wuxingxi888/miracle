@@ -19,7 +19,7 @@ import {
 } from '../utils';
 
 // Composables
-import { useChildren } from '@miracle/use';
+import { useChildren } from '@miracle-web/use';
 import { useSyncPropRef } from '../composables/use-sync-prop-ref';
 
 // Components

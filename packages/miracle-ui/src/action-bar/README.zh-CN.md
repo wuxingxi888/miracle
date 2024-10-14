@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { ActionBar, ActionBarIcon, ActionBarButton } from 'miracle';
+import { ActionBar, ActionBarIcon, ActionBarButton } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(ActionBar);
@@ -32,7 +32,7 @@ app.use(ActionBarButton);
 ```
 
 ```js
-import { showToast } from 'miracle';
+import { showToast } from '@miracle-web/ui';
 
 export default {
   setup() {
@@ -148,7 +148,7 @@ import type {
   ActionBarProps,
   ActionBarIconProps,
   ActionBarButtonProps,
-} from 'miracle';
+} from '@miracle-web/ui';
 ```
 
 ## 主题定制

@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { ShareSheet } from 'miracle';
+import { ShareSheet } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(ShareSheet);
@@ -34,7 +34,7 @@ app.use(ShareSheet);
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'miracle';
+import { showToast } from '@miracle-web/ui';
 
 export default {
   setup() {
@@ -239,7 +239,7 @@ import type {
   ShareSheetProps,
   ShareSheetOption,
   ShareSheetOptions,
-} from 'miracle';
+} from '@miracle-web/ui';
 ```
 
 ## 主题定制

@@ -1,6 +1,6 @@
 import { defineComponent, type ExtractPropTypes, type InjectionKey } from 'vue';
 import { makeStringProp, makeNumericProp, createNamespace } from '../utils';
-import { useChildren } from '@miracle/use';
+import { useChildren } from '@miracle-web/use';
 
 const [name, bem] = createNamespace('steps');
 

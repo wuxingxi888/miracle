@@ -27,7 +27,7 @@ import {
 import { TABS_KEY } from '../tabs/Tabs';
 
 // Composables
-import { doubleRaf, useParent } from '@miracle/use';
+import { doubleRaf, useParent } from '@miracle-web/use';
 import { useId } from '../composables/use-id';
 import { useExpose } from '../composables/use-expose';
 import { routeProps } from '../composables/use-route';

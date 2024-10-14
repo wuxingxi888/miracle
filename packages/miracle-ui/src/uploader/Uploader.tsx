@@ -33,7 +33,7 @@ import {
 } from './utils';
 
 // Composables
-import { useCustomFieldValue } from '@miracle/use';
+import { useCustomFieldValue } from '@miracle-web/use';
 import { useExpose } from '../composables/use-expose';
 
 // Components

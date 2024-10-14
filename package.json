@@ -23,8 +23,8 @@
   },
   "packageManager": "pnpm@9.9.0",
   "devDependencies": {
-    "@miracle/cli": "workspace:*",
-    "@miracle/eslint-config": "workspace:*",
+    "@miracle-web/cli": "workspace:*",
+    "@miracle-web/eslint-config": "workspace:*",
     "eslint": "^8.57.0",
     "husky": "^9.1.6",
     "nano-staged": "^0.8.0",

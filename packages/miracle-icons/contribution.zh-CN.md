@@ -47,6 +47,6 @@ Miracle 图标库托管在 [iconfont.cn](https://iconfont.cn) 上，同时仓库
 
 ### 4. 发布图标库
 
-执行 `pnpm run release` 命令，发布 `@miracle/icons` 到 npm。
+执行 `pnpm run release` 命令，发布 `@miracle-web/icons` 到 npm。
 
 发布完成后，在对应仓库中进行升级，即可使用新图标。

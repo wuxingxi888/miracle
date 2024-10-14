@@ -21,7 +21,7 @@ import {
 import { DROPDOWN_KEY } from '../dropdown-menu/DropdownMenu';
 
 // Composables
-import { useParent, useRect } from '@miracle/use';
+import { useParent, useRect } from '@miracle-web/use';
 import { useExpose } from '../composables/use-expose';
 
 // Components

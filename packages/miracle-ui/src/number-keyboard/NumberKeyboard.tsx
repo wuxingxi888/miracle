@@ -25,7 +25,7 @@ import {
 } from '../utils';
 
 // Composables
-import { useClickAway } from '@miracle/use';
+import { useClickAway } from '@miracle-web/use';
 
 // Components
 import NumberKeyboardKey, { KeyType } from './NumberKeyboardKey';

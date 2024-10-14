@@ -1,5 +1,5 @@
 {
-  "name": "@miracle/eslint-config",
+  "name": "@miracle-web/eslint-config",
   "version": "0.0.1",
   "description": "eslint config of Miracle",
   "main": "index.js",

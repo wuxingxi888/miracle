@@ -1,5 +1,5 @@
 {
-  "name": "@miracle/use",
+  "name": "@miracle-web/use",
   "version": "0.0.1",
   "description": "Miracle Composition API",
   "main": "dist/index.cjs.js",

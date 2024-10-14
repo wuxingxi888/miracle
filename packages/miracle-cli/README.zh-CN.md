@@ -22,16 +22,16 @@ yarn create miracle-cli-app
 
 ```shell
 # 通过 npm
-npm i @miracle/cli -D
+npm i @miracle-web/cli -D
 
 # 通过 yarn
-yarn add @miracle/cli -D
+yarn add @miracle-web/cli -D
 
 # 通过 pnpm
-pnpm add @miracle/cli -D
+pnpm add @miracle-web/cli -D
 
 # 通过 Bun
-bun add @miracle/cli -D
+bun add @miracle-web/cli -D
 ```
 
 安装完成后，请将以下配置添加到 package.json 文件中

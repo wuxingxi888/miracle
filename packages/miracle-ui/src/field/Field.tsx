@@ -48,7 +48,7 @@ import {
   useParent,
   useEventListener,
   CUSTOM_FIELD_INJECTION_KEY,
-} from '@miracle/use';
+} from '@miracle-web/use';
 import { useId } from '../composables/use-id';
 import { useExpose } from '../composables/use-expose';
 

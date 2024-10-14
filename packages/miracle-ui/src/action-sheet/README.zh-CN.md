@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { ActionSheet } from 'miracle';
+import { ActionSheet } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(ActionSheet);
@@ -29,7 +29,7 @@ app.use(ActionSheet);
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'miracle';
+import { showToast } from '@miracle-web/ui';
 
 export default {
   setup() {
@@ -66,7 +66,7 @@ export default {
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'miracle';
+import { showToast } from '@miracle-web/ui';
 
 export default {
   setup() {
@@ -106,7 +106,7 @@ export default {
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'miracle';
+import { showToast } from '@miracle-web/ui';
 
 export default {
   setup() {
@@ -279,7 +279,7 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { ActionSheetProps, ActionSheetAction } from 'miracle';
+import type { ActionSheetProps, ActionSheetAction } from '@miracle-web/ui';
 ```
 
 ## 主题定制

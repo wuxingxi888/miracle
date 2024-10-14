@@ -5,7 +5,7 @@ import { BORDER, createNamespace } from '../utils';
 import { STEPS_KEY } from '../steps/Steps';
 
 // Composables
-import { useParent } from '@miracle/use';
+import { useParent } from '@miracle-web/use';
 
 // Components
 import { Icon } from '../icon';

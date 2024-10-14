@@ -11,7 +11,7 @@ Miracle 采用中文作为默认语言，同时支持多语言切换，请按照
 Miracle 通过 Locale 组件实现多语言支持，使用 `Locale.use` 方法可以切换当前使用的语言。
 
 ```js
-import { Locale } from 'miracle';
+import { Locale } from '@miracle-web/ui';
 // 引入英文语言包
 import enUS from 'miracle/es/locale/lang/en-US';
 
@@ -23,7 +23,7 @@ Locale.use('en-US', enUS);
 通过 `Locale.add` 方法可以实现文案的修改和扩展，示例如下：
 
 ```js
-import { Locale } from 'miracle';
+import { Locale } from '@miracle-web/ui';
 
 const messages = {
   'zh-CN': {
@@ -61,7 +61,7 @@ function useCurrentLang(): Ref<string>;
 - **示例：**
 
 ```ts
-import { useCurrentLang } from 'miracle';
+import { useCurrentLang } from '@miracle-web/ui';
 
 const currentLang = useCurrentLang();
 

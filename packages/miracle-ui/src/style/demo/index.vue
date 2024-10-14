@@ -13,6 +13,7 @@ const t = useTranslate({
     text2:
       '这是一段最多显示两行的文字，后面的内容会省略。这是一段最多显示两行的文字，后面的内容会省略',
     touch: '触感反馈',
+    color: '主色调',
   },
   'en-US': {
     hairline: 'Hairline',
@@ -24,6 +25,7 @@ const t = useTranslate({
     text2:
       'This is a paragraph that displays up to two lines of text, and the rest of the text will be omitted.',
     touch: 'Touch feedback',
+    color: 'dominant tone',
   },
 });
 
@@ -65,6 +67,13 @@ const animate = (newName: string) => {
   <demo-block card :title="t('touch')">
     <div class="demo-box-block mi-haptics-feedback"></div>
   </demo-block>
+
+  <demo-block card :title="t('color')">
+    <div class="demo-box-block mi-haptics-feedback primary-color"></div>
+    <div class="demo-box-block mi-haptics-feedback success-color"></div>
+    <div class="demo-box-block mi-haptics-feedback danger-color"></div>
+    <div class="demo-box-block mi-haptics-feedback warning-color"></div>
+  </demo-block>
 </template>
 
 <style lang="less">
@@ -90,6 +99,22 @@ const animate = (newName: string) => {
   .demo-box-block {
     height: 30px;
     background-color: var(--mi-background-2);
+  }
+
+  .primary-color {
+    background-color: var(--mi-primary-color);
+  }
+
+  .success-color {
+    background-color: var(--mi-success-color);
+  }
+
+  .danger-color {
+    background-color: var(--mi-danger-color);
+  }
+
+  .warning-color {
+    background-color: var(--mi-warning-color);
   }
 
   .demo-animate-block {

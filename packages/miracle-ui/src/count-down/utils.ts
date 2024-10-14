@@ -1,5 +1,5 @@
 import { padZero } from '../utils';
-import { CurrentTime } from '@miracle/use';
+import { CurrentTime } from '@miracle-web/use';
 
 export function parseFormat(format: string, currentTime: CurrentTime): string {
   const { days } = currentTime;

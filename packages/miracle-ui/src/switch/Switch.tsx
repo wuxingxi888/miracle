@@ -1,6 +1,6 @@
 import { defineComponent, type ExtractPropTypes } from 'vue';
 import { addUnit, numericProp, unknownProp, createNamespace } from '../utils';
-import { useCustomFieldValue } from '@miracle/use';
+import { useCustomFieldValue } from '@miracle-web/use';
 import { Loading } from '../loading';
 
 const [name, bem] = createNamespace('switch');

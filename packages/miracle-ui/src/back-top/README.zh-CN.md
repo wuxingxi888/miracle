@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { BackTop } from 'miracle';
+import { BackTop } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(BackTop);
@@ -147,7 +147,7 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { BackTopProps, BackTopThemeVars } from 'miracle';
+import type { BackTopProps, BackTopThemeVars } from '@miracle-web/ui';
 ```
 
 ## 主题定制

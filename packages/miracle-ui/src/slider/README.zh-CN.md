@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Slider } from 'miracle';
+import { Slider } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(Slider);
@@ -26,7 +26,7 @@ app.use(Slider);
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'miracle';
+import { showToast } from '@miracle-web/ui';
 
 export default {
   setup() {
@@ -50,7 +50,7 @@ export default {
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'miracle';
+import { showToast } from '@miracle-web/ui';
 
 export default {
   setup() {
@@ -130,7 +130,7 @@ export default {
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'miracle';
+import { showToast } from '@miracle-web/ui';
 
 export default {
   setup() {
@@ -188,7 +188,7 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { SliderProps } from 'miracle';
+import type { SliderProps } from '@miracle-web/ui';
 ```
 
 ## 主题定制

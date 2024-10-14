@@ -1,5 +1,5 @@
 {
-  "name": "@miracle/icons",
+  "name": "@miracle-web/icons",
   "version": "0.0.1",
   "description": "miracle icons",
   "main": "./src/config.js",

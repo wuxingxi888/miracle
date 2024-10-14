@@ -22,7 +22,7 @@ import {
 } from '../utils';
 
 // Composables
-import { useEventListener } from '@miracle/use';
+import { useEventListener } from '@miracle-web/use';
 import { useLazyRender } from '../composables/use-lazy-render';
 
 const [name, bem] = createNamespace('overlay');

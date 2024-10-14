@@ -21,7 +21,7 @@ import {
 } from '../utils';
 
 // Composables
-import { useRect, useClickAway, useEventListener } from '@miracle/use';
+import { useRect, useClickAway, useEventListener } from '@miracle-web/use';
 import { useTouch } from '../composables/use-touch';
 import { useExpose } from '../composables/use-expose';
 

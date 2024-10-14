@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Dialog } from 'miracle';
+import { Dialog } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(Dialog);
@@ -23,7 +23,7 @@ app.use(Dialog);
 比如使用 `showDialog` 函数，调用后会直接在页面中渲染对应的弹出框。
 
 ```js
-import { showDialog } from 'miracle';
+import { showDialog } from '@miracle-web/ui';
 
 showDialog({ message: '提示' });
 ```
@@ -35,7 +35,7 @@ showDialog({ message: '提示' });
 用于提示一些消息，默认只包含一个确认按钮。
 
 ```js
-import { showDialog } from 'miracle';
+import { showDialog } from '@miracle-web/ui';
 
 showDialog({
   title: '标题',
@@ -56,7 +56,7 @@ showDialog({
 用于确认消息，默认包含确认和取消按钮。
 
 ```js
-import { showConfirmDialog } from 'miracle';
+import { showConfirmDialog } from '@miracle-web/ui';
 
 showConfirmDialog({
   title: '标题',
@@ -76,7 +76,7 @@ showConfirmDialog({
 将 theme 选项设置为 `round-button` 可以展示圆角按钮风格的弹窗。
 
 ```js
-import { showDialog } from 'miracle';
+import { showDialog } from '@miracle-web/ui';
 
 showDialog({
   title: '标题',
@@ -99,7 +99,7 @@ showDialog({
 通过 `beforeClose` 属性可以传入一个回调函数，在弹窗关闭前进行特定操作。
 
 ```js
-import { showConfirmDialog } from 'miracle';
+import { showConfirmDialog } from '@miracle-web/ui';
 
 const beforeClose = (action) =>
   new Promise((resolve) => {
@@ -250,7 +250,7 @@ import type {
   DialogMessage,
   DialogOptions,
   DialogMessageAlign,
-} from 'miracle';
+} from '@miracle-web/ui';
 ```
 
 ## 主题定制
@@ -301,7 +301,7 @@ Miracle 不支持 `babel-plugin-import` 插件，请参考 [迁移指南](#/zh-C
 将 `closeOnPopstate` 属性设置为 false 即可。
 
 ```js
-import { showDialog } from 'miracle';
+import { showDialog } from '@miracle-web/ui';
 
 showDialog({
   title: '标题',

@@ -27,7 +27,7 @@
     "vue": "^3.5.0"
   },
   "devDependencies": {
-    "@miracle/cli": "^7.0.0",
+    "@miracle-web/cli": "^7.0.0",
     "vue": "^3.5.0",
     "sass": "^1.49.7"
   },

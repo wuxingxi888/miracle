@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Grid, GridItem } from 'miracle';
+import { Grid, GridItem } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(Grid);
@@ -170,7 +170,7 @@ app.use(GridItem);
 组件导出以下类型定义：
 
 ```ts
-import type { GridProps, GridDirection, GridItemProps } from 'miracle';
+import type { GridProps, GridDirection, GridItemProps } from '@miracle-web/ui';
 ```
 
 ## 主题定制

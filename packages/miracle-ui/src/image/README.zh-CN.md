@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Image as MiImage } from 'miracle';
+import { Image as MiImage } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(MiImage);
@@ -98,7 +98,7 @@ app.use(MiImage);
 
 ```js
 import { createApp } from 'vue';
-import { Lazyload } from 'miracle';
+import { Lazyload } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(Lazyload);
@@ -183,7 +183,7 @@ app.use(Lazyload);
 组件导出以下类型定义：
 
 ```ts
-import type { ImageFit, ImagePosition, ImageProps } from 'miracle';
+import type { ImageFit, ImagePosition, ImageProps } from '@miracle-web/ui';
 ```
 
 ## 主题定制
@@ -228,7 +228,7 @@ import type { ImageFit, ImagePosition, ImageProps } from 'miracle';
 </template>
 
 <script>
-import { Image } from 'miracle';
+import { Image } from '@miracle-web/ui';
 
 export default {
   components: {

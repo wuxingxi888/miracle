@@ -19,7 +19,7 @@ import { INDEX_BAR_KEY } from '../index-bar/IndexBar';
 import { getScrollTop, getRootScrollTop } from '../utils/dom';
 
 // Composables
-import { useRect, useParent } from '@miracle/use';
+import { useRect, useParent } from '@miracle-web/use';
 import { useExpose } from '../composables/use-expose';
 
 const [name, bem] = createNamespace('index-anchor');

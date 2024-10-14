@@ -1,5 +1,5 @@
 import type { ComponentPublicInstance } from 'vue';
-import type { CurrentTime } from '@miracle/use';
+import type { CurrentTime } from '@miracle-web/use';
 import type { CountDownProps } from './CountDown';
 
 type CountDownExpose = {

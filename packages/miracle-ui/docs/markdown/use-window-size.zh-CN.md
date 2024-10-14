@@ -10,7 +10,7 @@
 
 ```js
 import { watch } from 'vue';
-import { useWindowSize } from '@miracle/use';
+import { useWindowSize } from '@miracle-web/use';
 
 export default {
   setup() {

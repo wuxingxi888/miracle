@@ -3,7 +3,7 @@
  * license at https://github.com/hilongjw/vue-lazyload/blob/master/LICENSE
  */
 
-import { useRect } from '@miracle/use';
+import { useRect } from '@miracle-web/use';
 import { loadImageAsync } from './util';
 import { noop } from '../../utils';
 

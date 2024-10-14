@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { SwipeCell } from 'miracle';
+import { SwipeCell } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(SwipeCell);
@@ -83,7 +83,7 @@ app.use(SwipeCell);
 ```
 
 ```js
-import { showConfirmDialog } from 'miracle';
+import { showConfirmDialog } from '@miracle-web/ui';
 
 export default {
   setup() {
@@ -168,14 +168,14 @@ import type {
   SwipeCellProps,
   SwipeCellPosition,
   SwipeCellInstance,
-} from 'miracle';
+} from '@miracle-web/ui';
 ```
 
 `SwipeCellInstance` 是组件实例的类型，用法如下：
 
 ```ts
 import { ref } from 'vue';
-import type { SwipeCellInstance } from 'miracle';
+import type { SwipeCellInstance } from '@miracle-web/ui';
 
 const swipeCellRef = ref<SwipeCellInstance>();
 

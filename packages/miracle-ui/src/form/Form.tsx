@@ -10,7 +10,7 @@ import {
 } from '../utils';
 
 // Composables
-import { useChildren } from '@miracle/use';
+import { useChildren } from '@miracle-web/use';
 import { useExpose } from '../composables/use-expose';
 
 // Types

@@ -6,16 +6,16 @@
 
 ```shell
 # 通过 npm
-npm i @miracle/area-data
+npm i @miracle-web/area-data
 
 # 通过 yarn
-yarn add @miracle/area-data
+yarn add @miracle-web/area-data
 
 # 通过 pnpm
-pnpm add @miracle/area-data
+pnpm add @miracle-web/area-data
 
 # 通过 Bun
-bun add @miracle/area-data
+bun add @miracle-web/area-data
 ```
 
 ## 使用
@@ -23,13 +23,13 @@ bun add @miracle/area-data
 在 Miracle 的 Area 组件中使用时，直接引用 `areaList` 对象即可：
 
 ```ts
-import { areaList } from '@miracle/area-data';
+import { areaList } from '@miracle-web/area-data';
 ```
 
 在 Miracle 的 Cascader 组件中使用时，请使用 `useCascaderAreaData` 方法：
 
 ```ts
-import { useCascaderAreaData } from '@miracle/area-data';
+import { useCascaderAreaData } from '@miracle-web/area-data';
 
 const cascaderAreaData = useCascaderAreaData();
 ```

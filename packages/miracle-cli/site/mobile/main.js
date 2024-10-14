@@ -3,7 +3,7 @@ import DemoBlock from './components/DemoBlock.vue';
 import DemoSection from './components/DemoSection.vue';
 import { router } from './router';
 import App from './App.vue';
-import '@miracle/touch-emulator';
+import '@miracle-web/touch-emulator';
 
 window.app = createApp(App)
   .use(router)

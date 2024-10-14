@@ -20,7 +20,7 @@ import {
 } from '../utils';
 
 // Composables
-import { useChildren } from '@miracle/use';
+import { useChildren } from '@miracle-web/use';
 import { usePlaceholder } from '../composables/use-placeholder';
 
 const [name, bem] = createNamespace('tabbar');

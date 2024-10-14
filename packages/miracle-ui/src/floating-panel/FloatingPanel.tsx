@@ -19,7 +19,7 @@ import {
 } from '../utils';
 
 // Composables
-import { useEventListener } from '@miracle/use';
+import { useEventListener } from '@miracle-web/use';
 import { useLockScroll } from '../composables/use-lock-scroll';
 import { useTouch } from '../composables/use-touch';
 import { useSyncPropRef } from '../composables/use-sync-prop-ref';

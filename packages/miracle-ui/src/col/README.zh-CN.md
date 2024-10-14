@@ -10,7 +10,7 @@ Layout 提供了 `mi-row` 和 `mi-col` 两个组件来进行行列布局。
 
 ```js
 import { createApp } from 'vue';
-import { Col, Row } from 'miracle';
+import { Col, Row } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(Col);
@@ -137,5 +137,5 @@ Layout 组件提供了 `24列栅格`，通过在 `Col` 上添加 `span` 属性�
 组件导出以下类型定义：
 
 ```ts
-import type { ColProps, RowProps, RowAlign, RowJustify } from 'miracle';
+import type { ColProps, RowProps, RowAlign, RowJustify } from '@miracle-web/ui';
 ```

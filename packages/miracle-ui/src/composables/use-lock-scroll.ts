@@ -1,5 +1,5 @@
 import { Ref, watch, onBeforeUnmount, onDeactivated } from 'vue';
-import { getScrollParent, onMountedOrActivated } from '@miracle/use';
+import { getScrollParent, onMountedOrActivated } from '@miracle-web/use';
 import { useTouch } from './use-touch';
 import { preventDefault } from '../utils';
 

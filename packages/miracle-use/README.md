@@ -6,14 +6,14 @@ Built-in composition APIs of Miracle.
 
 ```shell
 # with npm
-npm i @miracle/use
+npm i @miracle-web/use
 
 # with yarn
-yarn add @miracle/use
+yarn add @miracle-web/use
 
 # with pnpm
-pnpm add @miracle/use
+pnpm add @miracle-web/use
 
 # with Bun
-bun add @miracle/use
+bun add @miracle-web/use
 ```

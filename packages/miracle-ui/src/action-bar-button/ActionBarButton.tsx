@@ -8,7 +8,7 @@ import { extend, createNamespace } from '../utils';
 import { ACTION_BAR_KEY } from '../action-bar/ActionBar';
 
 // Composables
-import { useParent } from '@miracle/use';
+import { useParent } from '@miracle-web/use';
 import { useExpose } from '../composables/use-expose';
 import { useRoute, routeProps } from '../composables/use-route';
 

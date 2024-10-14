@@ -4,7 +4,7 @@
  */
 
 import { h } from 'vue';
-import { inBrowser, useRect } from '@miracle/use';
+import { inBrowser, useRect } from '@miracle-web/use';
 
 export default (lazy) => ({
   props: {

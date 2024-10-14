@@ -3,7 +3,7 @@ import MiArea from '../../area';
 import MiField from '../../field';
 import MiPopup from '../../popup';
 import { ref } from 'vue';
-import { areaList } from '@miracle/area-data';
+import { areaList } from '@miracle-web/area-data';
 import { useTranslate } from '../../../docs/site';
 import { areaListEn } from '../../area/demo/area-en';
 import type { PickerConfirmEventParams } from '../../picker';

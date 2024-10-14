@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Icon } from 'miracle';
+import { Icon } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(Icon);
@@ -115,7 +115,7 @@ app.use(Icon);
 组件导出以下类型定义：
 
 ```ts
-import type { IconProps } from 'miracle';
+import type { IconProps } from '@miracle-web/ui';
 ```
 
 ## 主题定制

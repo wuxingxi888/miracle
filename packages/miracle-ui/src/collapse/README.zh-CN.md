@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Collapse, CollapseItem } from 'miracle';
+import { Collapse, CollapseItem } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(Collapse);
@@ -219,7 +219,7 @@ export default {
 
 ```js
 import { ref } from 'vue';
-import type { CollapseInstance } from 'miracle';
+import type { CollapseInstance } from '@miracle-web/ui';
 
 const collapseRef = ref<CollapseInstance>();
 
@@ -259,14 +259,14 @@ import type {
   CollapseItemProps,
   CollapseItemInstance,
   CollapseToggleAllOptions,
-} from 'miracle';
+} from '@miracle-web/ui';
 ```
 
 `CollapseItemInstance` 是组件实例的类型，用法如下：
 
 ```ts
 import { ref } from 'vue';
-import type { CollapseItemInstance } from 'miracle';
+import type { CollapseItemInstance } from '@miracle-web/ui';
 
 const collapseItemRef = ref<CollapseItemInstance>();
 

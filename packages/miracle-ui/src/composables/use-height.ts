@@ -1,4 +1,4 @@
-import { useRect } from '@miracle/use';
+import { useRect } from '@miracle-web/use';
 import { Ref, ref, onMounted, nextTick, watch } from 'vue';
 import { windowHeight, windowWidth } from '../utils';
 import { onPopupReopen } from './on-popup-reopen';

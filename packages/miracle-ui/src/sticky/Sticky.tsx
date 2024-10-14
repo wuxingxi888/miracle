@@ -26,7 +26,7 @@ import {
 } from '../utils';
 
 // Composables
-import { useRect, useEventListener, useScrollParent } from '@miracle/use';
+import { useRect, useEventListener, useScrollParent } from '@miracle-web/use';
 import { useVisibilityChange } from '../composables/use-visibility-change';
 
 const [name, bem] = createNamespace('sticky');

@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { PasswordInput, NumberKeyboard } from 'miracle';
+import { PasswordInput, NumberKeyboard } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(PasswordInput);
@@ -163,7 +163,7 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { PasswordInputProps } from 'miracle';
+import type { PasswordInputProps } from '@miracle-web/ui';
 ```
 
 ## 主题定制

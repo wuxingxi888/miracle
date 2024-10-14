@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Space } from 'miracle';
+import { Space } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(Space);
@@ -136,5 +136,5 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { SpaceProps, SpaceSize, SpaceAlign } from 'miracle';
+import type { SpaceProps, SpaceSize, SpaceAlign } from '@miracle-web/ui';
 ```

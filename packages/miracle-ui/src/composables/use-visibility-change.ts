@@ -1,6 +1,6 @@
 import { inBrowser } from '../utils';
 import { Ref, onDeactivated, onBeforeUnmount } from 'vue';
-import { onMountedOrActivated } from '@miracle/use';
+import { onMountedOrActivated } from '@miracle-web/use';
 
 // @Experimental
 export function useVisibilityChange(

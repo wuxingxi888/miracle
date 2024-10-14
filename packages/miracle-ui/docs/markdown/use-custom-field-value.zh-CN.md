@@ -17,7 +17,7 @@
 ```js
 // MyComponent.vue
 import { ref } from 'vue';
-import { useCustomFieldValue } from '@miracle/use';
+import { useCustomFieldValue } from '@miracle-web/use';
 
 export default {
   setup() {

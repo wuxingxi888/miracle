@@ -42,7 +42,7 @@ import {
   useScrollParent,
   useEventListener,
   onMountedOrActivated,
-} from '@miracle/use';
+} from '@miracle-web/use';
 import { useId } from '../composables/use-id';
 import { route, RouteProps } from '../composables/use-route';
 import { useRefs } from '../composables/use-refs';

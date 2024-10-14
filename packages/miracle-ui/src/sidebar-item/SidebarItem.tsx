@@ -5,7 +5,7 @@ import { extend, numericProp, createNamespace } from '../utils';
 import { SIDEBAR_KEY } from '../sidebar/Sidebar';
 
 // Composables
-import { useParent } from '@miracle/use';
+import { useParent } from '@miracle-web/use';
 import { useRoute, routeProps } from '../composables/use-route';
 
 // Components

@@ -26,7 +26,7 @@ import {
 } from '../utils';
 
 // Composables
-import { useEventListener } from '@miracle/use';
+import { useEventListener } from '@miracle-web/use';
 import { useExpose } from '../composables/use-expose';
 import { useLockScroll } from '../composables/use-lock-scroll';
 import { useLazyRender } from '../composables/use-lazy-render';

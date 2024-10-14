@@ -6,7 +6,7 @@ import {
   type ExtractPropTypes,
 } from 'vue';
 import { unknownProp, numericProp, createNamespace } from '../utils';
-import { useChildren, useCustomFieldValue } from '@miracle/use';
+import { useChildren, useCustomFieldValue } from '@miracle-web/use';
 
 import type { RadioShape } from '../radio';
 import type { CheckerDirection } from '../checkbox/Checker';

@@ -11,7 +11,7 @@ import {
   type TeleportProps,
   type ExtractPropTypes,
 } from 'vue';
-import { Instance, createPopper, offsetModifier } from '@miracle/popperjs';
+import { Instance, createPopper, offsetModifier } from '@miracle-web/popperjs';
 
 // Utils
 import {
@@ -30,7 +30,7 @@ import {
 } from '../utils';
 
 // Composables
-import { useClickAway } from '@miracle/use';
+import { useClickAway } from '@miracle-web/use';
 import { useScopeId } from '../composables/use-scope-id';
 import { useSyncPropRef } from '../composables/use-sync-prop-ref';
 

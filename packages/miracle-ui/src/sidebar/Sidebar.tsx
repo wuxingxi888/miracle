@@ -1,6 +1,6 @@
 import { defineComponent, type InjectionKey, type ExtractPropTypes } from 'vue';
 import { makeNumericProp, createNamespace } from '../utils';
-import { useChildren } from '@miracle/use';
+import { useChildren } from '@miracle-web/use';
 
 const [name, bem] = createNamespace('sidebar');
 

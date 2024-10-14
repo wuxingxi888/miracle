@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Overlay } from 'miracle';
+import { Overlay } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(Overlay);
@@ -103,7 +103,7 @@ Overlay 组件默认的 z-index 层级为 `1`，你可以通过 `z-index` 属性
 组件导出以下类型定义：
 
 ```ts
-import type { OverlayProps } from 'miracle';
+import type { OverlayProps } from '@miracle-web/ui';
 ```
 
 ## 主题定制

@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Progress } from 'miracle';
+import { Progress } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(Progress);
@@ -78,7 +78,7 @@ app.use(Progress);
 组件导出以下类型定义：
 
 ```ts
-import type { ProgressProps, ProgressInstance } from 'miracle';
+import type { ProgressProps, ProgressInstance } from '@miracle-web/ui';
 ```
 
 ## 主题定制

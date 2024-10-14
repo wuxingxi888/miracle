@@ -12,7 +12,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Lazyload } from 'miracle';
+import { Lazyload } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(Lazyload);

@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Calendar } from 'miracle';
+import { Calendar } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(Calendar);
@@ -386,14 +386,14 @@ import type {
   CalendarDayItem,
   CalendarDayType,
   CalendarInstance,
-} from 'miracle';
+} from '@miracle-web/ui';
 ```
 
 `CalendarInstance` 是组件实例的类型，用法如下：
 
 ```ts
 import { ref } from 'vue';
-import type { CalendarInstance } from 'miracle';
+import type { CalendarInstance } from '@miracle-web/ui';
 
 const calendarRef = ref<CalendarInstance>();
 

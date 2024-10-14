@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Area } from 'miracle';
+import { Area } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(Area);
@@ -54,24 +54,24 @@ const areaList = {
 
 ### 中国省市区数据
 
-Miracle 提供了一份中国省市区数据，你可以安装 [@miracle/area-data](https://github.com/wuxingxi888/miracle/tree/main/packages/miracle-area-data) npm 包来引入：
+Miracle 提供了一份中国省市区数据，你可以安装 [@miracle-web/area-data](https://github.com/wuxingxi888/miracle/tree/main/packages/miracle-area-data) npm 包来引入：
 
 ```bash
 # 通过 npm
-npm i @miracle/area-data
+npm i @miracle-web/area-data
 
 # 通过 yarn
-yarn add @miracle/area-data
+yarn add @miracle-web/area-data
 
 # 通过 pnpm
-pnpm add @miracle/area-data
+pnpm add @miracle-web/area-data
 
 # 通过 Bun
-bun add @miracle/area-data
+bun add @miracle-web/area-data
 ```
 
 ```ts
-import { areaList } from '@miracle/area-data';
+import { areaList } from '@miracle-web/area-data';
 
 export default {
   setup() {
@@ -173,14 +173,14 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { AreaProps, AreaList, AreaInstance } from 'miracle';
+import type { AreaProps, AreaList, AreaInstance } from '@miracle-web/ui';
 ```
 
 `AreaInstance` 是组件实例的类型，用法如下：
 
 ```ts
 import { ref } from 'vue';
-import type { AreaInstance } from 'miracle';
+import type { AreaInstance } from '@miracle-web/ui';
 
 const areaRef = ref<AreaInstance>();
 

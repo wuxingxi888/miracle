@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { List } from 'miracle';
+import { List } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(List);
@@ -214,14 +214,14 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { ListProps, ListInstance, ListDirection } from 'miracle';
+import type { ListProps, ListInstance, ListDirection } from '@miracle-web/ui';
 ```
 
 `ListInstance` 是组件实例的类型，用法如下：
 
 ```ts
 import { ref } from 'vue';
-import type { ListInstance } from 'miracle';
+import type { ListInstance } from '@miracle-web/ui';
 
 const listRef = ref<ListInstance>();
 

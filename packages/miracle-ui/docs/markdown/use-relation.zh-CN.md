@@ -12,7 +12,7 @@
 
 ```js
 import { ref } from 'vue';
-import { useChildren } from '@miracle/use';
+import { useChildren } from '@miracle-web/use';
 
 const RELATION_KEY = Symbol('my-relation');
 
@@ -34,7 +34,7 @@ export default {
 在子组件中使用 `useParent` 获取父组件提供的数据和方法:
 
 ```js
-import { useParent } from '@miracle/use';
+import { useParent } from '@miracle-web/use';
 
 export default {
   setup() {

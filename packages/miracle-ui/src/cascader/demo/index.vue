@@ -8,7 +8,7 @@ import { deepClone } from '../../utils/deep-clone';
 import zhCNOptions from './area-zh-CN';
 import enUSOptions from './area-en-US';
 import { useCurrentLang } from '../../locale';
-import { useCascaderAreaData } from '@miracle/area-data';
+import { useCascaderAreaData } from '@miracle-web/area-data';
 import { closeToast, showLoadingToast } from '../../toast';
 import type { Numeric } from '../../utils';
 

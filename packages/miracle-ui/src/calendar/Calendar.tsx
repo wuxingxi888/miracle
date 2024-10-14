@@ -35,7 +35,7 @@ import {
 } from './utils';
 
 // Composables
-import { raf, useRect, onMountedOrActivated } from '@miracle/use';
+import { raf, useRect, onMountedOrActivated } from '@miracle-web/use';
 import { useRefs } from '../composables/use-refs';
 import { useExpose } from '../composables/use-expose';
 

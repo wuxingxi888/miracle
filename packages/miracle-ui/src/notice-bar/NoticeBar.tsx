@@ -17,7 +17,7 @@ import {
   doubleRaf,
   useEventListener,
   onMountedOrActivated,
-} from '@miracle/use';
+} from '@miracle-web/use';
 import { useExpose } from '../composables/use-expose';
 import { onPopupReopen } from '../composables/on-popup-reopen';
 

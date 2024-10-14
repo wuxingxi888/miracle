@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import MiArea from '..';
 import { ref } from 'vue';
-import { areaList } from '@miracle/area-data';
+import { areaList } from '@miracle-web/area-data';
 import { areaListEn } from './area-en';
 import { useTranslate } from '../../../docs/site';
 

@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { ConfigProvider } from 'miracle';
+import { ConfigProvider } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(ConfigProvider);
@@ -176,7 +176,7 @@ export default {
 在 TypeScript 中定义 themeVars 时，建议使用 Miracle 提供的 `ConfigProviderThemeVars` 类型，可以提供完善的类型提示：
 
 ```ts
-import type { ConfigProviderThemeVars } from 'miracle';
+import type { ConfigProviderThemeVars } from '@miracle-web/ui';
 
 const themeVars: ConfigProviderThemeVars = {
   sliderBarHeight: '4px',
@@ -385,5 +385,5 @@ import type {
   ConfigProviderTheme,
   ConfigProviderThemeVars,
   ConfigProviderThemeVarsScope,
-} from 'miracle';
+} from '@miracle-web/ui';
 ```

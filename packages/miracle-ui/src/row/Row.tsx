@@ -7,7 +7,7 @@ import {
   type ExtractPropTypes,
 } from 'vue';
 import { truthProp, makeStringProp, createNamespace } from '../utils';
-import { useChildren } from '@miracle/use';
+import { useChildren } from '@miracle-web/use';
 
 const [name, bem] = createNamespace('row');
 

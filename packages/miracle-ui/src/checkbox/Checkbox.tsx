@@ -11,7 +11,7 @@ import { pick, extend, truthProp, createNamespace } from '../utils';
 import { CHECKBOX_GROUP_KEY } from '../checkbox-group/CheckboxGroup';
 
 // Composables
-import { useParent, useCustomFieldValue } from '@miracle/use';
+import { useParent, useCustomFieldValue } from '@miracle-web/use';
 import { useExpose } from '../composables/use-expose';
 
 // Components

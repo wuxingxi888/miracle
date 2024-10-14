@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { ImagePreview } from 'miracle';
+import { ImagePreview } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(ImagePreview);
@@ -23,7 +23,7 @@ app.use(ImagePreview);
 比如使用 `showImagePreview` 函数，调用后会直接在页面中渲染对应的图片预览组件。
 
 ```js
-import { showImagePreview } from 'miracle';
+import { showImagePreview } from '@miracle-web/ui';
 
 showImagePreview([
   'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg',
@@ -37,7 +37,7 @@ showImagePreview([
 在调用 `showImagePreview` 时，直接传入图片数组，即可展示图片预览。
 
 ```js
-import { showImagePreview } from 'miracle';
+import { showImagePreview } from '@miracle-web/ui';
 
 showImagePreview([
   'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg',
@@ -50,7 +50,7 @@ showImagePreview([
 `showImagePreview` 支持传入配置对象，并通过 `startPosition` 选项指定图片的初始位置（索引值）。
 
 ```js
-import { showImagePreview } from 'miracle';
+import { showImagePreview } from '@miracle-web/ui';
 
 showImagePreview({
   images: [
@@ -66,7 +66,7 @@ showImagePreview({
 开启 `closeable` 选项后，会在弹出层的右上角显示关闭图标，并且可以通过 `close-icon` 属性自定义图标，使用`close-icon-position` 属性可以自定义图标位置。
 
 ```js
-import { showImagePreview } from 'miracle';
+import { showImagePreview } from '@miracle-web/ui';
 
 showImagePreview({
   images: [
@@ -82,7 +82,7 @@ showImagePreview({
 通过 `onClose` 选项监听图片预览的关闭事件。
 
 ```js
-import { showToast, showImagePreview } from 'miracle';
+import { showToast, showImagePreview } from '@miracle-web/ui';
 
 showImagePreview({
   images: [
@@ -100,7 +100,7 @@ showImagePreview({
 通过 `beforeClose` 属性可以传入一个回调函数，在图片预览关闭前进行特定操作。
 
 ```js
-import { showImagePreview } from 'miracle';
+import { showImagePreview } from '@miracle-web/ui';
 
 const instance = showImagePreview({
   images: [
@@ -305,14 +305,14 @@ import type {
   ImagePreviewOptions,
   ImagePreviewInstance,
   ImagePreviewScaleEventParams,
-} from 'miracle';
+} from '@miracle-web/ui';
 ```
 
 `ImagePreviewInstance` 是组件实例的类型，用法如下：
 
 ```ts
 import { ref } from 'vue';
-import type { ImagePreviewInstance } from 'miracle';
+import type { ImagePreviewInstance } from '@miracle-web/ui';
 
 const imagePreviewRef = ref<ImagePreviewInstance>();
 

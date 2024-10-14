@@ -34,7 +34,7 @@ import {
   useChildren,
   useScrollParent,
   useEventListener,
-} from '@miracle/use';
+} from '@miracle-web/use';
 import { useTouch } from '../composables/use-touch';
 import { useExpose } from '../composables/use-expose';
 

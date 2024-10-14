@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { TreeSelect } from 'miracle';
+import { TreeSelect } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(TreeSelect);
@@ -262,7 +262,11 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { TreeSelectItem, TreeSelectChild, TreeSelectProps } from 'miracle';
+import type {
+  TreeSelectItem,
+  TreeSelectChild,
+  TreeSelectProps,
+} from '@miracle-web/ui';
 ```
 
 ## 主题定制

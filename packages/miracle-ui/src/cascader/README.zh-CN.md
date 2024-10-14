@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Cascader } from 'miracle';
+import { Cascader } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(Cascader);
@@ -82,20 +82,20 @@ export default {
 
 ### 中国省市区数据
 
-Cascader 组件常用于选择省市区，Miracle 提供了一份中国省市区数据，你可以安装 [@miracle/area-data](https://github.com/wuxingxi888/miracle/tree/main/packages/miracle-area-data) npm 包来引入：
+Cascader 组件常用于选择省市区，Miracle 提供了一份中国省市区数据，你可以安装 [@miracle-web/area-data](https://github.com/wuxingxi888/miracle/tree/main/packages/miracle-area-data) npm 包来引入：
 
 ```bash
 # 通过 npm
-npm i @miracle/area-data
+npm i @miracle-web/area-data
 
 # 通过 yarn
-yarn add @miracle/area-data
+yarn add @miracle-web/area-data
 
 # 通过 pnpm
-pnpm add @miracle/area-data
+pnpm add @miracle-web/area-data
 
 # 通过 Bun
-bun add @miracle/area-data
+bun add @miracle-web/area-data
 ```
 
 ```html
@@ -120,7 +120,7 @@ bun add @miracle/area-data
 
 ```js
 import { ref } from 'vue';
-import { useCascaderAreaData } from '@miracle/area-data';
+import { useCascaderAreaData } from '@miracle-web/area-data';
 
 export default {
   setup() {
@@ -187,7 +187,7 @@ export default {
 
 ```js
 import { ref } from 'vue';
-import { closeToast, showLoadingToast } from 'miracle';
+import { closeToast, showLoadingToast } from '@miracle-web/ui';
 
 export default {
   setup() {
@@ -381,7 +381,7 @@ import type {
   CascaderProps,
   CascaderOption,
   CascaderFieldNames,
-} from 'miracle';
+} from '@miracle-web/ui';
 ```
 
 ## 主题定制

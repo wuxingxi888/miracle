@@ -15,7 +15,7 @@ Miracle 支持多种组件注册方式，请根据实际业务需要进行选择
 全局注册后，你可以在 app 下的任意子组件中使用注册的 Miracle 组件。
 
 ```js
-import { Button } from 'miracle';
+import { Button } from '@miracle-web/ui';
 import { createApp } from 'vue';
 
 const app = createApp();
@@ -34,7 +34,7 @@ app.component(Button.name, Button);
 你也可以在全局一次性注册所有 Miracle 组件：
 
 ```js
-import Miracle from 'miracle';
+import Miracle from '@miracle-web/ui';
 import { createApp } from 'vue';
 
 const app = createApp();
@@ -52,7 +52,7 @@ app.use(miracle.Lazyload);
 局部注册后，你可以在当前组件中使用注册的 Miracle 组件。
 
 ```js
-import { Button } from 'miracle';
+import { Button } from '@miracle-web/ui';
 
 export default {
   components: {
@@ -69,7 +69,7 @@ export default {
 
 ```xml
 <script setup>
-  import { Button } from 'miracle';
+  import { Button } from '@miracle-web/ui';
 </script>
 
 <template>
@@ -82,7 +82,7 @@ export default {
 在 JSX 和 TSX 中可以直接使用 Miracle 组件，不需要进行组件注册。
 
 ```jsx
-import { Button } from 'miracle';
+import { Button } from '@miracle-web/ui';
 
 export default {
   render() {
@@ -213,16 +213,16 @@ module.exports = {
 
 Miracle 是一个面向移动端的组件库，因此默认只适配了移动端设备，这意味着组件只监听了移动端的 `touch` 事件，没有监听桌面端的 `mouse` 事件。
 
-如果你需要在桌面端使用 Miracle，可以引入我们提供的 [@miracle/touch-emulator](https://github.com/wuxingxi888/miracle/tree/main/packages/miracle-touch-emulator)，这个库会在桌面端自动将 `mouse` 事件转换成对应的 `touch` 事件，使得组件能够在桌面端使用。
+如果你需要在桌面端使用 Miracle，可以引入我们提供的 [@miracle-web/touch-emulator](https://github.com/wuxingxi888/miracle/tree/main/packages/miracle-touch-emulator)，这个库会在桌面端自动将 `mouse` 事件转换成对应的 `touch` 事件，使得组件能够在桌面端使用。
 
 ```bash
 # 安装模块
-npm i @miracle/touch-emulator -S
+npm i @miracle-web/touch-emulator -S
 ```
 
 ```js
 // 引入模块后自动生效
-import '@miracle/touch-emulator';
+import '@miracle-web/touch-emulator';
 ```
 
 ### 底部安全区适配

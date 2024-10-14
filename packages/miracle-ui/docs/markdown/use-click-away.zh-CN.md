@@ -14,7 +14,7 @@
 
 ```js
 import { ref } from 'vue';
-import { useClickAway } from '@miracle/use';
+import { useClickAway } from '@miracle-web/use';
 
 export default {
   setup() {
@@ -38,7 +38,7 @@ export default {
 
 ```js
 import { ref } from 'vue';
-import { useClickAway } from '@miracle/use';
+import { useClickAway } from '@miracle-web/use';
 
 export default {
   setup() {

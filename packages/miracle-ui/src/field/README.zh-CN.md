@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Field, CellGroup } from 'miracle';
+import { Field, CellGroup } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(Field);
@@ -429,14 +429,14 @@ import type {
   FieldAutosizeConfig,
   FieldValidateTrigger,
   FieldValidationStatus,
-} from 'miracle';
+} from '@miracle-web/ui';
 ```
 
 `FieldInstance` 是组件实例的类型，用法如下：
 
 ```ts
 import { ref } from 'vue';
-import type { FieldInstance } from 'miracle';
+import type { FieldInstance } from '@miracle-web/ui';
 
 const fieldRef = ref<FieldInstance>();
 

@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { NoticeBar } from 'miracle';
+import { NoticeBar } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(NoticeBar);
@@ -142,14 +142,18 @@ app.use(NoticeBar);
 组件导出以下类型定义：
 
 ```ts
-import type { NoticeBarMode, NoticeBarProps, NoticeBarInstance } from 'miracle';
+import type {
+  NoticeBarMode,
+  NoticeBarProps,
+  NoticeBarInstance,
+} from '@miracle-web/ui';
 ```
 
 `NoticeBarInstance` 是组件实例的类型，用法如下：
 
 ```ts
 import { ref } from 'vue';
-import type { NoticeBarInstance } from 'miracle';
+import type { NoticeBarInstance } from '@miracle-web/ui';
 
 const noticeBarRef = ref<NoticeBarInstance>();
 

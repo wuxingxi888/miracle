@@ -18,7 +18,7 @@ PickerGroup 中可以放置以下组件：
 
 ```js
 import { createApp } from 'vue';
-import { PickerGroup } from 'miracle';
+import { PickerGroup } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(PickerGroup);
@@ -50,7 +50,7 @@ app.use(PickerGroup);
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'miracle';
+import { showToast } from '@miracle-web/ui';
 
 export default {
   setup() {
@@ -102,7 +102,7 @@ export default {
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'miracle';
+import { showToast } from '@miracle-web/ui';
 
 export default {
   setup() {
@@ -149,7 +149,7 @@ export default {
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'miracle';
+import { showToast } from '@miracle-web/ui';
 
 export default {
   setup() {
@@ -194,7 +194,7 @@ export default {
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'miracle';
+import { showToast } from '@miracle-web/ui';
 
 export default {
   setup() {
@@ -248,7 +248,7 @@ export default {
 
 ```js
 import { ref } from 'vue';
-import { showToast } from 'miracle';
+import { showToast } from '@miracle-web/ui';
 
 export default {
   setup() {
@@ -312,7 +312,7 @@ export default {
 组件导出以下类型定义：
 
 ```ts
-import type { PickerGroupProps, PickerGroupThemeVars } from 'miracle';
+import type { PickerGroupProps, PickerGroupThemeVars } from '@miracle-web/ui';
 ```
 
 ## 主题定制

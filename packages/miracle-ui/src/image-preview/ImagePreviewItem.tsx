@@ -22,7 +22,7 @@ import {
 // Composables
 import { useExpose } from '../composables/use-expose';
 import { useTouch } from '../composables/use-touch';
-import { raf, useEventListener, useRect } from '@miracle/use';
+import { raf, useEventListener, useRect } from '@miracle-web/use';
 
 // Components
 import { Image } from '../image';

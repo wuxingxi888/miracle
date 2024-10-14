@@ -27,7 +27,7 @@ import {
 import { throttle } from '../lazyload/vue-lazyload/util';
 
 // Composables
-import { useEventListener, getScrollParent } from '@miracle/use';
+import { useEventListener, getScrollParent } from '@miracle-web/use';
 
 // Components
 import { Icon } from '../icon';

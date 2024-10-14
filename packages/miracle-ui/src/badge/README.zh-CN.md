@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Badge } from 'miracle';
+import { Badge } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(Badge);
@@ -163,7 +163,7 @@ app.use(Badge);
 组件导出以下类型定义：
 
 ```ts
-import type { BadgeProps, BadgePosition } from 'miracle';
+import type { BadgeProps, BadgePosition } from '@miracle-web/ui';
 ```
 
 ## 主题定制

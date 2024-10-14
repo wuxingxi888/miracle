@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { DatePicker } from 'miracle';
+import { DatePicker } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(DatePicker);
@@ -228,14 +228,14 @@ import type {
   DatePickerProps,
   DatePickerColumnType,
   DatePickerInstance,
-} from 'miracle';
+} from '@miracle-web/ui';
 ```
 
 `DatePickerInstance` 是组件实例的类型，用法如下：
 
 ```ts
 import { ref } from 'vue';
-import type { DatePickerInstance } from 'miracle';
+import type { DatePickerInstance } from '@miracle-web/ui';
 
 const datePickerRef = ref<DatePickerInstance>();
 

@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { RollingText } from 'miracle';
+import { RollingText } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(RollingText);
@@ -161,14 +161,14 @@ import type {
   RollingTextInstance,
   RollingTextDirection,
   RollingTextStopOrder,
-} from 'miracle';
+} from '@miracle-web/ui';
 ```
 
 `RollingTextInstance` 是组件实例的类型，用法如下：
 
 ```ts
 import { ref } from 'vue';
-import type { RollingTextInstance } from 'miracle';
+import type { RollingTextInstance } from '@miracle-web/ui';
 
 const rollingTextRef = ref<RollingTextInstance>();
 

@@ -2,32 +2,32 @@
 
 ### 介绍
 
-Miracle 底层依赖了 `@miracle/use` 包，其中内置了一系列的组合式 API。对于使用了 Miracle 的项目，可以复用这些 API 进行开发。
+Miracle 底层依赖了 `@miracle-web/use` 包，其中内置了一系列的组合式 API。对于使用了 Miracle 的项目，可以复用这些 API 进行开发。
 
 ### 安装
 
-虽然 Miracle 的依赖中已经包含了 `@miracle/use`，但我们仍然推荐显式地安装它：
+虽然 Miracle 的依赖中已经包含了 `@miracle-web/use`，但我们仍然推荐显式地安装它：
 
 ```shell
 # with npm
-npm i @miracle/use
+npm i @miracle-web/use
 
 # with yarn
-yarn add @miracle/use
+yarn add @miracle-web/use
 
 # with pnpm
-pnpm add @miracle/use
+pnpm add @miracle-web/use
 
 # with Bun
-bun add @miracle/use
+bun add @miracle-web/use
 ```
 
 ### 示例
 
-下面是一个 Miracle 组合式 API 的用法示例，我们从 `@miracle/use` 这个包中引入 `useWindowSize` 方法，然后进行调用，即可获取到当前 Window 的宽度和高度。
+下面是一个 Miracle 组合式 API 的用法示例，我们从 `@miracle-web/use` 这个包中引入 `useWindowSize` 方法，然后进行调用，即可获取到当前 Window 的宽度和高度。
 
 ```js
-import { useWindowSize } from '@miracle/use';
+import { useWindowSize } from '@miracle-web/use';
 
 const { width, height } = useWindowSize();
 

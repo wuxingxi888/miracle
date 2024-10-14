@@ -1,5 +1,5 @@
 {
-  "name": "@miracle/cli",
+  "name": "@miracle-web/cli",
   "version": "0.0.1",
   "type": "module",
   "main": "lib/index.js",
@@ -54,8 +54,8 @@
     "@rsbuild/plugin-sass": "1.0.1",
     "@rsbuild/plugin-vue": "1.0.1",
     "@rsbuild/plugin-vue-jsx": "1.0.1",
-    "@miracle/eslint-config": "workspace:^",
-    "@miracle/touch-emulator": "workspace:^",
+    "@miracle-web/eslint-config": "workspace:^",
+    "@miracle-web/touch-emulator": "workspace:^",
     "@vitejs/plugin-vue": "^5.1.3",
     "@vitejs/plugin-vue-jsx": "^4.0.1",
     "@vue/babel-plugin-jsx": "^1.2.5",

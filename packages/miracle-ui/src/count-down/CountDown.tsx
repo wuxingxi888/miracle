@@ -10,7 +10,7 @@ import {
 import { parseFormat } from './utils';
 
 // Composables
-import { useCountDown } from '@miracle/use';
+import { useCountDown } from '@miracle-web/use';
 import { useExpose } from '../composables/use-expose';
 
 const [name, bem] = createNamespace('count-down');

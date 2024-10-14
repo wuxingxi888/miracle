@@ -1,6 +1,6 @@
 import { defineComponent, ref, type ExtractPropTypes } from 'vue';
 import { truthProp, createNamespace } from '../utils';
-import { useChildren } from '@miracle/use';
+import { useChildren } from '@miracle-web/use';
 import { usePlaceholder } from '../composables/use-placeholder';
 
 const [name, bem] = createNamespace('action-bar');

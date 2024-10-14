@@ -6,7 +6,7 @@ import {
   type CSSProperties,
   type ExtractPropTypes,
 } from 'vue';
-import { raf, cancelRaf } from '@miracle/use';
+import { raf, cancelRaf } from '@miracle-web/use';
 import {
   isObject,
   truthProp,

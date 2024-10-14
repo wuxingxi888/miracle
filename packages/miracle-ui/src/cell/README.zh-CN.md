@@ -10,7 +10,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { Cell, CellGroup } from 'miracle';
+import { Cell, CellGroup } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(Cell);
@@ -199,7 +199,7 @@ import type {
   CellProps,
   CellGroupProps,
   CellArrowDirection,
-} from 'miracle';
+} from '@miracle-web/ui';
 ```
 
 ## 主题定制

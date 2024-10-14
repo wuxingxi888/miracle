@@ -20,7 +20,7 @@ import {
 import { getElementTranslateY, findIndexOfEnabledOption } from './utils';
 
 // Composables
-import { useEventListener, useParent } from '@miracle/use';
+import { useEventListener, useParent } from '@miracle-web/use';
 import { useTouch } from '../composables/use-touch';
 import { useExpose } from '../composables/use-expose';
 

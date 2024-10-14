@@ -4,16 +4,16 @@
 
 ```shell
 # with npm
-npm i @miracle/eslint-config -D
+npm i @miracle-web/eslint-config -D
 
 # with yarn
-yarn add @miracle/eslint-config -D
+yarn add @miracle-web/eslint-config -D
 
 # with pnpm
-pnpm add @miracle/eslint-config -D
+pnpm add @miracle-web/eslint-config -D
 
 # with Bun
-bun add @miracle/eslint-config -D
+bun add @miracle-web/eslint-config -D
 ```
 
 ## Usage

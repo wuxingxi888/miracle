@@ -1,4 +1,4 @@
-import { useWindowSize } from '@miracle/use';
+import { useWindowSize } from '@miracle-web/use';
 import FloatingBubble from '..';
 
 import {

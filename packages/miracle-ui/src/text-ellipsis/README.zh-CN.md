@@ -6,7 +6,7 @@
 
 ```js
 import { createApp } from 'vue';
-import { TextEllipsis } from 'miracle';
+import { TextEllipsis } from '@miracle-web/ui';
 
 const app = createApp();
 app.use(TextEllipsis);
@@ -181,14 +181,14 @@ import type {
   TextEllipsisProps,
   TextEllipsisInstance,
   TextEllipsisThemeVars,
-} from 'miracle';
+} from '@miracle-web/ui';
 ```
 
 `TextEllipsisInstance` 是组件实例的类型，用法如下：
 
 ```ts
 import { ref } from 'vue';
-import type { TextEllipsisInstance } from 'miracle';
+import type { TextEllipsisInstance } from '@miracle-web/ui';
 
 const textEllipsisRef = ref<TextEllipsisInstance>();
 

@@ -34,7 +34,7 @@ import {
 } from './utils';
 
 // Composables
-import { useChildren, useEventListener, useParent } from '@miracle/use';
+import { useChildren, useEventListener, useParent } from '@miracle-web/use';
 import { useExpose } from '../composables/use-expose';
 
 // Components
