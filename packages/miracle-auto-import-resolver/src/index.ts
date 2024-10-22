@@ -57,9 +57,9 @@ function getSideEffects(dirName: string, options: MiracleResolverOptions) {
   const moduleType = getModuleType(options);
 
   if (importStyle === 'less')
-    return `miracle/${moduleType}/${dirName}/style/less`;
+    return `@miracle-web/ui/${moduleType}/${dirName}/style/less`;
 
-  return `miracle/${moduleType}/${dirName}/style/index`;
+  return `@miracle-web/ui/${moduleType}/${dirName}/style/index`;
 }
 
 function getAPIMap() {
@@ -113,7 +113,7 @@ export function MiracleResolver(options: MiracleResolverOptions = {}) {
         const partialName = name.slice(2);
         return {
           name: partialName,
-          from: `miracle/${moduleType}`,
+          from: `@miracle-web/ui/${moduleType}`,
           sideEffects: getSideEffects(kebabCase(partialName), options),
         };
       }
@@ -123,7 +123,7 @@ export function MiracleResolver(options: MiracleResolverOptions = {}) {
         const partialName = apiMap.get(name)!;
         return {
           name,
-          from: `miracle/${moduleType}`,
+          from: `@miracle-web/ui/${moduleType}`,
           sideEffects: getSideEffects(kebabCase(partialName), options),
         };
       }
@@ -135,6 +135,6 @@ export function MiracleImports(options: MiracleImportsOptions = {}) {
   const moduleType = getModuleType(options);
 
   return {
-    [`miracle/${moduleType}`]: [...getAPIMap().keys()],
+    [`@miracle-web/ui/${moduleType}`]: [...getAPIMap().keys()],
   };
 }
