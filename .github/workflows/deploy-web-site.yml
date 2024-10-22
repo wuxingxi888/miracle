@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'packages/miracle/docs/**'
+      - 'packages/miracle-ui/docs/**'
 
   workflow_dispatch:
 
@@ -36,7 +36,7 @@ jobs:
       #   uses: JamesIves/github-pages-deploy-action@v4.4.1
       #   with:
       #     branch: gh-pages
-      #     folder: packages/miracle/site-dist
+      #     folder: packages/miracle-ui/site-dist
       #     # enable single-commit to reduce the repo size
       #     single-commit: true
       #     clean: true
@@ -60,7 +60,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4.4.1
         with:
           branch: gh-pages
-          folder: packages/miracle/site-dist
+          folder: packages/miracle-ui/site-dist
           token: ${{ secrets.MIRACLE_UI_DEP_TOKEN }}
           repository-name: wuxingxi888/miracle
           target-folder: /
