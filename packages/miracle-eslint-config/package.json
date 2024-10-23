@@ -1,11 +1,20 @@
 {
   "name": "@miracle-web/eslint-config",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "eslint config of Miracle",
-  "main": "index.js",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
+  },
+  "files": [
+    "src"
+  ],
+  "exports": {
+    ".": "./src/configs/miracle.js",
+    "./base": "./src/configs/base.js",
+    "./vue2": "./src/configs/vue2.js",
+    "./vue3": "./src/configs/vue3.js",
+    "./react": "./src/configs/react.js"
   },
   "scripts": {
     "release": "miracle-cli release",
@@ -23,11 +32,20 @@
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-vue": "^9.28.0"
+    "eslint-plugin-vue": "^9.29.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-jsonc": "^2.10.0",
+    "eslint-plugin-n": "^16.2.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "v4.6.0",
+    "prettier": "^3.0.3"
   },
   "devDependencies": {
-    "eslint": "^8.57.0",
-    "typescript": "^5.5.4"
+    "eslint": "^8.57.1",
+    "typescript": "^5.6.3"
   },
   "peerDependencies": {
     "eslint": "^7.32.0 || ^8.2.0"

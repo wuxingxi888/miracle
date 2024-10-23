@@ -2,6 +2,6 @@
   "root": true,
   "extends": ["@miracle-web/eslint-config"],
   "rules": {
-    "prefer-object-spread": "off"
-  }
+    "prefer-object-spread": "off",
+  },
 }

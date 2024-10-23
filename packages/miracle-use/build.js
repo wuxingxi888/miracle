@@ -12,7 +12,7 @@ async function bundle(format) {
     outfile,
     // preserve Chinese character
     charset: 'utf8',
-    external: ['vue', 'miracle'],
+    external: ['vue', '@miracle-web/ui'],
     entryPoints: ['./src/index.ts'],
   };
 
