@@ -1,6 +1,6 @@
 {
   "name": "@miracle-web/eslint-config",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "eslint config of Miracle",
   "publishConfig": {
     "access": "public",
@@ -29,8 +29,8 @@
   "author": "TomCat",
   "license": "MIT",
   "dependencies": {
-    "@vue/eslint-config-prettier": "^10.0.0",
-    "@vue/eslint-config-typescript": "^14.1.2",
+    "@vue/eslint-config-prettier": "^9.0.0",
+    "@vue/eslint-config-typescript": "^13.0.0",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
     "eslint-config-prettier": "^9.1.0",
