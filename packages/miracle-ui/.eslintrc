@@ -2,16 +2,12 @@
   "root": true,
   "extends": ["@miracle-web/eslint-config"],
   "rules": {
-    "prefer-object-spread": "off"
+    "prefer-object-spread": "off",
   },
   "globals": {
-    "vi": true
+    "vi": true,
   },
-  "ignorePatterns": [
-    "es",
-    "lib",
-    "node_modules"
-  ],
+  "ignorePatterns": ["es", "lib", "node_modules"],
   "overrides": [
     {
       "files": ["src/**/*"],
@@ -22,9 +18,9 @@
         "no-restricted-syntax": [
           "error",
           "ObjectExpression > SpreadElement",
-          "ObjectPattern > RestElement"
-        ]
-      }
-    }
-  ]
+          "ObjectPattern > RestElement",
+        ],
+      },
+    },
+  ],
 }
