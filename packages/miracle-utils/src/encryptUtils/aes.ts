@@ -3,7 +3,7 @@ import CryptoJS from 'crypto-js';
 const DEFAULT_SECRET_KEY = CryptoJS.enc.Utf8.parse('3333e6e143439161'); // 十六位十六进制数作为密钥
 const DEFAULT_SECRET_IV = CryptoJS.enc.Utf8.parse('e3bbe7e3ba84431a'); // 十六位十六进制数作为密钥偏移量
 
-export const encryptoAES = (
+export const encryptAES = (
   data: object | string,
   key?: string,
   iv?: string,
@@ -28,7 +28,7 @@ export const encryptoAES = (
   return encrypted.ciphertext.toString(CryptoJS.enc.Hex);
 };
 
-export const decryptoAES = (data: string, key?: string, iv?: string) => {
+export const decryptAES = (data: string, key?: string, iv?: string) => {
   const secretKey = key ? CryptoJS.enc.Utf8.parse(key) : DEFAULT_SECRET_KEY;
   const secretIV = iv ? CryptoJS.enc.Utf8.parse(iv) : DEFAULT_SECRET_IV;
 
