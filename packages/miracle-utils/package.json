@@ -1,0 +1,52 @@
+{
+  "name": "@miracle-web/utils",
+  "version": "0.0.1",
+  "description": "Miracle Utils",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.mjs",
+  "typings": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.esm.mjs",
+      "require": "./dist/index.cjs.js"
+    }
+  },
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "dev": "node ./build.js -w",
+    "build:types": "tsc -p ./tsconfig.json --emitDeclarationOnly",
+    "build:bundle": "node ./build.js",
+    "build": "pnpm clean && pnpm build:bundle && pnpm build:types",
+    "release": "miracle-cli release",
+    "prepare": "pnpm build"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wuxingxi888/miracle.git",
+    "directory": "packages/miracle-utils"
+  },
+  "bugs": "https://github.com/wuxingxi888/miracle/issues",
+  "author": "TomCat",
+  "license": "MIT",
+  "dependencies": {
+    "crypto-js": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/crypto-js": "^4.2.2",
+    "esbuild": "^0.23.1",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.5.4"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  }
+}
