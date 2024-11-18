@@ -1,7 +1,7 @@
 import CryptoJS from 'crypto-js';
 
-const DEFAULT_SECRET_KEY = CryptoJS.enc.Utf8.parse('3333e6e143439161'); // 十六位十六进制数作为密钥
-const DEFAULT_SECRET_IV = CryptoJS.enc.Utf8.parse('e3bbe7e3ba84431a'); // 十六位十六进制数作为密钥偏移量
+const DEFAULT_SECRET_KEY = CryptoJS.enc.Utf8.parse('1234567890abcdef'); // 十六位十六进制数作为密钥
+const DEFAULT_SECRET_IV = CryptoJS.enc.Utf8.parse('fedcba0987654321'); // 十六位十六进制数作为密钥偏移量
 
 export const encryptAES = (
   data: object | string,
@@ -19,13 +19,13 @@ export const encryptAES = (
     }
   }
 
-  const encrypted = CryptoJS.AES.encrypt(data, secretKey, {
+  const dataHex = CryptoJS.enc.Utf8.parse(data);
+  const encrypted = CryptoJS.AES.encrypt(dataHex, secretKey, {
     iv: secretIV,
     mode: CryptoJS.mode.CBC,
     padding: CryptoJS.pad.Pkcs7,
   });
-
-  return encrypted.ciphertext.toString(CryptoJS.enc.Hex);
+  return encrypted.ciphertext.toString();
 };
 
 export const decryptAES = (data: string, key?: string, iv?: string) => {
@@ -33,17 +33,12 @@ export const decryptAES = (data: string, key?: string, iv?: string) => {
   const secretIV = iv ? CryptoJS.enc.Utf8.parse(iv) : DEFAULT_SECRET_IV;
 
   const encryptedHexStr = CryptoJS.enc.Hex.parse(data);
-  const encryptedBase64 = encryptedHexStr.toString(CryptoJS.enc.Base64);
-  const decrypted = CryptoJS.AES.decrypt(encryptedBase64, secretKey, {
+  const str = CryptoJS.enc.Base64.stringify(encryptedHexStr);
+  const decrypt = CryptoJS.AES.decrypt(str, secretKey, {
     iv: secretIV,
     mode: CryptoJS.mode.CBC,
     padding: CryptoJS.pad.Pkcs7,
   });
-
-  const decryptedStr = decrypted.toString(CryptoJS.enc.Utf8);
-  try {
-    return JSON.parse(decryptedStr);
-  } catch (e) {
-    return decryptedStr;
-  }
+  const decryptedStr = decrypt.toString(CryptoJS.enc.Utf8);
+  return decryptedStr.toString();
 };

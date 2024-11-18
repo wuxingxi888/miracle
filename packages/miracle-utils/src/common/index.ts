@@ -66,19 +66,19 @@ export function deepMerge<T = any>(src: any = {}, target: any = {}): T {
  * @param obj 需要深拷贝的对象或数组可以是任何类型，但函数和某些特殊对象不会被深拷贝
  * @returns 返回深拷贝后的对象或数组
  */
-export function deepCopy<T>(obj: T): T {
+export function cloneDeep<T>(obj: T): T {
   if (!isObject(obj)) {
     return obj;
   }
 
   if (Array.isArray(obj)) {
-    return obj.map((item) => deepCopy(item)) as unknown as T;
+    return obj.map((item) => cloneDeep(item)) as unknown as T;
   }
 
   const copy: any = {};
   for (const key in obj) {
     if (Object.prototype.hasOwnProperty.call(obj, key)) {
-      copy[key] = deepCopy(obj[key]);
+      copy[key] = cloneDeep(obj[key]);
     }
   }
 
