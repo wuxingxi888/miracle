@@ -1,6 +1,3 @@
-import type { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
-
-// 扩展 AxiosRequestConfig 类型
 declare module 'axios' {
   interface AxiosRequestConfig {
     requestOptions?: RequestOptions;
@@ -8,23 +5,23 @@ declare module 'axios' {
 }
 
 import axios from 'axios';
+import type { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
 import qs from 'qs';
 import { cloneDeep } from '../common';
 import { AxiosCanceler } from './axiosCancel';
+import { isFunction } from '../isUtils';
+import { ContentTypeEnum, RequestEnum } from './httpEnum';
 import type {
   CreateAxiosOptions,
   RequestOptions,
   Result,
   UploadFileParams,
 } from './types';
-import { isFunction } from '../isUtils';
 
-import { ContentTypeEnum, RequestEnum } from './httpEnum';
-
-export { axios, type AxiosResponse };
+export { axios, type AxiosInstance, AxiosRequestConfig, AxiosResponse };
 
 /**
- * @description:  axios模块
+ * @description:  自定义 axios模块
  */
 export class MAxios {
   private axiosInstance: AxiosInstance;
@@ -36,53 +33,64 @@ export class MAxios {
     this.setupInterceptors();
   }
 
+  private getTransform() {
+    const { transform } = this.options;
+    return transform;
+  }
+
   getAxios(): AxiosInstance {
     return this.axiosInstance;
   }
 
-  /**
-   * @description: 重新配置axios
-   */
-  configAxios(config: CreateAxiosOptions) {
-    if (!this.axiosInstance) {
-      return;
-    }
-    this.createAxios(config);
+  configAxios(config: CreateAxiosOptions): void {
+    this.axiosInstance = axios.create(config);
   }
 
-  /**
-   * @description: 设置通用header
-   */
-  setHeader(headers: any): void {
-    if (!this.axiosInstance) {
-      return;
+  setHeader(headers: Record<string, any>): void {
+    if (this.axiosInstance) {
+      Object.assign(this.axiosInstance.defaults.headers, headers);
     }
-    Object.assign(this.axiosInstance.defaults.headers, headers);
   }
 
-  /**
-   * @description:   请求方法
-   */
+  private supportFormData(config: AxiosRequestConfig): AxiosRequestConfig {
+    const headers = config.headers || this.options.headers;
+    const contentType = headers?.['Content-Type'] || headers?.['content-type'];
+
+    if (
+      contentType === ContentTypeEnum.FORM_URLENCODED &&
+      Reflect.has(config, 'data') &&
+      config.method?.toUpperCase() !== RequestEnum.GET
+    ) {
+      return {
+        ...config,
+        data: qs.stringify(config.data, { arrayFormat: 'brackets' }),
+      };
+    }
+
+    return config;
+  }
+
   request<T = any>(
     config: AxiosRequestConfig,
     options?: RequestOptions,
   ): Promise<T> {
     let conf: AxiosRequestConfig = cloneDeep(config);
+
     const transform = this.getTransform();
 
     const { requestOptions } = this.options;
 
     const opt: RequestOptions = { ...requestOptions, ...options };
 
-    const { beforeRequestHook, requestCatch, transformRequestData } =
+    const { beforeRequestHook, requestFailCatch, requestSuccessResult } =
       transform || {};
+
     if (beforeRequestHook && isFunction(beforeRequestHook)) {
       conf = beforeRequestHook(conf, opt);
     }
 
-    // 这里重新 赋值成最新的配置
     conf.requestOptions = opt;
-    // 支持 FormData
+
     conf = this.supportFormData(conf);
 
     return new Promise((resolve, reject) => {
@@ -92,13 +100,13 @@ export class MAxios {
           // 请求是否被取消
           const isCancel = axios.isCancel(res);
           if (
-            transformRequestData &&
-            isFunction(transformRequestData) &&
+            requestSuccessResult &&
+            isFunction(requestSuccessResult) &&
             !isCancel
           ) {
             try {
-              const ret = transformRequestData(res, opt);
-              resolve(ret);
+              const ret = requestSuccessResult(res, opt);
+              resolve(ret as T);
             } catch (err) {
               reject(err || new Error('request error!'));
             }
@@ -107,8 +115,8 @@ export class MAxios {
           resolve(res as unknown as Promise<T>);
         })
         .catch((e: Error) => {
-          if (requestCatch && isFunction(requestCatch)) {
-            reject(requestCatch(e));
+          if (requestFailCatch && isFunction(requestFailCatch)) {
+            reject(requestFailCatch(e));
             return;
           }
           reject(e);
@@ -116,22 +124,11 @@ export class MAxios {
     });
   }
 
-  /**
-   * @description:  创建axios实例
-   */
-  private createAxios(config: CreateAxiosOptions): void {
-    this.axiosInstance = axios.create(config);
-  }
-
-  private getTransform() {
-    const { transform } = this.options;
-    return transform;
-  }
-
-  /**
-   * @description:  文件上传
-   */
   uploadFile<T = any>(config: AxiosRequestConfig, params: UploadFileParams) {
+    if (typeof window === 'undefined' || !window.FormData) {
+      throw new Error('FormData is not supported in this environment');
+    }
+
     const formData = new window.FormData();
     const customFilename = params.name || 'file';
 
@@ -166,33 +163,13 @@ export class MAxios {
     });
   }
 
-  // support form-data
-  supportFormData(config: AxiosRequestConfig) {
-    const headers = config.headers || this.options.headers;
-    const contentType = headers?.['Content-Type'] || headers?.['content-type'];
-
-    if (
-      contentType !== ContentTypeEnum.FORM_URLENCODED ||
-      !Reflect.has(config, 'data') ||
-      config.method?.toUpperCase() === RequestEnum.GET
-    ) {
-      return config;
-    }
-
-    return {
-      ...config,
-      data: qs.stringify(config.data, { arrayFormat: 'brackets' }),
-    };
-  }
-
-  /**
-   * @description: 拦截器配置
-   */
   private setupInterceptors() {
     const transform = this.getTransform();
+
     if (!transform) {
       return;
     }
+
     const {
       requestInterceptors,
       requestInterceptorsCatch,
@@ -202,19 +179,21 @@ export class MAxios {
 
     const axiosCanceler = new AxiosCanceler();
 
-    // 请求拦截器配置处理
     this.axiosInstance.interceptors.request.use((config: any) => {
       const { headers: { ignoreCancelToken } = { ignoreCancelToken: false } } =
         config;
-      const ignoreCancel =
-        ignoreCancelToken !== undefined
-          ? ignoreCancelToken
-          : this.options.requestOptions?.ignoreCancelToken;
 
-      !ignoreCancel && axiosCanceler.addPending(config);
+      const ignoreCancel =
+        ignoreCancelToken ?? this.options.requestOptions?.ignoreCancelToken;
+
+      if (!ignoreCancel) {
+        axiosCanceler.addPending(config);
+      }
+
       if (requestInterceptors && isFunction(requestInterceptors)) {
         config = requestInterceptors(config, this.options);
       }
+
       return config;
     }, undefined);
 

@@ -1,15 +1,26 @@
 import type { AxiosRequestConfig } from 'axios';
 import type { AxiosTransform } from './axiosTransform';
 
+/**
+ * 定义一个泛型接口，用于记录键值对数据
+ * @template T 键值对应的值的类型
+ */
 export type Recordable<T = any> = Record<string, T>;
 
+/**
+ * 定义创建axios实例时的配置接口，继承自AxiosRequestConfig
+ * @interface CreateAxiosOptions
+ */
 export interface CreateAxiosOptions extends AxiosRequestConfig {
   transform?: AxiosTransform;
   requestOptions?: RequestOptions;
   authenticationScheme?: string;
 }
 
-// 上传文件
+/**
+ * 定义上传文件接口参数
+ * @interface UploadFileParams
+ */
 export interface UploadFileParams {
   // 其他参数
   data?: Recordable;
@@ -22,6 +33,10 @@ export interface UploadFileParams {
   [key: string]: any;
 }
 
+/**
+ * 定义请求选项接口，用于配置请求时的各种选项
+ * @interface RequestOptions
+ */
 export interface RequestOptions {
   // 请求参数拼接到url
   joinParamsToUrl?: boolean;
@@ -59,6 +74,10 @@ export interface RequestOptions {
   withToken?: boolean;
 }
 
+/**
+ * 定义请求结果接口，用于统一处理请求返回的数据格式
+ * @template T 返回数据的类型
+ */
 export interface Result<T = any> {
   code: number;
   type?: 'success' | 'error' | 'warning';
