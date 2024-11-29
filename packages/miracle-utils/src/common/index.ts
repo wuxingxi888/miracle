@@ -84,3 +84,108 @@ export function cloneDeep<T>(obj: T): T {
 
   return copy;
 }
+
+/**
+ * 创建一个记忆化函数，用于缓存计算结果以提高性能
+ * @template TDeps 依赖参数类型数组
+ * @template TResult 计算结果类型
+ * @param getDependencies 获取依赖参数的函数
+ * @param fn 需要记忆化的计算函数
+ * @param options 配置选项，包括缓存键、调试函数和结果变化时的回调函数
+ * @returns 返回一个记忆化后的函数，该函数在依赖参数变化时执行计算
+ */
+export function memo<TDeps extends readonly any[], TResult>(
+  getDependencies: () => [...TDeps],
+  fn: (...args: NoInfer<[...TDeps]>) => TResult,
+  options: {
+    key: any;
+    debug?: () => any;
+    onChange?: (result: TResult) => void;
+  },
+): () => TResult {
+  // 存储依赖参数和计算结果
+  // Store the dependency parameters and the computed result
+  let dependencies: any[] = [];
+  let result: TResult | undefined;
+
+  return () => {
+    let dependencyStartTime: number;
+    if (options.key && options.debug) {
+      dependencyStartTime = Date.now();
+    }
+
+    // 获取最新的依赖参数数组
+    // Get the latest array of dependency parameters
+    const newDependencies = getDependencies();
+
+    // 检查依赖参数是否发生变化
+    // Check if the dependency parameters have changed
+    const dependenciesChanged =
+      newDependencies.length !== dependencies.length ||
+      newDependencies.some(
+        (dep: any, index: number) => dependencies[index] !== dep,
+      );
+
+    if (!dependenciesChanged) {
+      return result!;
+    }
+
+    dependencies = newDependencies;
+
+    let computationStartTime: number;
+    if (options.key && options.debug) {
+      computationStartTime = Date.now();
+    }
+
+    // 执行计算函数，并缓存计算结果
+    // Execute the computation function and cache the computed result
+    result = fn(...newDependencies);
+
+    // 执行 onChange 回调函数，传递计算结果
+    // Execute the onChange callback function with the computed result
+    options?.onChange?.(result);
+
+    if (options.key && options.debug) {
+      if (options?.debug()) {
+        const dependencyEndTime =
+          Math.round((Date.now() - dependencyStartTime!) * 100) / 100;
+        const computationEndTime =
+          Math.round((Date.now() - computationStartTime!) * 100) / 100;
+        const computationFpsPercentage = computationEndTime / 16;
+
+        const pad = (str: number | string, num: number) => {
+          str = String(str);
+          while (str.length < num) {
+            str = ` ${str}`;
+          }
+          return str;
+        };
+
+        // eslint-disable-next-line no-console
+        console.info(
+          `%c⏱ ${pad(computationEndTime, 5)} /${pad(dependencyEndTime, 5)} ms`,
+          `
+            font-size: .6rem;
+            font-weight: bold;
+            color: hsl(${Math.max(
+              0,
+              Math.min(120 - 120 * computationFpsPercentage, 120),
+            )}deg 100% 31%);`,
+          options?.key,
+        );
+      }
+    }
+
+    return result;
+  };
+}
+
+/**
+ * 一个不执行任何操作的函数
+ * 通常用作需要一个函数类型参数的默认值
+ *
+ * @returns {undefined} 该函数不返回任何值
+ */
+export function NOOP(): undefined {
+  return void 0;
+}

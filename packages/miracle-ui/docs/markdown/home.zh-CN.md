@@ -54,7 +54,7 @@ npm create rsbuild@latest
 
 | 名称 | 框架 | 发布时间 | 最新版 | 维护状态 |
 | --- | --- | --- | --- | --- |
-| Miracle UI 1 | Vue 3 | `2024.3` | ![](https://img.shields.io/npm/v/vant/latest?style=flat-square) | 开发中，持续迭代新功能 |
+| Miracle UI 1 | Vue 3 | `2024.3` | ![](https://img.shields.io/npm/v/@miracle-web/ui?style=flat-square) | 开发中，持续迭代新功能 |
 
 ## 链接
 

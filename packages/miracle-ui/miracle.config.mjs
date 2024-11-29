@@ -190,6 +190,7 @@ export default {
               { path: 'use-rect', title: 'useRect' },
               { path: 'use-relation', title: 'useRelation' },
               { path: 'use-scroll-parent', title: 'useScrollParent' },
+              { path: 'use-state', title: 'useState' },
               { path: 'use-toggle', title: 'useToggle' },
               { path: 'use-window-size', title: 'useWindowSize' },
               { path: 'use-raf', title: 'useRaf' },

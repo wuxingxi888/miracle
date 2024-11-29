@@ -142,3 +142,38 @@ export function judgeSystem() {
     isMobile,
   };
 }
+
+/**
+ * 将文本复制到剪贴板
+ *
+ * 此函数尝试使用Navigator Clipboard API将文本复制到剪贴板如果失败，它将回退到传统的文本选择和复制方法
+ * 它接受两个可选回调函数，一个在成功复制时调用，另一个在复制失败时调用
+ *
+ * @param text 要复制到剪贴板的文本
+ * @param onSuccess 成功复制后的回调函数，接收复制的文本作为参数
+ * @param onError 复制失败时的回调函数，接收错误信息作为参数
+ */
+export function copyToClipboard(
+  text: string,
+  onSuccess?: (text?: any) => void,
+  onError?: (error?: any) => void,
+) {
+  void navigator.clipboard
+    .writeText(text)
+    .then(() => {
+      onSuccess && onSuccess(text);
+    })
+    .catch((error) => {
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      document.body.appendChild(textarea);
+      textarea.select();
+      const result = document.execCommand('copy');
+      document.body.removeChild(textarea);
+      if (!result) {
+        onError && onError(error);
+      } else {
+        onSuccess && onSuccess(text);
+      }
+    });
+}

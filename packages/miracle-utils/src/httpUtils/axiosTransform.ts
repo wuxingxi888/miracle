@@ -1,9 +1,14 @@
-/**
- * 数据处理类，可以根据项目自行配置
- */
-import type { AxiosRequestConfig, AxiosResponse } from 'axios';
+import type {
+  AxiosRequestConfig,
+  AxiosResponse,
+  InternalAxiosRequestConfig,
+} from 'axios';
 import type { CreateAxiosOptions, RequestOptions, Result } from './types';
 
+/**
+ * An abstract class that can be used to customize the behavior of the Axios HTTP client library.
+ * 这是一个抽象类，可以用来自定义 Axios 的行为。
+ */
 export abstract class AxiosTransform {
   /**
    * @description: 请求之前处理配置
@@ -23,7 +28,7 @@ export abstract class AxiosTransform {
    * @returns 处理后的结果或无返回值
    */
   requestSuccessResult?: (
-    res: AxiosResponse<Result>,
+    response: AxiosResponse | AxiosResponse<Result>,
     options: RequestOptions,
   ) => Result | AxiosResponse<Result>;
 
@@ -41,9 +46,9 @@ export abstract class AxiosTransform {
    * @returns 处理后的 Axios 请求配置
    */
   requestInterceptors?: (
-    config: AxiosRequestConfig,
+    config: InternalAxiosRequestConfig,
     options: CreateAxiosOptions,
-  ) => AxiosRequestConfig;
+  ) => InternalAxiosRequestConfig;
 
   /**
    * @description: 请求拦截器错误处理
@@ -56,7 +61,7 @@ export abstract class AxiosTransform {
    * @param res - Axios 响应对象
    * @returns 处理后的 Axios 响应对象
    */
-  responseInterceptors?: (res: AxiosResponse) => AxiosResponse;
+  responseInterceptors?: (response: AxiosResponse) => AxiosResponse;
 
   /**
    * @description: 响应拦截器错误处理

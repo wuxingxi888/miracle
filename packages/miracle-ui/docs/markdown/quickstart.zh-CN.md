@@ -193,19 +193,19 @@ Miracle 中有个别组件是以函数的形式提供的，包括 `Toast`，`Dia
 ```js
 // Toast
 import { showToast } from '@miracle-web/ui';
-import 'miracle/es/toast/style';
+import '@miracle-web/ui/es/toast/style';
 
 // Dialog
 import { showDialog } from '@miracle-web/ui';
-import 'miracle/es/dialog/style';
+import '@miracle-web/ui/es/dialog/style';
 
 // Notify
 import { showNotify } from '@miracle-web/ui';
-import 'miracle/es/notify/style';
+import '@miracle-web/ui/es/notify/style';
 
 // ImagePreview
 import { showImagePreview } from '@miracle-web/ui';
-import 'miracle/es/image-preview/style';
+import '@miracle-web/ui/es/image-preview/style';
 ```
 
 你可以在项目的入口文件或公共模块中引入以上组件的样式，这样在业务代码中使用组件时，便不再需要重复引入样式了。

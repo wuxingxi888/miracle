@@ -11,3 +11,5 @@ export * from './storageUtils';
 export * from './stringUtils';
 export * from './urlUtils';
 export * from './regUtils';
+
+export * from './directives';

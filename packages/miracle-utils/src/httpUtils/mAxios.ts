@@ -5,7 +5,12 @@ declare module 'axios' {
 }
 
 import axios from 'axios';
-import type { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
+import type {
+  AxiosInstance,
+  AxiosRequestConfig,
+  AxiosResponse,
+  InternalAxiosRequestConfig,
+} from 'axios';
 import qs from 'qs';
 import { cloneDeep } from '../common';
 import { AxiosCanceler } from './axiosCancel';
@@ -17,8 +22,15 @@ import type {
   Result,
   UploadFileParams,
 } from './types';
+import { againRequest } from './axiosAgainSend';
 
-export { axios, type AxiosInstance, AxiosRequestConfig, AxiosResponse };
+export {
+  axios,
+  type AxiosInstance,
+  AxiosRequestConfig,
+  AxiosResponse,
+  InternalAxiosRequestConfig,
+};
 
 /**
  * @description:  自定义 axios模块
@@ -68,6 +80,34 @@ export class MAxios {
     }
 
     return config;
+  }
+
+  get<T = any>(
+    config: AxiosRequestConfig,
+    options?: RequestOptions,
+  ): Promise<T> {
+    return this.request({ ...config, method: RequestEnum.GET }, options);
+  }
+
+  post<T = any>(
+    config: AxiosRequestConfig,
+    options?: RequestOptions,
+  ): Promise<T> {
+    return this.request({ ...config, method: RequestEnum.POST }, options);
+  }
+
+  put<T = any>(
+    config: AxiosRequestConfig,
+    options?: RequestOptions,
+  ): Promise<T> {
+    return this.request({ ...config, method: RequestEnum.PUT }, options);
+  }
+
+  delete<T = any>(
+    config: AxiosRequestConfig,
+    options?: RequestOptions,
+  ): Promise<T> {
+    return this.request({ ...config, method: RequestEnum.DELETE }, options);
   }
 
   request<T = any>(
@@ -179,47 +219,56 @@ export class MAxios {
 
     const axiosCanceler = new AxiosCanceler();
 
-    this.axiosInstance.interceptors.request.use((config: any) => {
-      const { headers: { ignoreCancelToken } = { ignoreCancelToken: false } } =
-        config;
+    // 请求拦截器处理
+    this.axiosInstance.interceptors.request.use(
+      (config: InternalAxiosRequestConfig) => {
+        const {
+          headers: { ignoreCancelToken } = { ignoreCancelToken: false },
+        } = config;
 
-      const ignoreCancel =
-        ignoreCancelToken ?? this.options.requestOptions?.ignoreCancelToken;
+        const ignoreCancel =
+          ignoreCancelToken ?? this.options.requestOptions?.ignoreCancelToken;
 
-      if (!ignoreCancel) {
-        axiosCanceler.addPending(config);
-      }
+        if (!ignoreCancel) {
+          axiosCanceler.addPending(config);
+        }
 
-      if (requestInterceptors && isFunction(requestInterceptors)) {
-        config = requestInterceptors(config, this.options);
-      }
+        if (requestInterceptors && isFunction(requestInterceptors)) {
+          config = requestInterceptors(config, this.options);
+        }
 
-      return config;
-    }, undefined);
+        return config;
+      },
+      (error: Error) => {
+        if (requestInterceptorsCatch && isFunction(requestInterceptorsCatch)) {
+          return requestInterceptorsCatch(error);
+        }
+        return Promise.reject(error);
+      },
+    );
 
-    // 请求拦截器错误捕获
-    requestInterceptorsCatch &&
-      isFunction(requestInterceptorsCatch) &&
-      this.axiosInstance.interceptors.request.use(
-        undefined,
-        requestInterceptorsCatch,
-      );
+    // 响应拦截器处理
+    this.axiosInstance.interceptors.response.use(
+      (response: AxiosResponse<any>) => {
+        response && axiosCanceler.removePending(response.config);
+        if (responseInterceptors && isFunction(responseInterceptors)) {
+          return responseInterceptors(response) || response;
+        }
+        return response;
+      },
+      (error: Error) => {
+        if (!axios.isCancel(error)) {
+          againRequest(error, this.axiosInstance);
+        }
 
-    // 响应结果拦截器处理
-    this.axiosInstance.interceptors.response.use((res: AxiosResponse<any>) => {
-      res && axiosCanceler.removePending(res.config);
-      if (responseInterceptors && isFunction(responseInterceptors)) {
-        res = responseInterceptors(res);
-      }
-      return res;
-    }, undefined);
-
-    // 响应结果拦截器错误捕获
-    responseInterceptorsCatch &&
-      isFunction(responseInterceptorsCatch) &&
-      this.axiosInstance.interceptors.response.use(
-        undefined,
-        responseInterceptorsCatch,
-      );
+        if (
+          responseInterceptorsCatch &&
+          isFunction(responseInterceptorsCatch)
+        ) {
+          return responseInterceptorsCatch(error);
+        }
+        return Promise.reject(error);
+      },
+    );
   }
 }
