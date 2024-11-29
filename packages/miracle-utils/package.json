@@ -1,6 +1,6 @@
 {
   "name": "@miracle-web/utils",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Miracle Utils",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.mjs",
