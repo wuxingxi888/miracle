@@ -8,6 +8,8 @@ export function againRequest(err: AxiosError, instance: AxiosInstance) {
   // config.retry 具体接口配置的重发次数
   if (!config || !config.retryCount) return Promise.reject(err);
 
+  if (!config.isRetry) return Promise.reject(err);
+
   // 设置用于跟踪重试计数的变量 默认为 0
   config.__retryCount = config.__retryCount || 0;
 

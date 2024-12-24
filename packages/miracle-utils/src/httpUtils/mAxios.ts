@@ -12,6 +12,7 @@ import type {
   InternalAxiosRequestConfig,
 } from 'axios';
 import qs from 'qs';
+import JSONbig from 'json-bigint';
 import { cloneDeep } from '../common';
 import { AxiosCanceler } from './axiosCancel';
 import { isFunction } from '../isUtils';
@@ -41,8 +42,23 @@ export class MAxios {
 
   constructor(options: CreateAxiosOptions) {
     this.options = options;
-    this.axiosInstance = axios.create(options);
+    this.axiosInstance = this.createAxiosInstance(options);
     this.setupInterceptors();
+  }
+
+  private createAxiosInstance(config: CreateAxiosOptions): AxiosInstance {
+    return axios.create({
+      ...config,
+      transformResponse: [this.transformResponseData],
+    });
+  }
+
+  private transformResponseData(data: any): any {
+    try {
+      return JSON.parse(JSON.stringify(JSONbig.parse(data)));
+    } catch (err) {
+      return { data };
+    }
   }
 
   private getTransform() {
@@ -55,7 +71,7 @@ export class MAxios {
   }
 
   configAxios(config: CreateAxiosOptions): void {
-    this.axiosInstance = axios.create(config);
+    this.axiosInstance = this.createAxiosInstance(config);
   }
 
   setHeader(headers: Record<string, any>): void {

@@ -1,6 +1,6 @@
 {
   "name": "@miracle-web/utils",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Miracle Utils",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.mjs",
@@ -38,12 +38,14 @@
   "author": "TomCat",
   "license": "MIT",
   "dependencies": {
-    "crypto-js": "^4.2.0",
     "axios": "^1.7.7",
+    "crypto-js": "^4.2.0",
+    "json-bigint": "^1.0.0",
     "qs": "^6.13.0"
   },
   "devDependencies": {
     "@types/crypto-js": "^4.2.2",
+    "@types/json-bigint": "^1.0.4",
     "@types/qs": "^6.9.16",
     "esbuild": "^0.23.1",
     "rimraf": "^6.0.1",
