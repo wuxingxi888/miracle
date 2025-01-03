@@ -1,4 +1,5 @@
 import type {
+  AxiosError,
   AxiosRequestConfig,
   AxiosResponse,
   InternalAxiosRequestConfig,
@@ -37,7 +38,7 @@ export abstract class AxiosTransform {
    * @param e - 错误对象
    * @returns 处理后的 Promise 对象
    */
-  requestFailCatch?: (e: Error) => Promise<any>;
+  requestFailCatch?: (error: AxiosError) => Promise<any>;
 
   /**
    * @description: 请求拦截器
@@ -54,7 +55,7 @@ export abstract class AxiosTransform {
    * @description: 请求拦截器错误处理
    * @param error - 错误对象
    */
-  requestInterceptorsCatch?: (error: Error) => void;
+  requestInterceptorsCatch?: (error: AxiosError) => void;
 
   /**
    * @description: 响应拦截器
@@ -67,5 +68,5 @@ export abstract class AxiosTransform {
    * @description: 响应拦截器错误处理
    * @param error - 错误对象
    */
-  responseInterceptorsCatch?: (error: Error) => void;
+  responseInterceptorsCatch?: (error: AxiosError) => void;
 }

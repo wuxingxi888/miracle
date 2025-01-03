@@ -6,6 +6,7 @@ declare module 'axios' {
 
 import axios from 'axios';
 import type {
+  AxiosError,
   AxiosInstance,
   AxiosRequestConfig,
   AxiosResponse,
@@ -30,6 +31,7 @@ export {
   type AxiosInstance,
   AxiosRequestConfig,
   AxiosResponse,
+  AxiosError,
   InternalAxiosRequestConfig,
 };
 
@@ -170,12 +172,12 @@ export class MAxios {
           }
           resolve(res as unknown as Promise<T>);
         })
-        .catch((e: Error) => {
+        .catch((error: AxiosError) => {
           if (requestFailCatch && isFunction(requestFailCatch)) {
-            reject(requestFailCatch(e));
+            reject(requestFailCatch(error));
             return;
           }
-          reject(e);
+          reject(error);
         });
     });
   }
@@ -255,7 +257,7 @@ export class MAxios {
 
         return config;
       },
-      (error: Error) => {
+      (error: AxiosError) => {
         if (requestInterceptorsCatch && isFunction(requestInterceptorsCatch)) {
           return requestInterceptorsCatch(error);
         }
@@ -272,7 +274,7 @@ export class MAxios {
         }
         return response;
       },
-      (error: Error) => {
+      (error: AxiosError) => {
         if (!axios.isCancel(error)) {
           againRequest(error, this.axiosInstance);
         }

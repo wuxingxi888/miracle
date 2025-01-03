@@ -12,7 +12,7 @@ interface RippleOptions {
 const defaultRippleOptions: RippleOptions = {
   event: 'mousedown',
   transition: 400,
-  background: 'rgba(255, 255, 255, 0.08)',
+  background: 'rgba(255, 255, 255, 0.3)',
   zIndex: '9999',
 };
 
@@ -21,7 +21,7 @@ const defaultRippleOptions: RippleOptions = {
  * 涟漪指令
  * 该指令用于点击产生涟漪
  * v-ripple
- * <button v-ripple>点击产生涟漪</button>
+ * <button v-ripple="{background: 'rgba(0, 0, 0, 0.3)', transition: 500}">点击产生涟漪</button>
  */
 const RippleDirective: Directive = {
   beforeMount(el, binding) {
@@ -29,9 +29,12 @@ const RippleDirective: Directive = {
       return;
     }
 
-    const options = getRippleOptions(binding.modifiers);
-    const background =
-      el.getAttribute('ripple-background') || options.background;
+    const options = {
+      ...getRippleOptions(binding.modifiers),
+      ...binding.value,
+    };
+
+    const { background } = options;
 
     const eventListener = (event: MouseEvent | TouchEvent) => {
       createRipple(event, el, background, options);
@@ -92,7 +95,7 @@ function createRipple(
     Number.parseInt(getComputedStyle(el).borderWidth.replace('px', '')),
     0,
   );
-  const {zIndex} = options;
+  const { zIndex } = options;
 
   const ripple = createRippleElement(
     dx,
@@ -145,7 +148,7 @@ function setBackground(el: HTMLElement, background: string | null) {
 function createRippleElement(
   dx: number,
   dy: number,
-  radius: number,
+  _radius: number,
   transition: number,
   background: string,
   zIndex: string,
