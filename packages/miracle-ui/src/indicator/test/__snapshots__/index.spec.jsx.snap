@@ -1,0 +1,10 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should allow to custom Indicator type 1`] = `
+<div class="mi-indicator">
+  <div class="mi-indicator__indicators mi-indicator__indicators--horizontal">
+    <i class="mi-indicator__square">
+    </i>
+  </div>
+</div>
+`;

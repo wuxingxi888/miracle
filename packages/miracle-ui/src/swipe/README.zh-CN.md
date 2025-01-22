@@ -145,6 +145,37 @@ export default {
 </style>
 ```
 
+### 自定义指示器 （indicator 组件）
+
+通过 `indicator` 插槽可以自定义指示器的样式。（[indicator 组件](#/zh-CN/indicator)）
+
+```html
+<mi-swipe>
+  <mi-swipe-item>1</mi-swipe-item>
+  <mi-swipe-item>2</mi-swipe-item>
+  <mi-swipe-item>3</mi-swipe-item>
+  <mi-swipe-item>4</mi-swipe-item>
+  <template #indicator="{ active, total }">
+    <mi-indicator
+      class="custom-indicator_line"
+      type="line"
+      :size="total"
+      :active="active"
+      color="#fff"
+    />
+  </template>
+</mi-swipe>
+
+<style>
+  .custom-indicator_line {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+  }
+</style>
+```
+
 ## API
 
 ### Swipe Props
@@ -166,11 +197,11 @@ export default {
 
 ### Swipe Events
 
-| 事件名              | 说明                         | 回调参数            |
-| ------------------- | ---------------------------- | ------------------- |
-| change              | 每一页轮播结束后触发         | _index: number_     |
-| drag-start `v4.0.9` | 当用户开始拖动轮播组件时触发 | _{ index: number }_ |
-| drag-end `v4.0.9`   | 当用户结束拖动轮播组件时触发 | _{ index: number }_ |
+| 事件名     | 说明                         | 回调参数            |
+| ---------- | ---------------------------- | ------------------- |
+| change     | 每一页轮播结束后触发         | _index: number_     |
+| drag-start | 当用户开始拖动轮播组件时触发 | _{ index: number }_ |
+| drag-end   | 当用户结束拖动轮播组件时触发 | _{ index: number }_ |
 
 ### SwipeItem Events
 

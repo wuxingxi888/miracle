@@ -1,0 +1,184 @@
+:root,
+:host {
+  --mi-indicator-circle-size: 6px;
+  --mi-indicator-gap: var(--mi-padding-base);
+  --mi-indicator-active-opacity: 1;
+  --mi-indicator-inactive-opacity: 0.3;
+  --mi-indicator-active-background: var(--mi-primary-color);
+  --mi-indicator-inactive-background: var(--mi-border-color);
+
+  --mi-indicator-square-size: 8px;
+
+  --mi-indicator-line-width: 30px;
+  --mi-indicator-line-height: 4px;
+  --mi-indicator-line-radius: 4px;
+}
+
+.mi-indicator {
+  &__indicators {
+    transition-property: transform;
+
+    i {
+      display: inline-block;
+    }
+
+    &--horizontal {
+      width: 100%;
+      display: flex;
+      position: relative;
+      i {
+        margin-right: var(--mi-indicator-gap);
+      }
+    }
+
+    &--vertical {
+      display: flex;
+      flex-direction: column;
+      i {
+        margin-bottom: var(--mi-indicator-gap);
+      }
+    }
+  }
+
+  &__circle {
+    width: var(--mi-indicator-circle-size);
+    height: var(--mi-indicator-circle-size);
+    background-color: var(--mi-indicator-inactive-background);
+    border-radius: 100%;
+    opacity: var(--mi-indicator-inactive-opacity);
+    padding: 0;
+    margin: 0;
+
+    &--active {
+      background-color: var(--mi-indicator-active-background);
+      opacity: var(--mi-indicator-active-opacity);
+      animation: circle_animation 2s infinite alternate linear;
+    }
+
+    @keyframes circle_animation {
+      0%,
+      100% {
+        transform: scale(1) rotate(0deg);
+      }
+      25% {
+        transform: scale(1.3) rotate(45deg);
+      }
+      50% {
+        transform: scale(1.5) rotate(90deg);
+      }
+      75% {
+        transform: scale(1.3) rotate(135deg);
+      }
+    }
+  }
+
+  &__square {
+    display: inline-block;
+    width: var(--mi-indicator-square-size);
+    height: var(--mi-indicator-square-size);
+    border-radius: calc(var(--mi-indicator-square-size) / 2);
+    margin: calc(var(--mi-indicator-square-size) / 2 + 2px);
+    box-shadow: 0 0 0 2px white;
+    position: relative;
+
+    &:after {
+      content: '';
+      left: calc(var(--mi-indicator-square-size) / 2);
+      top: calc(var(--mi-indicator-square-size) / 2);
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    &--active {
+      // background-color: var(--mi-indicator-active-background);
+      opacity: var(--mi-indicator-active-opacity);
+      &:after {
+        box-shadow: 0 0 0 0 white;
+        animation: square_animation 2s infinite alternate ease-in-out;
+      }
+    }
+
+    .fill {
+      width: calc(var(--mi-indicator-square-size) / 5);
+      height: calc(var(--mi-indicator-square-size) / 5);
+      box-shadow: 0 0 0 calc(var(--mi-indicator-square-size) / 2) white;
+      background-color: white;
+      margin-left: -1px;
+      margin-top: -1px;
+    }
+
+    .no-fill {
+      width: var(--mi-indicator-square-size);
+      height: var(--mi-indicator-square-size);
+      box-shadow: 0 0 0 0 white;
+      margin-left: calc(
+        var(--mi-indicator-square-size) / 2 - var(--mi-indicator-square-size)
+      );
+      margin-top: calc(
+        var(--mi-indicator-square-size) / 2 - var(--mi-indicator-square-size)
+      );
+    }
+
+    .fill-fix {
+      background-color: rgba(255, 255, 255, 0);
+    }
+
+    @keyframes square_animation {
+      from {
+        .no-fill();
+      }
+
+      10% {
+        .fill();
+      }
+
+      60% {
+        .fill();
+        box-shadow: 0 0 0 calc(var(--mi-indicator-square-size) / 2 + 2px) white;
+      }
+
+      60.1% {
+        .fill-fix();
+      }
+
+      70% {
+        .no-fill();
+      }
+
+      to {
+        .no-fill();
+      }
+    }
+  }
+
+  &__line {
+    width: var(--mi-indicator-line-width);
+    height: var(--mi-indicator-line-height);
+    background-color: var(--mi-indicator-inactive-background);
+    border-radius: var(--mi-indicator-line-radius);
+    opacity: var(--mi-indicator-inactive-opacity);
+
+    &--vertical {
+      width: var(--mi-indicator-line-height);
+      height: var(--mi-indicator-line-width);
+    }
+
+    &--active {
+      background-color: var(--mi-indicator-active-background);
+      opacity: var(--mi-indicator-active-opacity);
+      animation: line_animation 2s infinite alternate ease-in-out;
+    }
+  }
+
+  @keyframes line_animation {
+    0% {
+      transform: scaleX(1);
+    }
+    50% {
+      transform: scaleX(1.2);
+    }
+    100% {
+      transform: scaleX(1);
+    }
+  }
+}

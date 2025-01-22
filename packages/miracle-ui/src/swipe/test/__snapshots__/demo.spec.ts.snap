@@ -2,267 +2,317 @@
 
 exports[`should render demo and match snapshot 1`] = `
 <div>
-  <div class="mi-swipe">
-    <div
-      style="transition-duration: 0ms; transform: translateX(0px); width: 400px;"
-      class="mi-swipe__track"
-    >
+  <div>
+    <div class="mi-swipe">
       <div
-        class="mi-swipe-item"
-        style="width: 100px;"
+        style="transition-duration: 0ms; transform: translateX(0px); width: 400px;"
+        class="mi-swipe__track"
       >
-        1
+        <div
+          class="mi-swipe-item"
+          style="width: 100px;"
+        >
+          1
+        </div>
+        <div
+          class="mi-swipe-item"
+          style="width: 100px;"
+        >
+          2
+        </div>
+        <div
+          class="mi-swipe-item"
+          style="width: 100px;"
+        >
+          3
+        </div>
+        <div
+          class="mi-swipe-item"
+          style="width: 100px;"
+        >
+          4
+        </div>
       </div>
-      <div
-        class="mi-swipe-item"
-        style="width: 100px;"
-      >
-        2
+      <div class="mi-swipe__indicators">
+        <i
+          style="background-color: white;"
+          class="mi-swipe__indicator mi-swipe__indicator--active"
+        >
+        </i>
+        <i class="mi-swipe__indicator">
+        </i>
+        <i class="mi-swipe__indicator">
+        </i>
+        <i class="mi-swipe__indicator">
+        </i>
       </div>
-      <div
-        class="mi-swipe-item"
-        style="width: 100px;"
-      >
-        3
-      </div>
-      <div
-        class="mi-swipe-item"
-        style="width: 100px;"
-      >
-        4
-      </div>
-    </div>
-    <div class="mi-swipe__indicators">
-      <i
-        style="background-color: white;"
-        class="mi-swipe__indicator mi-swipe__indicator--active"
-      >
-      </i>
-      <i class="mi-swipe__indicator">
-      </i>
-      <i class="mi-swipe__indicator">
-      </i>
-      <i class="mi-swipe__indicator">
-      </i>
     </div>
   </div>
-</div>
-<div>
-  <div class="mi-swipe">
-    <div
-      style="transition-duration: 0ms; transform: translateX(0px); width: 400px;"
-      class="mi-swipe__track"
-    >
+  <div>
+    <div class="mi-swipe">
       <div
-        class="mi-swipe-item"
-        style="width: 100px;"
+        style="transition-duration: 0ms; transform: translateX(0px); width: 400px;"
+        class="mi-swipe__track"
       >
-        <img src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg">
+        <div
+          class="mi-swipe-item"
+          style="width: 100px;"
+        >
+          <img src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg">
+        </div>
+        <div
+          class="mi-swipe-item"
+          style="width: 100px;"
+        >
+          <img src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg">
+        </div>
+        <div
+          class="mi-swipe-item"
+          style="width: 100px;"
+        >
+        </div>
+        <div
+          class="mi-swipe-item"
+          style="width: 100px;"
+        >
+          <img src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg">
+        </div>
       </div>
-      <div
-        class="mi-swipe-item"
-        style="width: 100px;"
-      >
-        <img src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg">
+      <div class="mi-swipe__indicators">
+        <i class="mi-swipe__indicator mi-swipe__indicator--active">
+        </i>
+        <i class="mi-swipe__indicator">
+        </i>
+        <i class="mi-swipe__indicator">
+        </i>
+        <i class="mi-swipe__indicator">
+        </i>
       </div>
-      <div
-        class="mi-swipe-item"
-        style="width: 100px;"
-      >
-      </div>
-      <div
-        class="mi-swipe-item"
-        style="width: 100px;"
-      >
-        <img src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg">
-      </div>
-    </div>
-    <div class="mi-swipe__indicators">
-      <i class="mi-swipe__indicator mi-swipe__indicator--active">
-      </i>
-      <i class="mi-swipe__indicator">
-      </i>
-      <i class="mi-swipe__indicator">
-      </i>
-      <i class="mi-swipe__indicator">
-      </i>
     </div>
   </div>
-</div>
-<div>
-  <div class="mi-swipe">
-    <div
-      style="transition-duration: 0ms; transform: translateX(0px); width: 400px;"
-      class="mi-swipe__track"
-    >
+  <div>
+    <div class="mi-swipe">
       <div
-        class="mi-swipe-item"
-        style="width: 100px;"
+        style="transition-duration: 0ms; transform: translateX(0px); width: 400px;"
+        class="mi-swipe__track"
       >
-        1
+        <div
+          class="mi-swipe-item"
+          style="width: 100px;"
+        >
+          1
+        </div>
+        <div
+          class="mi-swipe-item"
+          style="width: 100px;"
+        >
+          2
+        </div>
+        <div
+          class="mi-swipe-item"
+          style="width: 100px;"
+        >
+          3
+        </div>
+        <div
+          class="mi-swipe-item"
+          style="width: 100px;"
+        >
+          4
+        </div>
       </div>
-      <div
-        class="mi-swipe-item"
-        style="width: 100px;"
-      >
-        2
+      <div class="mi-swipe__indicators">
+        <i
+          style="background-color: white;"
+          class="mi-swipe__indicator mi-swipe__indicator--active"
+        >
+        </i>
+        <i class="mi-swipe__indicator">
+        </i>
+        <i class="mi-swipe__indicator">
+        </i>
+        <i class="mi-swipe__indicator">
+        </i>
       </div>
-      <div
-        class="mi-swipe-item"
-        style="width: 100px;"
-      >
-        3
-      </div>
-      <div
-        class="mi-swipe-item"
-        style="width: 100px;"
-      >
-        4
-      </div>
-    </div>
-    <div class="mi-swipe__indicators">
-      <i
-        style="background-color: white;"
-        class="mi-swipe__indicator mi-swipe__indicator--active"
-      >
-      </i>
-      <i class="mi-swipe__indicator">
-      </i>
-      <i class="mi-swipe__indicator">
-      </i>
-      <i class="mi-swipe__indicator">
-      </i>
     </div>
   </div>
-</div>
-<div>
-  <div
-    class="mi-swipe demo-swipe--vertical"
-    style="height: 200px;"
-  >
+  <div>
     <div
-      style="transition-duration: 0ms; transform: translateY(0px); height: 800px;"
-      class="mi-swipe__track mi-swipe__track--vertical"
+      class="mi-swipe demo-swipe--vertical"
+      style="height: 200px;"
     >
       <div
-        class="mi-swipe-item"
-        style="height: 200px;"
+        style="transition-duration: 0ms; transform: translateY(0px); height: 800px;"
+        class="mi-swipe__track mi-swipe__track--vertical"
       >
-        1
+        <div
+          class="mi-swipe-item"
+          style="height: 200px;"
+        >
+          1
+        </div>
+        <div
+          class="mi-swipe-item"
+          style="height: 200px;"
+        >
+          2
+        </div>
+        <div
+          class="mi-swipe-item"
+          style="height: 200px;"
+        >
+          3
+        </div>
+        <div
+          class="mi-swipe-item"
+          style="height: 200px;"
+        >
+          4
+        </div>
       </div>
-      <div
-        class="mi-swipe-item"
-        style="height: 200px;"
-      >
-        2
+      <div class="mi-swipe__indicators mi-swipe__indicators--vertical">
+        <i
+          style="background-color: white;"
+          class="mi-swipe__indicator mi-swipe__indicator--active"
+        >
+        </i>
+        <i class="mi-swipe__indicator">
+        </i>
+        <i class="mi-swipe__indicator">
+        </i>
+        <i class="mi-swipe__indicator">
+        </i>
       </div>
-      <div
-        class="mi-swipe-item"
-        style="height: 200px;"
-      >
-        3
-      </div>
-      <div
-        class="mi-swipe-item"
-        style="height: 200px;"
-      >
-        4
-      </div>
-    </div>
-    <div class="mi-swipe__indicators mi-swipe__indicators--vertical">
-      <i
-        style="background-color: white;"
-        class="mi-swipe__indicator mi-swipe__indicator--active"
-      >
-      </i>
-      <i class="mi-swipe__indicator">
-      </i>
-      <i class="mi-swipe__indicator">
-      </i>
-      <i class="mi-swipe__indicator">
-      </i>
     </div>
   </div>
-</div>
-<div>
-  <div class="mi-swipe">
-    <div
-      style="transition-duration: 0ms; transform: translateX(0px); width: 1200px;"
-      class="mi-swipe__track"
-    >
+  <div>
+    <div class="mi-swipe">
       <div
-        class="mi-swipe-item"
-        style="width: 300px;"
+        style="transition-duration: 0ms; transform: translateX(0px); width: 1200px;"
+        class="mi-swipe__track"
       >
-        1
+        <div
+          class="mi-swipe-item"
+          style="width: 300px;"
+        >
+          1
+        </div>
+        <div
+          class="mi-swipe-item"
+          style="width: 300px;"
+        >
+          2
+        </div>
+        <div
+          class="mi-swipe-item"
+          style="width: 300px;"
+        >
+          3
+        </div>
+        <div
+          class="mi-swipe-item"
+          style="width: 300px;"
+        >
+          4
+        </div>
       </div>
-      <div
-        class="mi-swipe-item"
-        style="width: 300px;"
-      >
-        2
+      <div class="mi-swipe__indicators">
+        <i
+          style="background-color: white;"
+          class="mi-swipe__indicator mi-swipe__indicator--active"
+        >
+        </i>
+        <i class="mi-swipe__indicator">
+        </i>
+        <i class="mi-swipe__indicator">
+        </i>
+        <i class="mi-swipe__indicator">
+        </i>
       </div>
-      <div
-        class="mi-swipe-item"
-        style="width: 300px;"
-      >
-        3
-      </div>
-      <div
-        class="mi-swipe-item"
-        style="width: 300px;"
-      >
-        4
-      </div>
-    </div>
-    <div class="mi-swipe__indicators">
-      <i
-        style="background-color: white;"
-        class="mi-swipe__indicator mi-swipe__indicator--active"
-      >
-      </i>
-      <i class="mi-swipe__indicator">
-      </i>
-      <i class="mi-swipe__indicator">
-      </i>
-      <i class="mi-swipe__indicator">
-      </i>
     </div>
   </div>
-</div>
-<div>
-  <div class="mi-swipe">
-    <div
-      style="transition-duration: 0ms; transform: translateX(0px); width: 400px;"
-      class="mi-swipe__track"
-    >
+  <div>
+    <div class="mi-swipe">
       <div
-        class="mi-swipe-item"
-        style="width: 100px;"
+        style="transition-duration: 0ms; transform: translateX(0px); width: 400px;"
+        class="mi-swipe__track"
       >
-        1
+        <div
+          class="mi-swipe-item"
+          style="width: 100px;"
+        >
+          1
+        </div>
+        <div
+          class="mi-swipe-item"
+          style="width: 100px;"
+        >
+          2
+        </div>
+        <div
+          class="mi-swipe-item"
+          style="width: 100px;"
+        >
+          3
+        </div>
+        <div
+          class="mi-swipe-item"
+          style="width: 100px;"
+        >
+          4
+        </div>
       </div>
-      <div
-        class="mi-swipe-item"
-        style="width: 100px;"
-      >
-        2
-      </div>
-      <div
-        class="mi-swipe-item"
-        style="width: 100px;"
-      >
-        3
-      </div>
-      <div
-        class="mi-swipe-item"
-        style="width: 100px;"
-      >
-        4
+      <div class="custom-indicator">
+        1/4
       </div>
     </div>
-    <div class="custom-indicator">
-      1/4
+  </div>
+  <div>
+    <div class="mi-swipe">
+      <div
+        style="transition-duration: 0ms; transform: translateX(0px); width: 400px;"
+        class="mi-swipe__track"
+      >
+        <div
+          class="mi-swipe-item"
+          style="width: 100px;"
+        >
+          1
+        </div>
+        <div
+          class="mi-swipe-item"
+          style="width: 100px;"
+        >
+          2
+        </div>
+        <div
+          class="mi-swipe-item"
+          style="width: 100px;"
+        >
+          3
+        </div>
+        <div
+          class="mi-swipe-item"
+          style="width: 100px;"
+        >
+          4
+        </div>
+      </div>
+      <div class="mi-indicator custom-indicator_line">
+        <div class="mi-indicator__indicators mi-indicator__indicators--horizontal">
+          <i
+            style="background-color: rgb(255, 255, 255);"
+            class="mi-indicator__line mi-indicator__line--active mi-indicator__line--horizontal"
+          >
+          </i>
+          <i class="mi-indicator__line mi-indicator__line--horizontal">
+          </i>
+          <i class="mi-indicator__line mi-indicator__line--horizontal">
+          </i>
+          <i class="mi-indicator__line mi-indicator__line--horizontal">
+          </i>
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -1,0 +1,84 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render demo and match snapshot 1`] = `
+<div>
+  <div>
+    <div class="demo-block page-1">
+      <div class="mi-indicator">
+        <div class="mi-indicator__indicators mi-indicator__indicators--horizontal">
+          <i
+            style="background-color: rgb(255, 255, 255);"
+            class="mi-indicator__circle mi-indicator__circle--active"
+          >
+          </i>
+          <i class="mi-indicator__circle">
+          </i>
+          <i class="mi-indicator__circle">
+          </i>
+        </div>
+      </div>
+      <div class="mi-indicator">
+        <div class="mi-indicator__indicators mi-indicator__indicators--vertical">
+          <i class="mi-indicator__circle mi-indicator__circle--active">
+          </i>
+          <i class="mi-indicator__circle">
+          </i>
+          <i class="mi-indicator__circle">
+          </i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="demo-block page-2">
+      <div class="mi-indicator">
+        <div class="mi-indicator__indicators mi-indicator__indicators--horizontal">
+          <i class="mi-indicator__square mi-indicator__square--active">
+          </i>
+          <i class="mi-indicator__square">
+          </i>
+          <i class="mi-indicator__square">
+          </i>
+        </div>
+      </div>
+      <div class="mi-indicator">
+        <div class="mi-indicator__indicators mi-indicator__indicators--vertical">
+          <i class="mi-indicator__square mi-indicator__square--active">
+          </i>
+          <i class="mi-indicator__square">
+          </i>
+          <i class="mi-indicator__square">
+          </i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="demo-block page-3">
+      <div class="mi-indicator">
+        <div class="mi-indicator__indicators mi-indicator__indicators--horizontal">
+          <i
+            style="background-color: rgb(255, 255, 255);"
+            class="mi-indicator__line mi-indicator__line--active mi-indicator__line--horizontal"
+          >
+          </i>
+          <i class="mi-indicator__line mi-indicator__line--horizontal">
+          </i>
+          <i class="mi-indicator__line mi-indicator__line--horizontal">
+          </i>
+        </div>
+      </div>
+      <div class="mi-indicator">
+        <div class="mi-indicator__indicators mi-indicator__indicators--vertical">
+          <i class="mi-indicator__line mi-indicator__line--active mi-indicator__line--vertical">
+          </i>
+          <i class="mi-indicator__line mi-indicator__line--vertical">
+          </i>
+          <i class="mi-indicator__line mi-indicator__line--vertical">
+          </i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
