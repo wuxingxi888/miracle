@@ -9,21 +9,21 @@
  *  ==>www.baidu.com?a=3&b=4
  */
 export function setObjToUrlParams(
-  baseUrl: string,
-  obj: Record<string, any>,
+    baseUrl: string,
+    obj: Record<string, any>,
 ): string {
-  let parameters = '';
-  let url = '';
-  for (const key in obj) {
-    parameters += `${key}=${encodeURIComponent(obj[key])}&`;
-  }
-  parameters = parameters.replace(/&$/, '');
-  if (/\?$/.test(baseUrl)) {
-    url = baseUrl + parameters;
-  } else {
-    url = baseUrl.replace(/\/?$/, '?') + parameters;
-  }
-  return url;
+    let parameters = '';
+    let url = '';
+    for (const key in obj) {
+        parameters += `${key}=${encodeURIComponent(obj[key])}&`;
+    }
+    parameters = parameters.replace(/&$/, '');
+    if (/\?$/.test(baseUrl)) {
+        url = baseUrl + parameters;
+    } else {
+        url = baseUrl.replace(/\/?$/, '?') + parameters;
+    }
+    return url;
 }
 
 /**
@@ -38,12 +38,12 @@ export function setObjToUrlParams(
  *  ==>a=1
  */
 export const getParamsToUrl = (key: string): string => {
-  const URL = window.location.href;
-  const searchParams = new URLSearchParams(URL.split('?')[1] || '');
+    const URL = window.location.href;
+    const searchParams = new URLSearchParams(URL.split('?')[1] || '');
 
-  if (!searchParams.has(key)) {
-    return '';
-  }
+    if (!searchParams.has(key)) {
+        return '';
+    }
 
-  return searchParams.get(key) || '';
+    return searchParams.get(key) || '';
 };

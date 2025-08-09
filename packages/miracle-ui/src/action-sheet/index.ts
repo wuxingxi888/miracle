@@ -8,7 +8,7 @@ export type { ActionSheetProps, ActionSheetAction } from './ActionSheet';
 export type { ActionSheetThemeVars } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiActionSheet: typeof ActionSheet;
-  }
+    export interface GlobalComponents {
+        MiActionSheet: typeof ActionSheet;
+    }
 }

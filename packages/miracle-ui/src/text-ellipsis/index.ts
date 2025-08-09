@@ -9,7 +9,7 @@ export type { TextEllipsisProps } from './TextEllipsis';
 export type { TextEllipsisInstance, TextEllipsisThemeVars } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiTextEllipsis: typeof TextEllipsis;
-  }
+    export interface GlobalComponents {
+        MiTextEllipsis: typeof TextEllipsis;
+    }
 }

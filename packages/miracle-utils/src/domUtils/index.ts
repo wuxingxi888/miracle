@@ -10,12 +10,12 @@ import { isString } from '../isUtils';
  * bottomIncludeBody: 元素底部到文档底部的距离
  */
 export interface ViewportOffsetResult {
-  left: number;
-  top: number;
-  right: number;
-  bottom: number;
-  rightIncludeBody: number;
-  bottomIncludeBody: number;
+    left: number;
+    top: number;
+    right: number;
+    bottom: number;
+    rightIncludeBody: number;
+    bottomIncludeBody: number;
 }
 
 /**
@@ -24,7 +24,7 @@ export interface ViewportOffsetResult {
  * @returns {string} - 去除空白字符后的字符串
  */
 function trim(string: string) {
-  return (string || '').replace(/^[\s\uFEFF]+|[\s\uFEFF]+$/g, '');
+    return (string || '').replace(/^[\s\uFEFF]+|[\s\uFEFF]+$/g, '');
 }
 
 /**
@@ -35,17 +35,17 @@ function trim(string: string) {
  */
 /* istanbul ignore next */
 export function hasClass(el: Element, cls: string) {
-  if (!el || !cls) {
-    return false;
-  }
-  if (cls.includes(' ')) {
-    throw new Error('className should not contain space.');
-  }
-  if (el.classList) {
-    return el.classList.contains(cls);
-  } else {
-    return ` ${el.className} `.includes(` ${cls} `);
-  }
+    if (!el || !cls) {
+        return false;
+    }
+    if (cls.includes(' ')) {
+        throw new Error('className should not contain space.');
+    }
+    if (el.classList) {
+        return el.classList.contains(cls);
+    } else {
+        return ` ${el.className} `.includes(` ${cls} `);
+    }
 }
 
 /**
@@ -56,27 +56,27 @@ export function hasClass(el: Element, cls: string) {
  */
 /* istanbul ignore next */
 export function addClass(el: Element, cls: string) {
-  if (!el) {
-    return;
-  }
-  let curClass = el.className;
-  const classes = (cls || '').split(' ');
-
-  for (let i = 0, j = classes.length; i < j; i++) {
-    const clsName = classes[i];
-    if (!clsName) {
-      continue;
+    if (!el) {
+        return;
     }
+    let curClass = el.className;
+    const classes = (cls || '').split(' ');
 
-    if (el.classList) {
-      el.classList.add(clsName);
-    } else if (!hasClass(el, clsName)) {
-      curClass += ` ${clsName}`;
+    for (let i = 0, j = classes.length; i < j; i++) {
+        const clsName = classes[i];
+        if (!clsName) {
+            continue;
+        }
+
+        if (el.classList) {
+            el.classList.add(clsName);
+        } else if (!hasClass(el, clsName)) {
+            curClass += ` ${clsName}`;
+        }
     }
-  }
-  if (!el.classList) {
-    el.className = curClass;
-  }
+    if (!el.classList) {
+        el.className = curClass;
+    }
 }
 
 /**
@@ -87,27 +87,27 @@ export function addClass(el: Element, cls: string) {
  */
 /* istanbul ignore next */
 export function removeClass(el: Element, cls: string) {
-  if (!el || !cls) {
-    return;
-  }
-  const classes = cls.split(' ');
-  let curClass = ` ${el.className} `;
-
-  for (let i = 0, j = classes.length; i < j; i++) {
-    const clsName = classes[i];
-    if (!clsName) {
-      continue;
+    if (!el || !cls) {
+        return;
     }
+    const classes = cls.split(' ');
+    let curClass = ` ${el.className} `;
 
-    if (el.classList) {
-      el.classList.remove(clsName);
-    } else if (hasClass(el, clsName)) {
-      curClass = curClass.replace(` ${clsName} `, ' ');
+    for (let i = 0, j = classes.length; i < j; i++) {
+        const clsName = classes[i];
+        if (!clsName) {
+            continue;
+        }
+
+        if (el.classList) {
+            el.classList.remove(clsName);
+        } else if (hasClass(el, clsName)) {
+            curClass = curClass.replace(` ${clsName} `, ' ');
+        }
     }
-  }
-  if (!el.classList) {
-    el.className = trim(curClass);
-  }
+    if (!el.classList) {
+        el.className = trim(curClass);
+    }
 }
 
 /**
@@ -117,27 +117,27 @@ export function removeClass(el: Element, cls: string) {
  * @param force - 可选，强制切换行为。如果为 true，则强制添加；如果为 false，则强制移除。
  */
 export function toggleClass(el: Element, cls: string, force?: boolean): void {
-  if (!el || !cls) return;
-  if (cls.includes(' ')) {
-    throw new Error('className should not contain space.');
-  }
+    if (!el || !cls) return;
+    if (cls.includes(' ')) {
+        throw new Error('className should not contain space.');
+    }
 
-  if (el.classList) {
-    // 使用 classList 的 toggle 方法，支持 force 参数
-    if (force !== undefined) {
-      el.classList.toggle(cls, force);
+    if (el.classList) {
+        // 使用 classList 的 toggle 方法，支持 force 参数
+        if (force !== undefined) {
+            el.classList.toggle(cls, force);
+        } else {
+            el.classList.toggle(cls);
+        }
     } else {
-      el.classList.toggle(cls);
+        // 兼容不支持 classList 的情况
+        const curClass = ` ${el.className} `;
+        if (force === true || (!force && !curClass.includes(` ${cls} `))) {
+            addClass(el, cls);
+        } else {
+            removeClass(el, cls);
+        }
     }
-  } else {
-    // 兼容不支持 classList 的情况
-    const curClass = ` ${el.className} `;
-    if (force === true || (!force && !curClass.includes(` ${cls} `))) {
-      addClass(el, cls);
-    } else {
-      removeClass(el, cls);
-    }
-  }
 }
 
 /**
@@ -147,39 +147,39 @@ export function toggleClass(el: Element, cls: string, force?: boolean): void {
  * @param classB - 类名 B
  */
 export function toggleBetweenClass(
-  el: Element,
-  classA: string,
-  classB: string,
+    el: Element,
+    classA: string,
+    classB: string,
 ): void {
-  if (!el || !classA || !classB) return;
+    if (!el || !classA || !classB) return;
 
-  if (classA.includes(' ') || classB.includes(' ')) {
-    throw new Error('Class names should not contain spaces.');
-  }
+    if (classA.includes(' ') || classB.includes(' ')) {
+        throw new Error('Class names should not contain spaces.');
+    }
 
-  if (el.classList) {
-    if (el.classList.contains(classA)) {
-      el.classList.remove(classA);
-      el.classList.add(classB);
-    } else if (el.classList.contains(classB)) {
-      el.classList.remove(classB);
-      el.classList.add(classA);
+    if (el.classList) {
+        if (el.classList.contains(classA)) {
+            el.classList.remove(classA);
+            el.classList.add(classB);
+        } else if (el.classList.contains(classB)) {
+            el.classList.remove(classB);
+            el.classList.add(classA);
+        } else {
+            // 如果两者都不存在，默认添加 classA
+            el.classList.add(classA);
+        }
     } else {
-      // 如果两者都不存在，默认添加 classA
-      el.classList.add(classA);
+        // 兼容旧版浏览器
+        let curClass = ` ${el.className} `;
+        if (curClass.includes(` ${classA} `)) {
+            curClass = curClass.replace(` ${classA} `, ` ${classB} `);
+        } else if (curClass.includes(` ${classB} `)) {
+            curClass = curClass.replace(` ${classB} `, ` ${classA} `);
+        } else {
+            curClass += ` ${classA}`;
+        }
+        el.className = curClass.trim();
     }
-  } else {
-    // 兼容旧版浏览器
-    let curClass = ` ${el.className} `;
-    if (curClass.includes(` ${classA} `)) {
-      curClass = curClass.replace(` ${classA} `, ` ${classB} `);
-    } else if (curClass.includes(` ${classB} `)) {
-      curClass = curClass.replace(` ${classB} `, ` ${classA} `);
-    } else {
-      curClass += ` ${classA}`;
-    }
-    el.className = curClass.trim();
-  }
 }
 
 /**
@@ -194,11 +194,11 @@ export function toggleBetweenClass(
  * @param element 在哪个HTML元素上设置CSS变量如果没有指定，默认是文档的根元素
  */
 export function setCssVariable(
-  property: string,
-  value: string | null,
-  element: HTMLElement = document.documentElement,
+    property: string,
+    value: string | null,
+    element: HTMLElement = document.documentElement,
 ) {
-  element.style.setProperty(property, value);
+    element.style.setProperty(property, value);
 }
 
 /**
@@ -212,13 +212,13 @@ export function setCssVariable(
  * @param element - 在哪个HTML元素上设置CSS变量。如果没有指定，默认是文档的根元素。
  */
 export function setCssVariables(
-  variables: Record<string, string | null>,
-  element: HTMLElement = document.documentElement,
+    variables: Record<string, string | null>,
+    element: HTMLElement = document.documentElement,
 ) {
-  // 遍历 variables 对象中的每一项，将 CSS 变量设置到指定的元素上。
-  for (const [property, value] of Object.entries(variables)) {
-    element.style.setProperty(property, value);
-  }
+    // 遍历 variables 对象中的每一项，将 CSS 变量设置到指定的元素上。
+    for (const [property, value] of Object.entries(variables)) {
+        element.style.setProperty(property, value);
+    }
 }
 
 /**
@@ -231,20 +231,20 @@ export function setCssVariables(
  * @returns 返回一个表示CSS规则的键值对对象
  */
 export function parseCSS(cssStr: string): Record<string, string> {
-  const cssObj: Record<string, string> = {};
-  const rules = cssStr.split(';');
-  for (let i = 0; i < rules.length; i++) {
-    const rule = rules[i].trim();
-    if (!rule) {
-      continue;
+    const cssObj: Record<string, string> = {};
+    const rules = cssStr.split(';');
+    for (let i = 0; i < rules.length; i++) {
+        const rule = rules[i].trim();
+        if (!rule) {
+            continue;
+        }
+        const [prop, val] = rule.split(':');
+        if (!prop || !val) {
+            continue;
+        }
+        cssObj[prop.trim()] = val.trim();
     }
-    const [prop, val] = rule.split(':');
-    if (!prop || !val) {
-      continue;
-    }
-    cssObj[prop.trim()] = val.trim();
-  }
-  return cssObj;
+    return cssObj;
 }
 
 /**
@@ -257,13 +257,13 @@ export function parseCSS(cssStr: string): Record<string, string> {
  * @returns 返回一个字符串，包含了所有CSS属性和值的样式声明，各声明之间以空格分隔
  */
 export function serializeCSS(cssObj: Record<string, string>): string {
-  const cssArr: string[] = [];
-  for (const prop in cssObj) {
-    if (Object.prototype.hasOwnProperty.call(cssObj, prop)) {
-      cssArr.push(`${prop}: ${cssObj[prop]};`);
+    const cssArr: string[] = [];
+    for (const prop in cssObj) {
+        if (Object.prototype.hasOwnProperty.call(cssObj, prop)) {
+            cssArr.push(`${prop}: ${cssObj[prop]};`);
+        }
     }
-  }
-  return cssArr.join(' ');
+    return cssArr.join(' ');
 }
 
 /**
@@ -272,10 +272,10 @@ export function serializeCSS(cssObj: Record<string, string>): string {
  * @returns {DOMRect | number} - 元素的 DOMRect 对象或 0
  */
 export function getBoundingClientRect(element: Element): DOMRect | number {
-  if (!element || !element.getBoundingClientRect) {
-    return 0;
-  }
-  return element.getBoundingClientRect();
+    if (!element || !element.getBoundingClientRect) {
+        return 0;
+    }
+    return element.getBoundingClientRect();
 }
 
 /**
@@ -288,41 +288,41 @@ export function getBoundingClientRect(element: Element): DOMRect | number {
  * bottomIncludeBody: 元素底部到文档底部的距离
  */
 export function getViewportOffset(element: Element): ViewportOffsetResult {
-  const doc = document.documentElement;
+    const doc = document.documentElement;
 
-  const docScrollLeft = doc.scrollLeft;
-  const docScrollTop = doc.scrollTop;
-  const docClientLeft = doc.clientLeft;
-  const docClientTop = doc.clientTop;
+    const docScrollLeft = doc.scrollLeft;
+    const docScrollTop = doc.scrollTop;
+    const docClientLeft = doc.clientLeft;
+    const docClientTop = doc.clientTop;
 
-  const { pageXOffset, pageYOffset } = window;
+    const { pageXOffset, pageYOffset } = window;
 
-  const box = getBoundingClientRect(element);
+    const box = getBoundingClientRect(element);
 
-  const {
-    left: retLeft,
-    top: rectTop,
-    width: rectWidth,
-    height: rectHeight,
-  } = box as DOMRect;
+    const {
+        left: retLeft,
+        top: rectTop,
+        width: rectWidth,
+        height: rectHeight,
+    } = box as DOMRect;
 
-  const scrollLeft = (pageXOffset || docScrollLeft) - (docClientLeft || 0);
-  const scrollTop = (pageYOffset || docScrollTop) - (docClientTop || 0);
-  const offsetLeft = retLeft + pageXOffset;
-  const offsetTop = rectTop + pageYOffset;
+    const scrollLeft = (pageXOffset || docScrollLeft) - (docClientLeft || 0);
+    const scrollTop = (pageYOffset || docScrollTop) - (docClientTop || 0);
+    const offsetLeft = retLeft + pageXOffset;
+    const offsetTop = rectTop + pageYOffset;
 
-  const left = offsetLeft - scrollLeft;
-  const top = offsetTop - scrollTop;
+    const left = offsetLeft - scrollLeft;
+    const top = offsetTop - scrollTop;
 
-  const { clientWidth, clientHeight } = window.document.documentElement;
-  return {
-    left,
-    top,
-    right: clientWidth - rectWidth - left,
-    bottom: clientHeight - rectHeight - top,
-    rightIncludeBody: clientWidth - left,
-    bottomIncludeBody: clientHeight - top,
-  };
+    const { clientWidth, clientHeight } = window.document.documentElement;
+    return {
+        left,
+        top,
+        right: clientWidth - rectWidth - left,
+        bottom: clientHeight - rectHeight - top,
+        rightIncludeBody: clientWidth - left,
+        bottomIncludeBody: clientHeight - top,
+    };
 }
 
 /**
@@ -334,12 +334,13 @@ export function getViewportOffset(element: Element): ViewportOffsetResult {
  */
 
 export function querySelector(
-  selectors: string,
-  container?: Document | HTMLElement,
+    selectors: string,
+    container?: Document | HTMLElement,
 ): HTMLElement | undefined {
-  return (
-    (container ?? document).querySelector<HTMLElement>(selectors) ?? undefined
-  );
+    return (
+        (container ?? document).querySelector<HTMLElement>(selectors) ??
+        undefined
+    );
 }
 
 /**
@@ -350,12 +351,13 @@ export function querySelector(
  * @returns 返回找到的HTMLElement，如果没有找到则返回未定义
  */
 export function getElement(
-  target: string | HTMLElement | undefined,
-  container?: Document | HTMLElement,
+    target: string | HTMLElement | undefined,
+    container?: Document | HTMLElement,
 ): HTMLElement | undefined {
-  if (isString(target)) {
-    const selector = target[0] === '#' ? `[id='${target.slice(1)}']` : target;
-    return querySelector(selector, container);
-  }
-  return target;
+    if (isString(target)) {
+        const selector =
+            target[0] === '#' ? `[id='${target.slice(1)}']` : target;
+        return querySelector(selector, container);
+    }
+    return target;
 }

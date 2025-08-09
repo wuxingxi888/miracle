@@ -17,20 +17,20 @@ import { ref, watch } from 'vue';
 import { useScrollParent, useEventListener } from '@miracle-web/use';
 
 export default {
-  setup() {
-    const root = ref();
-    const scrollParent = useScrollParent(root);
+    setup() {
+        const root = ref();
+        const scrollParent = useScrollParent(root);
 
-    useEventListener(
-      'scroll',
-      () => {
-        console.log('scroll');
-      },
-      { target: scrollParent },
-    );
+        useEventListener(
+            'scroll',
+            () => {
+                console.log('scroll');
+            },
+            { target: scrollParent },
+        );
 
-    return { root };
-  },
+        return { root };
+    },
 };
 ```
 
@@ -40,7 +40,7 @@ export default {
 
 ```ts
 function useScrollParent(
-  element: Ref<Element | undefined>,
+    element: Ref<Element | undefined>,
 ): Ref<Element | Window | undefined>;
 ```
 

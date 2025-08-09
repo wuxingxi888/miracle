@@ -26,11 +26,11 @@ Locale.use('en-US', enUS);
 import { Locale } from '@miracle-web/ui';
 
 const messages = {
-  'zh-CN': {
-    miPicker: {
-      confirm: '关闭', // 将'确认'修改为'关闭'
+    'zh-CN': {
+        miPicker: {
+            confirm: '关闭', // 将'确认'修改为'关闭'
+        },
     },
-  },
 };
 
 Locale.add(messages);
@@ -52,13 +52,13 @@ Locale.add(messages);
 
 你可以通过 `useCurrentLang` 方法来获取当前使用的语言。
 
-- **类型：**
+-   **类型：**
 
 ```ts
 function useCurrentLang(): Ref<string>;
 ```
 
-- **示例：**
+-   **示例：**
 
 ```ts
 import { useCurrentLang } from '@miracle-web/ui';

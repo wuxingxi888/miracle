@@ -1,242 +1,242 @@
 :root,
 :host {
-  --mi-button-mini-height: 24px;
-  --mi-button-mini-padding: 0 var(--mi-padding-base);
-  --mi-button-mini-font-size: var(--mi-font-size-xs);
-  --mi-button-small-height: 32px;
-  --mi-button-small-padding: 0 var(--mi-padding-xs);
-  --mi-button-small-font-size: var(--mi-font-size-sm);
-  --mi-button-normal-padding: 0 15px;
-  --mi-button-normal-font-size: var(--mi-font-size-md);
-  --mi-button-large-height: 50px;
-  --mi-button-default-height: 44px;
-  --mi-button-default-line-height: 1.2;
-  --mi-button-default-font-size: var(--mi-font-size-lg);
-  --mi-button-default-color: var(--mi-text-color);
-  --mi-button-default-background: var(--mi-background-2);
-  --mi-button-default-border-color: var(--mi-gray-4);
-  --mi-button-primary-color: var(--mi-white);
-  --mi-button-primary-background: var(--mi-primary-color);
-  --mi-button-primary-border-color: var(--mi-primary-color);
-  --mi-button-success-color: var(--mi-white);
-  --mi-button-success-background: var(--mi-success-color);
-  --mi-button-success-border-color: var(--mi-success-color);
-  --mi-button-danger-color: var(--mi-white);
-  --mi-button-danger-background: var(--mi-danger-color);
-  --mi-button-danger-border-color: var(--mi-danger-color);
-  --mi-button-warning-color: var(--mi-white);
-  --mi-button-warning-background: var(--mi-warning-color);
-  --mi-button-warning-border-color: var(--mi-warning-color);
-  --mi-button-border-width: var(--mi-border-width);
-  --mi-button-radius: var(--mi-radius-md);
-  --mi-button-round-radius: var(--mi-radius-max);
-  --mi-button-plain-background: var(--mi-white);
-  --mi-button-disabled-opacity: var(--mi-disabled-opacity);
-  --mi-button-icon-size: 1.2em;
-  --mi-button-loading-icon-size: 20px;
+    --mi-button-mini-height: 24px;
+    --mi-button-mini-padding: 0 var(--mi-padding-base);
+    --mi-button-mini-font-size: var(--mi-font-size-xs);
+    --mi-button-small-height: 32px;
+    --mi-button-small-padding: 0 var(--mi-padding-xs);
+    --mi-button-small-font-size: var(--mi-font-size-sm);
+    --mi-button-normal-padding: 0 15px;
+    --mi-button-normal-font-size: var(--mi-font-size-md);
+    --mi-button-large-height: 50px;
+    --mi-button-default-height: 44px;
+    --mi-button-default-line-height: 1.2;
+    --mi-button-default-font-size: var(--mi-font-size-lg);
+    --mi-button-default-color: var(--mi-text-color);
+    --mi-button-default-background: var(--mi-background-2);
+    --mi-button-default-border-color: var(--mi-gray-4);
+    --mi-button-primary-color: var(--mi-white);
+    --mi-button-primary-background: var(--mi-primary-color);
+    --mi-button-primary-border-color: var(--mi-primary-color);
+    --mi-button-success-color: var(--mi-white);
+    --mi-button-success-background: var(--mi-success-color);
+    --mi-button-success-border-color: var(--mi-success-color);
+    --mi-button-danger-color: var(--mi-white);
+    --mi-button-danger-background: var(--mi-danger-color);
+    --mi-button-danger-border-color: var(--mi-danger-color);
+    --mi-button-warning-color: var(--mi-white);
+    --mi-button-warning-background: var(--mi-warning-color);
+    --mi-button-warning-border-color: var(--mi-warning-color);
+    --mi-button-border-width: var(--mi-border-width);
+    --mi-button-radius: var(--mi-radius-md);
+    --mi-button-round-radius: var(--mi-radius-max);
+    --mi-button-plain-background: var(--mi-white);
+    --mi-button-disabled-opacity: var(--mi-disabled-opacity);
+    --mi-button-icon-size: 1.2em;
+    --mi-button-loading-icon-size: 20px;
 }
 
 .mi-theme-dark {
-  --mi-button-plain-background: transparent;
+    --mi-button-plain-background: transparent;
 }
 
 .mi-button {
-  position: relative;
-  display: inline-block;
-  box-sizing: border-box;
-  height: var(--mi-button-default-height);
-  margin: 0;
-  padding: 0;
-  font-size: var(--mi-button-default-font-size);
-  line-height: var(--mi-button-default-line-height);
-  text-align: center;
-  border-radius: var(--mi-button-radius);
-  cursor: pointer;
-  transition: opacity var(--mi-duration-fast);
-  -webkit-appearance: none;
-  -webkit-font-smoothing: auto;
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    height: var(--mi-button-default-height);
+    margin: 0;
+    padding: 0;
+    font-size: var(--mi-button-default-font-size);
+    line-height: var(--mi-button-default-line-height);
+    text-align: center;
+    border-radius: var(--mi-button-radius);
+    cursor: pointer;
+    transition: opacity var(--mi-duration-fast);
+    -webkit-appearance: none;
+    -webkit-font-smoothing: auto;
 
-  &::before {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    background: var(--mi-black);
-    border: inherit;
-    border-color: var(--mi-black);
-    border-radius: inherit; /* inherit parent's border radius */
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    content: ' ';
-  }
-
-  &:active::before {
-    opacity: 0.1;
-  }
-
-  &--loading,
-  &--disabled {
     &::before {
-      display: none;
-    }
-  }
-
-  &--default {
-    color: var(--mi-button-default-color);
-    background: var(--mi-button-default-background);
-    border: var(--mi-button-border-width) solid
-      var(--mi-button-default-border-color);
-  }
-
-  &--primary {
-    color: var(--mi-button-primary-color);
-    background: var(--mi-button-primary-background);
-    border: var(--mi-button-border-width) solid
-      var(--mi-button-primary-border-color);
-  }
-
-  &--success {
-    color: var(--mi-button-success-color);
-    background: var(--mi-button-success-background);
-    border: var(--mi-button-border-width) solid
-      var(--mi-button-success-border-color);
-  }
-
-  &--danger {
-    color: var(--mi-button-danger-color);
-    background: var(--mi-button-danger-background);
-    border: var(--mi-button-border-width) solid
-      var(--mi-button-danger-border-color);
-  }
-
-  &--warning {
-    color: var(--mi-button-warning-color);
-    background: var(--mi-button-warning-background);
-    border: var(--mi-button-border-width) solid
-      var(--mi-button-warning-border-color);
-  }
-
-  &--plain {
-    background: var(--mi-button-plain-background);
-
-    &.mi-button--primary {
-      color: var(--mi-button-primary-background);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        background: var(--mi-black);
+        border: inherit;
+        border-color: var(--mi-black);
+        border-radius: inherit; /* inherit parent's border radius */
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        content: ' ';
     }
 
-    &.mi-button--success {
-      color: var(--mi-button-success-background);
+    &:active::before {
+        opacity: 0.1;
     }
 
-    &.mi-button--danger {
-      color: var(--mi-button-danger-background);
+    &--loading,
+    &--disabled {
+        &::before {
+            display: none;
+        }
     }
 
-    &.mi-button--warning {
-      color: var(--mi-button-warning-background);
-    }
-  }
-
-  &--large {
-    width: 100%;
-    height: var(--mi-button-large-height);
-  }
-
-  &--normal {
-    padding: var(--mi-button-normal-padding);
-    font-size: var(--mi-button-normal-font-size);
-  }
-
-  &--small {
-    height: var(--mi-button-small-height);
-    padding: var(--mi-button-small-padding);
-    font-size: var(--mi-button-small-font-size);
-  }
-
-  &__loading {
-    color: inherit;
-    font-size: inherit;
-
-    .mi-loading__spinner {
-      color: currentColor;
-      width: var(--mi-button-loading-icon-size);
-      height: var(--mi-button-loading-icon-size);
-    }
-  }
-
-  &--mini {
-    height: var(--mi-button-mini-height);
-    padding: var(--mi-button-mini-padding);
-    font-size: var(--mi-button-mini-font-size);
-
-    & + .mi-button--mini {
-      margin-left: var(--mi-padding-base);
-    }
-  }
-
-  &--block {
-    display: block;
-    width: 100%;
-  }
-
-  &--disabled {
-    cursor: not-allowed;
-    opacity: var(--mi-button-disabled-opacity);
-  }
-
-  &--loading {
-    cursor: default;
-  }
-
-  &--round {
-    border-radius: var(--mi-button-round-radius);
-  }
-
-  &--square {
-    border-radius: 0;
-  }
-
-  // align-items are ignored when flex container is a button in legacy safari
-  // see: https://bugs.webkit.org/show_bug.cgi?id=169700
-  &__content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-
-    // fix icon vertical align
-    // see: https://github.com/wuxingxi888/miracle/issues/7617
-    &::before {
-      content: ' ';
-    }
-  }
-
-  &__icon {
-    font-size: var(--mi-button-icon-size);
-    line-height: inherit;
-  }
-
-  &__icon + &__text,
-  &__loading + &__text,
-  &__text + &__icon,
-  &__text + &__loading {
-    margin-left: var(--mi-padding-base);
-  }
-
-  &--hairline {
-    border-width: 0;
-
-    &::after {
-      border-color: inherit;
-      border-radius: calc(var(--mi-button-radius) * 2);
+    &--default {
+        color: var(--mi-button-default-color);
+        background: var(--mi-button-default-background);
+        border: var(--mi-button-border-width) solid
+            var(--mi-button-default-border-color);
     }
 
-    &.mi-button--round::after {
-      border-radius: var(--mi-button-round-radius);
+    &--primary {
+        color: var(--mi-button-primary-color);
+        background: var(--mi-button-primary-background);
+        border: var(--mi-button-border-width) solid
+            var(--mi-button-primary-border-color);
     }
 
-    &.mi-button--square::after {
-      border-radius: 0;
+    &--success {
+        color: var(--mi-button-success-color);
+        background: var(--mi-button-success-background);
+        border: var(--mi-button-border-width) solid
+            var(--mi-button-success-border-color);
     }
-  }
+
+    &--danger {
+        color: var(--mi-button-danger-color);
+        background: var(--mi-button-danger-background);
+        border: var(--mi-button-border-width) solid
+            var(--mi-button-danger-border-color);
+    }
+
+    &--warning {
+        color: var(--mi-button-warning-color);
+        background: var(--mi-button-warning-background);
+        border: var(--mi-button-border-width) solid
+            var(--mi-button-warning-border-color);
+    }
+
+    &--plain {
+        background: var(--mi-button-plain-background);
+
+        &.mi-button--primary {
+            color: var(--mi-button-primary-background);
+        }
+
+        &.mi-button--success {
+            color: var(--mi-button-success-background);
+        }
+
+        &.mi-button--danger {
+            color: var(--mi-button-danger-background);
+        }
+
+        &.mi-button--warning {
+            color: var(--mi-button-warning-background);
+        }
+    }
+
+    &--large {
+        width: 100%;
+        height: var(--mi-button-large-height);
+    }
+
+    &--normal {
+        padding: var(--mi-button-normal-padding);
+        font-size: var(--mi-button-normal-font-size);
+    }
+
+    &--small {
+        height: var(--mi-button-small-height);
+        padding: var(--mi-button-small-padding);
+        font-size: var(--mi-button-small-font-size);
+    }
+
+    &__loading {
+        color: inherit;
+        font-size: inherit;
+
+        .mi-loading__spinner {
+            color: currentColor;
+            width: var(--mi-button-loading-icon-size);
+            height: var(--mi-button-loading-icon-size);
+        }
+    }
+
+    &--mini {
+        height: var(--mi-button-mini-height);
+        padding: var(--mi-button-mini-padding);
+        font-size: var(--mi-button-mini-font-size);
+
+        & + .mi-button--mini {
+            margin-left: var(--mi-padding-base);
+        }
+    }
+
+    &--block {
+        display: block;
+        width: 100%;
+    }
+
+    &--disabled {
+        cursor: not-allowed;
+        opacity: var(--mi-button-disabled-opacity);
+    }
+
+    &--loading {
+        cursor: default;
+    }
+
+    &--round {
+        border-radius: var(--mi-button-round-radius);
+    }
+
+    &--square {
+        border-radius: 0;
+    }
+
+    // align-items are ignored when flex container is a button in legacy safari
+    // see: https://bugs.webkit.org/show_bug.cgi?id=169700
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+
+        // fix icon vertical align
+        // see: https://github.com/wuxingxi888/miracle/issues/7617
+        &::before {
+            content: ' ';
+        }
+    }
+
+    &__icon {
+        font-size: var(--mi-button-icon-size);
+        line-height: inherit;
+    }
+
+    &__icon + &__text,
+    &__loading + &__text,
+    &__text + &__icon,
+    &__text + &__loading {
+        margin-left: var(--mi-padding-base);
+    }
+
+    &--hairline {
+        border-width: 0;
+
+        &::after {
+            border-color: inherit;
+            border-radius: calc(var(--mi-button-radius) * 2);
+        }
+
+        &.mi-button--round::after {
+            border-radius: var(--mi-button-round-radius);
+        }
+
+        &.mi-button--square::after {
+            border-radius: 0;
+        }
+    }
 }

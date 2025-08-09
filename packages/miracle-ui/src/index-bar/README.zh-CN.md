@@ -25,17 +25,17 @@ app.use(IndexAnchor);
 
 ```html
 <mi-index-bar>
-  <mi-index-anchor index="A" />
-  <mi-cell title="文本" />
-  <mi-cell title="文本" />
-  <mi-cell title="文本" />
+    <mi-index-anchor index="A" />
+    <mi-cell title="文本" />
+    <mi-cell title="文本" />
+    <mi-cell title="文本" />
 
-  <mi-index-anchor index="B" />
-  <mi-cell title="文本" />
-  <mi-cell title="文本" />
-  <mi-cell title="文本" />
+    <mi-index-anchor index="B" />
+    <mi-cell title="文本" />
+    <mi-cell title="文本" />
+    <mi-cell title="文本" />
 
-  ...
+    ...
 </mi-index-bar>
 ```
 
@@ -45,27 +45,27 @@ app.use(IndexAnchor);
 
 ```html
 <mi-index-bar :index-list="indexList">
-  <mi-index-anchor index="1">标题1</mi-index-anchor>
-  <mi-cell title="文本" />
-  <mi-cell title="文本" />
-  <mi-cell title="文本" />
+    <mi-index-anchor index="1">标题1</mi-index-anchor>
+    <mi-cell title="文本" />
+    <mi-cell title="文本" />
+    <mi-cell title="文本" />
 
-  <mi-index-anchor index="2">标题2</mi-index-anchor>
-  <mi-cell title="文本" />
-  <mi-cell title="文本" />
-  <mi-cell title="文本" />
+    <mi-index-anchor index="2">标题2</mi-index-anchor>
+    <mi-cell title="文本" />
+    <mi-cell title="文本" />
+    <mi-cell title="文本" />
 
-  ...
+    ...
 </mi-index-bar>
 ```
 
 ```js
 export default {
-  setup() {
-    return {
-      indexList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-    };
-  },
+    setup() {
+        return {
+            indexList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        };
+    },
 };
 ```
 
@@ -109,9 +109,9 @@ export default {
 
 ```ts
 import type {
-  IndexBarProps,
-  IndexAnchorProps,
-  IndexBarInstance,
+    IndexBarProps,
+    IndexAnchorProps,
+    IndexBarInstance,
 } from '@miracle-web/ui';
 ```
 

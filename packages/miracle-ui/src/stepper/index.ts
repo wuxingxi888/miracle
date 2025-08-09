@@ -8,7 +8,7 @@ export type { StepperTheme, StepperProps } from './Stepper';
 export type { StepperThemeVars } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiStepper: typeof Stepper;
-  }
+    export interface GlobalComponents {
+        MiStepper: typeof Stepper;
+    }
 }

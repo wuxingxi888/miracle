@@ -89,14 +89,14 @@ button
 
 ```json
 {
-  "extends": "./tsconfig.json",
-  "compilerOptions": {
-    "declaration": true,
-    "declarationDir": ".",
-    "emitDeclarationOnly": true
-  },
-  "include": ["es/**/*", "lib/**/*"],
-  "exclude": ["node_modules", "**/test/**/*", "**/demo/**/*"]
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "declaration": true,
+        "declarationDir": ".",
+        "emitDeclarationOnly": true
+    },
+    "include": ["es/**/*", "lib/**/*"],
+    "exclude": ["node_modules", "**/test/**/*", "**/demo/**/*"]
 }
 ```
 
@@ -104,6 +104,6 @@ button
 
 ```json
 {
-  "typings": "lib/index.d.ts"
+    "typings": "lib/index.d.ts"
 }
 ```

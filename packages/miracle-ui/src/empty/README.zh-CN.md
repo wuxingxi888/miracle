@@ -60,9 +60,9 @@ Empty 组件内置了多种占位图片类型，可以在不同业务场景下�
 
 ```html
 <mi-empty
-  image="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/custom-empty-image.png"
-  image-size="80"
-  description="描述文字"
+    image="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/custom-empty-image.png"
+    image-size="80"
+    description="描述文字"
 />
 ```
 
@@ -72,14 +72,14 @@ Empty 组件内置了多种占位图片类型，可以在不同业务场景下�
 
 ```html
 <mi-empty description="描述文字">
-  <mi-button round type="primary" class="bottom-button">按钮</mi-button>
+    <mi-button round type="primary" class="bottom-button">按钮</mi-button>
 </mi-empty>
 
 <style>
-  .bottom-button {
-    width: 160px;
-    height: 40px;
-  }
+    .bottom-button {
+        width: 160px;
+        height: 40px;
+    }
 </style>
 ```
 

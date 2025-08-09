@@ -12,14 +12,14 @@
 import { useState } from '@miracle-web/use';
 
 export default {
-  setup() {
-    const initialStateFunc = () => 10;
+    setup() {
+        const initialStateFunc = () => 10;
 
-    const [count, setCount] = useState(initialStateFunc);
+        const [count, setCount] = useState(initialStateFunc);
 
-    setCount(count + 1);
-    console.log(count.value); // -> 11
-  },
+        setCount(count + 1);
+        console.log(count.value); // -> 11
+    },
 };
 ```
 
@@ -29,14 +29,14 @@ export default {
 import { useState } from '@miracle-web/use';
 
 export default {
-  setup() {
-    const initialStateValue = 20;
+    setup() {
+        const initialStateValue = 20;
 
-    const [count, setCount] = useState(initialStateValue);
+        const [count, setCount] = useState(initialStateValue);
 
-    setCount(count + 1);
-    console.log(count.value); // -> 21
-  },
+        setCount(count + 1);
+        console.log(count.value); // -> 21
+    },
 };
 ```
 
@@ -46,7 +46,7 @@ export default {
 
 ```ts
 function useState(
-  initialState?: (() => S) | S,
+    initialState?: (() => S) | S,
 ): [Ref<S>, Dispatch<BasicStateAction<S>>];
 ```
 

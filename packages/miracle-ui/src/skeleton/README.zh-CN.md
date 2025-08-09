@@ -11,11 +11,11 @@
 ```js
 import { createApp } from 'vue';
 import {
-  Skeleton,
-  SkeletonTitle,
-  SkeletonImage,
-  SkeletonAvatar,
-  SkeletonParagraph,
+    Skeleton,
+    SkeletonTitle,
+    SkeletonImage,
+    SkeletonAvatar,
+    SkeletonParagraph,
 } from '@miracle-web/ui';
 
 const app = createApp();
@@ -50,7 +50,7 @@ app.use(SkeletonParagraph);
 
 ```html
 <mi-skeleton title avatar :row="3" :loading="loading">
-  <div>实际内容</div>
+    <div>实际内容</div>
 </mi-skeleton>
 ```
 
@@ -58,17 +58,17 @@ app.use(SkeletonParagraph);
 import { ref, onMounted } from 'vue';
 
 export default {
-  setup() {
-    const loading = ref(true);
+    setup() {
+        const loading = ref(true);
 
-    onMounted(() => {
-      loading.value = false;
-    });
+        onMounted(() => {
+            loading.value = false;
+        });
 
-    return {
-      loading,
-    };
-  },
+        return {
+            loading,
+        };
+    },
 };
 ```
 
@@ -78,17 +78,17 @@ export default {
 
 ```html
 <mi-skeleton>
-  <template #template>
-    <div :style="{ display: 'flex', width: '100%' }">
-      <mi-skeleton-image />
-      <div :style="{ flex: 1, marginLeft: '16px' }">
-        <mi-skeleton-paragraph row-width="60%" />
-        <mi-skeleton-paragraph />
-        <mi-skeleton-paragraph />
-        <mi-skeleton-paragraph />
-      </div>
-    </div>
-  </template>
+    <template #template>
+        <div :style="{ display: 'flex', width: '100%' }">
+            <mi-skeleton-image />
+            <div :style="{ flex: 1, marginLeft: '16px' }">
+                <mi-skeleton-paragraph row-width="60%" />
+                <mi-skeleton-paragraph />
+                <mi-skeleton-paragraph />
+                <mi-skeleton-paragraph />
+            </div>
+        </div>
+    </template>
 </mi-skeleton>
 ```
 
@@ -150,12 +150,12 @@ export default {
 
 ```ts
 import type {
-  SkeletonProps,
-  SkeletonImageProps,
-  SkeletonTitleProps,
-  SkeletonImageShape,
-  SkeletonAvatarShape,
-  SkeletonParagraphProps,
+    SkeletonProps,
+    SkeletonImageProps,
+    SkeletonTitleProps,
+    SkeletonImageShape,
+    SkeletonAvatarShape,
+    SkeletonParagraphProps,
 } from '@miracle-web/ui';
 ```
 

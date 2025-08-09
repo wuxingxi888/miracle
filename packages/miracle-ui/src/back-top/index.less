@@ -1,46 +1,46 @@
 :root,
 :host {
-  --mi-back-top-size: 40px;
-  --mi-back-top-right: 30px;
-  --mi-back-top-bottom: 40px;
-  --mi-back-top-z-index: 100;
-  --mi-back-top-icon-size: 20px;
-  --mi-back-top-text-color: #fff;
-  --mi-back-top-background: var(--mi-blue);
+    --mi-back-top-size: 40px;
+    --mi-back-top-right: 30px;
+    --mi-back-top-bottom: 40px;
+    --mi-back-top-z-index: 100;
+    --mi-back-top-icon-size: 20px;
+    --mi-back-top-text-color: #fff;
+    --mi-back-top-background: var(--mi-blue);
 }
 
 .mi-back-top {
-  position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: var(--mi-back-top-size);
-  height: var(--mi-back-top-size);
-  right: var(--mi-back-top-right);
-  bottom: var(--mi-back-top-bottom);
-  z-index: var(--mi-back-top-z-index);
-  cursor: pointer;
-  color: var(--mi-back-top-text-color);
-  border-radius: var(--mi-radius-max);
-  box-shadow: 0 2px 8px 0px rgba(0, 0, 0, 0.12);
-  transform: scale(0);
-  transition: var(--mi-duration-base) cubic-bezier(0.25, 0.8, 0.5, 1);
-  background-color: var(--mi-back-top-background);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--mi-back-top-size);
+    height: var(--mi-back-top-size);
+    right: var(--mi-back-top-right);
+    bottom: var(--mi-back-top-bottom);
+    z-index: var(--mi-back-top-z-index);
+    cursor: pointer;
+    color: var(--mi-back-top-text-color);
+    border-radius: var(--mi-radius-max);
+    box-shadow: 0 2px 8px 0px rgba(0, 0, 0, 0.12);
+    transform: scale(0);
+    transition: var(--mi-duration-base) cubic-bezier(0.25, 0.8, 0.5, 1);
+    background-color: var(--mi-back-top-background);
 
-  &:active {
-    opacity: var(--mi-active-opacity);
-  }
+    &:active {
+        opacity: var(--mi-active-opacity);
+    }
 
-  &__placeholder {
-    display: none;
-  }
+    &__placeholder {
+        display: none;
+    }
 
-  &--active {
-    transform: scale(1);
-  }
+    &--active {
+        transform: scale(1);
+    }
 
-  &__icon {
-    font-size: var(--mi-back-top-icon-size);
-    font-weight: var(--mi-font-bold);
-  }
+    &__icon {
+        font-size: var(--mi-back-top-icon-size);
+        font-weight: var(--mi-font-bold);
+    }
 }

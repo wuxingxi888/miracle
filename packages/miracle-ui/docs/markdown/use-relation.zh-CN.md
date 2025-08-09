@@ -17,17 +17,17 @@ import { useChildren } from '@miracle-web/use';
 const RELATION_KEY = Symbol('my-relation');
 
 export default {
-  setup() {
-    const { linkChildren } = useChildren(RELATION_KEY);
+    setup() {
+        const { linkChildren } = useChildren(RELATION_KEY);
 
-    const count = ref(0);
-    const add = () => {
-      count.value++;
-    };
+        const count = ref(0);
+        const add = () => {
+            count.value++;
+        };
 
-    // 向子组件提供数据和方法
-    linkChildren({ add, count });
-  },
+        // 向子组件提供数据和方法
+        linkChildren({ add, count });
+    },
 };
 ```
 
@@ -37,15 +37,15 @@ export default {
 import { useParent } from '@miracle-web/use';
 
 export default {
-  setup() {
-    const { parent } = useParent(RELATION_KEY);
+    setup() {
+        const { parent } = useParent(RELATION_KEY);
 
-    // 调用父组件提供的数据和方法
-    if (parent) {
-      parent.add();
-      console.log(parent.count.value); // -> 1
-    }
-  },
+        // 调用父组件提供的数据和方法
+        if (parent) {
+            parent.add();
+            console.log(parent.count.value); // -> 1
+        }
+    },
 };
 ```
 
@@ -55,13 +55,13 @@ export default {
 
 ```ts
 function useParent<T>(key: string | symbol): {
-  parent?: T;
-  index?: Ref<number>;
+    parent?: T;
+    index?: Ref<number>;
 };
 
 function useChildren(key: string | symbol): {
-  children: ComponentPublicInstance[];
-  linkChildren: (value: any) => void;
+    children: ComponentPublicInstance[];
+    linkChildren: (value: any) => void;
 };
 ```
 

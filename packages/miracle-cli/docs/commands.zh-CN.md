@@ -5,13 +5,13 @@ Miracle CLI 中内置了一系列的命令，可以将命令添加到 npm script
 ```json
 // package.json
 {
-  "scripts": {
-    "dev": "miracle-cli dev",
-    "test": "miracle-cli test",
-    "lint": "miracle-cli lint",
-    "release": "miracle-cli release",
-    "build-site": "miracle-cli build-site"
-  }
+    "scripts": {
+        "dev": "miracle-cli dev",
+        "test": "miracle-cli test",
+        "lint": "miracle-cli lint",
+        "release": "miracle-cli release",
+        "build-site": "miracle-cli build-site"
+    }
 }
 ```
 
@@ -38,9 +38,9 @@ npx miracle-cli dev
 ```json
 // package.json
 {
-  "main": "lib/index.js",
-  "module": "es/index.js",
-  "files": ["es", "lib"]
+    "main": "lib/index.js",
+    "module": "es/index.js",
+    "files": ["es", "lib"]
 }
 ```
 

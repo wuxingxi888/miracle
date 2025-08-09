@@ -23,8 +23,8 @@ app.use(DropdownItem);
 
 ```html
 <mi-dropdown-menu>
-  <mi-dropdown-item v-model="value1" :options="option1" />
-  <mi-dropdown-item v-model="value2" :options="option2" />
+    <mi-dropdown-item v-model="value1" :options="option1" />
+    <mi-dropdown-item v-model="value2" :options="option2" />
 </mi-dropdown-menu>
 ```
 
@@ -32,27 +32,27 @@ app.use(DropdownItem);
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const value1 = ref(0);
-    const value2 = ref('a');
-    const option1 = [
-      { text: '全部商品', value: 0 },
-      { text: '新款商品', value: 1 },
-      { text: '活动商品', value: 2 },
-    ];
-    const option2 = [
-      { text: '默认排序', value: 'a' },
-      { text: '好评排序', value: 'b' },
-      { text: '销量排序', value: 'c' },
-    ];
+    setup() {
+        const value1 = ref(0);
+        const value2 = ref('a');
+        const option1 = [
+            { text: '全部商品', value: 0 },
+            { text: '新款商品', value: 1 },
+            { text: '活动商品', value: 2 },
+        ];
+        const option2 = [
+            { text: '默认排序', value: 'a' },
+            { text: '好评排序', value: 'b' },
+            { text: '销量排序', value: 'c' },
+        ];
 
-    return {
-      value1,
-      value2,
-      option1,
-      option2,
-    };
-  },
+        return {
+            value1,
+            value2,
+            option1,
+            option2,
+        };
+    },
 };
 ```
 
@@ -62,24 +62,24 @@ export default {
 
 ```html
 <mi-dropdown-menu ref="menuRef">
-  <mi-dropdown-item v-model="value" :options="options" />
-  <mi-dropdown-item title="筛选" ref="itemRef">
-    <mi-cell center title="包邮">
-      <template #right-icon>
-        <mi-switch v-model="switch1" />
-      </template>
-    </mi-cell>
-    <mi-cell center title="团购">
-      <template #right-icon>
-        <mi-switch v-model="switch2" />
-      </template>
-    </mi-cell>
-    <div style="padding: 5px 16px;">
-      <mi-button type="primary" block round @click="onConfirm">
-        确认
-      </mi-button>
-    </div>
-  </mi-dropdown-item>
+    <mi-dropdown-item v-model="value" :options="options" />
+    <mi-dropdown-item title="筛选" ref="itemRef">
+        <mi-cell center title="包邮">
+            <template #right-icon>
+                <mi-switch v-model="switch1" />
+            </template>
+        </mi-cell>
+        <mi-cell center title="团购">
+            <template #right-icon>
+                <mi-switch v-model="switch2" />
+            </template>
+        </mi-cell>
+        <div style="padding: 5px 16px;">
+            <mi-button type="primary" block round @click="onConfirm"
+                >确认</mi-button
+            >
+        </div>
+    </mi-dropdown-item>
 </mi-dropdown-menu>
 ```
 
@@ -87,33 +87,33 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const menuRef = ref(null);
-    const itemRef = ref(null);
-    const value = ref(0);
-    const switch1 = ref(false);
-    const switch2 = ref(false);
-    const options = [
-      { text: '全部商品', value: 0 },
-      { text: '新款商品', value: 1 },
-      { text: '活动商品', value: 2 },
-    ];
-    const onConfirm = () => {
-      itemRef.value.toggle();
-      // 或者
-      // menuRef.value.close();
-    };
+    setup() {
+        const menuRef = ref(null);
+        const itemRef = ref(null);
+        const value = ref(0);
+        const switch1 = ref(false);
+        const switch2 = ref(false);
+        const options = [
+            { text: '全部商品', value: 0 },
+            { text: '新款商品', value: 1 },
+            { text: '活动商品', value: 2 },
+        ];
+        const onConfirm = () => {
+            itemRef.value.toggle();
+            // 或者
+            // menuRef.value.close();
+        };
 
-    return {
-      menuRef,
-      itemRef,
-      value,
-      switch1,
-      switch2,
-      options,
-      onConfirm,
-    };
-  },
+        return {
+            menuRef,
+            itemRef,
+            value,
+            switch1,
+            switch2,
+            options,
+            onConfirm,
+        };
+    },
 };
 ```
 
@@ -123,8 +123,8 @@ export default {
 
 ```html
 <mi-dropdown-menu active-color="#ee0a24">
-  <mi-dropdown-item v-model="value1" :options="option1" />
-  <mi-dropdown-item v-model="value2" :options="option2" />
+    <mi-dropdown-item v-model="value1" :options="option1" />
+    <mi-dropdown-item v-model="value2" :options="option2" />
 </mi-dropdown-menu>
 ```
 
@@ -134,11 +134,11 @@ export default {
 
 ```html
 <mi-dropdown-menu swipe-threshold="4">
-  <mi-dropdown-item v-model="value1" :options="option1" />
-  <mi-dropdown-item v-model="value2" :options="option2" />
-  <mi-dropdown-item v-model="value2" :options="option2" />
-  <mi-dropdown-item v-model="value2" :options="option2" />
-  <mi-dropdown-item v-model="value2" :options="option2" />
+    <mi-dropdown-item v-model="value1" :options="option1" />
+    <mi-dropdown-item v-model="value2" :options="option2" />
+    <mi-dropdown-item v-model="value2" :options="option2" />
+    <mi-dropdown-item v-model="value2" :options="option2" />
+    <mi-dropdown-item v-model="value2" :options="option2" />
 </mi-dropdown-menu>
 ```
 
@@ -148,8 +148,8 @@ export default {
 
 ```html
 <mi-dropdown-menu direction="up">
-  <mi-dropdown-item v-model="value1" :options="option1" />
-  <mi-dropdown-item v-model="value2" :options="option2" />
+    <mi-dropdown-item v-model="value1" :options="option1" />
+    <mi-dropdown-item v-model="value2" :options="option2" />
 </mi-dropdown-menu>
 ```
 
@@ -157,8 +157,8 @@ export default {
 
 ```html
 <mi-dropdown-menu>
-  <mi-dropdown-item v-model="value1" disabled :options="option1" />
-  <mi-dropdown-item v-model="value2" disabled :options="option2" />
+    <mi-dropdown-item v-model="value1" disabled :options="option1" />
+    <mi-dropdown-item v-model="value2" disabled :options="option2" />
 </mi-dropdown-menu>
 ```
 
@@ -229,12 +229,12 @@ export default {
 
 ```ts
 import type {
-  DropdownMenuProps,
-  DropdownItemProps,
-  DropdownItemOption,
-  DropdownItemInstance,
-  DropdownMenuInstance,
-  DropdownMenuDirection,
+    DropdownMenuProps,
+    DropdownItemProps,
+    DropdownItemOption,
+    DropdownItemInstance,
+    DropdownMenuInstance,
+    DropdownMenuDirection,
 } from '@miracle-web/ui';
 ```
 
@@ -243,8 +243,8 @@ import type {
 ```ts
 import { ref } from 'vue';
 import type {
-  DropdownMenuInstance,
-  DropdownItemInstance,
+    DropdownMenuInstance,
+    DropdownItemInstance,
 } from '@miracle-web/ui';
 
 const dropdownMenuRef = ref<DropdownMenuInstance>();
@@ -295,8 +295,8 @@ dropdownItemRef.value?.toggle();
 
 ```html
 <mi-dropdown-menu>
-  <mi-dropdown-item teleport="body" />
-  <mi-dropdown-item teleport="body" />
+    <mi-dropdown-item teleport="body" />
+    <mi-dropdown-item teleport="body" />
 </mi-dropdown-menu>
 ```
 
@@ -304,7 +304,7 @@ dropdownItemRef.value?.toggle();
 
 ```html
 <mi-dropdown-menu auto-locate>
-  <mi-dropdown-item />
-  <mi-dropdown-item />
+    <mi-dropdown-item />
+    <mi-dropdown-item />
 </mi-dropdown-menu>
 ```

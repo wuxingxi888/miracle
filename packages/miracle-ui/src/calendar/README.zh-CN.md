@@ -39,24 +39,24 @@ app.use(Calendar);
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const date = ref('');
-    const show = ref(false);
+    setup() {
+        const date = ref('');
+        const show = ref(false);
 
-    const formatDate = (date) => {
-      return `${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`;
-    };
-    const onConfirm = (value) => {
-      show.value = false;
-      date.value = formatDate(value);
-    };
+        const formatDate = (date) => {
+            return `${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`;
+        };
+        const onConfirm = (value) => {
+            show.value = false;
+            date.value = formatDate(value);
+        };
 
-    return {
-      date,
-      show,
-      onConfirm,
-    };
-  },
+        return {
+            date,
+            show,
+            onConfirm,
+        };
+    },
 };
 ```
 
@@ -73,21 +73,21 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const text = ref('');
-    const show = ref(false);
+    setup() {
+        const text = ref('');
+        const show = ref(false);
 
-    const onConfirm = (dates) => {
-      show.value = false;
-      text.value = `选择了 ${dates.length} 个日期`;
-    };
+        const onConfirm = (dates) => {
+            show.value = false;
+            text.value = `选择了 ${dates.length} 个日期`;
+        };
 
-    return {
-      text,
-      show,
-      onConfirm,
-    };
-  },
+        return {
+            text,
+            show,
+            onConfirm,
+        };
+    },
 };
 ```
 
@@ -104,23 +104,23 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const date = ref('');
-    const show = ref(false);
+    setup() {
+        const date = ref('');
+        const show = ref(false);
 
-    const formatDate = (date) => `${date.getMonth() + 1}/${date.getDate()}`;
-    const onConfirm = (values) => {
-      const [start, end] = values;
-      show.value = false;
-      date.value = `${formatDate(start)} - ${formatDate(end)}`;
-    };
+        const formatDate = (date) => `${date.getMonth() + 1}/${date.getDate()}`;
+        const onConfirm = (values) => {
+            const [start, end] = values;
+            show.value = false;
+            date.value = `${formatDate(start)} - ${formatDate(end)}`;
+        };
 
-    return {
-      date,
-      show,
-      onConfirm,
-    };
-  },
+        return {
+            date,
+            show,
+            onConfirm,
+        };
+    },
 };
 ```
 
@@ -154,15 +154,15 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const show = ref(false);
+    setup() {
+        const show = ref(false);
 
-    return {
-      show,
-      minDate: new Date(2010, 0, 1),
-      maxDate: new Date(2010, 0, 31),
-    };
-  },
+        return {
+            show,
+            minDate: new Date(2010, 0, 1),
+            maxDate: new Date(2010, 0, 31),
+        };
+    },
 };
 ```
 
@@ -172,10 +172,10 @@ export default {
 
 ```html
 <mi-calendar
-  v-model:show="show"
-  type="range"
-  confirm-text="完成"
-  confirm-disabled-text="请选择结束时间"
+    v-model:show="show"
+    type="range"
+    confirm-text="完成"
+    confirm-disabled-text="请选择结束时间"
 />
 ```
 
@@ -189,34 +189,34 @@ export default {
 
 ```js
 export default {
-  setup() {
-    const formatter = (day) => {
-      const month = day.date.getMonth() + 1;
-      const date = day.date.getDate();
+    setup() {
+        const formatter = (day) => {
+            const month = day.date.getMonth() + 1;
+            const date = day.date.getDate();
 
-      if (month === 5) {
-        if (date === 1) {
-          day.topInfo = '劳动节';
-        } else if (date === 4) {
-          day.topInfo = '青年节';
-        } else if (date === 11) {
-          day.text = '今天';
-        }
-      }
+            if (month === 5) {
+                if (date === 1) {
+                    day.topInfo = '劳动节';
+                } else if (date === 4) {
+                    day.topInfo = '青年节';
+                } else if (date === 11) {
+                    day.text = '今天';
+                }
+            }
 
-      if (day.type === 'start') {
-        day.bottomInfo = '入住';
-      } else if (day.type === 'end') {
-        day.bottomInfo = '离店';
-      }
+            if (day.type === 'start') {
+                day.bottomInfo = '入住';
+            } else if (day.type === 'end') {
+                day.bottomInfo = '离店';
+            }
 
-      return day;
-    };
+            return day;
+        };
 
-    return {
-      formatter,
-    };
-  },
+        return {
+            formatter,
+        };
+    },
 };
 ```
 
@@ -250,10 +250,10 @@ export default {
 
 ```html
 <mi-calendar
-  title="日历"
-  :poppable="false"
-  :show-confirm="false"
-  :style="{ height: '500px' }"
+    title="日历"
+    :poppable="false"
+    :show-confirm="false"
+    :style="{ height: '500px' }"
 />
 ```
 
@@ -380,12 +380,12 @@ export default {
 
 ```ts
 import type {
-  CalendarSwitchMode,
-  CalendarType,
-  CalendarProps,
-  CalendarDayItem,
-  CalendarDayType,
-  CalendarInstance,
+    CalendarSwitchMode,
+    CalendarType,
+    CalendarProps,
+    CalendarDayItem,
+    CalendarDayType,
+    CalendarInstance,
 } from '@miracle-web/ui';
 ```
 
@@ -448,17 +448,17 @@ calendarRef.value?.reset();
 const asyncData = ref();
 
 const formatter = computed(() => {
-  if (!asyncData.value) {
-    return (day) => day;
-  }
-  return (day) => {
-    day.bottomInfo = asyncData.value;
-    return day;
-  };
+    if (!asyncData.value) {
+        return (day) => day;
+    }
+    return (day) => {
+        day.bottomInfo = asyncData.value;
+        return day;
+    };
 });
 
 setTimeout(() => {
-  asyncData.value = '后端文案';
+    asyncData.value = '后端文案';
 }, 3000);
 ```
 

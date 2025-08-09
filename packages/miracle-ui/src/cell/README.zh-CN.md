@@ -25,8 +25,8 @@ app.use(CellGroup);
 
 ```html
 <mi-cell-group>
-  <mi-cell title="单元格" value="内容" />
-  <mi-cell title="单元格" value="内容" label="描述信息" />
+    <mi-cell title="单元格" value="内容" />
+    <mi-cell title="单元格" value="内容" label="描述信息" />
 </mi-cell-group>
 ```
 
@@ -36,8 +36,8 @@ app.use(CellGroup);
 
 ```html
 <mi-cell-group inset>
-  <mi-cell title="单元格" value="内容" />
-  <mi-cell title="单元格" value="内容" label="描述信息" />
+    <mi-cell title="单元格" value="内容" />
+    <mi-cell title="单元格" value="内容" label="描述信息" />
 </mi-cell-group>
 ```
 
@@ -83,10 +83,10 @@ app.use(CellGroup);
 
 ```html
 <mi-cell-group title="分组1">
-  <mi-cell title="单元格" value="内容" />
+    <mi-cell title="单元格" value="内容" />
 </mi-cell-group>
 <mi-cell-group title="分组2">
-  <mi-cell title="单元格" value="内容" />
+    <mi-cell title="单元格" value="内容" />
 </mi-cell-group>
 ```
 
@@ -96,29 +96,29 @@ app.use(CellGroup);
 
 ```html
 <mi-cell value="内容" is-link>
-  <!-- 使用 title 插槽来自定义标题 -->
-  <template #title>
-    <span class="custom-title">单元格</span>
-  </template>
+    <!-- 使用 title 插槽来自定义标题 -->
+    <template #title>
+        <span class="custom-title">单元格</span>
+    </template>
 </mi-cell>
 
 <mi-cell title="单元格" icon="shop-o">
-  <!-- 使用 right-icon 插槽来自定义右侧图标 -->
-  <template #right-icon>
-    <mi-icon name="search" class="search-icon" />
-  </template>
+    <!-- 使用 right-icon 插槽来自定义右侧图标 -->
+    <template #right-icon>
+        <mi-icon name="search" class="search-icon" />
+    </template>
 </mi-cell>
 
 <style>
-  .custom-title {
-    margin-right: 4px;
-    vertical-align: middle;
-  }
+    .custom-title {
+        margin-right: 4px;
+        vertical-align: middle;
+    }
 
-  .search-icon {
-    font-size: 16px;
-    line-height: inherit;
-  }
+    .search-icon {
+        font-size: 16px;
+        line-height: inherit;
+    }
 </style>
 ```
 
@@ -195,10 +195,10 @@ app.use(CellGroup);
 
 ```ts
 import type {
-  CellSize,
-  CellProps,
-  CellGroupProps,
-  CellArrowDirection,
+    CellSize,
+    CellProps,
+    CellGroupProps,
+    CellArrowDirection,
 } from '@miracle-web/ui';
 ```
 

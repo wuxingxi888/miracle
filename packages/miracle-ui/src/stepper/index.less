@@ -1,130 +1,132 @@
 :root,
 :host {
-  --mi-stepper-background: var(--mi-active-color);
-  --mi-stepper-button-icon-color: var(--mi-text-color);
-  --mi-stepper-button-disabled-color: var(--mi-background);
-  --mi-stepper-button-disabled-icon-color: var(--mi-gray-5);
-  --mi-stepper-button-round-theme-color: var(--mi-primary-color);
-  --mi-stepper-input-width: 32px;
-  --mi-stepper-input-height: 28px;
-  --mi-stepper-input-font-size: var(--mi-font-size-md);
-  --mi-stepper-input-line-height: normal;
-  --mi-stepper-input-text-color: var(--mi-text-color);
-  --mi-stepper-input-disabled-text-color: var(--mi-text-color-3);
-  --mi-stepper-input-disabled-background: var(--mi-active-color);
-  --mi-stepper-radius: var(--mi-radius-md);
+    --mi-stepper-background: var(--mi-active-color);
+    --mi-stepper-button-icon-color: var(--mi-text-color);
+    --mi-stepper-button-disabled-color: var(--mi-background);
+    --mi-stepper-button-disabled-icon-color: var(--mi-gray-5);
+    --mi-stepper-button-round-theme-color: var(--mi-primary-color);
+    --mi-stepper-input-width: 32px;
+    --mi-stepper-input-height: 28px;
+    --mi-stepper-input-font-size: var(--mi-font-size-md);
+    --mi-stepper-input-line-height: normal;
+    --mi-stepper-input-text-color: var(--mi-text-color);
+    --mi-stepper-input-disabled-text-color: var(--mi-text-color-3);
+    --mi-stepper-input-disabled-background: var(--mi-active-color);
+    --mi-stepper-radius: var(--mi-radius-md);
 }
 
 .mi-stepper {
-  display: inline-block;
-  user-select: none;
+    display: inline-block;
+    user-select: none;
 
-  &__minus,
-  &__plus {
-    position: relative;
-    box-sizing: border-box;
-    width: var(--mi-stepper-input-height);
-    height: var(--mi-stepper-input-height);
-    margin: 0;
-    padding: 0;
-    color: var(--mi-stepper-button-icon-color);
-    vertical-align: middle;
-    background: var(--mi-stepper-background);
-    border: 0;
+    &__minus,
+    &__plus {
+        position: relative;
+        box-sizing: border-box;
+        width: var(--mi-stepper-input-height);
+        height: var(--mi-stepper-input-height);
+        margin: 0;
+        padding: 0;
+        color: var(--mi-stepper-button-icon-color);
+        vertical-align: middle;
+        background: var(--mi-stepper-background);
+        border: 0;
 
-    &::before {
-      width: 50%;
-      height: 1px;
+        &::before {
+            width: 50%;
+            height: 1px;
+        }
+
+        &::after {
+            width: 1px;
+            height: 50%;
+        }
+
+        &::before,
+        &::after {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background-color: currentColor;
+            transform: translate(-50%, -50%);
+            content: '';
+        }
+
+        &--disabled {
+            color: var(--mi-stepper-button-disabled-icon-color);
+            background-color: var(--mi-stepper-button-disabled-color);
+            cursor: not-allowed;
+        }
     }
 
-    &::after {
-      width: 1px;
-      height: 50%;
+    &__minus {
+        border-radius: var(--mi-stepper-radius) 0 0 var(--mi-stepper-radius);
+
+        &::after {
+            display: none;
+        }
     }
 
-    &::before,
-    &::after {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      background-color: currentColor;
-      transform: translate(-50%, -50%);
-      content: '';
+    &__plus {
+        border-radius: 0 var(--mi-stepper-radius) var(--mi-stepper-radius) 0;
     }
 
-    &--disabled {
-      color: var(--mi-stepper-button-disabled-icon-color);
-      background-color: var(--mi-stepper-button-disabled-color);
-      cursor: not-allowed;
-    }
-  }
+    &__input {
+        box-sizing: border-box;
+        width: var(--mi-stepper-input-width);
+        height: var(--mi-stepper-input-height);
+        margin: 0 2px;
+        padding: 0;
+        color: var(--mi-stepper-input-text-color);
+        font-size: var(--mi-stepper-input-font-size);
+        line-height: var(--mi-stepper-input-line-height);
+        text-align: center;
+        vertical-align: middle;
+        background: var(--mi-stepper-background);
+        border: 0;
+        border-width: 1px 0;
+        border-radius: 0;
+        -webkit-appearance: none;
 
-  &__minus {
-    border-radius: var(--mi-stepper-radius) 0 0 var(--mi-stepper-radius);
+        &:disabled {
+            color: var(--mi-stepper-input-disabled-text-color);
+            background-color: var(--mi-stepper-input-disabled-background);
+            // fix disabled color in iOS
+            -webkit-text-fill-color: var(
+                --mi-stepper-input-disabled-text-color
+            );
+            opacity: 1;
+        }
 
-    &::after {
-      display: none;
-    }
-  }
-
-  &__plus {
-    border-radius: 0 var(--mi-stepper-radius) var(--mi-stepper-radius) 0;
-  }
-
-  &__input {
-    box-sizing: border-box;
-    width: var(--mi-stepper-input-width);
-    height: var(--mi-stepper-input-height);
-    margin: 0 2px;
-    padding: 0;
-    color: var(--mi-stepper-input-text-color);
-    font-size: var(--mi-stepper-input-font-size);
-    line-height: var(--mi-stepper-input-line-height);
-    text-align: center;
-    vertical-align: middle;
-    background: var(--mi-stepper-background);
-    border: 0;
-    border-width: 1px 0;
-    border-radius: 0;
-    -webkit-appearance: none;
-
-    &:disabled {
-      color: var(--mi-stepper-input-disabled-text-color);
-      background-color: var(--mi-stepper-input-disabled-background);
-      // fix disabled color in iOS
-      -webkit-text-fill-color: var(--mi-stepper-input-disabled-text-color);
-      opacity: 1;
+        &:read-only {
+            cursor: default;
+        }
     }
 
-    &:read-only {
-      cursor: default;
-    }
-  }
+    &--round {
+        .mi-stepper__input {
+            background-color: transparent;
+        }
 
-  &--round {
-    .mi-stepper__input {
-      background-color: transparent;
-    }
+        .mi-stepper__plus,
+        .mi-stepper__minus {
+            border-radius: 100%;
 
-    .mi-stepper__plus,
-    .mi-stepper__minus {
-      border-radius: 100%;
+            &--disabled {
+                opacity: 0.3;
+                cursor: not-allowed;
+            }
+        }
 
-      &--disabled {
-        opacity: 0.3;
-        cursor: not-allowed;
-      }
-    }
+        .mi-stepper__plus {
+            color: var(--mi-white);
+            background: var(--mi-stepper-button-round-theme-color);
+        }
 
-    .mi-stepper__plus {
-      color: var(--mi-white);
-      background: var(--mi-stepper-button-round-theme-color);
+        .mi-stepper__minus {
+            color: var(--mi-stepper-button-round-theme-color);
+            background-color: var(--mi-background-2);
+            border: 1px solid var(--mi-stepper-button-round-theme-color);
+        }
     }
-
-    .mi-stepper__minus {
-      color: var(--mi-stepper-button-round-theme-color);
-      background-color: var(--mi-background-2);
-      border: 1px solid var(--mi-stepper-button-round-theme-color);
-    }
-  }
 }

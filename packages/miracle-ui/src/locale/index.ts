@@ -7,22 +7,22 @@ type Messages = Record<string, Message>;
 
 const lang = ref('zh-CN');
 const messages = reactive<Messages>({
-  'zh-CN': defaultMessages,
+    'zh-CN': defaultMessages,
 });
 
 export const Locale = {
-  messages(): Message {
-    return messages[lang.value];
-  },
+    messages(): Message {
+        return messages[lang.value];
+    },
 
-  use(newLang: string, newMessages?: Message) {
-    lang.value = newLang;
-    this.add({ [newLang]: newMessages });
-  },
+    use(newLang: string, newMessages?: Message) {
+        lang.value = newLang;
+        this.add({ [newLang]: newMessages });
+    },
 
-  add(newMessages: Message = {}) {
-    deepAssign(messages, newMessages);
-  },
+    add(newMessages: Message = {}) {
+        deepAssign(messages, newMessages);
+    },
 };
 
 export const useCurrentLang = () => lang;

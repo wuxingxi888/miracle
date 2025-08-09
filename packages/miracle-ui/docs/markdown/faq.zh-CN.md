@@ -12,19 +12,19 @@ Miracle 基于 CSS 变量提供了主题定制的能力，可以对组件样式�
 
 ```html
 <template>
-  <mi-button class="my-button">按钮</mi-button>
+    <mi-button class="my-button">按钮</mi-button>
 </template>
 
 <style>
-  /** 覆盖 Button 最外层元素的样式 */
-  .my-button {
-    width: 200px;
-  }
+    /** 覆盖 Button 最外层元素的样式 */
+    .my-button {
+        width: 200px;
+    }
 
-  /** 覆盖 Button 内部子元素的样式 */
-  .my-button .mi-button__text {
-    color: red;
-  }
+    /** 覆盖 Button 内部子元素的样式 */
+    .my-button .mi-button__text {
+        color: red;
+    }
 </style>
 ```
 
@@ -34,8 +34,8 @@ Miracle 基于 CSS 变量提供了主题定制的能力，可以对组件样式�
 
 ```html
 <mi-cell-group>
-  <mi-cell title="单元格" value="内容" />
-  <mi-cell title="单元格" value="内容" />
+    <mi-cell title="单元格" value="内容" />
+    <mi-cell title="单元格" value="内容" />
 </mi-cell-group>
 ```
 
@@ -43,8 +43,8 @@ Miracle 基于 CSS 变量提供了主题定制的能力，可以对组件样式�
 
 ```html
 <mi-cell-group>
-  <mi-cell title="单元格" value="内容"></mi-cell>
-  <mi-cell title="单元格" value="内容"></mi-cell>
+    <mi-cell title="单元格" value="内容"></mi-cell>
+    <mi-cell title="单元格" value="内容"></mi-cell>
 </mi-cell-group>
 ```
 
@@ -56,7 +56,7 @@ Miracle 基于 CSS 变量提供了主题定制的能力，可以对组件样式�
 
 ```html
 <body ontouchstart="">
-  ...
+    ...
 </body>
 ```
 

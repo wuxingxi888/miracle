@@ -24,8 +24,8 @@ app.use(NoticeBar);
 
 ```html
 <mi-notice-bar
-  left-icon="volume-o"
-  text="无论我们能活多久，我们能够享受的只有无法分割的此刻，此外别无其他。"
+    left-icon="volume-o"
+    text="无论我们能活多久，我们能够享受的只有无法分割的此刻，此外别无其他。"
 />
 ```
 
@@ -39,8 +39,8 @@ app.use(NoticeBar);
 
 <!-- 文字较长时，通过禁用 scrollable 属性关闭滚动播放 -->
 <mi-notice-bar
-  :scrollable="false"
-  text="不会回头的东西有四件：说出口的话、离弦的箭、逝去的生活和失去的机会。"
+    :scrollable="false"
+    text="不会回头的东西有四件：说出口的话、离弦的箭、逝去的生活和失去的机会。"
 />
 ```
 
@@ -50,9 +50,9 @@ app.use(NoticeBar);
 
 ```html
 <mi-notice-bar
-  wrapable
-  :scrollable="false"
-  text="不会回头的东西有四件：说出口的话、离弦的箭、逝去的生活和失去的机会。"
+    wrapable
+    :scrollable="false"
+    text="不会回头的东西有四件：说出口的话、离弦的箭、逝去的生活和失去的机会。"
 />
 ```
 
@@ -73,9 +73,9 @@ app.use(NoticeBar);
 通过 `color` 属性设置文本颜色，通过 `background` 属性设置背景色。
 
 ```html
-<mi-notice-bar color="#1989fa" background="#ecf9ff" left-icon="info-o">
-  米袋虽空——樱花开哉！
-</mi-notice-bar>
+<mi-notice-bar color="#1989fa" background="#ecf9ff" left-icon="info-o"
+    >米袋虽空——樱花开哉！</mi-notice-bar
+>
 ```
 
 ### 垂直滚动
@@ -84,24 +84,24 @@ app.use(NoticeBar);
 
 ```html
 <mi-notice-bar left-icon="volume-o" :scrollable="false">
-  <mi-swipe
-    vertical
-    class="notice-swipe"
-    :autoplay="3000"
-    :touchable="false"
-    :show-indicators="false"
-  >
-    <mi-swipe-item>明月直入，无心可猜。</mi-swipe-item>
-    <mi-swipe-item>仙人抚我顶，结发受长生。</mi-swipe-item>
-    <mi-swipe-item>今人不见古时月，今月曾经照古人。</mi-swipe-item>
-  </mi-swipe>
+    <mi-swipe
+        vertical
+        class="notice-swipe"
+        :autoplay="3000"
+        :touchable="false"
+        :show-indicators="false"
+    >
+        <mi-swipe-item>明月直入，无心可猜。</mi-swipe-item>
+        <mi-swipe-item>仙人抚我顶，结发受长生。</mi-swipe-item>
+        <mi-swipe-item>今人不见古时月，今月曾经照古人。</mi-swipe-item>
+    </mi-swipe>
 </mi-notice-bar>
 
 <style>
-  .notice-swipe {
-    height: 40px;
-    line-height: 40px;
-  }
+    .notice-swipe {
+        height: 40px;
+        line-height: 40px;
+    }
 </style>
 ```
 
@@ -143,9 +143,9 @@ app.use(NoticeBar);
 
 ```ts
 import type {
-  NoticeBarMode,
-  NoticeBarProps,
-  NoticeBarInstance,
+    NoticeBarMode,
+    NoticeBarProps,
+    NoticeBarInstance,
 } from '@miracle-web/ui';
 ```
 

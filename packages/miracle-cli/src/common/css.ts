@@ -6,39 +6,39 @@ import { STYLE_DIR, SRC_DIR } from './constant.js';
 type CSS_LANG = 'css' | 'less' | 'scss';
 
 function getCssLang(): CSS_LANG {
-  const miracleConfig = getMiracleConfig();
-  const preprocessor = miracleConfig.build?.css?.preprocessor || 'less';
+    const miracleConfig = getMiracleConfig();
+    const preprocessor = miracleConfig.build?.css?.preprocessor || 'less';
 
-  if (preprocessor === 'sass') {
-    return 'scss';
-  }
+    if (preprocessor === 'sass') {
+        return 'scss';
+    }
 
-  return preprocessor;
+    return preprocessor;
 }
 
 export const CSS_LANG = getCssLang();
 
 export function getCssBaseFile() {
-  const miracleConfig = getMiracleConfig();
-  let path = join(STYLE_DIR, `base.${CSS_LANG}`);
+    const miracleConfig = getMiracleConfig();
+    let path = join(STYLE_DIR, `base.${CSS_LANG}`);
 
-  const baseFile = miracleConfig.build?.css?.base || '';
-  if (baseFile) {
-    path = isAbsolute(baseFile) ? baseFile : join(SRC_DIR, baseFile);
-  }
+    const baseFile = miracleConfig.build?.css?.base || '';
+    if (baseFile) {
+        path = isAbsolute(baseFile) ? baseFile : join(SRC_DIR, baseFile);
+    }
 
-  if (existsSync(path)) {
-    return path;
-  }
+    if (existsSync(path)) {
+        return path;
+    }
 
-  return null;
+    return null;
 }
 
 const IMPORT_STYLE_RE = /import\s+?(?:(?:".*?")|(?:'.*?'))[\s]*?(?:;|$|)/g;
 
 // "import 'a.less';" => "import 'a.css';"
 export function replaceCSSImportExt(code: string) {
-  return code.replace(IMPORT_STYLE_RE, (str) =>
-    str.replace(`.${CSS_LANG}`, '.css'),
-  );
+    return code.replace(IMPORT_STYLE_RE, (str) =>
+        str.replace(`.${CSS_LANG}`, '.css'),
+    );
 }

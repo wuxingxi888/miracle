@@ -24,14 +24,14 @@ app.use(SwipeCell);
 
 ```html
 <mi-swipe-cell>
-  <template #left>
-    <mi-button square type="primary" text="选择" />
-  </template>
-  <mi-cell :border="false" title="单元格" value="内容" />
-  <template #right>
-    <mi-button square type="danger" text="删除" />
-    <mi-button square type="primary" text="收藏" />
-  </template>
+    <template #left>
+        <mi-button square type="primary" text="选择" />
+    </template>
+    <mi-cell :border="false" title="单元格" value="内容" />
+    <template #right>
+        <mi-button square type="danger" text="删除" />
+        <mi-button square type="primary" text="收藏" />
+    </template>
 </mi-swipe-cell>
 ```
 
@@ -41,28 +41,28 @@ app.use(SwipeCell);
 
 ```html
 <mi-swipe-cell>
-  <mi-card
-    num="2"
-    price="2.00"
-    desc="描述信息"
-    title="商品标题"
-    class="goods-card"
-    thumb="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg"
-  />
-  <template #right>
-    <mi-button square text="删除" type="danger" class="delete-button" />
-  </template>
+    <mi-card
+        num="2"
+        price="2.00"
+        desc="描述信息"
+        title="商品标题"
+        class="goods-card"
+        thumb="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg"
+    />
+    <template #right>
+        <mi-button square text="删除" type="danger" class="delete-button" />
+    </template>
 </mi-swipe-cell>
 
 <style>
-  .goods-card {
-    margin: 0;
-    background-color: @white;
-  }
+    .goods-card {
+        margin: 0;
+        background-color: @white;
+    }
 
-  .delete-button {
-    height: 100%;
-  }
+    .delete-button {
+        height: 100%;
+    }
 </style>
 ```
 
@@ -72,13 +72,13 @@ app.use(SwipeCell);
 
 ```html
 <mi-swipe-cell :before-close="beforeClose">
-  <template #left>
-    <mi-button square type="primary" text="选择" />
-  </template>
-  <mi-cell :border="false" title="单元格" value="内容" />
-  <template #right>
-    <mi-button square type="danger" text="删除" />
-  </template>
+    <template #left>
+        <mi-button square type="primary" text="选择" />
+    </template>
+    <mi-cell :border="false" title="单元格" value="内容" />
+    <template #right>
+        <mi-button square type="danger" text="删除" />
+    </template>
 </mi-swipe-cell>
 ```
 
@@ -86,27 +86,27 @@ app.use(SwipeCell);
 import { showConfirmDialog } from '@miracle-web/ui';
 
 export default {
-  setup() {
-    // position 为关闭时点击的位置
-    const beforeClose = ({ position }) => {
-      switch (position) {
-        case 'left':
-        case 'cell':
-        case 'outside':
-          return true;
-        case 'right':
-          return new Promise((resolve) => {
-            showConfirmDialog({
-              title: '确定删除吗？',
-            })
-              .then(() => resolve(true))
-              .catch(() => resolve(false));
-          });
-      }
-    };
+    setup() {
+        // position 为关闭时点击的位置
+        const beforeClose = ({ position }) => {
+            switch (position) {
+                case 'left':
+                case 'cell':
+                case 'outside':
+                    return true;
+                case 'right':
+                    return new Promise((resolve) => {
+                        showConfirmDialog({
+                            title: '确定删除吗？',
+                        })
+                            .then(() => resolve(true))
+                            .catch(() => resolve(false));
+                    });
+            }
+        };
 
-    return { beforeClose };
-  },
+        return { beforeClose };
+    },
 };
 ```
 
@@ -164,10 +164,10 @@ beforeClose 的第一个参数为对象，对象中包含以下属性：
 
 ```ts
 import type {
-  SwipeCellSide,
-  SwipeCellProps,
-  SwipeCellPosition,
-  SwipeCellInstance,
+    SwipeCellSide,
+    SwipeCellProps,
+    SwipeCellPosition,
+    SwipeCellInstance,
 } from '@miracle-web/ui';
 ```
 

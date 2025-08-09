@@ -8,7 +8,7 @@ export type { OverlayProps } from './Overlay';
 export type { OverlayThemeVars } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiOverlay: typeof Overlay;
-  }
+    export interface GlobalComponents {
+        MiOverlay: typeof Overlay;
+    }
 }

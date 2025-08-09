@@ -1,206 +1,206 @@
 :root,
 :host {
-  --mi-field-label-width: 6.2em;
-  --mi-field-label-color: var(--mi-text-color);
-  --mi-field-label-margin-right: var(--mi-padding-sm);
-  --mi-field-input-text-color: var(--mi-text-color);
-  --mi-field-input-error-text-color: var(--mi-danger-color);
-  --mi-field-input-disabled-text-color: var(--mi-text-color-3);
-  --mi-field-placeholder-text-color: var(--mi-text-color-3);
-  --mi-field-icon-size: 18px;
-  --mi-field-clear-icon-size: 18px;
-  --mi-field-clear-icon-color: var(--mi-gray-5);
-  --mi-field-right-icon-color: var(--mi-gray-6);
-  --mi-field-error-message-color: var(--mi-danger-color);
-  --mi-field-error-message-font-size: 12px;
-  --mi-field-text-area-min-height: 60px;
-  --mi-field-word-limit-color: var(--mi-gray-7);
-  --mi-field-word-limit-font-size: var(--mi-font-size-sm);
-  --mi-field-word-limit-line-height: 16px;
-  --mi-field-disabled-text-color: var(--mi-text-color-3);
-  --mi-field-required-mark-color: var(--mi-red);
+    --mi-field-label-width: 6.2em;
+    --mi-field-label-color: var(--mi-text-color);
+    --mi-field-label-margin-right: var(--mi-padding-sm);
+    --mi-field-input-text-color: var(--mi-text-color);
+    --mi-field-input-error-text-color: var(--mi-danger-color);
+    --mi-field-input-disabled-text-color: var(--mi-text-color-3);
+    --mi-field-placeholder-text-color: var(--mi-text-color-3);
+    --mi-field-icon-size: 18px;
+    --mi-field-clear-icon-size: 18px;
+    --mi-field-clear-icon-color: var(--mi-gray-5);
+    --mi-field-right-icon-color: var(--mi-gray-6);
+    --mi-field-error-message-color: var(--mi-danger-color);
+    --mi-field-error-message-font-size: 12px;
+    --mi-field-text-area-min-height: 60px;
+    --mi-field-word-limit-color: var(--mi-gray-7);
+    --mi-field-word-limit-font-size: var(--mi-font-size-sm);
+    --mi-field-word-limit-line-height: 16px;
+    --mi-field-disabled-text-color: var(--mi-text-color-3);
+    --mi-field-required-mark-color: var(--mi-red);
 }
 
 .mi-field {
-  flex-wrap: wrap;
+    flex-wrap: wrap;
 
-  &__label {
-    flex: none;
-    box-sizing: border-box;
-    width: var(--mi-field-label-width);
-    margin-right: var(--mi-field-label-margin-right);
-    color: var(--mi-field-label-color);
-    text-align: left;
-    word-wrap: break-word;
+    &__label {
+        flex: none;
+        box-sizing: border-box;
+        width: var(--mi-field-label-width);
+        margin-right: var(--mi-field-label-margin-right);
+        color: var(--mi-field-label-color);
+        text-align: left;
+        word-wrap: break-word;
 
-    &--center {
-      text-align: center;
+        &--center {
+            text-align: center;
+        }
+
+        &--right {
+            text-align: right;
+        }
+
+        &--top {
+            display: flex;
+            width: 100%;
+            text-align: left;
+            margin-bottom: var(--mi-padding-base);
+            overflow-wrap: break-word;
+        }
+
+        &--required {
+            &::before {
+                margin-right: 2px;
+                color: var(--mi-field-required-mark-color);
+                content: '*';
+            }
+        }
     }
 
-    &--right {
-      text-align: right;
+    &--disabled {
+        .mi-field__label {
+            color: var(--mi-field-disabled-text-color);
+        }
     }
 
-    &--top {
-      display: flex;
-      width: 100%;
-      text-align: left;
-      margin-bottom: var(--mi-padding-base);
-      overflow-wrap: break-word;
+    &__value {
+        overflow: visible;
     }
 
-    &--required {
-      &::before {
-        margin-right: 2px;
-        color: var(--mi-field-required-mark-color);
-        content: '*';
-      }
-    }
-  }
-
-  &--disabled {
-    .mi-field__label {
-      color: var(--mi-field-disabled-text-color);
-    }
-  }
-
-  &__value {
-    overflow: visible;
-  }
-
-  &__body {
-    display: flex;
-    align-items: center;
-  }
-
-  &__control {
-    display: block;
-    box-sizing: border-box;
-    width: 100%;
-    min-width: 0; // for flex-shrink in field__button
-    margin: 0;
-    padding: 0;
-    color: var(--mi-field-input-text-color);
-    line-height: inherit;
-    text-align: left;
-    background-color: transparent;
-    border: 0;
-    resize: none;
-    user-select: auto;
-
-    &::placeholder {
-      color: var(--mi-field-placeholder-text-color);
+    &__body {
+        display: flex;
+        align-items: center;
     }
 
-    &:read-only {
-      cursor: default;
+    &__control {
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        min-width: 0; // for flex-shrink in field__button
+        margin: 0;
+        padding: 0;
+        color: var(--mi-field-input-text-color);
+        line-height: inherit;
+        text-align: left;
+        background-color: transparent;
+        border: 0;
+        resize: none;
+        user-select: auto;
+
+        &::placeholder {
+            color: var(--mi-field-placeholder-text-color);
+        }
+
+        &:read-only {
+            cursor: default;
+        }
+
+        &:disabled {
+            color: var(--mi-field-input-disabled-text-color);
+            cursor: not-allowed;
+            opacity: 1;
+            // fix disabled color in mobile safari
+            -webkit-text-fill-color: var(--mi-field-input-disabled-text-color);
+        }
+
+        &--center {
+            justify-content: center;
+            text-align: center;
+        }
+
+        &--right {
+            justify-content: flex-end;
+            text-align: right;
+        }
+
+        &--custom {
+            display: flex;
+            align-items: center;
+            min-height: var(--mi-cell-line-height);
+        }
+
+        &--error,
+        &--error::placeholder {
+            color: var(--mi-field-input-error-text-color);
+            -webkit-text-fill-color: currentColor;
+        }
+
+        &--min-height {
+            min-height: var(--mi-field-text-area-min-height);
+        }
+
+        // for ios wechat
+        &[type='date'],
+        &[type='time'],
+        &[type='datetime-local'] {
+            min-height: var(--mi-cell-line-height);
+        }
+
+        // for safari
+        &[type='search'] {
+            -webkit-appearance: none;
+        }
     }
 
-    &:disabled {
-      color: var(--mi-field-input-disabled-text-color);
-      cursor: not-allowed;
-      opacity: 1;
-      // fix disabled color in mobile safari
-      -webkit-text-fill-color: var(--mi-field-input-disabled-text-color);
+    &__clear,
+    &__icon,
+    &__button,
+    &__right-icon {
+        flex-shrink: 0;
     }
 
-    &--center {
-      justify-content: center;
-      text-align: center;
+    &__clear,
+    &__right-icon {
+        margin-right: calc(var(--mi-padding-xs) * -1);
+        padding: 0 var(--mi-padding-xs);
+        line-height: inherit;
     }
 
-    &--right {
-      justify-content: flex-end;
-      text-align: right;
+    &__clear {
+        color: var(--mi-field-clear-icon-color);
+        font-size: var(--mi-field-clear-icon-size);
+        cursor: pointer;
     }
 
-    &--custom {
-      display: flex;
-      align-items: center;
-      min-height: var(--mi-cell-line-height);
+    &__left-icon .mi-icon,
+    &__right-icon .mi-icon {
+        display: block;
+        font-size: var(--mi-field-icon-size);
+        line-height: inherit;
     }
 
-    &--error,
-    &--error::placeholder {
-      color: var(--mi-field-input-error-text-color);
-      -webkit-text-fill-color: currentColor;
+    &__left-icon {
+        margin-right: var(--mi-padding-base);
     }
 
-    &--min-height {
-      min-height: var(--mi-field-text-area-min-height);
+    &__right-icon {
+        color: var(--mi-field-right-icon-color);
     }
 
-    // for ios wechat
-    &[type='date'],
-    &[type='time'],
-    &[type='datetime-local'] {
-      min-height: var(--mi-cell-line-height);
+    &__button {
+        padding-left: var(--mi-padding-xs);
     }
 
-    // for safari
-    &[type='search'] {
-      -webkit-appearance: none;
-    }
-  }
+    &__error-message {
+        color: var(--mi-field-error-message-color);
+        font-size: var(--mi-field-error-message-font-size);
+        text-align: left;
 
-  &__clear,
-  &__icon,
-  &__button,
-  &__right-icon {
-    flex-shrink: 0;
-  }
+        &--center {
+            text-align: center;
+        }
 
-  &__clear,
-  &__right-icon {
-    margin-right: calc(var(--mi-padding-xs) * -1);
-    padding: 0 var(--mi-padding-xs);
-    line-height: inherit;
-  }
-
-  &__clear {
-    color: var(--mi-field-clear-icon-color);
-    font-size: var(--mi-field-clear-icon-size);
-    cursor: pointer;
-  }
-
-  &__left-icon .mi-icon,
-  &__right-icon .mi-icon {
-    display: block;
-    font-size: var(--mi-field-icon-size);
-    line-height: inherit;
-  }
-
-  &__left-icon {
-    margin-right: var(--mi-padding-base);
-  }
-
-  &__right-icon {
-    color: var(--mi-field-right-icon-color);
-  }
-
-  &__button {
-    padding-left: var(--mi-padding-xs);
-  }
-
-  &__error-message {
-    color: var(--mi-field-error-message-color);
-    font-size: var(--mi-field-error-message-font-size);
-    text-align: left;
-
-    &--center {
-      text-align: center;
+        &--right {
+            text-align: right;
+        }
     }
 
-    &--right {
-      text-align: right;
+    &__word-limit {
+        margin-top: var(--mi-padding-base);
+        color: var(--mi-field-word-limit-color);
+        font-size: var(--mi-field-word-limit-font-size);
+        line-height: var(--mi-field-word-limit-line-height);
+        text-align: right;
     }
-  }
-
-  &__word-limit {
-    margin-top: var(--mi-padding-base);
-    color: var(--mi-field-word-limit-color);
-    font-size: var(--mi-field-word-limit-font-size);
-    line-height: var(--mi-field-word-limit-line-height);
-    text-align: right;
-  }
 }

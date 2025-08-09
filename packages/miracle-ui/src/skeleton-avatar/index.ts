@@ -6,12 +6,12 @@ export default SkeletonAvatar;
 
 export { skeletonAvatarProps } from './SkeletonAvatar';
 export type {
-  SkeletonAvatarProps,
-  SkeletonAvatarShape,
+    SkeletonAvatarProps,
+    SkeletonAvatarShape,
 } from './SkeletonAvatar';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiSkeletonAvatar: typeof SkeletonAvatar;
-  }
+    export interface GlobalComponents {
+        MiSkeletonAvatar: typeof SkeletonAvatar;
+    }
 }

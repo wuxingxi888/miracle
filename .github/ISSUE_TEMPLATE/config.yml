@@ -1,8 +1,8 @@
 blank_issues_enabled: true
 contact_links:
-  - name: Ask a question
-    url: https://github.com/wuxingxi888/miracle/discussions
-    about: Ask a question about Miracle
-  - name: 提问
-    url: https://github.com/wuxingxi888/miracle/discussions
-    about: 询问 Miracle 的用法问题
+    - name: Ask a question
+      url: https://github.com/wuxingxi888/miracle/discussions
+      about: Ask a question about Miracle
+    - name: 提问
+      url: https://github.com/wuxingxi888/miracle/discussions
+      about: 询问 Miracle 的用法问题

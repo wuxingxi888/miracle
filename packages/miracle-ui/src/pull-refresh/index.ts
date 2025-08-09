@@ -8,7 +8,7 @@ export type { PullRefreshProps } from './PullRefresh';
 export type { PullRefreshThemeVars } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiPullRefresh: typeof PullRefresh;
-  }
+    export interface GlobalComponents {
+        MiPullRefresh: typeof PullRefresh;
+    }
 }

@@ -30,10 +30,10 @@ app.use(Stepper);
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const value = ref(1);
-    return { value };
-  },
+    setup() {
+        const value = ref(1);
+        return { value };
+    },
 };
 ```
 
@@ -106,26 +106,26 @@ import { ref } from 'vue';
 import { closeToast, showLoadingToast } from '@miracle-web/ui';
 
 export default {
-  setup() {
-    const value = ref(1);
+    setup() {
+        const value = ref(1);
 
-    const beforeChange = (value) => {
-      showLoadingToast({ forbidClick: true });
+        const beforeChange = (value) => {
+            showLoadingToast({ forbidClick: true });
 
-      return new Promise((resolve) => {
-        setTimeout(() => {
-          closeToast();
-          // 在 resolve 函数中返回 true 或 false
-          resolve(true);
-        }, 500);
-      });
-    };
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    closeToast();
+                    // 在 resolve 函数中返回 true 或 false
+                    resolve(true);
+                }, 500);
+            });
+        };
 
-    return {
-      value,
-      beforeChange,
-    };
-  },
+        return {
+            value,
+            beforeChange,
+        };
+    },
 };
 ```
 

@@ -3,21 +3,21 @@ import type { Numeric } from '../utils';
 import type { IndexBarProps } from './IndexBar';
 
 export type IndexBarProvide = {
-  props: IndexBarProps;
+    props: IndexBarProps;
 };
 
 export type IndexBarExpose = {
-  scrollTo: (index: Numeric) => void;
+    scrollTo: (index: Numeric) => void;
 };
 
 export type IndexBarInstance = ComponentPublicInstance<
-  IndexBarProps,
-  IndexBarExpose
+    IndexBarProps,
+    IndexBarExpose
 >;
 
 export type IndexBarThemeVars = {
-  indexBarSidebarZIndex?: number | string;
-  indexBarIndexFontSize?: string;
-  indexBarIndexLineHeight?: number | string;
-  indexBarIndexActiveColor?: string;
+    indexBarSidebarZIndex?: number | string;
+    indexBarIndexFontSize?: string;
+    indexBarIndexLineHeight?: number | string;
+    indexBarIndexActiveColor?: string;
 };

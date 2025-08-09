@@ -8,7 +8,7 @@ export type { SidebarProps } from './Sidebar';
 export type { SidebarThemeVars } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiSidebar: typeof Sidebar;
-  }
+    export interface GlobalComponents {
+        MiSidebar: typeof Sidebar;
+    }
 }

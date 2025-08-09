@@ -7,50 +7,50 @@ import { genWebTypes } from './web-types.js';
 import { Options, VueTag } from './type.js';
 import { normalizePath } from './utils.js';
 import {
-  SRC_DIR,
-  LIB_DIR,
-  getMiracleConfig,
-  getPackageJson,
+    SRC_DIR,
+    LIB_DIR,
+    getMiracleConfig,
+    getPackageJson,
 } from '../../common/constant.js';
 
 async function readMarkdown(options: Options) {
-  const mds = await glob(normalizePath(`${options.path}/**/*.md`));
-  return mds
-    .filter((md) => options.test.test(md))
-    .sort((a, b) => a.localeCompare(b)) // keep order
-    .map((path) => fse.readFileSync(path, 'utf-8'));
+    const mds = await glob(normalizePath(`${options.path}/**/*.md`));
+    return mds
+        .filter((md) => options.test.test(md))
+        .sort((a, b) => a.localeCompare(b)) // keep order
+        .map((path) => fse.readFileSync(path, 'utf-8'));
 }
 
 export async function parseAndWrite(options: Options) {
-  if (!options.outputDir) {
-    throw new Error('outputDir can not be empty.');
-  }
+    if (!options.outputDir) {
+        throw new Error('outputDir can not be empty.');
+    }
 
-  const mds = await readMarkdown(options);
-  const vueTags: VueTag[] = [];
+    const mds = await readMarkdown(options);
+    const vueTags: VueTag[] = [];
 
-  mds.forEach((md) => {
-    const parsedMd = mdParser(md);
-    formatter(vueTags, parsedMd, options.tagPrefix);
-  });
+    mds.forEach((md) => {
+        const parsedMd = mdParser(md);
+        formatter(vueTags, parsedMd, options.tagPrefix);
+    });
 
-  const webTypes = genWebTypes(vueTags, options);
-  fse.outputFileSync(
-    join(options.outputDir, 'web-types.json'),
-    JSON.stringify(webTypes),
-  );
+    const webTypes = genWebTypes(vueTags, options);
+    fse.outputFileSync(
+        join(options.outputDir, 'web-types.json'),
+        JSON.stringify(webTypes),
+    );
 }
 
 export function genWebStormTypes(tagPrefix?: string) {
-  const pkgJson = getPackageJson();
-  const miracleConfig = getMiracleConfig();
+    const pkgJson = getPackageJson();
+    const miracleConfig = getMiracleConfig();
 
-  parseAndWrite({
-    name: miracleConfig.name,
-    path: SRC_DIR,
-    test: /README\.md/,
-    version: pkgJson.version,
-    outputDir: LIB_DIR,
-    tagPrefix,
-  });
+    parseAndWrite({
+        name: miracleConfig.name,
+        path: SRC_DIR,
+        test: /README\.md/,
+        version: pkgJson.version,
+        outputDir: LIB_DIR,
+        tagPrefix,
+    });
 }

@@ -7,7 +7,7 @@ export { gridProps } from './Grid';
 export type { GridProps, GridDirection } from './Grid';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiGrid: typeof Grid;
-  }
+    export interface GlobalComponents {
+        MiGrid: typeof Grid;
+    }
 }

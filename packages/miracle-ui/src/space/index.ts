@@ -7,7 +7,7 @@ export { spaceProps } from './Space';
 export type { SpaceProps, SpaceSize, SpaceAlign } from './Space';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiSpace: typeof Space;
-  }
+    export interface GlobalComponents {
+        MiSpace: typeof Space;
+    }
 }

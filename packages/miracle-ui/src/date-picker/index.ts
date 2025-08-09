@@ -8,7 +8,7 @@ export type { DatePickerProps };
 export type { DatePickerColumnType, DatePickerInstance } from './DatePicker';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiDatePicker: typeof DatePicker;
-  }
+    export interface GlobalComponents {
+        MiDatePicker: typeof DatePicker;
+    }
 }

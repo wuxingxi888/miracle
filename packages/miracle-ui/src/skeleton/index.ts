@@ -12,7 +12,7 @@ export type { SkeletonProps } from './Skeleton';
 export type { SkeletonThemeVars } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiSkeleton: typeof Skeleton;
-  }
+    export interface GlobalComponents {
+        MiSkeleton: typeof Skeleton;
+    }
 }

@@ -8,7 +8,7 @@ export type { WatermarkProps } from './Watermark';
 export type { WatermarkThemeVars } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiWatermark: typeof Watermark;
-  }
+    export interface GlobalComponents {
+        MiWatermark: typeof Watermark;
+    }
 }

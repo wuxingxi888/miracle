@@ -1,85 +1,85 @@
 :root,
 :host {
-  --mi-nav-bar-height: 46px;
-  --mi-nav-bar-background: var(--mi-background-2);
-  --mi-nav-bar-arrow-size: 16px;
-  --mi-nav-bar-icon-color: var(--mi-primary-color);
-  --mi-nav-bar-text-color: var(--mi-primary-color);
-  --mi-nav-bar-title-font-size: var(--mi-font-size-lg);
-  --mi-nav-bar-title-text-color: var(--mi-text-color);
-  --mi-nav-bar-z-index: 1;
-  --mi-nav-bar-disabled-opacity: var(--mi-disabled-opacity);
+    --mi-nav-bar-height: 46px;
+    --mi-nav-bar-background: var(--mi-background-2);
+    --mi-nav-bar-arrow-size: 16px;
+    --mi-nav-bar-icon-color: var(--mi-primary-color);
+    --mi-nav-bar-text-color: var(--mi-primary-color);
+    --mi-nav-bar-title-font-size: var(--mi-font-size-lg);
+    --mi-nav-bar-title-text-color: var(--mi-text-color);
+    --mi-nav-bar-z-index: 1;
+    --mi-nav-bar-disabled-opacity: var(--mi-disabled-opacity);
 }
 
 .mi-nav-bar {
-  position: relative;
-  z-index: var(--mi-nav-bar-z-index);
-  line-height: var(--mi-line-height-lg);
-  text-align: center;
-  background: var(--mi-nav-bar-background);
-  user-select: none;
-
-  &--fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
-
-  &--safe-area-inset-top {
-    padding-top: constant(safe-area-inset-top);
-    padding-top: env(safe-area-inset-top);
-  }
-
-  .mi-icon {
-    color: var(--mi-nav-bar-icon-color);
-  }
-
-  &__content {
     position: relative;
-    display: flex;
-    align-items: center;
-    height: var(--mi-nav-bar-height);
-  }
+    z-index: var(--mi-nav-bar-z-index);
+    line-height: var(--mi-line-height-lg);
+    text-align: center;
+    background: var(--mi-nav-bar-background);
+    user-select: none;
 
-  &__arrow {
-    margin-right: var(--mi-padding-base);
-    font-size: var(--mi-nav-bar-arrow-size);
-  }
-
-  &__title {
-    max-width: 60%;
-    margin: 0 auto;
-    color: var(--mi-nav-bar-title-text-color);
-    font-weight: var(--mi-font-bold);
-    font-size: var(--mi-nav-bar-title-font-size);
-  }
-
-  &__left,
-  &__right {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    padding: 0 var(--mi-padding-md);
-    font-size: var(--mi-font-size-md);
-
-    &--disabled {
-      cursor: not-allowed;
-      opacity: var(--mi-nav-bar-disabled-opacity);
+    &--fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
     }
-  }
 
-  &__left {
-    left: 0;
-  }
+    &--safe-area-inset-top {
+        padding-top: constant(safe-area-inset-top);
+        padding-top: env(safe-area-inset-top);
+    }
 
-  &__right {
-    right: 0;
-  }
+    .mi-icon {
+        color: var(--mi-nav-bar-icon-color);
+    }
 
-  &__text {
-    color: var(--mi-nav-bar-text-color);
-  }
+    &__content {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: var(--mi-nav-bar-height);
+    }
+
+    &__arrow {
+        margin-right: var(--mi-padding-base);
+        font-size: var(--mi-nav-bar-arrow-size);
+    }
+
+    &__title {
+        max-width: 60%;
+        margin: 0 auto;
+        color: var(--mi-nav-bar-title-text-color);
+        font-weight: var(--mi-font-bold);
+        font-size: var(--mi-nav-bar-title-font-size);
+    }
+
+    &__left,
+    &__right {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        padding: 0 var(--mi-padding-md);
+        font-size: var(--mi-font-size-md);
+
+        &--disabled {
+            cursor: not-allowed;
+            opacity: var(--mi-nav-bar-disabled-opacity);
+        }
+    }
+
+    &__left {
+        left: 0;
+    }
+
+    &__right {
+        right: 0;
+    }
+
+    &__text {
+        color: var(--mi-nav-bar-text-color);
+    }
 }

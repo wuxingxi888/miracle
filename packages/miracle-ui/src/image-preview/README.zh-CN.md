@@ -26,7 +26,7 @@ app.use(ImagePreview);
 import { showImagePreview } from '@miracle-web/ui';
 
 showImagePreview([
-  'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg',
+    'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg',
 ]);
 ```
 
@@ -40,8 +40,8 @@ showImagePreview([
 import { showImagePreview } from '@miracle-web/ui';
 
 showImagePreview([
-  'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg',
-  'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg',
+    'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg',
+    'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg',
 ]);
 ```
 
@@ -53,11 +53,11 @@ showImagePreview([
 import { showImagePreview } from '@miracle-web/ui';
 
 showImagePreview({
-  images: [
-    'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg',
-    'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg',
-  ],
-  startPosition: 1,
+    images: [
+        'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg',
+        'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg',
+    ],
+    startPosition: 1,
 });
 ```
 
@@ -69,11 +69,11 @@ showImagePreview({
 import { showImagePreview } from '@miracle-web/ui';
 
 showImagePreview({
-  images: [
-    'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg',
-    'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg',
-  ],
-  closeable: true,
+    images: [
+        'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg',
+        'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg',
+    ],
+    closeable: true,
 });
 ```
 
@@ -85,13 +85,13 @@ showImagePreview({
 import { showToast, showImagePreview } from '@miracle-web/ui';
 
 showImagePreview({
-  images: [
-    'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg',
-    'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg',
-  ],
-  onClose() {
-    showToast('关闭');
-  },
+    images: [
+        'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg',
+        'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg',
+    ],
+    onClose() {
+        showToast('关闭');
+    },
 });
 ```
 
@@ -103,16 +103,16 @@ showImagePreview({
 import { showImagePreview } from '@miracle-web/ui';
 
 const instance = showImagePreview({
-  images: [
-    'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg',
-    'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg',
-  ],
-  beforeClose: () => false,
+    images: [
+        'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg',
+        'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg',
+    ],
+    beforeClose: () => false,
 });
 
 setTimeout(() => {
-  // 调用实例上的 close 方法手动关闭图片预览
-  instance.close();
+    // 调用实例上的 close 方法手动关闭图片预览
+    instance.close();
 }, 2000);
 ```
 
@@ -122,7 +122,7 @@ setTimeout(() => {
 
 ```html
 <mi-image-preview v-model:show="show" :images="images" @change="onChange">
-  <template v-slot:index>第{{ index + 1 }}页</template>
+    <template v-slot:index>第{{ index + 1 }}页</template>
 </mi-image-preview>
 ```
 
@@ -130,24 +130,24 @@ setTimeout(() => {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const show = ref(false);
-    const index = ref(0);
-    const images = [
-      'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg',
-      'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg',
-    ];
-    const onChange = (newIndex) => {
-      index.value = newIndex;
-    };
+    setup() {
+        const show = ref(false);
+        const index = ref(0);
+        const images = [
+            'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg',
+            'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg',
+        ];
+        const onChange = (newIndex) => {
+            index.value = newIndex;
+        };
 
-    return {
-      show,
-      index,
-      images,
-      onChange,
-    };
-  },
+        return {
+            show,
+            index,
+            images,
+            onChange,
+        };
+    },
 };
 ```
 
@@ -157,15 +157,15 @@ export default {
 
 ```html
 <mi-image-preview
-  v-model:show="show"
-  :images="images"
-  :close-on-click-image="false"
+    v-model:show="show"
+    :images="images"
+    :close-on-click-image="false"
 >
-  <template #image="{ src }">
-    <video style="width: 100%;" controls>
-      <source :src="src" />
-    </video>
-  </template>
+    <template #image="{ src }">
+        <video style="width: 100%;" controls>
+            <source :src="src" />
+        </video>
+    </template>
 </mi-image-preview>
 ```
 
@@ -173,18 +173,18 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const show = ref(false);
-    const images = [
-      'https://www.w3school.com.cn/i/movie.ogg',
-      'https://www.w3school.com.cn/i/movie.ogg',
-      'https://www.w3school.com.cn/i/movie.ogg',
-    ];
-    return {
-      show,
-      images,
-    };
-  },
+    setup() {
+        const show = ref(false);
+        const images = [
+            'https://www.w3school.com.cn/i/movie.ogg',
+            'https://www.w3school.com.cn/i/movie.ogg',
+            'https://www.w3school.com.cn/i/movie.ogg',
+        ];
+        return {
+            show,
+            images,
+        };
+    },
 };
 ```
 
@@ -192,13 +192,13 @@ export default {
 
 ```html
 <mi-image-preview
-  v-model:show="show"
-  :images="images"
-  :close-on-click-image="false"
+    v-model:show="show"
+    :images="images"
+    :close-on-click-image="false"
 >
-  <template #image="{ src, style, onLoad }">
-    <img :src="src" :style="[{ width: '100%' }, style]" @load="onLoad" />
-  </template>
+    <template #image="{ src, style, onLoad }">
+        <img :src="src" :style="[{ width: '100%' }, style]" @load="onLoad" />
+    </template>
 </mi-image-preview>
 ```
 
@@ -301,10 +301,10 @@ Miracle 中导出了以下 ImagePreview 相关的辅助函数：
 
 ```ts
 import type {
-  ImagePreviewProps,
-  ImagePreviewOptions,
-  ImagePreviewInstance,
-  ImagePreviewScaleEventParams,
+    ImagePreviewProps,
+    ImagePreviewOptions,
+    ImagePreviewInstance,
+    ImagePreviewScaleEventParams,
 } from '@miracle-web/ui';
 ```
 

@@ -1,24 +1,24 @@
 :root,
 :host {
-  --mi-skeleton-title-width: 40%;
+    --mi-skeleton-title-width: 40%;
 }
 
 .mi-skeleton {
-  &-title {
-    height: var(--mi-skeleton-paragraph-height);
-    background: var(--mi-skeleton-paragraph-background);
+    &-title {
+        height: var(--mi-skeleton-paragraph-height);
+        background: var(--mi-skeleton-paragraph-background);
 
-    &--round {
-      border-radius: var(--mi-radius-max);
+        &--round {
+            border-radius: var(--mi-radius-max);
+        }
     }
-  }
 
-  &-title {
-    width: var(--mi-skeleton-title-width);
-    margin: 0;
-  }
+    &-title {
+        width: var(--mi-skeleton-title-width);
+        margin: 0;
+    }
 
-  &-title + &-paragraph {
-    margin-top: 20px;
-  }
+    &-title + &-paragraph {
+        margin-top: 20px;
+    }
 }

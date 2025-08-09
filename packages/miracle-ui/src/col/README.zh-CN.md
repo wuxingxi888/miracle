@@ -25,18 +25,18 @@ Layout 组件提供了 `24列栅格`，通过在 `Col` 上添加 `span` 属性�
 
 ```html
 <mi-row>
-  <mi-col span="8">span: 8</mi-col>
-  <mi-col span="8">span: 8</mi-col>
-  <mi-col span="8">span: 8</mi-col>
+    <mi-col span="8">span: 8</mi-col>
+    <mi-col span="8">span: 8</mi-col>
+    <mi-col span="8">span: 8</mi-col>
 </mi-row>
 
 <mi-row>
-  <mi-col span="4">span: 4</mi-col>
-  <mi-col span="10" offset="4">offset: 4, span: 10</mi-col>
+    <mi-col span="4">span: 4</mi-col>
+    <mi-col span="10" offset="4">offset: 4, span: 10</mi-col>
 </mi-row>
 
 <mi-row>
-  <mi-col offset="12" span="12">offset: 12, span: 12</mi-col>
+    <mi-col offset="12" span="12">offset: 12, span: 12</mi-col>
 </mi-row>
 ```
 
@@ -46,9 +46,9 @@ Layout 组件提供了 `24列栅格`，通过在 `Col` 上添加 `span` 属性�
 
 ```html
 <mi-row gutter="20">
-  <mi-col span="8">span: 8</mi-col>
-  <mi-col span="8">span: 8</mi-col>
-  <mi-col span="8">span: 8</mi-col>
+    <mi-col span="8">span: 8</mi-col>
+    <mi-col span="8">span: 8</mi-col>
+    <mi-col span="8">span: 8</mi-col>
 </mi-row>
 ```
 
@@ -59,10 +59,10 @@ Layout 组件提供了 `24列栅格`，通过在 `Col` 上添加 `span` 属性�
 ```html
 <!-- 设置垂直间距 -->
 <mi-row :gutter="[20, 20]">
-  <mi-col span="12">span: 12</mi-col>
-  <mi-col span="12">span: 12</mi-col>
-  <mi-col span="12">span: 12</mi-col>
-  <mi-col span="12">span: 12</mi-col>
+    <mi-col span="12">span: 12</mi-col>
+    <mi-col span="12">span: 12</mi-col>
+    <mi-col span="12">span: 12</mi-col>
+    <mi-col span="12">span: 12</mi-col>
 </mi-row>
 ```
 
@@ -73,30 +73,30 @@ Layout 组件提供了 `24列栅格`，通过在 `Col` 上添加 `span` 属性�
 ```html
 <!-- 居中 -->
 <mi-row justify="center">
-  <mi-col span="6">span: 6</mi-col>
-  <mi-col span="6">span: 6</mi-col>
-  <mi-col span="6">span: 6</mi-col>
+    <mi-col span="6">span: 6</mi-col>
+    <mi-col span="6">span: 6</mi-col>
+    <mi-col span="6">span: 6</mi-col>
 </mi-row>
 
 <!-- 右对齐 -->
 <mi-row justify="end">
-  <mi-col span="6">span: 6</mi-col>
-  <mi-col span="6">span: 6</mi-col>
-  <mi-col span="6">span: 6</mi-col>
+    <mi-col span="6">span: 6</mi-col>
+    <mi-col span="6">span: 6</mi-col>
+    <mi-col span="6">span: 6</mi-col>
 </mi-row>
 
 <!-- 两端对齐 -->
 <mi-row justify="space-between">
-  <mi-col span="6">span: 6</mi-col>
-  <mi-col span="6">span: 6</mi-col>
-  <mi-col span="6">span: 6</mi-col>
+    <mi-col span="6">span: 6</mi-col>
+    <mi-col span="6">span: 6</mi-col>
+    <mi-col span="6">span: 6</mi-col>
 </mi-row>
 
 <!-- 每个元素的两侧间隔相等 -->
 <mi-row justify="space-around">
-  <mi-col span="6">span: 6</mi-col>
-  <mi-col span="6">span: 6</mi-col>
-  <mi-col span="6">span: 6</mi-col>
+    <mi-col span="6">span: 6</mi-col>
+    <mi-col span="6">span: 6</mi-col>
+    <mi-col span="6">span: 6</mi-col>
 </mi-row>
 ```
 

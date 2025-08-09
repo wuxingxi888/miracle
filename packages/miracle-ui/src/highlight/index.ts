@@ -10,7 +10,7 @@ export type { HighlightProps } from './Highlight';
 export type { HighlightThemeVars } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiHighlight: typeof Highlight;
-  }
+    export interface GlobalComponents {
+        MiHighlight: typeof Highlight;
+    }
 }

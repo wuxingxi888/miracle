@@ -24,9 +24,9 @@ app.use(Popover);
 
 ```html
 <mi-popover v-model:show="showPopover" :actions="actions" @select="onSelect">
-  <template #reference>
-    <mi-button type="primary">浅色风格</mi-button>
-  </template>
+    <template #reference>
+        <mi-button type="primary">浅色风格</mi-button>
+    </template>
 </mi-popover>
 ```
 
@@ -35,23 +35,23 @@ import { ref } from 'vue';
 import { showToast } from '@miracle-web/ui';
 
 export default {
-  setup() {
-    const showPopover = ref(false);
+    setup() {
+        const showPopover = ref(false);
 
-    // 通过 actions 属性来定义菜单选项
-    const actions = [
-      { text: '选项一' },
-      { text: '选项二' },
-      { text: '选项三' },
-    ];
-    const onSelect = (action) => showToast(action.text);
+        // 通过 actions 属性来定义菜单选项
+        const actions = [
+            { text: '选项一' },
+            { text: '选项二' },
+            { text: '选项三' },
+        ];
+        const onSelect = (action) => showToast(action.text);
 
-    return {
-      actions,
-      onSelect,
-      showPopover,
-    };
-  },
+        return {
+            actions,
+            onSelect,
+            showPopover,
+        };
+    },
 };
 ```
 
@@ -61,9 +61,9 @@ Popover 支持浅色和深色两种风格，默认为浅色风格，将 `theme` 
 
 ```html
 <mi-popover v-model:show="showPopover" theme="dark" :actions="actions">
-  <template #reference>
-    <mi-button type="primary">深色风格</mi-button>
-  </template>
+    <template #reference>
+        <mi-button type="primary">深色风格</mi-button>
+    </template>
 </mi-popover>
 ```
 
@@ -71,19 +71,19 @@ Popover 支持浅色和深色两种风格，默认为浅色风格，将 `theme` 
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const showPopover = ref(false);
-    const actions = [
-      { text: '选项一' },
-      { text: '选项二' },
-      { text: '选项三' },
-    ];
+    setup() {
+        const showPopover = ref(false);
+        const actions = [
+            { text: '选项一' },
+            { text: '选项二' },
+            { text: '选项三' },
+        ];
 
-    return {
-      actions,
-      showPopover,
-    };
-  },
+        return {
+            actions,
+            showPopover,
+        };
+    },
 };
 ```
 
@@ -93,13 +93,13 @@ export default {
 
 ```html
 <mi-popover
-  v-model:show="showPopover"
-  :actions="actions"
-  actions-direction="horizontal"
+    v-model:show="showPopover"
+    :actions="actions"
+    actions-direction="horizontal"
 >
-  <template #reference>
-    <mi-button type="primary">水平排列</mi-button>
-  </template>
+    <template #reference>
+        <mi-button type="primary">水平排列</mi-button>
+    </template>
 </mi-popover>
 ```
 
@@ -107,19 +107,19 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const showPopover = ref(false);
-    const actions = [
-      { text: '选项一' },
-      { text: '选项二' },
-      { text: '选项三' },
-    ];
+    setup() {
+        const showPopover = ref(false);
+        const actions = [
+            { text: '选项一' },
+            { text: '选项二' },
+            { text: '选项三' },
+        ];
 
-    return {
-      actions,
-      showPopover,
-    };
-  },
+        return {
+            actions,
+            showPopover,
+        };
+    },
 };
 ```
 
@@ -154,9 +154,9 @@ bottom-end    # 底部右侧位置
 
 ```html
 <mi-popover v-model:show="showPopover" :actions="actions">
-  <template #reference>
-    <mi-button type="primary">展示图标</mi-button>
-  </template>
+    <template #reference>
+        <mi-button type="primary">展示图标</mi-button>
+    </template>
 </mi-popover>
 ```
 
@@ -164,19 +164,19 @@ bottom-end    # 底部右侧位置
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const showPopover = ref(false);
-    const actions = [
-      { text: '选项一', icon: 'add-o' },
-      { text: '选项二', icon: 'music-o' },
-      { text: '选项三', icon: 'more-o' },
-    ];
+    setup() {
+        const showPopover = ref(false);
+        const actions = [
+            { text: '选项一', icon: 'add-o' },
+            { text: '选项二', icon: 'music-o' },
+            { text: '选项三', icon: 'more-o' },
+        ];
 
-    return {
-      actions,
-      showPopover,
-    };
-  },
+        return {
+            actions,
+            showPopover,
+        };
+    },
 };
 ```
 
@@ -186,9 +186,9 @@ export default {
 
 ```html
 <mi-popover v-model:show="showPopover" :actions="actions">
-  <template #reference>
-    <mi-button type="primary">禁用选项</mi-button>
-  </template>
+    <template #reference>
+        <mi-button type="primary">禁用选项</mi-button>
+    </template>
 </mi-popover>
 ```
 
@@ -196,19 +196,19 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const showPopover = ref(false);
-    const actions = [
-      { text: '选项一', disabled: true },
-      { text: '选项二', disabled: true },
-      { text: '选项三' },
-    ];
+    setup() {
+        const showPopover = ref(false);
+        const actions = [
+            { text: '选项一', disabled: true },
+            { text: '选项二', disabled: true },
+            { text: '选项三' },
+        ];
 
-    return {
-      actions,
-      showPopover,
-    };
-  },
+        return {
+            actions,
+            showPopover,
+        };
+    },
 };
 ```
 
@@ -218,24 +218,24 @@ export default {
 
 ```html
 <mi-popover v-model:show="showPopover">
-  <mi-grid
-    square
-    clickable
-    :border="false"
-    column-num="3"
-    style="width: 240px;"
-  >
-    <mi-grid-item
-      v-for="i in 6"
-      :key="i"
-      text="选项"
-      icon="photo-o"
-      @click="showPopover = false"
-    />
-  </mi-grid>
-  <template #reference>
-    <mi-button type="primary">自定义内容</mi-button>
-  </template>
+    <mi-grid
+        square
+        clickable
+        :border="false"
+        column-num="3"
+        style="width: 240px;"
+    >
+        <mi-grid-item
+            v-for="i in 6"
+            :key="i"
+            text="选项"
+            icon="photo-o"
+            @click="showPopover = false"
+        />
+    </mi-grid>
+    <template #reference>
+        <mi-button type="primary">自定义内容</mi-button>
+    </template>
 </mi-popover>
 ```
 
@@ -243,10 +243,10 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const showPopover = ref(false);
-    return { showPopover };
-  },
+    setup() {
+        const showPopover = ref(false);
+        return { showPopover };
+    },
 };
 ```
 
@@ -254,14 +254,14 @@ export default {
 
 你可以把 Popover 当做受控组件或非受控组件使用：
 
-- 当绑定 `v-model:show` 时，Popover 为受控组件，此时组件的显示完全由 `v-model:show` 的值决定。
-- 当未绑定 `v-model:show` 时，Popover 为非受控组件，此时你可以通过 `show` 属性传入一个默认值，组件值的显示由组件自身控制。
+-   当绑定 `v-model:show` 时，Popover 为受控组件，此时组件的显示完全由 `v-model:show` 的值决定。
+-   当未绑定 `v-model:show` 时，Popover 为非受控组件，此时你可以通过 `show` 属性传入一个默认值，组件值的显示由组件自身控制。
 
 ```html
 <mi-popover :actions="actions" position="top-start" @select="onSelect">
-  <template #reference>
-    <mi-button type="primary">非受控模式</mi-button>
-  </template>
+    <template #reference>
+        <mi-button type="primary">非受控模式</mi-button>
+    </template>
 </mi-popover>
 ```
 
@@ -270,18 +270,18 @@ import { ref } from 'vue';
 import { showToast } from '@miracle-web/ui';
 
 export default {
-  setup() {
-    const actions = [
-      { text: '选项一' },
-      { text: '选项二' },
-      { text: '选项三' },
-    ];
-    const onSelect = (action) => showToast(action.text);
-    return {
-      actions,
-      onSelect,
-    };
-  },
+    setup() {
+        const actions = [
+            { text: '选项一' },
+            { text: '选项二' },
+            { text: '选项三' },
+        ];
+        const onSelect = (action) => showToast(action.text);
+        return {
+            actions,
+            onSelect,
+        };
+    },
 };
 ```
 
@@ -346,12 +346,12 @@ export default {
 
 ```ts
 import type {
-  PopoverProps,
-  PopoverTheme,
-  PopoverAction,
-  PopoverActionsDirection,
-  PopoverTrigger,
-  PopoverPlacement,
+    PopoverProps,
+    PopoverTheme,
+    PopoverAction,
+    PopoverActionsDirection,
+    PopoverTrigger,
+    PopoverPlacement,
 } from '@miracle-web/ui';
 ```
 

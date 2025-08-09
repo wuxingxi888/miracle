@@ -8,7 +8,7 @@ export type { SliderProps } from './Slider';
 export type { SliderThemeVars } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiSlider: typeof Slider;
-  }
+    export interface GlobalComponents {
+        MiSlider: typeof Slider;
+    }
 }

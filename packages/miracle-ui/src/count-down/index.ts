@@ -6,13 +6,13 @@ export default CountDown;
 export { countDownProps } from './CountDown';
 export type { CountDownProps } from './CountDown';
 export type {
-  CountDownInstance,
-  CountDownThemeVars,
-  CountDownCurrentTime,
+    CountDownInstance,
+    CountDownThemeVars,
+    CountDownCurrentTime,
 } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiCountDown: typeof CountDown;
-  }
+    export interface GlobalComponents {
+        MiCountDown: typeof CountDown;
+    }
 }

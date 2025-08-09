@@ -8,13 +8,13 @@
 import type { Directive, DirectiveBinding } from 'vue';
 
 interface ElType extends HTMLElement {
-  copyData: string | number | CopyOptions;
-  __handleClick__: any;
+    copyData: string | number | CopyOptions;
+    __handleClick__: any;
 }
 
 interface CopyOptions {
-  value: string | number;
-  onSuccess?: () => void;
+    value: string | number;
+    onSuccess?: () => void;
 }
 
 // 判断是否支持 Clipboard API
@@ -22,51 +22,53 @@ const hasClipboard = navigator && navigator.clipboard;
 
 // 复制文本的具体实现
 async function copyText(text: string): Promise<boolean> {
-  try {
-    if (hasClipboard) {
-      await navigator.clipboard.writeText(text);
-    } else {
-      const input = document.createElement('input');
-      input.value = text;
-      document.body.appendChild(input);
-      input.select();
-      document.execCommand('Copy');
-      document.body.removeChild(input);
+    try {
+        if (hasClipboard) {
+            await navigator.clipboard.writeText(text);
+        } else {
+            const input = document.createElement('input');
+            input.value = text;
+            document.body.appendChild(input);
+            input.select();
+            document.execCommand('Copy');
+            document.body.removeChild(input);
+        }
+        return true;
+    } catch (err) {
+        console.error('复制失败:', err);
+        return false;
     }
-    return true;
-  } catch (err) {
-    console.error('复制失败:', err);
-    return false;
-  }
 }
 
 function handleClick(this: ElType) {
-  const options = this.copyData;
-  const text =
-    typeof options === 'object' ? options.value.toString() : options.toString();
+    const options = this.copyData;
+    const text =
+        typeof options === 'object'
+            ? options.value.toString()
+            : options.toString();
 
-  copyText(text).then((success) => {
-    if (success) {
-      console.log('复制成功:', text);
-      if (typeof options === 'object' && options.onSuccess) {
-        options.onSuccess();
-      }
-    }
-  });
+    copyText(text).then((success) => {
+        if (success) {
+            console.log('复制成功:', text);
+            if (typeof options === 'object' && options.onSuccess) {
+                options.onSuccess();
+            }
+        }
+    });
 }
 
 const copy: Directive = {
-  mounted(el: ElType, binding: DirectiveBinding) {
-    el.copyData = binding.value;
-    el.__handleClick__ = handleClick.bind(el);
-    el.addEventListener('click', el.__handleClick__);
-  },
-  updated(el: ElType, binding: DirectiveBinding) {
-    el.copyData = binding.value;
-  },
-  beforeUnmount(el: ElType) {
-    el.removeEventListener('click', el.__handleClick__);
-  },
+    mounted(el: ElType, binding: DirectiveBinding) {
+        el.copyData = binding.value;
+        el.__handleClick__ = handleClick.bind(el);
+        el.addEventListener('click', el.__handleClick__);
+    },
+    updated(el: ElType, binding: DirectiveBinding) {
+        el.copyData = binding.value;
+    },
+    beforeUnmount(el: ElType) {
+        el.removeEventListener('click', el.__handleClick__);
+    },
 };
 
 export default copy;

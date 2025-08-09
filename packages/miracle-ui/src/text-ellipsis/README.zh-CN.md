@@ -24,10 +24,11 @@ app.use(TextEllipsis);
 
 ```js
 export default {
-  setup() {
-    const text = '慢慢来，不要急，生活给你出了难题，可也终有一天会给出答案。';
-    return { text };
-  },
+    setup() {
+        const text =
+            '慢慢来，不要急，生活给你出了难题，可也终有一天会给出答案。';
+        return { text };
+    },
 };
 ```
 
@@ -41,11 +42,11 @@ export default {
 
 ```js
 export default {
-  setup() {
-    const text =
-      '似水流年是一个人所有的一切，只有这个东西，才真正归你所有。其余的一切，都是片刻的欢娱和不幸，转眼间就已跑到那似水流年里去了。';
-    return { text };
-  },
+    setup() {
+        const text =
+            '似水流年是一个人所有的一切，只有这个东西，才真正归你所有。其余的一切，都是片刻的欢娱和不幸，转眼间就已跑到那似水流年里去了。';
+        return { text };
+    },
 };
 ```
 
@@ -55,20 +56,20 @@ export default {
 
 ```html
 <mi-text-ellipsis
-  rows="3"
-  :content="text"
-  expand-text="展开"
-  collapse-text="收起"
+    rows="3"
+    :content="text"
+    expand-text="展开"
+    collapse-text="收起"
 />
 ```
 
 ```js
 export default {
-  setup() {
-    const text =
-      '那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云。后来我才知道，生活就是个缓慢受锤的过程，人一天天老下去，奢望也一天天消失，最后变得像挨了锤的牛一样。可是我过二十一岁生日时没有预见到这一点。我觉得自己会永远生猛下去，什么也锤不了我。';
-    return { text };
-  },
+    setup() {
+        const text =
+            '那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云。后来我才知道，生活就是个缓慢受锤的过程，人一天天老下去，奢望也一天天消失，最后变得像挨了锤的牛一样。可是我过二十一岁生日时没有预见到这一点。我觉得自己会永远生猛下去，什么也锤不了我。';
+        return { text };
+    },
 };
 ```
 
@@ -76,47 +77,47 @@ export default {
 
 通过设置 `position` 控制省略位置。
 
-- 头部省略：
+-   头部省略：
 
 ```html
 <mi-text-ellipsis
-  rows="1"
-  :content="text"
-  expand-text="展开"
-  collapse-text="收起"
-  position="start"
+    rows="1"
+    :content="text"
+    expand-text="展开"
+    collapse-text="收起"
+    position="start"
 />
 ```
 
 ```js
 export default {
-  setup() {
-    const text =
-      '那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云。后来我才知道，生活就是个缓慢受锤的过程，人一天天老下去，奢望也一天天消失，最后变得像挨了锤的牛一样。可是我过二十一岁生日时没有预见到这一点。我觉得自己会永远生猛下去，什么也锤不了我。';
-    return { text };
-  },
+    setup() {
+        const text =
+            '那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云。后来我才知道，生活就是个缓慢受锤的过程，人一天天老下去，奢望也一天天消失，最后变得像挨了锤的牛一样。可是我过二十一岁生日时没有预见到这一点。我觉得自己会永远生猛下去，什么也锤不了我。';
+        return { text };
+    },
 };
 ```
 
-- 中部省略：
+-   中部省略：
 
 ```html
 <mi-text-ellipsis
-  rows="2"
-  :content="text"
-  expand-text="展开"
-  collapse-text="收起"
-  position="middle"
+    rows="2"
+    :content="text"
+    expand-text="展开"
+    collapse-text="收起"
+    position="middle"
 />
 ```
 
 ```js
 export default {
-  setup() {
-    const text =
-      '那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云。后来我才知道，生活就是个缓慢受锤的过程，人一天天老下去，奢望也一天天消失，最后变得像挨了锤的牛一样。可是我过二十一岁生日时没有预见到这一点。我觉得自己会永远生猛下去，什么也锤不了我。';
-    return { text };
-  },
+    setup() {
+        const text =
+            '那一天我二十一岁，在我一生的黄金时代。我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云。后来我才知道，生活就是个缓慢受锤的过程，人一天天老下去，奢望也一天天消失，最后变得像挨了锤的牛一样。可是我过二十一岁生日时没有预见到这一点。我觉得自己会永远生猛下去，什么也锤不了我。';
+        return { text };
+    },
 };
 ```
 
@@ -126,16 +127,17 @@ export default {
 
 ```html
 <mi-text-ellipsis :content="text">
-  <template #action="{ expanded }">{{ expanded ? '收起' : '展开' }}</template>
+    <template #action="{ expanded }">{{ expanded ? '收起' : '展开' }}</template>
 </mi-text-ellipsis>
 ```
 
 ```js
 export default {
-  setup() {
-    const text = '慢慢来，不要急，生活给你出了难题，可也终有一天会给出答案。';
-    return { text };
-  },
+    setup() {
+        const text =
+            '慢慢来，不要急，生活给你出了难题，可也终有一天会给出答案。';
+        return { text };
+    },
 };
 ```
 
@@ -178,9 +180,9 @@ export default {
 
 ```ts
 import type {
-  TextEllipsisProps,
-  TextEllipsisInstance,
-  TextEllipsisThemeVars,
+    TextEllipsisProps,
+    TextEllipsisInstance,
+    TextEllipsisThemeVars,
 } from '@miracle-web/ui';
 ```
 

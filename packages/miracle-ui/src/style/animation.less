@@ -1,133 +1,135 @@
 @keyframes mi-slide-up-enter {
-  from {
-    transform: translate3d(0, 100%, 0);
-  }
+    from {
+        transform: translate3d(0, 100%, 0);
+    }
 }
 
 @keyframes mi-slide-up-leave {
-  to {
-    transform: translate3d(0, 100%, 0);
-  }
+    to {
+        transform: translate3d(0, 100%, 0);
+    }
 }
 
 @keyframes mi-slide-down-enter {
-  from {
-    transform: translate3d(0, -100%, 0);
-  }
+    from {
+        transform: translate3d(0, -100%, 0);
+    }
 }
 
 @keyframes mi-slide-down-leave {
-  to {
-    transform: translate3d(0, -100%, 0);
-  }
+    to {
+        transform: translate3d(0, -100%, 0);
+    }
 }
 
 @keyframes mi-slide-left-enter {
-  from {
-    transform: translate3d(-100%, 0, 0);
-  }
+    from {
+        transform: translate3d(-100%, 0, 0);
+    }
 }
 
 @keyframes mi-slide-left-leave {
-  to {
-    transform: translate3d(-100%, 0, 0);
-  }
+    to {
+        transform: translate3d(-100%, 0, 0);
+    }
 }
 
 @keyframes mi-slide-right-enter {
-  from {
-    transform: translate3d(100%, 0, 0);
-  }
+    from {
+        transform: translate3d(100%, 0, 0);
+    }
 }
 
 @keyframes mi-slide-right-leave {
-  to {
-    transform: translate3d(100%, 0, 0);
-  }
+    to {
+        transform: translate3d(100%, 0, 0);
+    }
 }
 
 @keyframes mi-fade-in {
-  from {
-    opacity: 0;
-  }
+    from {
+        opacity: 0;
+    }
 
-  to {
-    opacity: 1;
-  }
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes mi-fade-out {
-  from {
-    opacity: 1;
-  }
+    from {
+        opacity: 1;
+    }
 
-  to {
-    opacity: 0;
-  }
+    to {
+        opacity: 0;
+    }
 }
 
 @keyframes mi-rotate {
-  from {
-    transform: rotate(0deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
 
-  to {
-    transform: rotate(360deg);
-  }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .mi-fade {
-  &-enter-active {
-    animation: var(--mi-duration-base) mi-fade-in both var(--mi-ease-out);
-  }
+    &-enter-active {
+        animation: var(--mi-duration-base) mi-fade-in both var(--mi-ease-out);
+    }
 
-  &-leave-active {
-    animation: var(--mi-duration-base) mi-fade-out both var(--mi-ease-in);
-  }
+    &-leave-active {
+        animation: var(--mi-duration-base) mi-fade-out both var(--mi-ease-in);
+    }
 }
 
 .mi-slide-up {
-  &-enter-active {
-    animation: mi-slide-up-enter var(--mi-duration-base) both var(--mi-ease-out);
-  }
+    &-enter-active {
+        animation: mi-slide-up-enter var(--mi-duration-base) both
+            var(--mi-ease-out);
+    }
 
-  &-leave-active {
-    animation: mi-slide-up-leave var(--mi-duration-base) both var(--mi-ease-in);
-  }
+    &-leave-active {
+        animation: mi-slide-up-leave var(--mi-duration-base) both
+            var(--mi-ease-in);
+    }
 }
 
 .mi-slide-down {
-  &-enter-active {
-    animation: mi-slide-down-enter var(--mi-duration-base) both
-      var(--mi-ease-out);
-  }
+    &-enter-active {
+        animation: mi-slide-down-enter var(--mi-duration-base) both
+            var(--mi-ease-out);
+    }
 
-  &-leave-active {
-    animation: mi-slide-down-leave var(--mi-duration-base) both
-      var(--mi-ease-in);
-  }
+    &-leave-active {
+        animation: mi-slide-down-leave var(--mi-duration-base) both
+            var(--mi-ease-in);
+    }
 }
 
 .mi-slide-left {
-  &-enter-active {
-    animation: mi-slide-left-enter var(--mi-duration-base) both
-      var(--mi-ease-out);
-  }
+    &-enter-active {
+        animation: mi-slide-left-enter var(--mi-duration-base) both
+            var(--mi-ease-out);
+    }
 
-  &-leave-active {
-    animation: mi-slide-left-leave var(--mi-duration-base) both
-      var(--mi-ease-in);
-  }
+    &-leave-active {
+        animation: mi-slide-left-leave var(--mi-duration-base) both
+            var(--mi-ease-in);
+    }
 }
 
 .mi-slide-right {
-  &-enter-active {
-    animation: mi-slide-right-enter var(--mi-duration-base) both
-      var(--mi-ease-out);
-  }
+    &-enter-active {
+        animation: mi-slide-right-enter var(--mi-duration-base) both
+            var(--mi-ease-out);
+    }
 
-  &-leave-active {
-    animation: mi-slide-right-leave var(--mi-duration-base) both
-      var(--mi-ease-in);
-  }
+    &-leave-active {
+        animation: mi-slide-right-leave var(--mi-duration-base) both
+            var(--mi-ease-in);
+    }
 }

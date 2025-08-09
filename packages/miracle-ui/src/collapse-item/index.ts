@@ -8,7 +8,7 @@ export type { CollapseItemProps } from './CollapseItem';
 export type { CollapseItemInstance, CollapseItemThemeVars } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiCollapseItem: typeof CollapseItem;
-  }
+    export interface GlobalComponents {
+        MiCollapseItem: typeof CollapseItem;
+    }
 }

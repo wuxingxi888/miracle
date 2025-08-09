@@ -7,46 +7,46 @@ const [name, bem] = createNamespace('steps');
 export type StepsDirection = 'horizontal' | 'vertical';
 
 export const stepsProps = {
-  active: makeNumericProp(0),
-  direction: makeStringProp<StepsDirection>('horizontal'),
-  activeIcon: makeStringProp('checked'),
-  iconPrefix: String,
-  finishIcon: String,
-  activeColor: String,
-  inactiveIcon: String,
-  inactiveColor: String,
+    active: makeNumericProp(0),
+    direction: makeStringProp<StepsDirection>('horizontal'),
+    activeIcon: makeStringProp('checked'),
+    iconPrefix: String,
+    finishIcon: String,
+    activeColor: String,
+    inactiveIcon: String,
+    inactiveColor: String,
 };
 
 export type StepsProps = ExtractPropTypes<typeof stepsProps>;
 
 export type StepsProvide = {
-  props: StepsProps;
-  onClickStep: (index: number) => void;
+    props: StepsProps;
+    onClickStep: (index: number) => void;
 };
 
 export const STEPS_KEY: InjectionKey<StepsProvide> = Symbol(name);
 
 export default defineComponent({
-  name,
+    name,
 
-  props: stepsProps,
+    props: stepsProps,
 
-  emits: ['clickStep'],
+    emits: ['clickStep'],
 
-  setup(props, { emit, slots }) {
-    const { linkChildren } = useChildren(STEPS_KEY);
+    setup(props, { emit, slots }) {
+        const { linkChildren } = useChildren(STEPS_KEY);
 
-    const onClickStep = (index: number) => emit('clickStep', index);
+        const onClickStep = (index: number) => emit('clickStep', index);
 
-    linkChildren({
-      props,
-      onClickStep,
-    });
+        linkChildren({
+            props,
+            onClickStep,
+        });
 
-    return () => (
-      <div class={bem([props.direction])}>
-        <div class={bem('items')}>{slots.default?.()}</div>
-      </div>
-    );
-  },
+        return () => (
+            <div class={bem([props.direction])}>
+                <div class={bem('items')}>{slots.default?.()}</div>
+            </div>
+        );
+    },
 });

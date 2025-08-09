@@ -36,19 +36,19 @@ areaList 为对象结构，包含 `province_list`、`city_list`、`county_list` 
 
 ```js
 const areaList = {
-  province_list: {
-    110000: '北京市',
-    120000: '天津市',
-  },
-  city_list: {
-    110100: '北京市',
-    120100: '天津市',
-  },
-  county_list: {
-    110101: '东城区',
-    110102: '西城区',
-    // ....
-  },
+    province_list: {
+        110000: '北京市',
+        120000: '天津市',
+    },
+    city_list: {
+        110100: '北京市',
+        120100: '天津市',
+    },
+    county_list: {
+        110101: '东城区',
+        110102: '西城区',
+        // ....
+    },
 };
 ```
 
@@ -74,9 +74,9 @@ bun add @miracle-web/area-data
 import { areaList } from '@miracle-web/area-data';
 
 export default {
-  setup() {
-    return { areaList };
-  },
+    setup() {
+        return { areaList };
+    },
 };
 ```
 
@@ -94,10 +94,10 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const value = ref('330302');
-    return { value };
-  },
+    setup() {
+        const value = ref('330302');
+        return { value };
+    },
 };
 ```
 
@@ -115,9 +115,9 @@ export default {
 
 ```html
 <mi-area
-  title="标题"
-  :area-list="areaList"
-  :columns-placeholder="['省份', '城市', '区县']"
+    title="标题"
+    :area-list="areaList"
+    :columns-placeholder="['省份', '城市', '区县']"
 />
 ```
 

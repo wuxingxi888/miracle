@@ -8,7 +8,7 @@ export type { IndexAnchorProps } from './IndexAnchor';
 export type { IndexAnchorThemeVars } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiIndexAnchor: typeof IndexAnchor;
-  }
+    export interface GlobalComponents {
+        MiIndexAnchor: typeof IndexAnchor;
+    }
 }

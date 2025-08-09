@@ -8,7 +8,7 @@ export type { AreaProps } from './Area';
 export type { AreaList, AreaInstance } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiArea: typeof Area;
-  }
+    export interface GlobalComponents {
+        MiArea: typeof Area;
+    }
 }

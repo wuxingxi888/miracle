@@ -29,14 +29,14 @@ import { ref } from 'vue';
 import { showToast } from '@miracle-web/ui';
 
 export default {
-  setup() {
-    const value = ref(50);
-    const onChange = (value) => showToast('当前值：' + value);
-    return {
-      value,
-      onChange,
-    };
-  },
+    setup() {
+        const value = ref(50);
+        const onChange = (value) => showToast('当前值：' + value);
+        return {
+            value,
+            onChange,
+        };
+    },
 };
 ```
 
@@ -53,15 +53,15 @@ import { ref } from 'vue';
 import { showToast } from '@miracle-web/ui';
 
 export default {
-  setup() {
-    // 双滑块模式时，值必须是数组
-    const value = ref([10, 50]);
-    const onChange = (value) => showToast('当前值：' + value);
-    return {
-      value,
-      onChange,
-    };
-  },
+    setup() {
+        // 双滑块模式时，值必须是数组
+        const value = ref([10, 50]);
+        const onChange = (value) => showToast('当前值：' + value);
+        return {
+            value,
+            onChange,
+        };
+    },
 };
 ```
 
@@ -93,21 +93,21 @@ export default {
 
 ```html
 <mi-slider v-model="value">
-  <template #button>
-    <div class="custom-button">{{ value }}</div>
-  </template>
+    <template #button>
+        <div class="custom-button">{{ value }}</div>
+    </template>
 </mi-slider>
 
 <style>
-  .custom-button {
-    width: 26px;
-    color: #fff;
-    font-size: 10px;
-    line-height: 18px;
-    text-align: center;
-    background-color: var(--mi-primary-color);
-    border-radius: 100px;
-  }
+    .custom-button {
+        width: 26px;
+        color: #fff;
+        font-size: 10px;
+        line-height: 18px;
+        text-align: center;
+        background-color: var(--mi-primary-color);
+        border-radius: 100px;
+    }
 </style>
 ```
 
@@ -117,14 +117,14 @@ export default {
 
 ```html
 <div :style="{ height: '150px' }">
-  <mi-slider v-model="value" vertical @change="onChange" />
-  <mi-slider
-    v-model="value2"
-    range
-    vertical
-    style="margin-left: 100px;"
-    @change="onChange"
-  />
+    <mi-slider v-model="value" vertical @change="onChange" />
+    <mi-slider
+        v-model="value2"
+        range
+        vertical
+        style="margin-left: 100px;"
+        @change="onChange"
+    />
 </div>
 ```
 
@@ -133,16 +133,16 @@ import { ref } from 'vue';
 import { showToast } from '@miracle-web/ui';
 
 export default {
-  setup() {
-    const value = ref(50);
-    const value2 = ref([10, 50]);
-    const onChange = (value) => showToast('当前值：' + value);
-    return {
-      value,
-      value2,
-      onChange,
-    };
-  },
+    setup() {
+        const value = ref(50);
+        const value2 = ref([10, 50]);
+        const onChange = (value) => showToast('当前值：' + value);
+        return {
+            value,
+            value2,
+            onChange,
+        };
+    },
 };
 ```
 

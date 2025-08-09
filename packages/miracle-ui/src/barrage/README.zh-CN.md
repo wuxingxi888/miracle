@@ -24,33 +24,33 @@ app.use(Barrage);
 
 ```html
 <mi-barrage v-model="list">
-  <div class="video" style="width: 100%; height: 150px"></div>
+    <div class="video" style="width: 100%; height: 150px"></div>
 </mi-barrage>
 <mi-space style="margin-top: 10px">
-  <mi-button @click="add" type="primary" size="small"> 弹幕 </mi-button>
+    <mi-button @click="add" type="primary" size="small">弹幕</mi-button>
 </mi-space>
 ```
 
 ```ts
 export default {
-  setup() {
-    const defaultList = [
-      { id: 100, text: '轻量' },
-      { id: 101, text: '可定制的' },
-      { id: 102, text: '移动端' },
-      { id: 103, text: 'Vue' },
-      { id: 104, text: '组件库' },
-      { id: 105, text: 'MiracleUI' },
-      { id: 106, text: '666' },
-    ];
+    setup() {
+        const defaultList = [
+            { id: 100, text: '轻量' },
+            { id: 101, text: '可定制的' },
+            { id: 102, text: '移动端' },
+            { id: 103, text: 'Vue' },
+            { id: 104, text: '组件库' },
+            { id: 105, text: 'MiracleUI' },
+            { id: 106, text: '666' },
+        ];
 
-    const list = ref([...defaultList]);
-    const add = () => {
-      list.value.push({ id: Math.random(), text: 'Barrage' });
-    };
+        const list = ref([...defaultList]);
+        const add = () => {
+            list.value.push({ id: Math.random(), text: 'Barrage' });
+        };
 
-    return { list, add };
-  },
+        return { list, add };
+    },
 };
 ```
 
@@ -60,46 +60,46 @@ export default {
 
 ```html
 <mi-barrage v-model="list" ref="barrage" :auto-play="false">
-  <div class="video" style="width: 100%; height: 150px"></div>
+    <div class="video" style="width: 100%; height: 150px"></div>
 </mi-barrage>
 <mi-space style="margin-top: 10px">
-  <mi-button @click="add" type="primary" size="small" :disabled="!isPlay">
-    弹幕
-  </mi-button>
-  <mi-button @click="toggle()" size="small">
-    {{ isPlay ? '暂停' : '开始' }}
-  </mi-button>
+    <mi-button @click="add" type="primary" size="small" :disabled="!isPlay"
+        >弹幕</mi-button
+    >
+    <mi-button @click="toggle()" size="small"
+        >{{ isPlay ? '暂停' : '开始' }}</mi-button
+    >
 </mi-space>
 ```
 
 ```ts
 export default {
-  setup() {
-    const defaultList = [
-      { id: 100, text: '轻量' },
-      { id: 101, text: '可定制的' },
-      { id: 102, text: '移动端' },
-      { id: 103, text: 'Vue' },
-      { id: 104, text: '组件库' },
-      { id: 105, text: 'MiracleUI' },
-      { id: 106, text: '666' },
-    ];
+    setup() {
+        const defaultList = [
+            { id: 100, text: '轻量' },
+            { id: 101, text: '可定制的' },
+            { id: 102, text: '移动端' },
+            { id: 103, text: 'Vue' },
+            { id: 104, text: '组件库' },
+            { id: 105, text: 'MiracleUI' },
+            { id: 106, text: '666' },
+        ];
 
-    const list = ref([...defaultList]);
-    const barrage = ref<BarrageInstance>();
-    const add = () => {
-      list.value.push({ id: Math.random(), text: 'Barrage' });
-    };
+        const list = ref([...defaultList]);
+        const barrage = ref<BarrageInstance>();
+        const add = () => {
+            list.value.push({ id: Math.random(), text: 'Barrage' });
+        };
 
-    const [isPlay, toggle] = useToggle(false);
+        const [isPlay, toggle] = useToggle(false);
 
-    watch(isPlay, () => {
-      if (isPlay.value) barrage.value?.play();
-      else barrage.value?.pause();
-    });
+        watch(isPlay, () => {
+            if (isPlay.value) barrage.value?.play();
+            else barrage.value?.pause();
+        });
 
-    return { list, barrage, isPlay, toggle, add };
-  },
+        return { list, barrage, isPlay, toggle, add };
+    },
 };
 ```
 
@@ -137,9 +137,9 @@ export default {
 
 ```ts
 import type {
-  BarrageProps,
-  BarrageItem,
-  BarrageInstance,
+    BarrageProps,
+    BarrageItem,
+    BarrageInstance,
 } from '@miracle-web/ui';
 ```
 

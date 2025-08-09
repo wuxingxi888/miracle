@@ -30,12 +30,12 @@ app.use(FloatingBubble);
 import { showToast } from '@miracle-web/ui';
 
 export default {
-  setup() {
-    const onClick = () => {
-      showToast('点击气泡');
-    };
-    return { onClick };
-  },
+    setup() {
+        const onClick = () => {
+            showToast('点击气泡');
+        };
+        return { onClick };
+    },
 };
 ```
 
@@ -45,10 +45,10 @@ export default {
 
 ```html
 <mi-floating-bubble
-  axis="xy"
-  icon="chat"
-  magnetic="x"
-  @offset-change="onOffsetChange"
+    axis="xy"
+    icon="chat"
+    magnetic="x"
+    @offset-change="onOffsetChange"
 />
 ```
 
@@ -56,12 +56,12 @@ export default {
 import { showToast } from '@miracle-web/ui';
 
 export default {
-  setup() {
-    const onOffsetChange = (offset) => {
-      showToast(`x: ${offset.x.toFixed(0)}, y: ${offset.y.toFixed(0)}`);
-    };
-    return { onOffsetChange };
-  },
+    setup() {
+        const onOffsetChange = (offset) => {
+            showToast(`x: ${offset.x.toFixed(0)}, y: ${offset.y.toFixed(0)}`);
+        };
+        return { onOffsetChange };
+    },
 };
 ```
 
@@ -77,10 +77,10 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const offset = ref({ x: 200, y: 400 });
-    return { offset };
-  },
+    setup() {
+        const offset = ref({ x: 200, y: 400 });
+        return { offset };
+    },
 };
 ```
 
@@ -116,10 +116,10 @@ export default {
 
 ```ts
 export type {
-  FloatingBubbleProps,
-  FloatingBubbleAxis,
-  FloatingBubbleMagnetic,
-  FloatingBubbleOffset,
+    FloatingBubbleProps,
+    FloatingBubbleAxis,
+    FloatingBubbleMagnetic,
+    FloatingBubbleOffset,
 } from '@miracle-web/ui';
 ```
 

@@ -9,102 +9,107 @@ import { noop } from '../../utils';
 import { h } from 'vue';
 
 export default (lazyManager) => ({
-  props: {
-    src: [String, Object],
-    tag: {
-      type: String,
-      default: 'img',
+    props: {
+        src: [String, Object],
+        tag: {
+            type: String,
+            default: 'img',
+        },
     },
-  },
-  render() {
-    return h(
-      this.tag,
-      {
-        src: this.renderSrc,
-      },
-      this.$slots.default?.(),
-    );
-  },
-  data() {
-    return {
-      el: null,
-      options: {
-        src: '',
-        error: '',
-        loading: '',
-        attempt: lazyManager.options.attempt,
-      },
-      state: {
-        loaded: false,
-        error: false,
-        attempt: 0,
-      },
-      renderSrc: '',
-    };
-  },
-  watch: {
-    src() {
-      this.init();
-      lazyManager.addLazyBox(this);
-      lazyManager.lazyLoadHandler();
+    render() {
+        return h(
+            this.tag,
+            {
+                src: this.renderSrc,
+            },
+            this.$slots.default?.(),
+        );
     },
-  },
-  created() {
-    this.init();
-  },
-  mounted() {
-    this.el = this.$el;
-    lazyManager.addLazyBox(this);
-    lazyManager.lazyLoadHandler();
-  },
-  beforeUnmount() {
-    lazyManager.removeComponent(this);
-  },
-  methods: {
-    init() {
-      const { src, loading, error } = lazyManager.valueFormatter(this.src);
-      this.state.loaded = false;
-      this.options.src = src;
-      this.options.error = error;
-      this.options.loading = loading;
-      this.renderSrc = this.options.loading;
+    data() {
+        return {
+            el: null,
+            options: {
+                src: '',
+                error: '',
+                loading: '',
+                attempt: lazyManager.options.attempt,
+            },
+            state: {
+                loaded: false,
+                error: false,
+                attempt: 0,
+            },
+            renderSrc: '',
+        };
     },
-    checkInView() {
-      const rect = useRect(this.$el);
-      return (
-        rect.top < window.innerHeight * lazyManager.options.preLoad &&
-        rect.bottom > 0 &&
-        rect.left < window.innerWidth * lazyManager.options.preLoad &&
-        rect.right > 0
-      );
+    watch: {
+        src() {
+            this.init();
+            lazyManager.addLazyBox(this);
+            lazyManager.lazyLoadHandler();
+        },
     },
-    load(onFinish = noop) {
-      if (this.state.attempt > this.options.attempt - 1 && this.state.error) {
-        if (
-          process.env.NODE_ENV !== 'production' &&
-          !lazyManager.options.silent
-        ) {
-          console.log(
-            `[@miracle/lazyload] ${this.options.src} tried too more than ${this.options.attempt} times`,
-          );
-        }
+    created() {
+        this.init();
+    },
+    mounted() {
+        this.el = this.$el;
+        lazyManager.addLazyBox(this);
+        lazyManager.lazyLoadHandler();
+    },
+    beforeUnmount() {
+        lazyManager.removeComponent(this);
+    },
+    methods: {
+        init() {
+            const { src, loading, error } = lazyManager.valueFormatter(
+                this.src,
+            );
+            this.state.loaded = false;
+            this.options.src = src;
+            this.options.error = error;
+            this.options.loading = loading;
+            this.renderSrc = this.options.loading;
+        },
+        checkInView() {
+            const rect = useRect(this.$el);
+            return (
+                rect.top < window.innerHeight * lazyManager.options.preLoad &&
+                rect.bottom > 0 &&
+                rect.left < window.innerWidth * lazyManager.options.preLoad &&
+                rect.right > 0
+            );
+        },
+        load(onFinish = noop) {
+            if (
+                this.state.attempt > this.options.attempt - 1 &&
+                this.state.error
+            ) {
+                if (
+                    process.env.NODE_ENV !== 'production' &&
+                    !lazyManager.options.silent
+                ) {
+                    console.log(
+                        `[@miracle/lazyload] ${this.options.src} tried too more than ${this.options.attempt} times`,
+                    );
+                }
 
-        onFinish();
-        return;
-      }
-      const { src } = this.options;
-      loadImageAsync(
-        { src },
-        ({ src }) => {
-          this.renderSrc = src;
-          this.state.loaded = true;
+                onFinish();
+                return;
+            }
+            const { src } = this.options;
+            loadImageAsync(
+                { src },
+                ({ src }) => {
+                    this.renderSrc = src;
+                    this.state.loaded = true;
+                },
+                () => {
+                    this.state.attempt++;
+                    this.renderSrc = this.options.error;
+                    this.state.error = true;
+                },
+            );
         },
-        () => {
-          this.state.attempt++;
-          this.renderSrc = this.options.error;
-          this.state.error = true;
-        },
-      );
     },
-  },
 });

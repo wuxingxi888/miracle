@@ -1,50 +1,50 @@
 :root,
 :host {
-  --mi-circle-size: 100px;
-  --mi-circle-color: var(--mi-primary-color);
-  --mi-circle-layer-color: var(--mi-white);
-  --mi-circle-text-color: var(--mi-text-color);
-  --mi-circle-text-font-weight: var(--mi-font-bold);
-  --mi-circle-text-font-size: var(--mi-font-size-md);
-  --mi-circle-text-line-height: var(--mi-line-height-md);
+    --mi-circle-size: 100px;
+    --mi-circle-color: var(--mi-primary-color);
+    --mi-circle-layer-color: var(--mi-white);
+    --mi-circle-text-color: var(--mi-text-color);
+    --mi-circle-text-font-weight: var(--mi-font-bold);
+    --mi-circle-text-font-size: var(--mi-font-size-md);
+    --mi-circle-text-line-height: var(--mi-line-height-md);
 }
 
 .mi-circle {
-  position: relative;
-  display: inline-block;
-  width: var(--mi-circle-size);
-  height: var(--mi-circle-size);
-  text-align: center;
+    position: relative;
+    display: inline-block;
+    width: var(--mi-circle-size);
+    height: var(--mi-circle-size);
+    text-align: center;
 
-  svg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
+    svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
 
-  &__layer {
-    stroke: var(--mi-circle-layer-color);
-  }
+    &__layer {
+        stroke: var(--mi-circle-layer-color);
+    }
 
-  &__hover {
-    fill: none;
-    stroke: var(--mi-circle-color);
-    stroke-linecap: round;
-  }
+    &__hover {
+        fill: none;
+        stroke: var(--mi-circle-color);
+        stroke-linecap: round;
+    }
 
-  &__text {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    box-sizing: border-box;
-    width: 100%;
-    padding: 0 var(--mi-padding-base);
-    color: var(--mi-circle-text-color);
-    font-weight: var(--mi-circle-text-font-weight);
-    font-size: var(--mi-circle-text-font-size);
-    line-height: var(--mi-circle-text-line-height);
-    transform: translateY(-50%);
-  }
+    &__text {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0 var(--mi-padding-base);
+        color: var(--mi-circle-text-color);
+        font-weight: var(--mi-circle-text-font-weight);
+        font-size: var(--mi-circle-text-font-size);
+        line-height: var(--mi-circle-text-line-height);
+        transform: translateY(-50%);
+    }
 }

@@ -8,7 +8,7 @@ export type { BadgeProps, BadgePosition } from './Badge';
 export type { BadgeThemeVars } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiBadge: typeof Badge;
-  }
+    export interface GlobalComponents {
+        MiBadge: typeof Badge;
+    }
 }

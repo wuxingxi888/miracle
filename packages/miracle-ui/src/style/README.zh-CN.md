@@ -14,12 +14,12 @@ Miracle 中默认包含了一些常用样式，可以直接通过 className 的�
 
 <!-- 最多显示两行 -->
 <div class="mi-multi-ellipsis--l2">
-  这是一段最多显示两行的文字，多余的内容会被省略
+    这是一段最多显示两行的文字，多余的内容会被省略
 </div>
 
 <!-- 最多显示三行 -->
 <div class="mi-multi-ellipsis--l3">
-  这是一段最多显示三行的文字，多余的内容会被省略
+    这是一段最多显示三行的文字，多余的内容会被省略
 </div>
 ```
 
@@ -66,27 +66,27 @@ Miracle 中默认包含了一些常用样式，可以直接通过 className 的�
 ```html
 <!-- 淡入 -->
 <transition name="mi-fade">
-  <div v-show="visible">Fade</div>
+    <div v-show="visible">Fade</div>
 </transition>
 
 <!-- 上滑进入 -->
 <transition name="mi-slide-up">
-  <div v-show="visible">Slide Up</div>
+    <div v-show="visible">Slide Up</div>
 </transition>
 
 <!-- 下滑进入 -->
 <transition name="mi-slide-down">
-  <div v-show="visible">Slide Down</div>
+    <div v-show="visible">Slide Down</div>
 </transition>
 
 <!-- 左滑进入 -->
 <transition name="mi-slide-left">
-  <div v-show="visible">Slide Left</div>
+    <div v-show="visible">Slide Left</div>
 </transition>
 
 <!-- 右滑进入 -->
 <transition name="mi-slide-right">
-  <div v-show="visible">Slide Right</div>
+    <div v-show="visible">Slide Right</div>
 </transition>
 ```
 

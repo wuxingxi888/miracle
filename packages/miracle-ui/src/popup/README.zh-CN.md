@@ -31,16 +31,16 @@ app.use(Popup);
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const show = ref(false);
-    const showPopup = () => {
-      show.value = true;
-    };
-    return {
-      show,
-      showPopup,
-    };
-  },
+    setup() {
+        const show = ref(false);
+        const showPopup = () => {
+            show.value = true;
+        };
+        return {
+            show,
+            showPopup,
+        };
+    },
 };
 ```
 
@@ -48,8 +48,8 @@ export default {
 
 通过 `position` 属性设置弹窗的弹出位置，默认为居中弹出，可以设置为 `top`、`bottom`、`left`、`right`。
 
-- 当弹窗从顶部或底部弹出时，默认宽度与屏幕宽度保持一致，弹窗高度取决于内容的高度。
-- 当弹窗从左侧或右侧弹出时，默认不设置宽度和高度，弹窗的宽高取决于内容的宽高。
+-   当弹窗从顶部或底部弹出时，默认宽度与屏幕宽度保持一致，弹窗高度取决于内容的高度。
+-   当弹窗从左侧或右侧弹出时，默认不设置宽度和高度，弹窗的宽高取决于内容的宽高。
 
 ```html
 <!-- 顶部弹出 -->
@@ -57,23 +57,23 @@ export default {
 
 <!-- 底部弹出 -->
 <mi-popup
-  v-model:show="showBottom"
-  position="bottom"
-  :style="{ height: '30%' }"
+    v-model:show="showBottom"
+    position="bottom"
+    :style="{ height: '30%' }"
 />
 
 <!-- 左侧弹出 -->
 <mi-popup
-  v-model:show="showLeft"
-  position="left"
-  :style="{ width: '30%', height: '100%' }"
+    v-model:show="showLeft"
+    position="left"
+    :style="{ width: '30%', height: '100%' }"
 />
 
 <!-- 右侧弹出 -->
 <mi-popup
-  v-model:show="showRight"
-  position="right"
-  :style="{ width: '30%', height: '100%' }"
+    v-model:show="showRight"
+    position="right"
+    :style="{ width: '30%', height: '100%' }"
 />
 ```
 
@@ -83,26 +83,26 @@ export default {
 
 ```html
 <mi-popup
-  v-model:show="show"
-  closeable
-  position="bottom"
-  :style="{ height: '30%' }"
+    v-model:show="show"
+    closeable
+    position="bottom"
+    :style="{ height: '30%' }"
 />
 <!-- 自定义图标 -->
 <mi-popup
-  v-model:show="show"
-  closeable
-  close-icon="close"
-  position="bottom"
-  :style="{ height: '30%' }"
+    v-model:show="show"
+    closeable
+    close-icon="close"
+    position="bottom"
+    :style="{ height: '30%' }"
 />
 <!-- 图标位置 -->
 <mi-popup
-  v-model:show="show"
-  closeable
-  close-icon-position="top-left"
-  position="bottom"
-  :style="{ height: '30%' }"
+    v-model:show="show"
+    closeable
+    close-icon-position="top-left"
+    position="bottom"
+    :style="{ height: '30%' }"
 />
 ```
 
@@ -116,10 +116,10 @@ export default {
 
 <!-- 圆角弹窗（底部） -->
 <mi-popup
-  v-model:show="showBottom"
-  round
-  position="bottom"
-  :style="{ height: '30%' }"
+    v-model:show="showBottom"
+    round
+    position="bottom"
+    :style="{ height: '30%' }"
 />
 ```
 
@@ -127,19 +127,19 @@ export default {
 
 Popup 支持以下点击事件：
 
-- `click`: 点击弹出层时触发。
-- `click-overlay`: 点击遮罩层时触发。
-- `click-close-icon`: 点击关闭图标时触发。
+-   `click`: 点击弹出层时触发。
+-   `click-overlay`: 点击遮罩层时触发。
+-   `click-close-icon`: 点击关闭图标时触发。
 
 ```html
 <mi-cell title="监听点击事件" is-link @click="show = true" />
 <mi-popup
-  v-model:show="show"
-  position="bottom"
-  :style="{ height: '30%' }"
-  closeable
-  @click-overlay="onClickOverlay"
-  @click-close-icon="onClickCloseIcon"
+    v-model:show="show"
+    position="bottom"
+    :style="{ height: '30%' }"
+    closeable
+    @click-overlay="onClickOverlay"
+    @click-close-icon="onClickCloseIcon"
 />
 ```
 
@@ -148,20 +148,20 @@ import { ref } from 'vue';
 import { showToast } from '@miracle-web/ui';
 
 export default {
-  setup() {
-    const show = ref(false);
-    const onClickOverlay = () => {
-      showToast('click-overlay');
-    };
-    const onClickCloseIcon = () => {
-      showToast('click-close-icon');
-    };
-    return {
-      show,
-      onClickOverlay,
-      onClickCloseIcon,
-    };
-  },
+    setup() {
+        const show = ref(false);
+        const onClickOverlay = () => {
+            showToast('click-overlay');
+        };
+        const onClickCloseIcon = () => {
+            showToast('click-close-icon');
+        };
+        return {
+            show,
+            onClickOverlay,
+            onClickCloseIcon,
+        };
+    },
 };
 ```
 
@@ -169,21 +169,21 @@ export default {
 
 当 Popup 被打开或关闭时，会触发以下事件：
 
-- `open`: 打开弹出层时立即触发。
-- `opened`: 打开弹出层且动画结束后触发。
-- `close`: 关闭弹出层时立即触发。
-- `closed`: 关闭弹出层且动画结束后触发。
+-   `open`: 打开弹出层时立即触发。
+-   `opened`: 打开弹出层且动画结束后触发。
+-   `close`: 关闭弹出层时立即触发。
+-   `closed`: 关闭弹出层且动画结束后触发。
 
 ```html
 <mi-cell title="监听显示事件" is-link @click="show = true" />
 <mi-popup
-  v-model:show="show"
-  position="bottom"
-  :style="{ height: '30%' }"
-  @open="showToast('open')"
-  @opened="showToast('opened')"
-  @close="showToast('close')"
-  @closed="showToast('closed')"
+    v-model:show="show"
+    position="bottom"
+    :style="{ height: '30%' }"
+    @open="showToast('open')"
+    @opened="showToast('opened')"
+    @close="showToast('close')"
+    @closed="showToast('closed')"
 />
 ```
 
@@ -192,13 +192,13 @@ import { ref } from 'vue';
 import { showToast } from '@miracle-web/ui';
 
 export default {
-  setup() {
-    const show = ref(false);
-    return {
-      show,
-      showToast,
-    };
-  },
+    setup() {
+        const show = ref(false);
+        return {
+            show,
+            showToast,
+        };
+    },
 };
 ```
 
@@ -268,10 +268,10 @@ export default {
 
 ```ts
 import type {
-  PopupProps,
-  PopupPosition,
-  PopupInstance,
-  PopupCloseIconPosition,
+    PopupProps,
+    PopupPosition,
+    PopupInstance,
+    PopupCloseIconPosition,
 } from '@miracle-web/ui';
 ```
 

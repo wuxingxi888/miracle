@@ -2,18 +2,18 @@ import { ComponentPublicInstance } from 'vue';
 import { BarrageProps } from './Barrage';
 
 export type BarrageExpose = {
-  play(): void;
-  pause(): void;
+    play(): void;
+    pause(): void;
 };
 
 export type BarrageInstance = ComponentPublicInstance<
-  BarrageProps,
-  BarrageExpose
+    BarrageProps,
+    BarrageExpose
 >;
 
 export type BarrageThemeVars = {
-  barrageFontSize?: string;
-  barrageSpace?: string;
-  barrageFont?: string;
-  barrageColor?: string;
+    barrageFontSize?: string;
+    barrageSpace?: string;
+    barrageFont?: string;
+    barrageColor?: string;
 };

@@ -25,10 +25,10 @@ app.use(ShareSheet);
 ```html
 <mi-cell title="显示分享面板" @click="showShare = true" />
 <mi-share-sheet
-  v-model:show="showShare"
-  title="立即分享给好友"
-  :options="options"
-  @select="onSelect"
+    v-model:show="showShare"
+    title="立即分享给好友"
+    :options="options"
+    @select="onSelect"
 />
 ```
 
@@ -37,27 +37,27 @@ import { ref } from 'vue';
 import { showToast } from '@miracle-web/ui';
 
 export default {
-  setup() {
-    const showShare = ref(false);
-    const options = [
-      { name: '微信', icon: 'wechat' },
-      { name: '微博', icon: 'weibo' },
-      { name: '复制链接', icon: 'link' },
-      { name: '分享海报', icon: 'poster' },
-      { name: '二维码', icon: 'qrcode' },
-    ];
+    setup() {
+        const showShare = ref(false);
+        const options = [
+            { name: '微信', icon: 'wechat' },
+            { name: '微博', icon: 'weibo' },
+            { name: '复制链接', icon: 'link' },
+            { name: '分享海报', icon: 'poster' },
+            { name: '二维码', icon: 'qrcode' },
+        ];
 
-    const onSelect = (option) => {
-      showToast(option.name);
-      showShare.value = false;
-    };
+        const onSelect = (option) => {
+            showToast(option.name);
+            showShare.value = false;
+        };
 
-    return {
-      options,
-      onSelect,
-      showShare,
-    };
-  },
+        return {
+            options,
+            onSelect,
+            showShare,
+        };
+    },
 };
 ```
 
@@ -67,9 +67,9 @@ export default {
 
 ```html
 <mi-share-sheet
-  v-model:show="showShare"
-  title="立即分享给好友"
-  :options="options"
+    v-model:show="showShare"
+    title="立即分享给好友"
+    :options="options"
 />
 ```
 
@@ -77,28 +77,28 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const showShare = ref(false);
-    const options = [
-      [
-        { name: '微信', icon: 'wechat' },
-        { name: '朋友圈', icon: 'wechat-moments' },
-        { name: '微博', icon: 'weibo' },
-        { name: 'QQ', icon: 'qq' },
-      ],
-      [
-        { name: '复制链接', icon: 'link' },
-        { name: '分享海报', icon: 'poster' },
-        { name: '二维码', icon: 'qrcode' },
-        { name: '小程序码', icon: 'weapp-qrcode' },
-      ],
-    ];
+    setup() {
+        const showShare = ref(false);
+        const options = [
+            [
+                { name: '微信', icon: 'wechat' },
+                { name: '朋友圈', icon: 'wechat-moments' },
+                { name: '微博', icon: 'weibo' },
+                { name: 'QQ', icon: 'qq' },
+            ],
+            [
+                { name: '复制链接', icon: 'link' },
+                { name: '分享海报', icon: 'poster' },
+                { name: '二维码', icon: 'qrcode' },
+                { name: '小程序码', icon: 'weapp-qrcode' },
+            ],
+        ];
 
-    return {
-      options,
-      showShare,
-    };
-  },
+        return {
+            options,
+            showShare,
+        };
+    },
 };
 ```
 
@@ -114,28 +114,28 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const showShare = ref(false);
-    const options = [
-      {
-        name: '名称',
-        icon: 'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/custom-icon-fire.png',
-      },
-      {
-        name: '名称',
-        icon: 'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/custom-icon-light.png',
-      },
-      {
-        name: '名称',
-        icon: 'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/custom-icon-water.png',
-      },
-    ];
+    setup() {
+        const showShare = ref(false);
+        const options = [
+            {
+                name: '名称',
+                icon: 'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/custom-icon-fire.png',
+            },
+            {
+                name: '名称',
+                icon: 'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/custom-icon-light.png',
+            },
+            {
+                name: '名称',
+                icon: 'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/custom-icon-water.png',
+            },
+        ];
 
-    return {
-      options,
-      showShare,
-    };
-  },
+        return {
+            options,
+            showShare,
+        };
+    },
 };
 ```
 
@@ -145,10 +145,10 @@ export default {
 
 ```html
 <mi-share-sheet
-  v-model:show="showShare"
-  :options="options"
-  title="立即分享给好友"
-  description="描述信息"
+    v-model:show="showShare"
+    :options="options"
+    title="立即分享给好友"
+    description="描述信息"
 />
 ```
 
@@ -156,21 +156,21 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const showShare = ref(false);
-    const options = [
-      { name: '微信', icon: 'wechat' },
-      { name: '微博', icon: 'weibo' },
-      { name: '复制链接', icon: 'link', description: '描述信息' },
-      { name: '分享海报', icon: 'poster' },
-      { name: '二维码', icon: 'qrcode' },
-    ];
+    setup() {
+        const showShare = ref(false);
+        const options = [
+            { name: '微信', icon: 'wechat' },
+            { name: '微博', icon: 'weibo' },
+            { name: '复制链接', icon: 'link', description: '描述信息' },
+            { name: '分享海报', icon: 'poster' },
+            { name: '二维码', icon: 'qrcode' },
+        ];
 
-    return {
-      options,
-      showShare,
-    };
-  },
+        return {
+            options,
+            showShare,
+        };
+    },
 };
 ```
 
@@ -236,9 +236,9 @@ export default {
 
 ```ts
 import type {
-  ShareSheetProps,
-  ShareSheetOption,
-  ShareSheetOptions,
+    ShareSheetProps,
+    ShareSheetOption,
+    ShareSheetOptions,
 } from '@miracle-web/ui';
 ```
 

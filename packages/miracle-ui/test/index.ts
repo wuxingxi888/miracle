@@ -9,30 +9,32 @@ import toDiffableHtml from 'diffable-html';
 Locale.use('en-US', enUS);
 
 expect.addSnapshotSerializer({
-  serialize(val) {
-    return toDiffableHtml(val).trim();
-  },
-  test(val) {
-    return (
-      typeof val === 'string' &&
-      (val.includes('<div') || val.includes('<span') || val.includes('<button'))
-    );
-  },
+    serialize(val) {
+        return toDiffableHtml(val).trim();
+    },
+    test(val) {
+        return (
+            typeof val === 'string' &&
+            (val.includes('<div') ||
+                val.includes('<span') ||
+                val.includes('<button'))
+        );
+    },
 });
 
 // promisify setTimeout
 export function later(delay = 0): Promise<void> {
-  return new Promise((resolve) => {
-    setTimeout(resolve, delay);
-  });
+    return new Promise((resolve) => {
+        setTimeout(resolve, delay);
+    });
 }
 
 export const renderComponentToString = async (
-  ...args: Parameters<typeof createSSRApp>
+    ...args: Parameters<typeof createSSRApp>
 ) => {
-  const app = createSSRApp(...args);
-  const html = await renderToString(app);
-  return html;
+    const app = createSSRApp(...args);
+    const html = await renderToString(app);
+    return html;
 };
 
 export * from './dom';

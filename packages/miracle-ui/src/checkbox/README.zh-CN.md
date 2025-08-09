@@ -31,10 +31,10 @@ app.use(CheckboxGroup);
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const checked = ref(true);
-    return { checked };
-  },
+    setup() {
+        const checked = ref(true);
+        return { checked };
+    },
 };
 ```
 
@@ -52,8 +52,8 @@ export default {
 
 ```html
 <mi-checkbox-group v-model="checked" shape="square">
-  <mi-checkbox name="a">复选框 a</mi-checkbox>
-  <mi-checkbox name="b">复选框 b</mi-checkbox>
+    <mi-checkbox name="a">复选框 a</mi-checkbox>
+    <mi-checkbox name="b">复选框 b</mi-checkbox>
 </mi-checkbox-group>
 ```
 
@@ -61,10 +61,10 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const checked = ref(['a', 'b']);
-    return { checked };
-  },
+    setup() {
+        const checked = ref(['a', 'b']);
+        return { checked };
+    },
 };
 ```
 
@@ -90,16 +90,19 @@ export default {
 
 ```html
 <mi-checkbox v-model="checked">
-  自定义图标
-  <template #icon="props">
-    <img class="img-icon" :src="props.checked ? activeIcon : inactiveIcon" />
-  </template>
+    自定义图标
+    <template #icon="props">
+        <img
+            class="img-icon"
+            :src="props.checked ? activeIcon : inactiveIcon"
+        />
+    </template>
 </mi-checkbox>
 
 <style>
-  .img-icon {
-    height: 20px;
-  }
+    .img-icon {
+        height: 20px;
+    }
 </style>
 ```
 
@@ -107,16 +110,16 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const checked = ref(true);
-    return {
-      checked,
-      activeIcon:
-        'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/check_active.png',
-      inactiveIcon:
-        'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/check_inactive.png',
-    };
-  },
+    setup() {
+        const checked = ref(true);
+        return {
+            checked,
+            activeIcon:
+                'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/check_active.png',
+            inactiveIcon:
+                'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/check_inactive.png',
+        };
+    },
 };
 ```
 
@@ -142,8 +145,8 @@ export default {
 
 ```html
 <mi-checkbox-group v-model="checked">
-  <mi-checkbox name="a">复选框 a</mi-checkbox>
-  <mi-checkbox name="b">复选框 b</mi-checkbox>
+    <mi-checkbox name="a">复选框 a</mi-checkbox>
+    <mi-checkbox name="b">复选框 b</mi-checkbox>
 </mi-checkbox-group>
 ```
 
@@ -151,10 +154,10 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const checked = ref(['a', 'b']);
-    return { checked };
-  },
+    setup() {
+        const checked = ref(['a', 'b']);
+        return { checked };
+    },
 };
 ```
 
@@ -164,8 +167,8 @@ export default {
 
 ```html
 <mi-checkbox-group v-model="checked" direction="horizontal">
-  <mi-checkbox name="a">复选框 a</mi-checkbox>
-  <mi-checkbox name="b">复选框 b</mi-checkbox>
+    <mi-checkbox name="a">复选框 a</mi-checkbox>
+    <mi-checkbox name="b">复选框 b</mi-checkbox>
 </mi-checkbox-group>
 ```
 
@@ -173,10 +176,10 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const checked = ref([]);
-    return { checked };
-  },
+    setup() {
+        const checked = ref([]);
+        return { checked };
+    },
 };
 ```
 
@@ -186,9 +189,9 @@ export default {
 
 ```html
 <mi-checkbox-group v-model="checked" :max="2">
-  <mi-checkbox name="a">复选框 a</mi-checkbox>
-  <mi-checkbox name="b">复选框 b</mi-checkbox>
-  <mi-checkbox name="c">复选框 c</mi-checkbox>
+    <mi-checkbox name="a">复选框 a</mi-checkbox>
+    <mi-checkbox name="b">复选框 b</mi-checkbox>
+    <mi-checkbox name="c">复选框 c</mi-checkbox>
 </mi-checkbox-group>
 ```
 
@@ -198,9 +201,9 @@ export default {
 
 ```html
 <mi-checkbox-group v-model="checked" ref="checkboxGroup">
-  <mi-checkbox name="a">复选框 a</mi-checkbox>
-  <mi-checkbox name="b">复选框 b</mi-checkbox>
-  <mi-checkbox name="c">复选框 c</mi-checkbox>
+    <mi-checkbox name="a">复选框 a</mi-checkbox>
+    <mi-checkbox name="b">复选框 b</mi-checkbox>
+    <mi-checkbox name="c">复选框 c</mi-checkbox>
 </mi-checkbox-group>
 
 <mi-button type="primary" @click="checkAll">全选</mi-button>
@@ -237,23 +240,23 @@ export default {
 
 ```html
 <mi-checkbox-group v-model="checked">
-  <mi-cell-group inset>
-    <mi-cell
-      v-for="(item, index) in list"
-      clickable
-      :key="item"
-      :title="`复选框 ${item}`"
-      @click="toggle(index)"
-    >
-      <template #right-icon>
-        <mi-checkbox
-          :name="item"
-          :ref="el => checkboxRefs[index] = el"
-          @click.stop
-        />
-      </template>
-    </mi-cell>
-  </mi-cell-group>
+    <mi-cell-group inset>
+        <mi-cell
+            v-for="(item, index) in list"
+            clickable
+            :key="item"
+            :title="`复选框 ${item}`"
+            @click="toggle(index)"
+        >
+            <template #right-icon>
+                <mi-checkbox
+                    :name="item"
+                    :ref="el => checkboxRefs[index] = el"
+                    @click.stop
+                />
+            </template>
+        </mi-cell>
+    </mi-cell-group>
 </mi-checkbox-group>
 ```
 
@@ -261,24 +264,24 @@ export default {
 import { ref, onBeforeUpdate } from 'vue';
 
 export default {
-  setup() {
-    const checked = ref([]);
-    const checkboxRefs = ref([]);
-    const toggle = (index) => {
-      checkboxRefs.value[index].toggle();
-    };
+    setup() {
+        const checked = ref([]);
+        const checkboxRefs = ref([]);
+        const toggle = (index) => {
+            checkboxRefs.value[index].toggle();
+        };
 
-    onBeforeUpdate(() => {
-      checkboxRefs.value = [];
-    });
+        onBeforeUpdate(() => {
+            checkboxRefs.value = [];
+        });
 
-    return {
-      list: ['a', 'b'],
-      toggle,
-      checked,
-      checkboxRefs,
-    };
-  },
+        return {
+            list: ['a', 'b'],
+            toggle,
+            checked,
+            checkboxRefs,
+        };
+    },
 };
 ```
 
@@ -288,17 +291,16 @@ export default {
 
 ```html
 <mi-checkbox
-  v-model="isCheckAll"
-  :indeterminate="isIndeterminate"
-  @change="checkAllChange"
+    v-model="isCheckAll"
+    :indeterminate="isIndeterminate"
+    @change="checkAllChange"
+    >全选</mi-checkbox
 >
-  全选
-</mi-checkbox>
 
 <mi-checkbox-group v-model="checkedResult" @change="checkedResultChange">
-  <mi-checkbox v-for="item in list" :key="item" :name="item">
-    复选框 {{ item }}
-  </mi-checkbox>
+    <mi-checkbox v-for="item in list" :key="item" :name="item"
+        >复选框 {{ item }}</mi-checkbox
+    >
 </mi-checkbox-group>
 ```
 
@@ -433,14 +435,14 @@ checkboxGroupRef?.value.toggleAll({
 
 ```ts
 import type {
-  CheckboxProps,
-  CheckboxShape,
-  CheckboxInstance,
-  CheckboxLabelPosition,
-  CheckboxGroupProps,
-  CheckboxGroupInstance,
-  CheckboxGroupDirection,
-  CheckboxGroupToggleAllOptions,
+    CheckboxProps,
+    CheckboxShape,
+    CheckboxInstance,
+    CheckboxLabelPosition,
+    CheckboxGroupProps,
+    CheckboxGroupInstance,
+    CheckboxGroupDirection,
+    CheckboxGroupToggleAllOptions,
 } from '@miracle-web/ui';
 ```
 

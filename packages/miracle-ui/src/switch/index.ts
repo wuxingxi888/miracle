@@ -8,7 +8,7 @@ export type { SwitchProps } from './Switch';
 export type { SwitchThemeVars } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiSwitch: typeof Switch;
-  }
+    export interface GlobalComponents {
+        MiSwitch: typeof Switch;
+    }
 }

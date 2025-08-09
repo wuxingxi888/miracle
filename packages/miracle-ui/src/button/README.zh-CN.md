@@ -84,12 +84,11 @@ app.use(Button);
 <mi-button icon="plus" type="primary" />
 <mi-button icon="plus" type="primary">按钮</mi-button>
 <mi-button
-  plain
-  icon="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/logo.png"
-  type="primary"
+    plain
+    icon="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/logo.png"
+    type="primary"
+    >按钮</mi-button
 >
-  按钮
-</mi-button>
 ```
 
 ### 按钮尺寸
@@ -127,9 +126,9 @@ app.use(Button);
 ```html
 <mi-button color="#7232dd">单色按钮</mi-button>
 <mi-button color="#7232dd" plain>单色按钮</mi-button>
-<mi-button color="linear-gradient(to right, #ff6034, #ee0a24)">
-  渐变色按钮
-</mi-button>
+<mi-button color="linear-gradient(to right, #ff6034, #ee0a24)"
+    >渐变色按钮</mi-button
+>
 ```
 
 ### 动画按钮
@@ -138,23 +137,23 @@ app.use(Button);
 
 ```html
 <mi-button type="danger" round>
-  <mi-swipe
-    vertical
-    class="notice-swipe"
-    :autoplay="2000"
-    :touchable="false"
-    :show-indicators="false"
-  >
-    <mi-swipe-item>做任务</mi-swipe-item>
-    <mi-swipe-item>抽大奖</mi-swipe-item>
-  </mi-swipe>
+    <mi-swipe
+        vertical
+        class="notice-swipe"
+        :autoplay="2000"
+        :touchable="false"
+        :show-indicators="false"
+    >
+        <mi-swipe-item>做任务</mi-swipe-item>
+        <mi-swipe-item>抽大奖</mi-swipe-item>
+    </mi-swipe>
 </mi-button>
 
 <style>
-  .notice-swipe {
-    height: 40px;
-    line-height: 40px;
-  }
+    .notice-swipe {
+        height: 40px;
+        line-height: 40px;
+    }
 </style>
 ```
 
@@ -208,11 +207,11 @@ app.use(Button);
 
 ```ts
 import type {
-  ButtonType,
-  ButtonSize,
-  ButtonProps,
-  ButtonNativeType,
-  ButtonIconPosition,
+    ButtonType,
+    ButtonSize,
+    ButtonProps,
+    ButtonNativeType,
+    ButtonIconPosition,
 } from '@miracle-web/ui';
 ```
 

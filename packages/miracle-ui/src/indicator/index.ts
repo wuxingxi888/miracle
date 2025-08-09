@@ -7,7 +7,7 @@ export { indicatorProps } from './Indicator';
 export type { IndicatorProps, IndicatorDirection } from './Indicator';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiIndicator: typeof Indicator;
-  }
+    export interface GlobalComponents {
+        MiIndicator: typeof Indicator;
+    }
 }

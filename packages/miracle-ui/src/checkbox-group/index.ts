@@ -6,13 +6,13 @@ export default CheckboxGroup;
 export { checkboxGroupProps } from './CheckboxGroup';
 export type { CheckboxGroupProps } from './CheckboxGroup';
 export type {
-  CheckboxGroupInstance,
-  CheckboxGroupDirection,
-  CheckboxGroupToggleAllOptions,
+    CheckboxGroupInstance,
+    CheckboxGroupDirection,
+    CheckboxGroupToggleAllOptions,
 } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    VanCheckboxGroup: typeof CheckboxGroup;
-  }
+    export interface GlobalComponents {
+        VanCheckboxGroup: typeof CheckboxGroup;
+    }
 }

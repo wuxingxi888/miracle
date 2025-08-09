@@ -1,27 +1,27 @@
 :root,
 :host {
-  --mi-skeleton-image-size: 96px;
-  --mi-skeleton-image-radius: 24px;
+    --mi-skeleton-image-size: 96px;
+    --mi-skeleton-image-radius: 24px;
 }
 
 .mi-skeleton {
-  &-image {
-    display: flex;
-    width: var(--mi-skeleton-image-size);
-    height: var(--mi-skeleton-image-size);
-    align-items: center;
-    justify-content: center;
-    background: var(--mi-active-color);
+    &-image {
+        display: flex;
+        width: var(--mi-skeleton-image-size);
+        height: var(--mi-skeleton-image-size);
+        align-items: center;
+        justify-content: center;
+        background: var(--mi-active-color);
 
-    &--round {
-      border-radius: var(--mi-skeleton-image-radius);
-    }
+        &--round {
+            border-radius: var(--mi-skeleton-image-radius);
+        }
 
-    &__icon {
-      width: calc(var(--mi-skeleton-image-size) / 2);
-      height: calc(var(--mi-skeleton-image-size) / 2);
-      font-size: calc(var(--mi-skeleton-image-size) / 2);
-      color: var(--mi-gray-5);
+        &__icon {
+            width: calc(var(--mi-skeleton-image-size) / 2);
+            height: calc(var(--mi-skeleton-image-size) / 2);
+            font-size: calc(var(--mi-skeleton-image-size) / 2);
+            color: var(--mi-gray-5);
+        }
     }
-  }
 }

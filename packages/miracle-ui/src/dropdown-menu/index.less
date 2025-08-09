@@ -1,100 +1,101 @@
 :root,
 :host {
-  --mi-dropdown-menu-height: 48px;
-  --mi-dropdown-menu-background: var(--mi-background-2);
-  --mi-dropdown-menu-shadow: 0 2px 12px rgba(100, 101, 102, 0.12);
-  --mi-dropdown-menu-title-font-size: 15px;
-  --mi-dropdown-menu-title-text-color: var(--mi-text-color);
-  --mi-dropdown-menu-title-active-text-color: var(--mi-primary-color);
-  --mi-dropdown-menu-title-disabled-text-color: var(--mi-text-color-2);
-  --mi-dropdown-menu-title-padding: 0 var(--mi-padding-xs);
-  --mi-dropdown-menu-title-line-height: var(--mi-line-height-lg);
-  --mi-dropdown-menu-option-active-color: var(--mi-primary-color);
-  --mi-dropdown-menu-option-disabled-color: var(--mi-text-color-3);
-  --mi-dropdown-menu-content-max-height: 80%;
+    --mi-dropdown-menu-height: 48px;
+    --mi-dropdown-menu-background: var(--mi-background-2);
+    --mi-dropdown-menu-shadow: 0 2px 12px rgba(100, 101, 102, 0.12);
+    --mi-dropdown-menu-title-font-size: 15px;
+    --mi-dropdown-menu-title-text-color: var(--mi-text-color);
+    --mi-dropdown-menu-title-active-text-color: var(--mi-primary-color);
+    --mi-dropdown-menu-title-disabled-text-color: var(--mi-text-color-2);
+    --mi-dropdown-menu-title-padding: 0 var(--mi-padding-xs);
+    --mi-dropdown-menu-title-line-height: var(--mi-line-height-lg);
+    --mi-dropdown-menu-option-active-color: var(--mi-primary-color);
+    --mi-dropdown-menu-option-disabled-color: var(--mi-text-color-3);
+    --mi-dropdown-menu-content-max-height: 80%;
 }
 
 .mi-dropdown-menu {
-  user-select: none;
+    user-select: none;
 
-  &__bar {
-    position: relative;
-    display: flex;
-    height: var(--mi-dropdown-menu-height);
-    background: var(--mi-dropdown-menu-background);
-    box-shadow: var(--mi-dropdown-menu-shadow);
+    &__bar {
+        position: relative;
+        display: flex;
+        height: var(--mi-dropdown-menu-height);
+        background: var(--mi-dropdown-menu-background);
+        box-shadow: var(--mi-dropdown-menu-shadow);
 
-    &--opened {
-      z-index: calc(var(--mi-dropdown-item-z-index) + 1);
+        &--opened {
+            z-index: calc(var(--mi-dropdown-item-z-index) + 1);
+        }
+
+        &--scrollable {
+            padding-left: var(--mi-padding-base);
+            padding-right: var(--mi-padding-xs);
+            overflow-x: auto;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
     }
 
-    &--scrollable {
-      padding-left: var(--mi-padding-base);
-      padding-right: var(--mi-padding-xs);
-      overflow-x: auto;
-      overflow-y: hidden;
-      -webkit-overflow-scrolling: touch;
+    &__item {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+        min-width: 0; // hack for flex ellipsis
 
-      &::-webkit-scrollbar {
-        display: none;
-      }
-    }
-  }
+        &--disabled {
+            .mi-dropdown-menu__title {
+                color: var(--mi-dropdown-menu-title-disabled-text-color);
+            }
+        }
 
-  &__item {
-    display: flex;
-    flex: 1;
-    align-items: center;
-    justify-content: center;
-    min-width: 0; // hack for flex ellipsis
-
-    &--disabled {
-      .mi-dropdown-menu__title {
-        color: var(--mi-dropdown-menu-title-disabled-text-color);
-      }
+        &--grow {
+            flex: 1 0 auto;
+            padding-left: var(--mi-padding-base);
+            padding-right: var(--mi-padding-sm);
+        }
     }
 
-    &--grow {
-      flex: 1 0 auto;
-      padding-left: var(--mi-padding-base);
-      padding-right: var(--mi-padding-sm);
+    &__title {
+        position: relative;
+        box-sizing: border-box;
+        max-width: 100%;
+        padding: var(--mi-dropdown-menu-title-padding);
+        color: var(--mi-dropdown-menu-title-text-color);
+        font-size: var(--mi-dropdown-menu-title-font-size);
+        line-height: var(--mi-dropdown-menu-title-line-height);
+
+        &::after {
+            position: absolute;
+            top: 50%;
+            right: -4px;
+            margin-top: -5px;
+            border: 3px solid;
+            border-color: transparent transparent var(--mi-gray-4)
+                var(--mi-gray-4);
+            transform: rotate(-45deg);
+            opacity: 0.8;
+            content: '';
+        }
+
+        &--active {
+            color: var(--mi-dropdown-menu-title-active-text-color);
+
+            &::after {
+                border-color: transparent transparent currentColor currentColor;
+            }
+        }
+
+        &--down {
+            &::after {
+                margin-top: -1px;
+                transform: rotate(135deg);
+            }
+        }
     }
-  }
-
-  &__title {
-    position: relative;
-    box-sizing: border-box;
-    max-width: 100%;
-    padding: var(--mi-dropdown-menu-title-padding);
-    color: var(--mi-dropdown-menu-title-text-color);
-    font-size: var(--mi-dropdown-menu-title-font-size);
-    line-height: var(--mi-dropdown-menu-title-line-height);
-
-    &::after {
-      position: absolute;
-      top: 50%;
-      right: -4px;
-      margin-top: -5px;
-      border: 3px solid;
-      border-color: transparent transparent var(--mi-gray-4) var(--mi-gray-4);
-      transform: rotate(-45deg);
-      opacity: 0.8;
-      content: '';
-    }
-
-    &--active {
-      color: var(--mi-dropdown-menu-title-active-text-color);
-
-      &::after {
-        border-color: transparent transparent currentColor currentColor;
-      }
-    }
-
-    &--down {
-      &::after {
-        margin-top: -1px;
-        transform: rotate(135deg);
-      }
-    }
-  }
 }

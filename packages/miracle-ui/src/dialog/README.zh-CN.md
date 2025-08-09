@@ -38,16 +38,16 @@ showDialog({ message: '提示' });
 import { showDialog } from '@miracle-web/ui';
 
 showDialog({
-  title: '标题',
-  message: '代码是写出来给人看的，附带能在机器上运行。',
+    title: '标题',
+    message: '代码是写出来给人看的，附带能在机器上运行。',
 }).then(() => {
-  // on close
+    // on close
 });
 
 showDialog({
-  message: '生命远不止连轴转和忙到极限，人类的体验远比这辽阔、丰富得多。',
+    message: '生命远不止连轴转和忙到极限，人类的体验远比这辽阔、丰富得多。',
 }).then(() => {
-  // on close
+    // on close
 });
 ```
 
@@ -59,16 +59,16 @@ showDialog({
 import { showConfirmDialog } from '@miracle-web/ui';
 
 showConfirmDialog({
-  title: '标题',
-  message:
-    '如果解决方法是丑陋的，那就肯定还有更好的解决方法，只是还没有发现而已。',
+    title: '标题',
+    message:
+        '如果解决方法是丑陋的，那就肯定还有更好的解决方法，只是还没有发现而已。',
 })
-  .then(() => {
-    // on confirm
-  })
-  .catch(() => {
-    // on cancel
-  });
+    .then(() => {
+        // on confirm
+    })
+    .catch(() => {
+        // on cancel
+    });
 ```
 
 ### 圆角按钮风格
@@ -79,18 +79,18 @@ showConfirmDialog({
 import { showDialog } from '@miracle-web/ui';
 
 showDialog({
-  title: '标题',
-  message: '代码是写出来给人看的，附带能在机器上运行。',
-  theme: 'round-button',
+    title: '标题',
+    message: '代码是写出来给人看的，附带能在机器上运行。',
+    theme: 'round-button',
 }).then(() => {
-  // on close
+    // on close
 });
 
 showDialog({
-  message: '生命远不止连轴转和忙到极限，人类的体验远比这辽阔、丰富得多。',
-  theme: 'round-button',
+    message: '生命远不止连轴转和忙到极限，人类的体验远比这辽阔、丰富得多。',
+    theme: 'round-button',
 }).then(() => {
-  // on close
+    // on close
 });
 ```
 
@@ -102,18 +102,18 @@ showDialog({
 import { showConfirmDialog } from '@miracle-web/ui';
 
 const beforeClose = (action) =>
-  new Promise((resolve) => {
-    setTimeout(() => {
-      // action !== 'confirm'  拦截取消操作
-      resolve(action === 'confirm');
-    }, 1000);
-  });
+    new Promise((resolve) => {
+        setTimeout(() => {
+            // action !== 'confirm'  拦截取消操作
+            resolve(action === 'confirm');
+        }, 1000);
+    });
 
 showConfirmDialog({
-  title: '标题',
-  message:
-    '如果解决方法是丑陋的，那就肯定还有更好的解决方法，只是还没有发现而已。',
-  beforeClose,
+    title: '标题',
+    message:
+        '如果解决方法是丑陋的，那就肯定还有更好的解决方法，只是还没有发现而已。',
+    beforeClose,
 });
 ```
 
@@ -123,7 +123,7 @@ showConfirmDialog({
 
 ```html
 <mi-dialog v-model:show="show" title="标题" show-cancel-button>
-  <img src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg" />
+    <img src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg" />
 </mi-dialog>
 ```
 
@@ -131,10 +131,10 @@ showConfirmDialog({
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const show = ref(false);
-    return { show };
-  },
+    setup() {
+        const show = ref(false);
+        return { show };
+    },
 };
 ```
 
@@ -245,11 +245,11 @@ Miracle 中导出了以下 Dialog 相关的辅助函数：
 
 ```ts
 import type {
-  DialogProps,
-  DialogTheme,
-  DialogMessage,
-  DialogOptions,
-  DialogMessageAlign,
+    DialogProps,
+    DialogTheme,
+    DialogMessage,
+    DialogOptions,
+    DialogMessageAlign,
 } from '@miracle-web/ui';
 ```
 
@@ -304,10 +304,10 @@ Miracle 不支持 `babel-plugin-import` 插件，请参考 [迁移指南](#/zh-C
 import { showDialog } from '@miracle-web/ui';
 
 showDialog({
-  title: '标题',
-  message: '弹窗内容',
-  closeOnPopstate: false,
+    title: '标题',
+    message: '弹窗内容',
+    closeOnPopstate: false,
 }).then(() => {
-  // on close
+    // on close
 });
 ```

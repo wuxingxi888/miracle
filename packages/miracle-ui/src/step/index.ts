@@ -6,7 +6,7 @@ export default Step;
 export type { StepThemeVars } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiStep: typeof Step;
-  }
+    export interface GlobalComponents {
+        MiStep: typeof Step;
+    }
 }

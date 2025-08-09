@@ -8,7 +8,7 @@ export type { ImageProps } from './Image';
 export type { ImageFit, ImagePosition, ImageThemeVars } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiImage: typeof Image;
-  }
+    export interface GlobalComponents {
+        MiImage: typeof Image;
+    }
 }

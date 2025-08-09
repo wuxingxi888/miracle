@@ -26,7 +26,7 @@ app.use(CellGroup);
 ```html
 <!-- 可以使用 CellGroup 作为容器 -->
 <mi-cell-group inset>
-  <mi-field v-model="value" label="文本" placeholder="请输入用户名" />
+    <mi-field v-model="value" label="文本" placeholder="请输入用户名" />
 </mi-cell-group>
 ```
 
@@ -34,10 +34,10 @@ app.use(CellGroup);
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const value = ref('');
-    return { value };
-  },
+    setup() {
+        const value = ref('');
+        return { value };
+    },
 };
 ```
 
@@ -47,16 +47,16 @@ export default {
 
 ```html
 <mi-cell-group inset>
-  <!-- 输入任意文本 -->
-  <mi-field v-model="text" label="文本" />
-  <!-- 输入手机号，调起手机号键盘 -->
-  <mi-field v-model="tel" type="tel" label="手机号" />
-  <!-- 允许输入正整数，调起纯数字键盘 -->
-  <mi-field v-model="digit" type="digit" label="整数" />
-  <!-- 允许输入数字，调起带符号的纯数字键盘 -->
-  <mi-field v-model="number" type="number" label="数字" />
-  <!-- 输入密码 -->
-  <mi-field v-model="password" type="password" label="密码" />
+    <!-- 输入任意文本 -->
+    <mi-field v-model="text" label="文本" />
+    <!-- 输入手机号，调起手机号键盘 -->
+    <mi-field v-model="tel" type="tel" label="手机号" />
+    <!-- 允许输入正整数，调起纯数字键盘 -->
+    <mi-field v-model="digit" type="digit" label="整数" />
+    <!-- 允许输入数字，调起带符号的纯数字键盘 -->
+    <mi-field v-model="number" type="number" label="数字" />
+    <!-- 输入密码 -->
+    <mi-field v-model="password" type="password" label="密码" />
 </mi-cell-group>
 ```
 
@@ -64,15 +64,15 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const tel = ref('');
-    const text = ref('');
-    const digit = ref('');
-    const number = ref('');
-    const password = ref('');
+    setup() {
+        const tel = ref('');
+        const text = ref('');
+        const digit = ref('');
+        const number = ref('');
+        const password = ref('');
 
-    return { tel, text, digit, number, password };
-  },
+        return { tel, text, digit, number, password };
+    },
 };
 ```
 
@@ -82,8 +82,8 @@ export default {
 
 ```html
 <mi-cell-group inset>
-  <mi-field label="文本" model-value="输入框只读" readonly />
-  <mi-field label="文本" model-value="输入框已禁用" disabled />
+    <mi-field label="文本" model-value="输入框只读" readonly />
+    <mi-field label="文本" model-value="输入框已禁用" disabled />
 </mi-cell-group>
 ```
 
@@ -93,20 +93,20 @@ export default {
 
 ```html
 <mi-cell-group inset>
-  <mi-field
-    v-model="value1"
-    label="文本"
-    left-icon="smile-o"
-    right-icon="warning-o"
-    placeholder="显示图标"
-  />
-  <mi-field
-    v-model="value2"
-    clearable
-    label="文本"
-    left-icon="music-o"
-    placeholder="显示清除图标"
-  />
+    <mi-field
+        v-model="value1"
+        label="文本"
+        left-icon="smile-o"
+        right-icon="warning-o"
+        placeholder="显示图标"
+    />
+    <mi-field
+        v-model="value2"
+        clearable
+        label="文本"
+        left-icon="music-o"
+        placeholder="显示清除图标"
+    />
 </mi-cell-group>
 ```
 
@@ -114,14 +114,14 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const value1 = ref('');
-    const value2 = ref('123');
-    return {
-      value1,
-      value2,
-    };
-  },
+    setup() {
+        const value1 = ref('');
+        const value2 = ref('123');
+        return {
+            value1,
+            value2,
+        };
+    },
 };
 ```
 
@@ -131,18 +131,18 @@ export default {
 
 ```html
 <mi-cell-group inset>
-  <mi-field
-    v-model="username"
-    required
-    label="用户名"
-    placeholder="请输入用户名"
-  />
-  <mi-field
-    v-model="phone"
-    required
-    label="手机号"
-    placeholder="请输入手机号"
-  />
+    <mi-field
+        v-model="username"
+        required
+        label="用户名"
+        placeholder="请输入用户名"
+    />
+    <mi-field
+        v-model="phone"
+        required
+        label="手机号"
+        placeholder="请输入手机号"
+    />
 </mi-cell-group>
 ```
 
@@ -154,18 +154,18 @@ export default {
 
 ```html
 <mi-form required="auto">
-  <mi-field
-    v-model="username"
-    :rules="[{ required: true }]"
-    label="用户名"
-    placeholder="请输入用户名"
-  />
-  <mi-field
-    v-model="phone"
-    :rules="[{ required: false }]"
-    label="手机号"
-    placeholder="请输入手机号"
-  />
+    <mi-field
+        v-model="username"
+        :rules="[{ required: true }]"
+        label="用户名"
+        placeholder="请输入用户名"
+    />
+    <mi-field
+        v-model="phone"
+        :rules="[{ required: false }]"
+        label="手机号"
+        placeholder="请输入手机号"
+    />
 </mi-form>
 ```
 
@@ -175,18 +175,18 @@ export default {
 
 ```html
 <mi-cell-group inset>
-  <mi-field
-    v-model="username"
-    error
-    label="用户名"
-    placeholder="请输入用户名"
-  />
-  <mi-field
-    v-model="phone"
-    label="手机号"
-    placeholder="请输入手机号"
-    error-message="手机号格式错误"
-  />
+    <mi-field
+        v-model="username"
+        error
+        label="用户名"
+        placeholder="请输入用户名"
+    />
+    <mi-field
+        v-model="phone"
+        label="手机号"
+        placeholder="请输入手机号"
+        error-message="手机号格式错误"
+    />
 </mi-cell-group>
 ```
 
@@ -196,17 +196,17 @@ export default {
 
 ```html
 <mi-cell-group inset>
-  <mi-field
-    v-model="sms"
-    center
-    clearable
-    label="短信验证码"
-    placeholder="请输入短信验证码"
-  >
-    <template #button>
-      <mi-button size="small" type="primary">发送验证码</mi-button>
-    </template>
-  </mi-field>
+    <mi-field
+        v-model="sms"
+        center
+        clearable
+        label="短信验证码"
+        placeholder="请输入短信验证码"
+    >
+        <template #button>
+            <mi-button size="small" type="primary">发送验证码</mi-button>
+        </template>
+    </mi-field>
 </mi-cell-group>
 ```
 
@@ -216,19 +216,19 @@ export default {
 
 ```html
 <mi-cell-group inset>
-  <mi-field
-    v-model="value1"
-    label="文本"
-    :formatter="formatter"
-    placeholder="在输入时执行格式化"
-  />
-  <mi-field
-    v-model="value2"
-    label="文本"
-    :formatter="formatter"
-    format-trigger="onBlur"
-    placeholder="在失焦时执行格式化"
-  />
+    <mi-field
+        v-model="value1"
+        label="文本"
+        :formatter="formatter"
+        placeholder="在输入时执行格式化"
+    />
+    <mi-field
+        v-model="value2"
+        label="文本"
+        :formatter="formatter"
+        format-trigger="onBlur"
+        placeholder="在失焦时执行格式化"
+    />
 </mi-cell-group>
 ```
 
@@ -236,18 +236,18 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const value1 = ref('');
-    const value2 = ref('');
-    // 过滤输入的数字
-    const formatter = (value) => value.replace(/\d/g, '');
+    setup() {
+        const value1 = ref('');
+        const value2 = ref('');
+        // 过滤输入的数字
+        const formatter = (value) => value.replace(/\d/g, '');
 
-    return {
-      value1,
-      value2,
-      formatter,
-    };
-  },
+        return {
+            value1,
+            value2,
+            formatter,
+        };
+    },
 };
 ```
 
@@ -257,14 +257,14 @@ export default {
 
 ```html
 <mi-cell-group inset>
-  <mi-field
-    v-model="message"
-    rows="1"
-    autosize
-    label="留言"
-    type="textarea"
-    placeholder="请输入留言"
-  />
+    <mi-field
+        v-model="message"
+        rows="1"
+        autosize
+        label="留言"
+        type="textarea"
+        placeholder="请输入留言"
+    />
 </mi-cell-group>
 ```
 
@@ -274,16 +274,16 @@ export default {
 
 ```html
 <mi-cell-group inset>
-  <mi-field
-    v-model="message"
-    rows="2"
-    autosize
-    label="留言"
-    type="textarea"
-    maxlength="50"
-    placeholder="请输入留言"
-    show-word-limit
-  />
+    <mi-field
+        v-model="message"
+        rows="2"
+        autosize
+        label="留言"
+        type="textarea"
+        maxlength="50"
+        placeholder="请输入留言"
+        show-word-limit
+    />
 </mi-cell-group>
 ```
 
@@ -293,12 +293,12 @@ export default {
 
 ```html
 <mi-cell-group inset>
-  <mi-field
-    v-model="value"
-    label="文本"
-    placeholder="输入框内容右对齐"
-    input-align="right"
-  />
+    <mi-field
+        v-model="value"
+        label="文本"
+        placeholder="输入框内容右对齐"
+        input-align="right"
+    />
 </mi-cell-group>
 ```
 
@@ -308,30 +308,30 @@ export default {
 
 ```html
 <mi-cell-group inset>
-  <mi-field
-    v-model="value"
-    label="文本"
-    placeholder="顶部对齐"
-    label-align="top"
-  />
-  <mi-field
-    v-model="value2"
-    label="文本"
-    placeholder="左对齐"
-    label-align="left"
-  />
-  <mi-field
-    v-model="value3"
-    label="文本"
-    placeholder="居中对齐"
-    label-align="center"
-  />
-  <mi-field
-    v-model="value4"
-    label="文本"
-    placeholder="右对齐"
-    label-align="right"
-  />
+    <mi-field
+        v-model="value"
+        label="文本"
+        placeholder="顶部对齐"
+        label-align="top"
+    />
+    <mi-field
+        v-model="value2"
+        label="文本"
+        placeholder="左对齐"
+        label-align="left"
+    />
+    <mi-field
+        v-model="value3"
+        label="文本"
+        placeholder="居中对齐"
+        label-align="center"
+    />
+    <mi-field
+        v-model="value4"
+        label="文本"
+        placeholder="右对齐"
+        label-align="right"
+    />
 </mi-cell-group>
 ```
 
@@ -415,20 +415,20 @@ export default {
 
 ```ts
 import type {
-  FieldType,
-  FieldRule,
-  FieldProps,
-  FieldInstance,
-  FieldTextAlign,
-  FieldRuleMessage,
-  FieldClearTrigger,
-  FieldFormatTrigger,
-  FieldRuleValidator,
-  FieldRuleFormatter,
-  FieldValidateError,
-  FieldAutosizeConfig,
-  FieldValidateTrigger,
-  FieldValidationStatus,
+    FieldType,
+    FieldRule,
+    FieldProps,
+    FieldInstance,
+    FieldTextAlign,
+    FieldRuleMessage,
+    FieldClearTrigger,
+    FieldFormatTrigger,
+    FieldRuleValidator,
+    FieldRuleFormatter,
+    FieldValidateError,
+    FieldAutosizeConfig,
+    FieldValidateTrigger,
+    FieldValidationStatus,
 } from '@miracle-web/ui';
 ```
 

@@ -6,16 +6,16 @@ export default Uploader;
 export { uploaderProps } from './Uploader';
 export type { UploaderProps };
 export type {
-  UploaderInstance,
-  UploaderThemeVars,
-  UploaderResultType,
-  UploaderFileListItem,
-  UploaderBeforeRead,
-  UploaderAfterRead,
+    UploaderInstance,
+    UploaderThemeVars,
+    UploaderResultType,
+    UploaderFileListItem,
+    UploaderBeforeRead,
+    UploaderAfterRead,
 } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiUploader: typeof Uploader;
-  }
+    export interface GlobalComponents {
+        MiUploader: typeof Uploader;
+    }
 }

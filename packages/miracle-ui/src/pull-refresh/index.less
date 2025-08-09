@@ -1,37 +1,37 @@
 :root,
 :host {
-  --mi-pull-refresh-head-height: 50px;
-  --mi-pull-refresh-head-font-size: var(--mi-font-size-md);
-  --mi-pull-refresh-head-text-color: var(--mi-text-color-2);
-  --mi-pull-refresh-loading-icon-size: 16px;
+    --mi-pull-refresh-head-height: 50px;
+    --mi-pull-refresh-head-font-size: var(--mi-font-size-md);
+    --mi-pull-refresh-head-text-color: var(--mi-text-color-2);
+    --mi-pull-refresh-loading-icon-size: 16px;
 }
 
 .mi-pull-refresh {
-  overflow: hidden;
-
-  &__track {
-    position: relative;
-    height: 100%;
-    transition-property: transform;
-  }
-
-  &__head {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: var(--mi-pull-refresh-head-height);
     overflow: hidden;
-    color: var(--mi-pull-refresh-head-text-color);
-    font-size: var(--mi-pull-refresh-head-font-size);
-    line-height: var(--mi-pull-refresh-head-height);
-    text-align: center;
-    transform: translateY(-100%);
-  }
 
-  &__loading {
-    .mi-loading__spinner {
-      width: var(--mi-pull-refresh-loading-icon-size);
-      height: var(--mi-pull-refresh-loading-icon-size);
+    &__track {
+        position: relative;
+        height: 100%;
+        transition-property: transform;
     }
-  }
+
+    &__head {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: var(--mi-pull-refresh-head-height);
+        overflow: hidden;
+        color: var(--mi-pull-refresh-head-text-color);
+        font-size: var(--mi-pull-refresh-head-font-size);
+        line-height: var(--mi-pull-refresh-head-height);
+        text-align: center;
+        transform: translateY(-100%);
+    }
+
+    &__loading {
+        .mi-loading__spinner {
+            width: var(--mi-pull-refresh-loading-icon-size);
+            height: var(--mi-pull-refresh-loading-icon-size);
+        }
+    }
 }

@@ -8,7 +8,7 @@ export type { ActionBarProps } from './ActionBar';
 export type { ActionBarThemeVars } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiActionBar: typeof ActionBar;
-  }
+    export interface GlobalComponents {
+        MiActionBar: typeof ActionBar;
+    }
 }

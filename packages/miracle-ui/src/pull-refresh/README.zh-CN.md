@@ -24,7 +24,7 @@ app.use(PullRefresh);
 
 ```html
 <mi-pull-refresh v-model="loading" @refresh="onRefresh">
-  <p>刷新次数: {{ count }}</p>
+    <p>刷新次数: {{ count }}</p>
 </mi-pull-refresh>
 ```
 
@@ -33,23 +33,23 @@ import { ref } from 'vue';
 import { showToast } from '@miracle-web/ui';
 
 export default {
-  setup() {
-    const count = ref(0);
-    const loading = ref(false);
-    const onRefresh = () => {
-      setTimeout(() => {
-        showToast('刷新成功');
-        loading.value = false;
-        count.value++;
-      }, 1000);
-    };
+    setup() {
+        const count = ref(0);
+        const loading = ref(false);
+        const onRefresh = () => {
+            setTimeout(() => {
+                showToast('刷新成功');
+                loading.value = false;
+                count.value++;
+            }, 1000);
+        };
 
-    return {
-      count,
-      loading,
-      onRefresh,
-    };
-  },
+        return {
+            count,
+            loading,
+            onRefresh,
+        };
+    },
 };
 ```
 
@@ -59,11 +59,11 @@ export default {
 
 ```html
 <mi-pull-refresh
-  v-model="isLoading"
-  success-text="刷新成功"
-  @refresh="onRefresh"
+    v-model="isLoading"
+    success-text="刷新成功"
+    @refresh="onRefresh"
 >
-  <p>刷新次数: {{ count }}</p>
+    <p>刷新次数: {{ count }}</p>
 </mi-pull-refresh>
 ```
 
@@ -73,40 +73,40 @@ export default {
 
 ```html
 <mi-pull-refresh v-model="isLoading" :head-height="80" @refresh="onRefresh">
-  <!-- 下拉提示，通过 scale 实现一个缩放效果 -->
-  <template #pulling="props">
-    <img
-      class="doge"
-      src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/doge.png"
-      :style="{ transform: `scale(${props.distance / 80})` }"
-    />
-  </template>
+    <!-- 下拉提示，通过 scale 实现一个缩放效果 -->
+    <template #pulling="props">
+        <img
+            class="doge"
+            src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/doge.png"
+            :style="{ transform: `scale(${props.distance / 80})` }"
+        />
+    </template>
 
-  <!-- 释放提示 -->
-  <template #loosing>
-    <img
-      class="doge"
-      src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/doge.png"
-    />
-  </template>
+    <!-- 释放提示 -->
+    <template #loosing>
+        <img
+            class="doge"
+            src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/doge.png"
+        />
+    </template>
 
-  <!-- 加载提示 -->
-  <template #loading>
-    <img
-      class="doge"
-      src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/doge-fire.jpeg"
-    />
-  </template>
-  <p>刷新次数: {{ count }}</p>
+    <!-- 加载提示 -->
+    <template #loading>
+        <img
+            class="doge"
+            src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/doge-fire.jpeg"
+        />
+    </template>
+    <p>刷新次数: {{ count }}</p>
 </mi-pull-refresh>
 
 <style>
-  .doge {
-    width: 140px;
-    height: 72px;
-    margin-top: 8px;
-    border-radius: 4px;
-  }
+    .doge {
+        width: 140px;
+        height: 72px;
+        margin-top: 8px;
+        border-radius: 4px;
+    }
 </style>
 ```
 
@@ -116,65 +116,68 @@ export default {
 
 ```html
 <mi-pull-refresh v-model="loading" head-height="80" @refresh="onRefresh(true)">
-  <template #pulling="{ distance }">
-    <div class="loader" :style="{ transform: `scale(${distance / 80})` }"></div>
-  </template>
-  <template #loosing>
-    <div class="loader"></div>
-  </template>
-  <template #loading>
-    <div class="loader"></div>
-  </template>
-  <p>{{ tips }}</p>
+    <template #pulling="{ distance }">
+        <div
+            class="loader"
+            :style="{ transform: `scale(${distance / 80})` }"
+        ></div>
+    </template>
+    <template #loosing>
+        <div class="loader"></div>
+    </template>
+    <template #loading>
+        <div class="loader"></div>
+    </template>
+    <p>{{ tips }}</p>
 </mi-pull-refresh>
 <style>
-  .loader {
-    width: 80px;
-    aspect-ratio: 1;
-    padding: 10px;
-    margin: auto;
-    box-sizing: border-box;
-    display: grid;
-    background: #fff;
-    filter: blur(5px) contrast(10) hue-rotate(300deg);
-    mix-blend-mode: darken;
-  }
-
-  .loader:before,
-  .loader:after {
-    content: '';
-    grid-area: 1/1;
-    width: 20px;
-    height: 20px;
-    background: #ffff00;
-    animation: l7 2s infinite;
-  }
-
-  .loader:after {
-    animation-delay: -1s;
-  }
-
-  @keyframes l7 {
-    0% {
-      transform: translate(0, 0);
+    .loader {
+        width: 80px;
+        aspect-ratio: 1;
+        padding: 10px;
+        margin: auto;
+        box-sizing: border-box;
+        display: grid;
+        background: #fff;
+        filter: blur(5px) contrast(10) hue-rotate(300deg);
+        mix-blend-mode: darken;
     }
 
-    25% {
-      transform: translate(100%, 0);
+    .loader:before,
+    .loader:after {
+        content: '';
+        grid-area: 1/1;
+        width: 20px;
+        height: 20px;
+        background: #ffff00;
+        animation: l7 2s infinite;
     }
 
-    50% {
-      transform: translate(100%, 100%);
+    .loader:after {
+        animation-delay: -1s;
     }
 
-    75% {
-      transform: translate(0, 100%);
-    }
+    @keyframes l7 {
+        0% {
+            transform: translate(0, 0);
+        }
 
-    100% {
-      transform: translate(0, 0);
+        25% {
+            transform: translate(100%, 0);
+        }
+
+        50% {
+            transform: translate(100%, 100%);
+        }
+
+        75% {
+            transform: translate(0, 100%);
+        }
+
+        100% {
+            transform: translate(0, 0);
+        }
     }
-  }
 </style>
 ```
 
@@ -248,8 +251,8 @@ import type { PullRefreshProps } from '@miracle-web/ui';
 
 PullRefresh 的触发条件是「父级滚动元素的滚动条在顶部位置」。
 
-- 如果最近一个可滚动的父级元素是 `window`，则要求 `window.pageYOffset === 0`。
-- 如果最近一个可滚动的父级元素是 `Element`，则要求 `Element.scrollTop === 0`。
+-   如果最近一个可滚动的父级元素是 `window`，则要求 `window.pageYOffset === 0`。
+-   如果最近一个可滚动的父级元素是 `Element`，则要求 `Element.scrollTop === 0`。
 
 ### 在桌面端无法操作组件？
 

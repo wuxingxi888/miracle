@@ -28,16 +28,16 @@ app.use(Uploader);
 
 ```js
 export default {
-  setup() {
-    const afterRead = (file) => {
-      // 此时可以自行将文件上传至服务器
-      console.log(file);
-    };
+    setup() {
+        const afterRead = (file) => {
+            // 此时可以自行将文件上传至服务器
+            console.log(file);
+        };
 
-    return {
-      afterRead,
-    };
-  },
+        return {
+            afterRead,
+        };
+    },
 };
 ```
 
@@ -53,18 +53,20 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const fileList = ref([
-      { url: 'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg' },
-      // Uploader 根据文件后缀来判断是否为图片文件
-      // 如果图片 URL 中不包含类型信息，可以添加 isImage 标记来声明
-      { url: 'https://cloud-image', isImage: true },
-    ]);
+    setup() {
+        const fileList = ref([
+            {
+                url: 'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg',
+            },
+            // Uploader 根据文件后缀来判断是否为图片文件
+            // 如果图片 URL 中不包含类型信息，可以添加 isImage 标记来声明
+            { url: 'https://cloud-image', isImage: true },
+        ]);
 
-    return {
-      fileList,
-    };
-  },
+        return {
+            fileList,
+        };
+    },
 };
 ```
 
@@ -80,35 +82,35 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const fileList = ref([
-      {
-        url: 'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg',
-        status: 'uploading',
-        message: '上传中...',
-      },
-      {
-        url: 'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg',
-        status: 'failed',
-        message: '上传失败',
-      },
-    ]);
+    setup() {
+        const fileList = ref([
+            {
+                url: 'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg',
+                status: 'uploading',
+                message: '上传中...',
+            },
+            {
+                url: 'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg',
+                status: 'failed',
+                message: '上传失败',
+            },
+        ]);
 
-    const afterRead = (file) => {
-      file.status = 'uploading';
-      file.message = '上传中...';
+        const afterRead = (file) => {
+            file.status = 'uploading';
+            file.message = '上传中...';
 
-      setTimeout(() => {
-        file.status = 'failed';
-        file.message = '上传失败';
-      }, 1000);
-    };
+            setTimeout(() => {
+                file.status = 'failed';
+                file.message = '上传失败';
+            }, 1000);
+        };
 
-    return {
-      fileList,
-      afterRead,
-    };
-  },
+        return {
+            fileList,
+            afterRead,
+        };
+    },
 };
 ```
 
@@ -124,13 +126,13 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const fileList = ref([]);
+    setup() {
+        const fileList = ref([]);
 
-    return {
-      fileList,
-    };
-  },
+        return {
+            fileList,
+        };
+    },
 };
 ```
 
@@ -146,16 +148,16 @@ export default {
 import { showToast } from '@miracle-web/ui';
 
 export default {
-  setup() {
-    const onOversize = (file) => {
-      console.log(file);
-      showToast('文件大小不能超过 500kb');
-    };
+    setup() {
+        const onOversize = (file) => {
+            console.log(file);
+            showToast('文件大小不能超过 500kb');
+        };
 
-    return {
-      onOversize,
-    };
-  },
+        return {
+            onOversize,
+        };
+    },
 };
 ```
 
@@ -167,15 +169,16 @@ export default {
 
 ```js
 export default {
-  setup() {
-    const isOverSize = (file) => {
-      const maxSize = file.type === 'image/jpeg' ? 500 * 1024 : 1000 * 1024;
-      return file.size >= maxSize;
-    };
-    return {
-      isOverSize,
-    };
-  },
+    setup() {
+        const isOverSize = (file) => {
+            const maxSize =
+                file.type === 'image/jpeg' ? 500 * 1024 : 1000 * 1024;
+            return file.size >= maxSize;
+        };
+        return {
+            isOverSize,
+        };
+    },
 };
 ```
 
@@ -185,7 +188,7 @@ export default {
 
 ```html
 <mi-uploader>
-  <mi-button icon="plus" type="primary">上传文件</mi-button>
+    <mi-button icon="plus" type="primary">上传文件</mi-button>
 </mi-uploader>
 ```
 
@@ -195,23 +198,23 @@ export default {
 
 ```html
 <mi-uploader v-model="fileList">
-  <template #preview-cover="{ file }">
-    <div class="preview-cover mi-ellipsis">{{ file.name }}</div>
-  </template>
+    <template #preview-cover="{ file }">
+        <div class="preview-cover mi-ellipsis">{{ file.name }}</div>
+    </template>
 </mi-uploader>
 
 <style>
-  .preview-cover {
-    position: absolute;
-    bottom: 0;
-    box-sizing: border-box;
-    width: 100%;
-    padding: 4px;
-    color: #fff;
-    font-size: 12px;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.3);
-  }
+    .preview-cover {
+        position: absolute;
+        bottom: 0;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 4px;
+        color: #fff;
+        font-size: 12px;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.3);
+    }
 </style>
 ```
 
@@ -244,35 +247,35 @@ export default {
 import { showToast } from '@miracle-web/ui';
 
 export default {
-  setup() {
-    // 返回布尔值
-    const beforeRead = (file) => {
-      if (file.type !== 'image/jpeg') {
-        showToast('请上传 jpg 格式图片');
-        return false;
-      }
-      return true;
-    };
+    setup() {
+        // 返回布尔值
+        const beforeRead = (file) => {
+            if (file.type !== 'image/jpeg') {
+                showToast('请上传 jpg 格式图片');
+                return false;
+            }
+            return true;
+        };
 
-    // 返回 Promise
-    const asyncBeforeRead = (file) =>
-      new Promise((resolve, reject) => {
-        if (file.type !== 'image/jpeg') {
-          showToast('请上传 jpg 格式图片');
-          reject();
-        } else {
-          const img = new File(['foo'], 'bar.jpg', {
-            type: 'image/jpeg',
-          });
-          resolve(img);
-        }
-      });
+        // 返回 Promise
+        const asyncBeforeRead = (file) =>
+            new Promise((resolve, reject) => {
+                if (file.type !== 'image/jpeg') {
+                    showToast('请上传 jpg 格式图片');
+                    reject();
+                } else {
+                    const img = new File(['foo'], 'bar.jpg', {
+                        type: 'image/jpeg',
+                    });
+                    resolve(img);
+                }
+            });
 
-    return {
-      beforeRead,
-      asyncBeforeRead,
-    };
-  },
+        return {
+            beforeRead,
+            asyncBeforeRead,
+        };
+    },
 };
 ```
 
@@ -297,23 +300,23 @@ import { ref } from 'vue';
 import { showToast } from '@miracle-web/ui';
 
 export default {
-  setup() {
-    const fileList = ref([
-      {
-        url: 'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg',
-        deletable: true,
-        beforeDelete: () => {
-          showToast('删除前置处理');
-        },
-      },
-      {
-        url: 'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg',
-        imageFit: 'contain',
-      },
-    ]);
+    setup() {
+        const fileList = ref([
+            {
+                url: 'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg',
+                deletable: true,
+                beforeDelete: () => {
+                    showToast('删除前置处理');
+                },
+            },
+            {
+                url: 'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg',
+                imageFit: 'contain',
+            },
+        ]);
 
-    return { fileList };
-  },
+        return { fileList };
+    },
 };
 ```
 
@@ -327,13 +330,15 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const fileList = ref([
-      { url: 'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg' },
-    ]);
+    setup() {
+        const fileList = ref([
+            {
+                url: 'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg',
+            },
+        ]);
 
-    return { fileList };
-  },
+        return { fileList };
+    },
 };
 ```
 
@@ -424,12 +429,12 @@ before-read、after-read、before-delete 执行时会传递以下回调参数：
 
 ```ts
 import type {
-  UploaderProps,
-  UploaderInstance,
-  UploaderResultType,
-  UploaderFileListItem,
-  UploaderBeforeRead,
-  UploaderAfterRead,
+    UploaderProps,
+    UploaderInstance,
+    UploaderResultType,
+    UploaderFileListItem,
+    UploaderBeforeRead,
+    UploaderAfterRead,
 } from '@miracle-web/ui';
 ```
 
@@ -507,23 +512,23 @@ compressorjs 是一个开源的图片处理库，提供了图片压缩、图片�
 import Compressor from 'compressorjs';
 
 export default {
-  setup() {
-    const beforeRead = (file) =>
-      new Promise((resolve) => {
-        // compressorjs 默认开启 checkOrientation 选项
-        // 会将图片修正为正确方向
-        new Compressor(file, {
-          success: resolve,
-          error(err) {
-            console.log(err.message);
-          },
-        });
-      });
+    setup() {
+        const beforeRead = (file) =>
+            new Promise((resolve) => {
+                // compressorjs 默认开启 checkOrientation 选项
+                // 会将图片修正为正确方向
+                new Compressor(file, {
+                    success: resolve,
+                    error(err) {
+                        console.log(err.message);
+                    },
+                });
+            });
 
-    return {
-      beforeRead,
-    };
-  },
+        return {
+            beforeRead,
+        };
+    },
 };
 ```
 
@@ -549,11 +554,11 @@ export default {
 
 ```ts
 navigator.mediaDevices
-  .getUserMedia({ video: true })
-  .then((stream) => {
-    console.log(stream);
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+    .getUserMedia({ video: true })
+    .then((stream) => {
+        console.log(stream);
+    })
+    .catch((err) => {
+        console.log(err);
+    });
 ```

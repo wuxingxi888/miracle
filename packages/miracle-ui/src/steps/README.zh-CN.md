@@ -25,10 +25,10 @@ app.use(Steps);
 
 ```html
 <mi-steps :active="active">
-  <mi-step>买家下单</mi-step>
-  <mi-step>商家接单</mi-step>
-  <mi-step>买家提货</mi-step>
-  <mi-step>交易完成</mi-step>
+    <mi-step>买家下单</mi-step>
+    <mi-step>商家接单</mi-step>
+    <mi-step>买家提货</mi-step>
+    <mi-step>交易完成</mi-step>
 </mi-steps>
 ```
 
@@ -36,10 +36,10 @@ app.use(Steps);
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const active = ref(1);
-    return { active };
-  },
+    setup() {
+        const active = ref(1);
+        return { active };
+    },
 };
 ```
 
@@ -49,10 +49,10 @@ export default {
 
 ```html
 <mi-steps :active="active" active-icon="success" active-color="#07c160">
-  <mi-step>买家下单</mi-step>
-  <mi-step>商家接单</mi-step>
-  <mi-step>买家提货</mi-step>
-  <mi-step>交易完成</mi-step>
+    <mi-step>买家下单</mi-step>
+    <mi-step>商家接单</mi-step>
+    <mi-step>买家提货</mi-step>
+    <mi-step>交易完成</mi-step>
 </mi-steps>
 ```
 
@@ -62,18 +62,18 @@ export default {
 
 ```html
 <mi-steps direction="vertical" :active="0">
-  <mi-step>
-    <h3>【城市】物流状态1</h3>
-    <p>2016-07-12 12:40</p>
-  </mi-step>
-  <mi-step>
-    <h3>【城市】物流状态2</h3>
-    <p>2016-07-11 10:00</p>
-  </mi-step>
-  <mi-step>
-    <h3>快件已发货</h3>
-    <p>2016-07-10 09:30</p>
-  </mi-step>
+    <mi-step>
+        <h3>【城市】物流状态1</h3>
+        <p>2016-07-12 12:40</p>
+    </mi-step>
+    <mi-step>
+        <h3>【城市】物流状态2</h3>
+        <p>2016-07-11 10:00</p>
+    </mi-step>
+    <mi-step>
+        <h3>快件已发货</h3>
+        <p>2016-07-10 09:30</p>
+    </mi-step>
 </mi-steps>
 ```
 

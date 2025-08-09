@@ -3,106 +3,105 @@ import { Watermark } from '..';
 import { mount } from '../../../test';
 
 describe('watermark', () => {
-  beforeEach(() => {
-    const createElement = document.createElement.bind(document);
-    document.createElement = (tagName: string) => {
-      if (tagName === 'canvas') {
-        return {
-          ...createElement(tagName),
-          getContext: () => {
-            () => {};
-          },
-          toDataURL: () => 'base64Url',
+    beforeEach(() => {
+        const createElement = document.createElement.bind(document);
+        document.createElement = (tagName: string) => {
+            if (tagName === 'canvas') {
+                return {
+                    ...createElement(tagName),
+                    getContext: () => {
+                        () => {};
+                    },
+                    toDataURL: () => 'base64Url',
+                };
+            }
+            return createElement(tagName);
         };
-      }
-      return createElement(tagName);
-    };
-    global.URL.createObjectURL = vi.fn(() => 'run to here');
-    global.Image = class {
-      crossOrigin = 'anonymous';
+        global.URL.createObjectURL = vi.fn(() => 'run to here');
+        global.Image = class {
+            crossOrigin = 'anonymous';
 
-      referrerPolicy = 'no-referrer';
+            referrerPolicy = 'no-referrer';
 
-      naturalWidth = 800;
+            naturalWidth = 800;
 
-      naturalHeight = 550;
+            naturalHeight = 550;
 
-      onload: () => void = () => {};
+            onload: () => void = () => {};
 
-      // just mock to trigge onload
-      _src = '';
+            // just mock to trigge onload
+            _src = '';
 
-      get src() {
-        return this._src;
-      }
+            get src() {
+                return this._src;
+            }
 
-      set src(val) {
-        this._src = val;
-        this.onload();
-      }
-    };
-  });
-
-  test('should render content', () => {
-    const wrapper = mount(Watermark, {
-      props: {
-        content: 'Miracle',
-        textColor: 'red',
-      },
+            set src(val) {
+                this._src = val;
+                this.onload();
+            }
+        };
     });
 
-    expect(wrapper.html()).toMatchSnapshot();
-  });
+    test('should render content', () => {
+        const wrapper = mount(Watermark, {
+            props: {
+                content: 'Miracle',
+                textColor: 'red',
+            },
+        });
 
-  test('should render image', () => {
-    const wrapper = mount(Watermark, {
-      props: {
-        content: 'Miracle',
-        image:
-          'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/miracle-watermark.png',
-        opacity: 0.5,
-      },
+        expect(wrapper.html()).toMatchSnapshot();
     });
 
-    expect(wrapper.html()).toMatchSnapshot();
-  });
+    test('should render image', () => {
+        const wrapper = mount(Watermark, {
+            props: {
+                content: 'Miracle',
+                image: 'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/miracle-watermark.png',
+                opacity: 0.5,
+            },
+        });
 
-  test('should render html', () => {
-    const wrapper = mount(Watermark, {
-      slots: {
-        content: () => 'miracle watermark test',
-      },
+        expect(wrapper.html()).toMatchSnapshot();
     });
 
-    expect(wrapper.html()).toMatchSnapshot();
-  });
+    test('should render html', () => {
+        const wrapper = mount(Watermark, {
+            slots: {
+                content: () => 'miracle watermark test',
+            },
+        });
 
-  test('test width, height, rotate, zIndex', () => {
-    const wrapper = mount(Watermark, {
-      props: {
-        width: 20,
-        height: 20,
-        rotate: 20,
-        zIndex: 200,
-      },
-      slots: {
-        content: () => 'miracle watermark test',
-      },
+        expect(wrapper.html()).toMatchSnapshot();
     });
 
-    expect(wrapper.html()).toMatchSnapshot();
-  });
+    test('test width, height, rotate, zIndex', () => {
+        const wrapper = mount(Watermark, {
+            props: {
+                width: 20,
+                height: 20,
+                rotate: 20,
+                zIndex: 200,
+            },
+            slots: {
+                content: () => 'miracle watermark test',
+            },
+        });
 
-  test('test false value fullPage', () => {
-    const wrapper = mount(Watermark, {
-      props: {
-        fullPage: false,
-      },
-      slots: {
-        content: () => 'miracle watermark test',
-      },
+        expect(wrapper.html()).toMatchSnapshot();
     });
 
-    expect(wrapper.html()).toMatchSnapshot();
-  });
+    test('test false value fullPage', () => {
+        const wrapper = mount(Watermark, {
+            props: {
+                fullPage: false,
+            },
+            slots: {
+                content: () => 'miracle watermark test',
+            },
+        });
+
+        expect(wrapper.html()).toMatchSnapshot();
+    });
 });

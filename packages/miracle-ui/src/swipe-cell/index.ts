@@ -6,13 +6,13 @@ export default SwipeCell;
 export { swipeCellProps } from './SwipeCell';
 export type { SwipeCellProps };
 export type {
-  SwipeCellSide,
-  SwipeCellPosition,
-  SwipeCellInstance,
+    SwipeCellSide,
+    SwipeCellPosition,
+    SwipeCellInstance,
 } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiSwipeCell: typeof SwipeCell;
-  }
+    export interface GlobalComponents {
+        MiSwipeCell: typeof SwipeCell;
+    }
 }

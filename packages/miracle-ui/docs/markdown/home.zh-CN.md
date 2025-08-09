@@ -12,15 +12,15 @@ Miracle UI 是一个**轻量、可定制的移动端组件库**，于 2024 年�
 
 ### 特性
 
-- 🚀 性能极佳，组件平均体积小于 1KB（min+gzip）
-- 🚀 高质量组件，覆盖移动端主流场景
-- 🚀 零外部依赖，不依赖三方 npm 包
-- 💪 使用 TypeScript 编写，提供完整的类型定义
-- 💪 单元测试覆盖率超过 90%，提供稳定性保障
-- 📖 提供丰富的中英文文档和组件示例
-- 🍭 支持按需引入和 Tree Shaking
-- 🍭 支持无障碍访问（持续改进中）
-- 🍭 支持深色模式
+-   🚀 性能极佳，组件平均体积小于 1KB（min+gzip）
+-   🚀 高质量组件，覆盖移动端主流场景
+-   🚀 零外部依赖，不依赖三方 npm 包
+-   💪 使用 TypeScript 编写，提供完整的类型定义
+-   💪 单元测试覆盖率超过 90%，提供稳定性保障
+-   📖 提供丰富的中英文文档和组件示例
+-   🍭 支持按需引入和 Tree Shaking
+-   🍭 支持无障碍访问（持续改进中）
+-   🍭 支持深色模式
 
 ### 脚手架
 
@@ -69,9 +69,9 @@ npm create rsbuild@latest
 
 ### 其他链接
 
-- [意见反馈](https://github.com/wuxingxi888/miracle/issues)
-- [更新日志](#/zh-CN/changelog)
-- [码云镜像仓库](https://gitee.com/tianqijizhang/miracle.git)
+-   [意见反馈](https://github.com/wuxingxi888/miracle/issues)
+-   [更新日志](#/zh-CN/changelog)
+-   [码云镜像仓库](https://gitee.com/tianqijizhang/miracle.git)
 
 ## 贡献
 

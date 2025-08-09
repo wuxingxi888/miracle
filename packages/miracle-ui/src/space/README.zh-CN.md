@@ -24,10 +24,10 @@ Space 组件会在各个子组件之间设置一定的间距，默认间距为 `
 
 ```html
 <mi-space>
-  <mi-button type="primary">按钮</mi-button>
-  <mi-button type="primary">按钮</mi-button>
-  <mi-button type="primary">按钮</mi-button>
-  <mi-button type="primary">按钮</mi-button>
+    <mi-button type="primary">按钮</mi-button>
+    <mi-button type="primary">按钮</mi-button>
+    <mi-button type="primary">按钮</mi-button>
+    <mi-button type="primary">按钮</mi-button>
 </mi-space>
 ```
 
@@ -37,9 +37,9 @@ Space 组件会在各个子组件之间设置一定的间距，默认间距为 `
 
 ```html
 <mi-space direction="vertical" fill>
-  <mi-button type="primary" block>按钮</mi-button>
-  <mi-button type="primary" block>按钮</mi-button>
-  <mi-button type="primary" block>按钮</mi-button>
+    <mi-button type="primary" block>按钮</mi-button>
+    <mi-button type="primary" block>按钮</mi-button>
+    <mi-button type="primary" block>按钮</mi-button>
 </mi-space>
 ```
 
@@ -50,16 +50,16 @@ Space 组件会在各个子组件之间设置一定的间距，默认间距为 `
 ```html
 <!-- 20px -->
 <mi-space :size="20">
-  <mi-button type="primary">按钮</mi-button>
-  <mi-button type="primary">按钮</mi-button>
-  <mi-button type="primary">按钮</mi-button>
+    <mi-button type="primary">按钮</mi-button>
+    <mi-button type="primary">按钮</mi-button>
+    <mi-button type="primary">按钮</mi-button>
 </mi-space>
 
 <!-- 2rem -->
 <mi-space size="2rem">
-  <mi-button type="primary">按钮</mi-button>
-  <mi-button type="primary">按钮</mi-button>
-  <mi-button type="primary">按钮</mi-button>
+    <mi-button type="primary">按钮</mi-button>
+    <mi-button type="primary">按钮</mi-button>
+    <mi-button type="primary">按钮</mi-button>
 </mi-space>
 ```
 
@@ -69,19 +69,19 @@ Space 组件会在各个子组件之间设置一定的间距，默认间距为 `
 
 ```html
 <mi-radio-group
-  v-model="align"
-  direction="horizontal"
-  style="margin-bottom: 16px"
+    v-model="align"
+    direction="horizontal"
+    style="margin-bottom: 16px"
 >
-  <mi-radio name="start">start</mi-radio>
-  <mi-radio name="center">center</mi-radio>
-  <mi-radio name="end">end</mi-radio>
-  <mi-radio name="baseline">baseline</mi-radio>
+    <mi-radio name="start">start</mi-radio>
+    <mi-radio name="center">center</mi-radio>
+    <mi-radio name="end">end</mi-radio>
+    <mi-radio name="baseline">baseline</mi-radio>
 </mi-radio-group>
 
 <mi-space :align="align" style="padding: 16px; background: #f3f2f5">
-  <mi-button type="primary">{{ align }}</mi-button>
-  <div style="padding: 40px 20px; background: #fff">Block</div>
+    <mi-button type="primary">{{ align }}</mi-button>
+    <div style="padding: 40px 20px; background: #fff">Block</div>
 </mi-space>
 ```
 
@@ -89,10 +89,10 @@ Space 组件会在各个子组件之间设置一定的间距，默认间距为 `
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const align = ref('center');
-    return { align };
-  },
+    setup() {
+        const align = ref('center');
+        return { align };
+    },
 };
 ```
 
@@ -102,14 +102,14 @@ export default {
 
 ```html
 <mi-space wrap>
-  <mi-button type="primary" block>按钮</mi-button>
-  <mi-button type="primary" block>按钮</mi-button>
-  <mi-button type="primary" block>按钮</mi-button>
-  <mi-button type="primary" block>按钮</mi-button>
-  <mi-button type="primary" block>按钮</mi-button>
-  <mi-button type="primary" block>按钮</mi-button>
-  <mi-button type="primary" block>按钮</mi-button>
-  <mi-button type="primary" block>按钮</mi-button>
+    <mi-button type="primary" block>按钮</mi-button>
+    <mi-button type="primary" block>按钮</mi-button>
+    <mi-button type="primary" block>按钮</mi-button>
+    <mi-button type="primary" block>按钮</mi-button>
+    <mi-button type="primary" block>按钮</mi-button>
+    <mi-button type="primary" block>按钮</mi-button>
+    <mi-button type="primary" block>按钮</mi-button>
+    <mi-button type="primary" block>按钮</mi-button>
 </mi-space>
 ```
 

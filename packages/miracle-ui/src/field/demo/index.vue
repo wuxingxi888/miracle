@@ -14,16 +14,16 @@ import LabelAlign from './LabelAlign.vue';
 </script>
 
 <template>
-  <basic-usage />
-  <custom-type />
-  <disabled />
-  <show-icon />
-  <required />
-  <error-info />
-  <insert-button />
-  <format-value />
-  <autosize />
-  <show-word-limit />
-  <input-align />
-  <label-align />
+    <basic-usage />
+    <custom-type />
+    <disabled />
+    <show-icon />
+    <required />
+    <error-info />
+    <insert-button />
+    <format-value />
+    <autosize />
+    <show-word-limit />
+    <input-align />
+    <label-align />
 </template>

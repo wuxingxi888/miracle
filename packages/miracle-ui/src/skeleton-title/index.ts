@@ -8,7 +8,7 @@ export { skeletonTitleProps } from './SkeletonTitle';
 export type { SkeletonTitleProps } from './SkeletonTitle';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiSkeletonTitle: typeof SkeletonTitle;
-  }
+    export interface GlobalComponents {
+        MiSkeletonTitle: typeof SkeletonTitle;
+    }
 }

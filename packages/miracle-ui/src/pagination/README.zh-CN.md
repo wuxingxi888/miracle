@@ -30,10 +30,10 @@ app.use(Pagination);
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const currentPage = ref(1);
-    return { currentPage };
-  },
+    setup() {
+        const currentPage = ref(1);
+        return { currentPage };
+    },
 };
 ```
 
@@ -51,10 +51,10 @@ export default {
 
 ```html
 <mi-pagination
-  v-model="currentPage"
-  :total-items="125"
-  :show-page-size="3"
-  force-ellipses
+    v-model="currentPage"
+    :total-items="125"
+    :show-page-size="3"
+    force-ellipses
 />
 ```
 
@@ -64,13 +64,13 @@ export default {
 
 ```html
 <mi-pagination v-model="currentPage" :total-items="50" :show-page-size="5">
-  <template #prev-text>
-    <mi-icon name="arrow-left" />
-  </template>
-  <template #next-text>
-    <mi-icon name="arrow" />
-  </template>
-  <template #page="{ text }">{{ text }}</template>
+    <template #prev-text>
+        <mi-icon name="arrow-left" />
+    </template>
+    <template #next-text>
+        <mi-icon name="arrow" />
+    </template>
+    <template #page="{ text }">{{ text }}</template>
 </mi-pagination>
 ```
 

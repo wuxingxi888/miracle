@@ -35,8 +35,8 @@ bun add @miracle-web/ui
 ```html
 <!-- 引入样式文件 -->
 <link
-  rel="stylesheet"
-  href="https://fastly.jsdelivr.net/npm/@miracle-web/ui/lib/index.css"
+    rel="stylesheet"
+    href="https://fastly.jsdelivr.net/npm/@miracle-web/ui/lib/index.css"
 />
 
 <!-- 引入 Vue 和 Miracle 的 JS 文件 -->
@@ -44,20 +44,20 @@ bun add @miracle-web/ui
 <script src="https://fastly.jsdelivr.net/npm/@miracle-web/ui/lib/miracle.min.js"></script>
 
 <script>
-  // 在 #app 标签下渲染一个按钮组件
-  const app = Vue.createApp({
-    template: `<mi-button>按钮</mi-button>`,
-  });
-  app.use(miracle);
+    // 在 #app 标签下渲染一个按钮组件
+    const app = Vue.createApp({
+        template: `<mi-button>按钮</mi-button>`,
+    });
+    app.use(miracle);
 
-  // 通过 CDN 引入时不会自动注册 Lazyload 组件
-  // 可以通过下面的方式手动注册
-  app.use(miracle.Lazyload);
+    // 通过 CDN 引入时不会自动注册 Lazyload 组件
+    // 可以通过下面的方式手动注册
+    app.use(miracle.Lazyload);
 
-  // 调用工具函数，弹出一个 Toast
-  miracle.showToast('提示');
+    // 调用工具函数，弹出一个 Toast
+    miracle.showToast('提示');
 
-  app.mount('#app');
+    app.mount('#app');
 </script>
 ```
 
@@ -65,16 +65,16 @@ bun add @miracle-web/ui
 
 你可以通过以下免费 CDN 服务来使用 Miracle:
 
-- [jsdelivr](https://www.jsdelivr.com/package/npm/@miracle-web/ui)
-- [cdnjs](https://cdnjs.com/libraries/@miracle-web/ui)
-- [unpkg](https://unpkg.com/)
+-   [jsdelivr](https://www.jsdelivr.com/package/npm/@miracle-web/ui)
+-   [cdnjs](https://cdnjs.com/libraries/@miracle-web/ui)
+-   [unpkg](https://unpkg.com/)
 
 注意：免费 CDN 一般用于制作原型或个人小型项目，不推荐在企业生产环境中使用免费 CDN。
 
 对于企业开发者，建议使用以下方式：
 
-- 通过 npm 引入，并通过构建工具进行打包
-- 下载对应文件，并托管在你自己的服务器或 CDN 上
+-   通过 npm 引入，并通过构建工具进行打包
+-   下载对应文件，并托管在你自己的服务器或 CDN 上
 
 ## 引入组件
 
@@ -133,12 +133,12 @@ import Components from 'unplugin-vue-components/vite';
 import { MiracleResolver } from '@miracle-web/auto-import-resolver';
 
 export default {
-  plugins: [
-    vue(),
-    Components({
-      resolvers: [MiracleResolver()],
-    }),
-  ],
+    plugins: [
+        vue(),
+        Components({
+            resolvers: [MiracleResolver()],
+        }),
+    ],
 };
 ```
 
@@ -149,14 +149,14 @@ const { MiracleResolver } = require('@miracle-web/auto-import-resolver');
 const ComponentsPlugin = require('unplugin-vue-components/webpack');
 
 module.exports = {
-  configureWebpack: {
-    plugins: [
-      // 当 unplugin-vue-components 版本小于 0.26.0 时，使用以下写法
-      ComponentsPlugin({ resolvers: [MiracleResolver()] }),
-      //当 unplugin-vue-components 版本大于等于 0.26.0 时，使用以下写法
-      ComponentsPlugin.default({ resolvers: [MiracleResolver()] }),
-    ],
-  },
+    configureWebpack: {
+        plugins: [
+            // 当 unplugin-vue-components 版本小于 0.26.0 时，使用以下写法
+            ComponentsPlugin({ resolvers: [MiracleResolver()] }),
+            //当 unplugin-vue-components 版本大于等于 0.26.0 时，使用以下写法
+            ComponentsPlugin.default({ resolvers: [MiracleResolver()] }),
+        ],
+    },
 };
 ```
 
@@ -167,12 +167,12 @@ const { MiracleResolver } = require('@miracle-web/auto-import-resolver');
 const ComponentsPlugin = require('unplugin-vue-components/webpack');
 
 module.exports = {
-  plugins: [
-    // 当 unplugin-vue-components 版本小于 0.26.0 时，使用以下写法
-    ComponentsPlugin({ resolvers: [MiracleResolver()] }),
-    //当 unplugin-vue-components 版本大于等于 0.26.0 时，使用以下写法
-    ComponentsPlugin.default({ resolvers: [MiracleResolver()] }),
-  ],
+    plugins: [
+        // 当 unplugin-vue-components 版本小于 0.26.0 时，使用以下写法
+        ComponentsPlugin({ resolvers: [MiracleResolver()] }),
+        //当 unplugin-vue-components 版本大于等于 0.26.0 时，使用以下写法
+        ComponentsPlugin.default({ resolvers: [MiracleResolver()] }),
+    ],
 };
 ```
 
@@ -182,7 +182,7 @@ module.exports = {
 
 ```html
 <template>
-  <mi-button type="primary" />
+    <mi-button type="primary" />
 </template>
 ```
 
@@ -212,11 +212,11 @@ import '@miracle-web/ui/es/image-preview/style';
 
 #### 使用提示
 
-- 请避免同时使用「全量引入」和「按需引入」这两种引入方式，否则会导致代码重复、样式错乱等问题。
-- 在使用过程中，如果你遇到组件不能导入的问题，因为 unplugin-vue-components 并不是 Miracle 官方维护的插件，所以建议到 [unplugin/unplugin-vue-components](https://github.com/unplugin/unplugin-vue-components) 仓库下反馈。
-- 当 `unplugin-vue-components` 的版本号 >= 0.26.0 时，对于 `webpack`、`vue-cli` 和 `rspack`，你需要使用 `ComponentsPlugin.default` 进行注册。
-- `@miracle-web/auto-import-resolver` 提供了一些配置项，请参考 [README 文档]() 来了解更多。
-- 如果是样式不生效的相关问题，你可以在 Miracle 仓库下反馈。
+-   请避免同时使用「全量引入」和「按需引入」这两种引入方式，否则会导致代码重复、样式错乱等问题。
+-   在使用过程中，如果你遇到组件不能导入的问题，因为 unplugin-vue-components 并不是 Miracle 官方维护的插件，所以建议到 [unplugin/unplugin-vue-components](https://github.com/unplugin/unplugin-vue-components) 仓库下反馈。
+-   当 `unplugin-vue-components` 的版本号 >= 0.26.0 时，对于 `webpack`、`vue-cli` 和 `rspack`，你需要使用 `ComponentsPlugin.default` 进行注册。
+-   `@miracle-web/auto-import-resolver` 提供了一些配置项，请参考 [README 文档]() 来了解更多。
+-   如果是样式不生效的相关问题，你可以在 Miracle 仓库下反馈。
 
 ## 迁移提示
 
@@ -242,8 +242,8 @@ module.exports = {
 
 移除 `babel-plugin-import` 有以下收益：
 
-- 不再强依赖 babel，项目可以使用 esbuild、swc 等更高效的编译工具，大幅度提升编译效率。
-- 不再受到 `babel-plugin-import` 的 import 写法限制，可以从 miracle 中导入除了组件以外的其他内容，比如 Miracle 中新增的 `showToast` 等方法。
+-   不再强依赖 babel，项目可以使用 esbuild、swc 等更高效的编译工具，大幅度提升编译效率。
+-   不再受到 `babel-plugin-import` 的 import 写法限制，可以从 miracle 中导入除了组件以外的其他内容，比如 Miracle 中新增的 `showToast` 等方法。
 
 ```ts
 import { showToast, showDialog } from '@miracle-web/ui';

@@ -24,10 +24,10 @@ app.use(DatePicker);
 
 ```html
 <mi-date-picker
-  v-model="currentDate"
-  title="选择日期"
-  :min-date="minDate"
-  :max-date="maxDate"
+    v-model="currentDate"
+    title="选择日期"
+    :min-date="minDate"
+    :max-date="maxDate"
 />
 ```
 
@@ -35,14 +35,14 @@ app.use(DatePicker);
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const currentDate = ref(['2021', '01', '01']);
-    return {
-      minDate: new Date(2020, 0, 1),
-      maxDate: new Date(2025, 5, 1),
-      currentDate,
-    };
-  },
+    setup() {
+        const currentDate = ref(['2021', '01', '01']);
+        return {
+            minDate: new Date(2020, 0, 1),
+            maxDate: new Date(2025, 5, 1),
+            currentDate,
+        };
+    },
 };
 ```
 
@@ -52,18 +52,18 @@ export default {
 
 比如：
 
-- 传入 `['year']` 来单独选择年份。
-- 传入 `['month']` 来单独选择月份。
-- 传入 `['year', 'month']` 来选择年份和月份。
-- 传入 `['month', 'day']` 来选择月份和日期。
+-   传入 `['year']` 来单独选择年份。
+-   传入 `['month']` 来单独选择月份。
+-   传入 `['year', 'month']` 来选择年份和月份。
+-   传入 `['month', 'day']` 来选择月份和日期。
 
 ```html
 <mi-date-picker
-  v-model="currentDate"
-  title="选择年月"
-  :min-date="minDate"
-  :max-date="maxDate"
-  :columns-type="columnsType"
+    v-model="currentDate"
+    title="选择年月"
+    :min-date="minDate"
+    :max-date="maxDate"
+    :columns-type="columnsType"
 />
 ```
 
@@ -71,16 +71,16 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const currentDate = ref(['2021', '01']);
-    const columnsType = ['year', 'month'];
-    return {
-      minDate: new Date(2020, 0, 1),
-      maxDate: new Date(2025, 5, 1),
-      currentDate,
-      columnsType,
-    };
-  },
+    setup() {
+        const currentDate = ref(['2021', '01']);
+        const columnsType = ['year', 'month'];
+        return {
+            minDate: new Date(2020, 0, 1),
+            maxDate: new Date(2025, 5, 1),
+            currentDate,
+            columnsType,
+        };
+    },
 };
 ```
 
@@ -90,12 +90,12 @@ export default {
 
 ```html
 <mi-date-picker
-  v-model="currentDate"
-  title="选择年月"
-  :min-date="minDate"
-  :max-date="maxDate"
-  :formatter="formatter"
-  :columns-type="columnsType"
+    v-model="currentDate"
+    title="选择年月"
+    :min-date="minDate"
+    :max-date="maxDate"
+    :formatter="formatter"
+    :columns-type="columnsType"
 />
 ```
 
@@ -103,28 +103,28 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const currentDate = ref(['2021', '01']);
-    const columnsType = ['year', 'month'];
+    setup() {
+        const currentDate = ref(['2021', '01']);
+        const columnsType = ['year', 'month'];
 
-    const formatter = (type, option) => {
-      if (type === 'year') {
-        option.text += '年';
-      }
-      if (type === 'month') {
-        option.text += '月';
-      }
-      return option;
-    };
+        const formatter = (type, option) => {
+            if (type === 'year') {
+                option.text += '年';
+            }
+            if (type === 'month') {
+                option.text += '月';
+            }
+            return option;
+        };
 
-    return {
-      minDate: new Date(2020, 0, 1),
-      maxDate: new Date(2025, 5, 1),
-      formatter,
-      currentDate,
-      columnsType,
-    };
-  },
+        return {
+            minDate: new Date(2020, 0, 1),
+            maxDate: new Date(2025, 5, 1),
+            formatter,
+            currentDate,
+            columnsType,
+        };
+    },
 };
 ```
 
@@ -134,12 +134,12 @@ export default {
 
 ```html
 <mi-date-picker
-  v-model="currentDate"
-  title="选择年月"
-  :filter="filter"
-  :min-date="minDate"
-  :max-date="maxDate"
-  :columns-type="columnsType"
+    v-model="currentDate"
+    title="选择年月"
+    :filter="filter"
+    :min-date="minDate"
+    :max-date="maxDate"
+    :columns-type="columnsType"
 />
 ```
 
@@ -147,24 +147,26 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const currentDate = ref(['2021', '01']);
-    const columnsType = ['year', 'month'];
-    const filter = (type, options) => {
-      if (type === 'month') {
-        return options.filter((option) => Number(option.value) % 6 === 0);
-      }
-      return options;
-    };
+    setup() {
+        const currentDate = ref(['2021', '01']);
+        const columnsType = ['year', 'month'];
+        const filter = (type, options) => {
+            if (type === 'month') {
+                return options.filter(
+                    (option) => Number(option.value) % 6 === 0,
+                );
+            }
+            return options;
+        };
 
-    return {
-      filter,
-      minDate: new Date(2020, 0, 1),
-      maxDate: new Date(2025, 5, 1),
-      currentTime,
-      columnsType,
-    };
-  },
+        return {
+            filter,
+            minDate: new Date(2020, 0, 1),
+            maxDate: new Date(2025, 5, 1),
+            currentTime,
+            columnsType,
+        };
+    },
 };
 ```
 
@@ -225,9 +227,9 @@ export default {
 
 ```ts
 import type {
-  DatePickerProps,
-  DatePickerColumnType,
-  DatePickerInstance,
+    DatePickerProps,
+    DatePickerColumnType,
+    DatePickerInstance,
 } from '@miracle-web/ui';
 ```
 

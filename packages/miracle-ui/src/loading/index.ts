@@ -8,7 +8,7 @@ export type { LoadingType, LoadingProps } from './Loading';
 export type { LoadingThemeVars } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiLoading: typeof Loading;
-  }
+    export interface GlobalComponents {
+        MiLoading: typeof Loading;
+    }
 }

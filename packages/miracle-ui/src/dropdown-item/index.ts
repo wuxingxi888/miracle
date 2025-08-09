@@ -6,13 +6,13 @@ export default DropdownItem;
 export { dropdownItemProps } from './DropdownItem';
 export type { DropdownItemProps };
 export type {
-  DropdownItemOption,
-  DropdownItemInstance,
-  DropdownItemThemeVars,
+    DropdownItemOption,
+    DropdownItemInstance,
+    DropdownItemThemeVars,
 } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiDropdownItem: typeof DropdownItem;
-  }
+    export interface GlobalComponents {
+        MiDropdownItem: typeof DropdownItem;
+    }
 }

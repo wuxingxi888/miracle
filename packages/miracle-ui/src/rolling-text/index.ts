@@ -6,14 +6,14 @@ export default RollingText;
 export { rollingTextProps } from './RollingText';
 export type { RollingTextProps } from './RollingText';
 export type {
-  RollingTextDirection,
-  RollingTextInstance,
-  RollingTextStopOrder,
-  RollingTextThemeVars,
+    RollingTextDirection,
+    RollingTextInstance,
+    RollingTextStopOrder,
+    RollingTextThemeVars,
 } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiRollingText: typeof _RollingText;
-  }
+    export interface GlobalComponents {
+        MiRollingText: typeof _RollingText;
+    }
 }

@@ -8,7 +8,7 @@ export type { PasswordInputProps } from './PasswordInput';
 export type { PasswordInputThemeVars } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiPasswordInput: typeof PasswordInput;
-  }
+    export interface GlobalComponents {
+        MiPasswordInput: typeof PasswordInput;
+    }
 }

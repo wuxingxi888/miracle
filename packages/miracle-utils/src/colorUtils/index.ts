@@ -5,9 +5,9 @@
  * @returns 增加亮度后的颜色值，以十六进制字符串形式返回
  */
 function addLight(color: string, amount: number) {
-  const cc = Number.parseInt(color, 16) + amount;
-  const c = cc > 255 ? 255 : cc;
-  return c.toString(16).length > 1 ? c.toString(16) : `0${c.toString(16)}`;
+    const cc = Number.parseInt(color, 16) + amount;
+    const c = cc > 255 ? 255 : cc;
+    return c.toString(16).length > 1 ? c.toString(16) : `0${c.toString(16)}`;
 }
 
 /**
@@ -17,9 +17,9 @@ function addLight(color: string, amount: number) {
  * @returns 返回调整后的颜色的十六进制表示，如果结果为单个数字，则前面补0
  */
 function subtractLight(color: string, amount: number) {
-  const cc = Number.parseInt(color, 16) - amount;
-  const c = cc < 0 ? 0 : cc;
-  return c.toString(16).length > 1 ? c.toString(16) : `0${c.toString(16)}`;
+    const cc = Number.parseInt(color, 16) - amount;
+    const c = cc < 0 ? 0 : cc;
+    return c.toString(16).length > 1 ? c.toString(16) : `0${c.toString(16)}`;
 }
 
 /**
@@ -33,12 +33,12 @@ function subtractLight(color: string, amount: number) {
  * @returns 变亮后的颜色值，以带#的十六进制字符串形式返回
  */
 export function lighten(color: string, amount: number) {
-  color = color.includes('#') ? color.substring(1, color.length) : color;
-  amount = Math.trunc((255 * amount) / 100);
-  return `#${addLight(color.substring(0, 2), amount)}${addLight(
-    color.substring(2, 4),
-    amount,
-  )}${addLight(color.substring(4, 6), amount)}`;
+    color = color.includes('#') ? color.substring(1, color.length) : color;
+    amount = Math.trunc((255 * amount) / 100);
+    return `#${addLight(color.substring(0, 2), amount)}${addLight(
+        color.substring(2, 4),
+        amount,
+    )}${addLight(color.substring(4, 6), amount)}`;
 }
 
 /**
@@ -52,12 +52,12 @@ export function lighten(color: string, amount: number) {
  * @returns 暗化后的颜色值，以十六进制格式表示。
  */
 export function darken(color: string, amount: number) {
-  color = color.includes('#') ? color.substring(1, color.length) : color;
-  amount = Math.trunc((255 * amount) / 100);
-  return `#${subtractLight(color.substring(0, 2), amount)}${subtractLight(
-    color.substring(2, 4),
-    amount,
-  )}${subtractLight(color.substring(4, 6), amount)}`;
+    color = color.includes('#') ? color.substring(1, color.length) : color;
+    amount = Math.trunc((255 * amount) / 100);
+    return `#${subtractLight(color.substring(0, 2), amount)}${subtractLight(
+        color.substring(2, 4),
+        amount,
+    )}${subtractLight(color.substring(4, 6), amount)}`;
 }
 
 /**
@@ -67,19 +67,14 @@ export function darken(color: string, amount: number) {
  * @returns 返回转换后的RGBA格式颜色值，如果输入的十六进制颜色值无效，则返回原始值
  */
 export function hexToRgba(hex: string, opacity: number) {
-  const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
-  hex = hex.replace(shorthandRegex, (m, r, g, b) => {
-    return r + r + g + g + b + b;
-  });
+    const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
+    hex = hex.replace(shorthandRegex, (m, r, g, b) => {
+        return r + r + g + g + b + b;
+    });
 
-  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-  opacity = opacity >= 0 && opacity <= 1 ? Number(opacity) : 1;
-  return result
-    ? `rgba(${[
-        Number.parseInt(result[1], 16),
-        Number.parseInt(result[2], 16),
-        Number.parseInt(result[3], 16),
-        opacity,
-      ].join(',')})`
-    : hex;
+    const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    opacity = opacity >= 0 && opacity <= 1 ? Number(opacity) : 1;
+    return result
+        ? `rgba(${[Number.parseInt(result[1], 16), Number.parseInt(result[2], 16), Number.parseInt(result[3], 16), opacity].join(',')})`
+        : hex;
 }

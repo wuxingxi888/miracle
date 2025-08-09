@@ -48,8 +48,8 @@ showToast('提示内容');
 import { showLoadingToast } from '@miracle-web/ui';
 
 showLoadingToast({
-  message: '加载中...',
-  forbidClick: true,
+    message: '加载中...',
+    forbidClick: true,
 });
 ```
 
@@ -72,13 +72,13 @@ showFailToast('失败文案');
 import { showToast } from '@miracle-web/ui';
 
 showToast({
-  message: '自定义图标',
-  icon: 'like-o',
+    message: '自定义图标',
+    icon: 'like-o',
 });
 
 showToast({
-  message: '自定义图片',
-  icon: 'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/logo.png',
+    message: '自定义图片',
+    icon: 'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/logo.png',
 });
 ```
 
@@ -88,9 +88,9 @@ showToast({
 import { showLoadingToast } from '@miracle-web/ui';
 
 showLoadingToast({
-  message: '加载中...',
-  forbidClick: true,
-  loadingType: 'spinner',
+    message: '加载中...',
+    forbidClick: true,
+    loadingType: 'spinner',
 });
 ```
 
@@ -102,13 +102,13 @@ Toast 默认渲染在屏幕正中位置，通过 `position` 属性可以控制 T
 import { showToast } from '@miracle-web/ui';
 
 showToast({
-  message: '顶部展示',
-  position: 'top',
+    message: '顶部展示',
+    position: 'top',
 });
 
 showToast({
-  message: '底部展示',
-  position: 'bottom',
+    message: '底部展示',
+    position: 'bottom',
 });
 ```
 
@@ -121,14 +121,14 @@ import { showToast } from '@miracle-web/ui';
 
 // 换行时截断单词
 showToast({
-  message: 'This message will contain a incomprehensibilities long word.',
-  wordBreak: 'break-all',
+    message: 'This message will contain a incomprehensibilities long word.',
+    wordBreak: 'break-all',
 });
 
 // 换行时不截断单词
 showToast({
-  message: 'This message will contain a incomprehensibilities long word.',
-  wordBreak: 'break-word',
+    message: 'This message will contain a incomprehensibilities long word.',
+    wordBreak: 'break-word',
 });
 ```
 
@@ -140,20 +140,20 @@ showToast({
 import { showLoadingToast, closeToast } from '@miracle-web/ui';
 
 const toast = showLoadingToast({
-  duration: 0,
-  forbidClick: true,
-  message: '倒计时 3 秒',
+    duration: 0,
+    forbidClick: true,
+    message: '倒计时 3 秒',
 });
 
 let second = 3;
 const timer = setInterval(() => {
-  second--;
-  if (second) {
-    toast.message = `倒计时 ${second} 秒`;
-  } else {
-    clearInterval(timer);
-    closeToast();
-  }
+    second--;
+    if (second) {
+        toast.message = `倒计时 ${second} 秒`;
+    } else {
+        clearInterval(timer);
+        closeToast();
+    }
 }, 1000);
 ```
 
@@ -163,9 +163,9 @@ Toast 默认采用单例模式，即同一时间只会存在一个 Toast，如�
 
 ```js
 import {
-  showToast,
-  showSuccessToast,
-  allowMultipleToast,
+    showToast,
+    showSuccessToast,
+    allowMultipleToast,
 } from '@miracle-web/ui';
 
 allowMultipleToast();
@@ -183,8 +183,8 @@ toast2.close();
 
 ```js
 import {
-  setToastDefaultOptions,
-  resetToastDefaultOptions,
+    setToastDefaultOptions,
+    resetToastDefaultOptions,
 } from '@miracle-web/ui';
 
 setToastDefaultOptions({ duration: 2000 });
@@ -202,9 +202,14 @@ resetToastDefaultOptions('loading');
 
 ```html
 <mi-toast v-model:show="show" style="padding: 0">
-  <template #message>
-    <mi-image :src="image" width="200" height="140" style="display: block" />
-  </template>
+    <template #message>
+        <mi-image
+            :src="image"
+            width="200"
+            height="140"
+            style="display: block"
+        />
+    </template>
 </mi-toast>
 ```
 
@@ -212,10 +217,10 @@ resetToastDefaultOptions('loading');
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const show = ref(false);
-    return { show };
-  },
+    setup() {
+        const show = ref(false);
+        return { show };
+    },
 };
 ```
 
@@ -313,12 +318,12 @@ Miracle 中导出了以下 Toast 相关的辅助函数：
 
 ```ts
 import type {
-  ToastType,
-  ToastProps,
-  ToastOptions,
-  ToastPosition,
-  ToastWordBreak,
-  ToastWrapperInstance,
+    ToastType,
+    ToastProps,
+    ToastOptions,
+    ToastPosition,
+    ToastWordBreak,
+    ToastWrapperInstance,
 } from '@miracle-web/ui';
 ```
 

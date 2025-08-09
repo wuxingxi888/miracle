@@ -8,7 +8,7 @@ export type { FormProps };
 export type { FormInstance } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiForm: typeof Form;
-  }
+    export interface GlobalComponents {
+        MiForm: typeof Form;
+    }
 }

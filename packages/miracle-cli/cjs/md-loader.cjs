@@ -2,58 +2,59 @@ const hljs = require('highlight.js');
 const MarkdownIt = require('markdown-it');
 
 function markdownCardWrapper(htmlCode) {
-  const group = htmlCode
-    .replace(/<h3/g, ':::<h3')
-    .replace(/<h2/g, ':::<h2')
-    .split(':::');
+    const group = htmlCode
+        .replace(/<h3/g, ':::<h3')
+        .replace(/<h2/g, ':::<h2')
+        .split(':::');
 
-  return group
-    .map((fragment) => {
-      if (fragment.indexOf('<h3') !== -1) {
-        return `<div class="mi-doc-card">${fragment}</div>`;
-      }
+    return group
+        .map((fragment) => {
+            if (fragment.indexOf('<h3') !== -1) {
+                return `<div class="mi-doc-card">${fragment}</div>`;
+            }
 
-      return fragment;
-    })
-    .join('');
+            return fragment;
+        })
+        .join('');
 }
 
 function markdownHighlight(str, lang) {
-  if (lang && hljs.getLanguage(lang)) {
-    // https://github.com/highlightjs/highlight.js/issues/2277
-    return hljs.highlight(str, { language: lang, ignoreIllegals: true }).value;
-  }
-  return '';
+    if (lang && hljs.getLanguage(lang)) {
+        // https://github.com/highlightjs/highlight.js/issues/2277
+        return hljs.highlight(str, { language: lang, ignoreIllegals: true })
+            .value;
+    }
+    return '';
 }
 
 const initMarkdownIt = () => {
-  const md = new MarkdownIt({
-    html: true,
-    linkify: true,
-    typographer: false,
-    highlight: markdownHighlight,
-  });
+    const md = new MarkdownIt({
+        html: true,
+        linkify: true,
+        typographer: false,
+        highlight: markdownHighlight,
+    });
 
-  const { slugify } = require('transliteration');
-  const markdownItAnchor = require('markdown-it-anchor');
+    const { slugify } = require('transliteration');
+    const markdownItAnchor = require('markdown-it-anchor');
 
-  markdownLinkOpen(md);
+    markdownLinkOpen(md);
 
-  md.use(markdownItAnchor, {
-    level: 2,
-    slugify,
-  });
+    md.use(markdownItAnchor, {
+        level: 2,
+        slugify,
+    });
 
-  return md;
+    return md;
 };
 
 const md = initMarkdownIt();
 
 const markdownToJs = (raw) => {
-  let html = md.render(raw);
-  html = markdownCardWrapper(html);
+    let html = md.render(raw);
+    html = markdownCardWrapper(html);
 
-  return `
+    return `
   import { openBlock, createElementBlock } from 'vue';
 
 const _hoisted_1 = ['innerHTML'];
@@ -84,23 +85,23 @@ export default {
 
 // add target="_blank" to all links
 function markdownLinkOpen(md) {
-  const defaultRender = md.renderer.rules.link_open;
+    const defaultRender = md.renderer.rules.link_open;
 
-  md.renderer.rules.link_open = (tokens, idx, options, env, self) => {
-    const aIndex = tokens[idx].attrIndex('target');
+    md.renderer.rules.link_open = (tokens, idx, options, env, self) => {
+        const aIndex = tokens[idx].attrIndex('target');
 
-    if (aIndex < 0) {
-      tokens[idx].attrPush(['target', '_blank']); // add new attribute
-    }
+        if (aIndex < 0) {
+            tokens[idx].attrPush(['target', '_blank']); // add new attribute
+        }
 
-    if (defaultRender) {
-      return defaultRender(tokens, idx, options, env, self);
-    }
+        if (defaultRender) {
+            return defaultRender(tokens, idx, options, env, self);
+        }
 
-    return self.renderToken(tokens, idx, options);
-  };
+        return self.renderToken(tokens, idx, options);
+    };
 }
 
 module.exports = function (raw) {
-  return markdownToJs(raw);
+    return markdownToJs(raw);
 };

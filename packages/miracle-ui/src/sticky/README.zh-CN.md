@@ -24,7 +24,7 @@ app.use(Sticky);
 
 ```html
 <mi-sticky>
-  <mi-button type="primary">基础用法</mi-button>
+    <mi-button type="primary">基础用法</mi-button>
 </mi-sticky>
 ```
 
@@ -34,7 +34,7 @@ app.use(Sticky);
 
 ```html
 <mi-sticky :offset-top="50">
-  <mi-button type="primary">吸顶距离</mi-button>
+    <mi-button type="primary">吸顶距离</mi-button>
 </mi-sticky>
 ```
 
@@ -44,18 +44,18 @@ app.use(Sticky);
 
 ```html
 <div ref="container" style="height: 150px;">
-  <mi-sticky :container="container">
-    <mi-button type="warning">指定容器</mi-button>
-  </mi-sticky>
+    <mi-sticky :container="container">
+        <mi-button type="warning">指定容器</mi-button>
+    </mi-sticky>
 </div>
 ```
 
 ```js
 export default {
-  setup() {
-    const container = ref(null);
-    return { container };
-  },
+    setup() {
+        const container = ref(null);
+        return { container };
+    },
 };
 ```
 
@@ -65,7 +65,7 @@ export default {
 
 ```html
 <mi-sticky :offset-bottom="50" position="bottom">
-  <mi-button type="primary">吸底距离</mi-button>
+    <mi-button type="primary">吸底距离</mi-button>
 </mi-sticky>
 ```
 

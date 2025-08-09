@@ -50,10 +50,10 @@ app.use(Progress);
 <mi-progress pivot-text="橙色" color="#f2826a" :percentage="25" />
 <mi-progress pivot-text="红色" color="#ee0a24" :percentage="50" />
 <mi-progress
-  :percentage="75"
-  pivot-text="紫色"
-  pivot-color="#7232dd"
-  color="linear-gradient(to right, #be99ff, #7232dd)"
+    :percentage="75"
+    pivot-text="紫色"
+    pivot-color="#7232dd"
+    color="linear-gradient(to right, #be99ff, #7232dd)"
 />
 ```
 

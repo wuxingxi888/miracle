@@ -25,9 +25,9 @@ app.use(SidebarItem);
 
 ```html
 <mi-sidebar v-model="active">
-  <mi-sidebar-item title="标签名称" />
-  <mi-sidebar-item title="标签名称" />
-  <mi-sidebar-item title="标签名称" />
+    <mi-sidebar-item title="标签名称" />
+    <mi-sidebar-item title="标签名称" />
+    <mi-sidebar-item title="标签名称" />
 </mi-sidebar>
 ```
 
@@ -35,10 +35,10 @@ app.use(SidebarItem);
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const active = ref(0);
-    return { active };
-  },
+    setup() {
+        const active = ref(0);
+        return { active };
+    },
 };
 ```
 
@@ -48,9 +48,9 @@ export default {
 
 ```html
 <mi-sidebar v-model="active">
-  <mi-sidebar-item title="标签名称" dot />
-  <mi-sidebar-item title="标签名称" badge="5" />
-  <mi-sidebar-item title="标签名称" />
+    <mi-sidebar-item title="标签名称" dot />
+    <mi-sidebar-item title="标签名称" badge="5" />
+    <mi-sidebar-item title="标签名称" />
 </mi-sidebar>
 ```
 
@@ -60,9 +60,9 @@ export default {
 
 ```html
 <mi-sidebar v-model="active">
-  <mi-sidebar-item title="标签名称" />
-  <mi-sidebar-item title="标签名称" disabled />
-  <mi-sidebar-item title="标签名称" />
+    <mi-sidebar-item title="标签名称" />
+    <mi-sidebar-item title="标签名称" disabled />
+    <mi-sidebar-item title="标签名称" />
 </mi-sidebar>
 ```
 
@@ -72,9 +72,9 @@ export default {
 
 ```html
 <mi-sidebar v-model="active" @change="onChange">
-  <mi-sidebar-item title="标签名 1" />
-  <mi-sidebar-item title="标签名 2" />
-  <mi-sidebar-item title="标签名 3" />
+    <mi-sidebar-item title="标签名 1" />
+    <mi-sidebar-item title="标签名 2" />
+    <mi-sidebar-item title="标签名 3" />
 </mi-sidebar>
 ```
 
@@ -83,14 +83,14 @@ import { ref } from 'vue';
 import { showToast } from '@miracle-web/ui';
 
 export default {
-  setup() {
-    const active = ref(0);
-    const onChange = (index) => showToast(`标签名 ${index + 1}`);
-    return {
-      active,
-      onChange,
-    };
-  },
+    setup() {
+        const active = ref(0);
+        const onChange = (index) => showToast(`标签名 ${index + 1}`);
+        return {
+            active,
+            onChange,
+        };
+    },
 };
 ```
 

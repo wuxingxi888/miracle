@@ -8,7 +8,7 @@ export type { ListProps };
 export type { ListInstance, ListDirection, ListThemeVars } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiList: typeof List;
-  }
+    export interface GlobalComponents {
+        MiList: typeof List;
+    }
 }

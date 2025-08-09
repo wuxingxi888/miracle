@@ -25,10 +25,10 @@ app.use(NumberKeyboard);
 ```html
 <mi-cell @touchstart.stop="show = true">弹出默认键盘</mi-cell>
 <mi-number-keyboard
-  :show="show"
-  @blur="show = false"
-  @input="onInput"
-  @delete="onDelete"
+    :show="show"
+    @blur="show = false"
+    @input="onInput"
+    @delete="onDelete"
 />
 ```
 
@@ -37,17 +37,17 @@ import { ref } from 'vue';
 import { showToast } from '@miracle-web/ui';
 
 export default {
-  setup() {
-    const show = ref(true);
-    const onInput = (value) => showToast(value);
-    const onDelete = () => showToast('删除');
+    setup() {
+        const show = ref(true);
+        const onInput = (value) => showToast(value);
+        const onDelete = () => showToast('删除');
 
-    return {
-      show,
-      onInput,
-      onDelete,
-    };
-  },
+        return {
+            show,
+            onInput,
+            onDelete,
+        };
+    },
 };
 ```
 
@@ -59,13 +59,13 @@ export default {
 
 ```html
 <mi-number-keyboard
-  :show="show"
-  theme="custom"
-  extra-key="."
-  close-button-text="完成"
-  @blur="show = false"
-  @input="onInput"
-  @delete="onDelete"
+    :show="show"
+    theme="custom"
+    extra-key="."
+    close-button-text="完成"
+    @blur="show = false"
+    @input="onInput"
+    @delete="onDelete"
 />
 ```
 
@@ -74,16 +74,16 @@ export default {
 通过 `extra-key` 属性可以设置左下角按键内容，比如需要输入身份证号时，可以将 `extra-key` 设置为 `X`。
 
 ```html
-<mi-cell plain type="primary" @touchstart.stop="show = true">
-  弹出身份证号键盘
-</mi-cell>
+<mi-cell plain type="primary" @touchstart.stop="show = true"
+    >弹出身份证号键盘</mi-cell
+>
 <mi-number-keyboard
-  :show="show"
-  extra-key="X"
-  close-button-text="完成"
-  @blur="show = false"
-  @input="onInput"
-  @delete="onDelete"
+    :show="show"
+    extra-key="X"
+    close-button-text="完成"
+    @blur="show = false"
+    @input="onInput"
+    @delete="onDelete"
 />
 ```
 
@@ -92,17 +92,17 @@ export default {
 通过 `title` 属性可以设置键盘标题。
 
 ```html
-<mi-cell plain type="primary" @touchstart.stop="show = true">
-  弹出带标题的键盘
-</mi-cell>
+<mi-cell plain type="primary" @touchstart.stop="show = true"
+    >弹出带标题的键盘</mi-cell
+>
 <mi-number-keyboard
-  :show="show"
-  title="键盘标题"
-  extra-key="."
-  close-button-text="完成"
-  @blur="show = false"
-  @input="onInput"
-  @delete="onDelete"
+    :show="show"
+    title="键盘标题"
+    extra-key="."
+    close-button-text="完成"
+    @blur="show = false"
+    @input="onInput"
+    @delete="onDelete"
 />
 ```
 
@@ -111,17 +111,17 @@ export default {
 当 theme 为 `custom` 时，支持以数组的形式配置两个 `extra-key`。
 
 ```html
-<mi-cell plain type="primary" @touchstart.stop="show = true">
-  弹出配置多个按键的键盘
-</mi-cell>
+<mi-cell plain type="primary" @touchstart.stop="show = true"
+    >弹出配置多个按键的键盘</mi-cell
+>
 <mi-number-keyboard
-  :show="show"
-  theme="custom"
-  :extra-key="['00', '.']"
-  close-button-text="完成"
-  @blur="show = false"
-  @input="onInput"
-  @delete="onDelete"
+    :show="show"
+    theme="custom"
+    :extra-key="['00', '.']"
+    close-button-text="完成"
+    @blur="show = false"
+    @input="onInput"
+    @delete="onDelete"
 />
 ```
 
@@ -130,13 +130,13 @@ export default {
 通过 `random-key-order` 属性可以随机排序数字键盘，常用于安全等级较高的场景。
 
 ```html
-<mi-cell @touchstart.stop="show = true"> 弹出配置随机数字的键盘 </mi-cell>
+<mi-cell @touchstart.stop="show = true">弹出配置随机数字的键盘</mi-cell>
 <mi-number-keyboard
-  :show="show"
-  random-key-order
-  @blur="show = false"
-  @input="onInput"
-  @delete="onDelete"
+    :show="show"
+    random-key-order
+    @blur="show = false"
+    @input="onInput"
+    @delete="onDelete"
 />
 ```
 
@@ -147,10 +147,10 @@ export default {
 ```html
 <mi-field v-model="value" readonly clickable @touchstart.stop="show = true" />
 <mi-number-keyboard
-  v-model="value"
-  :show="show"
-  :maxlength="6"
-  @blur="show = false"
+    v-model="value"
+    :show="show"
+    :maxlength="6"
+    @blur="show = false"
 />
 ```
 
@@ -158,14 +158,14 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const show = ref(true);
-    const value = ref('');
-    return {
-      show,
-      value,
-    };
-  },
+    setup() {
+        const show = ref(true);
+        const value = ref('');
+        return {
+            show,
+            value,
+        };
+    },
 };
 ```
 

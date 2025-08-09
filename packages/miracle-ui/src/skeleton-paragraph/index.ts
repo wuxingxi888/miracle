@@ -8,7 +8,7 @@ export { skeletonParagraphProps, DEFAULT_ROW_WIDTH } from './SkeletonParagraph';
 export type { SkeletonParagraphProps } from './SkeletonParagraph';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiSkeletonParagraph: typeof SkeletonParagraph;
-  }
+    export interface GlobalComponents {
+        MiSkeletonParagraph: typeof SkeletonParagraph;
+    }
 }

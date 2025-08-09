@@ -5,41 +5,41 @@ import { getMiracleConfig } from './constant.js';
 let hasYarnCache: boolean;
 
 export function hasYarn() {
-  if (hasYarnCache === undefined) {
-    try {
-      execSync('yarn --version', { stdio: 'ignore' });
-      hasYarnCache = true;
-    } catch (e) {
-      hasYarnCache = false;
+    if (hasYarnCache === undefined) {
+        try {
+            execSync('yarn --version', { stdio: 'ignore' });
+            hasYarnCache = true;
+        } catch (e) {
+            hasYarnCache = false;
+        }
     }
-  }
 
-  return hasYarnCache;
+    return hasYarnCache;
 }
 
 export function getPackageManager() {
-  const { build } = getMiracleConfig();
+    const { build } = getMiracleConfig();
 
-  if (build?.packageManager) {
-    return build?.packageManager;
-  }
+    if (build?.packageManager) {
+        return build?.packageManager;
+    }
 
-  return hasYarn() ? 'yarn' : 'npm';
+    return hasYarn() ? 'yarn' : 'npm';
 }
 
 export async function installDependencies() {
-  logger.info('Install Dependencies\n');
+    logger.info('Install Dependencies\n');
 
-  try {
-    const manager = getPackageManager();
+    try {
+        const manager = getPackageManager();
 
-    execSync(`${manager} install --prod=false`, {
-      stdio: 'inherit',
-    });
+        execSync(`${manager} install --prod=false`, {
+            stdio: 'inherit',
+        });
 
-    console.log('');
-  } catch (err) {
-    console.log(err);
-    throw err;
-  }
+        console.log('');
+    } catch (err) {
+        console.log(err);
+        throw err;
+    }
 }

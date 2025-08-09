@@ -2,144 +2,144 @@
 
 :root,
 :host {
-  --mi-action-sheet-max-height: 80%;
-  --mi-action-sheet-header-height: 48px;
-  --mi-action-sheet-header-font-size: var(--mi-font-size-lg);
-  --mi-action-sheet-description-color: var(--mi-text-color-2);
-  --mi-action-sheet-description-font-size: var(--mi-font-size-md);
-  --mi-action-sheet-description-line-height: var(--mi-line-height-md);
-  --mi-action-sheet-item-background: var(--mi-background-2);
-  --mi-action-sheet-item-font-size: var(--mi-font-size-lg);
-  --mi-action-sheet-item-line-height: var(--mi-line-height-lg);
-  --mi-action-sheet-item-text-color: var(--mi-text-color);
-  --mi-action-sheet-item-disabled-text-color: var(--mi-text-color-3);
-  --mi-action-sheet-item-icon-size: 18px;
-  --mi-action-sheet-item-icon-margin-right: var(--mi-padding-xs);
-  --mi-action-sheet-subname-color: var(--mi-text-color-2);
-  --mi-action-sheet-subname-font-size: var(--mi-font-size-sm);
-  --mi-action-sheet-subname-line-height: var(--mi-line-height-sm);
-  --mi-action-sheet-close-icon-size: 22px;
-  --mi-action-sheet-close-icon-color: var(--mi-gray-5);
-  --mi-action-sheet-close-icon-padding: 0 var(--mi-padding-md);
-  --mi-action-sheet-cancel-text-color: var(--mi-gray-7);
-  --mi-action-sheet-cancel-padding-top: var(--mi-padding-xs);
-  --mi-action-sheet-cancel-padding-color: var(--mi-background);
-  --mi-action-sheet-loading-icon-size: 22px;
+    --mi-action-sheet-max-height: 80%;
+    --mi-action-sheet-header-height: 48px;
+    --mi-action-sheet-header-font-size: var(--mi-font-size-lg);
+    --mi-action-sheet-description-color: var(--mi-text-color-2);
+    --mi-action-sheet-description-font-size: var(--mi-font-size-md);
+    --mi-action-sheet-description-line-height: var(--mi-line-height-md);
+    --mi-action-sheet-item-background: var(--mi-background-2);
+    --mi-action-sheet-item-font-size: var(--mi-font-size-lg);
+    --mi-action-sheet-item-line-height: var(--mi-line-height-lg);
+    --mi-action-sheet-item-text-color: var(--mi-text-color);
+    --mi-action-sheet-item-disabled-text-color: var(--mi-text-color-3);
+    --mi-action-sheet-item-icon-size: 18px;
+    --mi-action-sheet-item-icon-margin-right: var(--mi-padding-xs);
+    --mi-action-sheet-subname-color: var(--mi-text-color-2);
+    --mi-action-sheet-subname-font-size: var(--mi-font-size-sm);
+    --mi-action-sheet-subname-line-height: var(--mi-line-height-sm);
+    --mi-action-sheet-close-icon-size: 22px;
+    --mi-action-sheet-close-icon-color: var(--mi-gray-5);
+    --mi-action-sheet-close-icon-padding: 0 var(--mi-padding-md);
+    --mi-action-sheet-cancel-text-color: var(--mi-gray-7);
+    --mi-action-sheet-cancel-padding-top: var(--mi-padding-xs);
+    --mi-action-sheet-cancel-padding-color: var(--mi-background);
+    --mi-action-sheet-loading-icon-size: 22px;
 }
 
 .mi-action-sheet {
-  display: flex;
-  flex-direction: column;
-  max-height: var(--mi-action-sheet-max-height);
-  overflow: hidden;
-  color: var(--mi-action-sheet-item-text-color);
-
-  &__content {
-    flex: 1 auto;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  &__item,
-  &__cancel {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 14px var(--mi-padding-md);
-    font-size: var(--mi-action-sheet-item-font-size);
-    background: var(--mi-action-sheet-item-background);
-    border: none;
-    cursor: pointer;
+    flex-direction: column;
+    max-height: var(--mi-action-sheet-max-height);
+    overflow: hidden;
+    color: var(--mi-action-sheet-item-text-color);
 
-    &:active {
-      background-color: var(--mi-active-color);
-    }
-  }
-
-  &__item {
-    line-height: var(--mi-action-sheet-item-line-height);
-
-    &--loading,
-    &--disabled {
-      color: var(--mi-action-sheet-item-disabled-text-color);
-
-      &:active {
-        background-color: var(--mi-action-sheet-item-background);
-      }
+    &__content {
+        flex: 1 auto;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
-    &--disabled {
-      cursor: not-allowed;
+    &__item,
+    &__cancel {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 14px var(--mi-padding-md);
+        font-size: var(--mi-action-sheet-item-font-size);
+        background: var(--mi-action-sheet-item-background);
+        border: none;
+        cursor: pointer;
+
+        &:active {
+            background-color: var(--mi-active-color);
+        }
     }
 
-    &--loading {
-      cursor: default;
+    &__item {
+        line-height: var(--mi-action-sheet-item-line-height);
+
+        &--loading,
+        &--disabled {
+            color: var(--mi-action-sheet-item-disabled-text-color);
+
+            &:active {
+                background-color: var(--mi-action-sheet-item-background);
+            }
+        }
+
+        &--disabled {
+            cursor: not-allowed;
+        }
+
+        &--loading {
+            cursor: default;
+        }
+
+        &-icon {
+            font-size: var(--mi-action-sheet-item-icon-size);
+            margin-right: var(--mi-action-sheet-item-icon-margin-right);
+        }
     }
 
-    &-icon {
-      font-size: var(--mi-action-sheet-item-icon-size);
-      margin-right: var(--mi-action-sheet-item-icon-margin-right);
+    &__cancel {
+        flex-shrink: 0;
+        box-sizing: border-box;
+        color: var(--mi-action-sheet-cancel-text-color);
     }
-  }
 
-  &__cancel {
-    flex-shrink: 0;
-    box-sizing: border-box;
-    color: var(--mi-action-sheet-cancel-text-color);
-  }
-
-  &__subname {
-    width: 100%;
-    margin-top: var(--mi-padding-xs);
-    color: var(--mi-action-sheet-subname-color);
-    font-size: var(--mi-action-sheet-subname-font-size);
-    line-height: var(--mi-action-sheet-subname-line-height);
-    overflow-wrap: break-word;
-  }
-
-  &__gap {
-    display: block;
-    height: var(--mi-action-sheet-cancel-padding-top);
-    background: var(--mi-action-sheet-cancel-padding-color);
-  }
-
-  &__header {
-    flex-shrink: 0;
-    font-weight: var(--mi-font-bold);
-    font-size: var(--mi-action-sheet-header-font-size);
-    line-height: var(--mi-action-sheet-header-height);
-    text-align: center;
-  }
-
-  &__description {
-    position: relative;
-    flex-shrink: 0;
-    padding: 20px var(--mi-padding-md);
-    color: var(--mi-action-sheet-description-color);
-    font-size: var(--mi-action-sheet-description-font-size);
-    line-height: var(--mi-action-sheet-description-line-height);
-    text-align: center;
-
-    &::after {
-      .hairline-bottom(var(--mi-border-color), var(--mi-padding-md), var(--mi-padding-md));
+    &__subname {
+        width: 100%;
+        margin-top: var(--mi-padding-xs);
+        color: var(--mi-action-sheet-subname-color);
+        font-size: var(--mi-action-sheet-subname-font-size);
+        line-height: var(--mi-action-sheet-subname-line-height);
+        overflow-wrap: break-word;
     }
-  }
 
-  &__loading-icon .mi-loading__spinner {
-    width: var(--mi-action-sheet-loading-icon-size);
-    height: var(--mi-action-sheet-loading-icon-size);
-  }
+    &__gap {
+        display: block;
+        height: var(--mi-action-sheet-cancel-padding-top);
+        background: var(--mi-action-sheet-cancel-padding-color);
+    }
 
-  &__close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 1;
-    padding: var(--mi-action-sheet-close-icon-padding);
-    color: var(--mi-action-sheet-close-icon-color);
-    font-size: var(--mi-action-sheet-close-icon-size);
-    line-height: inherit;
-  }
+    &__header {
+        flex-shrink: 0;
+        font-weight: var(--mi-font-bold);
+        font-size: var(--mi-action-sheet-header-font-size);
+        line-height: var(--mi-action-sheet-header-height);
+        text-align: center;
+    }
+
+    &__description {
+        position: relative;
+        flex-shrink: 0;
+        padding: 20px var(--mi-padding-md);
+        color: var(--mi-action-sheet-description-color);
+        font-size: var(--mi-action-sheet-description-font-size);
+        line-height: var(--mi-action-sheet-description-line-height);
+        text-align: center;
+
+        &::after {
+            .hairline-bottom(var(--mi-border-color), var(--mi-padding-md), var(--mi-padding-md));
+        }
+    }
+
+    &__loading-icon .mi-loading__spinner {
+        width: var(--mi-action-sheet-loading-icon-size);
+        height: var(--mi-action-sheet-loading-icon-size);
+    }
+
+    &__close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        padding: var(--mi-action-sheet-close-icon-padding);
+        color: var(--mi-action-sheet-close-icon-color);
+        font-size: var(--mi-action-sheet-close-icon-size);
+        line-height: inherit;
+    }
 }

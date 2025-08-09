@@ -1,157 +1,158 @@
 :root,
 :host {
-  --mi-dialog-width: 320px;
-  --mi-dialog-small-screen-width: 90%;
-  --mi-dialog-font-size: var(--mi-font-size-lg);
-  --mi-dialog-transition: var(--mi-duration-base);
-  --mi-dialog-radius: 16px;
-  --mi-dialog-background: var(--mi-background-2);
-  --mi-dialog-header-font-weight: var(--mi-font-bold);
-  --mi-dialog-header-line-height: 24px;
-  --mi-dialog-header-padding-top: 26px;
-  --mi-dialog-header-isolated-padding: var(--mi-padding-lg) 0;
-  --mi-dialog-message-padding: var(--mi-padding-lg);
-  --mi-dialog-message-font-size: var(--mi-font-size-md);
-  --mi-dialog-message-line-height: var(--mi-line-height-md);
-  --mi-dialog-message-max-height: 60vh;
-  --mi-dialog-has-title-message-text-color: var(--mi-gray-7);
-  --mi-dialog-has-title-message-padding-top: var(--mi-padding-xs);
-  --mi-dialog-button-height: 48px;
-  --mi-dialog-round-button-height: 36px;
-  --mi-dialog-confirm-button-text-color: var(--mi-primary-color);
+    --mi-dialog-width: 320px;
+    --mi-dialog-small-screen-width: 90%;
+    --mi-dialog-font-size: var(--mi-font-size-lg);
+    --mi-dialog-transition: var(--mi-duration-base);
+    --mi-dialog-radius: 16px;
+    --mi-dialog-background: var(--mi-background-2);
+    --mi-dialog-header-font-weight: var(--mi-font-bold);
+    --mi-dialog-header-line-height: 24px;
+    --mi-dialog-header-padding-top: 26px;
+    --mi-dialog-header-isolated-padding: var(--mi-padding-lg) 0;
+    --mi-dialog-message-padding: var(--mi-padding-lg);
+    --mi-dialog-message-font-size: var(--mi-font-size-md);
+    --mi-dialog-message-line-height: var(--mi-line-height-md);
+    --mi-dialog-message-max-height: 60vh;
+    --mi-dialog-has-title-message-text-color: var(--mi-gray-7);
+    --mi-dialog-has-title-message-padding-top: var(--mi-padding-xs);
+    --mi-dialog-button-height: 48px;
+    --mi-dialog-round-button-height: 36px;
+    --mi-dialog-confirm-button-text-color: var(--mi-primary-color);
 }
 
 .mi-dialog {
-  top: 45%;
-  width: var(--mi-dialog-width);
-  overflow: hidden;
-  font-size: var(--mi-dialog-font-size);
-  background: var(--mi-dialog-background);
-  border-radius: var(--mi-dialog-radius);
-  backface-visibility: hidden; // avoid blurry text after scale animation
-  transition: var(--mi-dialog-transition);
-  transition-property: transform, opacity;
-
-  @media (max-width: 321px) {
-    width: var(--mi-dialog-small-screen-width);
-  }
-
-  &__header {
-    color: var(--mi-text-color);
-    padding-top: var(--mi-dialog-header-padding-top);
-    font-weight: var(--mi-dialog-header-font-weight);
-    line-height: var(--mi-dialog-header-line-height);
-    text-align: center;
-
-    &--isolated {
-      padding: var(--mi-dialog-header-isolated-padding);
-    }
-  }
-
-  &__content {
-    &--isolated {
-      display: flex;
-      align-items: center;
-      min-height: 104px;
-    }
-  }
-
-  &__message {
-    color: var(--mi-text-color);
-    flex: 1;
-    max-height: var(--mi-dialog-message-max-height);
-    padding: 26px var(--mi-dialog-message-padding);
-    overflow-y: auto;
-    font-size: var(--mi-dialog-message-font-size);
-    line-height: var(--mi-dialog-message-line-height);
-
-    // allow newline character
-    white-space: pre-wrap;
-    text-align: center;
-    word-wrap: break-word;
-    -webkit-overflow-scrolling: touch;
-
-    &--has-title {
-      padding-top: var(--mi-dialog-has-title-message-padding-top);
-      color: var(--mi-dialog-has-title-message-text-color);
-    }
-
-    &--left {
-      text-align: left;
-    }
-
-    &--right {
-      text-align: right;
-    }
-
-    &--justify {
-      text-align: justify;
-    }
-  }
-
-  &__footer {
-    display: flex;
+    top: 45%;
+    width: var(--mi-dialog-width);
     overflow: hidden;
-    user-select: none;
-  }
+    font-size: var(--mi-dialog-font-size);
+    background: var(--mi-dialog-background);
+    border-radius: var(--mi-dialog-radius);
+    backface-visibility: hidden; // avoid blurry text after scale animation
+    transition: var(--mi-dialog-transition);
+    transition-property: transform, opacity;
 
-  &__confirm,
-  &__cancel {
-    flex: 1;
-    height: var(--mi-dialog-button-height);
-    margin: 0;
-    border: 0;
-    border-radius: 0;
-  }
-
-  &__confirm {
-    &,
-    &:active {
-      color: var(--mi-dialog-confirm-button-text-color);
-    }
-  }
-
-  &--round-button {
-    .mi-dialog__footer {
-      position: relative;
-      height: auto;
-      padding: var(--mi-padding-xs) var(--mi-padding-lg) var(--mi-padding-md);
+    @media (max-width: 321px) {
+        width: var(--mi-dialog-small-screen-width);
     }
 
-    .mi-dialog__message {
-      padding-bottom: var(--mi-padding-md);
-      color: var(--mi-text-color);
+    &__header {
+        color: var(--mi-text-color);
+        padding-top: var(--mi-dialog-header-padding-top);
+        font-weight: var(--mi-dialog-header-font-weight);
+        line-height: var(--mi-dialog-header-line-height);
+        text-align: center;
+
+        &--isolated {
+            padding: var(--mi-dialog-header-isolated-padding);
+        }
     }
 
-    .mi-dialog__confirm,
-    .mi-dialog__cancel {
-      height: var(--mi-dialog-round-button-height);
+    &__content {
+        &--isolated {
+            display: flex;
+            align-items: center;
+            min-height: 104px;
+        }
     }
 
-    .mi-dialog__confirm {
-      color: var(--mi-white);
+    &__message {
+        color: var(--mi-text-color);
+        flex: 1;
+        max-height: var(--mi-dialog-message-max-height);
+        padding: 26px var(--mi-dialog-message-padding);
+        overflow-y: auto;
+        font-size: var(--mi-dialog-message-font-size);
+        line-height: var(--mi-dialog-message-line-height);
+
+        // allow newline character
+        white-space: pre-wrap;
+        text-align: center;
+        word-wrap: break-word;
+        -webkit-overflow-scrolling: touch;
+
+        &--has-title {
+            padding-top: var(--mi-dialog-has-title-message-padding-top);
+            color: var(--mi-dialog-has-title-message-text-color);
+        }
+
+        &--left {
+            text-align: left;
+        }
+
+        &--right {
+            text-align: right;
+        }
+
+        &--justify {
+            text-align: justify;
+        }
     }
 
-    .mi-action-bar-button {
-      &--first {
-        border-top-left-radius: var(--mi-radius-max);
-        border-bottom-left-radius: var(--mi-radius-max);
-      }
-
-      &--last {
-        border-top-right-radius: var(--mi-radius-max);
-        border-bottom-right-radius: var(--mi-radius-max);
-      }
+    &__footer {
+        display: flex;
+        overflow: hidden;
+        user-select: none;
     }
-  }
 
-  &-bounce-enter-from {
-    transform: translate3d(0, -50%, 0) scale(0.7);
-    opacity: 0;
-  }
+    &__confirm,
+    &__cancel {
+        flex: 1;
+        height: var(--mi-dialog-button-height);
+        margin: 0;
+        border: 0;
+        border-radius: 0;
+    }
 
-  &-bounce-leave-active {
-    transform: translate3d(0, -50%, 0) scale(0.9);
-    opacity: 0;
-  }
+    &__confirm {
+        &,
+        &:active {
+            color: var(--mi-dialog-confirm-button-text-color);
+        }
+    }
+
+    &--round-button {
+        .mi-dialog__footer {
+            position: relative;
+            height: auto;
+            padding: var(--mi-padding-xs) var(--mi-padding-lg)
+                var(--mi-padding-md);
+        }
+
+        .mi-dialog__message {
+            padding-bottom: var(--mi-padding-md);
+            color: var(--mi-text-color);
+        }
+
+        .mi-dialog__confirm,
+        .mi-dialog__cancel {
+            height: var(--mi-dialog-round-button-height);
+        }
+
+        .mi-dialog__confirm {
+            color: var(--mi-white);
+        }
+
+        .mi-action-bar-button {
+            &--first {
+                border-top-left-radius: var(--mi-radius-max);
+                border-bottom-left-radius: var(--mi-radius-max);
+            }
+
+            &--last {
+                border-top-right-radius: var(--mi-radius-max);
+                border-bottom-right-radius: var(--mi-radius-max);
+            }
+        }
+    }
+
+    &-bounce-enter-from {
+        transform: translate3d(0, -50%, 0) scale(0.7);
+        opacity: 0;
+    }
+
+    &-bounce-leave-active {
+        transform: translate3d(0, -50%, 0) scale(0.9);
+        opacity: 0;
+    }
 }

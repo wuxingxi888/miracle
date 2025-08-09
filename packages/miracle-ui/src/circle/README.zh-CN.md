@@ -24,10 +24,10 @@ app.use(Circle);
 
 ```html
 <mi-circle
-  v-model:current-rate="currentRate"
-  :rate="30"
-  :speed="100"
-  :text="text"
+    v-model:current-rate="currentRate"
+    :rate="30"
+    :speed="100"
+    :text="text"
 />
 ```
 
@@ -35,15 +35,15 @@ app.use(Circle);
 import { ref, computed } from 'vue';
 
 export default {
-  setup() {
-    const currentRate = ref(0);
-    const text = computed(() => currentRate.value.toFixed(0) + '%');
+    setup() {
+        const currentRate = ref(0);
+        const text = computed(() => currentRate.value.toFixed(0) + '%');
 
-    return {
-      text,
-      currentRate,
-    };
-  },
+        return {
+            text,
+            currentRate,
+        };
+    },
 };
 ```
 
@@ -53,10 +53,10 @@ export default {
 
 ```html
 <mi-circle
-  v-model:current-rate="currentRate"
-  :rate="rate"
-  :stroke-width="60"
-  text="宽度定制"
+    v-model:current-rate="currentRate"
+    :rate="rate"
+    :stroke-width="60"
+    text="宽度定制"
 />
 ```
 
@@ -79,10 +79,10 @@ const pxWidth = (strokeWidth * circleWidth) / viewBox;
 
 ```html
 <mi-circle
-  v-model:current-rate="currentRate"
-  :rate="rate"
-  layer-color="#ebedf0"
-  text="颜色定制"
+    v-model:current-rate="currentRate"
+    :rate="rate"
+    layer-color="#ebedf0"
+    text="颜色定制"
 />
 ```
 
@@ -92,10 +92,10 @@ const pxWidth = (strokeWidth * circleWidth) / viewBox;
 
 ```html
 <mi-circle
-  v-model:current-rate="currentRate"
-  :rate="rate"
-  :color="gradientColor"
-  text="渐变色"
+    v-model:current-rate="currentRate"
+    :rate="rate"
+    :color="gradientColor"
+    text="渐变色"
 />
 ```
 
@@ -103,18 +103,18 @@ const pxWidth = (strokeWidth * circleWidth) / viewBox;
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const currentRate = ref(0);
-    const gradientColor = {
-      '0%': '#3fecff',
-      '100%': '#6149f6',
-    };
+    setup() {
+        const currentRate = ref(0);
+        const gradientColor = {
+            '0%': '#3fecff',
+            '100%': '#6149f6',
+        };
 
-    return {
-      currentRate,
-      gradientColor,
-    };
-  },
+        return {
+            currentRate,
+            gradientColor,
+        };
+    },
 };
 ```
 
@@ -124,10 +124,10 @@ export default {
 
 ```html
 <mi-circle
-  v-model:current-rate="currentRate"
-  :rate="rate"
-  :clockwise="false"
-  text="逆时针方向"
+    v-model:current-rate="currentRate"
+    :rate="rate"
+    :clockwise="false"
+    text="逆时针方向"
 />
 ```
 
@@ -137,10 +137,10 @@ export default {
 
 ```html
 <mi-circle
-  v-model:current-rate="currentRate"
-  :rate="rate"
-  size="120px"
-  text="大小定制"
+    v-model:current-rate="currentRate"
+    :rate="rate"
+    size="120px"
+    text="大小定制"
 />
 ```
 
@@ -150,22 +150,22 @@ export default {
 
 ```html
 <mi-circle
-  v-model:current-rate="currentRate"
-  :rate="rate"
-  text="左侧"
-  start-position="left"
+    v-model:current-rate="currentRate"
+    :rate="rate"
+    text="左侧"
+    start-position="left"
 />
 <mi-circle
-  v-model:current-rate="currentRate"
-  :rate="rate"
-  text="右侧"
-  start-position="right"
+    v-model:current-rate="currentRate"
+    :rate="rate"
+    text="右侧"
+    start-position="right"
 />
 <mi-circle
-  v-model:current-rate="currentRate"
-  :rate="rate"
-  text="底部"
-  start-position="bottom"
+    v-model:current-rate="currentRate"
+    :rate="rate"
+    text="底部"
+    start-position="bottom"
 />
 ```
 

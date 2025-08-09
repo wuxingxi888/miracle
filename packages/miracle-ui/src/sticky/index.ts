@@ -8,7 +8,7 @@ export type { StickyProps, StickyPosition } from './Sticky';
 export type { StickyThemeVars } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiSticky: typeof Sticky;
-  }
+    export interface GlobalComponents {
+        MiSticky: typeof Sticky;
+    }
 }

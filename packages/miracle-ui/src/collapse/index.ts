@@ -5,13 +5,13 @@ export const Collapse = withInstall(_Collapse);
 export default Collapse;
 export { collapseProps } from './Collapse';
 export type {
-  CollapseProps,
-  CollapseInstance,
-  CollapseToggleAllOptions,
+    CollapseProps,
+    CollapseInstance,
+    CollapseToggleAllOptions,
 } from './Collapse';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiCollapse: typeof Collapse;
-  }
+    export interface GlobalComponents {
+        MiCollapse: typeof Collapse;
+    }
 }

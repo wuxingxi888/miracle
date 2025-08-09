@@ -8,7 +8,7 @@ export type { ProgressProps };
 export type { ProgressInstance, ProgressThemeVars } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiProgress: typeof Progress;
-  }
+    export interface GlobalComponents {
+        MiProgress: typeof Progress;
+    }
 }

@@ -20,14 +20,14 @@ import { ref } from 'vue';
 import { useCustomFieldValue } from '@miracle-web/use';
 
 export default {
-  setup() {
-    const myValue = ref(0);
+    setup() {
+        const myValue = ref(0);
 
-    // 此处传入的值会替代 Field 组件内部的 value
-    useCustomFieldValue(() => myValue.value);
+        // 此处传入的值会替代 Field 组件内部的 value
+        useCustomFieldValue(() => myValue.value);
 
-    return { myValue };
-  },
+        return { myValue };
+    },
 };
 ```
 
@@ -37,13 +37,13 @@ export default {
 
 ```html
 <mi-form>
-  <!-- 这是一个自定义表单项 -->
-  <!-- 当表单提交时，会包括 useCustomFieldValue 中传入的值 -->
-  <mi-field name="my-field" label="自定义表单项">
-    <template #input>
-      <my-component />
-    </template>
-  </mi-field>
+    <!-- 这是一个自定义表单项 -->
+    <!-- 当表单提交时，会包括 useCustomFieldValue 中传入的值 -->
+    <mi-field name="my-field" label="自定义表单项">
+        <template #input>
+            <my-component />
+        </template>
+    </mi-field>
 </mi-form>
 ```
 

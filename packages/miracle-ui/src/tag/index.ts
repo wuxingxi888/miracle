@@ -8,7 +8,7 @@ export type { TagProps } from './Tag';
 export type { TagSize, TagType, TagThemeVars } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiTag: typeof Tag;
-  }
+    export interface GlobalComponents {
+        MiTag: typeof Tag;
+    }
 }

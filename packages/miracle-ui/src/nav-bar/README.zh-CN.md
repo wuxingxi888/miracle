@@ -32,21 +32,21 @@ app.use(NavBar);
 
 ```html
 <mi-nav-bar
-  title="标题"
-  left-text="返回"
-  left-arrow
-  @click-left="onClickLeft"
+    title="标题"
+    left-text="返回"
+    left-arrow
+    @click-left="onClickLeft"
 />
 ```
 
 ```js
 export default {
-  setup() {
-    const onClickLeft = () => history.back();
-    return {
-      onClickLeft,
-    };
-  },
+    setup() {
+        const onClickLeft = () => history.back();
+        return {
+            onClickLeft,
+        };
+    },
 };
 ```
 
@@ -56,12 +56,12 @@ export default {
 
 ```html
 <mi-nav-bar
-  title="标题"
-  left-text="返回"
-  right-text="按钮"
-  left-arrow
-  @click-left="onClickLeft"
-  @click-right="onClickRight"
+    title="标题"
+    left-text="返回"
+    right-text="按钮"
+    left-arrow
+    @click-left="onClickLeft"
+    @click-right="onClickRight"
 />
 ```
 
@@ -69,14 +69,14 @@ export default {
 import { showToast } from '@miracle-web/ui';
 
 export default {
-  setup() {
-    const onClickLeft = () => history.back();
-    const onClickRight = () => showToast('按钮');
-    return {
-      onClickLeft,
-      onClickRight,
-    };
-  },
+    setup() {
+        const onClickLeft = () => history.back();
+        const onClickRight = () => showToast('按钮');
+        return {
+            onClickLeft,
+            onClickRight,
+        };
+    },
 };
 ```
 
@@ -86,9 +86,9 @@ export default {
 
 ```html
 <mi-nav-bar title="标题" left-text="返回" left-arrow>
-  <template #right>
-    <mi-icon name="search" size="18" />
-  </template>
+    <template #right>
+        <mi-icon name="search" size="18" />
+    </template>
 </mi-nav-bar>
 ```
 
@@ -98,12 +98,12 @@ export default {
 
 ```html
 <mi-nav-bar
-  title="标题"
-  left-text="返回"
-  right-text="按钮"
-  left-arrow
-  left-disabled
-  right-disabled
+    title="标题"
+    left-text="返回"
+    right-text="按钮"
+    left-arrow
+    left-disabled
+    right-disabled
 />
 ```
 

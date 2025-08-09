@@ -9,7 +9,7 @@ export type { BackTopProps } from './BackTop';
 export type { BackTopThemeVars } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiBackTop: typeof BackTop;
-  }
+    export interface GlobalComponents {
+        MiBackTop: typeof BackTop;
+    }
 }

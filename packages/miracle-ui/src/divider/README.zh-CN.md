@@ -57,10 +57,9 @@ app.use(Divider);
 
 ```html
 <mi-divider
-  :style="{ color: '#1989fa', borderColor: '#1989fa', padding: '0 16px' }"
+    :style="{ color: '#1989fa', borderColor: '#1989fa', padding: '0 16px' }"
+    >文本</mi-divider
 >
-  文本
-</mi-divider>
 ```
 
 ### 垂直

@@ -1,23 +1,23 @@
 :root,
 :host {
-  --mi-skeleton-avatar-size: 32px;
-  --mi-skeleton-avatar-background: var(--mi-active-color);
+    --mi-skeleton-avatar-size: 32px;
+    --mi-skeleton-avatar-background: var(--mi-active-color);
 }
 
 .mi-skeleton {
-  &-avatar {
-    flex-shrink: 0;
-    width: var(--mi-skeleton-avatar-size);
-    height: var(--mi-skeleton-avatar-size);
-    margin-right: var(--mi-padding-md);
-    background: var(--mi-skeleton-avatar-background);
+    &-avatar {
+        flex-shrink: 0;
+        width: var(--mi-skeleton-avatar-size);
+        height: var(--mi-skeleton-avatar-size);
+        margin-right: var(--mi-padding-md);
+        background: var(--mi-skeleton-avatar-background);
 
-    &--round {
-      border-radius: var(--mi-radius-max);
+        &--round {
+            border-radius: var(--mi-radius-max);
+        }
     }
-  }
 
-  &-avatar + &__content {
-    padding-top: var(--mi-padding-xs);
-  }
+    &-avatar + &__content {
+        padding-top: var(--mi-padding-xs);
+    }
 }

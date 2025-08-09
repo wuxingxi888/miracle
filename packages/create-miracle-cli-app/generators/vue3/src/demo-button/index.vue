@@ -1,20 +1,20 @@
 <template>
-  <button class="demo-button">
-    <slot />
-  </button>
+    <button class="demo-button">
+        <slot />
+    </button>
 </template>
 
 <script>
 export default {
-  name: 'DemoButton',
+    name: 'DemoButton',
 
-  props: {
-    color: String,
-    type: {
-      type: String,
-      default: 'primary',
+    props: {
+        color: String,
+        type: {
+            type: String,
+            default: 'primary',
+        },
     },
-  },
 };
 </script>
 

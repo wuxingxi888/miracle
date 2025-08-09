@@ -5,13 +5,13 @@ export const NumberKeyboard = withInstall(_NumberKeyboard);
 export default NumberKeyboard;
 export { numberKeyboardProps } from './NumberKeyboard';
 export type {
-  NumberKeyboardProps,
-  NumberKeyboardTheme,
+    NumberKeyboardProps,
+    NumberKeyboardTheme,
 } from './NumberKeyboard';
 export type { NumberKeyboardThemeVars } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiNumberKeyboard: typeof NumberKeyboard;
-  }
+    export interface GlobalComponents {
+        MiNumberKeyboard: typeof NumberKeyboard;
+    }
 }

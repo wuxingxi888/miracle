@@ -8,7 +8,7 @@ export type { PickerGroupProps };
 export type { PickerGroupThemeVars } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiPickerGroup: typeof PickerGroup;
-  }
+    export interface GlobalComponents {
+        MiPickerGroup: typeof PickerGroup;
+    }
 }

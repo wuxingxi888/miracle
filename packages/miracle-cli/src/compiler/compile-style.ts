@@ -9,34 +9,34 @@ import { compileSass } from './compile-sass.js';
 const { readFileSync, writeFileSync, removeSync } = fse;
 
 async function compileFile(filePath: string) {
-  const parsedPath = parse(filePath);
+    const parsedPath = parse(filePath);
 
-  try {
-    if (parsedPath.ext === '.less') {
-      const source = await compileLess(filePath);
-      return await compileCss(source);
+    try {
+        if (parsedPath.ext === '.less') {
+            const source = await compileLess(filePath);
+            return await compileCss(source);
+        }
+
+        if (parsedPath.ext === '.scss') {
+            const source = await compileSass(filePath);
+            return await compileCss(source);
+        }
+
+        const source = readFileSync(filePath, 'utf-8');
+        return await compileCss(source);
+    } catch (err) {
+        logger.error('Compile style failed: ' + filePath);
+        throw err;
     }
-
-    if (parsedPath.ext === '.scss') {
-      const source = await compileSass(filePath);
-      return await compileCss(source);
-    }
-
-    const source = readFileSync(filePath, 'utf-8');
-    return await compileCss(source);
-  } catch (err) {
-    logger.error('Compile style failed: ' + filePath);
-    throw err;
-  }
 }
 
 export async function compileStyle(filePath: string) {
-  const css = await compileFile(filePath);
-  const miracleConfig = getMiracleConfig();
+    const css = await compileFile(filePath);
+    const miracleConfig = getMiracleConfig();
 
-  if (miracleConfig.build?.css?.removeSourceFile) {
-    removeSync(filePath);
-  }
+    if (miracleConfig.build?.css?.removeSourceFile) {
+        removeSync(filePath);
+    }
 
-  writeFileSync(replaceExt(filePath, '.css'), css);
+    writeFileSync(replaceExt(filePath, '.css'), css);
 }

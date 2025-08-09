@@ -24,12 +24,12 @@ List 组件通过 `loading` 和 `finished` 两个变量控制加载状态，当�
 
 ```html
 <mi-list
-  v-model:loading="loading"
-  :finished="finished"
-  finished-text="没有更多了"
-  @load="onLoad"
+    v-model:loading="loading"
+    :finished="finished"
+    finished-text="没有更多了"
+    @load="onLoad"
 >
-  <mi-cell v-for="item in list" :key="item" :title="item" />
+    <mi-cell v-for="item in list" :key="item" :title="item" />
 </mi-list>
 ```
 
@@ -37,36 +37,36 @@ List 组件通过 `loading` 和 `finished` 两个变量控制加载状态，当�
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const list = ref([]);
-    const loading = ref(false);
-    const finished = ref(false);
+    setup() {
+        const list = ref([]);
+        const loading = ref(false);
+        const finished = ref(false);
 
-    const onLoad = () => {
-      // 异步更新数据
-      // setTimeout 仅做示例，真实场景中一般为 ajax 请求
-      setTimeout(() => {
-        for (let i = 0; i < 10; i++) {
-          list.value.push(list.value.length + 1);
-        }
+        const onLoad = () => {
+            // 异步更新数据
+            // setTimeout 仅做示例，真实场景中一般为 ajax 请求
+            setTimeout(() => {
+                for (let i = 0; i < 10; i++) {
+                    list.value.push(list.value.length + 1);
+                }
 
-        // 加载状态结束
-        loading.value = false;
+                // 加载状态结束
+                loading.value = false;
 
-        // 数据全部加载完成
-        if (list.value.length >= 40) {
-          finished.value = true;
-        }
-      }, 1000);
-    };
+                // 数据全部加载完成
+                if (list.value.length >= 40) {
+                    finished.value = true;
+                }
+            }, 1000);
+        };
 
-    return {
-      list,
-      onLoad,
-      loading,
-      finished,
-    };
-  },
+        return {
+            list,
+            onLoad,
+            loading,
+            finished,
+        };
+    },
 };
 ```
 
@@ -76,12 +76,12 @@ export default {
 
 ```html
 <mi-list
-  v-model:loading="loading"
-  v-model:error="error"
-  error-text="请求失败，点击重新加载"
-  @load="onLoad"
+    v-model:loading="loading"
+    v-model:error="error"
+    error-text="请求失败，点击重新加载"
+    @load="onLoad"
 >
-  <mi-cell v-for="item in list" :key="item" :title="item" />
+    <mi-cell v-for="item in list" :key="item" :title="item" />
 </mi-list>
 ```
 
@@ -89,24 +89,24 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const list = ref([]);
-    const error = ref(false);
-    const loading = ref(false);
-    const onLoad = () => {
-      fetchSomeThing().catch(() => {
-        loading.value = false;
-        error.value = true;
-      });
-    };
+    setup() {
+        const list = ref([]);
+        const error = ref(false);
+        const loading = ref(false);
+        const onLoad = () => {
+            fetchSomeThing().catch(() => {
+                loading.value = false;
+                error.value = true;
+            });
+        };
 
-    return {
-      list,
-      error,
-      onLoad,
-      loading,
-    };
-  },
+        return {
+            list,
+            error,
+            onLoad,
+            loading,
+        };
+    },
 };
 ```
 
@@ -116,14 +116,14 @@ List 组件可以与 [PullRefresh](#/zh-CN/pull-refresh) 组件结合使用，�
 
 ```html
 <mi-pull-refresh v-model="refreshing" @refresh="onRefresh">
-  <mi-list
-    v-model:loading="loading"
-    :finished="finished"
-    finished-text="没有更多了"
-    @load="onLoad"
-  >
-    <mi-cell v-for="item in list" :key="item" :title="item" />
-  </mi-list>
+    <mi-list
+        v-model:loading="loading"
+        :finished="finished"
+        finished-text="没有更多了"
+        @load="onLoad"
+    >
+        <mi-cell v-for="item in list" :key="item" :title="item" />
+    </mi-list>
 </mi-pull-refresh>
 ```
 
@@ -131,49 +131,49 @@ List 组件可以与 [PullRefresh](#/zh-CN/pull-refresh) 组件结合使用，�
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const list = ref([]);
-    const loading = ref(false);
-    const finished = ref(false);
-    const refreshing = ref(false);
+    setup() {
+        const list = ref([]);
+        const loading = ref(false);
+        const finished = ref(false);
+        const refreshing = ref(false);
 
-    const onLoad = () => {
-      setTimeout(() => {
-        if (refreshing.value) {
-          list.value = [];
-          refreshing.value = false;
-        }
+        const onLoad = () => {
+            setTimeout(() => {
+                if (refreshing.value) {
+                    list.value = [];
+                    refreshing.value = false;
+                }
 
-        for (let i = 0; i < 10; i++) {
-          list.value.push(list.value.length + 1);
-        }
-        loading.value = false;
+                for (let i = 0; i < 10; i++) {
+                    list.value.push(list.value.length + 1);
+                }
+                loading.value = false;
 
-        if (list.value.length >= 40) {
-          finished.value = true;
-        }
-      }, 1000);
-    };
+                if (list.value.length >= 40) {
+                    finished.value = true;
+                }
+            }, 1000);
+        };
 
-    const onRefresh = () => {
-      // 清空列表数据
-      finished.value = false;
+        const onRefresh = () => {
+            // 清空列表数据
+            finished.value = false;
 
-      // 重新加载数据
-      // 将 loading 设置为 true，表示处于加载状态
-      loading.value = true;
-      onLoad();
-    };
+            // 重新加载数据
+            // 将 loading 设置为 true，表示处于加载状态
+            loading.value = true;
+            onLoad();
+        };
 
-    return {
-      list,
-      onLoad,
-      loading,
-      finished,
-      onRefresh,
-      refreshing,
-    };
-  },
+        return {
+            list,
+            onLoad,
+            loading,
+            finished,
+            onRefresh,
+            refreshing,
+        };
+    },
 };
 ```
 
@@ -270,9 +270,9 @@ List 初始化后会触发一次 load 事件，用于加载第一屏的数据，
 
 `List` 有以下三种状态，理解这些状态有助于你正确地使用 `List` 组件：
 
-- 非加载中，`loading` 为 `false`，此时会根据列表滚动位置判断是否触发 `load` 事件（列表内容不足一屏幕时，会直接触发）。
-- 加载中，`loading` 为 `true`，表示正在发送异步请求，此时不会触发 `load` 事件。
-- 加载完成，`finished` 为 `true`，此时不会触发 `load` 事件。
+-   非加载中，`loading` 为 `false`，此时会根据列表滚动位置判断是否触发 `load` 事件（列表内容不足一屏幕时，会直接触发）。
+-   加载中，`loading` 为 `true`，表示正在发送异步请求，此时不会触发 `load` 事件。
+-   加载完成，`finished` 为 `true`，此时不会触发 `load` 事件。
 
 在每次请求完毕后，需要手动将 `loading` 设置为 `false`，表示加载结束。
 
@@ -282,11 +282,11 @@ List 初始化后会触发一次 load 事件，用于加载第一屏的数据，
 
 ```html
 <mi-list>
-  <div class="mi-clearfix">
-    <div class="float-item" />
-    <div class="float-item" />
-    <div class="float-item" />
-  </div>
+    <div class="mi-clearfix">
+        <div class="float-item" />
+        <div class="float-item" />
+        <div class="float-item" />
+    </div>
 </mi-list>
 ```
 
@@ -297,7 +297,7 @@ List 初始化后会触发一次 load 事件，用于加载第一屏的数据，
 ```css
 html,
 body {
-  overflow-x: hidden;
+    overflow-x: hidden;
 }
 ```
 

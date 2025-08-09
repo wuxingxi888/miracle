@@ -25,10 +25,10 @@ app.use(TabbarItem);
 
 ```html
 <mi-tabbar v-model="active">
-  <mi-tabbar-item icon="home-o">标签</mi-tabbar-item>
-  <mi-tabbar-item icon="search">标签</mi-tabbar-item>
-  <mi-tabbar-item icon="friends-o">标签</mi-tabbar-item>
-  <mi-tabbar-item icon="setting-o">标签</mi-tabbar-item>
+    <mi-tabbar-item icon="home-o">标签</mi-tabbar-item>
+    <mi-tabbar-item icon="search">标签</mi-tabbar-item>
+    <mi-tabbar-item icon="friends-o">标签</mi-tabbar-item>
+    <mi-tabbar-item icon="setting-o">标签</mi-tabbar-item>
 </mi-tabbar>
 ```
 
@@ -36,10 +36,10 @@ app.use(TabbarItem);
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const active = ref(0);
-    return { active };
-  },
+    setup() {
+        const active = ref(0);
+        return { active };
+    },
 };
 ```
 
@@ -49,10 +49,10 @@ export default {
 
 ```html
 <mi-tabbar v-model="active">
-  <mi-tabbar-item name="home" icon="home-o">标签</mi-tabbar-item>
-  <mi-tabbar-item name="search" icon="search">标签</mi-tabbar-item>
-  <mi-tabbar-item name="friends" icon="friends-o">标签</mi-tabbar-item>
-  <mi-tabbar-item name="setting" icon="setting-o">标签</mi-tabbar-item>
+    <mi-tabbar-item name="home" icon="home-o">标签</mi-tabbar-item>
+    <mi-tabbar-item name="search" icon="search">标签</mi-tabbar-item>
+    <mi-tabbar-item name="friends" icon="friends-o">标签</mi-tabbar-item>
+    <mi-tabbar-item name="setting" icon="setting-o">标签</mi-tabbar-item>
 </mi-tabbar>
 ```
 
@@ -60,10 +60,10 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const active = ref('home');
-    return { active };
-  },
+    setup() {
+        const active = ref('home');
+        return { active };
+    },
 };
 ```
 
@@ -73,10 +73,10 @@ export default {
 
 ```html
 <mi-tabbar v-model="active">
-  <mi-tabbar-item icon="home-o">标签</mi-tabbar-item>
-  <mi-tabbar-item icon="search" dot>标签</mi-tabbar-item>
-  <mi-tabbar-item icon="friends-o" badge="5">标签</mi-tabbar-item>
-  <mi-tabbar-item icon="setting-o" badge="20">标签</mi-tabbar-item>
+    <mi-tabbar-item icon="home-o">标签</mi-tabbar-item>
+    <mi-tabbar-item icon="search" dot>标签</mi-tabbar-item>
+    <mi-tabbar-item icon="friends-o" badge="5">标签</mi-tabbar-item>
+    <mi-tabbar-item icon="setting-o" badge="20">标签</mi-tabbar-item>
 </mi-tabbar>
 ```
 
@@ -86,14 +86,14 @@ export default {
 
 ```html
 <mi-tabbar v-model="active">
-  <mi-tabbar-item badge="3">
-    <span>自定义</span>
-    <template #icon="props">
-      <img :src="props.active ? icon.active : icon.inactive" />
-    </template>
-  </mi-tabbar-item>
-  <mi-tabbar-item icon="search">标签</mi-tabbar-item>
-  <mi-tabbar-item icon="setting-o">标签</mi-tabbar-item>
+    <mi-tabbar-item badge="3">
+        <span>自定义</span>
+        <template #icon="props">
+            <img :src="props.active ? icon.active : icon.inactive" />
+        </template>
+    </mi-tabbar-item>
+    <mi-tabbar-item icon="search">标签</mi-tabbar-item>
+    <mi-tabbar-item icon="setting-o">标签</mi-tabbar-item>
 </mi-tabbar>
 ```
 
@@ -101,19 +101,18 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const active = ref(0);
-    const icon = {
-      active:
-        'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/home-active.png',
-      inactive:
-        'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/home-inactive.png',
-    };
-    return {
-      icon,
-      active,
-    };
-  },
+    setup() {
+        const active = ref(0);
+        const icon = {
+            active: 'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/home-active.png',
+            inactive:
+                'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/home-inactive.png',
+        };
+        return {
+            icon,
+            active,
+        };
+    },
 };
 ```
 
@@ -123,10 +122,10 @@ export default {
 
 ```html
 <mi-tabbar v-model="active" active-color="#ee0a24">
-  <mi-tabbar-item icon="home-o">标签</mi-tabbar-item>
-  <mi-tabbar-item icon="search">标签</mi-tabbar-item>
-  <mi-tabbar-item icon="friends-o">标签</mi-tabbar-item>
-  <mi-tabbar-item icon="setting-o">标签</mi-tabbar-item>
+    <mi-tabbar-item icon="home-o">标签</mi-tabbar-item>
+    <mi-tabbar-item icon="search">标签</mi-tabbar-item>
+    <mi-tabbar-item icon="friends-o">标签</mi-tabbar-item>
+    <mi-tabbar-item icon="setting-o">标签</mi-tabbar-item>
 </mi-tabbar>
 ```
 
@@ -136,10 +135,10 @@ export default {
 
 ```html
 <mi-tabbar v-model="active" @change="onChange">
-  <mi-tabbar-item icon="home-o">标签 1</mi-tabbar-item>
-  <mi-tabbar-item icon="search">标签 2</mi-tabbar-item>
-  <mi-tabbar-item icon="friends-o">标签 3</mi-tabbar-item>
-  <mi-tabbar-item icon="setting-o">标签 4</mi-tabbar-item>
+    <mi-tabbar-item icon="home-o">标签 1</mi-tabbar-item>
+    <mi-tabbar-item icon="search">标签 2</mi-tabbar-item>
+    <mi-tabbar-item icon="friends-o">标签 3</mi-tabbar-item>
+    <mi-tabbar-item icon="setting-o">标签 4</mi-tabbar-item>
 </mi-tabbar>
 ```
 
@@ -148,14 +147,14 @@ import { ref } from 'vue';
 import { showToast } from '@miracle-web/ui';
 
 export default {
-  setup() {
-    const active = ref(0);
-    const onChange = (index) => showToast(`标签 ${index}`);
-    return {
-      icon,
-      onChange,
-    };
-  },
+    setup() {
+        const active = ref(0);
+        const onChange = (index) => showToast(`标签 ${index}`);
+        return {
+            icon,
+            onChange,
+        };
+    },
 };
 ```
 
@@ -167,8 +166,8 @@ export default {
 <router-view />
 
 <mi-tabbar route>
-  <mi-tabbar-item replace to="/home" icon="home-o">标签</mi-tabbar-item>
-  <mi-tabbar-item replace to="/search" icon="search">标签</mi-tabbar-item>
+    <mi-tabbar-item replace to="/home" icon="home-o">标签</mi-tabbar-item>
+    <mi-tabbar-item replace to="/search" icon="search">标签</mi-tabbar-item>
 </mi-tabbar>
 ```
 

@@ -1,8 +1,8 @@
-export * from './axiosAgainSend';
+export * from './requestRetry';
 
-export * from './axiosCancel';
+export * from './requestCanceler';
 
-export * from './axiosTransform';
+export * from './requestTransform';
 
 export * from './helper';
 
@@ -10,4 +10,4 @@ export * from './types';
 
 export * from './httpEnum';
 
-export * from './mAxios';
+export * from './miHttpClient';

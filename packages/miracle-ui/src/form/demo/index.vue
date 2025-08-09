@@ -5,7 +5,7 @@ import FieldType from './FieldType.vue';
 </script>
 
 <template>
-  <basic-usage />
-  <validate-rules />
-  <field-type />
+    <basic-usage />
+    <validate-rules />
+    <field-type />
 </template>

@@ -32,26 +32,26 @@ import { ref } from 'vue';
 import { showToast } from '@miracle-web/ui';
 
 export default {
-  setup() {
-    const show = ref(false);
-    const actions = [
-      { name: '选项一' },
-      { name: '选项二' },
-      { name: '选项三' },
-    ];
-    const onSelect = (item) => {
-      // 默认情况下点击选项时不会自动收起
-      // 可以通过 close-on-click-action 属性开启自动收起
-      show.value = false;
-      showToast(item.name);
-    };
+    setup() {
+        const show = ref(false);
+        const actions = [
+            { name: '选项一' },
+            { name: '选项二' },
+            { name: '选项三' },
+        ];
+        const onSelect = (item) => {
+            // 默认情况下点击选项时不会自动收起
+            // 可以通过 close-on-click-action 属性开启自动收起
+            show.value = false;
+            showToast(item.name);
+        };
 
-    return {
-      show,
-      actions,
-      onSelect,
-    };
-  },
+        return {
+            show,
+            actions,
+            onSelect,
+        };
+    },
 };
 ```
 
@@ -69,24 +69,24 @@ import { ref } from 'vue';
 import { showToast } from '@miracle-web/ui';
 
 export default {
-  setup() {
-    const show = ref(false);
-    const actions = [
-      { name: '选项一', icon: 'cart-o' },
-      { name: '选项二', icon: 'shop-o' },
-      { name: '选项三', icon: 'star-o' },
-    ];
-    const onSelect = (item) => {
-      show.value = false;
-      showToast(item.name);
-    };
+    setup() {
+        const show = ref(false);
+        const actions = [
+            { name: '选项一', icon: 'cart-o' },
+            { name: '选项二', icon: 'shop-o' },
+            { name: '选项三', icon: 'star-o' },
+        ];
+        const onSelect = (item) => {
+            show.value = false;
+            showToast(item.name);
+        };
 
-    return {
-      show,
-      actions,
-      onSelect,
-    };
-  },
+        return {
+            show,
+            actions,
+            onSelect,
+        };
+    },
 };
 ```
 
@@ -96,11 +96,11 @@ export default {
 
 ```html
 <mi-action-sheet
-  v-model:show="show"
-  :actions="actions"
-  cancel-text="取消"
-  close-on-click-action
-  @cancel="onCancel"
+    v-model:show="show"
+    :actions="actions"
+    cancel-text="取消"
+    close-on-click-action
+    @cancel="onCancel"
 />
 ```
 
@@ -109,21 +109,21 @@ import { ref } from 'vue';
 import { showToast } from '@miracle-web/ui';
 
 export default {
-  setup() {
-    const show = ref(false);
-    const actions = [
-      { name: '选项一' },
-      { name: '选项二' },
-      { name: '选项三' },
-    ];
-    const onCancel = () => showToast('取消');
+    setup() {
+        const show = ref(false);
+        const actions = [
+            { name: '选项一' },
+            { name: '选项二' },
+            { name: '选项三' },
+        ];
+        const onCancel = () => showToast('取消');
 
-    return {
-      show,
-      actions,
-      onCancel,
-    };
-  },
+        return {
+            show,
+            actions,
+            onCancel,
+        };
+    },
 };
 ```
 
@@ -133,11 +133,11 @@ export default {
 
 ```html
 <mi-action-sheet
-  v-model:show="show"
-  :actions="actions"
-  cancel-text="取消"
-  description="这是一段描述信息"
-  close-on-click-action
+    v-model:show="show"
+    :actions="actions"
+    cancel-text="取消"
+    description="这是一段描述信息"
+    close-on-click-action
 />
 ```
 
@@ -145,19 +145,19 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const show = ref(false);
-    const actions = [
-      { name: '选项一' },
-      { name: '选项二' },
-      { name: '选项三', subname: '描述信息' },
-    ];
+    setup() {
+        const show = ref(false);
+        const actions = [
+            { name: '选项一' },
+            { name: '选项二' },
+            { name: '选项三', subname: '描述信息' },
+        ];
 
-    return {
-      show,
-      actions,
-    };
-  },
+        return {
+            show,
+            actions,
+        };
+    },
 };
 ```
 
@@ -167,10 +167,10 @@ export default {
 
 ```html
 <mi-action-sheet
-  v-model:show="show"
-  :actions="actions"
-  cancel-text="取消"
-  close-on-click-action
+    v-model:show="show"
+    :actions="actions"
+    cancel-text="取消"
+    close-on-click-action
 />
 ```
 
@@ -178,19 +178,19 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const show = ref(false);
-    const actions = [
-      { name: '着色选项', color: '#ee0a24' },
-      { name: '禁用选项', disabled: true },
-      { name: '加载选项', loading: true },
-    ];
+    setup() {
+        const show = ref(false);
+        const actions = [
+            { name: '着色选项', color: '#ee0a24' },
+            { name: '禁用选项', disabled: true },
+            { name: '加载选项', loading: true },
+        ];
 
-    return {
-      show,
-      actions,
-    };
-  },
+        return {
+            show,
+            actions,
+        };
+    },
 };
 ```
 
@@ -200,13 +200,13 @@ export default {
 
 ```html
 <mi-action-sheet v-model:show="show" title="标题">
-  <div class="content">内容</div>
+    <div class="content">内容</div>
 </mi-action-sheet>
 
 <style>
-  .content {
-    padding: 16px 16px 160px;
-  }
+    .content {
+        padding: 16px 16px 160px;
+    }
 </style>
 ```
 

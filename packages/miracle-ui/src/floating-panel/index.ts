@@ -8,7 +8,7 @@ export type { FloatingPanelProps } from './FloatingPanel';
 export type { FloatingPanelThemeVars } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiFloatingPanel: typeof FloatingPanel;
-  }
+    export interface GlobalComponents {
+        MiFloatingPanel: typeof FloatingPanel;
+    }
 }

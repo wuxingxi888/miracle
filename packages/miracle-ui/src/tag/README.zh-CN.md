@@ -58,26 +58,26 @@ app.use(Tag);
 添加 `closeable` 属性表示标签是可关闭的，关闭标签时会触发 `close` 事件，在 `close` 事件中可以执行隐藏标签的逻辑。
 
 ```html
-<mi-tag :show="show" closeable size="medium" type="primary" @close="close">
-  标签
-</mi-tag>
+<mi-tag :show="show" closeable size="medium" type="primary" @close="close"
+    >标签</mi-tag
+>
 ```
 
 ```js
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const show = ref(true);
-    const close = () => {
-      show.value = false;
-    };
+    setup() {
+        const show = ref(true);
+        const close = () => {
+            show.value = false;
+        };
 
-    return {
-      show,
-      close,
-    };
-  },
+        return {
+            show,
+            close,
+        };
+    },
 };
 ```
 

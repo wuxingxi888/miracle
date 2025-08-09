@@ -12,18 +12,18 @@
 import { useToggle } from '@miracle-web/use';
 
 export default {
-  setup() {
-    const [state, toggle] = useToggle();
+    setup() {
+        const [state, toggle] = useToggle();
 
-    toggle(true);
-    console.log(state.value); // -> true
+        toggle(true);
+        console.log(state.value); // -> true
 
-    toggle(false);
-    console.log(state.value); // -> false
+        toggle(false);
+        console.log(state.value); // -> false
 
-    toggle();
-    console.log(state.value); // -> true
-  },
+        toggle();
+        console.log(state.value); // -> true
+    },
 };
 ```
 
@@ -33,10 +33,10 @@ export default {
 import { useToggle } from '@miracle-web/use';
 
 export default {
-  setup() {
-    const [state, toggle] = useToggle(true);
-    console.log(state.value); // -> true
-  },
+    setup() {
+        const [state, toggle] = useToggle(true);
+        console.log(state.value); // -> true
+    },
 };
 ```
 
@@ -46,7 +46,7 @@ export default {
 
 ```ts
 function useToggle(
-  defaultValue: boolean,
+    defaultValue: boolean,
 ): [Ref<boolean>, (newValue: boolean) => void];
 ```
 

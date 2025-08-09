@@ -54,18 +54,18 @@ app.use(RollingText);
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const textList = ref([
-      'aaaaa',
-      'bbbbb',
-      'ccccc',
-      'ddddd',
-      'eeeee',
-      'fffff',
-      'ggggg',
-    ]);
-    return { textList };
-  },
+    setup() {
+        const textList = ref([
+            'aaaaa',
+            'bbbbb',
+            'ccccc',
+            'ddddd',
+            'eeeee',
+            'fffff',
+            'ggggg',
+        ]);
+        return { textList };
+    },
 };
 ```
 
@@ -75,21 +75,21 @@ RollingText 组件提供了一些 CSS 变量，你可以覆盖这些变量来自
 
 ```html
 <mi-rolling-text
-  class="my-rolling-text"
-  :height="54"
-  :start-num="12345"
-  :target-num="54321"
+    class="my-rolling-text"
+    :height="54"
+    :start-num="12345"
+    :target-num="54321"
 />
 ```
 
 ```css
 .my-rolling-text {
-  --mi-rolling-text-background: #1989fa;
-  --mi-rolling-text-color: white;
-  --mi-rolling-text-font-size: 24px;
-  --mi-rolling-text-gap: 6px;
-  --mi-rolling-text-item-border-radius: 5px;
-  --mi-rolling-text-item-width: 40px;
+    --mi-rolling-text-background: #1989fa;
+    --mi-rolling-text-color: white;
+    --mi-rolling-text-font-size: 24px;
+    --mi-rolling-text-gap: 6px;
+    --mi-rolling-text-item-border-radius: 5px;
+    --mi-rolling-text-item-width: 40px;
 }
 ```
 
@@ -99,14 +99,14 @@ RollingText 组件提供了一些 CSS 变量，你可以覆盖这些变量来自
 
 ```html
 <mi-rolling-text
-  ref="rollingTextRef"
-  :start-num="0"
-  :target-num="54321"
-  :auto-start="false"
+    ref="rollingTextRef"
+    :start-num="0"
+    :target-num="54321"
+    :auto-start="false"
 />
 <mi-grid clickable :column-num="3">
-  <mi-grid-item icon="play-circle-o" :text="start" @click="start" />
-  <mi-grid-item icon="replay" :text="reset" @click="reset" />
+    <mi-grid-item icon="play-circle-o" :text="start" @click="start" />
+    <mi-grid-item icon="replay" :text="reset" @click="reset" />
 </mi-grid>
 ```
 
@@ -114,16 +114,16 @@ RollingText 组件提供了一些 CSS 变量，你可以覆盖这些变量来自
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const rollingTextRef = ref(null);
-    const start = () => {
-      rollingTextRef.value.start();
-    };
-    const reset = () => {
-      rollingTextRef.value.reset();
-    };
-    return { rollingTextRef, start, reset };
-  },
+    setup() {
+        const rollingTextRef = ref(null);
+        const start = () => {
+            rollingTextRef.value.start();
+        };
+        const reset = () => {
+            rollingTextRef.value.reset();
+        };
+        return { rollingTextRef, start, reset };
+    },
 };
 ```
 
@@ -157,10 +157,10 @@ export default {
 
 ```ts
 import type {
-  RollingTextProps,
-  RollingTextInstance,
-  RollingTextDirection,
-  RollingTextStopOrder,
+    RollingTextProps,
+    RollingTextInstance,
+    RollingTextDirection,
+    RollingTextStopOrder,
 } from '@miracle-web/ui';
 ```
 

@@ -29,10 +29,10 @@ app.use(Overlay);
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const show = ref(false);
-    return { show };
-  },
+    setup() {
+        const show = ref(false);
+        return { show };
+    },
 };
 ```
 
@@ -42,24 +42,24 @@ export default {
 
 ```html
 <mi-overlay :show="show" @click="show = false">
-  <div class="wrapper" @click.stop>
-    <div class="block" />
-  </div>
+    <div class="wrapper" @click.stop>
+        <div class="block" />
+    </div>
 </mi-overlay>
 
 <style>
-  .wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-  }
+    .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
 
-  .block {
-    width: 120px;
-    height: 120px;
-    background-color: #fff;
-  }
+    .block {
+        width: 120px;
+        height: 120px;
+        background-color: #fff;
+    }
 </style>
 ```
 

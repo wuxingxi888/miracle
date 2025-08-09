@@ -8,7 +8,7 @@ export type { EmptyProps } from './Empty';
 export type { EmptyThemeVars } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiEmpty: typeof Empty;
-  }
+    export interface GlobalComponents {
+        MiEmpty: typeof Empty;
+    }
 }

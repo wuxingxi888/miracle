@@ -13,16 +13,16 @@ import { watch } from 'vue';
 import { useWindowSize } from '@miracle-web/use';
 
 export default {
-  setup() {
-    const { width, height } = useWindowSize();
+    setup() {
+        const { width, height } = useWindowSize();
 
-    console.log(width.value); // -> 窗口宽度
-    console.log(height.value); // -> 窗口高度
+        console.log(width.value); // -> 窗口宽度
+        console.log(height.value); // -> 窗口高度
 
-    watch([width, height], () => {
-      console.log('window resized');
-    });
-  },
+        watch([width, height], () => {
+            console.log('window resized');
+        });
+    },
 };
 ```
 
@@ -32,8 +32,8 @@ export default {
 
 ```ts
 function useWindowSize(): {
-  width: Ref<number>;
-  height: Ref<number>;
+    width: Ref<number>;
+    height: Ref<number>;
 };
 ```
 

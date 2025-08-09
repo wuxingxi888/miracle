@@ -8,7 +8,7 @@ export type { SearchProps };
 export type { SearchShape, SearchInstance, SearchThemeVars } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiSearch: typeof Search;
-  }
+    export interface GlobalComponents {
+        MiSearch: typeof Search;
+    }
 }

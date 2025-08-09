@@ -30,10 +30,10 @@ app.use(CountDown);
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const time = ref(30 * 60 * 60 * 1000);
-    return { time };
-  },
+    setup() {
+        const time = ref(30 * 60 * 60 * 1000);
+        return { time };
+    },
 };
 ```
 
@@ -59,29 +59,29 @@ export default {
 
 ```html
 <mi-count-down :time="time">
-  <template #default="timeData">
-    <span class="block">{{ timeData.hours }}</span>
-    <span class="colon">:</span>
-    <span class="block">{{ timeData.minutes }}</span>
-    <span class="colon">:</span>
-    <span class="block">{{ timeData.seconds }}</span>
-  </template>
+    <template #default="timeData">
+        <span class="block">{{ timeData.hours }}</span>
+        <span class="colon">:</span>
+        <span class="block">{{ timeData.minutes }}</span>
+        <span class="colon">:</span>
+        <span class="block">{{ timeData.seconds }}</span>
+    </template>
 </mi-count-down>
 
 <style>
-  .colon {
-    display: inline-block;
-    margin: 0 4px;
-    color: #1989fa;
-  }
-  .block {
-    display: inline-block;
-    width: 22px;
-    color: #fff;
-    font-size: 12px;
-    text-align: center;
-    background-color: #1989fa;
-  }
+    .colon {
+        display: inline-block;
+        margin: 0 4px;
+        color: #1989fa;
+    }
+    .block {
+        display: inline-block;
+        width: 22px;
+        color: #fff;
+        font-size: 12px;
+        text-align: center;
+        background-color: #1989fa;
+    }
 </style>
 ```
 
@@ -91,17 +91,17 @@ export default {
 
 ```html
 <mi-count-down
-  ref="countDown"
-  millisecond
-  :time="3000"
-  :auto-start="false"
-  format="ss:SSS"
-  @finish="onFinish"
+    ref="countDown"
+    millisecond
+    :time="3000"
+    :auto-start="false"
+    format="ss:SSS"
+    @finish="onFinish"
 />
 <mi-grid clickable>
-  <mi-grid-item text="开始" icon="play-circle-o" @click="start" />
-  <mi-grid-item text="暂停" icon="pause-circle-o" @click="pause" />
-  <mi-grid-item text="重置" icon="replay" @click="reset" />
+    <mi-grid-item text="开始" icon="play-circle-o" @click="start" />
+    <mi-grid-item text="暂停" icon="pause-circle-o" @click="pause" />
+    <mi-grid-item text="重置" icon="replay" @click="reset" />
 </mi-grid>
 ```
 
@@ -109,28 +109,28 @@ export default {
 import { showToast } from '@miracle-web/ui';
 
 export default {
-  setup() {
-    const countDown = ref(null);
+    setup() {
+        const countDown = ref(null);
 
-    const start = () => {
-      countDown.value.start();
-    };
-    const pause = () => {
-      countDown.value.pause();
-    };
-    const reset = () => {
-      countDown.value.reset();
-    };
-    const onFinish = () => showToast('倒计时结束');
+        const start = () => {
+            countDown.value.start();
+        };
+        const pause = () => {
+            countDown.value.pause();
+        };
+        const reset = () => {
+            countDown.value.reset();
+        };
+        const onFinish = () => showToast('倒计时结束');
 
-    return {
-      start,
-      pause,
-      reset,
-      onFinish,
-      countDown,
-    };
-  },
+        return {
+            start,
+            pause,
+            reset,
+            onFinish,
+            countDown,
+        };
+    },
 };
 ```
 
@@ -197,9 +197,9 @@ export default {
 
 ```ts
 import type {
-  CountDownProps,
-  CountDownInstance,
-  CountDownCurrentTime,
+    CountDownProps,
+    CountDownInstance,
+    CountDownCurrentTime,
 } from '@miracle-web/ui';
 ```
 

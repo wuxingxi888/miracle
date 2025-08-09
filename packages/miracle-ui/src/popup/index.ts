@@ -6,14 +6,14 @@ export default Popup;
 export { popupProps } from './Popup';
 export type { PopupProps } from './Popup';
 export type {
-  PopupPosition,
-  PopupInstance,
-  PopupThemeVars,
-  PopupCloseIconPosition,
+    PopupPosition,
+    PopupInstance,
+    PopupThemeVars,
+    PopupCloseIconPosition,
 } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiPopup: typeof Popup;
-  }
+    export interface GlobalComponents {
+        MiPopup: typeof Popup;
+    }
 }

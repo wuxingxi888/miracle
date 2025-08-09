@@ -6,13 +6,13 @@ export default DropdownMenu;
 export { dropdownMenuProps } from './DropdownMenu';
 export type { DropdownMenuProps };
 export type {
-  DropdownMenuInstance,
-  DropdownMenuDirection,
-  DropdownMenuThemeVars,
+    DropdownMenuInstance,
+    DropdownMenuDirection,
+    DropdownMenuThemeVars,
 } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiDropdownMenu: typeof DropdownMenu;
-  }
+    export interface GlobalComponents {
+        MiDropdownMenu: typeof DropdownMenu;
+    }
 }

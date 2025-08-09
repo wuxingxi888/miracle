@@ -5,26 +5,26 @@ const CACHE_KEY = 'miracle-cli-lang';
 let currentLang = ZH_CN;
 
 export function getLang() {
-  return currentLang;
+    return currentLang;
 }
 
 export function setLang(lang) {
-  currentLang = lang;
-  localStorage.setItem(CACHE_KEY, lang);
+    currentLang = lang;
+    localStorage.setItem(CACHE_KEY, lang);
 }
 
 export function setDefaultLang(langFromConfig) {
-  const cached = localStorage.getItem(CACHE_KEY);
+    const cached = localStorage.getItem(CACHE_KEY);
 
-  if (cached) {
-    currentLang = cached;
-    return;
-  }
+    if (cached) {
+        currentLang = cached;
+        return;
+    }
 
-  if (navigator.language && navigator.language.indexOf('zh-') !== -1) {
-    currentLang = ZH_CN;
-    return;
-  }
+    if (navigator.language && navigator.language.indexOf('zh-') !== -1) {
+        currentLang = ZH_CN;
+        return;
+    }
 
-  currentLang = langFromConfig || EN_US;
+    currentLang = langFromConfig || EN_US;
 }

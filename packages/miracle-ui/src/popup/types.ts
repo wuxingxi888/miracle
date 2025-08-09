@@ -4,23 +4,23 @@ import type { PopupProps } from './Popup';
 export type PopupPosition = 'top' | 'left' | 'bottom' | 'right' | 'center' | '';
 
 export type PopupCloseIconPosition =
-  | 'top-left'
-  | 'top-right'
-  | 'bottom-left'
-  | 'bottom-right';
+    | 'top-left'
+    | 'top-right'
+    | 'bottom-left'
+    | 'bottom-right';
 
 export type PopupExpose = {
-  popupRef: Ref<HTMLElement>;
+    popupRef: Ref<HTMLElement>;
 };
 
 export type PopupInstance = ComponentPublicInstance<PopupProps, PopupExpose>;
 
 export type PopupThemeVars = {
-  popupBackground?: string;
-  popupTransition?: string;
-  popupRoundRadius?: string;
-  popupCloseIconSize?: string;
-  popupCloseIconColor?: string;
-  popupCloseIconMargin?: string;
-  popupCloseIconZIndex?: number | string;
+    popupBackground?: string;
+    popupTransition?: string;
+    popupRoundRadius?: string;
+    popupCloseIconSize?: string;
+    popupCloseIconColor?: string;
+    popupCloseIconMargin?: string;
+    popupCloseIconZIndex?: number | string;
 };

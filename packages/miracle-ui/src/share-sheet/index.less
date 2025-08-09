@@ -2,152 +2,153 @@
 
 :root,
 :host {
-  --mi-share-sheet-header-padding: var(--mi-padding-sm) var(--mi-padding-md);
-  --mi-share-sheet-title-color: var(--mi-text-color);
-  --mi-share-sheet-title-font-size: var(--mi-font-size-md);
-  --mi-share-sheet-title-line-height: var(--mi-line-height-md);
-  --mi-share-sheet-description-color: var(--mi-text-color-2);
-  --mi-share-sheet-description-font-size: var(--mi-font-size-sm);
-  --mi-share-sheet-description-line-height: 16px;
-  --mi-share-sheet-icon-size: 48px;
-  --mi-share-sheet-option-name-color: var(--mi-gray-7);
-  --mi-share-sheet-option-name-font-size: var(--mi-font-size-sm);
-  --mi-share-sheet-option-description-color: var(--mi-text-color-3);
-  --mi-share-sheet-option-description-font-size: var(--mi-font-size-sm);
-  --mi-share-sheet-cancel-button-font-size: var(--mi-font-size-lg);
-  --mi-share-sheet-cancel-button-height: 48px;
-  --mi-share-sheet-cancel-button-background: var(--mi-background-2);
+    --mi-share-sheet-header-padding: var(--mi-padding-sm) var(--mi-padding-md);
+    --mi-share-sheet-title-color: var(--mi-text-color);
+    --mi-share-sheet-title-font-size: var(--mi-font-size-md);
+    --mi-share-sheet-title-line-height: var(--mi-line-height-md);
+    --mi-share-sheet-description-color: var(--mi-text-color-2);
+    --mi-share-sheet-description-font-size: var(--mi-font-size-sm);
+    --mi-share-sheet-description-line-height: 16px;
+    --mi-share-sheet-icon-size: 48px;
+    --mi-share-sheet-option-name-color: var(--mi-gray-7);
+    --mi-share-sheet-option-name-font-size: var(--mi-font-size-sm);
+    --mi-share-sheet-option-description-color: var(--mi-text-color-3);
+    --mi-share-sheet-option-description-font-size: var(--mi-font-size-sm);
+    --mi-share-sheet-cancel-button-font-size: var(--mi-font-size-lg);
+    --mi-share-sheet-cancel-button-height: 48px;
+    --mi-share-sheet-cancel-button-background: var(--mi-background-2);
 }
 
 .mi-share-sheet {
-  &__header {
-    padding: var(--mi-share-sheet-header-padding);
-    text-align: center;
-  }
-
-  &__title {
-    margin-top: var(--mi-padding-xs);
-    color: var(--mi-share-sheet-title-color);
-    font-weight: normal;
-    font-size: var(--mi-share-sheet-title-font-size);
-    line-height: var(--mi-share-sheet-title-line-height);
-  }
-
-  &__description {
-    display: block;
-    margin-top: var(--mi-padding-xs);
-    color: var(--mi-share-sheet-description-color);
-    font-size: var(--mi-share-sheet-description-font-size);
-    line-height: var(--mi-share-sheet-description-line-height);
-  }
-
-  &__options {
-    position: relative;
-    display: flex;
-    padding: var(--mi-padding-md) 0 var(--mi-padding-md) var(--mi-padding-xs);
-    overflow-x: auto;
-    overflow-y: visible;
-    -webkit-overflow-scrolling: touch;
-
-    &--border::before {
-      .hairline-top(var(--mi-border-color), var(--mi-padding-md));
+    &__header {
+        padding: var(--mi-share-sheet-header-padding);
+        text-align: center;
     }
 
-    &::-webkit-scrollbar {
-      height: 0;
-    }
-  }
-
-  &__option {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    user-select: none;
-  }
-
-  &__icon,
-  &__image-icon {
-    width: var(--mi-share-sheet-icon-size);
-    height: var(--mi-share-sheet-icon-size);
-    margin: 0 var(--mi-padding-md);
-  }
-
-  &__icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--mi-gray-7);
-    border-radius: 100%;
-    background-color: var(--mi-gray-2);
-
-    &--link,
-    &--poster,
-    &--qrcode {
-      font-size: 26px;
+    &__title {
+        margin-top: var(--mi-padding-xs);
+        color: var(--mi-share-sheet-title-color);
+        font-weight: normal;
+        font-size: var(--mi-share-sheet-title-font-size);
+        line-height: var(--mi-share-sheet-title-line-height);
     }
 
-    &--weapp-qrcode {
-      font-size: 28px;
+    &__description {
+        display: block;
+        margin-top: var(--mi-padding-xs);
+        color: var(--mi-share-sheet-description-color);
+        font-size: var(--mi-share-sheet-description-font-size);
+        line-height: var(--mi-share-sheet-description-line-height);
     }
 
-    &--qq,
-    &--weibo,
-    &--wechat,
-    &--wechat-moments {
-      font-size: 30px;
-      color: var(--mi-white);
+    &__options {
+        position: relative;
+        display: flex;
+        padding: var(--mi-padding-md) 0 var(--mi-padding-md)
+            var(--mi-padding-xs);
+        overflow-x: auto;
+        overflow-y: visible;
+        -webkit-overflow-scrolling: touch;
+
+        &--border::before {
+            .hairline-top(var(--mi-border-color), var(--mi-padding-md));
+        }
+
+        &::-webkit-scrollbar {
+            height: 0;
+        }
     }
 
-    &--qq {
-      background-color: #38b9fa;
+    &__option {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        user-select: none;
     }
 
-    &--wechat {
-      background-color: #0bc15f;
+    &__icon,
+    &__image-icon {
+        width: var(--mi-share-sheet-icon-size);
+        height: var(--mi-share-sheet-icon-size);
+        margin: 0 var(--mi-padding-md);
     }
 
-    &--weibo {
-      background-color: #ee575e;
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--mi-gray-7);
+        border-radius: 100%;
+        background-color: var(--mi-gray-2);
+
+        &--link,
+        &--poster,
+        &--qrcode {
+            font-size: 26px;
+        }
+
+        &--weapp-qrcode {
+            font-size: 28px;
+        }
+
+        &--qq,
+        &--weibo,
+        &--wechat,
+        &--wechat-moments {
+            font-size: 30px;
+            color: var(--mi-white);
+        }
+
+        &--qq {
+            background-color: #38b9fa;
+        }
+
+        &--wechat {
+            background-color: #0bc15f;
+        }
+
+        &--weibo {
+            background-color: #ee575e;
+        }
+
+        &--wechat-moments {
+            background-color: #7bc845;
+        }
     }
 
-    &--wechat-moments {
-      background-color: #7bc845;
-    }
-  }
-
-  &__name {
-    margin-top: var(--mi-padding-xs);
-    padding: 0 var(--mi-padding-base);
-    color: var(--mi-share-sheet-option-name-color);
-    font-size: var(--mi-share-sheet-option-name-font-size);
-  }
-
-  &__option-description {
-    padding: 0 var(--mi-padding-base);
-    color: var(--mi-share-sheet-option-description-color);
-    font-size: var(--mi-share-sheet-option-description-font-size);
-  }
-
-  &__cancel {
-    display: block;
-    width: 100%;
-    padding: 0;
-    font-size: var(--mi-share-sheet-cancel-button-font-size);
-    line-height: var(--mi-share-sheet-cancel-button-height);
-    text-align: center;
-    background: var(--mi-share-sheet-cancel-button-background);
-    border: none;
-    cursor: pointer;
-
-    &::before {
-      display: block;
-      height: var(--mi-padding-xs);
-      background-color: var(--mi-background);
-      content: ' ';
+    &__name {
+        margin-top: var(--mi-padding-xs);
+        padding: 0 var(--mi-padding-base);
+        color: var(--mi-share-sheet-option-name-color);
+        font-size: var(--mi-share-sheet-option-name-font-size);
     }
 
-    &:active {
-      background-color: var(--mi-active-color);
+    &__option-description {
+        padding: 0 var(--mi-padding-base);
+        color: var(--mi-share-sheet-option-description-color);
+        font-size: var(--mi-share-sheet-option-description-font-size);
     }
-  }
+
+    &__cancel {
+        display: block;
+        width: 100%;
+        padding: 0;
+        font-size: var(--mi-share-sheet-cancel-button-font-size);
+        line-height: var(--mi-share-sheet-cancel-button-height);
+        text-align: center;
+        background: var(--mi-share-sheet-cancel-button-background);
+        border: none;
+        cursor: pointer;
+
+        &::before {
+            display: block;
+            height: var(--mi-padding-xs);
+            background-color: var(--mi-background);
+            content: ' ';
+        }
+
+        &:active {
+            background-color: var(--mi-active-color);
+        }
+    }
 }

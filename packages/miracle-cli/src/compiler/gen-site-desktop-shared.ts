@@ -3,25 +3,25 @@ import { join, parse } from 'node:path';
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { pascalize, getMiracleConfig, normalizePath } from '../common/index.js';
 import {
-  SRC_DIR,
-  DOCS_DIR,
-  getPackageJson,
-  VANT_CONFIG_FILE,
+    SRC_DIR,
+    DOCS_DIR,
+    getPackageJson,
+    VANT_CONFIG_FILE,
 } from '../common/constant.js';
 
 type DocumentItem = {
-  name: string;
-  path: string;
+    name: string;
+    path: string;
 };
 
 function formatName(component: string, lang?: string) {
-  component = pascalize(component);
+    component = pascalize(component);
 
-  if (lang) {
-    return `${component}_${lang.replace('-', '_')}`;
-  }
+    if (lang) {
+        return `${component}_${lang.replace('-', '_')}`;
+    }
 
-  return component;
+    return component;
 }
 
 /**
@@ -33,77 +33,78 @@ function formatName(component: string, lang?: string) {
  *   - action-sheet/README.md => ActionSheet
  */
 function resolveDocuments(components: string[]): DocumentItem[] {
-  const miracleConfig = getMiracleConfig();
-  const { locales, defaultLang } = miracleConfig.site;
+    const miracleConfig = getMiracleConfig();
+    const { locales, defaultLang } = miracleConfig.site;
 
-  const docs: DocumentItem[] = [];
+    const docs: DocumentItem[] = [];
 
-  if (locales) {
-    const langs = Object.keys(locales);
-    langs.forEach((lang) => {
-      const fileName = lang === defaultLang ? 'README.md' : `README.${lang}.md`;
-      components.forEach((component) => {
-        docs.push({
-          name: formatName(component, lang),
-          path: join(SRC_DIR, component, fileName),
+    if (locales) {
+        const langs = Object.keys(locales);
+        langs.forEach((lang) => {
+            const fileName =
+                lang === defaultLang ? 'README.md' : `README.${lang}.md`;
+            components.forEach((component) => {
+                docs.push({
+                    name: formatName(component, lang),
+                    path: join(SRC_DIR, component, fileName),
+                });
+            });
         });
-      });
-    });
-  } else {
-    components.forEach((component) => {
-      docs.push({
-        name: formatName(component),
-        path: join(SRC_DIR, component, 'README.md'),
-      });
-    });
-  }
+    } else {
+        components.forEach((component) => {
+            docs.push({
+                name: formatName(component),
+                path: join(SRC_DIR, component, 'README.md'),
+            });
+        });
+    }
 
-  const staticDocs = glob
-    .sync(normalizePath(join(DOCS_DIR, '**/*.md')))
-    .map((path) => {
-      const pairs = parse(path).name.split('.');
-      return {
-        name: formatName(pairs[0], pairs[1] || defaultLang),
-        path,
-      };
-    });
+    const staticDocs = glob
+        .sync(normalizePath(join(DOCS_DIR, '**/*.md')))
+        .map((path) => {
+            const pairs = parse(path).name.split('.');
+            return {
+                name: formatName(pairs[0], pairs[1] || defaultLang),
+                path,
+            };
+        });
 
-  return [...staticDocs, ...docs.filter((item) => existsSync(item.path))];
+    return [...staticDocs, ...docs.filter((item) => existsSync(item.path))];
 }
 
 function genImportDocuments(items: DocumentItem[]) {
-  return items
-    .map((item) => {
-      const path = normalizePath(item.path);
-      return `const ${item.name} = () => import('${path}');`;
-    })
-    .join('\n');
+    return items
+        .map((item) => {
+            const path = normalizePath(item.path);
+            return `const ${item.name} = () => import('${path}');`;
+        })
+        .join('\n');
 }
 
 function genExportDocuments(items: DocumentItem[]) {
-  return `export const documents = {
+    return `export const documents = {
   ${items.map((item) => item.name).join(',\n  ')}
 };`;
 }
 
 function genVantConfigContent() {
-  const content = readFileSync(VANT_CONFIG_FILE, 'utf-8');
-  return content.replace('export default', 'const config =');
+    const content = readFileSync(VANT_CONFIG_FILE, 'utf-8');
+    return content.replace('export default', 'const config =');
 }
 
 function genExportConfig() {
-  return 'export { config };';
+    return 'export { config };';
 }
 
 function genExportVersion() {
-  return `export const packageVersion = '${getPackageJson().version}';`;
+    return `export const packageVersion = '${getPackageJson().version}';`;
 }
 
 export function genSiteDesktopShared() {
-  const dirs = readdirSync(SRC_DIR);
-  const documents = resolveDocuments(dirs);
+    const dirs = readdirSync(SRC_DIR);
+    const documents = resolveDocuments(dirs);
 
-  const code = `${genImportDocuments(documents)}
+    const code = `${genImportDocuments(documents)}
 
 ${genVantConfigContent()}
 
@@ -112,5 +113,5 @@ ${genExportDocuments(documents)}
 ${genExportVersion()}
 `;
 
-  return code;
+    return code;
 }

@@ -8,7 +8,7 @@ export type { DividerProps, DividerContentPosition } from './Divider';
 export type { DividerThemeVars } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiDivider: typeof Divider;
-  }
+    export interface GlobalComponents {
+        MiDivider: typeof Divider;
+    }
 }

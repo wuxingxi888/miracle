@@ -6,15 +6,15 @@ export default Button;
 export { buttonProps } from './Button';
 export type { ButtonProps } from './Button';
 export type {
-  ButtonType,
-  ButtonSize,
-  ButtonThemeVars,
-  ButtonNativeType,
-  ButtonIconPosition,
+    ButtonType,
+    ButtonSize,
+    ButtonThemeVars,
+    ButtonNativeType,
+    ButtonIconPosition,
 } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiButton: typeof Button;
-  }
+    export interface GlobalComponents {
+        MiButton: typeof Button;
+    }
 }

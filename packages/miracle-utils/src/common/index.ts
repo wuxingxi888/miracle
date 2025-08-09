@@ -6,15 +6,15 @@ import { isObject } from '../isUtils';
  * @param wait { number } => 防抖时间(毫秒)
  */
 export const debounce = <T extends (...args: any[]) => any>(
-  func: T,
-  wait: number,
+    func: T,
+    wait: number,
 ): T => {
-  let timeout: ReturnType<typeof setTimeout>;
+    let timeout: ReturnType<typeof setTimeout>;
 
-  return function (this: ThisParameterType<T>, ...args: Parameters<T>) {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => func.apply(this, args), wait);
-  } as T;
+    return function (this: ThisParameterType<T>, ...args: Parameters<T>) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), wait);
+    } as T;
 };
 
 /**
@@ -22,18 +22,18 @@ export const debounce = <T extends (...args: any[]) => any>(
  * @param limit { number } => 节流时间(毫秒)
  */
 export const throttle = <T extends (...args: any[]) => void>(
-  func: T,
-  limit: number,
+    func: T,
+    limit: number,
 ): T => {
-  let inThrottle: boolean;
+    let inThrottle: boolean;
 
-  return function (this: ThisParameterType<T>, ...args: Parameters<T>) {
-    if (!inThrottle) {
-      func.apply(this, args);
-      inThrottle = true;
-      setTimeout(() => (inThrottle = false), limit);
-    }
-  } as T;
+    return function (this: ThisParameterType<T>, ...args: Parameters<T>) {
+        if (!inThrottle) {
+            func.apply(this, args);
+            inThrottle = true;
+            setTimeout(() => (inThrottle = false), limit);
+        }
+    } as T;
 };
 
 /**
@@ -47,15 +47,15 @@ export const throttle = <T extends (...args: any[]) => void>(
  * @returns 返回合并后的对象，具有源对象和目标对象的所有属性
  */
 export function deepMerge<T = any>(src: any = {}, target: any = {}): T {
-  let key: string;
+    let key: string;
 
-  for (key in target) {
-    src[key] = isObject(src[key])
-      ? deepMerge(src[key], target[key])
-      : (src[key] = target[key]);
-  }
+    for (key in target) {
+        src[key] = isObject(src[key])
+            ? deepMerge(src[key], target[key])
+            : (src[key] = target[key]);
+    }
 
-  return src;
+    return src;
 }
 
 /**
@@ -67,22 +67,22 @@ export function deepMerge<T = any>(src: any = {}, target: any = {}): T {
  * @returns 返回深拷贝后的对象或数组
  */
 export function cloneDeep<T>(obj: T): T {
-  if (!isObject(obj)) {
-    return obj;
-  }
-
-  if (Array.isArray(obj)) {
-    return obj.map((item) => cloneDeep(item)) as unknown as T;
-  }
-
-  const copy: any = {};
-  for (const key in obj) {
-    if (Object.prototype.hasOwnProperty.call(obj, key)) {
-      copy[key] = cloneDeep(obj[key]);
+    if (!isObject(obj)) {
+        return obj;
     }
-  }
 
-  return copy;
+    if (Array.isArray(obj)) {
+        return obj.map((item) => cloneDeep(item)) as unknown as T;
+    }
+
+    const copy: any = {};
+    for (const key in obj) {
+        if (Object.prototype.hasOwnProperty.call(obj, key)) {
+            copy[key] = cloneDeep(obj[key]);
+        }
+    }
+
+    return copy;
 }
 
 /**
@@ -95,89 +95,121 @@ export function cloneDeep<T>(obj: T): T {
  * @returns 返回一个记忆化后的函数，该函数在依赖参数变化时执行计算
  */
 export function memo<TDeps extends readonly any[], TResult>(
-  getDependencies: () => [...TDeps],
-  fn: (...args: NoInfer<[...TDeps]>) => TResult,
-  options: {
-    key: any;
-    debug?: () => any;
-    onChange?: (result: TResult) => void;
-  },
+    getDependencies: () => [...TDeps],
+    fn: (...args: NoInfer<[...TDeps]>) => TResult,
+    options: {
+        key: any;
+        debug?: () => any;
+        onChange?: (result: TResult) => void;
+    },
 ): () => TResult {
-  // 存储依赖参数和计算结果
-  // Store the dependency parameters and the computed result
-  let dependencies: any[] = [];
-  let result: TResult | undefined;
+    // 存储依赖参数和计算结果
+    // Store the dependency parameters and the computed result
+    let dependencies: any[] = [];
+    let result: TResult | undefined;
 
-  return () => {
-    let dependencyStartTime: number;
-    if (options.key && options.debug) {
-      dependencyStartTime = Date.now();
-    }
+    return () => {
+        let dependencyStartTime: number;
+        if (options.key && options.debug) {
+            dependencyStartTime = Date.now();
+        }
 
-    // 获取最新的依赖参数数组
-    // Get the latest array of dependency parameters
-    const newDependencies = getDependencies();
+        // 获取最新的依赖参数数组
+        // Get the latest array of dependency parameters
+        const newDependencies = getDependencies();
 
-    // 检查依赖参数是否发生变化
-    // Check if the dependency parameters have changed
-    const dependenciesChanged =
-      newDependencies.length !== dependencies.length ||
-      newDependencies.some(
-        (dep: any, index: number) => dependencies[index] !== dep,
-      );
+        // 检查依赖参数是否发生变化
+        // Check if the dependency parameters have changed
+        const dependenciesChanged =
+            newDependencies.length !== dependencies.length ||
+            newDependencies.some(
+                (dep: any, index: number) => dependencies[index] !== dep,
+            );
 
-    if (!dependenciesChanged) {
-      return result!;
-    }
+        if (!dependenciesChanged) {
+            return result!;
+        }
 
-    dependencies = newDependencies;
+        dependencies = newDependencies;
 
-    let computationStartTime: number;
-    if (options.key && options.debug) {
-      computationStartTime = Date.now();
-    }
+        let computationStartTime: number;
+        if (options.key && options.debug) {
+            computationStartTime = Date.now();
+        }
 
-    // 执行计算函数，并缓存计算结果
-    // Execute the computation function and cache the computed result
-    result = fn(...newDependencies);
+        // 执行计算函数，并缓存计算结果
+        // Execute the computation function and cache the computed result
+        result = fn(...newDependencies);
 
-    // 执行 onChange 回调函数，传递计算结果
-    // Execute the onChange callback function with the computed result
-    options?.onChange?.(result);
+        // 执行 onChange 回调函数，传递计算结果
+        // Execute the onChange callback function with the computed result
+        options?.onChange?.(result);
 
-    if (options.key && options.debug) {
-      if (options?.debug()) {
-        const dependencyEndTime =
-          Math.round((Date.now() - dependencyStartTime!) * 100) / 100;
-        const computationEndTime =
-          Math.round((Date.now() - computationStartTime!) * 100) / 100;
-        const computationFpsPercentage = computationEndTime / 16;
+        if (options.key && options.debug) {
+            if (options?.debug()) {
+                const dependencyEndTime =
+                    Math.round((Date.now() - dependencyStartTime!) * 100) / 100;
+                const computationEndTime =
+                    Math.round((Date.now() - computationStartTime!) * 100) /
+                    100;
+                const computationFpsPercentage = computationEndTime / 16;
 
-        const pad = (str: number | string, num: number) => {
-          str = String(str);
-          while (str.length < num) {
-            str = ` ${str}`;
-          }
-          return str;
-        };
+                const pad = (str: number | string, num: number) => {
+                    str = String(str);
+                    while (str.length < num) {
+                        str = ` ${str}`;
+                    }
+                    return str;
+                };
 
-        // eslint-disable-next-line no-console
-        console.info(
-          `%c⏱ ${pad(computationEndTime, 5)} /${pad(dependencyEndTime, 5)} ms`,
-          `
+                console.info(
+                    `%c⏱ ${pad(computationEndTime, 5)} /${pad(dependencyEndTime, 5)} ms`,
+                    `
             font-size: .6rem;
             font-weight: bold;
-            color: hsl(${Math.max(
-              0,
-              Math.min(120 - 120 * computationFpsPercentage, 120),
-            )}deg 100% 31%);`,
-          options?.key,
-        );
-      }
-    }
+            color: hsl(${Math.max(0, Math.min(120 - 120 * computationFpsPercentage, 120))}deg 100% 31%);`,
+                    options?.key,
+                );
+            }
+        }
 
-    return result;
-  };
+        return result;
+    };
+}
+
+/**
+ * 将文本复制到剪贴板
+ *
+ * 此函数尝试使用Navigator Clipboard API将文本复制到剪贴板如果失败，它将回退到传统的文本选择和复制方法
+ * 它接受两个可选回调函数，一个在成功复制时调用，另一个在复制失败时调用
+ *
+ * @param text 要复制到剪贴板的文本
+ * @param onSuccess 成功复制后的回调函数，接收复制的文本作为参数
+ * @param onError 复制失败时的回调函数，接收错误信息作为参数
+ */
+export function copyToClipboard(
+    text: string,
+    onSuccess?: (text?: any) => void,
+    onError?: (error?: any) => void,
+) {
+    void navigator.clipboard
+        .writeText(text)
+        .then(() => {
+            onSuccess && onSuccess(text);
+        })
+        .catch((error) => {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            document.body.appendChild(textarea);
+            textarea.select();
+            const result = document.execCommand('copy');
+            document.body.removeChild(textarea);
+            if (!result) {
+                onError && onError(error);
+            } else {
+                onSuccess && onSuccess(text);
+            }
+        });
 }
 
 /**
@@ -187,5 +219,5 @@ export function memo<TDeps extends readonly any[], TResult>(
  * @returns {undefined} 该函数不返回任何值
  */
 export function NOOP(): undefined {
-  return void 0;
+    return void 0;
 }

@@ -1,86 +1,86 @@
 :root,
 :host {
-  --mi-search-padding: 10px var(--mi-padding-sm);
-  --mi-search-background: var(--mi-background-2);
-  --mi-search-content-background: var(--mi-background);
-  --mi-search-input-height: 34px;
-  --mi-search-label-padding: 0 5px;
-  --mi-search-label-color: var(--mi-text-color);
-  --mi-search-label-font-size: var(--mi-font-size-md);
-  --mi-search-left-icon-color: var(--mi-gray-6);
-  --mi-search-action-padding: 0 var(--mi-padding-xs);
-  --mi-search-action-text-color: var(--mi-text-color);
-  --mi-search-action-font-size: var(--mi-font-size-md);
+    --mi-search-padding: 10px var(--mi-padding-sm);
+    --mi-search-background: var(--mi-background-2);
+    --mi-search-content-background: var(--mi-background);
+    --mi-search-input-height: 34px;
+    --mi-search-label-padding: 0 5px;
+    --mi-search-label-color: var(--mi-text-color);
+    --mi-search-label-font-size: var(--mi-font-size-md);
+    --mi-search-left-icon-color: var(--mi-gray-6);
+    --mi-search-action-padding: 0 var(--mi-padding-xs);
+    --mi-search-action-text-color: var(--mi-text-color);
+    --mi-search-action-font-size: var(--mi-font-size-md);
 }
 
 .mi-search {
-  display: flex;
-  align-items: center;
-  box-sizing: border-box;
-  padding: var(--mi-search-padding);
-  background: var(--mi-search-background);
-
-  &__content {
     display: flex;
-    flex: 1;
-    padding-left: var(--mi-padding-sm);
-    background: var(--mi-search-content-background);
-    border-radius: var(--mi-radius-sm);
-
-    &--round {
-      border-radius: var(--mi-radius-max);
-    }
-  }
-
-  &__label {
-    padding: var(--mi-search-label-padding);
-    color: var(--mi-search-label-color);
-    font-size: var(--mi-search-label-font-size);
-    line-height: var(--mi-search-input-height);
-  }
-
-  &__field {
-    flex: 1;
     align-items: center;
-    padding: 0 var(--mi-padding-xs) 0 0;
-    height: var(--mi-search-input-height);
-    background-color: transparent;
+    box-sizing: border-box;
+    padding: var(--mi-search-padding);
+    background: var(--mi-search-background);
 
-    .mi-field__left-icon {
-      color: var(--mi-search-left-icon-color);
+    &__content {
+        display: flex;
+        flex: 1;
+        padding-left: var(--mi-padding-sm);
+        background: var(--mi-search-content-background);
+        border-radius: var(--mi-radius-sm);
+
+        &--round {
+            border-radius: var(--mi-radius-max);
+        }
     }
 
-    &--with-message {
-      height: auto;
-      align-items: flex-start;
-      padding-top: 5px;
-      padding-bottom: 5px;
+    &__label {
+        padding: var(--mi-search-label-padding);
+        color: var(--mi-search-label-color);
+        font-size: var(--mi-search-label-font-size);
+        line-height: var(--mi-search-input-height);
     }
-  }
 
-  &--show-action {
-    padding-right: 0;
-  }
+    &__field {
+        flex: 1;
+        align-items: center;
+        padding: 0 var(--mi-padding-xs) 0 0;
+        height: var(--mi-search-input-height);
+        background-color: transparent;
 
-  input {
-    &::-webkit-search-decoration,
-    &::-webkit-search-cancel-button,
-    &::-webkit-search-results-button,
-    &::-webkit-search-results-decoration {
-      display: none;
+        .mi-field__left-icon {
+            color: var(--mi-search-left-icon-color);
+        }
+
+        &--with-message {
+            height: auto;
+            align-items: flex-start;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
     }
-  }
 
-  &__action {
-    padding: var(--mi-search-action-padding);
-    color: var(--mi-search-action-text-color);
-    font-size: var(--mi-search-action-font-size);
-    line-height: var(--mi-search-input-height);
-    cursor: pointer;
-    user-select: none;
-
-    &:active {
-      background-color: var(--mi-active-color);
+    &--show-action {
+        padding-right: 0;
     }
-  }
+
+    input {
+        &::-webkit-search-decoration,
+        &::-webkit-search-cancel-button,
+        &::-webkit-search-results-button,
+        &::-webkit-search-results-decoration {
+            display: none;
+        }
+    }
+
+    &__action {
+        padding: var(--mi-search-action-padding);
+        color: var(--mi-search-action-text-color);
+        font-size: var(--mi-search-action-font-size);
+        line-height: var(--mi-search-input-height);
+        cursor: pointer;
+        user-select: none;
+
+        &:active {
+            background-color: var(--mi-active-color);
+        }
+    }
 }

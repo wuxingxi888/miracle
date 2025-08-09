@@ -1,3 +1,3 @@
 module.exports = {
-  presets: ['@miracle-web/cli/preset'],
+    presets: ['@miracle-web/cli/preset'],
 };

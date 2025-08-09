@@ -9,14 +9,14 @@ export { showImagePreview } from './function-call';
 
 export type { ImagePreviewProps };
 export type {
-  ImagePreviewOptions,
-  ImagePreviewInstance,
-  ImagePreviewThemeVars,
-  ImagePreviewScaleEventParams,
+    ImagePreviewOptions,
+    ImagePreviewInstance,
+    ImagePreviewThemeVars,
+    ImagePreviewScaleEventParams,
 } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiImagePreview: typeof ImagePreview;
-  }
+    export interface GlobalComponents {
+        MiImagePreview: typeof ImagePreview;
+    }
 }

@@ -8,7 +8,7 @@ export { skeletonImageProps } from './SkeletonImage';
 export type { SkeletonImageProps, SkeletonImageShape } from './SkeletonImage';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiSkeletonImage: typeof SkeletonImage;
-  }
+    export interface GlobalComponents {
+        MiSkeletonImage: typeof SkeletonImage;
+    }
 }

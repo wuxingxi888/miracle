@@ -3,20 +3,20 @@ import type { CurrentTime } from '@miracle-web/use';
 import type { CountDownProps } from './CountDown';
 
 type CountDownExpose = {
-  start: () => void;
-  pause: () => void;
-  reset: () => void;
+    start: () => void;
+    pause: () => void;
+    reset: () => void;
 };
 
 export type CountDownInstance = ComponentPublicInstance<
-  CountDownProps,
-  CountDownExpose
+    CountDownProps,
+    CountDownExpose
 >;
 
 export type CountDownCurrentTime = CurrentTime;
 
 export type CountDownThemeVars = {
-  countDownTextColor?: string;
-  countDownFontSize?: string;
-  countDownLineHeight?: number | string;
+    countDownTextColor?: string;
+    countDownFontSize?: string;
+    countDownLineHeight?: number | string;
 };

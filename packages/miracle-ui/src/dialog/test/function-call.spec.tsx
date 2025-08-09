@@ -1,73 +1,73 @@
 import { later } from '../../../test';
 import {
-  showDialog,
-  closeDialog,
-  setDialogDefaultOptions,
-  resetDialogDefaultOptions,
+    showDialog,
+    closeDialog,
+    setDialogDefaultOptions,
+    resetDialogDefaultOptions,
 } from '../function-call';
 
 test('should update default options when calling setDefaultOptions method', async () => {
-  const wrapper = document.createElement('div');
-  const text = 'hello world';
+    const wrapper = document.createElement('div');
+    const text = 'hello world';
 
-  setDialogDefaultOptions({ message: text });
-  showDialog({ teleport: wrapper });
-  await later();
-  const dialog = wrapper.querySelector('.mi-dialog');
+    setDialogDefaultOptions({ message: text });
+    showDialog({ teleport: wrapper });
+    await later();
+    const dialog = wrapper.querySelector('.mi-dialog');
 
-  assert(dialog);
-  expect(dialog.innerHTML.includes(text)).toBeTruthy();
+    assert(dialog);
+    expect(dialog.innerHTML.includes(text)).toBeTruthy();
 
-  resetDialogDefaultOptions();
-  showDialog({ teleport: wrapper });
-  await later();
-  const dialog2 = wrapper.querySelector('.mi-dialog');
+    resetDialogDefaultOptions();
+    showDialog({ teleport: wrapper });
+    await later();
+    const dialog2 = wrapper.querySelector('.mi-dialog');
 
-  assert(dialog2);
-  expect(dialog2.innerHTML.includes(text)).toBeFalsy();
+    assert(dialog2);
+    expect(dialog2.innerHTML.includes(text)).toBeFalsy();
 });
 
 test('should render dialog after calling showDialog', async () => {
-  const wrapper = document.createElement('div');
-  showDialog({
-    message: '1',
-    teleport: wrapper,
-  });
+    const wrapper = document.createElement('div');
+    showDialog({
+        message: '1',
+        teleport: wrapper,
+    });
 
-  await later();
-  const dialog = wrapper.querySelector('.mi-dialog');
-  expect(dialog).toBeTruthy();
+    await later();
+    const dialog = wrapper.querySelector('.mi-dialog');
+    expect(dialog).toBeTruthy();
 });
 
 test('should close dialog after calling closeDialog', async () => {
-  const wrapper = document.createElement('div');
-  showDialog({
-    message: '1',
-    teleport: wrapper,
-  });
+    const wrapper = document.createElement('div');
+    showDialog({
+        message: '1',
+        teleport: wrapper,
+    });
 
-  await later();
-  const dialog = wrapper.querySelector('.mi-dialog') as HTMLElement;
+    await later();
+    const dialog = wrapper.querySelector('.mi-dialog') as HTMLElement;
 
-  expect(dialog.style.display).toEqual('');
+    expect(dialog.style.display).toEqual('');
 
-  closeDialog();
-  await later();
-  expect(dialog.className.split(' ')).toContain(
-    'mi-dialog-bounce-leave-active',
-  );
+    closeDialog();
+    await later();
+    expect(dialog.className.split(' ')).toContain(
+        'mi-dialog-bounce-leave-active',
+    );
 });
 
 test('should allow to render JSX message', async () => {
-  const wrapper = document.createElement('div');
-  showDialog({
-    message: () => <div>foo</div>,
-    teleport: wrapper,
-  });
+    const wrapper = document.createElement('div');
+    showDialog({
+        message: () => <div>foo</div>,
+        teleport: wrapper,
+    });
 
-  await later();
-  const dialog = wrapper.querySelector('.mi-dialog') as HTMLElement;
-  expect(
-    dialog.querySelector('.mi-dialog__message')?.outerHTML,
-  ).toMatchSnapshot();
+    await later();
+    const dialog = wrapper.querySelector('.mi-dialog') as HTMLElement;
+    expect(
+        dialog.querySelector('.mi-dialog__message')?.outerHTML,
+    ).toMatchSnapshot();
 });

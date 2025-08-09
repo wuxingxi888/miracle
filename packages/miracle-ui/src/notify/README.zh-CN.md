@@ -70,19 +70,19 @@ showNotify({ type: 'warning', message: '通知内容' });
 import { showNotify } from '@miracle-web/ui';
 
 showNotify({
-  message: '自定义颜色',
-  color: '#ad0000',
-  background: '#ffe1e1',
+    message: '自定义颜色',
+    color: '#ad0000',
+    background: '#ffe1e1',
 });
 
 showNotify({
-  message: '自定义位置',
-  position: 'bottom',
+    message: '自定义位置',
+    position: 'bottom',
 });
 
 showNotify({
-  message: '自定义时长',
-  duration: 1000,
+    message: '自定义时长',
+    duration: 1000,
 });
 ```
 
@@ -93,8 +93,8 @@ showNotify({
 ```html
 <mi-button type="primary" text="组件调用" @click="showNotify" />
 <mi-notify v-model:show="show" type="success">
-  <mi-icon name="bell" style="margin-right: 4px;" />
-  <span>通知内容</span>
+    <mi-icon name="bell" style="margin-right: 4px;" />
+    <span>通知内容</span>
 </mi-notify>
 ```
 
@@ -102,21 +102,21 @@ showNotify({
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const show = ref(false);
+    setup() {
+        const show = ref(false);
 
-    const showNotify = () => {
-      show.value = true;
-      setTimeout(() => {
-        show.value = false;
-      }, 2000);
-    };
+        const showNotify = () => {
+            show.value = true;
+            setTimeout(() => {
+                show.value = false;
+            }, 2000);
+        };
 
-    return {
-      show,
-      showNotify,
-    };
-  },
+        return {
+            show,
+            showNotify,
+        };
+    },
 };
 ```
 
@@ -194,10 +194,10 @@ Miracle 中导出了以下 Notify 相关的辅助函数：
 
 ```ts
 import type {
-  NotifyType,
-  NotifyProps,
-  NotifyOptions,
-  NotifyPosition,
+    NotifyType,
+    NotifyProps,
+    NotifyOptions,
+    NotifyPosition,
 } from '@miracle-web/ui';
 ```
 

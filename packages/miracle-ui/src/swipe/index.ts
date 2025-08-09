@@ -8,7 +8,7 @@ export type { SwipeProps };
 export type { SwipeInstance, SwipeToOptions, SwipeThemeVars } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiSwipe: typeof Swipe;
-  }
+    export interface GlobalComponents {
+        MiSwipe: typeof Swipe;
+    }
 }

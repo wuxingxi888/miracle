@@ -8,7 +8,7 @@ export type { PaginationMode, PaginationProps } from './Pagination';
 export type { PaginationThemeVars } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiPagination: typeof Pagination;
-  }
+    export interface GlobalComponents {
+        MiPagination: typeof Pagination;
+    }
 }

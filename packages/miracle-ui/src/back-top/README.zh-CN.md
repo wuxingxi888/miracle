@@ -30,10 +30,10 @@ app.use(BackTop);
 
 ```js
 export default {
-  setup() {
-    const list = [...Array(50).keys()];
-    return { list };
-  },
+    setup() {
+        const list = [...Array(50).keys()];
+        return { list };
+    },
 };
 ```
 
@@ -48,10 +48,10 @@ export default {
 
 ```js
 export default {
-  setup() {
-    const list = [...Array(50).keys()];
-    return { list };
-  },
+    setup() {
+        const list = [...Array(50).keys()];
+        return { list };
+    },
 };
 ```
 
@@ -64,20 +64,20 @@ export default {
 <mi-back-top class="custom">返回顶部</mi-back-top>
 
 <style>
-  .custom {
-    width: 80px;
-    font-size: 14px;
-    text-align: center;
-  }
+    .custom {
+        width: 80px;
+        font-size: 14px;
+        text-align: center;
+    }
 </style>
 ```
 
 ```js
 export default {
-  setup() {
-    const list = [...Array(50).keys()];
-    return { list };
-  },
+    setup() {
+        const list = [...Array(50).keys()];
+        return { list };
+    },
 };
 ```
 
@@ -87,24 +87,24 @@ export default {
 
 ```html
 <div class="container">
-  <mi-cell v-for="item in list" :key="item" :title="item" />
-  <mi-back-top target=".container" bottom="30vh" />
+    <mi-cell v-for="item in list" :key="item" :title="item" />
+    <mi-back-top target=".container" bottom="30vh" />
 </div>
 
 <style>
-  .container {
-    height: 60vh;
-    overflow: auto;
-  }
+    .container {
+        height: 60vh;
+        overflow: auto;
+    }
 </style>
 ```
 
 ```js
 export default {
-  setup() {
-    const list = [...Array(50).keys()];
-    return { list };
-  },
+    setup() {
+        const list = [...Array(50).keys()];
+        return { list };
+    },
 };
 ```
 

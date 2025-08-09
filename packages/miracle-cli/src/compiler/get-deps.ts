@@ -7,99 +7,99 @@ let existsCache: Record<string, boolean> = {};
 
 // https://regexr.com/47jlq
 const IMPORT_RE =
-  /import\s+?(?:(?:(?:[\w*\s{},]*)\s+from(\s+)?)|)(?:(?:".*?")|(?:'.*?'))[\s]*?(?:;|$|)/g;
+    /import\s+?(?:(?:(?:[\w*\s{},]*)\s+from(\s+)?)|)(?:(?:".*?")|(?:'.*?'))[\s]*?(?:;|$|)/g;
 
 const IMPORT_NOF_RE = /import\s*\(\s*?['"].+?['"]\)/g;
 
 const EXPORT_FROM_RE =
-  /@?export\s+?(?:(?:(?:[\w*\s{},]*)\s+from(\s+)?)|)(?:(?:".*?")|(?:'.*?'))[\s]*?(?:;|$|)/g;
+    /@?export\s+?(?:(?:(?:[\w*\s{},]*)\s+from(\s+)?)|)(?:(?:".*?")|(?:'.*?'))[\s]*?(?:;|$|)/g;
 
 function matchImports(code: string): string[] {
-  const imports = code.match(IMPORT_RE) || [];
-  return imports.filter((line) => !line.includes('import type'));
+    const imports = code.match(IMPORT_RE) || [];
+    return imports.filter((line) => !line.includes('import type'));
 }
 
 function matchImportsNof(code: string): string[] {
-  const imports = code.match(IMPORT_NOF_RE) || [];
-  return imports.filter((line) => !line.includes('import type'));
+    const imports = code.match(IMPORT_NOF_RE) || [];
+    return imports.filter((line) => !line.includes('import type'));
 }
 
 function matchExportFroms(code: string): string[] {
-  const exportFroms = code.match(EXPORT_FROM_RE) || [];
-  return exportFroms.filter((line) => !line.includes('export type'));
+    const exportFroms = code.match(EXPORT_FROM_RE) || [];
+    return exportFroms.filter((line) => !line.includes('export type'));
 }
 
 function exists(filePath: string) {
-  if (!(filePath in existsCache)) {
-    existsCache[filePath] = existsSync(filePath);
-  }
+    if (!(filePath in existsCache)) {
+        existsCache[filePath] = existsSync(filePath);
+    }
 
-  return existsCache[filePath];
+    return existsCache[filePath];
 }
 
 export function fillExt(filePath: string) {
-  for (let i = 0; i < SCRIPT_EXTS.length; i++) {
-    const completePath = `${filePath}${SCRIPT_EXTS[i]}`;
-    if (exists(completePath)) {
-      return {
-        path: completePath,
+    for (let i = 0; i < SCRIPT_EXTS.length; i++) {
+        const completePath = `${filePath}${SCRIPT_EXTS[i]}`;
+        if (exists(completePath)) {
+            return {
+                path: completePath,
+                isIndex: false,
+            };
+        }
+    }
+
+    for (let i = 0; i < SCRIPT_EXTS.length; i++) {
+        const completePath = `${filePath}/index${SCRIPT_EXTS[i]}`;
+        if (exists(completePath)) {
+            return {
+                path: completePath,
+                isIndex: true,
+            };
+        }
+    }
+
+    return {
+        path: '',
         isIndex: false,
-      };
-    }
-  }
-
-  for (let i = 0; i < SCRIPT_EXTS.length; i++) {
-    const completePath = `${filePath}/index${SCRIPT_EXTS[i]}`;
-    if (exists(completePath)) {
-      return {
-        path: completePath,
-        isIndex: true,
-      };
-    }
-  }
-
-  return {
-    path: '',
-    isIndex: false,
-  };
+    };
 }
 
 function getImportRelativePath(code: string) {
-  const divider = code.includes('"') ? '"' : "'";
-  return code.split(divider)[1];
+    const divider = code.includes('"') ? '"' : "'";
+    return code.split(divider)[1];
 }
 
 function getPathByImport(code: string, filePath: string) {
-  const relativePath = getImportRelativePath(code);
+    const relativePath = getImportRelativePath(code);
 
-  if (relativePath.includes('.')) {
-    return fillExt(join(filePath, '..', relativePath));
-  }
+    if (relativePath.includes('.')) {
+        return fillExt(join(filePath, '..', relativePath));
+    }
 
-  return null;
+    return null;
 }
 
 export function clearDepsCache() {
-  depsMap = {};
-  existsCache = {};
+    depsMap = {};
+    existsCache = {};
 }
 
 export function getDeps(filePath: string) {
-  if (depsMap[filePath]) {
-    return depsMap[filePath];
-  }
+    if (depsMap[filePath]) {
+        return depsMap[filePath];
+    }
 
-  const code = readFileSync(filePath, 'utf-8');
-  const imports = matchImports(code);
-  const paths = imports
-    .map((item) => getPathByImport(item, filePath)?.path)
-    .filter((item) => !!item) as string[];
+    const code = readFileSync(filePath, 'utf-8');
+    const imports = matchImports(code);
+    const paths = imports
+        .map((item) => getPathByImport(item, filePath)?.path)
+        .filter((item) => !!item) as string[];
 
-  depsMap[filePath] = paths;
+    depsMap[filePath] = paths;
 
-  paths.forEach(getDeps);
+    paths.forEach(getDeps);
 
-  return paths;
+    return paths;
 }
 
 /**
@@ -113,58 +113,61 @@ export function getDeps(filePath: string) {
  * @example "defineAsyncComponent(() => import('../foo.vue'))" => "defineAsyncComponent(() => import('../foo.mjs'));"
  */
 export function replaceScriptImportExt(
-  code: string,
-  filePath: string,
-  ext: string,
+    code: string,
+    filePath: string,
+    ext: string,
 ) {
-  const imports = [
-    ...matchImports(code),
-    ...matchImportsNof(code),
-    ...matchExportFroms(code),
-  ];
+    const imports = [
+        ...matchImports(code),
+        ...matchImportsNof(code),
+        ...matchExportFroms(code),
+    ];
 
-  const updateImport = (index: number, newImport: string) => {
-    code = code.replace(imports[index], newImport);
-    imports[index] = newImport;
-  };
+    const updateImport = (index: number, newImport: string) => {
+        code = code.replace(imports[index], newImport);
+        imports[index] = newImport;
+    };
 
-  imports.forEach((line, index) => {
-    if (line.includes('.vue')) {
-      updateImport(index, line.replace('.vue', ext));
-    }
-  });
-
-  if (ext === '.mjs' || ext === '.cjs') {
     imports.forEach((line, index) => {
-      const isStyleImport = STYLE_EXTS.some((ext) => line.includes(ext));
-      if (isStyleImport) {
-        return;
-      }
-
-      const isExistExt = line.includes(ext);
-      if (isExistExt) {
-        return;
-      }
-
-      const pathInfo = getPathByImport(line, filePath);
-
-      if (pathInfo) {
-        const relativePath = getImportRelativePath(line);
-
-        if (pathInfo.isIndex) {
-          const newLine = line.replace(
-            relativePath,
-            `${relativePath}/index${ext}`,
-          );
-
-          updateImport(index, newLine);
-        } else {
-          const newLine = line.replace(relativePath, relativePath + ext);
-          updateImport(index, newLine);
+        if (line.includes('.vue')) {
+            updateImport(index, line.replace('.vue', ext));
         }
-      }
     });
-  }
 
-  return code;
+    if (ext === '.mjs' || ext === '.cjs') {
+        imports.forEach((line, index) => {
+            const isStyleImport = STYLE_EXTS.some((ext) => line.includes(ext));
+            if (isStyleImport) {
+                return;
+            }
+
+            const isExistExt = line.includes(ext);
+            if (isExistExt) {
+                return;
+            }
+
+            const pathInfo = getPathByImport(line, filePath);
+
+            if (pathInfo) {
+                const relativePath = getImportRelativePath(line);
+
+                if (pathInfo.isIndex) {
+                    const newLine = line.replace(
+                        relativePath,
+                        `${relativePath}/index${ext}`,
+                    );
+
+                    updateImport(index, newLine);
+                } else {
+                    const newLine = line.replace(
+                        relativePath,
+                        relativePath + ext,
+                    );
+                    updateImport(index, newLine);
+                }
+            }
+        });
+    }
+
+    return code;
 }

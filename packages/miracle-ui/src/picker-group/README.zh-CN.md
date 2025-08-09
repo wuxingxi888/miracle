@@ -6,11 +6,11 @@
 
 PickerGroup 中可以放置以下组件：
 
-- [Picker](#/zh-CN/picker)
-- [Area](#/zh-CN/area)
-- [DatePicker](#/zh-CN/date-picker)
-- [TimePicker](#/zh-CN/time-picker)
-- 其他基于 Picker 封装的自定义组件
+-   [Picker](#/zh-CN/picker)
+-   [Area](#/zh-CN/area)
+-   [DatePicker](#/zh-CN/date-picker)
+-   [TimePicker](#/zh-CN/time-picker)
+-   其他基于 Picker 封装的自定义组件
 
 ### 引入
 
@@ -34,17 +34,17 @@ app.use(PickerGroup);
 
 ```html
 <mi-picker-group
-  title="预约日期"
-  :tabs="['选择日期', '选择时间']"
-  @confirm="onConfirm"
-  @cancel="onCancel"
+    title="预约日期"
+    :tabs="['选择日期', '选择时间']"
+    @confirm="onConfirm"
+    @cancel="onCancel"
 >
-  <mi-date-picker
-    v-model="currentDate"
-    :min-date="minDate"
-    :max-date="maxDate"
-  />
-  <mi-time-picker v-model="currentTime" />
+    <mi-date-picker
+        v-model="currentDate"
+        :min-date="minDate"
+        :max-date="maxDate"
+    />
+    <mi-time-picker v-model="currentTime" />
 </mi-picker-group>
 ```
 
@@ -53,29 +53,29 @@ import { ref } from 'vue';
 import { showToast } from '@miracle-web/ui';
 
 export default {
-  setup() {
-    const currentDate = ref(['2022', '06', '01']);
-    const currentTime = ref(['12', '00']);
+    setup() {
+        const currentDate = ref(['2022', '06', '01']);
+        const currentTime = ref(['12', '00']);
 
-    const onConfirm = () => {
-      showToast(
-        `${currentDate.value.join('/')} ${currentTime.value.join(':')}`,
-      );
-    };
+        const onConfirm = () => {
+            showToast(
+                `${currentDate.value.join('/')} ${currentTime.value.join(':')}`,
+            );
+        };
 
-    const onCancel = () => {
-      showToast('cancel');
-    };
+        const onCancel = () => {
+            showToast('cancel');
+        };
 
-    return {
-      minDate: new Date(2020, 0, 1),
-      maxDate: new Date(2025, 5, 1),
-      currentDate,
-      currentTime,
-      onConfirm,
-      onCancel,
-    };
-  },
+        return {
+            minDate: new Date(2020, 0, 1),
+            maxDate: new Date(2025, 5, 1),
+            currentDate,
+            currentTime,
+            onConfirm,
+            onCancel,
+        };
+    },
 };
 ```
 
@@ -85,18 +85,18 @@ export default {
 
 ```html
 <mi-picker-group
-  title="预约日期"
-  :tabs="['选择日期', '选择时间']"
-  next-step-text="下一步"
-  @confirm="onConfirm"
-  @cancel="onCancel"
+    title="预约日期"
+    :tabs="['选择日期', '选择时间']"
+    next-step-text="下一步"
+    @confirm="onConfirm"
+    @cancel="onCancel"
 >
-  <mi-date-picker
-    v-model="currentDate"
-    :min-date="minDate"
-    :max-date="maxDate"
-  />
-  <mi-time-picker v-model="currentTime" />
+    <mi-date-picker
+        v-model="currentDate"
+        :min-date="minDate"
+        :max-date="maxDate"
+    />
+    <mi-time-picker v-model="currentTime" />
 </mi-picker-group>
 ```
 
@@ -105,29 +105,29 @@ import { ref } from 'vue';
 import { showToast } from '@miracle-web/ui';
 
 export default {
-  setup() {
-    const currentDate = ref(['2022', '06', '01']);
-    const currentTime = ref(['12', '00']);
+    setup() {
+        const currentDate = ref(['2022', '06', '01']);
+        const currentTime = ref(['12', '00']);
 
-    const onConfirm = () => {
-      showToast(
-        `${currentDate.value.join('/')} ${currentTime.value.join(':')}`,
-      );
-    };
+        const onConfirm = () => {
+            showToast(
+                `${currentDate.value.join('/')} ${currentTime.value.join(':')}`,
+            );
+        };
 
-    const onCancel = () => {
-      showToast('cancel');
-    };
+        const onCancel = () => {
+            showToast('cancel');
+        };
 
-    return {
-      minDate: new Date(2020, 0, 1),
-      maxDate: new Date(2025, 5, 1),
-      currentDate,
-      currentTime,
-      onConfirm,
-      onCancel,
-    };
-  },
+        return {
+            minDate: new Date(2020, 0, 1),
+            maxDate: new Date(2025, 5, 1),
+            currentDate,
+            currentTime,
+            onConfirm,
+            onCancel,
+        };
+    },
 };
 ```
 
@@ -137,13 +137,17 @@ export default {
 
 ```html
 <mi-picker-group
-  title="预约日期"
-  :tabs="['开始日期', '结束日期']"
-  @confirm="onConfirm"
-  @cancel="onCancel"
+    title="预约日期"
+    :tabs="['开始日期', '结束日期']"
+    @confirm="onConfirm"
+    @cancel="onCancel"
 >
-  <mi-date-picker v-model="startDate" :min-date="minDate" :max-date="maxDate" />
-  <mi-date-picker v-model="endDate" :min-date="minDate" :max-date="maxDate" />
+    <mi-date-picker
+        v-model="startDate"
+        :min-date="minDate"
+        :max-date="maxDate"
+    />
+    <mi-date-picker v-model="endDate" :min-date="minDate" :max-date="maxDate" />
 </mi-picker-group>
 ```
 
@@ -152,27 +156,29 @@ import { ref } from 'vue';
 import { showToast } from '@miracle-web/ui';
 
 export default {
-  setup() {
-    const startDate = ref(['2022', '06', '01']);
-    const endDate = ref(['2023', '06', '01']);
+    setup() {
+        const startDate = ref(['2022', '06', '01']);
+        const endDate = ref(['2023', '06', '01']);
 
-    const onConfirm = () => {
-      showToast(`${startDate.value.join('/')} ${endDate.value.join('/')}`);
-    };
+        const onConfirm = () => {
+            showToast(
+                `${startDate.value.join('/')} ${endDate.value.join('/')}`,
+            );
+        };
 
-    const onCancel = () => {
-      showToast('cancel');
-    };
+        const onCancel = () => {
+            showToast('cancel');
+        };
 
-    return {
-      minDate: new Date(2020, 0, 1),
-      maxDate: new Date(2025, 5, 1),
-      endDate,
-      startDate,
-      onConfirm,
-      onCancel,
-    };
-  },
+        return {
+            minDate: new Date(2020, 0, 1),
+            maxDate: new Date(2025, 5, 1),
+            endDate,
+            startDate,
+            onConfirm,
+            onCancel,
+        };
+    },
 };
 ```
 
@@ -182,13 +188,13 @@ export default {
 
 ```html
 <mi-picker-group
-  title="预约时间"
-  :tabs="['开始时间', '结束时间']"
-  @confirm="onConfirm"
-  @cancel="onCancel"
+    title="预约时间"
+    :tabs="['开始时间', '结束时间']"
+    @confirm="onConfirm"
+    @cancel="onCancel"
 >
-  <mi-time-picker v-model="startTime" />
-  <mi-time-picker v-model="endTime" />
+    <mi-time-picker v-model="startTime" />
+    <mi-time-picker v-model="endTime" />
 </mi-picker-group>
 ```
 
@@ -197,25 +203,27 @@ import { ref } from 'vue';
 import { showToast } from '@miracle-web/ui';
 
 export default {
-  setup() {
-    const startTime = ref(['12', '00']);
-    const endTime = ref(['12', '00']);
+    setup() {
+        const startTime = ref(['12', '00']);
+        const endTime = ref(['12', '00']);
 
-    const onConfirm = () => {
-      showToast(`${startTime.value.join(':')} ${endTime.value.join(':')}`);
-    };
+        const onConfirm = () => {
+            showToast(
+                `${startTime.value.join(':')} ${endTime.value.join(':')}`,
+            );
+        };
 
-    const onCancel = () => {
-      showToast('cancel');
-    };
+        const onCancel = () => {
+            showToast('cancel');
+        };
 
-    return {
-      endTime,
-      startTime,
-      onConfirm,
-      onCancel,
-    };
-  },
+        return {
+            endTime,
+            startTime,
+            onConfirm,
+            onCancel,
+        };
+    },
 };
 ```
 
@@ -223,26 +231,26 @@ export default {
 
 `PickerGroup` 中 `tab` 的切换支持非受控模式和受控模式：
 
-- 当未绑定 `v-model:active-tab` 时，PickerGroup 组件 `tab` 的切换完全由组件自身控制。
-- 当绑定 `v-model:active-tab` 时，PickerGroup 支持受控模式，此时组件 `tab` 的切换同时支持 `v-model:active-tab` 的值和组件本身控制。
+-   当未绑定 `v-model:active-tab` 时，PickerGroup 组件 `tab` 的切换完全由组件自身控制。
+-   当绑定 `v-model:active-tab` 时，PickerGroup 支持受控模式，此时组件 `tab` 的切换同时支持 `v-model:active-tab` 的值和组件本身控制。
 
 ```html
-<mi-button type="primary" @click="setActiveTab">
-  点击切换 tab，当前为 {{ activeTab }}
-</mi-button>
-<mi-picker-group
-  v-model:active-tab="activeTab"
-  title="预约日期"
-  :tabs="['选择日期', '选择时间']"
-  @confirm="onConfirm"
-  @cancel="onCancel"
+<mi-button type="primary" @click="setActiveTab"
+    >点击切换 tab，当前为 {{ activeTab }}</mi-button
 >
-  <mi-date-picker
-    v-model="currentDate"
-    :min-date="minDate"
-    :max-date="maxDate"
-  />
-  <mi-time-picker v-model="currentTime" />
+<mi-picker-group
+    v-model:active-tab="activeTab"
+    title="预约日期"
+    :tabs="['选择日期', '选择时间']"
+    @confirm="onConfirm"
+    @cancel="onCancel"
+>
+    <mi-date-picker
+        v-model="currentDate"
+        :min-date="minDate"
+        :max-date="maxDate"
+    />
+    <mi-time-picker v-model="currentTime" />
 </mi-picker-group>
 ```
 
@@ -251,36 +259,36 @@ import { ref } from 'vue';
 import { showToast } from '@miracle-web/ui';
 
 export default {
-  setup() {
-    const activeTab = ref(0);
-    const currentDate = ref(['2022', '06', '01']);
-    const currentTime = ref(['12', '00']);
+    setup() {
+        const activeTab = ref(0);
+        const currentDate = ref(['2022', '06', '01']);
+        const currentTime = ref(['12', '00']);
 
-    const setActiveTab = () => {
-      activeTab.value = activeTab.value ? 0 : 1;
-    };
+        const setActiveTab = () => {
+            activeTab.value = activeTab.value ? 0 : 1;
+        };
 
-    const onConfirm = () => {
-      showToast(
-        `${currentDate.value.join('/')} ${currentTime.value.join(':')}`,
-      );
-    };
+        const onConfirm = () => {
+            showToast(
+                `${currentDate.value.join('/')} ${currentTime.value.join(':')}`,
+            );
+        };
 
-    const onCancel = () => {
-      showToast('cancel');
-    };
+        const onCancel = () => {
+            showToast('cancel');
+        };
 
-    return {
-      minDate: new Date(2020, 0, 1),
-      maxDate: new Date(2025, 5, 1),
-      activeTab,
-      currentDate,
-      currentTime,
-      setActiveTab,
-      onConfirm,
-      onCancel,
-    };
-  },
+        return {
+            minDate: new Date(2020, 0, 1),
+            maxDate: new Date(2025, 5, 1),
+            activeTab,
+            currentDate,
+            currentTime,
+            setActiveTab,
+            onConfirm,
+            onCancel,
+        };
+    },
 };
 ```
 

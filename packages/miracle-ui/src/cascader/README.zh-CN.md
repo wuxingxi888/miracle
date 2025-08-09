@@ -24,21 +24,21 @@ app.use(Cascader);
 
 ```html
 <mi-field
-  v-model="fieldValue"
-  is-link
-  readonly
-  label="地区"
-  placeholder="请选择所在地区"
-  @click="show = true"
+    v-model="fieldValue"
+    is-link
+    readonly
+    label="地区"
+    placeholder="请选择所在地区"
+    @click="show = true"
 />
 <mi-popup v-model:show="show" round position="bottom">
-  <mi-cascader
-    v-model="cascaderValue"
-    title="请选择所在地区"
-    :options="options"
-    @close="show = false"
-    @finish="onFinish"
-  />
+    <mi-cascader
+        v-model="cascaderValue"
+        title="请选择所在地区"
+        :options="options"
+        @close="show = false"
+        @finish="onFinish"
+    />
 </mi-popup>
 ```
 
@@ -46,37 +46,39 @@ app.use(Cascader);
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const show = ref(false);
-    const fieldValue = ref('');
-    const cascaderValue = ref('');
-    // 选项列表，children 代表子选项，支持多级嵌套
-    const options = [
-      {
-        text: '浙江省',
-        value: '330000',
-        children: [{ text: '杭州市', value: '330100' }],
-      },
-      {
-        text: '江苏省',
-        value: '320000',
-        children: [{ text: '南京市', value: '320100' }],
-      },
-    ];
-    // 全部选项选择完毕后，会触发 finish 事件
-    const onFinish = ({ selectedOptions }) => {
-      show.value = false;
-      fieldValue.value = selectedOptions.map((option) => option.text).join('/');
-    };
+    setup() {
+        const show = ref(false);
+        const fieldValue = ref('');
+        const cascaderValue = ref('');
+        // 选项列表，children 代表子选项，支持多级嵌套
+        const options = [
+            {
+                text: '浙江省',
+                value: '330000',
+                children: [{ text: '杭州市', value: '330100' }],
+            },
+            {
+                text: '江苏省',
+                value: '320000',
+                children: [{ text: '南京市', value: '320100' }],
+            },
+        ];
+        // 全部选项选择完毕后，会触发 finish 事件
+        const onFinish = ({ selectedOptions }) => {
+            show.value = false;
+            fieldValue.value = selectedOptions
+                .map((option) => option.text)
+                .join('/');
+        };
 
-    return {
-      show,
-      options,
-      onFinish,
-      fieldValue,
-      cascaderValue,
-    };
-  },
+        return {
+            show,
+            options,
+            onFinish,
+            fieldValue,
+            cascaderValue,
+        };
+    },
 };
 ```
 
@@ -100,21 +102,21 @@ bun add @miracle-web/area-data
 
 ```html
 <mi-field
-  v-model="fieldValue"
-  is-link
-  readonly
-  label="地区"
-  placeholder="请选择所在地区"
-  @click="show = true"
+    v-model="fieldValue"
+    is-link
+    readonly
+    label="地区"
+    placeholder="请选择所在地区"
+    @click="show = true"
 />
 <mi-popup v-model:show="show" round position="bottom">
-  <mi-cascader
-    v-model="cascaderValue"
-    title="请选择所在地区"
-    :options="options"
-    @close="show = false"
-    @finish="onFinish"
-  />
+    <mi-cascader
+        v-model="cascaderValue"
+        title="请选择所在地区"
+        :options="options"
+        @close="show = false"
+        @finish="onFinish"
+    />
 </mi-popup>
 ```
 
@@ -123,23 +125,25 @@ import { ref } from 'vue';
 import { useCascaderAreaData } from '@miracle-web/area-data';
 
 export default {
-  setup() {
-    const show = ref(false);
-    const fieldValue = ref('');
-    const cascaderValue = ref('');
-    const options = useCascaderAreaData();
-    const onFinish = ({ selectedOptions }) => {
-      show.value = false;
-      fieldValue.value = selectedOptions.map((option) => option.text).join('/');
-    };
-    return {
-      show,
-      options,
-      onFinish,
-      fieldValue,
-      cascaderValue,
-    };
-  },
+    setup() {
+        const show = ref(false);
+        const fieldValue = ref('');
+        const cascaderValue = ref('');
+        const options = useCascaderAreaData();
+        const onFinish = ({ selectedOptions }) => {
+            show.value = false;
+            fieldValue.value = selectedOptions
+                .map((option) => option.text)
+                .join('/');
+        };
+        return {
+            show,
+            options,
+            onFinish,
+            fieldValue,
+            cascaderValue,
+        };
+    },
 };
 ```
 
@@ -151,12 +155,12 @@ export default {
 
 ```html
 <mi-cascader
-  v-model="cascaderValue"
-  title="请选择所在地区"
-  :options="options"
-  active-color="#ee0a24"
-  @close="show = false"
-  @finish="onFinish"
+    v-model="cascaderValue"
+    title="请选择所在地区"
+    :options="options"
+    active-color="#ee0a24"
+    @close="show = false"
+    @finish="onFinish"
 />
 ```
 
@@ -166,22 +170,22 @@ export default {
 
 ```html
 <mi-field
-  v-model="fieldValue"
-  is-link
-  readonly
-  label="地区"
-  placeholder="请选择所在地区"
-  @click="show = true"
+    v-model="fieldValue"
+    is-link
+    readonly
+    label="地区"
+    placeholder="请选择所在地区"
+    @click="show = true"
 />
 <mi-popup v-model:show="show" round position="bottom">
-  <mi-cascader
-    v-model="cascaderValue"
-    title="请选择所在地区"
-    :options="options"
-    @close="show = false"
-    @change="onChange"
-    @finish="onFinish"
-  />
+    <mi-cascader
+        v-model="cascaderValue"
+        title="请选择所在地区"
+        :options="options"
+        @close="show = false"
+        @change="onChange"
+        @finish="onFinish"
+    />
 </mi-popup>
 ```
 
@@ -190,46 +194,48 @@ import { ref } from 'vue';
 import { closeToast, showLoadingToast } from '@miracle-web/ui';
 
 export default {
-  setup() {
-    const show = ref(false);
-    const fieldValue = ref('');
-    const cascaderValue = ref('');
-    const options = ref([
-      {
-        text: '浙江省',
-        value: '330000',
-        children: [],
-      },
-    ]);
-    const onChange = ({ value }) => {
-      if (
-        value === options.value[0].value &&
-        options.value[0].children.length === 0
-      ) {
-        // 模拟数据请求
-        showLoadingToast('加载中...');
-        setTimeout(() => {
-          options.value[0].children = [
-            { text: '杭州市', value: '330100' },
-            { text: '宁波市', value: '330200' },
-          ];
-          closeToast();
-        }, 1000);
-      }
-    };
-    const onFinish = ({ selectedOptions }) => {
-      show.value = false;
-      fieldValue.value = selectedOptions.map((option) => option.text).join('/');
-    };
+    setup() {
+        const show = ref(false);
+        const fieldValue = ref('');
+        const cascaderValue = ref('');
+        const options = ref([
+            {
+                text: '浙江省',
+                value: '330000',
+                children: [],
+            },
+        ]);
+        const onChange = ({ value }) => {
+            if (
+                value === options.value[0].value &&
+                options.value[0].children.length === 0
+            ) {
+                // 模拟数据请求
+                showLoadingToast('加载中...');
+                setTimeout(() => {
+                    options.value[0].children = [
+                        { text: '杭州市', value: '330100' },
+                        { text: '宁波市', value: '330200' },
+                    ];
+                    closeToast();
+                }, 1000);
+            }
+        };
+        const onFinish = ({ selectedOptions }) => {
+            show.value = false;
+            fieldValue.value = selectedOptions
+                .map((option) => option.text)
+                .join('/');
+        };
 
-    return {
-      show,
-      options,
-      onFinish,
-      fieldValue,
-      cascaderValue,
-    };
-  },
+        return {
+            show,
+            options,
+            onFinish,
+            fieldValue,
+            cascaderValue,
+        };
+    },
 };
 ```
 
@@ -239,10 +245,10 @@ export default {
 
 ```html
 <mi-cascader
-  v-model="code"
-  title="请选择所在地区"
-  :options="options"
-  :field-names="fieldNames"
+    v-model="code"
+    title="请选择所在地区"
+    :options="options"
+    :field-names="fieldNames"
 />
 ```
 
@@ -250,32 +256,32 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const code = ref('');
-    const fieldNames = {
-      text: 'name',
-      value: 'code',
-      children: 'items',
-    };
-    const options = [
-      {
-        name: '浙江省',
-        code: '330000',
-        items: [{ name: '杭州市', code: '330100' }],
-      },
-      {
-        name: '江苏省',
-        code: '320000',
-        items: [{ name: '南京市', code: '320100' }],
-      },
-    ];
+    setup() {
+        const code = ref('');
+        const fieldNames = {
+            text: 'name',
+            value: 'code',
+            children: 'items',
+        };
+        const options = [
+            {
+                name: '浙江省',
+                code: '330000',
+                items: [{ name: '杭州市', code: '330100' }],
+            },
+            {
+                name: '江苏省',
+                code: '320000',
+                items: [{ name: '南京市', code: '320100' }],
+            },
+        ];
 
-    return {
-      code,
-      options,
-      fieldNames,
-    };
-  },
+        return {
+            code,
+            options,
+            fieldNames,
+        };
+    },
 };
 ```
 
@@ -283,17 +289,17 @@ export default {
 
 ```html
 <mi-cascader v-model="code" title="请选择所在地区" :options="options">
-  <template #options-top="{ tabIndex }">
-    <div class="current-level">当前为第 {{ tabIndex + 1 }} 级</div>
-  </template>
+    <template #options-top="{ tabIndex }">
+        <div class="current-level">当前为第 {{ tabIndex + 1 }} 级</div>
+    </template>
 </mi-cascader>
 
 <style>
-  .current-level {
-    font-size: 14px;
-    padding: 16px 16px 0;
-    color: var(--mi-gray-6);
-  }
+    .current-level {
+        font-size: 14px;
+        padding: 16px 16px 0;
+        color: var(--mi-gray-6);
+    }
 </style>
 ```
 
@@ -301,26 +307,26 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const code = ref('');
-    const options = [
-      {
-        name: '浙江省',
-        code: '330000',
-        items: [{ name: '杭州市', code: '330100' }],
-      },
-      {
-        name: '江苏省',
-        code: '320000',
-        items: [{ name: '南京市', code: '320100' }],
-      },
-    ];
+    setup() {
+        const code = ref('');
+        const options = [
+            {
+                name: '浙江省',
+                code: '330000',
+                items: [{ name: '杭州市', code: '330100' }],
+            },
+            {
+                name: '江苏省',
+                code: '320000',
+                items: [{ name: '南京市', code: '320100' }],
+            },
+        ];
 
-    return {
-      code,
-      options,
-    };
-  },
+        return {
+            code,
+            options,
+        };
+    },
 };
 ```
 
@@ -378,9 +384,9 @@ export default {
 
 ```ts
 import type {
-  CascaderProps,
-  CascaderOption,
-  CascaderFieldNames,
+    CascaderProps,
+    CascaderOption,
+    CascaderFieldNames,
 } from '@miracle-web/ui';
 ```
 

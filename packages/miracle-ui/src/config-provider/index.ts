@@ -5,14 +5,14 @@ export const ConfigProvider = withInstall(_ConfigProvider);
 export default ConfigProvider;
 export { configProviderProps } from './ConfigProvider';
 export type {
-  ConfigProviderProps,
-  ConfigProviderTheme,
-  ConfigProviderThemeVarsScope,
+    ConfigProviderProps,
+    ConfigProviderTheme,
+    ConfigProviderThemeVarsScope,
 } from './ConfigProvider';
 export type { ConfigProviderThemeVars } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiConfigProvider: typeof ConfigProvider;
-  }
+    export interface GlobalComponents {
+        MiConfigProvider: typeof ConfigProvider;
+    }
 }

@@ -8,7 +8,7 @@ export type { TimePickerProps };
 export type { TimePickerColumnType, TimePickerInstance } from './TimePicker';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiTimePicker: typeof TimePicker;
-  }
+    export interface GlobalComponents {
+        MiTimePicker: typeof TimePicker;
+    }
 }

@@ -24,15 +24,16 @@ app.use(Highlight);
 
 ```ts
 export default {
-  setup() {
-    const text = '慢慢来，不要急，生活给你出了难题，可也终有一天会给出答案。';
-    const keywords = '难题';
+    setup() {
+        const text =
+            '慢慢来，不要急，生活给你出了难题，可也终有一天会给出答案。';
+        const keywords = '难题';
 
-    return {
-      text,
-      keywords,
-    };
-  },
+        return {
+            text,
+            keywords,
+        };
+    },
 };
 ```
 
@@ -46,15 +47,16 @@ export default {
 
 ```ts
 export default {
-  setup() {
-    const text = '慢慢来，不要急，生活给你出了难题，可也终有一天会给出答案。';
-    const keywords = ['难题', '终有一天', '答案'];
+    setup() {
+        const text =
+            '慢慢来，不要急，生活给你出了难题，可也终有一天会给出答案。';
+        const keywords = ['难题', '终有一天', '答案'];
 
-    return {
-      text,
-      keywords,
-    };
-  },
+        return {
+            text,
+            keywords,
+        };
+    },
 };
 ```
 
@@ -64,29 +66,30 @@ export default {
 
 ```html
 <mi-highlight
-  :keywords="keywords"
-  :source-string="text"
-  highlight-class="custom-class"
+    :keywords="keywords"
+    :source-string="text"
+    highlight-class="custom-class"
 />
 ```
 
 ```ts
 export default {
-  setup() {
-    const text = '慢慢来，不要急，生活给你出了难题，可也终有一天会给出答案。';
-    const keywords = '生活';
+    setup() {
+        const text =
+            '慢慢来，不要急，生活给你出了难题，可也终有一天会给出答案。';
+        const keywords = '生活';
 
-    return {
-      text,
-      keywords,
-    };
-  },
+        return {
+            text,
+            keywords,
+        };
+    },
 };
 ```
 
 ```css
 .custom-class {
-  color: red;
+    color: red;
 }
 ```
 

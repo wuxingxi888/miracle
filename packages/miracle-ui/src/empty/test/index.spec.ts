@@ -2,70 +2,70 @@ import { Empty } from '..';
 import { mount } from '../../../test';
 
 test('should render image slot correctly', () => {
-  const wrapper = mount(Empty, {
-    slots: {
-      image: () => 'Custom Image',
-    },
-  });
+    const wrapper = mount(Empty, {
+        slots: {
+            image: () => 'Custom Image',
+        },
+    });
 
-  expect(wrapper.html()).toMatchSnapshot();
+    expect(wrapper.html()).toMatchSnapshot();
 });
 
 test('should render description slot correctly', () => {
-  const wrapper = mount(Empty, {
-    slots: {
-      description: () => 'Custom description',
-    },
-  });
+    const wrapper = mount(Empty, {
+        slots: {
+            description: () => 'Custom description',
+        },
+    });
 
-  expect(wrapper.html()).toMatchSnapshot();
+    expect(wrapper.html()).toMatchSnapshot();
 });
 
 test('should render bottom slot correctly', () => {
-  const wrapper = mount(Empty, {
-    slots: {
-      default: () => 'Custom bottom',
-    },
-  });
+    const wrapper = mount(Empty, {
+        slots: {
+            default: () => 'Custom bottom',
+        },
+    });
 
-  expect(wrapper.html()).toMatchSnapshot();
+    expect(wrapper.html()).toMatchSnapshot();
 });
 
 test('should render svg when image is network', () => {
-  const wrapper = mount(Empty, {
-    props: {
-      image: 'network',
-    },
-  });
+    const wrapper = mount(Empty, {
+        props: {
+            image: 'network',
+        },
+    });
 
-  expect(wrapper.html()).toMatchSnapshot();
+    expect(wrapper.html()).toMatchSnapshot();
 });
 
 test('should change image size when using image-size prop', async () => {
-  const wrapper = mount(Empty, {
-    props: {
-      imageSize: 50,
-    },
-  });
+    const wrapper = mount(Empty, {
+        props: {
+            imageSize: 50,
+        },
+    });
 
-  const image = wrapper.find('.mi-empty__image');
+    const image = wrapper.find('.mi-empty__image');
 
-  expect(image.style.width).toEqual('50px');
-  expect(image.style.height).toEqual('50px');
+    expect(image.style.width).toEqual('50px');
+    expect(image.style.height).toEqual('50px');
 
-  await wrapper.setProps({ imageSize: '1vw' });
-  expect(image.style.width).toEqual('1vw');
-  expect(image.style.height).toEqual('1vw');
+    await wrapper.setProps({ imageSize: '1vw' });
+    expect(image.style.width).toEqual('1vw');
+    expect(image.style.height).toEqual('1vw');
 });
 
 test('should allow to set image width and height separately by image-size prop', async () => {
-  const wrapper = mount(Empty, {
-    props: {
-      imageSize: [20, 10],
-    },
-  });
+    const wrapper = mount(Empty, {
+        props: {
+            imageSize: [20, 10],
+        },
+    });
 
-  const image = wrapper.find('.mi-empty__image');
-  expect(image.style.width).toEqual('20px');
-  expect(image.style.height).toEqual('10px');
+    const image = wrapper.find('.mi-empty__image');
+    expect(image.style.width).toEqual('20px');
+    expect(image.style.height).toEqual('10px');
 });

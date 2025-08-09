@@ -1,62 +1,65 @@
 import { join } from 'node:path';
 import {
-  pascalize,
-  getComponents,
-  smartOutputFile,
-  normalizePath,
+    pascalize,
+    getComponents,
+    smartOutputFile,
+    normalizePath,
 } from '../common/index.js';
 import {
-  SRC_DIR,
-  getPackageJson,
-  getMiracleConfig,
+    SRC_DIR,
+    getPackageJson,
+    getMiracleConfig,
 } from '../common/constant.js';
 
 type PathResolver = (path: string) => string;
 
 function getPathByName(name: string, pathResolver?: PathResolver) {
-  let path = join(SRC_DIR, name);
-  if (pathResolver) {
-    path = pathResolver(path);
-  }
-  return normalizePath(path);
+    let path = join(SRC_DIR, name);
+    if (pathResolver) {
+        path = pathResolver(path);
+    }
+    return normalizePath(path);
 }
 
 function genImports(
-  names: string[],
-  pathResolver?: PathResolver,
-  namedExport?: boolean,
+    names: string[],
+    pathResolver?: PathResolver,
+    namedExport?: boolean,
 ): string {
-  return names
-    .map((name) => {
-      const pascalName = pascalize(name);
-      const importName = namedExport ? `{ ${pascalName} }` : pascalName;
-      const importPath = getPathByName(name, pathResolver);
+    return names
+        .map((name) => {
+            const pascalName = pascalize(name);
+            const importName = namedExport ? `{ ${pascalName} }` : pascalName;
+            const importPath = getPathByName(name, pathResolver);
 
-      return `import ${importName} from '${importPath}';`;
-    })
-    .join('\n');
+            return `import ${importName} from '${importPath}';`;
+        })
+        .join('\n');
 }
 
 function genExports(
-  names: string[],
-  pathResolver?: PathResolver,
-  namedExport?: boolean,
+    names: string[],
+    pathResolver?: PathResolver,
+    namedExport?: boolean,
 ): string {
-  if (namedExport) {
-    const exports = names
-      .map((name) => `export * from '${getPathByName(name, pathResolver)}';`)
-      .join('\n');
+    if (namedExport) {
+        const exports = names
+            .map(
+                (name) =>
+                    `export * from '${getPathByName(name, pathResolver)}';`,
+            )
+            .join('\n');
 
-    return `
+        return `
   export {
     install,
     version,
   };
   ${exports}
 `;
-  }
+    }
 
-  return `
+    return `
   export {
     install,
     version,
@@ -66,22 +69,22 @@ function genExports(
 }
 
 export function genPackageEntry({
-  outputPath,
-  pathResolver,
+    outputPath,
+    pathResolver,
 }: {
-  outputPath: string;
-  pathResolver?: PathResolver;
+    outputPath: string;
+    pathResolver?: PathResolver;
 }) {
-  const names = getComponents();
-  const miracleConfig = getMiracleConfig();
+    const names = getComponents();
+    const miracleConfig = getMiracleConfig();
 
-  const namedExport = miracleConfig.build?.namedExport || false;
-  const skipInstall = (miracleConfig.build?.skipInstall || []).map(pascalize);
+    const namedExport = miracleConfig.build?.namedExport || false;
+    const skipInstall = (miracleConfig.build?.skipInstall || []).map(pascalize);
 
-  const version = process.env.PACKAGE_VERSION || getPackageJson().version;
+    const version = process.env.PACKAGE_VERSION || getPackageJson().version;
 
-  const components = names.map(pascalize);
-  const content = `${genImports(names, pathResolver, namedExport)}
+    const components = names.map(pascalize);
+    const content = `${genImports(names, pathResolver, namedExport)}
 
 const version = '${version}';
 
@@ -107,5 +110,5 @@ export default {
 };
 `;
 
-  smartOutputFile(outputPath, content);
+    smartOutputFile(outputPath, content);
 }

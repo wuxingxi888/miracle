@@ -9,7 +9,7 @@ export type { BarrageProps, BarrageItem } from './Barrage';
 export type { BarrageInstance, BarrageThemeVars } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiBarrage: typeof Barrage;
-  }
+    export interface GlobalComponents {
+        MiBarrage: typeof Barrage;
+    }
 }

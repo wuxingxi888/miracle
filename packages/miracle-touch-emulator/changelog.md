@@ -4,4 +4,4 @@
 
 `2024-01-01`
 
-- initial release
+-   initial release

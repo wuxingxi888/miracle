@@ -1,93 +1,93 @@
 :root,
 :host {
-  --mi-pagination-height: 40px;
-  --mi-pagination-font-size: var(--mi-font-size-md);
-  --mi-pagination-item-width: 36px;
-  --mi-pagination-item-default-color: var(--mi-primary-color);
-  --mi-pagination-item-disabled-color: var(--mi-gray-7);
-  --mi-pagination-item-disabled-background: var(--mi-background);
-  --mi-pagination-background: var(--mi-background-2);
-  --mi-pagination-desc-color: var(--mi-gray-7);
-  --mi-pagination-disabled-opacity: var(--mi-disabled-opacity);
+    --mi-pagination-height: 40px;
+    --mi-pagination-font-size: var(--mi-font-size-md);
+    --mi-pagination-item-width: 36px;
+    --mi-pagination-item-default-color: var(--mi-primary-color);
+    --mi-pagination-item-disabled-color: var(--mi-gray-7);
+    --mi-pagination-item-disabled-background: var(--mi-background);
+    --mi-pagination-background: var(--mi-background-2);
+    --mi-pagination-desc-color: var(--mi-gray-7);
+    --mi-pagination-disabled-opacity: var(--mi-disabled-opacity);
 }
 
 .mi-pagination {
-  font-size: var(--mi-pagination-font-size);
+    font-size: var(--mi-pagination-font-size);
 
-  &__items {
-    display: flex;
-  }
-
-  &__item,
-  &__page-desc {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  &__item {
-    flex: 1;
-    box-sizing: border-box;
-    min-width: var(--mi-pagination-item-width);
-    height: var(--mi-pagination-height);
-    color: var(--mi-pagination-item-default-color);
-    background: var(--mi-pagination-background);
-    cursor: pointer;
-    user-select: none;
-
-    button {
-      flex: 1;
-      height: 100%;
-      border: none;
-      padding: 0;
-      background: transparent;
-
-      &[disabled] {
-        cursor: not-allowed;
-      }
+    &__items {
+        display: flex;
     }
 
-    &:active {
-      color: var(--mi-white);
-      background-color: var(--mi-pagination-item-default-color);
+    &__item,
+    &__page-desc {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
-    &:not(:last-child)::after {
-      border-right-width: 0;
+    &__item {
+        flex: 1;
+        box-sizing: border-box;
+        min-width: var(--mi-pagination-item-width);
+        height: var(--mi-pagination-height);
+        color: var(--mi-pagination-item-default-color);
+        background: var(--mi-pagination-background);
+        cursor: pointer;
+        user-select: none;
+
+        button {
+            flex: 1;
+            height: 100%;
+            border: none;
+            padding: 0;
+            background: transparent;
+
+            &[disabled] {
+                cursor: not-allowed;
+            }
+        }
+
+        &:active {
+            color: var(--mi-white);
+            background-color: var(--mi-pagination-item-default-color);
+        }
+
+        &:not(:last-child)::after {
+            border-right-width: 0;
+        }
+
+        &--active {
+            color: var(--mi-white);
+            background-color: var(--mi-pagination-item-default-color);
+        }
+
+        &--page {
+            flex-grow: 0;
+        }
+
+        &--prev,
+        &--next {
+            padding: 0 var(--mi-padding-base);
+            cursor: pointer;
+        }
+
+        &--border:first-child::after {
+            border-right-width: var(--mi-border-width);
+        }
+
+        &--disabled {
+            &,
+            &:active {
+                color: var(--mi-pagination-item-disabled-color);
+                background-color: var(--mi-pagination-item-disabled-background);
+                opacity: var(--mi-pagination-disabled-opacity);
+            }
+        }
     }
 
-    &--active {
-      color: var(--mi-white);
-      background-color: var(--mi-pagination-item-default-color);
+    &__page-desc {
+        flex: 1;
+        height: var(--mi-pagination-height);
+        color: var(--mi-pagination-desc-color);
     }
-
-    &--page {
-      flex-grow: 0;
-    }
-
-    &--prev,
-    &--next {
-      padding: 0 var(--mi-padding-base);
-      cursor: pointer;
-    }
-
-    &--border:first-child::after {
-      border-right-width: var(--mi-border-width);
-    }
-
-    &--disabled {
-      &,
-      &:active {
-        color: var(--mi-pagination-item-disabled-color);
-        background-color: var(--mi-pagination-item-disabled-background);
-        opacity: var(--mi-pagination-disabled-opacity);
-      }
-    }
-  }
-
-  &__page-desc {
-    flex: 1;
-    height: var(--mi-pagination-height);
-    color: var(--mi-pagination-desc-color);
-  }
 }

@@ -2,10 +2,10 @@ import { defineComponent, ExtractPropTypes } from 'vue';
 
 // Utils
 import {
-  numericProp,
-  getSizeStyle,
-  makeStringProp,
-  createNamespace,
+    numericProp,
+    getSizeStyle,
+    makeStringProp,
+    createNamespace,
 } from '../utils';
 
 export type SkeletonAvatarShape = 'square' | 'round';
@@ -13,23 +13,23 @@ export type SkeletonAvatarShape = 'square' | 'round';
 const [name, bem] = createNamespace('skeleton-avatar');
 
 export const skeletonAvatarProps = {
-  avatarSize: numericProp,
-  avatarShape: makeStringProp<SkeletonAvatarShape>('round'),
+    avatarSize: numericProp,
+    avatarShape: makeStringProp<SkeletonAvatarShape>('round'),
 };
 
 export type SkeletonAvatarProps = ExtractPropTypes<typeof skeletonAvatarProps>;
 
 export default defineComponent({
-  name,
+    name,
 
-  props: skeletonAvatarProps,
+    props: skeletonAvatarProps,
 
-  setup(props) {
-    return () => (
-      <div
-        class={bem([props.avatarShape])}
-        style={getSizeStyle(props.avatarSize)}
-      />
-    );
-  },
+    setup(props) {
+        return () => (
+            <div
+                class={bem([props.avatarShape])}
+                style={getSizeStyle(props.avatarSize)}
+            />
+        );
+    },
 });

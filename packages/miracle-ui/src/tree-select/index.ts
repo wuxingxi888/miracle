@@ -5,14 +5,14 @@ export const TreeSelect = withInstall(_TreeSelect);
 export default TreeSelect;
 export { treeSelectProps } from './TreeSelect';
 export type {
-  TreeSelectItem,
-  TreeSelectChild,
-  TreeSelectProps,
+    TreeSelectItem,
+    TreeSelectChild,
+    TreeSelectProps,
 } from './TreeSelect';
 export type { TreeSelectThemeVars } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiTreeSelect: typeof TreeSelect;
-  }
+    export interface GlobalComponents {
+        MiTreeSelect: typeof TreeSelect;
+    }
 }

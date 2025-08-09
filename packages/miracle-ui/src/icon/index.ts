@@ -7,7 +7,7 @@ export { iconProps } from './Icon';
 export type { IconProps } from './Icon';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiIcon: typeof Icon;
-  }
+    export interface GlobalComponents {
+        MiIcon: typeof Icon;
+    }
 }

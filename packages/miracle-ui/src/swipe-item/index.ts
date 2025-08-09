@@ -5,7 +5,7 @@ export const SwipeItem = withInstall(_SwipeItem);
 export default SwipeItem;
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiSwipeItem: typeof SwipeItem;
-  }
+    export interface GlobalComponents {
+        MiSwipeItem: typeof SwipeItem;
+    }
 }

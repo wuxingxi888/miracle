@@ -1,160 +1,160 @@
 :root,
 :host {
-  --mi-number-keyboard-background: var(--mi-gray-2);
-  --mi-number-keyboard-key-height: 48px;
-  --mi-number-keyboard-key-font-size: 28px;
-  --mi-number-keyboard-key-active-color: var(--mi-gray-3);
-  --mi-number-keyboard-key-background: var(--mi-background-2);
-  --mi-number-keyboard-delete-font-size: var(--mi-font-size-lg);
-  --mi-number-keyboard-title-color: var(--mi-gray-7);
-  --mi-number-keyboard-title-height: 34px;
-  --mi-number-keyboard-title-font-size: var(--mi-font-size-lg);
-  --mi-number-keyboard-close-padding: 0 var(--mi-padding-md);
-  --mi-number-keyboard-close-color: var(--mi-primary-color);
-  --mi-number-keyboard-close-font-size: var(--mi-font-size-md);
-  --mi-number-keyboard-button-text-color: var(--mi-white);
-  --mi-number-keyboard-button-background: var(--mi-primary-color);
-  --mi-number-keyboard-z-index: 100;
+    --mi-number-keyboard-background: var(--mi-gray-2);
+    --mi-number-keyboard-key-height: 48px;
+    --mi-number-keyboard-key-font-size: 28px;
+    --mi-number-keyboard-key-active-color: var(--mi-gray-3);
+    --mi-number-keyboard-key-background: var(--mi-background-2);
+    --mi-number-keyboard-delete-font-size: var(--mi-font-size-lg);
+    --mi-number-keyboard-title-color: var(--mi-gray-7);
+    --mi-number-keyboard-title-height: 34px;
+    --mi-number-keyboard-title-font-size: var(--mi-font-size-lg);
+    --mi-number-keyboard-close-padding: 0 var(--mi-padding-md);
+    --mi-number-keyboard-close-color: var(--mi-primary-color);
+    --mi-number-keyboard-close-font-size: var(--mi-font-size-md);
+    --mi-number-keyboard-button-text-color: var(--mi-white);
+    --mi-number-keyboard-button-background: var(--mi-primary-color);
+    --mi-number-keyboard-z-index: 100;
 }
 
 .mi-theme-dark {
-  --mi-number-keyboard-background: var(--mi-gray-8);
-  --mi-number-keyboard-key-background: var(--mi-gray-7);
-  --mi-number-keyboard-key-active-color: var(--mi-gray-6);
+    --mi-number-keyboard-background: var(--mi-gray-8);
+    --mi-number-keyboard-key-background: var(--mi-gray-7);
+    --mi-number-keyboard-key-active-color: var(--mi-gray-6);
 }
 
 .mi-number-keyboard {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: var(--mi-number-keyboard-z-index);
-  width: 100%;
-  padding-bottom: 22px;
-  background: var(--mi-number-keyboard-background);
-  user-select: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: var(--mi-number-keyboard-z-index);
+    width: 100%;
+    padding-bottom: 22px;
+    background: var(--mi-number-keyboard-background);
+    user-select: none;
 
-  &--with-title {
-    border-radius: 20px 20px 0 0;
-  }
-
-  &__header {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: content-box;
-    height: var(--mi-number-keyboard-title-height);
-    padding-top: 6px;
-    color: var(--mi-number-keyboard-title-color);
-    font-size: var(--mi-number-keyboard-title-font-size);
-  }
-
-  &__title {
-    display: inline-block;
-    font-weight: normal;
-
-    &-left {
-      position: absolute;
-      left: 0;
+    &--with-title {
+        border-radius: 20px 20px 0 0;
     }
-  }
 
-  &__body {
-    display: flex;
-    padding: 6px 0 0 6px;
-  }
+    &__header {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: content-box;
+        height: var(--mi-number-keyboard-title-height);
+        padding-top: 6px;
+        color: var(--mi-number-keyboard-title-color);
+        font-size: var(--mi-number-keyboard-title-font-size);
+    }
 
-  &__keys {
-    display: flex;
-    flex: 3;
-    flex-wrap: wrap;
-  }
+    &__title {
+        display: inline-block;
+        font-weight: normal;
 
-  &__close {
-    position: absolute;
-    right: 0;
-    height: 100%;
-    padding: var(--mi-number-keyboard-close-padding);
-    color: var(--mi-number-keyboard-close-color);
-    font-size: var(--mi-number-keyboard-close-font-size);
-    background-color: transparent;
-    border: none;
-  }
+        &-left {
+            position: absolute;
+            left: 0;
+        }
+    }
 
-  &__sidebar {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-  }
+    &__body {
+        display: flex;
+        padding: 6px 0 0 6px;
+    }
 
-  &--unfit {
-    padding-bottom: 0;
-  }
+    &__keys {
+        display: flex;
+        flex: 3;
+        flex-wrap: wrap;
+    }
+
+    &__close {
+        position: absolute;
+        right: 0;
+        height: 100%;
+        padding: var(--mi-number-keyboard-close-padding);
+        color: var(--mi-number-keyboard-close-color);
+        font-size: var(--mi-number-keyboard-close-font-size);
+        background-color: transparent;
+        border: none;
+    }
+
+    &__sidebar {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+    }
+
+    &--unfit {
+        padding-bottom: 0;
+    }
 }
 
 .mi-key {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: var(--mi-number-keyboard-key-height);
-  font-size: var(--mi-number-keyboard-key-font-size);
-  line-height: 1.5;
-  background: var(--mi-number-keyboard-key-background);
-  border-radius: var(--mi-radius-lg);
-  cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--mi-number-keyboard-key-height);
+    font-size: var(--mi-number-keyboard-key-font-size);
+    line-height: 1.5;
+    background: var(--mi-number-keyboard-key-background);
+    border-radius: var(--mi-radius-lg);
+    cursor: pointer;
 
-  &--large {
-    // height: 100% can't fill flex parent on legacy safari
-    // see: https://stackoverflow.com/questions/33636796
-    position: absolute;
-    top: 0;
-    right: 6px;
-    bottom: 6px;
-    left: 0;
-    height: auto;
-  }
-
-  &--blue,
-  &--delete {
-    font-size: var(--mi-number-keyboard-delete-font-size);
-  }
-
-  &--active {
-    background-color: var(--mi-number-keyboard-key-active-color);
-  }
-
-  &--blue {
-    color: var(--mi-number-keyboard-button-text-color);
-    background: var(--mi-number-keyboard-button-background);
-
-    &.mi-key--active {
-      opacity: var(--mi-active-opacity);
+    &--large {
+        // height: 100% can't fill flex parent on legacy safari
+        // see: https://stackoverflow.com/questions/33636796
+        position: absolute;
+        top: 0;
+        right: 6px;
+        bottom: 6px;
+        left: 0;
+        height: auto;
     }
-  }
 
-  &__wrapper {
-    position: relative;
-    flex: 1;
-    flex-basis: 33%;
-    box-sizing: border-box;
-    padding: 0 6px 6px 0;
-
-    &--wider {
-      flex-basis: 66%;
+    &--blue,
+    &--delete {
+        font-size: var(--mi-number-keyboard-delete-font-size);
     }
-  }
 
-  &__delete-icon {
-    width: 32px;
-    height: 22px;
-  }
+    &--active {
+        background-color: var(--mi-number-keyboard-key-active-color);
+    }
 
-  &__collapse-icon {
-    width: 30px;
-    height: 24px;
-  }
+    &--blue {
+        color: var(--mi-number-keyboard-button-text-color);
+        background: var(--mi-number-keyboard-button-background);
 
-  &__loading-icon {
-    color: var(--mi-number-keyboard-button-text-color);
-  }
+        &.mi-key--active {
+            opacity: var(--mi-active-opacity);
+        }
+    }
+
+    &__wrapper {
+        position: relative;
+        flex: 1;
+        flex-basis: 33%;
+        box-sizing: border-box;
+        padding: 0 6px 6px 0;
+
+        &--wider {
+            flex-basis: 66%;
+        }
+    }
+
+    &__delete-icon {
+        width: 32px;
+        height: 22px;
+    }
+
+    &__collapse-icon {
+        width: 30px;
+        height: 24px;
+    }
+
+    &__loading-icon {
+        color: var(--mi-number-keyboard-button-text-color);
+    }
 }

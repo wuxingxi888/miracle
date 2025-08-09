@@ -22,36 +22,36 @@ export type Dispatch<A> = (action: A) => void;
  * setCount(count + 1); // 更新状态
  */
 export function useState<S>(
-  initialState?: (() => S) | S,
+    initialState?: (() => S) | S,
 ): [Ref<S>, Dispatch<BasicStateAction<S>>] {
-  let state: S;
+    let state: S;
 
-  if (isFunction(initialState)) {
-    try {
-      state = initialState();
-    } catch (error) {
-      console.error('Error initializing state:', error);
-      state = undefined as unknown as S; // 提供一个默认值或抛出异常
-    }
-  } else if (initialState !== undefined && initialState !== null) {
-    state = initialState;
-  } else {
-    state = undefined as unknown as S; // 提供一个默认值或抛出异常
-  }
-
-  const reactiveState = ref(state) as Ref<S>;
-
-  const dispatchAction = (actionOrState: ((prevState: S) => S) | S) => {
-    if (isFunction(actionOrState)) {
-      try {
-        reactiveState.value = actionOrState(reactiveState.value);
-      } catch (error) {
-        console.error('Error dispatching action:', error);
-      }
+    if (isFunction(initialState)) {
+        try {
+            state = initialState();
+        } catch (error) {
+            console.error('Error initializing state:', error);
+            state = undefined as unknown as S; // 提供一个默认值或抛出异常
+        }
+    } else if (initialState !== undefined && initialState !== null) {
+        state = initialState;
     } else {
-      reactiveState.value = actionOrState;
+        state = undefined as unknown as S; // 提供一个默认值或抛出异常
     }
-  };
 
-  return [reactiveState, dispatchAction];
+    const reactiveState = ref(state) as Ref<S>;
+
+    const dispatchAction = (actionOrState: ((prevState: S) => S) | S) => {
+        if (isFunction(actionOrState)) {
+            try {
+                reactiveState.value = actionOrState(reactiveState.value);
+            } catch (error) {
+                console.error('Error dispatching action:', error);
+            }
+        } else {
+            reactiveState.value = actionOrState;
+        }
+    };
+
+    return [reactiveState, dispatchAction];
 }

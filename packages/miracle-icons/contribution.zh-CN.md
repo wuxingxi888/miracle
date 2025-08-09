@@ -16,10 +16,10 @@ Miracle 图标库托管在 [iconfont.cn](https://iconfont.cn) 上，同时仓库
 
 绘制图标，请遵循以下图标规范：
 
-- 首先要遵循 [iconfont - 图标绘制](https://www.iconfont.cn/help/detail?spm=a313x.7781069.1998910419.16&helptype=draw) 中的基本规则，保证图标可以正确上传到 iconfont。
-- 建议采用 `18x18` 规格绘制图标，图标的四周留出 `1px` 空隙，绘制完成后放大至 `1000x1000`。
-- 绘制线框风格图标时，线条的标准宽度为 `1px`（放大后为 `55.55px`）。
-- 线框风格图标如果有对应的实底风格图标，需要为名称添加 `-o` 后缀，比如 `star-o` 和 `star` 为一组对应的图标。
+-   首先要遵循 [iconfont - 图标绘制](https://www.iconfont.cn/help/detail?spm=a313x.7781069.1998910419.16&helptype=draw) 中的基本规则，保证图标可以正确上传到 iconfont。
+-   建议采用 `18x18` 规格绘制图标，图标的四周留出 `1px` 空隙，绘制完成后放大至 `1000x1000`。
+-   绘制线框风格图标时，线条的标准宽度为 `1px`（放大后为 `55.55px`）。
+-   线框风格图标如果有对应的实底风格图标，需要为名称添加 `-o` 后缀，比如 `star-o` 和 `star` 为一组对应的图标。
 
 ### 2. 上传图标
 
@@ -33,13 +33,13 @@ Miracle 图标库托管在 [iconfont.cn](https://iconfont.cn) 上，同时仓库
 
 在 iconfont 中更新图标库代码，将新代码下载到本地，并更新以下文件：
 
-- `src/index.less`: 更新字体文件的 CDN 链接。
-- `src/encode-woff2.less`: 更新字体文件的 base64 URL 和 CDN 链接。
+-   `src/index.less`: 更新字体文件的 CDN 链接。
+-   `src/encode-woff2.less`: 更新字体文件的 base64 URL 和 CDN 链接。
 
 如果有新增图标，还需要更新以下文件：
 
-- `src/config.js`: 增加新图标的英文名称。
-- `src/common.less`: 增加新图标的样式类。
+-   `src/config.js`: 增加新图标的英文名称。
+-   `src/common.less`: 增加新图标的样式类。
 
 字体文件的 base64 URL 通过 [transfonter](https://transfonter.org/) 生成，步骤如下图所示：
 

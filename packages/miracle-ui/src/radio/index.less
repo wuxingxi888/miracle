@@ -1,128 +1,128 @@
 :root,
 :host {
-  --mi-radio-size: 20px;
-  --mi-radio-dot-size: 8px;
-  --mi-radio-border-color: var(--mi-gray-5);
-  --mi-radio-duration: var(--mi-duration-fast);
-  --mi-radio-label-margin: var(--mi-padding-xs);
-  --mi-radio-label-color: var(--mi-text-color);
-  --mi-radio-checked-icon-color: var(--mi-primary-color);
-  --mi-radio-disabled-icon-color: var(--mi-gray-5);
-  --mi-radio-disabled-label-color: var(--mi-text-color-3);
-  --mi-radio-disabled-background: var(--mi-border-color);
+    --mi-radio-size: 20px;
+    --mi-radio-dot-size: 8px;
+    --mi-radio-border-color: var(--mi-gray-5);
+    --mi-radio-duration: var(--mi-duration-fast);
+    --mi-radio-label-margin: var(--mi-padding-xs);
+    --mi-radio-label-color: var(--mi-text-color);
+    --mi-radio-checked-icon-color: var(--mi-primary-color);
+    --mi-radio-disabled-icon-color: var(--mi-gray-5);
+    --mi-radio-disabled-label-color: var(--mi-text-color-3);
+    --mi-radio-disabled-background: var(--mi-border-color);
 }
 
 .mi-radio {
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  cursor: pointer;
-  user-select: none;
-
-  &--disabled {
-    cursor: not-allowed;
-  }
-
-  &--label-disabled {
-    cursor: default;
-  }
-
-  &--horizontal {
-    margin-right: var(--mi-padding-sm);
-  }
-
-  &__icon {
-    flex: none;
-    height: 1em;
-    font-size: var(--mi-radio-size);
-    line-height: 1em;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
     cursor: pointer;
+    user-select: none;
 
-    .mi-icon {
-      display: block;
-      box-sizing: border-box;
-      width: 1.25em;
-      height: 1.25em;
-      color: transparent;
-      font-size: 0.8em;
-      line-height: 1.25;
-      text-align: center;
-      border: 1px solid var(--mi-radio-border-color);
-      transition-duration: var(--mi-radio-duration);
-      transition-property: color, border-color, background-color;
+    &--disabled {
+        cursor: not-allowed;
     }
 
-    &--round {
-      .mi-icon {
-        border-radius: 100%;
-      }
+    &--label-disabled {
+        cursor: default;
     }
 
-    &--dot {
-      position: relative;
-      border-radius: 100%;
-      box-sizing: border-box;
-      width: var(--mi-radio-size);
-      height: var(--mi-radio-size);
-      border: 1px solid var(--mi-radio-border-color);
-      transition-duration: var(--mi-radio-duration);
-      transition-property: border-color;
-
-      &__icon {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        border-radius: 100%;
-        height: calc(100% - var(--mi-radio-dot-size));
-        width: calc(100% - var(--mi-radio-dot-size));
-        transition-duration: var(--mi-radio-duration);
-        transition-property: background-color;
-      }
+    &--horizontal {
+        margin-right: var(--mi-padding-sm);
     }
 
-    &--checked {
-      .mi-icon {
-        color: var(--mi-white);
-        background-color: var(--mi-radio-checked-icon-color);
-        border-color: var(--mi-radio-checked-icon-color);
-      }
+    &__icon {
+        flex: none;
+        height: 1em;
+        font-size: var(--mi-radio-size);
+        line-height: 1em;
+        cursor: pointer;
 
-      &.mi-radio__icon--dot {
-        border-color: var(--mi-radio-checked-icon-color);
-        .mi-radio__icon--dot__icon {
-          background: var(--mi-radio-checked-icon-color);
+        .mi-icon {
+            display: block;
+            box-sizing: border-box;
+            width: 1.25em;
+            height: 1.25em;
+            color: transparent;
+            font-size: 0.8em;
+            line-height: 1.25;
+            text-align: center;
+            border: 1px solid var(--mi-radio-border-color);
+            transition-duration: var(--mi-radio-duration);
+            transition-property: color, border-color, background-color;
         }
-      }
+
+        &--round {
+            .mi-icon {
+                border-radius: 100%;
+            }
+        }
+
+        &--dot {
+            position: relative;
+            border-radius: 100%;
+            box-sizing: border-box;
+            width: var(--mi-radio-size);
+            height: var(--mi-radio-size);
+            border: 1px solid var(--mi-radio-border-color);
+            transition-duration: var(--mi-radio-duration);
+            transition-property: border-color;
+
+            &__icon {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 100%;
+                height: calc(100% - var(--mi-radio-dot-size));
+                width: calc(100% - var(--mi-radio-dot-size));
+                transition-duration: var(--mi-radio-duration);
+                transition-property: background-color;
+            }
+        }
+
+        &--checked {
+            .mi-icon {
+                color: var(--mi-white);
+                background-color: var(--mi-radio-checked-icon-color);
+                border-color: var(--mi-radio-checked-icon-color);
+            }
+
+            &.mi-radio__icon--dot {
+                border-color: var(--mi-radio-checked-icon-color);
+                .mi-radio__icon--dot__icon {
+                    background: var(--mi-radio-checked-icon-color);
+                }
+            }
+        }
+
+        &--disabled {
+            cursor: not-allowed;
+
+            .mi-icon {
+                background-color: var(--mi-radio-disabled-background);
+                border-color: var(--mi-radio-disabled-icon-color);
+            }
+        }
+
+        &--disabled&--checked {
+            .mi-icon {
+                color: var(--mi-radio-disabled-icon-color);
+            }
+        }
     }
 
-    &--disabled {
-      cursor: not-allowed;
+    &__label {
+        margin-left: var(--mi-radio-label-margin);
+        color: var(--mi-radio-label-color);
+        line-height: var(--mi-radio-size);
 
-      .mi-icon {
-        background-color: var(--mi-radio-disabled-background);
-        border-color: var(--mi-radio-disabled-icon-color);
-      }
+        &--left {
+            margin: 0 var(--mi-radio-label-margin) 0 0;
+        }
+
+        &--disabled {
+            color: var(--mi-radio-disabled-label-color);
+        }
     }
-
-    &--disabled&--checked {
-      .mi-icon {
-        color: var(--mi-radio-disabled-icon-color);
-      }
-    }
-  }
-
-  &__label {
-    margin-left: var(--mi-radio-label-margin);
-    color: var(--mi-radio-label-color);
-    line-height: var(--mi-radio-size);
-
-    &--left {
-      margin: 0 var(--mi-radio-label-margin) 0 0;
-    }
-
-    &--disabled {
-      color: var(--mi-radio-disabled-label-color);
-    }
-  }
 }

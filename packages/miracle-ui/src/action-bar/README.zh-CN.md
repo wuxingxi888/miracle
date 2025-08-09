@@ -24,10 +24,14 @@ app.use(ActionBarButton);
 
 ```html
 <mi-action-bar>
-  <mi-action-bar-icon icon="chat-o" text="客服" @click="onClickIcon" />
-  <mi-action-bar-icon icon="cart-o" text="购物车" @click="onClickIcon" />
-  <mi-action-bar-icon icon="shop-o" text="店铺" @click="onClickIcon" />
-  <mi-action-bar-button type="danger" text="立即购买" @click="onClickButton" />
+    <mi-action-bar-icon icon="chat-o" text="客服" @click="onClickIcon" />
+    <mi-action-bar-icon icon="cart-o" text="购物车" @click="onClickIcon" />
+    <mi-action-bar-icon icon="shop-o" text="店铺" @click="onClickIcon" />
+    <mi-action-bar-button
+        type="danger"
+        text="立即购买"
+        @click="onClickButton"
+    />
 </mi-action-bar>
 ```
 
@@ -35,14 +39,14 @@ app.use(ActionBarButton);
 import { showToast } from '@miracle-web/ui';
 
 export default {
-  setup() {
-    const onClickIcon = () => showToast('点击图标');
-    const onClickButton = () => showToast('点击按钮');
-    return {
-      onClickIcon,
-      onClickButton,
-    };
-  },
+    setup() {
+        const onClickIcon = () => showToast('点击图标');
+        const onClickButton = () => showToast('点击按钮');
+        return {
+            onClickIcon,
+            onClickButton,
+        };
+    },
 };
 ```
 
@@ -52,11 +56,11 @@ export default {
 
 ```html
 <mi-action-bar>
-  <mi-action-bar-icon icon="chat-o" text="客服" dot />
-  <mi-action-bar-icon icon="cart-o" text="购物车" badge="5" />
-  <mi-action-bar-icon icon="shop-o" text="店铺" badge="12" />
-  <mi-action-bar-button type="warning" text="加入购物车" />
-  <mi-action-bar-button type="danger" text="立即购买" />
+    <mi-action-bar-icon icon="chat-o" text="客服" dot />
+    <mi-action-bar-icon icon="cart-o" text="购物车" badge="5" />
+    <mi-action-bar-icon icon="shop-o" text="店铺" badge="12" />
+    <mi-action-bar-button type="warning" text="加入购物车" />
+    <mi-action-bar-button type="danger" text="立即购买" />
 </mi-action-bar>
 ```
 
@@ -66,11 +70,11 @@ export default {
 
 ```html
 <mi-action-bar>
-  <mi-action-bar-icon icon="chat-o" text="客服" color="#ee0a24" />
-  <mi-action-bar-icon icon="cart-o" text="购物车" />
-  <mi-action-bar-icon icon="star" text="已收藏" color="#ff5000" />
-  <mi-action-bar-button type="warning" text="加入购物车" />
-  <mi-action-bar-button type="danger" text="立即购买" />
+    <mi-action-bar-icon icon="chat-o" text="客服" color="#ee0a24" />
+    <mi-action-bar-icon icon="cart-o" text="购物车" />
+    <mi-action-bar-icon icon="star" text="已收藏" color="#ff5000" />
+    <mi-action-bar-button type="warning" text="加入购物车" />
+    <mi-action-bar-button type="danger" text="立即购买" />
 </mi-action-bar>
 ```
 
@@ -80,10 +84,10 @@ export default {
 
 ```html
 <mi-action-bar>
-  <mi-action-bar-icon icon="chat-o" text="客服" />
-  <mi-action-bar-icon icon="shop-o" text="店铺" />
-  <mi-action-bar-button color="#be99ff" type="warning" text="加入购物车" />
-  <mi-action-bar-button color="#7232dd" type="danger" text="立即购买" />
+    <mi-action-bar-icon icon="chat-o" text="客服" />
+    <mi-action-bar-icon icon="shop-o" text="店铺" />
+    <mi-action-bar-button color="#be99ff" type="warning" text="加入购物车" />
+    <mi-action-bar-button color="#7232dd" type="danger" text="立即购买" />
 </mi-action-bar>
 ```
 
@@ -145,9 +149,9 @@ export default {
 
 ```ts
 import type {
-  ActionBarProps,
-  ActionBarIconProps,
-  ActionBarButtonProps,
+    ActionBarProps,
+    ActionBarIconProps,
+    ActionBarButtonProps,
 } from '@miracle-web/ui';
 ```
 

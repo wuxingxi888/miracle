@@ -30,10 +30,10 @@ app.use(Search);
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const value = ref('');
-    return { value };
-  },
+    setup() {
+        const value = ref('');
+        return { value };
+    },
 };
 ```
 
@@ -43,13 +43,13 @@ Search 组件提供了 `search` 和 `cancel` 事件，`search` 事件在点击�
 
 ```html
 <form action="/">
-  <mi-search
-    v-model="value"
-    show-action
-    placeholder="请输入搜索关键词"
-    @search="onSearch"
-    @cancel="onCancel"
-  />
+    <mi-search
+        v-model="value"
+        show-action
+        placeholder="请输入搜索关键词"
+        @search="onSearch"
+        @cancel="onCancel"
+    />
 </form>
 ```
 
@@ -58,16 +58,16 @@ import { ref } from 'vue';
 import { showToast } from '@miracle-web/ui';
 
 export default {
-  setup() {
-    const value = ref('');
-    const onSearch = (val) => showToast(val);
-    const onCancel = () => showToast('取消');
-    return {
-      value,
-      onSearch,
-      onCancel,
-    };
-  },
+    setup() {
+        const value = ref('');
+        const onSearch = (val) => showToast(val);
+        const onCancel = () => showToast('取消');
+        return {
+            value,
+            onSearch,
+            onCancel,
+        };
+    },
 };
 ```
 
@@ -79,9 +79,9 @@ export default {
 
 ```html
 <mi-search
-  v-model="value"
-  placeholder="请输入搜索关键词"
-  input-align="center"
+    v-model="value"
+    placeholder="请输入搜索关键词"
+    input-align="center"
 />
 ```
 
@@ -99,10 +99,10 @@ export default {
 
 ```html
 <mi-search
-  v-model="value"
-  shape="round"
-  background="#4fc08d"
-  placeholder="请输入搜索关键词"
+    v-model="value"
+    shape="round"
+    background="#4fc08d"
+    placeholder="请输入搜索关键词"
 />
 ```
 
@@ -112,15 +112,15 @@ export default {
 
 ```html
 <mi-search
-  v-model="value"
-  show-action
-  label="地址"
-  placeholder="请输入搜索关键词"
-  @search="onSearch"
+    v-model="value"
+    show-action
+    label="地址"
+    placeholder="请输入搜索关键词"
+    @search="onSearch"
 >
-  <template #action>
-    <div @click="onClickButton">搜索</div>
-  </template>
+    <template #action>
+        <div @click="onClickButton">搜索</div>
+    </template>
 </mi-search>
 ```
 
@@ -129,16 +129,16 @@ import { ref } from 'vue';
 import { showToast } from '@miracle-web/ui';
 
 export default {
-  setup() {
-    const value = ref('');
-    const onSearch = (val) => showToast(val);
-    const onClickButton = () => showToast(value.value);
-    return {
-      value,
-      onSearch,
-      onClickButton,
-    };
-  },
+    setup() {
+        const value = ref('');
+        const onSearch = (val) => showToast(val);
+        const onClickButton = () => showToast(value.value);
+        return {
+            value,
+            onSearch,
+            onClickButton,
+        };
+    },
 };
 ```
 

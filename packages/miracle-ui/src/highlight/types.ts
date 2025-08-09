@@ -1,3 +1,3 @@
 export type HighlightThemeVars = {
-  highlightTagColor?: string;
+    highlightTagColor?: string;
 };

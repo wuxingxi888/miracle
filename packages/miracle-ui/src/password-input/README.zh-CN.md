@@ -26,15 +26,15 @@ app.use(NumberKeyboard);
 ```html
 <!-- 密码输入框 -->
 <mi-password-input
-  :value="value"
-  :focused="showKeyboard"
-  @focus="showKeyboard = true"
+    :value="value"
+    :focused="showKeyboard"
+    @focus="showKeyboard = true"
 />
 <!-- 数字键盘 -->
 <mi-number-keyboard
-  v-model="value"
-  :show="showKeyboard"
-  @blur="showKeyboard = false"
+    v-model="value"
+    :show="showKeyboard"
+    @blur="showKeyboard = false"
 />
 ```
 
@@ -42,15 +42,15 @@ app.use(NumberKeyboard);
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const value = ref('123');
-    const showKeyboard = ref(true);
+    setup() {
+        const value = ref('123');
+        const showKeyboard = ref(true);
 
-    return {
-      value,
-      showKeyboard,
-    };
-  },
+        return {
+            value,
+            showKeyboard,
+        };
+    },
 };
 ```
 
@@ -60,10 +60,10 @@ export default {
 
 ```html
 <mi-password-input
-  :value="value"
-  :length="4"
-  :focused="showKeyboard"
-  @focus="showKeyboard = true"
+    :value="value"
+    :length="4"
+    :focused="showKeyboard"
+    @focus="showKeyboard = true"
 />
 ```
 
@@ -73,10 +73,10 @@ export default {
 
 ```html
 <mi-password-input
-  :value="value"
-  :gutter="10"
-  :focused="showKeyboard"
-  @focus="showKeyboard = true"
+    :value="value"
+    :gutter="10"
+    :focused="showKeyboard"
+    @focus="showKeyboard = true"
 />
 ```
 
@@ -86,10 +86,10 @@ export default {
 
 ```html
 <mi-password-input
-  :value="value"
-  :mask="false"
-  :focused="showKeyboard"
-  @focus="showKeyboard = true"
+    :value="value"
+    :mask="false"
+    :focused="showKeyboard"
+    @focus="showKeyboard = true"
 />
 ```
 
@@ -99,16 +99,16 @@ export default {
 
 ```html
 <mi-password-input
-  :value="value"
-  info="密码为 6 位数字"
-  :error-info="errorInfo"
-  :focused="showKeyboard"
-  @focus="showKeyboard = true"
+    :value="value"
+    info="密码为 6 位数字"
+    :error-info="errorInfo"
+    :focused="showKeyboard"
+    @focus="showKeyboard = true"
 />
 <mi-number-keyboard
-  v-model="value"
-  :show="showKeyboard"
-  @blur="showKeyboard = false"
+    v-model="value"
+    :show="showKeyboard"
+    @blur="showKeyboard = false"
 />
 ```
 
@@ -116,25 +116,25 @@ export default {
 import { ref, watch } from 'vue';
 
 export default {
-  setup() {
-    const value = ref('123');
-    const errorInfo = ref('');
-    const showKeyboard = ref(true);
+    setup() {
+        const value = ref('123');
+        const errorInfo = ref('');
+        const showKeyboard = ref(true);
 
-    watch(value, (newVal) => {
-      if (newVal.length === 6 && newVal !== '123456') {
-        errorInfo.value = '密码错误';
-      } else {
-        errorInfo.value = '';
-      }
-    });
+        watch(value, (newVal) => {
+            if (newVal.length === 6 && newVal !== '123456') {
+                errorInfo.value = '密码错误';
+            } else {
+                errorInfo.value = '';
+            }
+        });
 
-    return {
-      value,
-      errorInfo,
-      showKeyboard,
-    };
-  },
+        return {
+            value,
+            errorInfo,
+            showKeyboard,
+        };
+    },
 };
 ```
 

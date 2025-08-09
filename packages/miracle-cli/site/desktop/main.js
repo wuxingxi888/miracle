@@ -4,9 +4,9 @@ import DemoPlayground from './components/DemoPlayground.vue';
 import { router } from './router';
 
 window.app = createApp(App)
-  .use(router)
-  .component(DemoPlayground.name, DemoPlayground);
+    .use(router)
+    .component(DemoPlayground.name, DemoPlayground);
 
 setTimeout(() => {
-  window.app.mount('#app');
+    window.app.mount('#app');
 }, 0);

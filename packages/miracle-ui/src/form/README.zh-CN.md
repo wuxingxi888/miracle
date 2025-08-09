@@ -26,28 +26,28 @@ app.use(CellGroup);
 
 ```html
 <mi-form @submit="onSubmit">
-  <mi-cell-group inset>
-    <mi-field
-      v-model="username"
-      name="用户名"
-      label="用户名"
-      placeholder="用户名"
-      :rules="[{ required: true, message: '请填写用户名' }]"
-    />
-    <mi-field
-      v-model="password"
-      type="password"
-      name="密码"
-      label="密码"
-      placeholder="密码"
-      :rules="[{ required: true, message: '请填写密码' }]"
-    />
-  </mi-cell-group>
-  <div style="margin: 16px;">
-    <mi-button round block type="primary" native-type="submit">
-      提交
-    </mi-button>
-  </div>
+    <mi-cell-group inset>
+        <mi-field
+            v-model="username"
+            name="用户名"
+            label="用户名"
+            placeholder="用户名"
+            :rules="[{ required: true, message: '请填写用户名' }]"
+        />
+        <mi-field
+            v-model="password"
+            type="password"
+            name="密码"
+            label="密码"
+            placeholder="密码"
+            :rules="[{ required: true, message: '请填写密码' }]"
+        />
+    </mi-cell-group>
+    <div style="margin: 16px;">
+        <mi-button round block type="primary" native-type="submit"
+            >提交</mi-button
+        >
+    </div>
 </mi-form>
 ```
 
@@ -55,19 +55,19 @@ app.use(CellGroup);
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const username = ref('');
-    const password = ref('');
-    const onSubmit = (values) => {
-      console.log('submit', values);
-    };
+    setup() {
+        const username = ref('');
+        const password = ref('');
+        const onSubmit = (values) => {
+            console.log('submit', values);
+        };
 
-    return {
-      username,
-      password,
-      onSubmit,
-    };
-  },
+        return {
+            username,
+            password,
+            onSubmit,
+        };
+    },
 };
 ```
 
@@ -77,41 +77,41 @@ export default {
 
 ```html
 <mi-form @failed="onFailed">
-  <mi-cell-group inset>
-    <!-- 通过 pattern 进行正则校验 -->
-    <mi-field
-      v-model="value1"
-      name="pattern"
-      placeholder="正则校验"
-      :rules="[{ pattern, message: '请输入正确内容' }]"
-    />
-    <!-- 通过 validator 进行函数校验 -->
-    <mi-field
-      v-model="value2"
-      name="validator"
-      placeholder="函数校验"
-      :rules="[{ validator, message: '请输入正确内容' }]"
-    />
-    <!-- 通过 validator 返回错误提示 -->
-    <mi-field
-      v-model="value3"
-      name="validatorMessage"
-      placeholder="校验函数返回错误提示"
-      :rules="[{ validator: validatorMessage }]"
-    />
-    <!-- 通过 validator 进行异步函数校验 -->
-    <mi-field
-      v-model="value4"
-      name="asyncValidator"
-      placeholder="异步函数校验"
-      :rules="[{ validator: asyncValidator, message: '请输入正确内容' }]"
-    />
-  </mi-cell-group>
-  <div style="margin: 16px;">
-    <mi-button round block type="primary" native-type="submit">
-      提交
-    </mi-button>
-  </div>
+    <mi-cell-group inset>
+        <!-- 通过 pattern 进行正则校验 -->
+        <mi-field
+            v-model="value1"
+            name="pattern"
+            placeholder="正则校验"
+            :rules="[{ pattern, message: '请输入正确内容' }]"
+        />
+        <!-- 通过 validator 进行函数校验 -->
+        <mi-field
+            v-model="value2"
+            name="validator"
+            placeholder="函数校验"
+            :rules="[{ validator, message: '请输入正确内容' }]"
+        />
+        <!-- 通过 validator 返回错误提示 -->
+        <mi-field
+            v-model="value3"
+            name="validatorMessage"
+            placeholder="校验函数返回错误提示"
+            :rules="[{ validator: validatorMessage }]"
+        />
+        <!-- 通过 validator 进行异步函数校验 -->
+        <mi-field
+            v-model="value4"
+            name="asyncValidator"
+            placeholder="异步函数校验"
+            :rules="[{ validator: asyncValidator, message: '请输入正确内容' }]"
+        />
+    </mi-cell-group>
+    <div style="margin: 16px;">
+        <mi-button round block type="primary" native-type="submit"
+            >提交</mi-button
+        >
+    </div>
 </mi-form>
 ```
 
@@ -120,45 +120,45 @@ import { ref } from 'vue';
 import { closeToast, showLoadingToast } from '@miracle-web/ui';
 
 export default {
-  setup() {
-    const value1 = ref('');
-    const value2 = ref('');
-    const value3 = ref('abc');
-    const value4 = ref('');
-    const pattern = /\d{6}/;
+    setup() {
+        const value1 = ref('');
+        const value2 = ref('');
+        const value3 = ref('abc');
+        const value4 = ref('');
+        const pattern = /\d{6}/;
 
-    // 校验函数返回 true 表示校验通过，false 表示不通过
-    const validator = (val) => /1\d{10}/.test(val);
+        // 校验函数返回 true 表示校验通过，false 表示不通过
+        const validator = (val) => /1\d{10}/.test(val);
 
-    // 校验函数可以直接返回一段错误提示
-    const validatorMessage = (val) => `${val} 不合法，请重新输入`;
+        // 校验函数可以直接返回一段错误提示
+        const validatorMessage = (val) => `${val} 不合法，请重新输入`;
 
-    // 校验函数可以返回 Promise，实现异步校验
-    const asyncValidator = (val) =>
-      new Promise((resolve) => {
-        showLoadingToast('验证中...');
+        // 校验函数可以返回 Promise，实现异步校验
+        const asyncValidator = (val) =>
+            new Promise((resolve) => {
+                showLoadingToast('验证中...');
 
-        setTimeout(() => {
-          closeToast();
-          resolve(val === '1234');
-        }, 1000);
-      });
+                setTimeout(() => {
+                    closeToast();
+                    resolve(val === '1234');
+                }, 1000);
+            });
 
-    const onFailed = (errorInfo) => {
-      console.log('failed', errorInfo);
-    };
+        const onFailed = (errorInfo) => {
+            console.log('failed', errorInfo);
+        };
 
-    return {
-      value1,
-      value2,
-      value3,
-      value4,
-      pattern,
-      onFailed,
-      validator,
-      asyncValidator,
-    };
-  },
+        return {
+            value1,
+            value2,
+            value3,
+            value4,
+            pattern,
+            onFailed,
+            validator,
+            asyncValidator,
+        };
+    },
 };
 ```
 
@@ -168,9 +168,9 @@ export default {
 
 ```html
 <mi-field name="switch" label="开关">
-  <template #input>
-    <mi-switch v-model="checked" />
-  </template>
+    <template #input>
+        <mi-switch v-model="checked" />
+    </template>
 </mi-field>
 ```
 
@@ -178,10 +178,10 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const checked = ref(false);
-    return { checked };
-  },
+    setup() {
+        const checked = ref(false);
+        return { checked };
+    },
 };
 ```
 
@@ -191,17 +191,17 @@ export default {
 
 ```html
 <mi-field name="checkbox" label="复选框">
-  <template #input>
-    <mi-checkbox v-model="checked" shape="square" />
-  </template>
+    <template #input>
+        <mi-checkbox v-model="checked" shape="square" />
+    </template>
 </mi-field>
 <mi-field name="checkboxGroup" label="复选框组">
-  <template #input>
-    <mi-checkbox-group v-model="groupChecked" direction="horizontal">
-      <mi-checkbox name="1" shape="square">复选框 1</mi-checkbox>
-      <mi-checkbox name="2" shape="square">复选框 2</mi-checkbox>
-    </mi-checkbox-group>
-  </template>
+    <template #input>
+        <mi-checkbox-group v-model="groupChecked" direction="horizontal">
+            <mi-checkbox name="1" shape="square">复选框 1</mi-checkbox>
+            <mi-checkbox name="2" shape="square">复选框 2</mi-checkbox>
+        </mi-checkbox-group>
+    </template>
 </mi-field>
 ```
 
@@ -209,14 +209,14 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const checked = ref(false);
-    const groupChecked = ref([]);
-    return {
-      checked,
-      groupChecked,
-    };
-  },
+    setup() {
+        const checked = ref(false);
+        const groupChecked = ref([]);
+        return {
+            checked,
+            groupChecked,
+        };
+    },
 };
 ```
 
@@ -226,12 +226,12 @@ export default {
 
 ```html
 <mi-field name="radio" label="单选框">
-  <template #input>
-    <mi-radio-group v-model="checked" direction="horizontal">
-      <mi-radio name="1">单选框 1</mi-radio>
-      <mi-radio name="2">单选框 2</mi-radio>
-    </mi-radio-group>
-  </template>
+    <template #input>
+        <mi-radio-group v-model="checked" direction="horizontal">
+            <mi-radio name="1">单选框 1</mi-radio>
+            <mi-radio name="2">单选框 2</mi-radio>
+        </mi-radio-group>
+    </template>
 </mi-field>
 ```
 
@@ -239,10 +239,10 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const checked = ref('1');
-    return { checked };
-  },
+    setup() {
+        const checked = ref('1');
+        return { checked };
+    },
 };
 ```
 
@@ -252,9 +252,9 @@ export default {
 
 ```html
 <mi-field name="stepper" label="步进器">
-  <template #input>
-    <mi-stepper v-model="value" />
-  </template>
+    <template #input>
+        <mi-stepper v-model="value" />
+    </template>
 </mi-field>
 ```
 
@@ -262,10 +262,10 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const value = ref(1);
-    return { value };
-  },
+    setup() {
+        const value = ref(1);
+        return { value };
+    },
 };
 ```
 
@@ -275,9 +275,9 @@ export default {
 
 ```html
 <mi-field name="rate" label="评分">
-  <template #input>
-    <mi-rate v-model="value" />
-  </template>
+    <template #input>
+        <mi-rate v-model="value" />
+    </template>
 </mi-field>
 ```
 
@@ -285,10 +285,10 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const value = ref(3);
-    return { value };
-  },
+    setup() {
+        const value = ref(3);
+        return { value };
+    },
 };
 ```
 
@@ -298,9 +298,9 @@ export default {
 
 ```html
 <mi-field name="slider" label="滑块">
-  <template #input>
-    <mi-slider v-model="value" />
-  </template>
+    <template #input>
+        <mi-slider v-model="value" />
+    </template>
 </mi-field>
 ```
 
@@ -308,10 +308,10 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const value = ref(50);
-    return { value };
-  },
+    setup() {
+        const value = ref(50);
+        return { value };
+    },
 };
 ```
 
@@ -321,9 +321,9 @@ export default {
 
 ```html
 <mi-field name="uploader" label="文件上传">
-  <template #input>
-    <mi-uploader v-model="value" />
-  </template>
+    <template #input>
+        <mi-uploader v-model="value" />
+    </template>
 </mi-field>
 ```
 
@@ -331,12 +331,14 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const value = ref([
-      { url: 'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg' },
-    ]);
-    return { value };
-  },
+    setup() {
+        const value = ref([
+            {
+                url: 'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg',
+            },
+        ]);
+        return { value };
+    },
 };
 ```
 
@@ -346,20 +348,20 @@ export default {
 
 ```html
 <mi-field
-  v-model="result"
-  is-link
-  readonly
-  name="picker"
-  label="选择器"
-  placeholder="点击选择城市"
-  @click="showPicker = true"
+    v-model="result"
+    is-link
+    readonly
+    name="picker"
+    label="选择器"
+    placeholder="点击选择城市"
+    @click="showPicker = true"
 />
 <mi-popup v-model:show="showPicker" position="bottom">
-  <mi-picker
-    :columns="columns"
-    @confirm="onConfirm"
-    @cancel="showPicker = false"
-  />
+    <mi-picker
+        :columns="columns"
+        @confirm="onConfirm"
+        @cancel="showPicker = false"
+    />
 </mi-popup>
 ```
 
@@ -367,29 +369,29 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const result = ref('');
-    const showPicker = ref(false);
-    const columns = [
-      { text: '杭州', value: 'Hangzhou' },
-      { text: '宁波', value: 'Ningbo' },
-      { text: '温州', value: 'Wenzhou' },
-      { text: '绍兴', value: 'Shaoxing' },
-      { text: '湖州', value: 'Huzhou' },
-    ];
+    setup() {
+        const result = ref('');
+        const showPicker = ref(false);
+        const columns = [
+            { text: '杭州', value: 'Hangzhou' },
+            { text: '宁波', value: 'Ningbo' },
+            { text: '温州', value: 'Wenzhou' },
+            { text: '绍兴', value: 'Shaoxing' },
+            { text: '湖州', value: 'Huzhou' },
+        ];
 
-    const onConfirm = ({ selectedOptions }) => {
-      result.value = selectedOptions[0]?.text;
-      showPicker.value = false;
-    };
+        const onConfirm = ({ selectedOptions }) => {
+            result.value = selectedOptions[0]?.text;
+            showPicker.value = false;
+        };
 
-    return {
-      result,
-      columns,
-      onConfirm,
-      showPicker,
-    };
-  },
+        return {
+            result,
+            columns,
+            onConfirm,
+            showPicker,
+        };
+    },
 };
 ```
 
@@ -399,16 +401,16 @@ export default {
 
 ```html
 <mi-field
-  v-model="result"
-  is-link
-  readonly
-  name="datePicker"
-  label="时间选择"
-  placeholder="点击选择时间"
-  @click="showPicker = true"
+    v-model="result"
+    is-link
+    readonly
+    name="datePicker"
+    label="时间选择"
+    placeholder="点击选择时间"
+    @click="showPicker = true"
 />
 <mi-popup v-model:show="showPicker" position="bottom">
-  <mi-date-picker @confirm="onConfirm" @cancel="showPicker = false" />
+    <mi-date-picker @confirm="onConfirm" @cancel="showPicker = false" />
 </mi-popup>
 ```
 
@@ -416,20 +418,20 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const result = ref('');
-    const showPicker = ref(false);
-    const onConfirm = ({ selectedValues }) => {
-      result.value = selectedValues.join('/');
-      showPicker.value = false;
-    };
+    setup() {
+        const result = ref('');
+        const showPicker = ref(false);
+        const onConfirm = ({ selectedValues }) => {
+            result.value = selectedValues.join('/');
+            showPicker.value = false;
+        };
 
-    return {
-      result,
-      onConfirm,
-      showPicker,
-    };
-  },
+        return {
+            result,
+            onConfirm,
+            showPicker,
+        };
+    },
 };
 ```
 
@@ -439,20 +441,20 @@ export default {
 
 ```html
 <mi-field
-  v-model="result"
-  is-link
-  readonly
-  name="area"
-  label="地区选择"
-  placeholder="点击选择省市区"
-  @click="showArea = true"
+    v-model="result"
+    is-link
+    readonly
+    name="area"
+    label="地区选择"
+    placeholder="点击选择省市区"
+    @click="showArea = true"
 />
 <mi-popup v-model:show="showArea" position="bottom">
-  <mi-area
-    :area-list="areaList"
-    @confirm="onConfirm"
-    @cancel="showArea = false"
-  />
+    <mi-area
+        :area-list="areaList"
+        @confirm="onConfirm"
+        @cancel="showArea = false"
+    />
 </mi-popup>
 ```
 
@@ -461,21 +463,21 @@ import { ref } from 'vue';
 import { areaList } from '@miracle-web/area-data';
 
 export default {
-  setup() {
-    const result = ref('');
-    const showArea = ref(false);
-    const onConfirm = ({ selectedOptions }) => {
-      showArea.value = false;
-      result.value = selectedOptions.map((item) => item.text).join('/');
-    };
+    setup() {
+        const result = ref('');
+        const showArea = ref(false);
+        const onConfirm = ({ selectedOptions }) => {
+            showArea.value = false;
+            result.value = selectedOptions.map((item) => item.text).join('/');
+        };
 
-    return {
-      result,
-      areaList,
-      showArea,
-      onConfirm,
-    };
-  },
+        return {
+            result,
+            areaList,
+            showArea,
+            onConfirm,
+        };
+    },
 };
 ```
 
@@ -485,13 +487,13 @@ export default {
 
 ```html
 <mi-field
-  v-model="result"
-  is-link
-  readonly
-  name="calendar"
-  label="日历"
-  placeholder="点击选择日期"
-  @click="showCalendar = true"
+    v-model="result"
+    is-link
+    readonly
+    name="calendar"
+    label="日历"
+    placeholder="点击选择日期"
+    @click="showCalendar = true"
 />
 <mi-calendar v-model:show="showCalendar" @confirm="onConfirm" />
 ```
@@ -500,20 +502,20 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const result = ref('');
-    const showCalendar = ref(false);
-    const onConfirm = (date) => {
-      result.value = `${date.getMonth() + 1}/${date.getDate()}`;
-      showCalendar.value = false;
-    };
+    setup() {
+        const result = ref('');
+        const showCalendar = ref(false);
+        const onConfirm = (date) => {
+            result.value = `${date.getMonth() + 1}/${date.getDate()}`;
+            showCalendar.value = false;
+        };
 
-    return {
-      result,
-      onConfirm,
-      showCalendar,
-    };
-  },
+        return {
+            result,
+            onConfirm,
+            showCalendar,
+        };
+    },
 };
 ```
 

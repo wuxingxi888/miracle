@@ -1,19 +1,19 @@
 import {
-  ref,
-  reactive,
-  computed,
-  defineComponent,
-  type CSSProperties,
-  type ExtractPropTypes,
+    ref,
+    reactive,
+    computed,
+    defineComponent,
+    type CSSProperties,
+    type ExtractPropTypes,
 } from 'vue';
 
 // Utils
 import {
-  extend,
-  numericProp,
-  BORDER_BOTTOM,
-  getZIndexStyle,
-  createNamespace,
+    extend,
+    numericProp,
+    BORDER_BOTTOM,
+    getZIndexStyle,
+    createNamespace,
 } from '../utils';
 import { INDEX_BAR_KEY } from '../index-bar/IndexBar';
 import { getScrollTop, getRootScrollTop } from '../utils/dom';
@@ -25,92 +25,96 @@ import { useExpose } from '../composables/use-expose';
 const [name, bem] = createNamespace('index-anchor');
 
 export const indexAnchorProps = {
-  index: numericProp,
+    index: numericProp,
 };
 
 export type IndexAnchorProps = ExtractPropTypes<typeof indexAnchorProps>;
 
 export default defineComponent({
-  name,
+    name,
 
-  props: indexAnchorProps,
+    props: indexAnchorProps,
 
-  setup(props, { slots }) {
-    const state = reactive({
-      top: 0,
-      left: null,
-      rect: { top: 0, height: 0 },
-      width: null,
-      active: false,
-    });
-
-    const root = ref<HTMLElement>();
-    const { parent } = useParent(INDEX_BAR_KEY);
-
-    if (!parent) {
-      if (process.env.NODE_ENV !== 'production') {
-        console.error(
-          '[Miracle] <IndexAnchor> must be a child component of <IndexBar>.',
-        );
-      }
-      return;
-    }
-
-    const isSticky = () => state.active && parent.props.sticky;
-
-    const anchorStyle = computed<CSSProperties | undefined>(() => {
-      const { zIndex, highlightColor } = parent.props;
-
-      if (isSticky()) {
-        return extend(getZIndexStyle(zIndex), {
-          left: state.left ? `${state.left}px` : undefined,
-          width: state.width ? `${state.width}px` : undefined,
-          transform: state.top
-            ? `translate3d(0, ${state.top}px, 0)`
-            : undefined,
-          color: highlightColor,
+    setup(props, { slots }) {
+        const state = reactive({
+            top: 0,
+            left: null,
+            rect: { top: 0, height: 0 },
+            width: null,
+            active: false,
         });
-      }
-    });
 
-    const getRect = (
-      scrollParent: Window | Element,
-      scrollParentRect: { top: number },
-    ) => {
-      const rootRect = useRect(root);
-      state.rect.height = rootRect.height;
+        const root = ref<HTMLElement>();
+        const { parent } = useParent(INDEX_BAR_KEY);
 
-      if (scrollParent === window || scrollParent === document.body) {
-        state.rect.top = rootRect.top + getRootScrollTop();
-      } else {
-        state.rect.top =
-          rootRect.top + getScrollTop(scrollParent) - scrollParentRect.top;
-      }
+        if (!parent) {
+            if (process.env.NODE_ENV !== 'production') {
+                console.error(
+                    '[Miracle] <IndexAnchor> must be a child component of <IndexBar>.',
+                );
+            }
+            return;
+        }
 
-      return state.rect;
-    };
+        const isSticky = () => state.active && parent.props.sticky;
 
-    useExpose({
-      state,
-      getRect,
-    });
+        const anchorStyle = computed<CSSProperties | undefined>(() => {
+            const { zIndex, highlightColor } = parent.props;
 
-    return () => {
-      const sticky = isSticky();
+            if (isSticky()) {
+                return extend(getZIndexStyle(zIndex), {
+                    left: state.left ? `${state.left}px` : undefined,
+                    width: state.width ? `${state.width}px` : undefined,
+                    transform: state.top
+                        ? `translate3d(0, ${state.top}px, 0)`
+                        : undefined,
+                    color: highlightColor,
+                });
+            }
+        });
 
-      return (
-        <div
-          ref={root}
-          style={{ height: sticky ? `${state.rect.height}px` : undefined }}
-        >
-          <div
-            style={anchorStyle.value}
-            class={[bem({ sticky }), { [BORDER_BOTTOM]: sticky }]}
-          >
-            {slots.default ? slots.default() : props.index}
-          </div>
-        </div>
-      );
-    };
-  },
+        const getRect = (
+            scrollParent: Window | Element,
+            scrollParentRect: { top: number },
+        ) => {
+            const rootRect = useRect(root);
+            state.rect.height = rootRect.height;
+
+            if (scrollParent === window || scrollParent === document.body) {
+                state.rect.top = rootRect.top + getRootScrollTop();
+            } else {
+                state.rect.top =
+                    rootRect.top +
+                    getScrollTop(scrollParent) -
+                    scrollParentRect.top;
+            }
+
+            return state.rect;
+        };
+
+        useExpose({
+            state,
+            getRect,
+        });
+
+        return () => {
+            const sticky = isSticky();
+
+            return (
+                <div
+                    ref={root}
+                    style={{
+                        height: sticky ? `${state.rect.height}px` : undefined,
+                    }}
+                >
+                    <div
+                        style={anchorStyle.value}
+                        class={[bem({ sticky }), { [BORDER_BOTTOM]: sticky }]}
+                    >
+                        {slots.default ? slots.default() : props.index}
+                    </div>
+                </div>
+            );
+        };
+    },
 });

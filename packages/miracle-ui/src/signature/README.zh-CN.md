@@ -22,8 +22,8 @@ app.use(Signature);
 
 当点击确认按钮时，组件会触发 `submit` 事件，事件的第一个参数为 `data`，包含以下字段：
 
-- `image`：签名对应的图片，为 base64 字符串格式。若签名为空，则返回空字符串。
-- `canvas`：Canvas 元素。
+-   `image`：签名对应的图片，为 base64 字符串格式。若签名为空，则返回空字符串。
+-   `canvas`：Canvas 元素。
 
 ```html
 <mi-signature @submit="onSubmit" @clear="onClear" />
@@ -35,19 +35,19 @@ import { ref } from 'vue';
 import { showToast } from '@miracle-web/ui';
 
 export default {
-  setup() {
-    const image = ref('');
-    const onSubmit = (data) => {
-      image.value = data.image;
-    };
-    const onClear = () => showToast('clear');
+    setup() {
+        const image = ref('');
+        const onSubmit = (data) => {
+            image.value = data.image;
+        };
+        const onClear = () => showToast('clear');
 
-    return {
-      image,
-      onSubmit,
-      onClear,
-    };
-  },
+        return {
+            image,
+            onSubmit,
+            onClear,
+        };
+    },
 };
 ```
 

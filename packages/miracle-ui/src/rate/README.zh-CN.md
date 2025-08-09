@@ -30,10 +30,10 @@ app.use(Rate);
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const value = ref(3);
-    return { value };
-  },
+    setup() {
+        const value = ref(3);
+        return { value };
+    },
 };
 ```
 
@@ -51,11 +51,11 @@ export default {
 
 ```html
 <mi-rate
-  v-model="value"
-  :size="25"
-  color="#ffd21e"
-  void-icon="star"
-  void-color="#eee"
+    v-model="value"
+    :size="25"
+    color="#ffd21e"
+    void-icon="star"
+    void-color="#eee"
 />
 ```
 
@@ -71,10 +71,10 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const value = ref(2.5);
-    return { value };
-  },
+    setup() {
+        const value = ref(2.5);
+        return { value };
+    },
 };
 ```
 
@@ -122,10 +122,10 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const value = ref(3.3);
-    return { value };
-  },
+    setup() {
+        const value = ref(3.3);
+        return { value };
+    },
 };
 ```
 
@@ -142,14 +142,14 @@ import { ref } from 'vue';
 import { showToast } from '@miracle-web/ui';
 
 export default {
-  setup() {
-    const value = ref(3);
-    const onChange = (value) => showToast('当前值：' + value);
-    return {
-      value,
-      onChange,
-    };
-  },
+    setup() {
+        const value = ref(3);
+        const onChange = (value) => showToast('当前值：' + value);
+        return {
+            value,
+            onChange,
+        };
+    },
 };
 ```
 

@@ -24,9 +24,9 @@ app.use(TreeSelect);
 
 ```html
 <mi-tree-select
-  v-model:active-id="activeId"
-  v-model:main-active-index="activeIndex"
-  :items="items"
+    v-model:active-id="activeId"
+    v-model:main-active-index="activeIndex"
+    :items="items"
 />
 ```
 
@@ -34,35 +34,35 @@ app.use(TreeSelect);
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const activeId = ref(1);
-    const activeIndex = ref(0);
-    const items = [
-      {
-        text: '浙江',
-        children: [
-          { text: '杭州', id: 1 },
-          { text: '温州', id: 2 },
-          { text: '宁波', id: 3, disabled: true },
-        ],
-      },
-      {
-        text: '江苏',
-        children: [
-          { text: '南京', id: 4 },
-          { text: '无锡', id: 5 },
-          { text: '徐州', id: 6 },
-        ],
-      },
-      { text: '福建', disabled: true },
-    ];
+    setup() {
+        const activeId = ref(1);
+        const activeIndex = ref(0);
+        const items = [
+            {
+                text: '浙江',
+                children: [
+                    { text: '杭州', id: 1 },
+                    { text: '温州', id: 2 },
+                    { text: '宁波', id: 3, disabled: true },
+                ],
+            },
+            {
+                text: '江苏',
+                children: [
+                    { text: '南京', id: 4 },
+                    { text: '无锡', id: 5 },
+                    { text: '徐州', id: 6 },
+                ],
+            },
+            { text: '福建', disabled: true },
+        ];
 
-    return {
-      items,
-      activeId,
-      activeIndex,
-    };
-  },
+        return {
+            items,
+            activeId,
+            activeIndex,
+        };
+    },
 };
 ```
 
@@ -72,9 +72,9 @@ export default {
 
 ```html
 <mi-tree-select
-  v-model:active-id="activeIds"
-  v-model:main-active-index="activeIndex"
-  :items="items"
+    v-model:active-id="activeIds"
+    v-model:main-active-index="activeIndex"
+    :items="items"
 />
 ```
 
@@ -82,35 +82,35 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const activeIds = ref([1, 2]);
-    const activeIndex = ref(0);
-    const items = [
-      {
-        text: '浙江',
-        children: [
-          { text: '杭州', id: 1 },
-          { text: '温州', id: 2 },
-          { text: '宁波', id: 3, disabled: true },
-        ],
-      },
-      {
-        text: '江苏',
-        children: [
-          { text: '南京', id: 4 },
-          { text: '无锡', id: 5 },
-          { text: '徐州', id: 6 },
-        ],
-      },
-      { text: '福建', disabled: true },
-    ];
+    setup() {
+        const activeIds = ref([1, 2]);
+        const activeIndex = ref(0);
+        const items = [
+            {
+                text: '浙江',
+                children: [
+                    { text: '杭州', id: 1 },
+                    { text: '温州', id: 2 },
+                    { text: '宁波', id: 3, disabled: true },
+                ],
+            },
+            {
+                text: '江苏',
+                children: [
+                    { text: '南京', id: 4 },
+                    { text: '无锡', id: 5 },
+                    { text: '徐州', id: 6 },
+                ],
+            },
+            { text: '福建', disabled: true },
+        ];
 
-    return {
-      items,
-      activeIds,
-      activeIndex,
-    };
-  },
+        return {
+            items,
+            activeIds,
+            activeIndex,
+        };
+    },
 };
 ```
 
@@ -120,20 +120,20 @@ export default {
 
 ```html
 <mi-tree-select
-  v-model:main-active-index="activeIndex"
-  height="55vw"
-  :items="items"
+    v-model:main-active-index="activeIndex"
+    height="55vw"
+    :items="items"
 >
-  <template #content>
-    <mi-image
-      v-if="activeIndex === 0"
-      src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg"
-    />
-    <mi-image
-      v-if="activeIndex === 1"
-      src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg"
-    />
-  </template>
+    <template #content>
+        <mi-image
+            v-if="activeIndex === 0"
+            src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg"
+        />
+        <mi-image
+            v-if="activeIndex === 1"
+            src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg"
+        />
+    </template>
 </mi-tree-select>
 ```
 
@@ -141,13 +141,13 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const activeIndex = ref(0);
-    return {
-      activeIndex,
-      items: [{ text: '分组 1' }, { text: '分组 2' }],
-    };
-  },
+    setup() {
+        const activeIndex = ref(0);
+        return {
+            activeIndex,
+            items: [{ text: '分组 1' }, { text: '分组 2' }],
+        };
+    },
 };
 ```
 
@@ -157,9 +157,9 @@ export default {
 
 ```html
 <mi-tree-select
-  v-model:main-active-index="activeIndex"
-  height="55vw"
-  :items="items"
+    v-model:main-active-index="activeIndex"
+    height="55vw"
+    :items="items"
 />
 ```
 
@@ -167,32 +167,32 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const activeIndex = ref(0);
-    return {
-      activeIndex,
-      items: [
-        {
-          text: '浙江',
-          children: [
-            { text: '杭州', id: 1 },
-            { text: '温州', id: 2 },
-            { text: '宁波', id: 3, disabled: true },
-          ],
-          dot: true,
-        },
-        {
-          text: '江苏',
-          children: [
-            { text: '南京', id: 4 },
-            { text: '无锡', id: 5 },
-            { text: '徐州', id: 6 },
-          ],
-          badge: 5,
-        },
-      ],
-    };
-  },
+    setup() {
+        const activeIndex = ref(0);
+        return {
+            activeIndex,
+            items: [
+                {
+                    text: '浙江',
+                    children: [
+                        { text: '杭州', id: 1 },
+                        { text: '温州', id: 2 },
+                        { text: '宁波', id: 3, disabled: true },
+                    ],
+                    dot: true,
+                },
+                {
+                    text: '江苏',
+                    children: [
+                        { text: '南京', id: 4 },
+                        { text: '无锡', id: 5 },
+                        { text: '徐州', id: 6 },
+                    ],
+                    badge: 5,
+                },
+            ],
+        };
+    },
 };
 ```
 
@@ -229,31 +229,31 @@ export default {
 
 ```js
 [
-  {
-    // 导航名称
-    text: '所有城市',
-    // 导航名称右上角徽标
-    badge: 3,
-    // 是否在导航名称右上角显示小红点
-    dot: true,
-    // 导航节点额外类名
-    className: 'my-class',
-    // 该导航下所有的可选项
-    children: [
-      {
-        // 名称
-        text: '温州',
-        // id，作为匹配选中状态的标识符
-        id: 1,
-        // 禁用选项
-        disabled: true,
-      },
-      {
-        text: '杭州',
-        id: 2,
-      },
-    ],
-  },
+    {
+        // 导航名称
+        text: '所有城市',
+        // 导航名称右上角徽标
+        badge: 3,
+        // 是否在导航名称右上角显示小红点
+        dot: true,
+        // 导航节点额外类名
+        className: 'my-class',
+        // 该导航下所有的可选项
+        children: [
+            {
+                // 名称
+                text: '温州',
+                // id，作为匹配选中状态的标识符
+                id: 1,
+                // 禁用选项
+                disabled: true,
+            },
+            {
+                text: '杭州',
+                id: 2,
+            },
+        ],
+    },
 ];
 ```
 
@@ -263,9 +263,9 @@ export default {
 
 ```ts
 import type {
-  TreeSelectItem,
-  TreeSelectChild,
-  TreeSelectProps,
+    TreeSelectItem,
+    TreeSelectChild,
+    TreeSelectProps,
 } from '@miracle-web/ui';
 ```
 

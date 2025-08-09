@@ -8,38 +8,41 @@ const [name, bem] = createNamespace('action-bar');
 export const ACTION_BAR_KEY = Symbol(name);
 
 export const actionBarProps = {
-  placeholder: Boolean,
-  safeAreaInsetBottom: truthProp,
+    placeholder: Boolean,
+    safeAreaInsetBottom: truthProp,
 };
 
 export type ActionBarProps = ExtractPropTypes<typeof actionBarProps>;
 
 export default defineComponent({
-  name,
+    name,
 
-  props: actionBarProps,
+    props: actionBarProps,
 
-  setup(props, { slots }) {
-    const root = ref<HTMLElement>();
-    const renderPlaceholder = usePlaceholder(root, bem);
-    const { linkChildren } = useChildren(ACTION_BAR_KEY);
+    setup(props, { slots }) {
+        const root = ref<HTMLElement>();
+        const renderPlaceholder = usePlaceholder(root, bem);
+        const { linkChildren } = useChildren(ACTION_BAR_KEY);
 
-    linkChildren();
+        linkChildren();
 
-    const renderActionBar = () => (
-      <div
-        ref={root}
-        class={[bem(), { 'mi-safe-area-bottom': props.safeAreaInsetBottom }]}
-      >
-        {slots.default?.()}
-      </div>
-    );
+        const renderActionBar = () => (
+            <div
+                ref={root}
+                class={[
+                    bem(),
+                    { 'mi-safe-area-bottom': props.safeAreaInsetBottom },
+                ]}
+            >
+                {slots.default?.()}
+            </div>
+        );
 
-    return () => {
-      if (props.placeholder) {
-        return renderPlaceholder(renderActionBar);
-      }
-      return renderActionBar();
-    };
-  },
+        return () => {
+            if (props.placeholder) {
+                return renderPlaceholder(renderActionBar);
+            }
+            return renderActionBar();
+        };
+    },
 });

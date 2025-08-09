@@ -30,11 +30,11 @@ Picker 组件通过 `columns` 属性配置选项数据，`columns` 是一个包�
 
 ```html
 <mi-picker
-  title="标题"
-  :columns="columns"
-  @confirm="onConfirm"
-  @cancel="onCancel"
-  @change="onChange"
+    title="标题"
+    :columns="columns"
+    @confirm="onConfirm"
+    @cancel="onCancel"
+    @change="onChange"
 />
 ```
 
@@ -42,29 +42,29 @@ Picker 组件通过 `columns` 属性配置选项数据，`columns` 是一个包�
 import { showToast } from '@miracle-web/ui';
 
 export default {
-  setup() {
-    const columns = [
-      { text: '杭州', value: 'Hangzhou' },
-      { text: '宁波', value: 'Ningbo' },
-      { text: '温州', value: 'Wenzhou' },
-      { text: '绍兴', value: 'Shaoxing' },
-      { text: '湖州', value: 'Huzhou' },
-    ];
-    const onConfirm = ({ selectedValues }) => {
-      showToast(`当前值: ${selectedValues.join(',')}`);
-    };
-    const onChange = ({ selectedValues }) => {
-      showToast(`当前值: ${selectedValues.join(',')}`);
-    };
-    const onCancel = () => showToast('取消');
+    setup() {
+        const columns = [
+            { text: '杭州', value: 'Hangzhou' },
+            { text: '宁波', value: 'Ningbo' },
+            { text: '温州', value: 'Wenzhou' },
+            { text: '绍兴', value: 'Shaoxing' },
+            { text: '湖州', value: 'Huzhou' },
+        ];
+        const onConfirm = ({ selectedValues }) => {
+            showToast(`当前值: ${selectedValues.join(',')}`);
+        };
+        const onChange = ({ selectedValues }) => {
+            showToast(`当前值: ${selectedValues.join(',')}`);
+        };
+        const onCancel = () => showToast('取消');
 
-    return {
-      columns,
-      onChange,
-      onCancel,
-      onConfirm,
-    };
-  },
+        return {
+            columns,
+            onChange,
+            onCancel,
+            onConfirm,
+        };
+    },
 };
 ```
 
@@ -74,19 +74,19 @@ export default {
 
 ```html
 <mi-field
-  v-model="fieldValue"
-  is-link
-  readonly
-  label="城市"
-  placeholder="选择城市"
-  @click="showPicker = true"
+    v-model="fieldValue"
+    is-link
+    readonly
+    label="城市"
+    placeholder="选择城市"
+    @click="showPicker = true"
 />
 <mi-popup v-model:show="showPicker" round position="bottom">
-  <mi-picker
-    :columns="columns"
-    @cancel="showPicker = false"
-    @confirm="onConfirm"
-  />
+    <mi-picker
+        :columns="columns"
+        @cancel="showPicker = false"
+        @confirm="onConfirm"
+    />
 </mi-popup>
 ```
 
@@ -94,29 +94,29 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const columns = [
-      { text: '杭州', value: 'Hangzhou' },
-      { text: '宁波', value: 'Ningbo' },
-      { text: '温州', value: 'Wenzhou' },
-      { text: '绍兴', value: 'Shaoxing' },
-      { text: '湖州', value: 'Huzhou' },
-    ];
-    const fieldValue = ref('');
-    const showPicker = ref(false);
+    setup() {
+        const columns = [
+            { text: '杭州', value: 'Hangzhou' },
+            { text: '宁波', value: 'Ningbo' },
+            { text: '温州', value: 'Wenzhou' },
+            { text: '绍兴', value: 'Shaoxing' },
+            { text: '湖州', value: 'Huzhou' },
+        ];
+        const fieldValue = ref('');
+        const showPicker = ref(false);
 
-    const onConfirm = ({ selectedOptions }) => {
-      showPicker.value = false;
-      fieldValue.value = selectedOptions[0].text;
-    };
+        const onConfirm = ({ selectedOptions }) => {
+            showPicker.value = false;
+            fieldValue.value = selectedOptions[0].text;
+        };
 
-    return {
-      columns,
-      onConfirm,
-      fieldValue,
-      showPicker,
-    };
-  },
+        return {
+            columns,
+            onConfirm,
+            fieldValue,
+            showPicker,
+        };
+    },
 };
 ```
 
@@ -134,21 +134,21 @@ export default {
 import { showToast } from '@miracle-web/ui';
 
 export default {
-  setup() {
-    const columns = [
-      { text: '杭州', value: 'Hangzhou' },
-      { text: '宁波', value: 'Ningbo' },
-      { text: '温州', value: 'Wenzhou' },
-      { text: '绍兴', value: 'Shaoxing' },
-      { text: '湖州', value: 'Huzhou' },
-    ];
-    const selectedValues = ref(['Wenzhou']);
+    setup() {
+        const columns = [
+            { text: '杭州', value: 'Hangzhou' },
+            { text: '宁波', value: 'Ningbo' },
+            { text: '温州', value: 'Wenzhou' },
+            { text: '绍兴', value: 'Shaoxing' },
+            { text: '湖州', value: 'Huzhou' },
+        ];
+        const selectedValues = ref(['Wenzhou']);
 
-    return {
-      columns,
-      selectedValues,
-    };
-  },
+        return {
+            columns,
+            selectedValues,
+        };
+    },
 };
 ```
 
@@ -162,26 +162,26 @@ export default {
 
 ```js
 export default {
-  setup() {
-    const columns = [
-      // 第一列
-      [
-        { text: '周一', value: 'Monday' },
-        { text: '周二', value: 'Tuesday' },
-        { text: '周三', value: 'Wednesday' },
-        { text: '周四', value: 'Thursday' },
-        { text: '周五', value: 'Friday' },
-      ],
-      // 第二列
-      [
-        { text: '上午', value: 'Morning' },
-        { text: '下午', value: 'Afternoon' },
-        { text: '晚上', value: 'Evening' },
-      ],
-    ];
+    setup() {
+        const columns = [
+            // 第一列
+            [
+                { text: '周一', value: 'Monday' },
+                { text: '周二', value: 'Tuesday' },
+                { text: '周三', value: 'Wednesday' },
+                { text: '周四', value: 'Thursday' },
+                { text: '周五', value: 'Friday' },
+            ],
+            // 第二列
+            [
+                { text: '上午', value: 'Morning' },
+                { text: '下午', value: 'Afternoon' },
+                { text: '晚上', value: 'Evening' },
+            ],
+        ];
 
-    return { columns };
-  },
+        return { columns };
+    },
 };
 ```
 
@@ -195,56 +195,56 @@ export default {
 
 ```js
 export default {
-  setup() {
-    const columns = [
-      {
-        text: '浙江',
-        value: 'Zhejiang',
-        children: [
-          {
-            text: '杭州',
-            value: 'Hangzhou',
-            children: [
-              { text: '西湖区', value: 'Xihu' },
-              { text: '余杭区', value: 'Yuhang' },
-            ],
-          },
-          {
-            text: '温州',
-            value: 'Wenzhou',
-            children: [
-              { text: '鹿城区', value: 'Lucheng' },
-              { text: '瓯海区', value: 'Ouhai' },
-            ],
-          },
-        ],
-      },
-      {
-        text: '福建',
-        value: 'Fujian',
-        children: [
-          {
-            text: '福州',
-            value: 'Fuzhou',
-            children: [
-              { text: '鼓楼区', value: 'Gulou' },
-              { text: '台江区', value: 'Taijiang' },
-            ],
-          },
-          {
-            text: '厦门',
-            value: 'Xiamen',
-            children: [
-              { text: '思明区', value: 'Siming' },
-              { text: '海沧区', value: 'Haicang' },
-            ],
-          },
-        ],
-      },
-    ];
+    setup() {
+        const columns = [
+            {
+                text: '浙江',
+                value: 'Zhejiang',
+                children: [
+                    {
+                        text: '杭州',
+                        value: 'Hangzhou',
+                        children: [
+                            { text: '西湖区', value: 'Xihu' },
+                            { text: '余杭区', value: 'Yuhang' },
+                        ],
+                    },
+                    {
+                        text: '温州',
+                        value: 'Wenzhou',
+                        children: [
+                            { text: '鹿城区', value: 'Lucheng' },
+                            { text: '瓯海区', value: 'Ouhai' },
+                        ],
+                    },
+                ],
+            },
+            {
+                text: '福建',
+                value: 'Fujian',
+                children: [
+                    {
+                        text: '福州',
+                        value: 'Fuzhou',
+                        children: [
+                            { text: '鼓楼区', value: 'Gulou' },
+                            { text: '台江区', value: 'Taijiang' },
+                        ],
+                    },
+                    {
+                        text: '厦门',
+                        value: 'Xiamen',
+                        children: [
+                            { text: '思明区', value: 'Siming' },
+                            { text: '海沧区', value: 'Haicang' },
+                        ],
+                    },
+                ],
+            },
+        ];
 
-    return { columns };
-  },
+        return { columns };
+    },
 };
 ```
 
@@ -260,14 +260,14 @@ export default {
 
 ```js
 export default {
-  setup() {
-    const columns = [
-      { text: '杭州', value: 'Hangzhou', disabled: true },
-      { text: '宁波', value: 'Ningbo' },
-      { text: '温州', value: 'Wenzhou' },
-    ];
-    return { columns };
-  },
+    setup() {
+        const columns = [
+            { text: '杭州', value: 'Hangzhou', disabled: true },
+            { text: '宁波', value: 'Ningbo' },
+            { text: '温州', value: 'Wenzhou' },
+        ];
+        return { columns };
+    },
 };
 ```
 
@@ -283,17 +283,17 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const columns = ref([]);
-    const loading = ref(true);
+    setup() {
+        const columns = ref([]);
+        const loading = ref(true);
 
-    setTimeout(() => {
-      columns.value = [{ text: '选项', value: 'option' }];
-      loading.value = false;
-    }, 1000);
+        setTimeout(() => {
+            columns.value = [{ text: '选项', value: 'option' }];
+            loading.value = false;
+        }, 1000);
 
-    return { columns, loading };
-  },
+        return { columns, loading };
+    },
 };
 ```
 
@@ -301,55 +301,67 @@ export default {
 
 ```html
 <mi-picker
-  :title="标题"
-  :columns="columns"
-  :columns-field-names="customFieldName"
+    :title="标题"
+    :columns="columns"
+    :columns-field-names="customFieldName"
 />
 ```
 
 ```js
 export default {
-  setup() {
-    const columns = [
-      {
-        cityName: '浙江',
-        cities: [
-          {
-            cityName: '杭州',
-            cities: [{ cityName: '西湖区' }, { cityName: '余杭区' }],
-          },
-          {
-            cityName: '温州',
-            cities: [{ cityName: '鹿城区' }, { cityName: '瓯海区' }],
-          },
-        ],
-      },
-      {
-        cityName: '福建',
-        cities: [
-          {
-            cityName: '福州',
-            cities: [{ cityName: '鼓楼区' }, { cityName: '台江区' }],
-          },
-          {
-            cityName: '厦门',
-            cities: [{ cityName: '思明区' }, { cityName: '海沧区' }],
-          },
-        ],
-      },
-    ];
+    setup() {
+        const columns = [
+            {
+                cityName: '浙江',
+                cities: [
+                    {
+                        cityName: '杭州',
+                        cities: [
+                            { cityName: '西湖区' },
+                            { cityName: '余杭区' },
+                        ],
+                    },
+                    {
+                        cityName: '温州',
+                        cities: [
+                            { cityName: '鹿城区' },
+                            { cityName: '瓯海区' },
+                        ],
+                    },
+                ],
+            },
+            {
+                cityName: '福建',
+                cities: [
+                    {
+                        cityName: '福州',
+                        cities: [
+                            { cityName: '鼓楼区' },
+                            { cityName: '台江区' },
+                        ],
+                    },
+                    {
+                        cityName: '厦门',
+                        cities: [
+                            { cityName: '思明区' },
+                            { cityName: '海沧区' },
+                        ],
+                    },
+                ],
+            },
+        ];
 
-    const customFieldName = {
-      text: 'cityName',
-      value: 'cityName',
-      children: 'cities',
-    };
+        const customFieldName = {
+            text: 'cityName',
+            value: 'cityName',
+            children: 'cities',
+        };
 
-    return {
-      columns,
-      customFieldName,
-    };
-  },
+        return {
+            columns,
+            customFieldName,
+        };
+    },
 };
 ```
 
@@ -421,15 +433,15 @@ export default {
 
 ```ts
 import type {
-  PickerProps,
-  PickerColumn,
-  PickerOption,
-  PickerInstance,
-  PickerFieldNames,
-  PickerToolbarPosition,
-  PickerCancelEventParams,
-  PickerChangeEventParams,
-  PickerConfirmEventParams,
+    PickerProps,
+    PickerColumn,
+    PickerOption,
+    PickerInstance,
+    PickerFieldNames,
+    PickerToolbarPosition,
+    PickerCancelEventParams,
+    PickerChangeEventParams,
+    PickerConfirmEventParams,
 } from '@miracle-web/ui';
 ```
 

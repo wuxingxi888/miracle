@@ -8,7 +8,7 @@ export type { RateProps } from './Rate';
 export type { RateThemeVars } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiRate: typeof Rate;
-  }
+    export interface GlobalComponents {
+        MiRate: typeof Rate;
+    }
 }

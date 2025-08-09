@@ -25,10 +25,10 @@ app.use(Tabs);
 
 ```html
 <mi-tabs v-model:active="active">
-  <mi-tab title="标签 1">内容 1</mi-tab>
-  <mi-tab title="标签 2">内容 2</mi-tab>
-  <mi-tab title="标签 3">内容 3</mi-tab>
-  <mi-tab title="标签 4">内容 4</mi-tab>
+    <mi-tab title="标签 1">内容 1</mi-tab>
+    <mi-tab title="标签 2">内容 2</mi-tab>
+    <mi-tab title="标签 3">内容 3</mi-tab>
+    <mi-tab title="标签 4">内容 4</mi-tab>
 </mi-tabs>
 ```
 
@@ -36,10 +36,10 @@ app.use(Tabs);
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const active = ref(0);
-    return { active };
-  },
+    setup() {
+        const active = ref(0);
+        return { active };
+    },
 };
 ```
 
@@ -49,9 +49,9 @@ export default {
 
 ```html
 <mi-tabs v-model:active="activeName">
-  <mi-tab title="标签 1" name="a">内容 1</mi-tab>
-  <mi-tab title="标签 2" name="b">内容 2</mi-tab>
-  <mi-tab title="标签 3" name="c">内容 3</mi-tab>
+    <mi-tab title="标签 1" name="a">内容 1</mi-tab>
+    <mi-tab title="标签 2" name="b">内容 2</mi-tab>
+    <mi-tab title="标签 3" name="c">内容 3</mi-tab>
 </mi-tabs>
 ```
 
@@ -59,10 +59,10 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const activeName = ref('b');
-    return { activeName };
-  },
+    setup() {
+        const activeName = ref('b');
+        return { activeName };
+    },
 };
 ```
 
@@ -72,9 +72,9 @@ export default {
 
 ```html
 <mi-tabs v-model:active="active">
-  <mi-tab v-for="index in 8" :title="'标签 ' + index">
-    内容 {{ index }}
-  </mi-tab>
+    <mi-tab v-for="index in 8" :title="'标签 ' + index"
+        >内容 {{ index }}</mi-tab
+    >
 </mi-tabs>
 ```
 
@@ -84,9 +84,9 @@ export default {
 
 ```html
 <mi-tabs v-model:active="active">
-  <mi-tab title="标签 1">内容 1</mi-tab>
-  <mi-tab title="标签 2" disabled>内容 2</mi-tab>
-  <mi-tab title="标签 3">内容 3</mi-tab>
+    <mi-tab title="标签 1">内容 1</mi-tab>
+    <mi-tab title="标签 2" disabled>内容 2</mi-tab>
+    <mi-tab title="标签 3">内容 3</mi-tab>
 </mi-tabs>
 ```
 
@@ -96,9 +96,9 @@ export default {
 
 ```html
 <mi-tabs v-model:active="active" type="card">
-  <mi-tab title="标签 1">内容 1</mi-tab>
-  <mi-tab title="标签 2">内容 2</mi-tab>
-  <mi-tab title="标签 3">内容 3</mi-tab>
+    <mi-tab title="标签 1">内容 1</mi-tab>
+    <mi-tab title="标签 2">内容 2</mi-tab>
+    <mi-tab title="标签 3">内容 3</mi-tab>
 </mi-tabs>
 ```
 
@@ -108,8 +108,8 @@ export default {
 
 ```html
 <mi-tabs v-model:active="active" @click-tab="onClickTab">
-  <mi-tab title="标签 1">内容 1</mi-tab>
-  <mi-tab title="标签 2">内容 2</mi-tab>
+    <mi-tab title="标签 1">内容 1</mi-tab>
+    <mi-tab title="标签 2">内容 2</mi-tab>
 </mi-tabs>
 ```
 
@@ -118,14 +118,14 @@ import { ref } from 'vue';
 import { showToast } from '@miracle-web/ui';
 
 export default {
-  setup() {
-    const active = ref(0);
-    const onClickTab = ({ title }) => showToast(title);
-    return {
-      active,
-      onClickTab,
-    };
-  },
+    setup() {
+        const active = ref(0);
+        const onClickTab = ({ title }) => showToast(title);
+        return {
+            active,
+            onClickTab,
+        };
+    },
 };
 ```
 
@@ -135,9 +135,9 @@ export default {
 
 ```html
 <mi-tabs v-model:active="active" sticky>
-  <mi-tab v-for="index in 4" :title="'标签 ' + index">
-    内容 {{ index }}
-  </mi-tab>
+    <mi-tab v-for="index in 4" :title="'标签 ' + index"
+        >内容 {{ index }}</mi-tab
+    >
 </mi-tabs>
 ```
 
@@ -149,15 +149,15 @@ export default {
 
 ```html
 <mi-tabs v-model:active="active" shrink>
-  <mi-tab v-for="index in 4" :title="'标签 ' + index">
-    内容 {{ index }}
-  </mi-tab>
+    <mi-tab v-for="index in 4" :title="'标签 ' + index"
+        >内容 {{ index }}</mi-tab
+    >
 </mi-tabs>
 
 <mi-tabs v-model:active="active" shrink type="card">
-  <mi-tab v-for="index in 4" :title="'标签 ' + index">
-    内容 {{ index }}
-  </mi-tab>
+    <mi-tab v-for="index in 4" :title="'标签 ' + index"
+        >内容 {{ index }}</mi-tab
+    >
 </mi-tabs>
 ```
 
@@ -167,10 +167,13 @@ export default {
 
 ```html
 <mi-tabs v-model:active="active">
-  <mi-tab v-for="index in 2">
-    <template #title><mi-icon name="more-o" />标签</template>
-    内容 {{ index }}
-  </mi-tab>
+    <mi-tab v-for="index in 2">
+        <template #title>
+            <mi-icon name="more-o" />
+            标签
+        </template>
+        内容 {{ index }}
+    </mi-tab>
 </mi-tabs>
 ```
 
@@ -180,9 +183,9 @@ export default {
 
 ```html
 <mi-tabs v-model:active="active" animated>
-  <mi-tab v-for="index in 4" :title="'标签 ' + index">
-    内容 {{ index }}
-  </mi-tab>
+    <mi-tab v-for="index in 4" :title="'标签 ' + index"
+        >内容 {{ index }}</mi-tab
+    >
 </mi-tabs>
 ```
 
@@ -192,9 +195,9 @@ export default {
 
 ```html
 <mi-tabs v-model:active="active" swipeable>
-  <mi-tab v-for="index in 4" :title="'标签 ' + index">
-    内容 {{ index }}
-  </mi-tab>
+    <mi-tab v-for="index in 4" :title="'标签 ' + index"
+        >内容 {{ index }}</mi-tab
+    >
 </mi-tabs>
 ```
 
@@ -204,9 +207,9 @@ export default {
 
 ```html
 <mi-tabs v-model:active="active" scrollspy sticky>
-  <mi-tab v-for="index in 8" :title="'标签 ' + index">
-    内容 {{ index }}
-  </mi-tab>
+    <mi-tab v-for="index in 8" :title="'标签 ' + index"
+        >内容 {{ index }}</mi-tab
+    >
 </mi-tabs>
 ```
 
@@ -216,9 +219,9 @@ export default {
 
 ```html
 <mi-tabs v-model:active="active" :before-change="beforeChange">
-  <mi-tab v-for="index in 4" :title="'标签 ' + index">
-    内容 {{ index }}
-  </mi-tab>
+    <mi-tab v-for="index in 4" :title="'标签 ' + index"
+        >内容 {{ index }}</mi-tab
+    >
 </mi-tabs>
 ```
 
@@ -226,25 +229,25 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const active = ref(0);
-    const beforeChange = (index) => {
-      // 返回 false 表示阻止此次切换
-      if (index === 1) {
-        return false;
-      }
+    setup() {
+        const active = ref(0);
+        const beforeChange = (index) => {
+            // 返回 false 表示阻止此次切换
+            if (index === 1) {
+                return false;
+            }
 
-      // 返回 Promise 来执行异步逻辑
-      return new Promise((resolve) => {
-        // 在 resolve 函数中返回 true 或 false
-        setTimeout(() => resolve(index !== 3), 1000);
-      });
-    };
+            // 返回 Promise 来执行异步逻辑
+            return new Promise((resolve) => {
+                // 在 resolve 函数中返回 true 或 false
+                setTimeout(() => resolve(index !== 3), 1000);
+            });
+        };
 
-    return {
-      beforeChange,
-    };
-  },
+        return {
+            beforeChange,
+        };
+    },
 };
 ```
 
@@ -256,7 +259,7 @@ export default {
 
 ```html
 <mi-tabs v-model:active="active" :show-header="false">
-  <mi-tab v-for="index in 4">内容 {{ index }}</mi-tab>
+    <mi-tab v-for="index in 4">内容 {{ index }}</mi-tab>
 </mi-tabs>
 ```
 
@@ -330,10 +333,10 @@ export default {
 
 ```ts
 import type {
-  TabProps,
-  TabsType,
-  TabsProps,
-  TabsInstance,
+    TabProps,
+    TabsType,
+    TabsProps,
+    TabsInstance,
 } from '@miracle-web/ui';
 ```
 
@@ -419,11 +422,11 @@ this.$refs.tabs.resize();
 
 ```html
 <mi-tabs v-model:active="active" swipeable>
-  <mi-tab>
-    <mi-sticky>
-      <mi-button>sticky button</mi-button>
-    </mi-sticky>
-  </mi-tab>
+    <mi-tab>
+        <mi-sticky>
+            <mi-button>sticky button</mi-button>
+        </mi-sticky>
+    </mi-tab>
 </mi-tabs>
 ```
 

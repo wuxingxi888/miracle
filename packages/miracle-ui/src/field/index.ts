@@ -6,24 +6,24 @@ export default Field;
 export { fieldProps } from './Field';
 export type { FieldProps };
 export type {
-  FieldType,
-  FieldRule,
-  FieldInstance,
-  FieldTextAlign,
-  FieldThemeVars,
-  FieldRuleMessage,
-  FieldClearTrigger,
-  FieldFormatTrigger,
-  FieldRuleValidator,
-  FieldRuleFormatter,
-  FieldValidateError,
-  FieldAutosizeConfig,
-  FieldValidateTrigger,
-  FieldValidationStatus,
+    FieldType,
+    FieldRule,
+    FieldInstance,
+    FieldTextAlign,
+    FieldThemeVars,
+    FieldRuleMessage,
+    FieldClearTrigger,
+    FieldFormatTrigger,
+    FieldRuleValidator,
+    FieldRuleFormatter,
+    FieldValidateError,
+    FieldAutosizeConfig,
+    FieldValidateTrigger,
+    FieldValidationStatus,
 } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiField: typeof Field;
-  }
+    export interface GlobalComponents {
+        MiField: typeof Field;
+    }
 }

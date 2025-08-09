@@ -8,7 +8,7 @@ export type { IndexBarProps };
 export type { IndexBarInstance, IndexBarThemeVars } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiIndexBar: typeof IndexBar;
-  }
+    export interface GlobalComponents {
+        MiIndexBar: typeof IndexBar;
+    }
 }

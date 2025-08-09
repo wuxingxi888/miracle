@@ -1,73 +1,73 @@
 :root,
 :host {
-  --mi-badge-size: 16px;
-  --mi-badge-color: var(--mi-white);
-  --mi-badge-padding: 0 3px;
-  --mi-badge-font-size: var(--mi-font-size-sm);
-  --mi-badge-font-weight: var(--mi-font-bold);
-  --mi-badge-border-width: var(--mi-border-width);
-  --mi-badge-background: var(--mi-danger-color);
-  --mi-badge-dot-color: var(--mi-danger-color);
-  --mi-badge-dot-size: 8px;
-  --mi-badge-font: -apple-system-font, helvetica neue, arial, sans-serif;
+    --mi-badge-size: 16px;
+    --mi-badge-color: var(--mi-white);
+    --mi-badge-padding: 0 3px;
+    --mi-badge-font-size: var(--mi-font-size-sm);
+    --mi-badge-font-weight: var(--mi-font-bold);
+    --mi-badge-border-width: var(--mi-border-width);
+    --mi-badge-background: var(--mi-danger-color);
+    --mi-badge-dot-color: var(--mi-danger-color);
+    --mi-badge-dot-size: 8px;
+    --mi-badge-font: -apple-system-font, helvetica neue, arial, sans-serif;
 }
 
 .mi-badge {
-  display: inline-block;
-  box-sizing: border-box;
-  min-width: var(--mi-badge-size);
-  padding: var(--mi-badge-padding);
-  color: var(--mi-badge-color);
-  font-weight: var(--mi-badge-font-weight);
-  font-size: var(--mi-badge-font-size);
-  font-family: var(--mi-badge-font);
-  line-height: 1.2;
-  text-align: center;
-  background: var(--mi-badge-background);
-  border: var(--mi-badge-border-width) solid var(--mi-background-2);
-  border-radius: var(--mi-radius-max);
-
-  &--fixed {
-    position: absolute;
-    transform-origin: 100%;
-  }
-
-  &--top-left {
-    top: 0;
-    left: 0;
-    transform: translate(-50%, -50%);
-  }
-
-  &--top-right {
-    top: 0;
-    right: 0;
-    transform: translate(50%, -50%);
-  }
-
-  &--bottom-left {
-    bottom: 0;
-    left: 0;
-    transform: translate(-50%, 50%);
-  }
-
-  &--bottom-right {
-    bottom: 0;
-    right: 0;
-    transform: translate(50%, 50%);
-  }
-
-  &--dot {
-    width: var(--mi-badge-dot-size);
-    min-width: 0;
-    height: var(--mi-badge-dot-size);
-    background: var(--mi-badge-dot-color);
-    border-radius: 100%;
-    border: none;
-    padding: 0;
-  }
-
-  &__wrapper {
-    position: relative;
     display: inline-block;
-  }
+    box-sizing: border-box;
+    min-width: var(--mi-badge-size);
+    padding: var(--mi-badge-padding);
+    color: var(--mi-badge-color);
+    font-weight: var(--mi-badge-font-weight);
+    font-size: var(--mi-badge-font-size);
+    font-family: var(--mi-badge-font);
+    line-height: 1.2;
+    text-align: center;
+    background: var(--mi-badge-background);
+    border: var(--mi-badge-border-width) solid var(--mi-background-2);
+    border-radius: var(--mi-radius-max);
+
+    &--fixed {
+        position: absolute;
+        transform-origin: 100%;
+    }
+
+    &--top-left {
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%);
+    }
+
+    &--top-right {
+        top: 0;
+        right: 0;
+        transform: translate(50%, -50%);
+    }
+
+    &--bottom-left {
+        bottom: 0;
+        left: 0;
+        transform: translate(-50%, 50%);
+    }
+
+    &--bottom-right {
+        bottom: 0;
+        right: 0;
+        transform: translate(50%, 50%);
+    }
+
+    &--dot {
+        width: var(--mi-badge-dot-size);
+        min-width: 0;
+        height: var(--mi-badge-dot-size);
+        background: var(--mi-badge-dot-color);
+        border-radius: 100%;
+        border: none;
+        padding: 0;
+    }
+
+    &__wrapper {
+        position: relative;
+        display: inline-block;
+    }
 }

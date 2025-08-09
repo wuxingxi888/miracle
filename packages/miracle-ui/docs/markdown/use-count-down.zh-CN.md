@@ -21,19 +21,19 @@
 import { useCountDown } from '@miracle-web/use';
 
 export default {
-  setup() {
-    const countDown = useCountDown({
-      // 倒计时 24 小时
-      time: 24 * 60 * 60 * 1000,
-    });
+    setup() {
+        const countDown = useCountDown({
+            // 倒计时 24 小时
+            time: 24 * 60 * 60 * 1000,
+        });
 
-    // 开始倒计时
-    countDown.start();
+        // 开始倒计时
+        countDown.start();
 
-    return {
-      current: countDown.current,
-    };
-  },
+        return {
+            current: countDown.current,
+        };
+    },
 };
 ```
 
@@ -45,17 +45,17 @@ export default {
 import { useCountDown } from '@miracle-web/use';
 
 export default {
-  setup() {
-    const countDown = useCountDown({
-      time: 24 * 60 * 60 * 1000,
-      millisecond: true,
-    });
-    countDown.start();
+    setup() {
+        const countDown = useCountDown({
+            time: 24 * 60 * 60 * 1000,
+            millisecond: true,
+        });
+        countDown.start();
 
-    return {
-      current: countDown.current,
-    };
-  },
+        return {
+            current: countDown.current,
+        };
+    },
 };
 ```
 
@@ -65,26 +65,26 @@ export default {
 
 ```ts
 type CurrentTime = {
-  days: number;
-  hours: number;
-  total: number;
-  minutes: number;
-  seconds: number;
-  milliseconds: number;
+    days: number;
+    hours: number;
+    total: number;
+    minutes: number;
+    seconds: number;
+    milliseconds: number;
 };
 
 type CountDown = {
-  start: () => void;
-  pause: () => void;
-  reset: (totalTime: number) => void;
-  current: ComputedRef<CurrentTime>;
+    start: () => void;
+    pause: () => void;
+    reset: (totalTime: number) => void;
+    current: ComputedRef<CurrentTime>;
 };
 
 type UseCountDownOptions = {
-  time: number;
-  millisecond?: boolean;
-  onChange?: (current: CurrentTime) => void;
-  onFinish?: () => void;
+    time: number;
+    millisecond?: boolean;
+    onChange?: (current: CurrentTime) => void;
+    onFinish?: () => void;
 };
 
 function useCountDown(options: UseCountDownOptions): CountDown;

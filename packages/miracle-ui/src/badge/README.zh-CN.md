@@ -24,25 +24,25 @@ app.use(Badge);
 
 ```html
 <mi-badge :content="5">
-  <div class="child" />
+    <div class="child" />
 </mi-badge>
 <mi-badge :content="10">
-  <div class="child" />
+    <div class="child" />
 </mi-badge>
 <mi-badge content="Hot">
-  <div class="child" />
+    <div class="child" />
 </mi-badge>
 <mi-badge dot>
-  <div class="child" />
+    <div class="child" />
 </mi-badge>
 
 <style>
-  .child {
-    width: 40px;
-    height: 40px;
-    background: #f2f3f5;
-    border-radius: 4px;
-  }
+    .child {
+        width: 40px;
+        height: 40px;
+        background: #f2f3f5;
+        border-radius: 4px;
+    }
 </style>
 ```
 
@@ -52,13 +52,13 @@ app.use(Badge);
 
 ```html
 <mi-badge :content="20" max="9">
-  <div class="child" />
+    <div class="child" />
 </mi-badge>
 <mi-badge :content="50" max="20">
-  <div class="child" />
+    <div class="child" />
 </mi-badge>
 <mi-badge :content="200" max="99">
-  <div class="child" />
+    <div class="child" />
 </mi-badge>
 ```
 
@@ -68,13 +68,13 @@ app.use(Badge);
 
 ```html
 <mi-badge :content="5" color="#1989fa">
-  <div class="child" />
+    <div class="child" />
 </mi-badge>
 <mi-badge :content="10" color="#1989fa">
-  <div class="child" />
+    <div class="child" />
 </mi-badge>
 <mi-badge dot color="#1989fa">
-  <div class="child" />
+    <div class="child" />
 </mi-badge>
 ```
 
@@ -84,30 +84,30 @@ app.use(Badge);
 
 ```html
 <mi-badge>
-  <div class="child" />
-  <template #content>
-    <mi-icon name="success" class="badge-icon" />
-  </template>
+    <div class="child" />
+    <template #content>
+        <mi-icon name="success" class="badge-icon" />
+    </template>
 </mi-badge>
 <mi-badge>
-  <div class="child" />
-  <template #content>
-    <mi-icon name="cross" class="badge-icon" />
-  </template>
+    <div class="child" />
+    <template #content>
+        <mi-icon name="cross" class="badge-icon" />
+    </template>
 </mi-badge>
 <mi-badge>
-  <div class="child" />
-  <template #content>
-    <mi-icon name="down" class="badge-icon" />
-  </template>
+    <div class="child" />
+    <template #content>
+        <mi-icon name="down" class="badge-icon" />
+    </template>
 </mi-badge>
 ```
 
 ```css
 .badge-icon {
-  display: block;
-  font-size: 10px;
-  line-height: 16px;
+    display: block;
+    font-size: 10px;
+    line-height: 16px;
 }
 ```
 
@@ -117,13 +117,13 @@ app.use(Badge);
 
 ```html
 <mi-badge :content="10" position="top-left">
-  <div class="child" />
+    <div class="child" />
 </mi-badge>
 <mi-badge :content="10" position="bottom-left">
-  <div class="child" />
+    <div class="child" />
 </mi-badge>
 <mi-badge :content="10" position="bottom-right">
-  <div class="child" />
+    <div class="child" />
 </mi-badge>
 ```
 

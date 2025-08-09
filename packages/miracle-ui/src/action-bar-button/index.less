@@ -1,39 +1,39 @@
 :root,
 :host {
-  --mi-action-bar-button-height: 40px;
-  --mi-action-bar-button-warning-color: var(--mi-gradient-orange);
-  --mi-action-bar-button-danger-color: var(--mi-gradient-red);
+    --mi-action-bar-button-height: 40px;
+    --mi-action-bar-button-warning-color: var(--mi-gradient-orange);
+    --mi-action-bar-button-danger-color: var(--mi-gradient-red);
 }
 
 .mi-action-bar-button {
-  flex: 1;
-  height: var(--mi-action-bar-button-height);
-  font-weight: var(--mi-font-bold);
-  font-size: var(--mi-font-size-md);
-  border: none;
-  border-radius: 0;
+    flex: 1;
+    height: var(--mi-action-bar-button-height);
+    font-weight: var(--mi-font-bold);
+    font-size: var(--mi-font-size-md);
+    border: none;
+    border-radius: 0;
 
-  &--first {
-    margin-left: 5px;
-    border-top-left-radius: var(--mi-radius-max);
-    border-bottom-left-radius: var(--mi-radius-max);
-  }
+    &--first {
+        margin-left: 5px;
+        border-top-left-radius: var(--mi-radius-max);
+        border-bottom-left-radius: var(--mi-radius-max);
+    }
 
-  &--last {
-    margin-right: 5px;
-    border-top-right-radius: var(--mi-radius-max);
-    border-bottom-right-radius: var(--mi-radius-max);
-  }
+    &--last {
+        margin-right: 5px;
+        border-top-right-radius: var(--mi-radius-max);
+        border-bottom-right-radius: var(--mi-radius-max);
+    }
 
-  &--warning {
-    background: var(--mi-action-bar-button-warning-color);
-  }
+    &--warning {
+        background: var(--mi-action-bar-button-warning-color);
+    }
 
-  &--danger {
-    background: var(--mi-action-bar-button-danger-color);
-  }
+    &--danger {
+        background: var(--mi-action-bar-button-danger-color);
+    }
 
-  @media (max-width: 321px) {
-    font-size: 13px;
-  }
+    @media (max-width: 321px) {
+        font-size: 13px;
+    }
 }

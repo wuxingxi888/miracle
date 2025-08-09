@@ -6,18 +6,18 @@ type VisibilityState = 'hidden' | 'visible';
 let visibility: Ref<VisibilityState>;
 
 export function usePageVisibility() {
-  if (!visibility) {
-    visibility = ref<VisibilityState>('visible');
+    if (!visibility) {
+        visibility = ref<VisibilityState>('visible');
 
-    if (inBrowser) {
-      const update = () => {
-        visibility.value = document.hidden ? 'hidden' : 'visible';
-      };
+        if (inBrowser) {
+            const update = () => {
+                visibility.value = document.hidden ? 'hidden' : 'visible';
+            };
 
-      update();
-      window.addEventListener('visibilitychange', update);
+            update();
+            window.addEventListener('visibilitychange', update);
+        }
     }
-  }
 
-  return visibility;
+    return visibility;
 }

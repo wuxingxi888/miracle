@@ -21,6 +21,6 @@ bun add @miracle-web/eslint-config -D
 ```json
 // .eslintrc
 {
-  "extends": ["@miracle-web/eslint-config"]
+    "extends": ["@miracle-web/eslint-config"]
 }
 ```

@@ -6,33 +6,33 @@ const [name, bem] = createNamespace('divider');
 export type DividerContentPosition = 'left' | 'center' | 'right';
 
 export const dividerProps = {
-  dashed: Boolean,
-  hairline: truthProp,
-  vertical: Boolean,
-  contentPosition: makeStringProp<DividerContentPosition>('center'),
+    dashed: Boolean,
+    hairline: truthProp,
+    vertical: Boolean,
+    contentPosition: makeStringProp<DividerContentPosition>('center'),
 };
 
 export type DividerProps = ExtractPropTypes<typeof dividerProps>;
 
 export default defineComponent({
-  name,
+    name,
 
-  props: dividerProps,
+    props: dividerProps,
 
-  setup(props, { slots }) {
-    return () => (
-      <div
-        role="separator"
-        class={bem({
-          dashed: props.dashed,
-          hairline: props.hairline,
-          vertical: props.vertical,
-          [`content-${props.contentPosition}`]:
-            !!slots.default && !props.vertical,
-        })}
-      >
-        {!props.vertical && slots.default?.()}
-      </div>
-    );
-  },
+    setup(props, { slots }) {
+        return () => (
+            <div
+                role="separator"
+                class={bem({
+                    dashed: props.dashed,
+                    hairline: props.hairline,
+                    vertical: props.vertical,
+                    [`content-${props.contentPosition}`]:
+                        !!slots.default && !props.vertical,
+                })}
+            >
+                {!props.vertical && slots.default?.()}
+            </div>
+        );
+    },
 });

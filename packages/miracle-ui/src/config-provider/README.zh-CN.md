@@ -32,8 +32,8 @@ app.use(ConfigProvider);
 
 ```css
 .mi-theme-dark body {
-  color: #f5f5f5;
-  background-color: black;
+    color: #f5f5f5;
+    background-color: black;
 }
 ```
 
@@ -47,15 +47,15 @@ app.use(ConfigProvider);
 
 ```js
 export default {
-  setup() {
-    const theme = ref('light');
+    setup() {
+        const theme = ref('light');
 
-    setTimeout(() => {
-      theme.value = 'dark';
-    }, 1000);
+        setTimeout(() => {
+            theme.value = 'dark';
+        }, 1000);
 
-    return { theme };
-  },
+        return { theme };
+    },
 };
 ```
 
@@ -71,8 +71,8 @@ Miracle 组件通过丰富的 [CSS 变量](https://developer.mozilla.org/zh-CN/d
 
 ```css
 .mi-button--primary {
-  color: var(--mi-button-primary-color);
-  background-color: var(--mi-button-primary-background);
+    color: var(--mi-button-primary-color);
+    background-color: var(--mi-button-primary-background);
 }
 ```
 
@@ -80,10 +80,10 @@ Miracle 组件通过丰富的 [CSS 变量](https://developer.mozilla.org/zh-CN/d
 
 ```css
 :root {
-  --mi-white: #fff;
-  --mi-blue: #1989fa;
-  --mi-button-primary-color: var(--mi-white);
-  --mi-button-primary-background: var(--mi-primary-color);
+    --mi-white: #fff;
+    --mi-blue: #1989fa;
+    --mi-button-primary-color: var(--mi-white);
+    --mi-button-primary-background: var(--mi-primary-color);
 }
 ```
 
@@ -96,7 +96,7 @@ Miracle 组件通过丰富的 [CSS 变量](https://developer.mozilla.org/zh-CN/d
 ```css
 /* 添加这段样式后，Primary Button 会变成红色 */
 :root:root {
-  --mi-button-primary-background: red;
+    --mi-button-primary-background: red;
 }
 ```
 
@@ -110,23 +110,23 @@ Miracle 组件通过丰富的 [CSS 变量](https://developer.mozilla.org/zh-CN/d
 
 ```html
 <mi-config-provider :theme-vars="themeVars">
-  <mi-form>
-    <mi-field name="rate" label="评分">
-      <template #input>
-        <mi-rate v-model="rate" />
-      </template>
-    </mi-field>
-    <mi-field name="slider" label="滑块">
-      <template #input>
-        <mi-slider v-model="slider" />
-      </template>
-    </mi-field>
-    <div style="margin: 16px">
-      <mi-button round block type="primary" native-type="submit">
-        提交
-      </mi-button>
-    </div>
-  </mi-form>
+    <mi-form>
+        <mi-field name="rate" label="评分">
+            <template #input>
+                <mi-rate v-model="rate" />
+            </template>
+        </mi-field>
+        <mi-field name="slider" label="滑块">
+            <template #input>
+                <mi-slider v-model="slider" />
+            </template>
+        </mi-field>
+        <div style="margin: 16px">
+            <mi-button round block type="primary" native-type="submit"
+                >提交</mi-button
+            >
+        </div>
+    </mi-form>
 </mi-config-provider>
 ```
 
@@ -134,28 +134,28 @@ Miracle 组件通过丰富的 [CSS 变量](https://developer.mozilla.org/zh-CN/d
 import { ref, reactive } from 'vue';
 
 export default {
-  setup() {
-    const rate = ref(4);
-    const slider = ref(50);
+    setup() {
+        const rate = ref(4);
+        const slider = ref(50);
 
-    // themeVars 内的值会被转换成对应 CSS 变量
-    // 比如 sliderBarHeight 会转换成 `--mi-slider-bar-height`
-    const themeVars = reactive({
-      rateIconFullColor: '#07c160',
-      sliderBarHeight: '4px',
-      sliderButtonWidth: '20px',
-      sliderButtonHeight: '20px',
-      sliderActiveBackground: '#07c160',
-      buttonPrimaryBackground: '#07c160',
-      buttonPrimaryBorderColor: '#07c160',
-    });
+        // themeVars 内的值会被转换成对应 CSS 变量
+        // 比如 sliderBarHeight 会转换成 `--mi-slider-bar-height`
+        const themeVars = reactive({
+            rateIconFullColor: '#07c160',
+            sliderBarHeight: '4px',
+            sliderButtonWidth: '20px',
+            sliderButtonHeight: '20px',
+            sliderActiveBackground: '#07c160',
+            buttonPrimaryBackground: '#07c160',
+            buttonPrimaryBorderColor: '#07c160',
+        });
 
-    return {
-      rate,
-      slider,
-      themeVars,
-    };
-  },
+        return {
+            rate,
+            slider,
+            themeVars,
+        };
+    },
 };
 ```
 
@@ -166,9 +166,9 @@ export default {
 你可以通过 `theme-vars-scope` 属性来修改 CSS 变量的生效范围。比如将 `theme-vars-scope` 设置为 `global`，此时 themeVars 产生的 CSS 变量会设置到 HTML 的根节点，并对整个页面内的所有组件生效。
 
 ```html
-<mi-config-provider :theme-vars="themeVars" theme-vars-scope="global">
-  ...
-</mi-config-provider>
+<mi-config-provider :theme-vars="themeVars" theme-vars-scope="global"
+    >...</mi-config-provider
+>
 ```
 
 #### 在 TypeScript 中使用
@@ -179,7 +179,7 @@ export default {
 import type { ConfigProviderThemeVars } from '@miracle-web/ui';
 
 const themeVars: ConfigProviderThemeVars = {
-  sliderBarHeight: '4px',
+    sliderBarHeight: '4px',
 };
 ```
 
@@ -187,8 +187,8 @@ const themeVars: ConfigProviderThemeVars = {
 
 如果需要单独定义深色模式或浅色模式下的 CSS 变量，可以使用 `theme-vars-dark` 和 `theme-vars-light` 属性。
 
-- `theme-vars-dark`: 仅在深色模式下生效的 CSS 变量，优先级高于 `theme-vars` 中定义的变量。
-- `theme-vars-light`: 仅在浅色模式下生效的 CSS 变量，优先级高于 `theme-vars` 中定义的变量。
+-   `theme-vars-dark`: 仅在深色模式下生效的 CSS 变量，优先级高于 `theme-vars` 中定义的变量。
+-   `theme-vars-light`: 仅在浅色模式下生效的 CSS 变量，优先级高于 `theme-vars` 中定义的变量。
 
 #### 示例
 
@@ -196,11 +196,11 @@ const themeVars: ConfigProviderThemeVars = {
 
 ```html
 <mi-config-provider
-  :theme-vars="themeVars"
-  :theme-vars-dark="themeVarsDark"
-  :theme-vars-light="themeVarsLight"
+    :theme-vars="themeVars"
+    :theme-vars-dark="themeVarsDark"
+    :theme-vars-light="themeVarsLight"
 >
-  ...
+    ...
 </mi-config-provider>
 ```
 
@@ -208,17 +208,17 @@ const themeVars: ConfigProviderThemeVars = {
 import { ref, reactive } from 'vue';
 
 export default {
-  setup() {
-    const themeVars = reactive({ buttonPrimaryBackground: 'red' });
-    const themeVarsDark = reactive({ buttonPrimaryBackground: 'blue' });
-    const themeVarsLight = reactive({ buttonPrimaryBackground: 'green' });
+    setup() {
+        const themeVars = reactive({ buttonPrimaryBackground: 'red' });
+        const themeVarsDark = reactive({ buttonPrimaryBackground: 'blue' });
+        const themeVarsLight = reactive({ buttonPrimaryBackground: 'green' });
 
-    return {
-      themeVars,
-      themeVarsDark,
-      themeVarsLight,
-    };
-  },
+        return {
+            themeVars,
+            themeVarsDark,
+            themeVarsLight,
+        };
+    },
 };
 ```
 
@@ -228,11 +228,11 @@ export default {
 
 ```css
 .mi-theme-light {
-  --mi-white: white;
+    --mi-white: white;
 }
 
 .mi-theme-dark {
-  --mi-white: black;
+    --mi-white: black;
 }
 ```
 
@@ -250,31 +250,30 @@ CSS 变量存在继承关系，组件变量会寻找最近的父级基础变量�
 
 以 `--mi-primary-color` 这个基础变量为例：
 
-- 可以通过 `:root` 选择器修改：
+-   可以通过 `:root` 选择器修改：
 
 ```css
 :root {
-  --mi-primary-color: red;
+    --mi-primary-color: red;
 }
 ```
 
-- 可以通过 ConfigProvider 组件的 global 模式修改：
+-   可以通过 ConfigProvider 组件的 global 模式修改：
 
 ```html
 <mi-config-provider
-  :theme-vars="{ primaryColor: 'red' }"
-  theme-vars-scope="global"
+    :theme-vars="{ primaryColor: 'red' }"
+    theme-vars-scope="global"
+    >...</mi-config-provider
 >
-  ...
-</mi-config-provider>
 ```
 
-- 不可以通过 ConfigProvider 组件默认的 `local` 模式修改：
+-   不可以通过 ConfigProvider 组件默认的 `local` 模式修改：
 
 ```html
-<mi-config-provider :theme-vars="{ primaryColor: 'red' }">
-  ...
-</mi-config-provider>
+<mi-config-provider :theme-vars="{ primaryColor: 'red' }"
+    >...</mi-config-provider
+>
 ```
 
 对于组件变量，则没有上述限制，可以通过任意方式修改。
@@ -339,8 +338,8 @@ CSS 变量存在继承关系，组件变量会寻找最近的父级基础变量�
 --mi-line-height-md: 20px;
 --mi-line-height-lg: 22px;
 --mi-base-font: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica,
-  Segoe UI, Arial, Roboto, 'PingFang SC', 'miui', 'Hiragino Sans GB',
-  'Microsoft Yahei', sans-serif;
+    Segoe UI, Arial, Roboto, 'PingFang SC', 'miui', 'Hiragino Sans GB',
+    'Microsoft Yahei', sans-serif;
 --mi-price-font: Avenir-Heavy, PingFang SC, Helvetica Neue, Arial, sans-serif;
 
 // Animation
@@ -381,9 +380,9 @@ CSS 变量存在继承关系，组件变量会寻找最近的父级基础变量�
 
 ```ts
 import type {
-  ConfigProviderProps,
-  ConfigProviderTheme,
-  ConfigProviderThemeVars,
-  ConfigProviderThemeVarsScope,
+    ConfigProviderProps,
+    ConfigProviderTheme,
+    ConfigProviderThemeVars,
+    ConfigProviderThemeVarsScope,
 } from '@miracle-web/ui';
 ```

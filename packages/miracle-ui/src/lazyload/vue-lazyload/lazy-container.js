@@ -8,87 +8,92 @@
 import { remove } from './util';
 
 const defaultOptions = {
-  selector: 'img',
+    selector: 'img',
 };
 
 class LazyContainer {
-  constructor({ el, binding, vnode, lazy }) {
-    this.el = null;
-    this.vnode = vnode;
-    this.binding = binding;
-    this.options = {};
-    this.lazy = lazy;
+    constructor({ el, binding, vnode, lazy }) {
+        this.el = null;
+        this.vnode = vnode;
+        this.binding = binding;
+        this.options = {};
+        this.lazy = lazy;
 
-    this.queue = [];
-    this.update({ el, binding });
-  }
+        this.queue = [];
+        this.update({ el, binding });
+    }
 
-  update({ el, binding }) {
-    this.el = el;
-    this.options = Object.assign({}, defaultOptions, binding.value);
+    update({ el, binding }) {
+        this.el = el;
+        this.options = Object.assign({}, defaultOptions, binding.value);
 
-    const imgs = this.getImgs();
-    imgs.forEach((el) => {
-      this.lazy.add(
-        el,
-        Object.assign({}, this.binding, {
-          value: {
-            src: 'dataset' in el ? el.dataset.src : el.getAttribute('data-src'),
-            error:
-              ('dataset' in el
-                ? el.dataset.error
-                : el.getAttribute('data-error')) || this.options.error,
-            loading:
-              ('dataset' in el
-                ? el.dataset.loading
-                : el.getAttribute('data-loading')) || this.options.loading,
-          },
-        }),
-        this.vnode,
-      );
-    });
-  }
+        const imgs = this.getImgs();
+        imgs.forEach((el) => {
+            this.lazy.add(
+                el,
+                Object.assign({}, this.binding, {
+                    value: {
+                        src:
+                            'dataset' in el
+                                ? el.dataset.src
+                                : el.getAttribute('data-src'),
+                        error:
+                            ('dataset' in el
+                                ? el.dataset.error
+                                : el.getAttribute('data-error')) ||
+                            this.options.error,
+                        loading:
+                            ('dataset' in el
+                                ? el.dataset.loading
+                                : el.getAttribute('data-loading')) ||
+                            this.options.loading,
+                    },
+                }),
+                this.vnode,
+            );
+        });
+    }
 
-  getImgs() {
-    return Array.from(this.el.querySelectorAll(this.options.selector));
-  }
+    getImgs() {
+        return Array.from(this.el.querySelectorAll(this.options.selector));
+    }
 
-  clear() {
-    const imgs = this.getImgs();
-    imgs.forEach((el) => this.lazy.remove(el));
+    clear() {
+        const imgs = this.getImgs();
+        imgs.forEach((el) => this.lazy.remove(el));
 
-    this.vnode = null;
-    this.binding = null;
-    this.lazy = null;
-  }
+        this.vnode = null;
+        this.binding = null;
+        this.lazy = null;
+    }
 }
 
 export default class LazyContainerManager {
-  constructor({ lazy }) {
-    this.lazy = lazy;
-    this.queue = [];
-  }
+    constructor({ lazy }) {
+        this.lazy = lazy;
+        this.queue = [];
+    }
 
-  bind(el, binding, vnode) {
-    const container = new LazyContainer({
-      el,
-      binding,
-      vnode,
-      lazy: this.lazy,
-    });
-    this.queue.push(container);
-  }
+    bind(el, binding, vnode) {
+        const container = new LazyContainer({
+            el,
+            binding,
+            vnode,
+            lazy: this.lazy,
+        });
+        this.queue.push(container);
+    }
 
-  update(el, binding, vnode) {
-    const container = this.queue.find((item) => item.el === el);
-    if (!container) return;
-    container.update({ el, binding, vnode });
-  }
+    update(el, binding, vnode) {
+        const container = this.queue.find((item) => item.el === el);
+        if (!container) return;
+        container.update({ el, binding, vnode });
+    }
 
-  unbind(el) {
-    const container = this.queue.find((item) => item.el === el);
-    if (!container) return;
-    container.clear();
-    remove(this.queue, container);
-  }
+    unbind(el) {
+        const container = this.queue.find((item) => item.el === el);
+        if (!container) return;
+        container.clear();
+        remove(this.queue, container);
+    }
 }

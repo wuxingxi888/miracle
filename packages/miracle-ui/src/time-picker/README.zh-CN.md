@@ -30,10 +30,10 @@ app.use(TimePicker);
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const currentTime = ref(['12', '00']);
-    return { currentTime };
-  },
+    setup() {
+        const currentTime = ref(['12', '00']);
+        return { currentTime };
+    },
 };
 ```
 
@@ -43,16 +43,16 @@ export default {
 
 比如：
 
-- 传入 `['hour']` 来单独选择小时。
-- 传入 `['minute']` 来单独选择分钟。
-- 传入 `['minute', 'second']` 来选择分钟和秒。
-- 传入 `['hour', 'minute', 'second']` 来选择小时、分钟和秒。
+-   传入 `['hour']` 来单独选择小时。
+-   传入 `['minute']` 来单独选择分钟。
+-   传入 `['minute', 'second']` 来选择分钟和秒。
+-   传入 `['hour', 'minute', 'second']` 来选择小时、分钟和秒。
 
 ```html
 <mi-time-picker
-  v-model="currentTime"
-  title="选择时间"
-  :columns-type="columnsType"
+    v-model="currentTime"
+    title="选择时间"
+    :columns-type="columnsType"
 />
 ```
 
@@ -60,14 +60,14 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const currentTime = ref(['12', '00', '00']);
-    const columnsType = ['hour', 'minute', 'second'];
-    return {
-      currentTime,
-      columnsType,
-    };
-  },
+    setup() {
+        const currentTime = ref(['12', '00', '00']);
+        const columnsType = ['hour', 'minute', 'second'];
+        return {
+            currentTime,
+            columnsType,
+        };
+    },
 };
 ```
 
@@ -79,12 +79,12 @@ export default {
 
 ```html
 <mi-time-picker
-  v-model="currentTime"
-  title="选择时间"
-  :min-hour="10"
-  :max-hour="20"
-  :min-minute="30"
-  :max-minute="40"
+    v-model="currentTime"
+    title="选择时间"
+    :min-hour="10"
+    :max-hour="20"
+    :min-minute="30"
+    :max-minute="40"
 />
 ```
 
@@ -92,10 +92,10 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const currentTime = ref(['12', '35']);
-    return { currentTime };
-  },
+    setup() {
+        const currentTime = ref(['12', '35']);
+        return { currentTime };
+    },
 };
 ```
 
@@ -103,18 +103,18 @@ export default {
 
 你可以使用 `min-time` 和 `max-time` 属性来限制整体时间范围，约定格式 `10:00:00`。
 
-- 设置 `min-time` 后，`min-hour`、`min-minute`、`min-second` 属性将不会生效。
-- 设置 `max-time` 后，`max-hour`、`max-minute`、`max-second` 属性将不会生效。
+-   设置 `min-time` 后，`min-hour`、`min-minute`、`min-second` 属性将不会生效。
+-   设置 `max-time` 后，`max-hour`、`max-minute`、`max-second` 属性将不会生效。
 
 比如以下示例，用户可以选择从 `09:40:10` 到 `20:20:50` 的任意时间。
 
 ```html
 <mi-time-picker
-  v-model="currentTime"
-  title="选择时间"
-  :columns-type="['hour', 'minute', 'second']"
-  min-time="09:40:10"
-  max-time="20:20:50"
+    v-model="currentTime"
+    title="选择时间"
+    :columns-type="['hour', 'minute', 'second']"
+    min-time="09:40:10"
+    max-time="20:20:50"
 />
 ```
 
@@ -122,10 +122,10 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const currentTime = ref(['12', '00', '00']);
-    return { currentTime };
-  },
+    setup() {
+        const currentTime = ref(['12', '00', '00']);
+        return { currentTime };
+    },
 };
 ```
 
@@ -141,23 +141,23 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const currentTime = ref(['12', '00']);
-    const formatter = (type, option) => {
-      if (type === 'hour') {
-        option.text += '时';
-      }
-      if (type === 'minute') {
-        option.text += '分';
-      }
-      return option;
-    };
+    setup() {
+        const currentTime = ref(['12', '00']);
+        const formatter = (type, option) => {
+            if (type === 'hour') {
+                option.text += '时';
+            }
+            if (type === 'minute') {
+                option.text += '分';
+            }
+            return option;
+        };
 
-    return {
-      formatter,
-      currentTime,
-    };
-  },
+        return {
+            formatter,
+            currentTime,
+        };
+    },
 };
 ```
 
@@ -173,20 +173,22 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const currentTime = ref(['12', '00']);
-    const filter = (type, options) => {
-      if (type === 'minute') {
-        return options.filter((option) => Number(option.value) % 10 === 0);
-      }
-      return options;
-    };
+    setup() {
+        const currentTime = ref(['12', '00']);
+        const filter = (type, options) => {
+            if (type === 'minute') {
+                return options.filter(
+                    (option) => Number(option.value) % 10 === 0,
+                );
+            }
+            return options;
+        };
 
-    return {
-      filter,
-      currentTime,
-    };
-  },
+        return {
+            filter,
+            currentTime,
+        };
+    },
 };
 ```
 
@@ -200,35 +202,42 @@ export default {
 
 ```js
 export default {
-  setup() {
-    const filter = (type, options, values) => {
-      const hour = +values[0];
+    setup() {
+        const filter = (type, options, values) => {
+            const hour = +values[0];
 
-      if (type === 'hour') {
-        return options.filter(
-          (option) => Number(option.value) >= 8 && Number(option.value) <= 18,
-        );
-      }
+            if (type === 'hour') {
+                return options.filter(
+                    (option) =>
+                        Number(option.value) >= 8 && Number(option.value) <= 18,
+                );
+            }
 
-      if (type === 'minute') {
-        options = options.filter((option) => Number(option.value) % 10 === 0);
+            if (type === 'minute') {
+                options = options.filter(
+                    (option) => Number(option.value) % 10 === 0,
+                );
 
-        if (hour === 8) {
-          return options.filter((option) => Number(option.value) >= 40);
-        }
+                if (hour === 8) {
+                    return options.filter(
+                        (option) => Number(option.value) >= 40,
+                    );
+                }
 
-        if (hour === 18) {
-          return options.filter((option) => Number(option.value) <= 20);
-        }
-      }
+                if (hour === 18) {
+                    return options.filter(
+                        (option) => Number(option.value) <= 20,
+                    );
+                }
+            }
 
-      return options;
-    };
+            return options;
+        };
 
-    return {
-      filter,
-    };
-  },
+        return {
+            filter,
+        };
+    },
 };
 ```
 

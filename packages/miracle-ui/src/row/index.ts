@@ -7,7 +7,7 @@ export { rowProps } from './Row';
 export type { RowProps, RowAlign, RowJustify } from './Row';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiRow: typeof Row;
-  }
+    export interface GlobalComponents {
+        MiRow: typeof Row;
+    }
 }

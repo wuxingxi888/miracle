@@ -6,13 +6,13 @@ export default NoticeBar;
 export { noticeBarProps } from './NoticeBar';
 export type { NoticeBarProps };
 export type {
-  NoticeBarMode,
-  NoticeBarInstance,
-  NoticeBarThemeVars,
+    NoticeBarMode,
+    NoticeBarInstance,
+    NoticeBarThemeVars,
 } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiNoticeBar: typeof NoticeBar;
-  }
+    export interface GlobalComponents {
+        MiNoticeBar: typeof NoticeBar;
+    }
 }

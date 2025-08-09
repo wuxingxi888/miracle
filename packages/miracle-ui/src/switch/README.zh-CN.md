@@ -30,10 +30,10 @@ app.use(Switch);
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const checked = ref(true);
-    return { checked };
-  },
+    setup() {
+        const checked = ref(true);
+        return { checked };
+    },
 };
 ```
 
@@ -75,30 +75,30 @@ export default {
 
 ```html
 <mi-switch v-model="checked">
-  <template #node>
-    <div class="icon-wrapper">
-      <mi-icon :name="checked ? 'success' : 'cross'" />
-    </div>
-  </template>
+    <template #node>
+        <div class="icon-wrapper">
+            <mi-icon :name="checked ? 'success' : 'cross'" />
+        </div>
+    </template>
 </mi-switch>
 
 <style>
-  .icon-wrapper {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    font-size: 18px;
-  }
+    .icon-wrapper {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        font-size: 18px;
+    }
 
-  .icon-wrapper .mi-icon-success {
-    line-height: 32px;
-    color: var(--mi-blue);
-  }
+    .icon-wrapper .mi-icon-success {
+        line-height: 32px;
+        color: var(--mi-blue);
+    }
 
-  .icon-wrapper .mi-icon-cross {
-    line-height: 32px;
-    color: var(--mi-gray-5);
-  }
+    .icon-wrapper .mi-icon-cross {
+        line-height: 32px;
+        color: var(--mi-gray-5);
+    }
 </style>
 ```
 
@@ -115,22 +115,22 @@ import { ref } from 'vue';
 import { showConfirmDialog } from '@miracle-web/ui';
 
 export default {
-  setup() {
-    const checked = ref(true);
-    const onUpdateValue = (newValue) => {
-      showConfirmDialog({
-        title: '提醒',
-        message: '是否切换开关？',
-      }).then(() => {
-        checked.value = newValue;
-      });
-    };
+    setup() {
+        const checked = ref(true);
+        const onUpdateValue = (newValue) => {
+            showConfirmDialog({
+                title: '提醒',
+                message: '是否切换开关？',
+            }).then(() => {
+                checked.value = newValue;
+            });
+        };
 
-    return {
-      checked,
-      onUpdateValue,
-    };
-  },
+        return {
+            checked,
+            onUpdateValue,
+        };
+    },
 };
 ```
 
@@ -138,9 +138,9 @@ export default {
 
 ```html
 <mi-cell center title="标题">
-  <template #right-icon>
-    <mi-switch v-model="checked" />
-  </template>
+    <template #right-icon>
+        <mi-switch v-model="checked" />
+    </template>
 </mi-cell>
 ```
 

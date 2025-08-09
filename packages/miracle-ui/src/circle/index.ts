@@ -8,7 +8,7 @@ export type { CircleProps, CircleStartPosition } from './Circle';
 export type { CircleThemeVars } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiCircle: typeof Circle;
-  }
+    export interface GlobalComponents {
+        MiCircle: typeof Circle;
+    }
 }

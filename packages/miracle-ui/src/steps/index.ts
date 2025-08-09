@@ -8,7 +8,7 @@ export type { StepsProps, StepsDirection } from './Steps';
 export type { StepsThemeVars } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiSteps: typeof Steps;
-  }
+    export interface GlobalComponents {
+        MiSteps: typeof Steps;
+    }
 }

@@ -1,18 +1,18 @@
 import {
-  computed,
-  defineComponent,
-  type PropType,
-  type CSSProperties,
-  type ExtractPropTypes,
+    computed,
+    defineComponent,
+    type PropType,
+    type CSSProperties,
+    type ExtractPropTypes,
 } from 'vue';
 
 // Utils
 import {
-  BORDER,
-  extend,
-  addUnit,
-  numericProp,
-  createNamespace,
+    BORDER,
+    extend,
+    addUnit,
+    numericProp,
+    createNamespace,
 } from '../utils';
 import { GRID_KEY } from '../grid/Grid';
 
@@ -27,144 +27,151 @@ import { Badge, type BadgeProps } from '../badge';
 const [name, bem] = createNamespace('grid-item');
 
 export const gridItemProps = extend({}, routeProps, {
-  dot: Boolean,
-  text: String,
-  icon: String,
-  badge: numericProp,
-  iconColor: String,
-  iconPrefix: String,
-  badgeProps: Object as PropType<Partial<BadgeProps>>,
+    dot: Boolean,
+    text: String,
+    icon: String,
+    badge: numericProp,
+    iconColor: String,
+    iconPrefix: String,
+    badgeProps: Object as PropType<Partial<BadgeProps>>,
 });
 
 export type GridItemProps = ExtractPropTypes<typeof gridItemProps>;
 
 export default defineComponent({
-  name,
+    name,
 
-  props: gridItemProps,
+    props: gridItemProps,
 
-  setup(props, { slots }) {
-    const { parent, index } = useParent(GRID_KEY);
-    const route = useRoute();
+    setup(props, { slots }) {
+        const { parent, index } = useParent(GRID_KEY);
+        const route = useRoute();
 
-    if (!parent) {
-      if (process.env.NODE_ENV !== 'production') {
-        console.error(
-          '[Miracle] <GridItem> must be a child component of <Grid>.',
-        );
-      }
-      return;
-    }
-
-    const rootStyle = computed(() => {
-      const { square, gutter, columnNum } = parent.props;
-      const percent = `${100 / +columnNum}%`;
-      const style: CSSProperties = {
-        flexBasis: percent,
-      };
-
-      if (square) {
-        style.paddingTop = percent;
-      } else if (gutter) {
-        const gutterValue = addUnit(gutter);
-        style.paddingRight = gutterValue;
-
-        if (index.value >= +columnNum) {
-          style.marginTop = gutterValue;
+        if (!parent) {
+            if (process.env.NODE_ENV !== 'production') {
+                console.error(
+                    '[Miracle] <GridItem> must be a child component of <Grid>.',
+                );
+            }
+            return;
         }
-      }
 
-      return style;
-    });
+        const rootStyle = computed(() => {
+            const { square, gutter, columnNum } = parent.props;
+            const percent = `${100 / +columnNum}%`;
+            const style: CSSProperties = {
+                flexBasis: percent,
+            };
 
-    const contentStyle = computed(() => {
-      const { square, gutter } = parent.props;
+            if (square) {
+                style.paddingTop = percent;
+            } else if (gutter) {
+                const gutterValue = addUnit(gutter);
+                style.paddingRight = gutterValue;
 
-      if (square && gutter) {
-        const gutterValue = addUnit(gutter);
-        return {
-          right: gutterValue,
-          bottom: gutterValue,
-          height: 'auto',
+                if (index.value >= +columnNum) {
+                    style.marginTop = gutterValue;
+                }
+            }
+
+            return style;
+        });
+
+        const contentStyle = computed(() => {
+            const { square, gutter } = parent.props;
+
+            if (square && gutter) {
+                const gutterValue = addUnit(gutter);
+                return {
+                    right: gutterValue,
+                    bottom: gutterValue,
+                    height: 'auto',
+                };
+            }
+        });
+
+        const renderIcon = () => {
+            if (slots.icon) {
+                return (
+                    <Badge
+                        v-slots={{ default: slots.icon }}
+                        dot={props.dot}
+                        content={props.badge}
+                        {...props.badgeProps}
+                    />
+                );
+            }
+
+            if (props.icon) {
+                return (
+                    <Icon
+                        dot={props.dot}
+                        name={props.icon}
+                        size={parent.props.iconSize}
+                        badge={props.badge}
+                        class={bem('icon')}
+                        color={props.iconColor}
+                        badgeProps={props.badgeProps}
+                        classPrefix={props.iconPrefix}
+                    />
+                );
+            }
         };
-      }
-    });
 
-    const renderIcon = () => {
-      if (slots.icon) {
-        return (
-          <Badge
-            v-slots={{ default: slots.icon }}
-            dot={props.dot}
-            content={props.badge}
-            {...props.badgeProps}
-          />
-        );
-      }
+        const renderText = () => {
+            if (slots.text) {
+                return slots.text();
+            }
+            if (props.text) {
+                return <span class={bem('text')}>{props.text}</span>;
+            }
+        };
 
-      if (props.icon) {
-        return (
-          <Icon
-            dot={props.dot}
-            name={props.icon}
-            size={parent.props.iconSize}
-            badge={props.badge}
-            class={bem('icon')}
-            color={props.iconColor}
-            badgeProps={props.badgeProps}
-            classPrefix={props.iconPrefix}
-          />
-        );
-      }
-    };
+        const renderContent = () => {
+            if (slots.default) {
+                return slots.default();
+            }
+            return [renderIcon(), renderText()];
+        };
 
-    const renderText = () => {
-      if (slots.text) {
-        return slots.text();
-      }
-      if (props.text) {
-        return <span class={bem('text')}>{props.text}</span>;
-      }
-    };
+        return () => {
+            const {
+                center,
+                border,
+                square,
+                gutter,
+                reverse,
+                direction,
+                clickable,
+            } = parent.props;
 
-    const renderContent = () => {
-      if (slots.default) {
-        return slots.default();
-      }
-      return [renderIcon(), renderText()];
-    };
+            const classes = [
+                bem('content', [
+                    direction,
+                    {
+                        center,
+                        square,
+                        reverse,
+                        clickable,
+                        surround: border && gutter,
+                    },
+                ]),
+                { [BORDER]: border },
+            ];
 
-    return () => {
-      const { center, border, square, gutter, reverse, direction, clickable } =
-        parent.props;
-
-      const classes = [
-        bem('content', [
-          direction,
-          {
-            center,
-            square,
-            reverse,
-            clickable,
-            surround: border && gutter,
-          },
-        ]),
-        { [BORDER]: border },
-      ];
-
-      return (
-        <div class={[bem({ square })]} style={rootStyle.value}>
-          <div
-            role={clickable ? 'button' : undefined}
-            class={classes}
-            style={contentStyle.value}
-            tabindex={clickable ? 0 : undefined}
-            onClick={route}
-          >
-            {renderContent()}
-          </div>
-        </div>
-      );
-    };
-  },
+            return (
+                <div class={[bem({ square })]} style={rootStyle.value}>
+                    <div
+                        role={clickable ? 'button' : undefined}
+                        class={classes}
+                        style={contentStyle.value}
+                        tabindex={clickable ? 0 : undefined}
+                        onClick={route}
+                    >
+                        {renderContent()}
+                    </div>
+                </div>
+            );
+        };
+    },
 });

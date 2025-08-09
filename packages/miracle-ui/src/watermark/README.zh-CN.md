@@ -32,8 +32,8 @@ app.use(Watermark);
 
 ```html
 <mi-watermark
-  image="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/miracle-watermark.png"
-  opacity="0.2"
+    image="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/miracle-watermark.png"
+    opacity="0.2"
 />
 ```
 
@@ -43,10 +43,10 @@ app.use(Watermark);
 
 ```html
 <mi-watermark
-  image="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/miracle-watermark.png"
-  :gap-x="30"
-  :gap-y="10"
-  opacity="0.2"
+    image="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/miracle-watermark.png"
+    :gap-x="30"
+    :gap-y="10"
+    opacity="0.2"
 />
 ```
 
@@ -56,9 +56,9 @@ app.use(Watermark);
 
 ```html
 <mi-watermark
-  image="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/miracle-watermark.png"
-  rotate="22"
-  opacity="0.2"
+    image="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/miracle-watermark.png"
+    rotate="22"
+    opacity="0.2"
 />
 ```
 
@@ -68,9 +68,9 @@ app.use(Watermark);
 
 ```html
 <mi-watermark
-  image="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/miracle-watermark.png"
-  opacity="0.2"
-  :full-page="true"
+    image="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/miracle-watermark.png"
+    opacity="0.2"
+    :full-page="true"
 />
 ```
 
@@ -80,11 +80,15 @@ app.use(Watermark);
 
 ```html
 <mi-watermark :width="150">
-  <template #content>
-    <div style="background: linear-gradient(45deg, #000 0, #000 50%, #fff 50%)">
-      <p style="mix-blend-mode: difference; color: #fff">Miracle watermark</p>
-    </div>
-  </template>
+    <template #content>
+        <div
+            style="background: linear-gradient(45deg, #000 0, #000 50%, #fff 50%)"
+        >
+            <p style="mix-blend-mode: difference; color: #fff">
+                Miracle watermark
+            </p>
+        </div>
+    </template>
 </mi-watermark>
 ```
 

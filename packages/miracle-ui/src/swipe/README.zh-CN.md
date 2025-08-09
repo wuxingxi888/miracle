@@ -25,20 +25,20 @@ app.use(SwipeItem);
 
 ```html
 <mi-swipe class="my-swipe" :autoplay="3000" indicator-color="white">
-  <mi-swipe-item>1</mi-swipe-item>
-  <mi-swipe-item>2</mi-swipe-item>
-  <mi-swipe-item>3</mi-swipe-item>
-  <mi-swipe-item>4</mi-swipe-item>
+    <mi-swipe-item>1</mi-swipe-item>
+    <mi-swipe-item>2</mi-swipe-item>
+    <mi-swipe-item>3</mi-swipe-item>
+    <mi-swipe-item>4</mi-swipe-item>
 </mi-swipe>
 
 <style>
-  .my-swipe .mi-swipe-item {
-    color: #fff;
-    font-size: 20px;
-    line-height: 150px;
-    text-align: center;
-    background-color: #39a9ed;
-  }
+    .my-swipe .mi-swipe-item {
+        color: #fff;
+        font-size: 20px;
+        line-height: 150px;
+        text-align: center;
+        background-color: #39a9ed;
+    }
 </style>
 ```
 
@@ -48,21 +48,21 @@ app.use(SwipeItem);
 
 ```html
 <mi-swipe :autoplay="3000" lazy-render>
-  <mi-swipe-item v-for="image in images" :key="image">
-    <img :src="image" />
-  </mi-swipe-item>
+    <mi-swipe-item v-for="image in images" :key="image">
+        <img :src="image" />
+    </mi-swipe-item>
 </mi-swipe>
 ```
 
 ```js
 export default {
-  setup() {
-    const images = [
-      'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg',
-      'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg',
-    ];
-    return { images };
-  },
+    setup() {
+        const images = [
+            'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg',
+            'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg',
+        ];
+        return { images };
+    },
 };
 ```
 
@@ -72,10 +72,10 @@ export default {
 
 ```html
 <mi-swipe @change="onChange">
-  <mi-swipe-item>1</mi-swipe-item>
-  <mi-swipe-item>2</mi-swipe-item>
-  <mi-swipe-item>3</mi-swipe-item>
-  <mi-swipe-item>4</mi-swipe-item>
+    <mi-swipe-item>1</mi-swipe-item>
+    <mi-swipe-item>2</mi-swipe-item>
+    <mi-swipe-item>3</mi-swipe-item>
+    <mi-swipe-item>4</mi-swipe-item>
 </mi-swipe>
 ```
 
@@ -83,10 +83,10 @@ export default {
 import { showToast } from '@miracle-web/ui';
 
 export default {
-  setup() {
-    const onChange = (index) => showToast('当前 Swipe 索引：' + index);
-    return { onChange };
-  },
+    setup() {
+        const onChange = (index) => showToast('当前 Swipe 索引：' + index);
+        return { onChange };
+    },
 };
 ```
 
@@ -96,10 +96,10 @@ export default {
 
 ```html
 <mi-swipe style="height: 200px;" vertical>
-  <mi-swipe-item>1</mi-swipe-item>
-  <mi-swipe-item>2</mi-swipe-item>
-  <mi-swipe-item>3</mi-swipe-item>
-  <mi-swipe-item>4</mi-swipe-item>
+    <mi-swipe-item>1</mi-swipe-item>
+    <mi-swipe-item>2</mi-swipe-item>
+    <mi-swipe-item>3</mi-swipe-item>
+    <mi-swipe-item>4</mi-swipe-item>
 </mi-swipe>
 ```
 
@@ -109,10 +109,10 @@ export default {
 
 ```html
 <mi-swipe :loop="false" :width="300">
-  <mi-swipe-item>1</mi-swipe-item>
-  <mi-swipe-item>2</mi-swipe-item>
-  <mi-swipe-item>3</mi-swipe-item>
-  <mi-swipe-item>4</mi-swipe-item>
+    <mi-swipe-item>1</mi-swipe-item>
+    <mi-swipe-item>2</mi-swipe-item>
+    <mi-swipe-item>3</mi-swipe-item>
+    <mi-swipe-item>4</mi-swipe-item>
 </mi-swipe>
 ```
 
@@ -124,24 +124,24 @@ export default {
 
 ```html
 <mi-swipe>
-  <mi-swipe-item>1</mi-swipe-item>
-  <mi-swipe-item>2</mi-swipe-item>
-  <mi-swipe-item>3</mi-swipe-item>
-  <mi-swipe-item>4</mi-swipe-item>
-  <template #indicator="{ active, total }">
-    <div class="custom-indicator">{{ active + 1 }}/{{ total }}</div>
-  </template>
+    <mi-swipe-item>1</mi-swipe-item>
+    <mi-swipe-item>2</mi-swipe-item>
+    <mi-swipe-item>3</mi-swipe-item>
+    <mi-swipe-item>4</mi-swipe-item>
+    <template #indicator="{ active, total }">
+        <div class="custom-indicator">{{ active + 1 }}/{{ total }}</div>
+    </template>
 </mi-swipe>
 
 <style>
-  .custom-indicator {
-    position: absolute;
-    right: 5px;
-    bottom: 5px;
-    padding: 2px 5px;
-    font-size: 12px;
-    background: rgba(0, 0, 0, 0.1);
-  }
+    .custom-indicator {
+        position: absolute;
+        right: 5px;
+        bottom: 5px;
+        padding: 2px 5px;
+        font-size: 12px;
+        background: rgba(0, 0, 0, 0.1);
+    }
 </style>
 ```
 
@@ -151,28 +151,28 @@ export default {
 
 ```html
 <mi-swipe>
-  <mi-swipe-item>1</mi-swipe-item>
-  <mi-swipe-item>2</mi-swipe-item>
-  <mi-swipe-item>3</mi-swipe-item>
-  <mi-swipe-item>4</mi-swipe-item>
-  <template #indicator="{ active, total }">
-    <mi-indicator
-      class="custom-indicator_line"
-      type="line"
-      :size="total"
-      :active="active"
-      color="#fff"
-    />
-  </template>
+    <mi-swipe-item>1</mi-swipe-item>
+    <mi-swipe-item>2</mi-swipe-item>
+    <mi-swipe-item>3</mi-swipe-item>
+    <mi-swipe-item>4</mi-swipe-item>
+    <template #indicator="{ active, total }">
+        <mi-indicator
+            class="custom-indicator_line"
+            type="line"
+            :size="total"
+            :active="active"
+            color="#fff"
+        />
+    </template>
 </mi-swipe>
 
 <style>
-  .custom-indicator_line {
-    position: absolute;
-    left: 50%;
-    bottom: 10px;
-    transform: translateX(-50%);
-  }
+    .custom-indicator_line {
+        position: absolute;
+        left: 50%;
+        bottom: 10px;
+        transform: translateX(-50%);
+    }
 </style>
 ```
 
@@ -226,9 +226,9 @@ export default {
 
 ```ts
 import type {
-  SwipeProps,
-  SwipeInstance,
-  SwipeToOptions,
+    SwipeProps,
+    SwipeInstance,
+    SwipeToOptions,
 } from '@miracle-web/ui';
 ```
 

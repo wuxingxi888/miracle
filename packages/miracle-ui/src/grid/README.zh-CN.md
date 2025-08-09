@@ -25,10 +25,10 @@ app.use(GridItem);
 
 ```html
 <mi-grid>
-  <mi-grid-item icon="photo-o" text="文字" />
-  <mi-grid-item icon="photo-o" text="文字" />
-  <mi-grid-item icon="photo-o" text="文字" />
-  <mi-grid-item icon="photo-o" text="文字" />
+    <mi-grid-item icon="photo-o" text="文字" />
+    <mi-grid-item icon="photo-o" text="文字" />
+    <mi-grid-item icon="photo-o" text="文字" />
+    <mi-grid-item icon="photo-o" text="文字" />
 </mi-grid>
 ```
 
@@ -38,7 +38,7 @@ app.use(GridItem);
 
 ```html
 <mi-grid :column-num="3">
-  <mi-grid-item v-for="value in 6" :key="value" icon="photo-o" text="文字" />
+    <mi-grid-item v-for="value in 6" :key="value" icon="photo-o" text="文字" />
 </mi-grid>
 ```
 
@@ -48,21 +48,21 @@ app.use(GridItem);
 
 ```html
 <mi-grid :border="false" :column-num="3">
-  <mi-grid-item>
-    <mi-image
-      src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg"
-    />
-  </mi-grid-item>
-  <mi-grid-item>
-    <mi-image
-      src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg"
-    />
-  </mi-grid-item>
-  <mi-grid-item>
-    <mi-image
-      src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg"
-    />
-  </mi-grid-item>
+    <mi-grid-item>
+        <mi-image
+            src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg"
+        />
+    </mi-grid-item>
+    <mi-grid-item>
+        <mi-image
+            src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg"
+        />
+    </mi-grid-item>
+    <mi-grid-item>
+        <mi-image
+            src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg"
+        />
+    </mi-grid-item>
 </mi-grid>
 ```
 
@@ -72,7 +72,7 @@ app.use(GridItem);
 
 ```html
 <mi-grid square>
-  <mi-grid-item v-for="value in 8" :key="value" icon="photo-o" text="文字" />
+    <mi-grid-item v-for="value in 8" :key="value" icon="photo-o" text="文字" />
 </mi-grid>
 ```
 
@@ -82,7 +82,7 @@ app.use(GridItem);
 
 ```html
 <mi-grid :gutter="10">
-  <mi-grid-item v-for="value in 8" :key="value" icon="photo-o" text="文字" />
+    <mi-grid-item v-for="value in 8" :key="value" icon="photo-o" text="文字" />
 </mi-grid>
 ```
 
@@ -92,9 +92,9 @@ app.use(GridItem);
 
 ```html
 <mi-grid direction="horizontal" :column-num="3">
-  <mi-grid-item icon="photo-o" text="文字" />
-  <mi-grid-item icon="photo-o" text="文字" />
-  <mi-grid-item icon="photo-o" text="文字" />
+    <mi-grid-item icon="photo-o" text="文字" />
+    <mi-grid-item icon="photo-o" text="文字" />
+    <mi-grid-item icon="photo-o" text="文字" />
 </mi-grid>
 ```
 
@@ -104,8 +104,8 @@ app.use(GridItem);
 
 ```html
 <mi-grid clickable :column-num="2">
-  <mi-grid-item icon="home-o" text="路由跳转" to="/" />
-  <mi-grid-item icon="search" text="URL 跳转" url="https://github.com" />
+    <mi-grid-item icon="home-o" text="路由跳转" to="/" />
+    <mi-grid-item icon="search" text="URL 跳转" url="https://github.com" />
 </mi-grid>
 ```
 
@@ -115,8 +115,8 @@ app.use(GridItem);
 
 ```html
 <mi-grid :column-num="2">
-  <mi-grid-item icon="home-o" text="文字" dot />
-  <mi-grid-item icon="search" text="文字" badge="99+" />
+    <mi-grid-item icon="home-o" text="文字" dot />
+    <mi-grid-item icon="search" text="文字" badge="99+" />
 </mi-grid>
 ```
 

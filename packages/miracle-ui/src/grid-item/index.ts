@@ -8,7 +8,7 @@ export type { GridItemProps } from './GridItem';
 export type { GridItemThemeVars } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiGridItem: typeof GridItem;
-  }
+    export interface GlobalComponents {
+        MiGridItem: typeof GridItem;
+    }
 }

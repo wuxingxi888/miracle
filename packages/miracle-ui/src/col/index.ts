@@ -7,7 +7,7 @@ export { colProps } from './Col';
 export type { ColProps } from './Col';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiCol: typeof Col;
-  }
+    export interface GlobalComponents {
+        MiCol: typeof Col;
+    }
 }

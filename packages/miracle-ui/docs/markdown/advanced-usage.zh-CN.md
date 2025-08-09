@@ -55,9 +55,9 @@ app.use(miracle.Lazyload);
 import { Button } from '@miracle-web/ui';
 
 export default {
-  components: {
-    [Button.name]: Button,
-  },
+    components: {
+        [Button.name]: Button,
+    },
 };
 ```
 
@@ -85,9 +85,9 @@ export default {
 import { Button } from '@miracle-web/ui';
 
 export default {
-  render() {
-    return <Button />;
-  },
+    render() {
+        return <Button />;
+    },
 };
 ```
 
@@ -97,23 +97,23 @@ Miracle 提供了丰富的组件插槽，通过插槽可以对组件的某一部
 
 ```html
 <mi-checkbox v-model="checked">
-  <!-- 使用组件提供的 icon 插槽 -->
-  <!-- 将默认图标替换为个性化图片 -->
-  <template #icon="props">
-    <img :src="props.checked ? activeIcon : inactiveIcon" />
-  </template>
+    <!-- 使用组件提供的 icon 插槽 -->
+    <!-- 将默认图标替换为个性化图片 -->
+    <template #icon="props">
+        <img :src="props.checked ? activeIcon : inactiveIcon" />
+    </template>
 </mi-checkbox>
 ```
 
 ```js
 export default {
-  data() {
-    return {
-      checked: true,
-      activeIcon: 'https://xxx-active.png',
-      inactiveIcon: 'https://xxx-inactive.png',
-    };
-  },
+    data() {
+        return {
+            checked: true,
+            activeIcon: 'https://xxx-active.png',
+            inactiveIcon: 'https://xxx-inactive.png',
+        };
+    },
 };
 ```
 
@@ -123,20 +123,20 @@ Miracle 中的许多组件提供了实例方法，调用实例方法时，我们
 
 ```html
 <!-- 通过 ref 属性将组件绑定到 this.$refs.checkbox 上 -->
-<mi-checkbox v-model="checked" ref="checkbox"> 复选框 </mi-checkbox>
+<mi-checkbox v-model="checked" ref="checkbox">复选框</mi-checkbox>
 ```
 
 ```js
 export default {
-  data() {
-    return {
-      checked: false,
-    };
-  },
-  // 注意：组件挂载后才能访问到 ref 对象
-  mounted() {
-    this.$refs.checkbox.toggle();
-  },
+    data() {
+        return {
+            checked: false,
+        };
+    },
+    // 注意：组件挂载后才能访问到 ref 对象
+    mounted() {
+        this.$refs.checkbox.toggle();
+    },
 };
 ```
 
@@ -155,11 +155,11 @@ Miracle 默认使用 `px` 作为样式单位，如果需要使用 `viewport` 单
 ```js
 // postcss.config.js
 module.exports = {
-  plugins: {
-    'postcss-px-to-viewport': {
-      viewportWidth: 375,
+    plugins: {
+        'postcss-px-to-viewport': {
+            viewportWidth: 375,
+        },
     },
-  },
 };
 ```
 
@@ -169,8 +169,8 @@ module.exports = {
 
 如果需要使用 `rem` 单位进行适配，推荐使用以下两个工具：
 
-- [postcss-pxtorem](https://github.com/cuth/postcss-pxtorem) 是一款 PostCSS 插件，用于将 px 单位转化为 rem 单位
-- [lib-flexible](https://github.com/amfe/lib-flexible) 用于设置 rem 基准值
+-   [postcss-pxtorem](https://github.com/cuth/postcss-pxtorem) 是一款 PostCSS 插件，用于将 px 单位转化为 rem 单位
+-   [lib-flexible](https://github.com/amfe/lib-flexible) 用于设置 rem 基准值
 
 #### PostCSS 示例配置
 
@@ -179,12 +179,12 @@ module.exports = {
 ```js
 // postcss.config.js
 module.exports = {
-  plugins: {
-    'postcss-pxtorem': {
-      rootValue: 37.5,
-      propList: ['*'],
+    plugins: {
+        'postcss-pxtorem': {
+            rootValue: 37.5,
+            propList: ['*'],
+        },
     },
-  },
 };
 ```
 
@@ -197,15 +197,15 @@ module.exports = {
 ```js
 // postcss.config.js
 module.exports = {
-  plugins: {
-    // postcss-pxtorem 插件的版本需要 >= 5.0.0
-    'postcss-pxtorem': {
-      rootValue({ file }) {
-        return file.indexOf('Miracle') !== -1 ? 37.5 : 75;
-      },
-      propList: ['*'],
+    plugins: {
+        // postcss-pxtorem 插件的版本需要 >= 5.0.0
+        'postcss-pxtorem': {
+            rootValue({ file }) {
+                return file.indexOf('Miracle') !== -1 ? 37.5 : 75;
+            },
+            propList: ['*'],
+        },
     },
-  },
 };
 ```
 
@@ -232,8 +232,8 @@ iPhone X 等机型底部存在底部指示条，指示条的操作区域与页�
 ```html
 <!-- 在 head 标签中添加 meta 标签，并设置 viewport-fit=cover 值 -->
 <meta
-  name="viewport"
-  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover"
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover"
 />
 
 <!-- 开启顶部安全区适配 -->

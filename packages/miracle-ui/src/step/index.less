@@ -1,148 +1,148 @@
 :root,
 :host {
-  --mi-step-text-color: var(--mi-text-color-2);
-  --mi-step-active-color: var(--mi-primary-color);
-  --mi-step-process-text-color: var(--mi-text-color);
-  --mi-step-font-size: var(--mi-font-size-md);
-  --mi-step-line-color: var(--mi-border-color);
-  --mi-step-finish-line-color: var(--mi-primary-color);
-  --mi-step-finish-text-color: var(--mi-text-color);
-  --mi-step-icon-size: 12px;
-  --mi-step-circle-size: 5px;
-  --mi-step-circle-color: var(--mi-gray-6);
-  --mi-step-horizontal-title-font-size: var(--mi-font-size-sm);
+    --mi-step-text-color: var(--mi-text-color-2);
+    --mi-step-active-color: var(--mi-primary-color);
+    --mi-step-process-text-color: var(--mi-text-color);
+    --mi-step-font-size: var(--mi-font-size-md);
+    --mi-step-line-color: var(--mi-border-color);
+    --mi-step-finish-line-color: var(--mi-primary-color);
+    --mi-step-finish-text-color: var(--mi-text-color);
+    --mi-step-icon-size: 12px;
+    --mi-step-circle-size: 5px;
+    --mi-step-circle-color: var(--mi-gray-6);
+    --mi-step-horizontal-title-font-size: var(--mi-font-size-sm);
 }
 
 .mi-step {
-  position: relative;
-  flex: 1;
-  color: var(--mi-step-text-color);
-  font-size: var(--mi-step-font-size);
+    position: relative;
+    flex: 1;
+    color: var(--mi-step-text-color);
+    font-size: var(--mi-step-font-size);
 
-  &__circle {
-    display: block;
-    width: var(--mi-step-circle-size);
-    height: var(--mi-step-circle-size);
-    background-color: var(--mi-step-circle-color);
-    border-radius: 50%;
-  }
-
-  &__line {
-    position: absolute;
-    background-color: var(--mi-step-line-color);
-    transition: background-color var(--mi-duration-base);
-  }
-
-  &--horizontal {
-    float: left;
-
-    &:first-child {
-      .mi-step__title {
-        margin-left: 0;
-        transform: none;
-      }
+    &__circle {
+        display: block;
+        width: var(--mi-step-circle-size);
+        height: var(--mi-step-circle-size);
+        background-color: var(--mi-step-circle-color);
+        border-radius: 50%;
     }
 
-    &:last-child:not(:first-child) {
-      position: absolute;
-      right: 1px;
-      width: auto;
-
-      .mi-step__title {
-        margin-left: 0;
-        transform: none;
-      }
-
-      .mi-step__circle-container {
-        right: -9px;
-        left: auto;
-      }
+    &__line {
+        position: absolute;
+        background-color: var(--mi-step-line-color);
+        transition: background-color var(--mi-duration-base);
     }
 
-    .mi-step__circle-container {
-      position: absolute;
-      top: 30px;
-      left: calc(var(--mi-padding-xs) * -1);
-      z-index: 1;
-      padding: 0 var(--mi-padding-xs);
-      background-color: var(--mi-background-2);
-      transform: translateY(-50%);
+    &--horizontal {
+        float: left;
+
+        &:first-child {
+            .mi-step__title {
+                margin-left: 0;
+                transform: none;
+            }
+        }
+
+        &:last-child:not(:first-child) {
+            position: absolute;
+            right: 1px;
+            width: auto;
+
+            .mi-step__title {
+                margin-left: 0;
+                transform: none;
+            }
+
+            .mi-step__circle-container {
+                right: -9px;
+                left: auto;
+            }
+        }
+
+        .mi-step__circle-container {
+            position: absolute;
+            top: 30px;
+            left: calc(var(--mi-padding-xs) * -1);
+            z-index: 1;
+            padding: 0 var(--mi-padding-xs);
+            background-color: var(--mi-background-2);
+            transform: translateY(-50%);
+        }
+
+        .mi-step__title {
+            display: inline-block;
+            margin-left: 3px;
+            font-size: var(--mi-step-horizontal-title-font-size);
+            transform: translateX(-50%);
+        }
+
+        .mi-step__line {
+            top: 30px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+        }
+
+        .mi-step__icon {
+            display: block;
+            font-size: var(--mi-step-icon-size);
+        }
+
+        .mi-step--process {
+            color: var(--mi-step-process-text-color);
+        }
     }
 
-    .mi-step__title {
-      display: inline-block;
-      margin-left: 3px;
-      font-size: var(--mi-step-horizontal-title-font-size);
-      transform: translateX(-50%);
+    &--vertical {
+        display: block;
+        float: none;
+        padding: 10px 10px 10px 0;
+        line-height: var(--mi-line-height-sm);
+
+        &:not(:last-child)::after {
+            border-bottom-width: 1px;
+        }
+
+        .mi-step__circle-container {
+            position: absolute;
+            top: 19px;
+            left: -15px;
+            z-index: 1;
+            font-size: var(--mi-step-icon-size);
+            line-height: 1;
+            transform: translate(-50%, -50%);
+        }
+
+        .mi-step__line {
+            top: 16px;
+            left: -15px;
+            width: 1px;
+            height: 100%;
+        }
     }
 
-    .mi-step__line {
-      top: 30px;
-      left: 0;
-      width: 100%;
-      height: 1px;
+    &:last-child {
+        .mi-step__line {
+            width: 0;
+        }
     }
 
-    .mi-step__icon {
-      display: block;
-      font-size: var(--mi-step-icon-size);
-    }
-
-    .mi-step--process {
-      color: var(--mi-step-process-text-color);
-    }
-  }
-
-  &--vertical {
-    display: block;
-    float: none;
-    padding: 10px 10px 10px 0;
-    line-height: var(--mi-line-height-sm);
-
-    &:not(:last-child)::after {
-      border-bottom-width: 1px;
-    }
-
-    .mi-step__circle-container {
-      position: absolute;
-      top: 19px;
-      left: -15px;
-      z-index: 1;
-      font-size: var(--mi-step-icon-size);
-      line-height: 1;
-      transform: translate(-50%, -50%);
-    }
-
-    .mi-step__line {
-      top: 16px;
-      left: -15px;
-      width: 1px;
-      height: 100%;
-    }
-  }
-
-  &:last-child {
-    .mi-step__line {
-      width: 0;
-    }
-  }
-
-  &--finish {
-    color: var(--mi-step-finish-text-color);
-
-    .mi-step__circle,
-    .mi-step__line {
-      background-color: var(--mi-step-finish-line-color);
-    }
-  }
-
-  &__icon,
-  &__title {
-    transition: color var(--mi-duration-base);
-
-    &--active,
     &--finish {
-      color: var(--mi-step-active-color);
+        color: var(--mi-step-finish-text-color);
+
+        .mi-step__circle,
+        .mi-step__line {
+            background-color: var(--mi-step-finish-line-color);
+        }
     }
-  }
+
+    &__icon,
+    &__title {
+        transition: color var(--mi-duration-base);
+
+        &--active,
+        &--finish {
+            color: var(--mi-step-active-color);
+        }
+    }
 }

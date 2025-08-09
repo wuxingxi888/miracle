@@ -82,10 +82,10 @@ app.use(Loading);
 
 ```html
 <mi-loading vertical>
-  <template #icon>
-    <mi-icon name="star-o" size="30" />
-  </template>
-  加载中...
+    <template #icon>
+        <mi-icon name="star-o" size="30" />
+    </template>
+    加载中...
 </mi-loading>
 ```
 

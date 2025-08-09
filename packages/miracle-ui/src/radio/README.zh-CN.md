@@ -25,8 +25,8 @@ app.use(RadioGroup);
 
 ```html
 <mi-radio-group v-model="checked">
-  <mi-radio name="1">单选框 1</mi-radio>
-  <mi-radio name="2">单选框 2</mi-radio>
+    <mi-radio name="1">单选框 1</mi-radio>
+    <mi-radio name="2">单选框 2</mi-radio>
 </mi-radio-group>
 ```
 
@@ -34,10 +34,10 @@ app.use(RadioGroup);
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const checked = ref('1');
-    return { checked };
-  },
+    setup() {
+        const checked = ref('1');
+        return { checked };
+    },
 };
 ```
 
@@ -47,8 +47,8 @@ export default {
 
 ```html
 <mi-radio-group v-model="checked" direction="horizontal">
-  <mi-radio name="1">单选框 1</mi-radio>
-  <mi-radio name="2">单选框 2</mi-radio>
+    <mi-radio name="1">单选框 1</mi-radio>
+    <mi-radio name="2">单选框 2</mi-radio>
 </mi-radio-group>
 ```
 
@@ -58,8 +58,8 @@ export default {
 
 ```html
 <mi-radio-group v-model="checked" disabled>
-  <mi-radio name="1">单选框 1</mi-radio>
-  <mi-radio name="2">单选框 2</mi-radio>
+    <mi-radio name="1">单选框 1</mi-radio>
+    <mi-radio name="2">单选框 2</mi-radio>
 </mi-radio-group>
 ```
 
@@ -69,13 +69,13 @@ export default {
 
 ```html
 <mi-radio-group v-model="checked" shape="square">
-  <mi-radio name="1">单选框 1</mi-radio>
-  <mi-radio name="2">单选框 2</mi-radio>
+    <mi-radio name="1">单选框 1</mi-radio>
+    <mi-radio name="2">单选框 2</mi-radio>
 </mi-radio-group>
 
 <mi-radio-group v-model="checked" shape="dot">
-  <mi-radio name="1">Radio 1</mi-radio>
-  <mi-radio name="2">Radio 2</mi-radio>
+    <mi-radio name="1">Radio 1</mi-radio>
+    <mi-radio name="2">Radio 2</mi-radio>
 </mi-radio-group>
 ```
 
@@ -85,8 +85,8 @@ export default {
 
 ```html
 <mi-radio-group v-model="checked">
-  <mi-radio name="1" checked-color="#ee0a24">单选框 1</mi-radio>
-  <mi-radio name="2" checked-color="#ee0a24">单选框 2</mi-radio>
+    <mi-radio name="1" checked-color="#ee0a24">单选框 1</mi-radio>
+    <mi-radio name="2" checked-color="#ee0a24">单选框 2</mi-radio>
 </mi-radio-group>
 ```
 
@@ -96,8 +96,8 @@ export default {
 
 ```html
 <mi-radio-group v-model="checked">
-  <mi-radio name="1" icon-size="24px">单选框 1</mi-radio>
-  <mi-radio name="2" icon-size="24px">单选框 2</mi-radio>
+    <mi-radio name="1" icon-size="24px">单选框 1</mi-radio>
+    <mi-radio name="2" icon-size="24px">单选框 2</mi-radio>
 </mi-radio-group>
 ```
 
@@ -107,24 +107,30 @@ export default {
 
 ```html
 <mi-radio-group v-model="checked">
-  <mi-radio name="1">
-    单选框 1
-    <template #icon="props">
-      <img class="img-icon" :src="props.checked ? activeIcon : inactiveIcon" />
-    </template>
-  </mi-radio>
-  <mi-radio name="2">
-    单选框 2
-    <template #icon="props">
-      <img class="img-icon" :src="props.checked ? activeIcon : inactiveIcon" />
-    </template>
-  </mi-radio>
+    <mi-radio name="1">
+        单选框 1
+        <template #icon="props">
+            <img
+                class="img-icon"
+                :src="props.checked ? activeIcon : inactiveIcon"
+            />
+        </template>
+    </mi-radio>
+    <mi-radio name="2">
+        单选框 2
+        <template #icon="props">
+            <img
+                class="img-icon"
+                :src="props.checked ? activeIcon : inactiveIcon"
+            />
+        </template>
+    </mi-radio>
 </mi-radio-group>
 
 <style>
-  .img-icon {
-    height: 20px;
-  }
+    .img-icon {
+        height: 20px;
+    }
 </style>
 ```
 
@@ -132,16 +138,16 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const checked = ref('1');
-    return {
-      checked,
-      activeIcon:
-        'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/check_active.png',
-      inactiveIcon:
-        'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/check_inactive.png',
-    };
-  },
+    setup() {
+        const checked = ref('1');
+        return {
+            checked,
+            activeIcon:
+                'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/check_active.png',
+            inactiveIcon:
+                'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/check_inactive.png',
+        };
+    },
 };
 ```
 
@@ -151,8 +157,8 @@ export default {
 
 ```html
 <mi-radio-group v-model="checked">
-  <mi-radio name="1" label-position="left">单选框 1</mi-radio>
-  <mi-radio name="2" label-position="left">单选框 2</mi-radio>
+    <mi-radio name="1" label-position="left">单选框 1</mi-radio>
+    <mi-radio name="2" label-position="left">单选框 2</mi-radio>
 </mi-radio-group>
 ```
 
@@ -162,8 +168,8 @@ export default {
 
 ```html
 <mi-radio-group v-model="checked">
-  <mi-radio name="1" label-disabled>单选框 1</mi-radio>
-  <mi-radio name="2" label-disabled>单选框 2</mi-radio>
+    <mi-radio name="1" label-disabled>单选框 1</mi-radio>
+    <mi-radio name="2" label-disabled>单选框 2</mi-radio>
 </mi-radio-group>
 ```
 
@@ -173,18 +179,18 @@ export default {
 
 ```html
 <mi-radio-group v-model="checked">
-  <mi-cell-group inset>
-    <mi-cell title="单选框 1" clickable @click="checked = '1'">
-      <template #right-icon>
-        <mi-radio name="1" />
-      </template>
-    </mi-cell>
-    <mi-cell title="单选框 2" clickable @click="checked = '2'">
-      <template #right-icon>
-        <mi-radio name="2" />
-      </template>
-    </mi-cell>
-  </mi-cell-group>
+    <mi-cell-group inset>
+        <mi-cell title="单选框 1" clickable @click="checked = '1'">
+            <template #right-icon>
+                <mi-radio name="1" />
+            </template>
+        </mi-cell>
+        <mi-cell title="单选框 2" clickable @click="checked = '2'">
+            <template #right-icon>
+                <mi-radio name="2" />
+            </template>
+        </mi-cell>
+    </mi-cell-group>
 </mi-radio-group>
 ```
 
@@ -238,11 +244,11 @@ export default {
 
 ```ts
 import type {
-  RadioProps,
-  RadioShape,
-  RadioGroupProps,
-  RadioLabelPosition,
-  RadioGroupDirection,
+    RadioProps,
+    RadioShape,
+    RadioGroupProps,
+    RadioLabelPosition,
+    RadioGroupDirection,
 } from '@miracle-web/ui';
 ```
 

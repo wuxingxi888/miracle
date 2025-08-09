@@ -1,41 +1,41 @@
 :root,
 :host {
-  --mi-floating-bubble-size: 48px;
-  --mi-floating-bubble-initial-gap: 24px;
-  --mi-floating-bubble-icon-size: 28px;
-  --mi-floating-bubble-background: var(--mi-primary-color);
-  --mi-floating-bubble-color: var(--mi-background-2);
-  --mi-floating-bubble-z-index: 999;
-  --mi-floating-bubble-border-radius: var(--mi-radius-max);
+    --mi-floating-bubble-size: 48px;
+    --mi-floating-bubble-initial-gap: 24px;
+    --mi-floating-bubble-icon-size: 28px;
+    --mi-floating-bubble-background: var(--mi-primary-color);
+    --mi-floating-bubble-color: var(--mi-background-2);
+    --mi-floating-bubble-z-index: 999;
+    --mi-floating-bubble-border-radius: var(--mi-radius-max);
 }
 
 .mi-floating-bubble {
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: var(--mi-floating-bubble-initial-gap);
-  bottom: var(--mi-floating-bubble-initial-gap);
-  width: var(--mi-floating-bubble-size);
-  height: var(--mi-floating-bubble-size);
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  cursor: pointer;
-  user-select: none;
-  touch-action: none;
-  background: var(--mi-floating-bubble-background);
-  color: var(--mi-floating-bubble-color);
-  border-radius: var(--mi-floating-bubble-border-radius);
-  z-index: var(--mi-floating-bubble-z-index);
-  transition: transform var(--mi-duration-base);
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: var(--mi-floating-bubble-initial-gap);
+    bottom: var(--mi-floating-bubble-initial-gap);
+    width: var(--mi-floating-bubble-size);
+    height: var(--mi-floating-bubble-size);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    user-select: none;
+    touch-action: none;
+    background: var(--mi-floating-bubble-background);
+    color: var(--mi-floating-bubble-color);
+    border-radius: var(--mi-floating-bubble-border-radius);
+    z-index: var(--mi-floating-bubble-z-index);
+    transition: transform var(--mi-duration-base);
 
-  &:active {
-    opacity: 0.8;
-  }
+    &:active {
+        opacity: 0.8;
+    }
 
-  &__icon {
-    font-size: var(--mi-floating-bubble-icon-size);
-  }
+    &__icon {
+        font-size: var(--mi-floating-bubble-icon-size);
+    }
 }

@@ -20,5 +20,5 @@ export const useGlobalZIndex = () => ++globalZIndex;
 
 /** reset the global z-index */
 export const setGlobalZIndex = (val: number) => {
-  globalZIndex = val;
+    globalZIndex = val;
 };

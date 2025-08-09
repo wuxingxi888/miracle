@@ -6,13 +6,13 @@ export default Cascader;
 export { cascaderProps } from './Cascader';
 export type { CascaderProps } from './Cascader';
 export type {
-  CascaderOption,
-  CascaderThemeVars,
-  CascaderFieldNames,
+    CascaderOption,
+    CascaderThemeVars,
+    CascaderFieldNames,
 } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiCascader: typeof Cascader;
-  }
+    export interface GlobalComponents {
+        MiCascader: typeof Cascader;
+    }
 }

@@ -8,7 +8,7 @@ export type { CellGroupProps } from './CellGroup';
 export type { CellGroupThemeVars } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiCellGroup: typeof CellGroup;
-  }
+    export interface GlobalComponents {
+        MiCellGroup: typeof CellGroup;
+    }
 }

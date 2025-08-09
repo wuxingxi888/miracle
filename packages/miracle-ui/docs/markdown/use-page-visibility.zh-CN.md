@@ -13,13 +13,13 @@ import { watch } from 'vue';
 import { usePageVisibility } from '@miracle-web/use';
 
 export default {
-  setup() {
-    const pageVisibility = usePageVisibility();
+    setup() {
+        const pageVisibility = usePageVisibility();
 
-    watch(pageVisibility, (value) => {
-      console.log('visibility: ', value);
-    });
-  },
+        watch(pageVisibility, (value) => {
+            console.log('visibility: ', value);
+        });
+    },
 };
 ```
 

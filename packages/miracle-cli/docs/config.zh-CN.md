@@ -1,28 +1,28 @@
 # 配置指南
 
-- [配置指南](#----)
-  - [miracle.config.mjs](#miracleconfigmjs)
-    - [name](#name)
-    - [build.css.base](#buildcssbase)
-    - [build.css.preprocessor](#buildcsspreprocessor)
-    - [build.site.publicPath](#buildsitepublicpath)
-    - [build.srcDir](#buildsrcdir)
-    - [build.namedExport](#buildnamedexport)
-    - [build.configureVite](#buildconfigurevite)
-    - [build.packageManager](#buildpackagemanager)
-    - [site.title](#sitetitle)
-    - [site.logo](#sitelogo)
-    - [site.description](#sitedescription)
-    - [site.nav](#sitenav)
-    - [site.versions](#siteversions)
-    - [site.baiduAnalytics](#sitebaiduanalytics)
-    - [site.hideSimulator](#sitehidesimulator)
-    - [site.simulator.url](#sitesimulatorurl)
-    - [site.htmlMeta](#sitehtmlmeta)
-    - [site.enableVConsole](#siteenablevconsole)
-  - [PostCSS](#postcss)
-    - [默认配置](#-----1)
-  - [browserslist](#browserslist)
+-   [配置指南](#----)
+    -   [miracle.config.mjs](#miracleconfigmjs)
+        -   [name](#name)
+        -   [build.css.base](#buildcssbase)
+        -   [build.css.preprocessor](#buildcsspreprocessor)
+        -   [build.site.publicPath](#buildsitepublicpath)
+        -   [build.srcDir](#buildsrcdir)
+        -   [build.namedExport](#buildnamedexport)
+        -   [build.configureVite](#buildconfigurevite)
+        -   [build.packageManager](#buildpackagemanager)
+        -   [site.title](#sitetitle)
+        -   [site.logo](#sitelogo)
+        -   [site.description](#sitedescription)
+        -   [site.nav](#sitenav)
+        -   [site.versions](#siteversions)
+        -   [site.baiduAnalytics](#sitebaiduanalytics)
+        -   [site.hideSimulator](#sitehidesimulator)
+        -   [site.simulator.url](#sitesimulatorurl)
+        -   [site.htmlMeta](#sitehtmlmeta)
+        -   [site.enableVConsole](#siteenablevconsole)
+    -   [PostCSS](#postcss)
+        -   [默认配置](#-----1)
+    -   [browserslist](#browserslist)
 
 ## miracle.config.mjs
 
@@ -30,58 +30,58 @@
 
 ```js
 export default {
-  // 组件库名称
-  name: 'demo-ui',
-  // 构建配置
-  build: {
-    site: {
-      publicPath: '/demo-ui/',
+    // 组件库名称
+    name: 'demo-ui',
+    // 构建配置
+    build: {
+        site: {
+            publicPath: '/demo-ui/',
+        },
     },
-  },
-  // 文档站点配置
-  site: {
-    // 标题
-    title: 'Demo UI',
-    // 图标
-    logo: 'https://fastly.jsdelivr.net/npm/@miracle/assets/logo.png',
-    // 描述
-    description: '示例组件库',
-    // 左侧导航
-    nav: [
-      {
-        title: '开发指南',
-        items: [
-          {
-            path: 'home',
-            title: '介绍',
-          },
+    // 文档站点配置
+    site: {
+        // 标题
+        title: 'Demo UI',
+        // 图标
+        logo: 'https://fastly.jsdelivr.net/npm/@miracle/assets/logo.png',
+        // 描述
+        description: '示例组件库',
+        // 左侧导航
+        nav: [
+            {
+                title: '开发指南',
+                items: [
+                    {
+                        path: 'home',
+                        title: '介绍',
+                    },
+                ],
+            },
+            {
+                title: '基础组件',
+                items: [
+                    {
+                        path: 'my-button',
+                        title: 'MyButton 按钮',
+                    },
+                ],
+            },
         ],
-      },
-      {
-        title: '基础组件',
-        items: [
-          {
-            path: 'my-button',
-            title: 'MyButton 按钮',
-          },
-        ],
-      },
-    ],
-  },
+    },
 };
 ```
 
 ### name
 
-- Type: `string`
-- Default: `''`
+-   Type: `string`
+-   Default: `''`
 
 组件库名称，建议使用中划线分割，如 `demo-ui`。
 
 ### build.css.base
 
-- Type: `string`
-- Default: `'style/base.less'`
+-   Type: `string`
+-   Default: `'style/base.less'`
 
 全局样式文件的路径，可以为相对路径或绝对路径。
 
@@ -89,52 +89,52 @@ export default {
 
 ```js
 module.exports = {
-  build: {
-    css: {
-      base: 'style/global.scss',
+    build: {
+        css: {
+            base: 'style/global.scss',
+        },
     },
-  },
 };
 ```
 
 ### build.css.preprocessor
 
-- Type: `string`
-- Default: `'less'`
+-   Type: `string`
+-   Default: `'less'`
 
 CSS 预处理器配置，目前支持 `less` 和 `sass` 两种预处理器，默认使用 `less`。
 
 ```js
 module.exports = {
-  build: {
-    css: {
-      preprocessor: 'sass',
+    build: {
+        css: {
+            preprocessor: 'sass',
+        },
     },
-  },
 };
 ```
 
 ### build.css.removeSourceFile
 
-- Type: `boolean`
-- Default: `'false'`
+-   Type: `boolean`
+-   Default: `'false'`
 
 是否在构建后移除样式文件的源代码。
 
 ```js
 module.exports = {
-  build: {
-    css: {
-      removeSourceFile: true,
+    build: {
+        css: {
+            removeSourceFile: true,
+        },
     },
-  },
 };
 ```
 
 ### build.site.publicPath
 
-- Type: `string`
-- Default: `/`
+-   Type: `string`
+-   Default: `/`
 
 等价于 vite 的 `build.outDir` 配置。
 
@@ -142,31 +142,31 @@ module.exports = {
 
 ```js
 module.exports = {
-  build: {
-    site: {
-      publicPath: '/demo-ui/',
+    build: {
+        site: {
+            publicPath: '/demo-ui/',
+        },
     },
-  },
 };
 ```
 
 ### build.srcDir
 
-- Type: `string`
-- Default: `src`
+-   Type: `string`
+-   Default: `src`
 
 ```js
 module.exports = {
-  build: {
-    srcDir: 'myDir',
-  },
+    build: {
+        srcDir: 'myDir',
+    },
 };
 ```
 
 ### build.namedExport
 
-- Type: `boolean`
-- Default: `false`
+-   Type: `boolean`
+-   Default: `false`
 
 是否通过 Named Export 对组件进行导出。
 
@@ -176,19 +176,19 @@ module.exports = {
 
 ### build.configureVite
 
-- Type: `(config: InlineConfig): InlineConfig | undefined`
-- Default: `undefined`
+-   Type: `(config: InlineConfig): InlineConfig | undefined`
+-   Default: `undefined`
 
 miracle-cli 使用 vite 来构建组件库和文档站点，通过 `configureVite` 选项可以自定义 [vite 配置](https://vitejs.dev/config/)（从 4.0.0 版本开始支持）。
 
 ```js
 module.exports = {
-  build: {
-    configureVite(config) {
-      config.server.port = 3000;
-      return config;
+    build: {
+        configureVite(config) {
+            config.server.port = 3000;
+            return config;
+        },
     },
-  },
 };
 ```
 
@@ -196,21 +196,21 @@ module.exports = {
 
 ```js
 module.exports = {
-  build: {
-    configureVite(config) {
-      const { BUILD_TARGET } = process.env;
+    build: {
+        configureVite(config) {
+            const { BUILD_TARGET } = process.env;
 
-      if (BUILD_TARGET === 'package') {
-        // 修改组件库构建配置
-      }
+            if (BUILD_TARGET === 'package') {
+                // 修改组件库构建配置
+            }
 
-      if (BUILD_TARGET === 'site') {
-        // 修改文档站点构建配置
-      }
+            if (BUILD_TARGET === 'site') {
+                // 修改文档站点构建配置
+            }
 
-      return config;
+            return config;
+        },
     },
-  },
 };
 ```
 
@@ -220,14 +220,14 @@ module.exports = {
 
 ### build.packageManager
 
-- Type: `'npm' | 'yarn' | 'pnpm' | 'bun'`
-- Default: `yarn`
+-   Type: `'npm' | 'yarn' | 'pnpm' | 'bun'`
+-   Default: `yarn`
 
 指定使用的包管理器。
 
 ### build.bundleOptions
 
-- Type: `BundleOptions[]`
+-   Type: `BundleOptions[]`
 
 指定打包后产物的格式。
 
@@ -235,12 +235,12 @@ module.exports = {
 
 ```ts
 type BundleOption = {
-  // 是否压缩代码（注意 es 产物无法被 vite 压缩）
-  minify?: boolean;
-  // 产物类型，可选值为 'es' | 'cjs' | 'umd' | 'iife'
-  formats: LibraryFormats[];
-  // 需要 external 的依赖（Vue 默认会被 external）
-  external?: string[];
+    // 是否压缩代码（注意 es 产物无法被 vite 压缩）
+    minify?: boolean;
+    // 产物类型，可选值为 'es' | 'cjs' | 'umd' | 'iife'
+    formats: LibraryFormats[];
+    // 需要 external 的依赖（Vue 默认会被 external）
+    external?: string[];
 };
 ```
 
@@ -248,146 +248,146 @@ type BundleOption = {
 
 ```ts
 const DEFAULT_OPTIONS: BundleOption[] = [
-  {
-    minify: false,
-    formats: ['umd'],
-  },
-  {
-    minify: true,
-    formats: ['umd'],
-  },
-  {
-    minify: false,
-    formats: ['es', 'cjs'],
-    external: allDependencies,
-  },
+    {
+        minify: false,
+        formats: ['umd'],
+    },
+    {
+        minify: true,
+        formats: ['umd'],
+    },
+    {
+        minify: false,
+        formats: ['es', 'cjs'],
+        external: allDependencies,
+    },
 ];
 ```
 
 ### site.title
 
-- Type: `string`
-- Default: `''`
+-   Type: `string`
+-   Default: `''`
 
 文档站点的标题。
 
 ### site.logo
 
-- Type: `string`
-- Default: `''`
+-   Type: `string`
+-   Default: `''`
 
 文档站点的 Logo。
 
 ### site.description
 
-- Type: `string`
-- Default: `''`
+-   Type: `string`
+-   Default: `''`
 
 标题下方的描述文案。
 
 ### site.nav
 
-- Type: `object[]`
-- Default: `undefined`
+-   Type: `object[]`
+-   Default: `undefined`
 
 文档站点的左侧导航，数组中的每个对象表示一个导航分组。
 
 ```js
 module.exports = {
-  site: {
-    nav: [
-      {
-        // 分组标题
-        title: '开发指南',
-        // 导航项
-        items: [
-          {
-            // 导航项路由
-            path: 'home',
-            // 导航项文案
-            title: '介绍',
-            // 是否隐藏当前页右侧的手机模拟器（默认不隐藏）
-            hideSimulator: true,
-          },
+    site: {
+        nav: [
+            {
+                // 分组标题
+                title: '开发指南',
+                // 导航项
+                items: [
+                    {
+                        // 导航项路由
+                        path: 'home',
+                        // 导航项文案
+                        title: '介绍',
+                        // 是否隐藏当前页右侧的手机模拟器（默认不隐藏）
+                        hideSimulator: true,
+                    },
+                ],
+            },
         ],
-      },
-    ],
-  },
+    },
 };
 ```
 
 ### site.versions
 
-- Type: `object[]`
-- Default: `undefined`
+-   Type: `object[]`
+-   Default: `undefined`
 
 文档站点多版本配置，当组件库存在多个版本的文档时，可以通过`site.versions`在顶部导航配置一个版本切换按钮。
 
 ```js
 module.exports = {
-  site: {
-    versions: [
-      {
-        label: 'miracle-cli',
-        link: 'https://github.com/wuxingxi888/miracle/tree/main/packages/miracle-cli',
-      },
-    ],
-  },
+    site: {
+        versions: [
+            {
+                label: 'miracle-cli',
+                link: 'https://github.com/wuxingxi888/miracle/tree/main/packages/miracle-cli',
+            },
+        ],
+    },
 };
 ```
 
 ### site.baiduAnalytics
 
-- Type: `object`
-- Default: `undefined`
+-   Type: `object`
+-   Default: `undefined`
 
 文档网站的百度统计配置，添加这项配置后，会自动在构建文档网站时加载百度统计的脚本。
 
 ```js
 module.exports = {
-  site: {
-    baiduAnalytics: {
-      // 打开百度统计 ->『管理』->『代码获取』
-      // 找到下面这串 URL: "https://hm.baidu.com/hm.js?xxxxx"
-      // 将 `xxxxx` 填写在 seed 中即可
-      seed: 'xxxxx',
+    site: {
+        baiduAnalytics: {
+            // 打开百度统计 ->『管理』->『代码获取』
+            // 找到下面这串 URL: "https://hm.baidu.com/hm.js?xxxxx"
+            // 将 `xxxxx` 填写在 seed 中即可
+            seed: 'xxxxx',
+        },
     },
-  },
 };
 ```
 
 ### site.hideSimulator
 
-- Type: `boolean`
-- Default: `false`
+-   Type: `boolean`
+-   Default: `false`
 
 是否隐藏所有页面右侧的手机模拟器，默认不隐藏
 
 ### site.simulator.url
 
-- Type: `string`
-- Default: -
+-   Type: `string`
+-   Default: -
 
 自定义手机模拟器的 iframe URL 地址。
 
 ### site.htmlMeta
 
-- Type: `Record<string, string>`
-- Default: `undefined`
+-   Type: `Record<string, string>`
+-   Default: `undefined`
 
 配置 HTML 中的 meta 标签，对象的 key 为 name，value 为 content。
 
 ### site.headHtml
 
-- Type: `string`
-- Default: `undefined`
+-   Type: `string`
+-   Default: `undefined`
 
 在 `<head>` 标签中插入一段自定义的 HTML 内容。
 
 ### site.enableVConsole
 
-- Type: `boolean`
-- Default: `false`
+-   Type: `boolean`
+-   Default: `false`
 
 是否在 dev 时开启 [vConsole](https://github.com/Tencent/vConsole) 调试，用于移动端 debug。
 
@@ -401,9 +401,9 @@ module.exports = {
 
 ```js
 module.exports = {
-  plugins: {
-    autoprefixer: {},
-  },
+    plugins: {
+        autoprefixer: {},
+    },
 };
 ```
 
@@ -415,6 +415,6 @@ module.exports = {
 
 ```json
 {
-  "browserslist": ["Chrome >= 51", "iOS >= 10"]
+    "browserslist": ["Chrome >= 51", "iOS >= 10"]
 }
 ```

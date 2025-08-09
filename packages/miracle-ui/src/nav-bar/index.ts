@@ -8,7 +8,7 @@ export type { NavBarProps } from './NavBar';
 export type { NavBarThemeVars } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiNavBar: typeof NavBar;
-  }
+    export interface GlobalComponents {
+        MiNavBar: typeof NavBar;
+    }
 }

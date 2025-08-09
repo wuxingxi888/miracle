@@ -1,76 +1,76 @@
 :root,
 :host {
-  --mi-switch-size: 26px;
-  --mi-switch-width: calc(1.8em + 4px);
-  --mi-switch-height: calc(1em + 4px);
-  --mi-switch-node-size: 1em;
-  --mi-switch-node-background: var(--mi-white);
-  --mi-switch-node-shadow: 0 3px 1px 0 rgba(0, 0, 0, 0.05);
-  --mi-switch-background: rgba(120, 120, 128, 0.16);
-  --mi-switch-on-background: var(--mi-primary-color);
-  --mi-switch-duration: var(--mi-duration-base);
-  --mi-switch-disabled-opacity: var(--mi-disabled-opacity);
+    --mi-switch-size: 26px;
+    --mi-switch-width: calc(1.8em + 4px);
+    --mi-switch-height: calc(1em + 4px);
+    --mi-switch-node-size: 1em;
+    --mi-switch-node-background: var(--mi-white);
+    --mi-switch-node-shadow: 0 3px 1px 0 rgba(0, 0, 0, 0.05);
+    --mi-switch-background: rgba(120, 120, 128, 0.16);
+    --mi-switch-on-background: var(--mi-primary-color);
+    --mi-switch-duration: var(--mi-duration-base);
+    --mi-switch-disabled-opacity: var(--mi-disabled-opacity);
 }
 
 .mi-theme-dark {
-  --mi-switch-background: rgba(120, 120, 128, 0.32);
+    --mi-switch-background: rgba(120, 120, 128, 0.32);
 }
 
 .mi-switch {
-  position: relative;
-  display: inline-block;
-  box-sizing: content-box;
-  width: var(--mi-switch-width);
-  height: var(--mi-switch-height);
-  font-size: var(--mi-switch-size);
-  background: var(--mi-switch-background);
-  border-radius: var(--mi-switch-node-size);
-  cursor: pointer;
-  transition: background-color var(--mi-switch-duration);
+    position: relative;
+    display: inline-block;
+    box-sizing: content-box;
+    width: var(--mi-switch-width);
+    height: var(--mi-switch-height);
+    font-size: var(--mi-switch-size);
+    background: var(--mi-switch-background);
+    border-radius: var(--mi-switch-node-size);
+    cursor: pointer;
+    transition: background-color var(--mi-switch-duration);
 
-  &__node {
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    width: var(--mi-switch-node-size);
-    height: var(--mi-switch-node-size);
-    // https://github.com/wuxingxi888/miracle/issues/9839
-    font-size: inherit;
-    background: var(--mi-switch-node-background);
-    border-radius: 100%;
-    box-shadow: var(--mi-switch-node-shadow);
-    transition: transform var(--mi-switch-duration)
-      cubic-bezier(0.3, 1.05, 0.4, 1.05);
-  }
-
-  &__loading {
-    top: 25%;
-    left: 25%;
-    width: 50%;
-    height: 50%;
-    line-height: 1;
-  }
-
-  &--on {
-    background: var(--mi-switch-on-background);
-
-    .mi-switch__node {
-      transform: translateX(
-        calc(var(--mi-switch-width) - var(--mi-switch-node-size) - 4px)
-      );
+    &__node {
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: var(--mi-switch-node-size);
+        height: var(--mi-switch-node-size);
+        // https://github.com/wuxingxi888/miracle/issues/9839
+        font-size: inherit;
+        background: var(--mi-switch-node-background);
+        border-radius: 100%;
+        box-shadow: var(--mi-switch-node-shadow);
+        transition: transform var(--mi-switch-duration)
+            cubic-bezier(0.3, 1.05, 0.4, 1.05);
     }
 
-    .mi-switch__loading {
-      color: var(--mi-switch-on-background);
+    &__loading {
+        top: 25%;
+        left: 25%;
+        width: 50%;
+        height: 50%;
+        line-height: 1;
     }
-  }
 
-  &--disabled {
-    cursor: not-allowed;
-    opacity: var(--mi-switch-disabled-opacity);
-  }
+    &--on {
+        background: var(--mi-switch-on-background);
 
-  &--loading {
-    cursor: default;
-  }
+        .mi-switch__node {
+            transform: translateX(
+                calc(var(--mi-switch-width) - var(--mi-switch-node-size) - 4px)
+            );
+        }
+
+        .mi-switch__loading {
+            color: var(--mi-switch-on-background);
+        }
+    }
+
+    &--disabled {
+        cursor: not-allowed;
+        opacity: var(--mi-switch-disabled-opacity);
+    }
+
+    &--loading {
+        cursor: default;
+    }
 }

@@ -25,15 +25,15 @@ app.use(CollapseItem);
 
 ```html
 <mi-collapse v-model="activeNames">
-  <mi-collapse-item title="标题1" name="1">
-    代码是写出来给人看的，附带能在机器上运行。
-  </mi-collapse-item>
-  <mi-collapse-item title="标题2" name="2">
-    技术无非就是那些开发它的人的共同灵魂。
-  </mi-collapse-item>
-  <mi-collapse-item title="标题3" name="3">
-    在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准。
-  </mi-collapse-item>
+    <mi-collapse-item title="标题1" name="1"
+        >代码是写出来给人看的，附带能在机器上运行。</mi-collapse-item
+    >
+    <mi-collapse-item title="标题2" name="2"
+        >技术无非就是那些开发它的人的共同灵魂。</mi-collapse-item
+    >
+    <mi-collapse-item title="标题3" name="3">
+        在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准。
+    </mi-collapse-item>
 </mi-collapse>
 ```
 
@@ -41,10 +41,10 @@ app.use(CollapseItem);
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const activeNames = ref(['1']);
-    return { activeNames };
-  },
+    setup() {
+        const activeNames = ref(['1']);
+        return { activeNames };
+    },
 };
 ```
 
@@ -54,15 +54,15 @@ export default {
 
 ```html
 <mi-collapse v-model="activeName" accordion>
-  <mi-collapse-item title="标题1" name="1">
-    代码是写出来给人看的，附带能在机器上运行。
-  </mi-collapse-item>
-  <mi-collapse-item title="标题2" name="2">
-    技术无非就是那些开发它的人的共同灵魂。
-  </mi-collapse-item>
-  <mi-collapse-item title="标题3" name="3">
-    在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准。
-  </mi-collapse-item>
+    <mi-collapse-item title="标题1" name="1"
+        >代码是写出来给人看的，附带能在机器上运行。</mi-collapse-item
+    >
+    <mi-collapse-item title="标题2" name="2"
+        >技术无非就是那些开发它的人的共同灵魂。</mi-collapse-item
+    >
+    <mi-collapse-item title="标题3" name="3">
+        在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准。
+    </mi-collapse-item>
 </mi-collapse>
 ```
 
@@ -70,10 +70,10 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const activeName = ref('1');
-    return { activeName };
-  },
+    setup() {
+        const activeName = ref('1');
+        return { activeName };
+    },
 };
 ```
 
@@ -83,15 +83,15 @@ export default {
 
 ```html
 <mi-collapse v-model="activeNames">
-  <mi-collapse-item title="标题1" name="1">
-    代码是写出来给人看的，附带能在机器上运行。
-  </mi-collapse-item>
-  <mi-collapse-item title="标题2" name="2" disabled>
-    技术无非就是那些开发它的人的共同灵魂。
-  </mi-collapse-item>
-  <mi-collapse-item title="标题3" name="3" disabled>
-    在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准。
-  </mi-collapse-item>
+    <mi-collapse-item title="标题1" name="1"
+        >代码是写出来给人看的，附带能在机器上运行。</mi-collapse-item
+    >
+    <mi-collapse-item title="标题2" name="2" disabled
+        >技术无非就是那些开发它的人的共同灵魂。</mi-collapse-item
+    >
+    <mi-collapse-item title="标题3" name="3" disabled>
+        在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准。
+    </mi-collapse-item>
 </mi-collapse>
 ```
 
@@ -101,15 +101,18 @@ export default {
 
 ```html
 <mi-collapse v-model="activeNames">
-  <mi-collapse-item name="1">
-    <template #title>
-      <div>标题1 <mi-icon name="question-o" /></div>
-    </template>
-    代码是写出来给人看的，附带能在机器上运行。
-  </mi-collapse-item>
-  <mi-collapse-item title="标题2" name="2" icon="shop-o">
-    技术无非就是那些开发它的人的共同灵魂。
-  </mi-collapse-item>
+    <mi-collapse-item name="1">
+        <template #title>
+            <div>
+                标题1
+                <mi-icon name="question-o" />
+            </div>
+        </template>
+        代码是写出来给人看的，附带能在机器上运行。
+    </mi-collapse-item>
+    <mi-collapse-item title="标题2" name="2" icon="shop-o"
+        >技术无非就是那些开发它的人的共同灵魂。</mi-collapse-item
+    >
 </mi-collapse>
 ```
 
@@ -117,10 +120,10 @@ export default {
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const activeNames = ref(['1']);
-    return { activeNames };
-  },
+    setup() {
+        const activeNames = ref(['1']);
+        return { activeNames };
+    },
 };
 ```
 
@@ -130,15 +133,15 @@ export default {
 
 ```html
 <mi-collapse v-model="activeNames" ref="collapse">
-  <mi-collapse-item title="标题1" name="1">
-    代码是写出来给人看的，附带能在机器上运行。
-  </mi-collapse-item>
-  <mi-collapse-item title="标题2" name="2">
-    技术无非就是那些开发它的人的共同灵魂。
-  </mi-collapse-item>
-  <mi-collapse-item title="标题3" name="3">
-    在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准。
-  </mi-collapse-item>
+    <mi-collapse-item title="标题1" name="1"
+        >代码是写出来给人看的，附带能在机器上运行。</mi-collapse-item
+    >
+    <mi-collapse-item title="标题2" name="2"
+        >技术无非就是那些开发它的人的共同灵魂。</mi-collapse-item
+    >
+    <mi-collapse-item title="标题3" name="3">
+        在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准。
+    </mi-collapse-item>
 </mi-collapse>
 
 <mi-button type="primary" @click="openAll">全部展开</mi-button>
@@ -255,10 +258,10 @@ collapseRef.value?.toggleAll({
 
 ```ts
 import type {
-  CollapseProps,
-  CollapseItemProps,
-  CollapseItemInstance,
-  CollapseToggleAllOptions,
+    CollapseProps,
+    CollapseItemProps,
+    CollapseItemInstance,
+    CollapseToggleAllOptions,
 } from '@miracle-web/ui';
 ```
 

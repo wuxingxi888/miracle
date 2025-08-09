@@ -9,52 +9,52 @@ import { replaceScriptImportExt } from './get-deps.js';
 const { readFileSync, removeSync, outputFileSync } = fse;
 
 export async function compileScript(
-  filePath: string,
-  format: Format,
+    filePath: string,
+    format: Format,
 ): Promise<void> {
-  if (filePath.includes('.d.ts')) {
-    return;
-  }
-
-  const extensionMap = getMiracleConfig().build?.extensions;
-  const extension = extensionMap?.[format] || '.js';
-
-  let code = readFileSync(filePath, 'utf-8');
-
-  if (!filePath.includes(`${sep}style${sep}`)) {
-    code = replaceCSSImportExt(code);
-  }
-  code = replaceScriptImportExt(code, filePath, extension);
-
-  if (isJsx(filePath)) {
-    const babelResult = await babel.transformAsync(code, {
-      filename: filePath,
-      babelrc: false,
-      presets: ['@babel/preset-typescript'],
-      plugins: [
-        [
-          '@vue/babel-plugin-jsx',
-          {
-            enableObjectSlots: false,
-          },
-        ],
-      ],
-    });
-    if (babelResult?.code) {
-      ({ code } = babelResult);
+    if (filePath.includes('.d.ts')) {
+        return;
     }
-  }
 
-  const esbuildResult = await esbuild.transform(code, {
-    loader: 'ts',
-    target: 'es2016',
-    format,
-  });
+    const extensionMap = getMiracleConfig().build?.extensions;
+    const extension = extensionMap?.[format] || '.js';
 
-  ({ code } = esbuildResult);
+    let code = readFileSync(filePath, 'utf-8');
 
-  const jsFilePath = replaceExt(filePath, extension);
+    if (!filePath.includes(`${sep}style${sep}`)) {
+        code = replaceCSSImportExt(code);
+    }
+    code = replaceScriptImportExt(code, filePath, extension);
 
-  removeSync(filePath);
-  outputFileSync(jsFilePath, code);
+    if (isJsx(filePath)) {
+        const babelResult = await babel.transformAsync(code, {
+            filename: filePath,
+            babelrc: false,
+            presets: ['@babel/preset-typescript'],
+            plugins: [
+                [
+                    '@vue/babel-plugin-jsx',
+                    {
+                        enableObjectSlots: false,
+                    },
+                ],
+            ],
+        });
+        if (babelResult?.code) {
+            ({ code } = babelResult);
+        }
+    }
+
+    const esbuildResult = await esbuild.transform(code, {
+        loader: 'ts',
+        target: 'es2016',
+        format,
+    });
+
+    ({ code } = esbuildResult);
+
+    const jsFilePath = replaceExt(filePath, extension);
+
+    removeSync(filePath);
+    outputFileSync(jsFilePath, code);
 }

@@ -5,53 +5,55 @@ import type { InlineConfig } from 'vite';
 import type { BundleOption } from '../compiler/compile-bundles.js';
 
 export function getViteConfigForPackage({
-  minify,
-  formats,
-  external = [],
+    minify,
+    formats,
+    external = [],
 }: BundleOption): InlineConfig {
-  setBuildTarget('package');
+    setBuildTarget('package');
 
-  const { name, build } = getMiracleConfig();
-  const entryExtension = build?.extensions?.esm || '.js';
-  const entry = join(ES_DIR, `index${entryExtension}`);
-  const shouldReplaceEnv = minify || formats?.includes('umd');
+    const { name, build } = getMiracleConfig();
+    const entryExtension = build?.extensions?.esm || '.js';
+    const entry = join(ES_DIR, `index${entryExtension}`);
+    const shouldReplaceEnv = minify || formats?.includes('umd');
 
-  return {
-    root: CWD,
+    return {
+        root: CWD,
 
-    logLevel: 'silent',
+        logLevel: 'silent',
 
-    define: shouldReplaceEnv
-      ? {
-          'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-        }
-      : undefined,
+        define: shouldReplaceEnv
+            ? {
+                  'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+              }
+            : undefined,
 
-    build: {
-      emptyOutDir: false,
+        build: {
+            emptyOutDir: false,
 
-      lib: {
-        name,
-        entry,
-        formats,
-        fileName: (format: string) => {
-          const suffix = format === 'umd' ? '' : `.${format}`;
-          return minify ? `${name}${suffix}.min.js` : `${name}${suffix}.js`;
+            lib: {
+                name,
+                entry,
+                formats,
+                fileName: (format: string) => {
+                    const suffix = format === 'umd' ? '' : `.${format}`;
+                    return minify
+                        ? `${name}${suffix}.min.js`
+                        : `${name}${suffix}.js`;
+                },
+            },
+
+            // terser has better compression than esbuild
+            minify: minify ? 'terser' : false,
+            rollupOptions: {
+                external: [...external, 'vue'],
+                output: {
+                    dir: LIB_DIR,
+                    exports: 'named',
+                    globals: {
+                        vue: 'Vue',
+                    },
+                },
+            },
         },
-      },
-
-      // terser has better compression than esbuild
-      minify: minify ? 'terser' : false,
-      rollupOptions: {
-        external: [...external, 'vue'],
-        output: {
-          dir: LIB_DIR,
-          exports: 'named',
-          globals: {
-            vue: 'Vue',
-          },
-        },
-      },
-    },
-  };
+    };
 }

@@ -17,14 +17,14 @@ import { ref } from 'vue';
 import { useClickAway } from '@miracle-web/use';
 
 export default {
-  setup() {
-    const root = ref();
-    useClickAway(root, () => {
-      console.log('click outside!');
-    });
+    setup() {
+        const root = ref();
+        useClickAway(root, () => {
+            console.log('click outside!');
+        });
 
-    return { root };
-  },
+        return { root };
+    },
 };
 ```
 
@@ -41,18 +41,18 @@ import { ref } from 'vue';
 import { useClickAway } from '@miracle-web/use';
 
 export default {
-  setup() {
-    const root = ref();
-    useClickAway(
-      root,
-      () => {
-        console.log('touch outside!');
-      },
-      { eventName: 'touchstart' },
-    );
+    setup() {
+        const root = ref();
+        useClickAway(
+            root,
+            () => {
+                console.log('touch outside!');
+            },
+            { eventName: 'touchstart' },
+        );
 
-    return { root };
-  },
+        return { root };
+    },
 };
 ```
 
@@ -62,16 +62,16 @@ export default {
 
 ```ts
 type Options = {
-  eventName?: string;
+    eventName?: string;
 };
 
 function useClickAway(
-  target:
-    | Element
-    | Ref<Element | undefined>
-    | Array<Element | Ref<Element | undefined>>,
-  listener: EventListener,
-  options?: Options,
+    target:
+        | Element
+        | Ref<Element | undefined>
+        | Array<Element | Ref<Element | undefined>>,
+    listener: EventListener,
+    options?: Options,
 ): void;
 ```
 

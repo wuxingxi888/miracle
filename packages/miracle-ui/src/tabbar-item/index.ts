@@ -8,7 +8,7 @@ export type { TabbarItemProps } from './TabbarItem';
 export type { TabbarItemThemeVars } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiTabbarItem: typeof TabbarItem;
-  }
+    export interface GlobalComponents {
+        MiTabbarItem: typeof TabbarItem;
+    }
 }

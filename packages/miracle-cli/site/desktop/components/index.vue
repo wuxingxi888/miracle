@@ -1,21 +1,21 @@
 <template>
-  <div class="mi-doc">
-    <doc-header
-      :lang="lang"
-      :config="config"
-      :versions="versions"
-      :lang-configs="langConfigs"
-      :dark-mode-class="darkModeClass"
-      @switch-version="$emit('switch-version', $event)"
-    />
-    <doc-nav :lang="lang" :nav-config="config.nav" />
-    <doc-container :has-simulator="hasSimulator">
-      <doc-content>
-        <slot />
-      </doc-content>
-    </doc-container>
-    <doc-simulator v-if="hasSimulator" :src="simulator" />
-  </div>
+    <div class="mi-doc">
+        <doc-header
+            :lang="lang"
+            :config="config"
+            :versions="versions"
+            :lang-configs="langConfigs"
+            :dark-mode-class="darkModeClass"
+            @switch-version="$emit('switch-version', $event)"
+        />
+        <doc-nav :lang="lang" :nav-config="config.nav" />
+        <doc-container :has-simulator="hasSimulator">
+            <doc-content>
+                <slot />
+            </doc-content>
+        </doc-container>
+        <doc-simulator v-if="hasSimulator" :src="simulator" />
+    </div>
 </template>
 
 <script>
@@ -26,101 +26,104 @@ import DocContainer from './Container.vue';
 import DocSimulator from './Simulator.vue';
 
 export default {
-  name: 'MiDoc',
+    name: 'MiDoc',
 
-  components: {
-    DocNav,
-    DocHeader,
-    DocContent,
-    DocContainer,
-    DocSimulator,
-  },
-
-  props: {
-    lang: String,
-    versions: Array,
-    simulator: String,
-    langConfigs: Array,
-    hasSimulator: Boolean,
-    darkModeClass: String,
-    config: {
-      type: Object,
-      required: true,
-    },
-    base: {
-      type: String,
-      default: '',
-    },
-  },
-
-  emits: ['switch-version'],
-
-  watch: {
-    $route() {
-      this.setNav();
-    },
-  },
-
-  created() {
-    this.setNav();
-    this.keyboardHandler();
-  },
-
-  methods: {
-    setNav() {
-      const { nav } = this.config;
-      const items = nav.reduce((list, item) => list.concat(item.items), []);
-      const currentPath = this.$route.path.split('/').pop();
-
-      let currentIndex;
-      for (let i = 0, len = items.length; i < len; i++) {
-        if (items[i].path === currentPath) {
-          currentIndex = i;
-          break;
-        }
-      }
-
-      this.leftNav = items[currentIndex - 1];
-      this.rightNav = items[currentIndex + 1];
+    components: {
+        DocNav,
+        DocHeader,
+        DocContent,
+        DocContainer,
+        DocSimulator,
     },
 
-    keyboardNav(direction) {
-      if (/win(32|64)/.test(navigator.userAgent.toLocaleLowerCase())) {
-        return;
-      }
-
-      const nav = direction === 'prev' ? this.leftNav : this.rightNav;
-      if (nav.path) {
-        this.$router.push(this.base + nav.path);
-      }
+    props: {
+        lang: String,
+        versions: Array,
+        simulator: String,
+        langConfigs: Array,
+        hasSimulator: Boolean,
+        darkModeClass: String,
+        config: {
+            type: Object,
+            required: true,
+        },
+        base: {
+            type: String,
+            default: '',
+        },
     },
 
-    keyboardHandler() {
-      window.addEventListener('keyup', (event) => {
-        switch (event.keyCode) {
-          case 37: // left
-            this.keyboardNav('prev');
-            break;
-          case 39: // right
-            this.keyboardNav('next');
-            break;
-        }
-      });
+    emits: ['switch-version'],
+
+    watch: {
+        $route() {
+            this.setNav();
+        },
     },
-  },
+
+    created() {
+        this.setNav();
+        this.keyboardHandler();
+    },
+
+    methods: {
+        setNav() {
+            const { nav } = this.config;
+            const items = nav.reduce(
+                (list, item) => list.concat(item.items),
+                [],
+            );
+            const currentPath = this.$route.path.split('/').pop();
+
+            let currentIndex;
+            for (let i = 0, len = items.length; i < len; i++) {
+                if (items[i].path === currentPath) {
+                    currentIndex = i;
+                    break;
+                }
+            }
+
+            this.leftNav = items[currentIndex - 1];
+            this.rightNav = items[currentIndex + 1];
+        },
+
+        keyboardNav(direction) {
+            if (/win(32|64)/.test(navigator.userAgent.toLocaleLowerCase())) {
+                return;
+            }
+
+            const nav = direction === 'prev' ? this.leftNav : this.rightNav;
+            if (nav.path) {
+                this.$router.push(this.base + nav.path);
+            }
+        },
+
+        keyboardHandler() {
+            window.addEventListener('keyup', (event) => {
+                switch (event.keyCode) {
+                    case 37: // left
+                        this.keyboardNav('prev');
+                        break;
+                    case 39: // right
+                        this.keyboardNav('next');
+                        break;
+                }
+            });
+        },
+    },
 };
 </script>
 
 <style lang="less">
 @media (max-width: 768px) {
-  .mi-doc-nav,
-  .mi-doc-container {
-    display: none;
-  }
+    .mi-doc-nav,
+    .mi-doc-container {
+        display: none;
+    }
 
-  .mi-doc-simulator {
-    right: 50%;
-    transform: translateX(50%);
-  }
+    .mi-doc-simulator {
+        right: 50%;
+        transform: translateX(50%);
+    }
 }
 </style>

@@ -14,12 +14,12 @@
 import { useRaf } from '@miracle-web/use';
 
 export default {
-  setup() {
-    let count = 0;
-    useRaf(() => {
-      console.log(++count); // 只会执行 1 次
-    });
-  },
+    setup() {
+        let count = 0;
+        useRaf(() => {
+            console.log(++count); // 只会执行 1 次
+        });
+    },
 };
 ```
 
@@ -31,22 +31,22 @@ export default {
 import { useRaf } from '@miracle-web/use';
 
 export default {
-  setup() {
-    let count = 0;
-    const cancelRaf = useRaf(
-      () => {
-        console.log(++count); // 无限执行，直到被 cancel
+    setup() {
+        let count = 0;
+        const cancelRaf = useRaf(
+            () => {
+                console.log(++count); // 无限执行，直到被 cancel
 
-        if (count === 5) {
-          cancelRaf();
-        }
-      },
-      {
-        isLoop: true, // 开启循环
-        interval: 100, // 设置调用间隔
-      },
-    );
-  },
+                if (count === 5) {
+                    cancelRaf();
+                }
+            },
+            {
+                isLoop: true, // 开启循环
+                interval: 100, // 设置调用间隔
+            },
+        );
+    },
 };
 ```
 
@@ -56,11 +56,11 @@ export default {
 
 ```ts
 function useRaf(
-  callback: () => void,
-  options: {
-    interval?: number;
-    isLoop?: boolean;
-  },
+    callback: () => void,
+    options: {
+        interval?: number;
+        isLoop?: boolean;
+    },
 ): void;
 ```
 

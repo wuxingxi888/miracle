@@ -24,9 +24,9 @@ app.use(MiImage);
 
 ```html
 <mi-image
-  width="100"
-  height="100"
-  src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg"
+    width="100"
+    height="100"
+    src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg"
 />
 ```
 
@@ -36,10 +36,10 @@ app.use(MiImage);
 
 ```html
 <mi-image
-  width="100"
-  height="100"
-  src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg"
-  enable-preview
+    width="100"
+    height="100"
+    src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg"
+    enable-preview
 />
 ```
 
@@ -49,10 +49,10 @@ app.use(MiImage);
 
 ```html
 <mi-image
-  width="10rem"
-  height="10rem"
-  fit="contain"
-  src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg"
+    width="10rem"
+    height="10rem"
+    fit="contain"
+    src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg"
 />
 ```
 
@@ -62,11 +62,11 @@ app.use(MiImage);
 
 ```html
 <mi-image
-  width="10rem"
-  height="10rem"
-  fit="cover"
-  position="left"
-  src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg"
+    width="10rem"
+    height="10rem"
+    fit="cover"
+    position="left"
+    src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg"
 />
 ```
 
@@ -76,10 +76,10 @@ app.use(MiImage);
 
 ```html
 <mi-image
-  round
-  width="10rem"
-  height="10rem"
-  src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg"
+    round
+    width="10rem"
+    height="10rem"
+    src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg"
 />
 ```
 
@@ -89,10 +89,10 @@ app.use(MiImage);
 
 ```html
 <mi-image
-  width="100"
-  height="100"
-  lazy-load
-  src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg"
+    width="100"
+    height="100"
+    lazy-load
+    src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg"
 />
 ```
 
@@ -110,9 +110,9 @@ app.use(Lazyload);
 
 ```html
 <mi-image src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg">
-  <template v-slot:loading>
-    <mi-loading type="spinner" size="20" />
-  </template>
+    <template v-slot:loading>
+        <mi-loading type="spinner" size="20" />
+    </template>
 </mi-image>
 ```
 
@@ -122,7 +122,7 @@ app.use(Lazyload);
 
 ```html
 <mi-image src="https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/avatar.jpg">
-  <template v-slot:error>加载失败</template>
+    <template v-slot:error>加载失败</template>
 </mi-image>
 ```
 

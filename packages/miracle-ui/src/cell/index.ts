@@ -8,7 +8,7 @@ export type { CellSize, CellProps, CellArrowDirection } from './Cell';
 export type { CellThemeVars } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiCell: typeof Cell;
-  }
+    export interface GlobalComponents {
+        MiCell: typeof Cell;
+    }
 }

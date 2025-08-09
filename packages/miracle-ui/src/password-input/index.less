@@ -1,101 +1,101 @@
 :root,
 :host {
-  --mi-password-input-height: 50px;
-  --mi-password-input-margin: 0 var(--mi-padding-md);
-  --mi-password-input-font-size: 20px;
-  --mi-password-input-radius: 6px;
-  --mi-password-input-background: var(--mi-background-2);
-  --mi-password-input-info-color: var(--mi-text-color-2);
-  --mi-password-input-info-font-size: var(--mi-font-size-md);
-  --mi-password-input-error-info-color: var(--mi-danger-color);
-  --mi-password-input-dot-size: 10px;
-  --mi-password-input-dot-color: var(--mi-text-color);
-  --mi-password-input-text-color: var(--mi-text-color);
-  --mi-password-input-cursor-color: var(--mi-text-color);
-  --mi-password-input-cursor-width: 1px;
-  --mi-password-input-cursor-height: 40%;
-  --mi-password-input-cursor-duration: 1s;
+    --mi-password-input-height: 50px;
+    --mi-password-input-margin: 0 var(--mi-padding-md);
+    --mi-password-input-font-size: 20px;
+    --mi-password-input-radius: 6px;
+    --mi-password-input-background: var(--mi-background-2);
+    --mi-password-input-info-color: var(--mi-text-color-2);
+    --mi-password-input-info-font-size: var(--mi-font-size-md);
+    --mi-password-input-error-info-color: var(--mi-danger-color);
+    --mi-password-input-dot-size: 10px;
+    --mi-password-input-dot-color: var(--mi-text-color);
+    --mi-password-input-text-color: var(--mi-text-color);
+    --mi-password-input-cursor-color: var(--mi-text-color);
+    --mi-password-input-cursor-width: 1px;
+    --mi-password-input-cursor-height: 40%;
+    --mi-password-input-cursor-duration: 1s;
 }
 
 .mi-password-input {
-  position: relative;
-  margin: var(--mi-password-input-margin);
-  user-select: none;
+    position: relative;
+    margin: var(--mi-password-input-margin);
+    user-select: none;
 
-  &__info,
-  &__error-info {
-    margin-top: var(--mi-padding-md);
-    font-size: var(--mi-password-input-info-font-size);
-    text-align: center;
-  }
-
-  &__info {
-    color: var(--mi-password-input-info-color);
-  }
-
-  &__error-info {
-    color: var(--mi-password-input-error-info-color);
-  }
-
-  &__security {
-    display: flex;
-    width: 100%;
-    height: var(--mi-password-input-height);
-    cursor: pointer;
-
-    &::after {
-      border-radius: var(--mi-password-input-radius);
+    &__info,
+    &__error-info {
+        margin-top: var(--mi-padding-md);
+        font-size: var(--mi-password-input-info-font-size);
+        text-align: center;
     }
 
-    li {
-      position: relative;
-      display: flex;
-      flex: 1;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      color: var(--mi-password-input-text-color);
-      font-size: var(--mi-password-input-font-size);
-      line-height: 1.2;
-      background: var(--mi-password-input-background);
+    &__info {
+        color: var(--mi-password-input-info-color);
     }
 
-    i {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: var(--mi-password-input-dot-size);
-      height: var(--mi-password-input-dot-size);
-      background: var(--mi-password-input-dot-color);
-      border-radius: 100%;
-      transform: translate(-50%, -50%);
-      visibility: hidden;
+    &__error-info {
+        color: var(--mi-password-input-error-info-color);
     }
-  }
 
-  &__cursor {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: var(--mi-password-input-cursor-width);
-    height: var(--mi-password-input-cursor-height);
-    background: var(--mi-password-input-cursor-color);
-    transform: translate(-50%, -50%);
-    animation: var(--mi-password-input-cursor-duration) mi-cursor-flicker
-      infinite;
-  }
+    &__security {
+        display: flex;
+        width: 100%;
+        height: var(--mi-password-input-height);
+        cursor: pointer;
+
+        &::after {
+            border-radius: var(--mi-password-input-radius);
+        }
+
+        li {
+            position: relative;
+            display: flex;
+            flex: 1;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: var(--mi-password-input-text-color);
+            font-size: var(--mi-password-input-font-size);
+            line-height: 1.2;
+            background: var(--mi-password-input-background);
+        }
+
+        i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: var(--mi-password-input-dot-size);
+            height: var(--mi-password-input-dot-size);
+            background: var(--mi-password-input-dot-color);
+            border-radius: 100%;
+            transform: translate(-50%, -50%);
+            visibility: hidden;
+        }
+    }
+
+    &__cursor {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: var(--mi-password-input-cursor-width);
+        height: var(--mi-password-input-cursor-height);
+        background: var(--mi-password-input-cursor-color);
+        transform: translate(-50%, -50%);
+        animation: var(--mi-password-input-cursor-duration) mi-cursor-flicker
+            infinite;
+    }
 }
 
 @keyframes mi-cursor-flicker {
-  from {
-    opacity: 0;
-  }
+    from {
+        opacity: 0;
+    }
 
-  50% {
-    opacity: 1;
-  }
+    50% {
+        opacity: 1;
+    }
 
-  100% {
-    opacity: 0;
-  }
+    100% {
+        opacity: 0;
+    }
 }

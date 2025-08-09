@@ -1,43 +1,43 @@
 :root,
 :host {
-  --mi-notify-text-color: var(--mi-white);
-  --mi-notify-padding: var(--mi-padding-xs) var(--mi-padding-md);
-  --mi-notify-font-size: var(--mi-font-size-md);
-  --mi-notify-line-height: var(--mi-line-height-md);
-  --mi-notify-primary-background: var(--mi-primary-color);
-  --mi-notify-success-background: var(--mi-success-color);
-  --mi-notify-danger-background: var(--mi-danger-color);
-  --mi-notify-warning-background: var(--mi-warning-color);
+    --mi-notify-text-color: var(--mi-white);
+    --mi-notify-padding: var(--mi-padding-xs) var(--mi-padding-md);
+    --mi-notify-font-size: var(--mi-font-size-md);
+    --mi-notify-line-height: var(--mi-line-height-md);
+    --mi-notify-primary-background: var(--mi-primary-color);
+    --mi-notify-success-background: var(--mi-success-color);
+    --mi-notify-danger-background: var(--mi-danger-color);
+    --mi-notify-warning-background: var(--mi-warning-color);
 }
 
 .mi-notify {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  padding: var(--mi-notify-padding);
-  color: var(--mi-notify-text-color);
-  font-size: var(--mi-notify-font-size);
-  line-height: var(--mi-notify-line-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: var(--mi-notify-padding);
+    color: var(--mi-notify-text-color);
+    font-size: var(--mi-notify-font-size);
+    line-height: var(--mi-notify-line-height);
 
-  // allow newline character
-  white-space: pre-wrap;
-  text-align: center;
-  word-wrap: break-word;
+    // allow newline character
+    white-space: pre-wrap;
+    text-align: center;
+    word-wrap: break-word;
 
-  &--primary {
-    background: var(--mi-notify-primary-background);
-  }
+    &--primary {
+        background: var(--mi-notify-primary-background);
+    }
 
-  &--success {
-    background: var(--mi-notify-success-background);
-  }
+    &--success {
+        background: var(--mi-notify-success-background);
+    }
 
-  &--danger {
-    background: var(--mi-notify-danger-background);
-  }
+    &--danger {
+        background: var(--mi-notify-danger-background);
+    }
 
-  &--warning {
-    background: var(--mi-notify-warning-background);
-  }
+    &--warning {
+        background: var(--mi-notify-warning-background);
+    }
 }

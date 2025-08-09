@@ -1,98 +1,98 @@
 :root,
 :host {
-  --mi-grid-item-content-padding: var(--mi-padding-md) var(--mi-padding-xs);
-  --mi-grid-item-content-background: var(--mi-background-2);
-  --mi-grid-item-content-active-color: var(--mi-active-color);
-  --mi-grid-item-icon-size: 28px;
-  --mi-grid-item-text-color: var(--mi-text-color);
-  --mi-grid-item-text-font-size: var(--mi-font-size-sm);
+    --mi-grid-item-content-padding: var(--mi-padding-md) var(--mi-padding-xs);
+    --mi-grid-item-content-background: var(--mi-background-2);
+    --mi-grid-item-content-active-color: var(--mi-active-color);
+    --mi-grid-item-icon-size: 28px;
+    --mi-grid-item-text-color: var(--mi-text-color);
+    --mi-grid-item-text-font-size: var(--mi-font-size-sm);
 }
 
 .mi-grid-item {
-  position: relative;
-  box-sizing: border-box;
-
-  &--square {
-    height: 0;
-  }
-
-  &__icon {
-    font-size: var(--mi-grid-item-icon-size);
-  }
-
-  &__text {
-    color: var(--mi-grid-item-text-color);
-    font-size: var(--mi-grid-item-text-font-size);
-    line-height: 1.5;
-    // https://github.com/wuxingxi888/miracle/issues/3894
-    word-break: break-all;
-  }
-
-  &__icon + &__text {
-    margin-top: var(--mi-padding-xs);
-  }
-
-  &__content {
-    display: flex;
-    flex-direction: column;
+    position: relative;
     box-sizing: border-box;
-    height: 100%;
-    padding: var(--mi-grid-item-content-padding);
-    background: var(--mi-grid-item-content-background);
-
-    &::after {
-      z-index: 1;
-      border-width: 0 var(--mi-border-width) var(--mi-border-width) 0;
-    }
 
     &--square {
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
+        height: 0;
     }
 
-    &--center {
-      align-items: center;
-      justify-content: center;
+    &__icon {
+        font-size: var(--mi-grid-item-icon-size);
     }
 
-    &--horizontal {
-      flex-direction: row;
-
-      .mi-grid-item__text {
-        margin: 0 0 0 var(--mi-padding-xs);
-      }
+    &__text {
+        color: var(--mi-grid-item-text-color);
+        font-size: var(--mi-grid-item-text-font-size);
+        line-height: 1.5;
+        // https://github.com/wuxingxi888/miracle/issues/3894
+        word-break: break-all;
     }
 
-    &--reverse {
-      flex-direction: column-reverse;
-
-      .mi-grid-item__text {
-        margin: 0 0 var(--mi-padding-xs);
-      }
+    &__icon + &__text {
+        margin-top: var(--mi-padding-xs);
     }
 
-    &--horizontal&--reverse {
-      flex-direction: row-reverse;
+    &__content {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        height: 100%;
+        padding: var(--mi-grid-item-content-padding);
+        background: var(--mi-grid-item-content-background);
 
-      .mi-grid-item__text {
-        margin: 0 var(--mi-padding-xs) 0 0;
-      }
+        &::after {
+            z-index: 1;
+            border-width: 0 var(--mi-border-width) var(--mi-border-width) 0;
+        }
+
+        &--square {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+        }
+
+        &--center {
+            align-items: center;
+            justify-content: center;
+        }
+
+        &--horizontal {
+            flex-direction: row;
+
+            .mi-grid-item__text {
+                margin: 0 0 0 var(--mi-padding-xs);
+            }
+        }
+
+        &--reverse {
+            flex-direction: column-reverse;
+
+            .mi-grid-item__text {
+                margin: 0 0 var(--mi-padding-xs);
+            }
+        }
+
+        &--horizontal&--reverse {
+            flex-direction: row-reverse;
+
+            .mi-grid-item__text {
+                margin: 0 var(--mi-padding-xs) 0 0;
+            }
+        }
+
+        &--surround {
+            &::after {
+                border-width: var(--mi-border-width);
+            }
+        }
+
+        &--clickable {
+            cursor: pointer;
+
+            &:active {
+                background-color: var(--mi-grid-item-content-active-color);
+            }
+        }
     }
-
-    &--surround {
-      &::after {
-        border-width: var(--mi-border-width);
-      }
-    }
-
-    &--clickable {
-      cursor: pointer;
-
-      &:active {
-        background-color: var(--mi-grid-item-content-active-color);
-      }
-    }
-  }
 }

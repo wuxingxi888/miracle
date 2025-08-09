@@ -19,7 +19,7 @@ app.use(Lazyload);
 
 // 注册时可以配置额外的选项
 app.use(Lazyload, {
-  lazyComponent: true,
+    lazyComponent: true,
 });
 ```
 
@@ -35,14 +35,14 @@ app.use(Lazyload, {
 
 ```js
 export default {
-  setup() {
-    return {
-      imageList: [
-        'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg',
-        'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg',
-      ],
-    };
-  },
+    setup() {
+        return {
+            imageList: [
+                'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg',
+                'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/images/avatar.jpg',
+            ],
+        };
+    },
 };
 ```
 
@@ -61,13 +61,13 @@ export default {
 ```js
 // 注册时设置`lazyComponent`选项
 app.use(Lazyload, {
-  lazyComponent: true,
+    lazyComponent: true,
 });
 ```
 
 ```html
 <lazy-component>
-  <img v-for="img in imageList" v-lazy="img" />
+    <img v-for="img in imageList" v-lazy="img" />
 </lazy-component>
 ```
 
@@ -98,6 +98,6 @@ app.use(Lazyload, {
 const app = Vue.createApp();
 
 app.use(miracle.Lazyload, {
-  lazyComponent: true,
+    lazyComponent: true,
 });
 ```

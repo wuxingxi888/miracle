@@ -3,16 +3,16 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 import { join, dirname, isAbsolute } from 'node:path';
 
 function findRootDir(dir: string): string {
-  if (existsSync(join(dir, 'miracle.config.mjs'))) {
-    return dir;
-  }
+    if (existsSync(join(dir, 'miracle.config.mjs'))) {
+        return dir;
+    }
 
-  const parentDir = dirname(dir);
-  if (dir === parentDir) {
-    return dir;
-  }
+    const parentDir = dirname(dir);
+    if (dir === parentDir) {
+        return dir;
+    }
 
-  return findRootDir(parentDir);
+    return findRootDir(parentDir);
 }
 
 // Root paths
@@ -44,50 +44,50 @@ export const POSTCSS_CONFIG_FILE = join(CJS_DIR, 'postcss.config.cjs');
 export const MD_LOADER = join(CJS_DIR, 'md-loader.cjs');
 
 export const SCRIPT_EXTS = [
-  '.js',
-  '.jsx',
-  '.vue',
-  '.ts',
-  '.tsx',
-  '.mjs',
-  '.cjs',
+    '.js',
+    '.jsx',
+    '.vue',
+    '.ts',
+    '.tsx',
+    '.mjs',
+    '.cjs',
 ];
 export const STYLE_EXTS = ['.css', '.less', '.scss'];
 
 export function getPackageJson() {
-  const rawJson = readFileSync(PACKAGE_JSON_FILE, 'utf-8');
-  return JSON.parse(rawJson);
+    const rawJson = readFileSync(PACKAGE_JSON_FILE, 'utf-8');
+    return JSON.parse(rawJson);
 }
 
 async function getMiracleConfigAsync() {
-  try {
-    // https://github.com/nodejs/node/issues/31710
-    // absolute file paths don't work on Windows
-    return (await import(pathToFileURL(VANT_CONFIG_FILE).href)).default;
-  } catch (err) {
-    return {};
-  }
+    try {
+        // https://github.com/nodejs/node/issues/31710
+        // absolute file paths don't work on Windows
+        return (await import(pathToFileURL(VANT_CONFIG_FILE).href)).default;
+    } catch (err) {
+        return {};
+    }
 }
 
 const miracleConfig = await getMiracleConfigAsync();
 
 export function getMiracleConfig() {
-  return miracleConfig;
+    return miracleConfig;
 }
 
 function getSrcDir() {
-  const miracleConfig = getMiracleConfig();
-  const srcDir = miracleConfig.build?.srcDir;
+    const miracleConfig = getMiracleConfig();
+    const srcDir = miracleConfig.build?.srcDir;
 
-  if (srcDir) {
-    if (isAbsolute(srcDir)) {
-      return srcDir;
+    if (srcDir) {
+        if (isAbsolute(srcDir)) {
+            return srcDir;
+        }
+
+        return join(ROOT, srcDir);
     }
 
-    return join(ROOT, srcDir);
-  }
-
-  return join(ROOT, 'src');
+    return join(ROOT, 'src');
 }
 
 export const SRC_DIR = getSrcDir();

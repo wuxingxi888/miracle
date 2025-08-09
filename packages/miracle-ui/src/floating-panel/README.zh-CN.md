@@ -24,14 +24,14 @@ FloatingPanel 的默认高度为 `100px`，用户可以拖动来展开面板，�
 
 ```html
 <mi-floating-panel>
-  <mi-cell-group>
-    <mi-cell
-      v-for="i in 26"
-      :key="i"
-      :title="String.fromCharCode(i + 64)"
-      size="large"
-    />
-  </mi-cell-group>
+    <mi-cell-group>
+        <mi-cell
+            v-for="i in 26"
+            :key="i"
+            :title="String.fromCharCode(i + 64)"
+            size="large"
+        />
+    </mi-cell-group>
 </mi-floating-panel>
 ```
 
@@ -43,9 +43,9 @@ FloatingPanel 的默认高度为 `100px`，用户可以拖动来展开面板，�
 
 ```html
 <mi-floating-panel v-model:height="height" :anchors="anchors">
-  <div style="text-align: center; padding: 15px">
-    <p>面板显示高度 {{ height.toFixed(0) }} px</p>
-  </div>
+    <div style="text-align: center; padding: 15px">
+        <p>面板显示高度 {{ height.toFixed(0) }} px</p>
+    </div>
 </mi-floating-panel>
 ```
 
@@ -53,16 +53,16 @@ FloatingPanel 的默认高度为 `100px`，用户可以拖动来展开面板，�
 import { ref } from 'vue';
 
 export default {
-  setup() {
-    const anchors = [
-      100,
-      Math.round(0.4 * window.innerHeight),
-      Math.round(0.7 * window.innerHeight),
-    ];
-    const height = ref(anchors[0]);
+    setup() {
+        const anchors = [
+            100,
+            Math.round(0.4 * window.innerHeight),
+            Math.round(0.7 * window.innerHeight),
+        ];
+        const height = ref(anchors[0]);
 
-    return { anchors, height };
-  },
+        return { anchors, height };
+    },
 };
 ```
 
@@ -72,9 +72,9 @@ export default {
 
 ```html
 <mi-floating-panel :content-draggable="false">
-  <div style="text-align: center; padding: 15px">
-    <p>内容不可拖拽</p>
-  </div>
+    <div style="text-align: center; padding: 15px">
+        <p>内容不可拖拽</p>
+    </div>
 </mi-floating-panel>
 ```
 

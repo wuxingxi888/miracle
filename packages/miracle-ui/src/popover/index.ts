@@ -6,15 +6,15 @@ export default Popover;
 export { popoverProps } from './Popover';
 export type { PopoverProps } from './Popover';
 export type {
-  PopoverTheme,
-  PopoverAction,
-  PopoverTrigger,
-  PopoverThemeVars,
-  PopoverPlacement,
+    PopoverTheme,
+    PopoverAction,
+    PopoverTrigger,
+    PopoverThemeVars,
+    PopoverPlacement,
 } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    MiPopover: typeof Popover;
-  }
+    export interface GlobalComponents {
+        MiPopover: typeof Popover;
+    }
 }

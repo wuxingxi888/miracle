@@ -7,7 +7,7 @@ export type { SignatureProps } from './Signature';
 export type { SignatureInstance, SignatureThemeVars } from './types';
 
 declare module 'vue' {
-  export interface GlobalComponents {
-    Signature: typeof Signature;
-  }
+    export interface GlobalComponents {
+        Signature: typeof Signature;
+    }
 }

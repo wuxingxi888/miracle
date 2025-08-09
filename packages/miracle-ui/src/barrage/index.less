@@ -1,43 +1,43 @@
 :root,
 :host {
-  --mi-barrage-font-size: 16px;
-  --mi-barrage-space: 10px;
-  --mi-barrage-font: inherit;
-  --mi-barrage-color: var(--mi-white);
+    --mi-barrage-font-size: 16px;
+    --mi-barrage-space: 10px;
+    --mi-barrage-font: inherit;
+    --mi-barrage-color: var(--mi-white);
 }
 
 .mi-barrage {
-  position: relative;
-  overflow: hidden;
-  &__item {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 99;
-    padding-bottom: var(--mi-barrage-space);
-    opacity: 0.75;
-    line-height: 1;
-    font-size: var(--mi-barrage-font-size);
-    font-family: var(--mi-barrage-font);
-    font-weight: bold;
-    white-space: nowrap;
-    color: var(--mi-barrage-color);
-    text-shadow:
-      1px 0 1px #000000,
-      0 1px 1px #000000,
-      0 -1px 1px #000000,
-      -1px 0 1px #000000;
-    user-select: none;
-    will-change: transform;
-    transform: translateX(110%);
-  }
+    position: relative;
+    overflow: hidden;
+    &__item {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 99;
+        padding-bottom: var(--mi-barrage-space);
+        opacity: 0.75;
+        line-height: 1;
+        font-size: var(--mi-barrage-font-size);
+        font-family: var(--mi-barrage-font);
+        font-weight: bold;
+        white-space: nowrap;
+        color: var(--mi-barrage-color);
+        text-shadow:
+            1px 0 1px #000000,
+            0 1px 1px #000000,
+            0 -1px 1px #000000,
+            -1px 0 1px #000000;
+        user-select: none;
+        will-change: transform;
+        transform: translateX(110%);
+    }
 }
 
 @keyframes mi-barrage {
-  from {
-    transform: translateX(110%);
-  }
-  to {
-    transform: translateX(var(--move-distance));
-  }
+    from {
+        transform: translateX(110%);
+    }
+    to {
+        transform: translateX(var(--move-distance));
+    }
 }

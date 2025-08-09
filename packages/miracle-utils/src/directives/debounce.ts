@@ -1,6 +1,6 @@
 import type { Directive, DirectiveBinding } from 'vue';
 interface ElType extends HTMLElement {
-  __handleClick__: () => any;
+    __handleClick__: () => any;
 }
 
 /**
@@ -10,24 +10,24 @@ interface ElType extends HTMLElement {
  * <button v-debounce="debounceClick">防抖提交</button>
  */
 const debounce: Directive = {
-  mounted(el: ElType, binding: DirectiveBinding) {
-    if (typeof binding.value !== 'function') {
-      throw 'callback must be a function';
-    }
-    let timer: number | null = null;
-    el.__handleClick__ = function () {
-      if (timer) {
-        clearInterval(timer);
-      }
-      timer = setTimeout(() => {
-        binding.value();
-      }, 2000);
-    };
-    el.addEventListener('click', el.__handleClick__);
-  },
-  beforeUnmount(el: ElType) {
-    el.removeEventListener('click', el.__handleClick__);
-  },
+    mounted(el: ElType, binding: DirectiveBinding) {
+        if (typeof binding.value !== 'function') {
+            throw 'callback must be a function';
+        }
+        let timer: number | null = null;
+        el.__handleClick__ = function () {
+            if (timer) {
+                clearInterval(timer);
+            }
+            timer = setTimeout(() => {
+                binding.value();
+            }, 2000);
+        };
+        el.addEventListener('click', el.__handleClick__);
+    },
+    beforeUnmount(el: ElType) {
+        el.removeEventListener('click', el.__handleClick__);
+    },
 };
 
 export default debounce;
