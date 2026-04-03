@@ -33,7 +33,10 @@ exports[`should render demo and match snapshot 1`] = `
     <div class="demo-block page-2">
       <div class="mi-indicator">
         <div class="mi-indicator__indicators mi-indicator__indicators--horizontal">
-          <i class="mi-indicator__square mi-indicator__square--active">
+          <i
+            style="background-color: rgb(255, 255, 255);"
+            class="mi-indicator__square mi-indicator__square--active"
+          >
           </i>
           <i class="mi-indicator__square">
           </i>
@@ -75,6 +78,93 @@ exports[`should render demo and match snapshot 1`] = `
           <i class="mi-indicator__line mi-indicator__line--vertical">
           </i>
           <i class="mi-indicator__line mi-indicator__line--vertical">
+          </i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="demo-block page-4">
+      <div class="mi-indicator">
+        <div class="mi-indicator__indicators mi-indicator__indicators--horizontal">
+          <i
+            style="background-color: rgb(255, 255, 255);"
+            class="mi-indicator__capsule mi-indicator__capsule--active mi-indicator__capsule--horizontal"
+          >
+          </i>
+          <i class="mi-indicator__capsule mi-indicator__capsule--horizontal">
+          </i>
+          <i class="mi-indicator__capsule mi-indicator__capsule--horizontal">
+          </i>
+        </div>
+      </div>
+      <div class="mi-indicator">
+        <div class="mi-indicator__indicators mi-indicator__indicators--vertical">
+          <i class="mi-indicator__capsule mi-indicator__capsule--active mi-indicator__capsule--vertical">
+          </i>
+          <i class="mi-indicator__capsule mi-indicator__capsule--vertical">
+          </i>
+          <i class="mi-indicator__capsule mi-indicator__capsule--vertical">
+          </i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="demo-block page-5">
+      <div class="mi-indicator">
+        <div class="mi-indicator__indicators mi-indicator__indicators--horizontal">
+          <i class="mi-indicator__numbers mi-indicator__numbers--active">
+            01
+          </i>
+          <i class="mi-indicator__numbers">
+            02
+          </i>
+          <i class="mi-indicator__numbers">
+            03
+          </i>
+        </div>
+      </div>
+      <div class="mi-indicator">
+        <div class="mi-indicator__indicators mi-indicator__indicators--vertical">
+          <i
+            style="color: rgb(255, 255, 255);"
+            class="mi-indicator__numbers mi-indicator__numbers--active"
+          >
+            01
+          </i>
+          <i class="mi-indicator__numbers">
+            02
+          </i>
+          <i class="mi-indicator__numbers">
+            03
+          </i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="demo-block page-6">
+      <div class="mi-indicator">
+        <div class="mi-indicator__indicators mi-indicator__indicators--horizontal">
+          <i
+            style="background-color: rgb(255, 255, 255);"
+            class="mi-indicator__pulse mi-indicator__pulse--active"
+          >
+          </i>
+          <i class="mi-indicator__pulse">
+          </i>
+          <i class="mi-indicator__pulse">
+          </i>
+        </div>
+      </div>
+      <div class="mi-indicator">
+        <div class="mi-indicator__indicators mi-indicator__indicators--vertical">
+          <i class="mi-indicator__pulse mi-indicator__pulse--active">
+          </i>
+          <i class="mi-indicator__pulse">
+          </i>
+          <i class="mi-indicator__pulse">
           </i>
         </div>
       </div>

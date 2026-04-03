@@ -12,6 +12,17 @@
     --mi-indicator-line-width: 30px;
     --mi-indicator-line-height: 4px;
     --mi-indicator-line-radius: 4px;
+
+    --mi-indicator-capsule-size: 8px;
+    --mi-indicator-capsule-active-width: 28px;
+    --mi-indicator-capsule-duration: 0.45s;
+    --mi-indicator-capsule-easing: cubic-bezier(0.34, 1.45, 0.56, 1);
+    --mi-indicator-numbers-font-size: 13px;
+    --mi-indicator-numbers-inactive-color: var(--mi-text-color-3);
+    --mi-indicator-numbers-active-color: var(--mi-primary-color);
+    --mi-indicator-pulse-size: 10px;
+    --mi-indicator-pulse-ring-width: 2px;
+    --mi-indicator-pulse-ring-color: var(--mi-white);
 }
 
 .mi-indicator {
@@ -20,6 +31,13 @@
 
         i {
             display: inline-block;
+            // Smooth active-state switching when index changes.
+            transition:
+                opacity 0.28s ease,
+                transform 0.28s ease,
+                background-color 0.28s ease,
+                color 0.28s ease,
+                box-shadow 0.28s ease;
         }
 
         &--horizontal {
@@ -38,6 +56,20 @@
                 margin-bottom: var(--mi-indicator-gap);
             }
         }
+
+        i.mi-indicator__capsule {
+            transition:
+                width var(--mi-indicator-capsule-duration)
+                    var(--mi-indicator-capsule-easing),
+                height var(--mi-indicator-capsule-duration)
+                    var(--mi-indicator-capsule-easing),
+                opacity var(--mi-indicator-capsule-duration)
+                    var(--mi-indicator-capsule-easing),
+                background-color var(--mi-indicator-capsule-duration)
+                    var(--mi-indicator-capsule-easing),
+                transform var(--mi-indicator-capsule-duration)
+                    var(--mi-indicator-capsule-easing);
+        }
     }
 
     &__circle {
@@ -46,12 +78,14 @@
         background-color: var(--mi-indicator-inactive-background);
         border-radius: 100%;
         opacity: var(--mi-indicator-inactive-opacity);
+        transform: scale(0.85);
         padding: 0;
         margin: 0;
 
         &--active {
             background-color: var(--mi-indicator-active-background);
             opacity: var(--mi-indicator-active-opacity);
+            transform: scale(1);
             animation: circle_animation 2s infinite alternate linear;
         }
 
@@ -80,6 +114,8 @@
         margin: calc(var(--mi-indicator-square-size) / 2 + 2px);
         box-shadow: 0 0 0 2px white;
         position: relative;
+        opacity: var(--mi-indicator-inactive-opacity);
+        transform: scale(0.9);
 
         &:after {
             content: '';
@@ -92,6 +128,7 @@
         &--active {
             // background-color: var(--mi-indicator-active-background);
             opacity: var(--mi-indicator-active-opacity);
+            transform: scale(1);
             &:after {
                 box-shadow: 0 0 0 0 white;
                 animation: square_animation 2s infinite alternate ease-in-out;
@@ -160,6 +197,7 @@
         background-color: var(--mi-indicator-inactive-background);
         border-radius: var(--mi-indicator-line-radius);
         opacity: var(--mi-indicator-inactive-opacity);
+        transform: scaleX(0.92);
 
         &--vertical {
             width: var(--mi-indicator-line-height);
@@ -169,7 +207,106 @@
         &--active {
             background-color: var(--mi-indicator-active-background);
             opacity: var(--mi-indicator-active-opacity);
+            transform: scaleX(1);
             animation: line_animation 2s infinite alternate ease-in-out;
+        }
+    }
+
+    &__capsule {
+        box-sizing: border-box;
+        width: var(--mi-indicator-capsule-size);
+        height: var(--mi-indicator-capsule-size);
+        border-radius: calc(var(--mi-indicator-capsule-size) / 2);
+        background-color: var(--mi-indicator-inactive-background);
+        opacity: var(--mi-indicator-inactive-opacity);
+        transform: scale(0.96);
+        transform-origin: center;
+
+        &--vertical {
+            width: var(--mi-indicator-capsule-size);
+            height: var(--mi-indicator-capsule-size);
+        }
+
+        &--active {
+            width: var(--mi-indicator-capsule-active-width);
+            background-color: var(--mi-indicator-active-background);
+            opacity: var(--mi-indicator-active-opacity);
+            transform: scale(1);
+        }
+
+        &--active&--vertical {
+            width: var(--mi-indicator-capsule-size);
+            height: var(--mi-indicator-capsule-active-width);
+        }
+    }
+
+    &__numbers {
+        font-size: var(--mi-indicator-numbers-font-size);
+        color: var(--mi-indicator-inactive-background);
+        font-weight: 500;
+        position: relative;
+        padding-bottom: 4px;
+        line-height: 1;
+        min-width: 22px;
+        text-align: center;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: currentColor;
+            transform: translateX(-50%);
+            transition: width 0.28s ease;
+        }
+
+        &--active {
+            color: var(--mi-indicator-active-background);
+            font-weight: 700;
+
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+
+    &__pulse {
+        width: var(--mi-indicator-pulse-size);
+        height: var(--mi-indicator-pulse-size);
+        border-radius: 50%;
+        background-color: var(--mi-indicator-inactive-background);
+        opacity: var(--mi-indicator-inactive-opacity);
+        position: relative;
+
+        &--active {
+            background-color: var(--mi-indicator-active-background);
+            opacity: var(--mi-indicator-active-opacity);
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: calc(-1 * var(--mi-indicator-pulse-ring-width));
+                left: calc(-1 * var(--mi-indicator-pulse-ring-width));
+                right: calc(-1 * var(--mi-indicator-pulse-ring-width));
+                bottom: calc(-1 * var(--mi-indicator-pulse-ring-width));
+                border: var(--mi-indicator-pulse-ring-width) solid
+                    var(--mi-indicator-pulse-ring-color);
+                border-radius: 50%;
+                animation: pulse_animation 1.5s infinite;
+            }
+        }
+    }
+
+    @keyframes pulse_animation {
+        0% {
+            transform: scale(1);
+            opacity: 1;
+        }
+        100% {
+            transform: scale(1.8);
+            opacity: 0;
         }
     }
 

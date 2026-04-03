@@ -5,6 +5,10 @@ exports[`should allow to custom Indicator type 1`] = `
   <div class="mi-indicator__indicators mi-indicator__indicators--horizontal">
     <i class="mi-indicator__square">
     </i>
+    <i class="mi-indicator__square mi-indicator__square--active">
+    </i>
+    <i class="mi-indicator__square">
+    </i>
   </div>
 </div>
 `;

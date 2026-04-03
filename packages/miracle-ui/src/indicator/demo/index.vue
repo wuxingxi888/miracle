@@ -10,6 +10,9 @@ const t = useTranslate({
         circle: '圆形指示器',
         square: '方形指示器',
         line: '线形指示器',
+        capsule: '胶囊拉伸',
+        numbers: '数字步进',
+        pulse: '外部描边扩散',
         border: '边框指示器',
     },
     'en-US': {
@@ -18,6 +21,9 @@ const t = useTranslate({
         circle: 'Circle Indicator',
         square: 'Square Indicator',
         line: 'Line Indicator',
+        capsule: 'Capsule Indicator',
+        numbers: 'Step Numbers',
+        pulse: 'Outline Pulse',
         border: 'Border Indicator',
     },
 });
@@ -28,6 +34,8 @@ const active = ref(0);
 setInterval(() => {
     active.value = (active.value + 1) % 3;
 }, 2000);
+
+const numbersFormatter = (index: number) => String(index + 1).padStart(2, '0');
 </script>
 
 <template>
@@ -46,7 +54,12 @@ setInterval(() => {
 
         <demo-block :title="t('square')">
             <div class="demo-block page-2">
-                <mi-indicator type="square" :size="3" :active="active" />
+                <mi-indicator
+                    type="square"
+                    :size="3"
+                    :active="active"
+                    color="#fff"
+                />
                 <mi-indicator
                     type="square"
                     :size="3"
@@ -66,6 +79,59 @@ setInterval(() => {
                 />
                 <mi-indicator
                     type="line"
+                    :size="3"
+                    :active="active"
+                    direction="vertical"
+                />
+            </div>
+        </demo-block>
+
+        <demo-block :title="t('capsule')">
+            <div class="demo-block page-4">
+                <mi-indicator
+                    type="capsule"
+                    :size="3"
+                    :active="active"
+                    color="#fff"
+                />
+                <mi-indicator
+                    type="capsule"
+                    :size="3"
+                    :active="active"
+                    direction="vertical"
+                />
+            </div>
+        </demo-block>
+
+        <demo-block :title="t('numbers')">
+            <div class="demo-block page-5">
+                <mi-indicator
+                    type="numbers"
+                    :size="3"
+                    :active="active"
+                    :formatter="numbersFormatter"
+                    color="#fff"
+                />
+                <mi-indicator
+                    type="numbers"
+                    :size="3"
+                    :active="active"
+                    :formatter="numbersFormatter"
+                    direction="vertical"
+                />
+            </div>
+        </demo-block>
+
+        <demo-block :title="t('pulse')">
+            <div class="demo-block page-6">
+                <mi-indicator
+                    type="pulse"
+                    :size="3"
+                    :active="active"
+                    color="#fff"
+                />
+                <mi-indicator
+                    type="pulse"
                     :size="3"
                     :active="active"
                     direction="vertical"
@@ -101,7 +167,15 @@ setInterval(() => {
     }
 
     .page-4 {
-        background-image: linear-gradient(-45deg, #fbdee1, #4b3cf2);
+        background-image: linear-gradient(135deg, #9be15d, #00e3ae);
+    }
+
+    .page-5 {
+        background-image: linear-gradient(135deg, #f6d365, #fda085);
+    }
+
+    .page-6 {
+        background-image: linear-gradient(135deg, #a18cd1, #fbc2eb);
     }
 }
 </style>
