@@ -3,15 +3,9 @@
 ### 安装
 
 ```bash
-# 通过 npm
-npm i <%= name %>
+# 安装依赖
+<%= installCommand %>
 
-# 通过 yarn
-yarn add <%= name %>
-
-# 通过 pnpm
-pnpm add <%= name %>
-
-# 通过 bun
-bun add <%= name %>
+# 启动开发
+<%= startDevCommand %>
 ```

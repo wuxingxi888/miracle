@@ -28,7 +28,7 @@ export default defineConfig({
             },
         },
         environment: 'jsdom',
-        include: ['src/**/*.spec.[jt]s?(x)'],
+        include: ['src/**/*.spec.[jt]s?(x)', 'test/**/*.spec.[jt]s?(x)'],
         restoreMocks: true,
     },
     plugins: [vitePluginVue(), vitePluginJsx()],

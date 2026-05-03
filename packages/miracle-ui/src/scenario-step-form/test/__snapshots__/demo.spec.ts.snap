@@ -1,0 +1,197 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render demo and match snapshot 1`] = `
+<div class="demo-scenario-step-form">
+  <div class="mi-nav-bar mi-hairline--bottom">
+    <div class="mi-nav-bar__content">
+      <div class="mi-nav-bar__left mi-haptics-feedback">
+        <i class="mi-badge__wrapper mi-icon mi-icon-arrow-left mi-nav-bar__arrow">
+        </i>
+        <span class="mi-nav-bar__text">
+          返回
+        </span>
+      </div>
+      <div class="mi-nav-bar__title mi-ellipsis">
+        预约报名
+      </div>
+    </div>
+  </div>
+  <div class="mi-steps mi-steps--horizontal">
+    <div class="mi-steps__items">
+      <div class="mi-hairline mi-step mi-step--horizontal mi-step--finish">
+        <div class="mi-step__title">
+          填写信息
+        </div>
+        <div class="mi-step__circle-container">
+          <i class="mi-step__circle">
+          </i>
+        </div>
+        <div class="mi-step__line">
+        </div>
+      </div>
+      <div class="mi-hairline mi-step mi-step--horizontal mi-step--process">
+        <div class="mi-step__title mi-step__title--active">
+          确认资料
+        </div>
+        <div class="mi-step__circle-container">
+          <i class="mi-badge__wrapper mi-icon mi-icon-checked mi-step__icon mi-step__icon--active">
+          </i>
+        </div>
+        <div class="mi-step__line">
+        </div>
+      </div>
+      <div class="mi-hairline mi-step mi-step--horizontal mi-step--waiting">
+        <div class="mi-step__title">
+          提交完成
+        </div>
+        <div class="mi-step__circle-container">
+          <i class="mi-step__circle">
+          </i>
+        </div>
+        <div class="mi-step__line">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="demo-scenario-step-form__status">
+    <span>
+      当前资料
+    </span>
+    <transition-stub
+      appear="false"
+      persisted="false"
+      css="true"
+    >
+      <span class="mi-tag mi-tag--plain mi-tag--primary">
+        待确认
+      </span>
+    </transition-stub>
+  </div>
+  <form class="mi-form">
+    <div class="mi-cell-group__title mi-cell-group__title--inset">
+      基础信息
+    </div>
+    <div class="mi-cell-group mi-cell-group--inset">
+      <div class="mi-cell mi-field">
+        <div class="mi-cell__title mi-field__label">
+          <label
+            id="mi-field-label"
+            for="mi-field-input"
+          >
+            联系人
+          </label>
+        </div>
+        <div class="mi-cell__value mi-field__value">
+          <div class="mi-field__body">
+            <input
+              type="text"
+              id="mi-field-input"
+              name="name"
+              class="mi-field__control"
+              placeholder="请输入姓名"
+              aria-labelledby="mi-field-label"
+            >
+          </div>
+        </div>
+      </div>
+      <div class="mi-cell mi-field">
+        <div class="mi-cell__title mi-field__label">
+          <label
+            id="mi-field-label"
+            for="mi-field-input"
+          >
+            手机号
+          </label>
+        </div>
+        <div class="mi-cell__value mi-field__value">
+          <div class="mi-field__body">
+            <input
+              type="text"
+              id="mi-field-input"
+              name="mobile"
+              class="mi-field__control"
+              placeholder="请输入手机号"
+              aria-labelledby="mi-field-label"
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mi-cell-group__title mi-cell-group__title--inset">
+      预约信息
+    </div>
+    <div class="mi-cell-group mi-cell-group--inset">
+      <div
+        class="mi-cell mi-cell--clickable mi-field"
+        role="button"
+        tabindex="0"
+      >
+        <div class="mi-cell__title mi-field__label">
+          <label
+            id="mi-field-label"
+            for="mi-field-input"
+          >
+            到店日期
+          </label>
+        </div>
+        <div class="mi-cell__value mi-field__value">
+          <div class="mi-field__body">
+            <input
+              type="text"
+              id="mi-field-input"
+              name="date"
+              class="mi-field__control"
+              readonly
+              placeholder="请选择日期"
+              aria-labelledby="mi-field-label"
+            >
+          </div>
+        </div>
+        <i class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon">
+        </i>
+      </div>
+      <div
+        class="mi-cell mi-cell--clickable mi-field"
+        role="button"
+        tabindex="0"
+      >
+        <div class="mi-cell__title mi-field__label">
+          <label
+            id="mi-field-label"
+            for="mi-field-input"
+          >
+            预约门店
+          </label>
+        </div>
+        <div class="mi-cell__value mi-field__value">
+          <div class="mi-field__body">
+            <input
+              type="text"
+              id="mi-field-input"
+              name="store"
+              class="mi-field__control"
+              readonly
+              placeholder="请选择门店"
+              aria-labelledby="mi-field-label"
+            >
+          </div>
+        </div>
+        <i class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon">
+        </i>
+      </div>
+    </div>
+    <div class="demo-scenario-step-form__action">
+      <button
+        type="submit"
+        class="mi-button mi-button--primary mi-button--normal mi-button--block mi-button--round"
+      >
+        <div class="mi-button__content">
+          <span class="mi-button__text">
+            下一步
+          </span>
+        </div>
+      </button>
+    </div>
+  </form>
+</div>
+`;

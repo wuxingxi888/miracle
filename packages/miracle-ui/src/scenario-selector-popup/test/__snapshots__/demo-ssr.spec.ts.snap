@@ -1,0 +1,228 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render demo and match snapshot 1`] = `
+<div class="demo-scenario-selector-popup">
+  <div
+    style
+    class="mi-nav-bar mi-hairline--bottom"
+  >
+    <div class="mi-nav-bar__content">
+      <div class="mi-nav-bar__left mi-haptics-feedback">
+        <!--[-->
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-arrow-left mi-nav-bar__arrow"
+          style
+        >
+          <!--[-->
+        </i>
+        <span class="mi-nav-bar__text">
+          返回
+        </span>
+      </div>
+      <div class="mi-nav-bar__title mi-ellipsis">
+        选择配送区域
+      </div>
+    </div>
+  </div>
+  <!--[-->
+  <div class="mi-cell-group__title mi-cell-group__title--inset">
+    当前选择
+  </div>
+  <div class="mi-cell-group mi-cell-group--inset">
+    <!--[-->
+    <div
+      class="mi-cell mi-cell--clickable"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="mi-cell__title"
+        style
+      >
+        <span>
+          配送区域
+        </span>
+      </div>
+      <div class="mi-cell__value">
+        <span>
+          杭州 / 西湖区
+        </span>
+      </div>
+      <i
+        class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon"
+        style
+      >
+        <!--[-->
+      </i>
+    </div>
+    <div class="mi-cell">
+      <div
+        class="mi-cell__title"
+        style
+      >
+        <span>
+          服务状态
+        </span>
+      </div>
+      <div class="mi-cell__value">
+        <!--[-->
+        <span
+          style
+          class="mi-tag mi-tag--success"
+        >
+          <!--[-->
+          可配送
+        </span>
+      </div>
+    </div>
+  </div>
+  <!--[-->
+  <div
+    style
+    class="mi-overlay"
+    role="button"
+    tabindex="0"
+  >
+  </div>
+  <div
+    style="min-height:420px;"
+    role="dialog"
+    tabindex="0"
+    class="mi-popup mi-popup--round mi-popup--bottom"
+  >
+    <!--[-->
+    <div class="demo-scenario-selector-popup__header">
+      <strong>
+        选择配送区域
+      </strong>
+      <span>
+        当前城市：杭州
+      </span>
+    </div>
+    <div class="mi-tabs mi-tabs--line">
+      <!--[-->
+      <div class="mi-tabs__wrap">
+        <div
+          role="tablist"
+          class="mi-tabs__nav mi-tabs__nav--line"
+          style
+          aria-orientation="horizontal"
+        >
+          <!--[-->
+        </div>
+      </div>
+      <div class="mi-tabs__content">
+        <!--[-->
+        <!--[-->
+      </div>
+    </div>
+    <div class="mi-picker">
+      <div class="mi-picker__toolbar">
+        <!--[-->
+        <button
+          type="button"
+          class="mi-picker__cancel mi-haptics-feedback"
+        >
+          Cancel
+        </button>
+        <div class="mi-picker__title mi-ellipsis">
+          行政区
+        </div>
+        <button
+          type="button"
+          class="mi-picker__confirm mi-haptics-feedback"
+        >
+          Confirm
+        </button>
+      </div>
+      <div
+        class="mi-picker__columns"
+        style="height:264px;"
+      >
+        <!--[-->
+        <div class="mi-picker-column">
+          <ul
+            style="transform:translate3d(0, 110px, 0);transition-duration:0ms;transition-property:none;"
+            class="mi-picker-column__wrapper"
+          >
+            <!--[-->
+            <li
+              role="button"
+              style="height:44px;"
+              tabindex="0"
+              class="mi-picker-column__item mi-picker-column__item--selected"
+            >
+              <div class="mi-ellipsis">
+                西湖区
+              </div>
+            </li>
+            <li
+              role="button"
+              style="height:44px;"
+              tabindex="0"
+              class="mi-picker-column__item"
+            >
+              <div class="mi-ellipsis">
+                上城区
+              </div>
+            </li>
+            <li
+              role="button"
+              style="height:44px;"
+              tabindex="0"
+              class="mi-picker-column__item"
+            >
+              <div class="mi-ellipsis">
+                滨江区
+              </div>
+            </li>
+            <li
+              role="button"
+              style="height:44px;"
+              tabindex="0"
+              class="mi-picker-column__item"
+            >
+              <div class="mi-ellipsis">
+                余杭区
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!--[-->
+        <div
+          class="mi-picker__mask"
+          style="background-size:100% 110px;"
+        >
+        </div>
+        <div
+          class="mi-hairline-unset--top-bottom mi-picker__frame"
+          style="height:44px;"
+        >
+        </div>
+      </div>
+    </div>
+    <div class="demo-scenario-selector-popup__action">
+      <button
+        type="button"
+        class="mi-button mi-button--primary mi-button--normal mi-button--block mi-button--round"
+        style
+      >
+        <div class="mi-button__content">
+          <span class="mi-button__text">
+            <!--[-->
+            暂不修改
+          </span>
+        </div>
+      </button>
+    </div>
+    <i
+      class="mi-badge__wrapper mi-icon mi-icon-cross mi-popup__close-icon mi-popup__close-icon--top-right mi-haptics-feedback"
+      style
+      role="button"
+      tabindex="0"
+    >
+      <!--[-->
+    </i>
+  </div>
+</div>
+`;

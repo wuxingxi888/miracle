@@ -1,0 +1,129 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render demo and match snapshot 1`] = `
+<div class="demo-scenario-result-feedback">
+  <div class="mi-nav-bar mi-hairline--bottom">
+    <div class="mi-nav-bar__content">
+      <div class="mi-nav-bar__left mi-haptics-feedback">
+        <i class="mi-badge__wrapper mi-icon mi-icon-arrow-left mi-nav-bar__arrow">
+        </i>
+        <span class="mi-nav-bar__text">
+          返回
+        </span>
+      </div>
+      <div class="mi-nav-bar__title mi-ellipsis">
+        提交结果
+      </div>
+    </div>
+  </div>
+  <div class="mi-empty">
+    <div class="mi-empty__image">
+      <img src="success">
+    </div>
+    <p class="mi-empty__description">
+      资料已提交，审核结果会通过短信通知
+    </p>
+    <div class="mi-empty__bottom">
+      <button
+        type="button"
+        class="mi-button mi-button--primary mi-button--normal mi-button--round demo-scenario-result-feedback__button"
+      >
+        <div class="mi-button__content">
+          <span class="mi-button__text">
+            返回列表
+          </span>
+        </div>
+      </button>
+    </div>
+  </div>
+  <div
+    role="alert"
+    class="mi-notice-bar"
+  >
+    <i class="mi-badge__wrapper mi-icon mi-icon-info-o mi-notice-bar__left-icon">
+    </i>
+    <div
+      role="marquee"
+      class="mi-notice-bar__wrap"
+    >
+      <div
+        style="transition-duration: 0s;"
+        class="mi-notice-bar__content"
+      >
+        预计 1 个工作日内完成审核，请保持手机号可接收短信
+      </div>
+    </div>
+  </div>
+  <div class="mi-cell-group__title mi-cell-group__title--inset">
+    提交信息
+  </div>
+  <div class="mi-cell-group mi-cell-group--inset">
+    <div class="mi-cell">
+      <div class="mi-cell__title">
+        <span>
+          业务编号
+        </span>
+      </div>
+      <div class="mi-cell__value">
+        <span>
+          APPLY-2026050301
+        </span>
+      </div>
+    </div>
+    <div class="mi-cell">
+      <div class="mi-cell__title">
+        <span>
+          提交时间
+        </span>
+      </div>
+      <div class="mi-cell__value">
+        <span>
+          2026-05-03 09:30
+        </span>
+      </div>
+    </div>
+    <div class="mi-cell">
+      <div class="mi-cell__title">
+        <span>
+          当前状态
+        </span>
+      </div>
+      <div class="mi-cell__value">
+        <span>
+          审核中
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="mi-action-bar mi-safe-area-bottom">
+    <div
+      role="button"
+      class="mi-action-bar-icon"
+      tabindex="0"
+    >
+      <div class="mi-badge__wrapper mi-icon mi-icon-records-o mi-action-bar-icon__icon">
+      </div>
+      记录
+    </div>
+    <div
+      role="button"
+      class="mi-action-bar-icon"
+      tabindex="0"
+    >
+      <div class="mi-badge__wrapper mi-icon mi-icon-service-o mi-action-bar-icon__icon">
+      </div>
+      客服
+    </div>
+    <button
+      type="button"
+      class="mi-button mi-button--primary mi-button--large mi-action-bar-button mi-action-bar-button--primary mi-action-bar-button--last mi-action-bar-button--first"
+    >
+      <div class="mi-button__content">
+        <span class="mi-button__text">
+          继续提交
+        </span>
+      </div>
+    </button>
+  </div>
+</div>
+`;

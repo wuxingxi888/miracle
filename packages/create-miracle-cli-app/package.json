@@ -9,6 +9,7 @@
     "scripts": {
         "dev": "tsc --watch",
         "build": "rimraf ./lib && tsc",
+        "test": "pnpm build && node --test ./test/**/*.test.js",
         "release": "miracle-cli release",
         "prepare": "pnpm build"
     },

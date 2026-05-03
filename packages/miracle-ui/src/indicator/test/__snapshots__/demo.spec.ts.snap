@@ -114,7 +114,10 @@ exports[`should render demo and match snapshot 1`] = `
     <div class="demo-block page-5">
       <div class="mi-indicator">
         <div class="mi-indicator__indicators mi-indicator__indicators--horizontal">
-          <i class="mi-indicator__numbers mi-indicator__numbers--active">
+          <i
+            style="color: rgb(255, 255, 255);"
+            class="mi-indicator__numbers mi-indicator__numbers--active"
+          >
             01
           </i>
           <i class="mi-indicator__numbers">
@@ -127,10 +130,7 @@ exports[`should render demo and match snapshot 1`] = `
       </div>
       <div class="mi-indicator">
         <div class="mi-indicator__indicators mi-indicator__indicators--vertical">
-          <i
-            style="color: rgb(255, 255, 255);"
-            class="mi-indicator__numbers mi-indicator__numbers--active"
-          >
+          <i class="mi-indicator__numbers mi-indicator__numbers--active">
             01
           </i>
           <i class="mi-indicator__numbers">

@@ -189,7 +189,7 @@ exports[`should render demo and match snapshot 1`] = `
         <div class="mi-indicator__indicators mi-indicator__indicators--horizontal">
           <!--[-->
           <i
-            style
+            style="color:#fff;"
             class="mi-indicator__numbers mi-indicator__numbers--active"
           >
             01
@@ -212,7 +212,7 @@ exports[`should render demo and match snapshot 1`] = `
         <div class="mi-indicator__indicators mi-indicator__indicators--vertical">
           <!--[-->
           <i
-            style="color:#fff;"
+            style
             class="mi-indicator__numbers mi-indicator__numbers--active"
           >
             01

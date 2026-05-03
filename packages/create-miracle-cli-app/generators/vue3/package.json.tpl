@@ -29,7 +29,7 @@
   "devDependencies": {
     "@miracle-web/cli": "^7.0.0",
     "vue": "^3.5.0",
-    "sass": "^1.49.7"
+    <%= styleDependency %>
   },
   "eslintConfig": {
     "root": true,

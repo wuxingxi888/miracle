@@ -1,3 +1,9 @@
+const docPage = (path, title) => ({
+    path,
+    title,
+    hideSimulator: true,
+});
+
 export default {
     name: 'miracle',
     build: {
@@ -41,7 +47,7 @@ export default {
             'zh-CN': {
                 title: 'Miracle UI',
                 subtitle: '（适用于 Vue 3）',
-                description: '轻量、可定制的移动端组件库',
+                description: '面向 Vue 3 移动业务场景的组件与模式库',
                 logo: 'https://cdn.jsdelivr.net/gh/wuxingxi888/CDN_IMG_BED/logo.png',
                 langLabel: '中',
                 links: [
@@ -59,12 +65,40 @@ export default {
                         title: '开发指南',
                         items: [
                             { path: 'home', title: '介绍' },
-                            { path: 'quickstart', title: '快速上手' },
-                            { path: 'advanced-usage', title: '进阶用法' },
-                            { path: 'faq', title: '常见问题' },
-                            { path: 'changelog', title: '更新日志' },
-                            { path: 'contribution', title: '贡献指南' },
-                            { path: 'locale', title: '国际化' },
+                            docPage('quickstart', '快速上手'),
+                            docPage('project-positioning', '项目定位'),
+                            docPage('design-tokens', '设计令牌'),
+                            docPage('release-process', '发布流程'),
+                            docPage('advanced-usage', '进阶用法'),
+                            docPage('faq', '常见问题'),
+                            docPage('changelog', '更新日志'),
+                            docPage('contribution', '贡献指南'),
+                            docPage('locale', '国际化'),
+                        ],
+                    },
+                    {
+                        title: '场景组合',
+                        items: [
+                            {
+                                path: 'scenario-search-list',
+                                title: '搜索筛选列表页',
+                            },
+                            {
+                                path: 'scenario-step-form',
+                                title: '分步表单页',
+                            },
+                            {
+                                path: 'scenario-upload-submit',
+                                title: '上传提交页',
+                            },
+                            {
+                                path: 'scenario-selector-popup',
+                                title: '选择器弹层页',
+                            },
+                            {
+                                path: 'scenario-result-feedback',
+                                title: '结果反馈页',
+                            },
                         ],
                     },
                     {
@@ -233,31 +267,25 @@ export default {
                     {
                         title: '组合式 API',
                         items: [
-                            { path: 'use-intro', title: '介绍' },
-                            { path: 'use-click-away', title: 'useClickAway' },
-                            { path: 'use-count-down', title: 'useCountDown' },
-                            {
-                                path: 'use-custom-field-value',
-                                title: 'useCustomFieldValue',
-                            },
-                            {
-                                path: 'use-event-listener',
-                                title: 'useEventListener',
-                            },
-                            {
-                                path: 'use-page-visibility',
-                                title: 'usePageVisibility',
-                            },
-                            { path: 'use-rect', title: 'useRect' },
-                            { path: 'use-relation', title: 'useRelation' },
-                            {
-                                path: 'use-scroll-parent',
-                                title: 'useScrollParent',
-                            },
-                            { path: 'use-state', title: 'useState' },
-                            { path: 'use-toggle', title: 'useToggle' },
-                            { path: 'use-window-size', title: 'useWindowSize' },
-                            { path: 'use-raf', title: 'useRaf' },
+                            docPage('use-intro', '介绍'),
+                            docPage('use-click-away', 'useClickAway'),
+                            docPage('use-count-down', 'useCountDown'),
+                            docPage(
+                                'use-custom-field-value',
+                                'useCustomFieldValue',
+                            ),
+                            docPage('use-event-listener', 'useEventListener'),
+                            docPage(
+                                'use-page-visibility',
+                                'usePageVisibility',
+                            ),
+                            docPage('use-rect', 'useRect'),
+                            docPage('use-relation', 'useRelation'),
+                            docPage('use-scroll-parent', 'useScrollParent'),
+                            docPage('use-state', 'useState'),
+                            docPage('use-toggle', 'useToggle'),
+                            docPage('use-window-size', 'useWindowSize'),
+                            docPage('use-raf', 'useRaf'),
                         ],
                     },
                 ],

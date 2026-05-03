@@ -9,6 +9,7 @@
 -   支持 `Vite`, `Webpack`, `Rspack`, `Vue CLI`, `Rollup`, `esbuild` 等
 -   支持自动引入组件对应的 CSS 样式
 -   支持 SSR（服务端渲染）
+-   与 Miracle 文档站中的按需引入口径保持一致
 
 ### 安装
 
@@ -28,6 +29,13 @@ bun add @miracle-web/auto-import-resolver unplugin-vue-components unplugin-auto-
 
 ## 使用
 
+推荐同时开启：
+
+-   `Components + MiracleResolver()`：自动注册组件并引入样式
+-   `AutoImport + MiracleResolver()`：自动导入组件相关 API
+
+如果你只想自动注册组件，也可以只保留 `Components` 插件配置。
+
 ### Vite
 
 ```ts
@@ -42,6 +50,28 @@ export default defineConfig({
             resolvers: [MiracleResolver()],
         }),
         Components({
+            resolvers: [MiracleResolver()],
+        }),
+    ],
+});
+```
+
+### 同时自动导入函数式 API
+
+如果你的项目里频繁使用 `showToast`、`showDialog` 这类函数式 API，也可以直接使用 `MiracleImports`：
+
+```ts
+// vite.config.ts
+import AutoImport from 'unplugin-auto-import/vite';
+import {
+    MiracleImports,
+    MiracleResolver,
+} from '@miracle-web/auto-import-resolver';
+
+export default defineConfig({
+    plugins: [
+        AutoImport({
+            imports: [MiracleImports()],
             resolvers: [MiracleResolver()],
         }),
     ],
@@ -171,6 +201,8 @@ Components({
     ],
 });
 ```
+
+对于 `Toast`、`Dialog`、`Notify`、`ImagePreview` 这类函数式 API，建议仍在公共入口中统一引入样式，避免调用点分散维护。
 
 ### module
 

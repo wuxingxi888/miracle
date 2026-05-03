@@ -28,16 +28,102 @@ const PROMPTS = [
         type: 'select',
         choices: ['Sass', 'Less'],
     },
+    {
+        name: 'packageManager',
+        message: 'Select package manager',
+        type: 'select',
+        choices: ['pnpm', 'npm', 'yarn', 'bun'],
+    },
 ];
+
+type VueVersion = 'vue2' | 'vue3';
+type PackageManager = 'pnpm' | 'npm' | 'yarn' | 'bun';
+type Preprocessor = 'sass' | 'less';
+
+interface GeneratorInputs {
+    name: string;
+    cssLang: string;
+    vueVersion: VueVersion;
+    preprocessor: Preprocessor;
+    packageManager: PackageManager;
+    styleDependency: string;
+    installCommand: string;
+    startDevCommand: string;
+}
+
+interface TemplateContextArgs {
+    name: string;
+    vueVersion: VueVersion;
+    preprocessor: Preprocessor;
+    packageManager: PackageManager;
+}
+
+const STYLE_DEPENDENCY_MAP: Record<Preprocessor, string> = {
+    sass: '"sass": "^1.49.7"',
+    less: '"less": "^4.2.0"',
+};
+
+export function createTemplateContext(
+    args: TemplateContextArgs,
+): GeneratorInputs {
+    const { name, packageManager, preprocessor, vueVersion } = args;
+    const cssLang = preprocessor === 'sass' ? 'scss' : preprocessor;
+    const installCommand =
+        packageManager === 'yarn' ? 'yarn' : `${packageManager} install`;
+    const startDevCommand =
+        packageManager === 'npm'
+            ? 'npm run dev'
+            : `${packageManager} ${packageManager === 'pnpm' ? 'dev' : 'run dev'}`;
+
+    return {
+        name,
+        cssLang,
+        vueVersion,
+        preprocessor,
+        packageManager,
+        styleDependency: STYLE_DEPENDENCY_MAP[preprocessor],
+        installCommand,
+        startDevCommand,
+    };
+}
+
+export function getStartCommand(args: {
+    name: string;
+    packageManager: PackageManager;
+}) {
+    const { name, packageManager } = args;
+    const runDevCommand =
+        packageManager === 'npm'
+            ? 'npm run dev'
+            : `${packageManager} ${packageManager === 'pnpm' ? 'dev' : 'run dev'}`;
+    const installCommand =
+        packageManager === 'yarn' ? 'yarn' : `${packageManager} install`;
+
+    return `cd ${name} && ${installCommand} && ${runDevCommand}`;
+}
+
+export function renderTemplate(
+    templateContent: string,
+    args: Record<string, string>,
+) {
+    return Object.keys(args).reduce((content, key) => {
+        const regexp = new RegExp(`<%= ${key} %>`, 'g');
+        return content.replace(regexp, args[key]);
+    }, templateContent);
+}
 
 export class VanGenerator {
     outputDir = '';
 
-    inputs = {
+    inputs: GeneratorInputs = {
         name: '',
         cssLang: '',
-        vueVersion: '',
-        preprocessor: '',
+        vueVersion: 'vue3',
+        preprocessor: 'sass',
+        packageManager: 'pnpm',
+        styleDependency: STYLE_DEPENDENCY_MAP.sass,
+        installCommand: 'pnpm install',
+        startDevCommand: 'pnpm dev',
     };
 
     constructor(name: string) {
@@ -53,12 +139,12 @@ export class VanGenerator {
 
     async prompting() {
         return prompt<Record<string, string>>(PROMPTS).then((inputs) => {
-            const preprocessor = inputs.preprocessor.toLowerCase();
-            const cssLang = preprocessor === 'sass' ? 'scss' : preprocessor;
-
-            this.inputs.cssLang = cssLang;
-            this.inputs.vueVersion = inputs.vueVersion;
-            this.inputs.preprocessor = preprocessor;
+            this.inputs = createTemplateContext({
+                name: this.inputs.name,
+                vueVersion: inputs.vueVersion as VueVersion,
+                preprocessor: inputs.preprocessor.toLowerCase() as Preprocessor,
+                packageManager: inputs.packageManager as PackageManager,
+            });
         });
     }
 
@@ -90,11 +176,7 @@ export class VanGenerator {
     copyTpl(from: string, to: string, args: Record<string, any>) {
         fs.copySync(from, to);
         let content = fs.readFileSync(to, 'utf-8');
-
-        Object.keys(args).forEach((key) => {
-            const regexp = new RegExp(`<%= ${key} %>`, 'g');
-            content = content.replace(regexp, args[key]);
-        });
+        content = renderTemplate(content, args);
 
         fs.writeFileSync(to, content);
 
@@ -103,12 +185,12 @@ export class VanGenerator {
     }
 
     end() {
-        const { name } = this.inputs;
+        const { name, packageManager } = this.inputs;
 
         console.log();
         logger.success(`Successfully created ${color.yellow(name)}.`);
         logger.success(
-            `Run ${color.yellow(`cd ${name} && git init && yarn && yarn dev`)} to start development!`,
+            `Run ${color.yellow(getStartCommand({ name, packageManager }))} to start development!`,
         );
     }
 }

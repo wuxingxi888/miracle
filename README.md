@@ -4,12 +4,11 @@
 
 <h1 align="center">Miracle UI</h1>
 
-<p align="center">轻量、可定制的移动端 Vue 组件库</p>
+<p align="center">面向 Vue 3 移动业务场景的组件与模式库</p>
 
 <p align="center">
     <img src="https://img.shields.io/npm/v/@miracle-web/ui?style=flat-square" alt="npm version" />
-   <img src="https://codecov.io/gh/wuxingxi888/miracle/graph/badge.svg?token=FP2KLT5VRY"/> 
-    
+    <img src="https://codecov.io/gh/wuxingxi888/miracle/graph/badge.svg?token=FP2KLT5VRY" alt="coverage" />
 </p>
 
 <p align="center">
@@ -21,66 +20,71 @@
 
 ### 介绍
 
-Miracle UI 是一个**轻量、可定制的移动端组件库**，于 2024 年开源，目前正在努力开发中，欢迎感兴趣的小伙伴一起参与贡献。
+Miracle UI 是一套**面向 Vue 3 移动 Web / 中后台 H5 团队**的组件与模式库。它不仅提供基础组件，也强调业务场景里的推荐组合方式、主题定制能力，以及可以持续发布的工程基础。
+
+### 适合什么项目
+
+-   需要快速搭建移动端业务页面的 Vue 3 项目
+-   需要统一表单、筛选、选择器、上传、导航交互的 H5 团队
+-   希望基于主题变量、暗黑模式和文档站沉淀设计规范的项目
+
+### 不适合什么项目
+
+-   以桌面端复杂布局为主的后台系统
+-   追求跨端一套代码同时覆盖原生 App 的项目
+-   更适合直接使用重量级设计系统或图表生态的场景
+
+### 当前重点
+
+-   业务 H5 场景覆盖
+-   轻量且可主题化
+-   文档、测试、发布链路可依赖
 
 ### 特性
 
--   🚀 性能极佳，组件平均体积小于 1KB（min+gzip）
--   🚀 高质量组件，覆盖移动端主流场景
--   🚀 零外部依赖，不依赖三方 npm 包
--   💪 使用 TypeScript 编写，提供完整的类型定义
--   💪 单元测试覆盖率超过 90%，提供稳定性保障
--   📖 提供丰富的中英文文档和组件示例
--   🍭 支持按需引入和 Tree Shaking
--   🍭 支持无障碍访问（持续改进中）
--   🍭 支持深色模式
+-   高质量移动端组件，覆盖常见业务 H5 交互
+-   提供场景组合、接入指南和设计约束，而不只是一份组件目录
+-   使用 TypeScript 编写，提供完整类型定义
+-   支持按需引入、Tree Shaking、深色模式与主题变量
+-   已内置文档站、测试体系和发布脚本，便于持续迭代
 
-### 脚手架
+### 快速开始
 
-开发中，暂不支持使用脚手架创建项目， 敬请期待！
-
-推荐使用 [Rsbuild](https://github.com/web-infra-dev/rsbuild) 来创建一个脚手架项目。
-
-Rsbuild 是基于 Rspack 的构建工具，由 Vant 作者开发，具备一流的构建速度和开发体验。
-
-你可以通过以下命令创建一个 Rsbuild 项目：
+安装组件库：
 
 ```bash
-npm create rsbuild@latest
+pnpm add @miracle-web/ui
 ```
 
-请访问 [Rsbuild 仓库](https://github.com/web-infra-dev/rsbuild) 了解更多信息。
+如果你希望组件和样式按需自动引入，可搭配 `@miracle-web/auto-import-resolver` 与 `unplugin-vue-components` 使用。完整接入示例见文档站的[快速上手](#/zh-CN/quickstart)。
 
-### 快速上手
+### 脚手架与模板
 
-请阅读[快速上手](#/zh-CN/quickstart)章节，通过该章节你可以了解到 Miracle UI 的安装方法和基本使用姿势。
+仓库内提供了 `create-miracle-cli-app` 模板生成器，用于初始化一个可直接启动的 Miracle CLI 项目。模板默认包含：
+
+-   基础组件示例与文档页
+-   主题变量扩展入口
+-   适合继续沉淀业务组件与场景页的目录结构
 
 ### 浏览器支持
-
-支持现代浏览器以及 Android >= 4.0、iOS >= 8.0。
 
 支持现代浏览器以及 Chrome >= 51、iOS >= 10.0（与 Vue 3 一致）。
 
 ### 维护状态
 
-目前 Miracle 各个版本的维护状态如下：
+| 名称 | 框架 | 最新版 | 状态 |
+| --- | --- | --- | --- |
+| Miracle UI | Vue 3 | ![](https://img.shields.io/npm/v/@miracle-web/ui?style=flat-square) | 持续迭代中 |
 
-| 名称 | 框架 | 发布时间 | 最新版 | 维护状态 |
-| --- | --- | --- | --- | --- |
-| Miracle UI 1 | Vue 3 | `2024.3` | ![](https://img.shields.io/npm/v/@miracle-web/ui?style=flat-square) | 开发中，持续迭代新功能 |
-
-## 链接
-
-### 生态
-
-由 Miracle 团队维护的项目如下：
+## 生态
 
 | 项目 | 描述 |
 | --- | --- |
-| [vite-vue3-h5-template](https://github.com/wuxingxi888/vite-vue3-h5-template) | 基于 vue3 的移动端项目模板 |
-| [vite-react-h5-template](https://github.com/wuxingxi888/vite-react-h5-template) | 基于 react 的移动端项目模板 |
+| `@miracle-web/auto-import-resolver` | Miracle 组件与函数式 API 的按需自动引入解析器 |
+| `create-miracle-cli-app` | 最小可用的 Miracle CLI 项目模板 |
+| `@miracle-web/use` | 可与组件协同使用的组合式 API 集合 |
 
-### 其他链接
+## 链接
 
 -   [意见反馈](https://github.com/wuxingxi888/miracle/issues)
 -   [更新日志](#/zh-CN/changelog)
@@ -88,20 +92,11 @@ npm create rsbuild@latest
 
 ## 贡献
 
-### 核心团队
+欢迎通过 Issue 和 Pull Request 参与贡献。提交前建议同步查看：
 
-以下是 Miracle UI 的核心贡献者们：
+-   文档站中的场景组合与设计令牌页面，保持对外口径一致
+-   贡献指南中的测试、文档、发布要求
 
-| [![Tom Cat](https://avatars.githubusercontent.com/u/29647314?v=4)](https://github.com/wuxingxi888/) |  |  |  |  |  |
-| :-: | :-: | :-: | :-: | :-: | :-: |
-| [Tom Cat](https://github.com/wuxingxi888/) |  |  |  |  |  |
+## 开源协议
 
-### 贡献指南
-
-贡献代码请阅读我们的[贡献指南](#/zh-CN/contribution)。
-
-使用过程中发现任何问题都可以提 [Issue](https://github.com/wuxingxi888/miracle/issues) 给我们，当然，我们也非常欢迎你给我们发 [PR](https://github.com/wuxingxi888/miracle/pulls)。
-
-### 开源协议
-
-本项目基于 [MIT](https://zh.wikipedia.org/wiki/MIT%E8%A8%B1%E5%8F%AF%E8%AD%89) 协议，请自由地享受和参与开源。
+本项目基于 [MIT](https://zh.wikipedia.org/wiki/MIT%E8%A8%B1%E5%8F%AF%E8%AD%89) 协议。

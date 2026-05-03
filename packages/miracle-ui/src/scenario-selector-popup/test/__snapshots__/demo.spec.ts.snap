@@ -1,0 +1,237 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render demo and match snapshot 1`] = `
+<div class="demo-scenario-selector-popup">
+  <div class="mi-nav-bar mi-hairline--bottom">
+    <div class="mi-nav-bar__content">
+      <div class="mi-nav-bar__left mi-haptics-feedback">
+        <i class="mi-badge__wrapper mi-icon mi-icon-arrow-left mi-nav-bar__arrow">
+        </i>
+        <span class="mi-nav-bar__text">
+          返回
+        </span>
+      </div>
+      <div class="mi-nav-bar__title mi-ellipsis">
+        选择配送区域
+      </div>
+    </div>
+  </div>
+  <div class="mi-cell-group__title mi-cell-group__title--inset">
+    当前选择
+  </div>
+  <div class="mi-cell-group mi-cell-group--inset">
+    <div
+      class="mi-cell mi-cell--clickable"
+      role="button"
+      tabindex="0"
+    >
+      <div class="mi-cell__title">
+        <span>
+          配送区域
+        </span>
+      </div>
+      <div class="mi-cell__value">
+        <span>
+          杭州 / 西湖区
+        </span>
+      </div>
+      <i class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon">
+      </i>
+    </div>
+    <div class="mi-cell">
+      <div class="mi-cell__title">
+        <span>
+          服务状态
+        </span>
+      </div>
+      <div class="mi-cell__value">
+        <transition-stub
+          appear="false"
+          persisted="false"
+          css="true"
+        >
+          <span class="mi-tag mi-tag--success">
+            可配送
+          </span>
+        </transition-stub>
+      </div>
+    </div>
+  </div>
+  <transition-stub
+    name="mi-fade"
+    appear="true"
+    persisted="false"
+    css="true"
+    role="button"
+    tabindex="0"
+  >
+    <div
+      class="mi-overlay"
+      style="z-index: 2001;"
+    >
+    </div>
+  </transition-stub>
+  <transition-stub
+    name="mi-popup-slide-bottom"
+    appear="false"
+    persisted="false"
+    css="true"
+  >
+    <div
+      style="min-height: 420px; z-index: 2001;"
+      role="dialog"
+      tabindex="0"
+      class="mi-popup mi-popup--round mi-popup--bottom"
+    >
+      <div class="demo-scenario-selector-popup__header">
+        <strong>
+          选择配送区域
+        </strong>
+        <span>
+          当前城市：杭州
+        </span>
+      </div>
+      <div class="mi-tabs mi-tabs--line">
+        <div class="mi-tabs__wrap">
+          <div
+            role="tablist"
+            class="mi-tabs__nav mi-tabs__nav--line"
+            aria-orientation="horizontal"
+          >
+            <div
+              id="mi-tabs-0"
+              role="tab"
+              class="mi-tab mi-tab--line mi-tab--active"
+              tabindex="0"
+              aria-selected="true"
+              aria-controls="mi-tab"
+            >
+              <span class="mi-tab__text mi-tab__text--ellipsis">
+                常用区域
+              </span>
+            </div>
+            <div
+              id="mi-tabs-1"
+              role="tab"
+              class="mi-tab mi-tab--line"
+              tabindex="-1"
+              aria-selected="false"
+              aria-controls="mi-tab"
+            >
+              <span class="mi-tab__text mi-tab__text--ellipsis">
+                全部区域
+              </span>
+            </div>
+            <div
+              class="mi-tabs__line"
+              style="transform: translateX(50px) translateX(-50%);"
+            >
+            </div>
+          </div>
+        </div>
+        <div class="mi-tabs__content">
+        </div>
+      </div>
+      <div class="mi-picker">
+        <div class="mi-picker__toolbar">
+          <button
+            type="button"
+            class="mi-picker__cancel mi-haptics-feedback"
+          >
+            Cancel
+          </button>
+          <div class="mi-picker__title mi-ellipsis">
+            行政区
+          </div>
+          <button
+            type="button"
+            class="mi-picker__confirm mi-haptics-feedback"
+          >
+            Confirm
+          </button>
+        </div>
+        <div
+          class="mi-picker__columns"
+          style="height: 264px;"
+        >
+          <div class="mi-picker-column">
+            <ul
+              style="transform: translate3d(0, 110px, 0); transition-duration: 0ms; transition-property: none;"
+              class="mi-picker-column__wrapper"
+            >
+              <li
+                role="button"
+                style="height: 44px;"
+                tabindex="0"
+                class="mi-picker-column__item mi-picker-column__item--selected"
+              >
+                <div class="mi-ellipsis">
+                  西湖区
+                </div>
+              </li>
+              <li
+                role="button"
+                style="height: 44px;"
+                tabindex="0"
+                class="mi-picker-column__item"
+              >
+                <div class="mi-ellipsis">
+                  上城区
+                </div>
+              </li>
+              <li
+                role="button"
+                style="height: 44px;"
+                tabindex="0"
+                class="mi-picker-column__item"
+              >
+                <div class="mi-ellipsis">
+                  滨江区
+                </div>
+              </li>
+              <li
+                role="button"
+                style="height: 44px;"
+                tabindex="0"
+                class="mi-picker-column__item"
+              >
+                <div class="mi-ellipsis">
+                  余杭区
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="mi-picker__mask"
+            style="background-size: 100% 110px;"
+          >
+          </div>
+          <div
+            class="mi-hairline-unset--top-bottom mi-picker__frame"
+            style="height: 44px;"
+          >
+          </div>
+        </div>
+      </div>
+      <div class="demo-scenario-selector-popup__action">
+        <button
+          type="button"
+          class="mi-button mi-button--primary mi-button--normal mi-button--block mi-button--round"
+        >
+          <div class="mi-button__content">
+            <span class="mi-button__text">
+              暂不修改
+            </span>
+          </div>
+        </button>
+      </div>
+      <i
+        class="mi-badge__wrapper mi-icon mi-icon-cross mi-popup__close-icon mi-popup__close-icon--top-right mi-haptics-feedback"
+        role="button"
+        tabindex="0"
+      >
+      </i>
+    </div>
+  </transition-stub>
+</div>
+`;

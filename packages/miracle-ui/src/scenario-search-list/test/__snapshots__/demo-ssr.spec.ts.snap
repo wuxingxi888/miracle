@@ -1,0 +1,457 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should render demo and match snapshot 1`] = `
+<div class="demo-scenario-search-list">
+  <div
+    style
+    class="mi-nav-bar mi-hairline--bottom"
+  >
+    <div class="mi-nav-bar__content">
+      <div class="mi-nav-bar__left mi-haptics-feedback">
+        <!--[-->
+        <i
+          class="mi-badge__wrapper mi-icon mi-icon-arrow-left mi-nav-bar__arrow"
+          style
+        >
+          <!--[-->
+        </i>
+        <span class="mi-nav-bar__text">
+          返回
+        </span>
+      </div>
+      <div class="mi-nav-bar__title mi-ellipsis">
+        业务列表
+      </div>
+    </div>
+  </div>
+  <div
+    class="mi-search mi-search--show-action"
+    style
+  >
+    <div class="mi-search__content mi-search__content--round">
+      <div class="mi-cell mi-cell--borderless mi-field mi-search__field">
+        <!--[-->
+        <div class="mi-field__left-icon">
+          <i
+            class="mi-badge__wrapper mi-icon mi-icon-search"
+            style
+          >
+            <!--[-->
+          </i>
+        </div>
+        <div class="mi-cell__value mi-field__value">
+          <!--[-->
+          <div class="mi-field__body">
+            <input
+              type="search"
+              id="mi-search-input"
+              class="mi-field__control"
+              placeholder="搜索订单号、手机号、线索编号"
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="mi-search__action"
+      role="button"
+      tabindex="0"
+    >
+      Cancel
+    </div>
+  </div>
+  <div class="mi-tabs mi-tabs--line">
+    <div style>
+      <div
+        class="mi-sticky"
+        style
+      >
+        <!--[-->
+        <div>
+          <!--[-->
+          <div class="mi-tabs__wrap">
+            <div
+              role="tablist"
+              class="mi-tabs__nav mi-tabs__nav--line"
+              style
+              aria-orientation="horizontal"
+            >
+              <!--[-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mi-tabs__content">
+      <!--[-->
+      <!--[-->
+    </div>
+  </div>
+  <div class="mi-dropdown-menu">
+    <div
+      style
+      class="mi-dropdown-menu__bar"
+    >
+      <!--[-->
+    </div>
+    <!--[-->
+    <div
+      style="top:0px;display:none;"
+      class="mi-dropdown-item mi-dropdown-item--down"
+    >
+      <!--[-->
+    </div>
+    <div
+      style="top:0px;display:none;"
+      class="mi-dropdown-item mi-dropdown-item--down"
+    >
+      <!--[-->
+    </div>
+  </div>
+  <div
+    role="feed"
+    class="mi-list"
+    aria-busy="false"
+  >
+    <!--[-->
+    <!--[-->
+    <div
+      class="mi-cell mi-cell--clickable"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="mi-cell__title"
+        style
+      >
+        <span>
+          订单 #2026050301
+        </span>
+        <div class="mi-cell__label">
+          杭州西湖区 / 10:30 创建
+        </div>
+      </div>
+      <div class="mi-cell__value">
+        <!--[-->
+        <span
+          style
+          class="mi-tag mi-tag--warning"
+        >
+          <!--[-->
+          待处理
+        </span>
+      </div>
+      <i
+        class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon"
+        style
+      >
+        <!--[-->
+      </i>
+    </div>
+    <div
+      class="mi-cell mi-cell--clickable"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="mi-cell__title"
+        style
+      >
+        <span>
+          会员线索 #A1024
+        </span>
+        <div class="mi-cell__label">
+          来源 H5 页面 / 今日 11:12
+        </div>
+      </div>
+      <div class="mi-cell__value">
+        <!--[-->
+        <span
+          style
+          class="mi-tag mi-tag--primary"
+        >
+          <!--[-->
+          跟进中
+        </span>
+      </div>
+      <i
+        class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon"
+        style
+      >
+        <!--[-->
+      </i>
+    </div>
+    <div
+      class="mi-cell mi-cell--clickable"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="mi-cell__title"
+        style
+      >
+        <span>
+          售后工单 #R2308
+        </span>
+        <div class="mi-cell__label">
+          小程序提交 / 昨日 18:20
+        </div>
+      </div>
+      <div class="mi-cell__value">
+        <!--[-->
+        <span
+          style
+          class="mi-tag mi-tag--success"
+        >
+          <!--[-->
+          已完成
+        </span>
+      </div>
+      <i
+        class="mi-badge__wrapper mi-icon mi-icon-arrow mi-cell__right-icon"
+        style
+      >
+        <!--[-->
+      </i>
+    </div>
+    <div class="mi-list__finished-text">
+      已展示全部记录
+    </div>
+    <div class="mi-list__placeholder">
+    </div>
+  </div>
+  <div class="mi-empty demo-scenario-search-list__empty">
+    <div
+      class="mi-empty__image"
+      style
+    >
+      <svg viewbox="0 0 160 160">
+        <defs>
+          <linearGradient
+            x1="50%"
+            y1="100%"
+            x2="50%"
+            id="mi-empty-9"
+          >
+            <!--[-->
+            <stop
+              stop-color="#EEE"
+              offset="0%"
+            >
+            </stop>
+            <stop
+              stop-color="#D8D8D8"
+              offset="100%"
+            >
+            </stop>
+          </linearGradient>
+          <linearGradient
+            x1="100%"
+            y1="50%"
+            y2="50%"
+            id="mi-empty-10"
+          >
+            <!--[-->
+            <stop
+              stop-color="#F2F3F5"
+              offset="0%"
+            >
+            </stop>
+            <stop
+              stop-color="#DCDEE0"
+              offset="100%"
+            >
+            </stop>
+          </linearGradient>
+          <linearGradient
+            x1="50%"
+            x2="50%"
+            y2="100%"
+            id="mi-empty-11"
+          >
+            <!--[-->
+            <stop
+              stop-color="#F2F3F5"
+              offset="0%"
+            >
+            </stop>
+            <stop
+              stop-color="#DCDEE0"
+              offset="100%"
+            >
+            </stop>
+          </linearGradient>
+          <linearGradient
+            x1="50%"
+            x2="50%"
+            y2="100%"
+            id="mi-empty-12"
+          >
+            <!--[-->
+            <stop
+              stop-color="#FFF"
+              offset="0%"
+            >
+            </stop>
+            <stop
+              stop-color="#F7F8FA"
+              offset="100%"
+            >
+            </stop>
+          </linearGradient>
+        </defs>
+        <!--[-->
+        <defs>
+          <linearGradient
+            id="mi-empty-a"
+            x1="64%"
+            y1="100%"
+            x2="64%"
+          >
+            <stop
+              stop-color="#FFF"
+              offset="0%"
+              stop-opacity="0.5"
+            >
+            </stop>
+            <stop
+              stop-color="#F2F3F5"
+              offset="100%"
+            >
+            </stop>
+          </linearGradient>
+        </defs>
+        <g opacity=".8">
+          <path
+            d="M36 131V53H16v20H2v58h34z"
+            fill="url(#mi-empty-a)"
+          >
+          </path>
+          <path
+            d="M123 15h22v14h9v77h-31V15z"
+            fill="url(#mi-empty-a)"
+          >
+          </path>
+        </g>
+        <!--[-->
+        <defs>
+          <linearGradient
+            id="mi-empty-b"
+            x1="64%"
+            y1="97%"
+            x2="64%"
+            y2="0%"
+          >
+            <stop
+              stop-color="#F2F3F5"
+              offset="0%"
+              stop-opacity="0.3"
+            >
+            </stop>
+            <stop
+              stop-color="#F2F3F5"
+              offset="100%"
+            >
+            </stop>
+          </linearGradient>
+        </defs>
+        <g opacity=".8">
+          <path
+            d="M87 6c3 0 7 3 8 6a8 8 0 1 1-1 16H80a7 7 0 0 1-8-6c0-4 3-7 6-7 0-5 4-9 9-9Z"
+            fill="url(#mi-empty-b)"
+          >
+          </path>
+          <path
+            d="M19 23c2 0 3 1 4 3 2 0 4 2 4 4a4 4 0 0 1-4 3v1h-7v-1l-1 1c-2 0-3-2-3-4 0-1 1-3 3-3 0-2 2-4 4-4Z"
+            fill="url(#mi-empty-b)"
+          >
+          </path>
+        </g>
+        <!--[-->
+        <defs>
+          <radialGradient
+            id="mi-empty-d"
+            cx="50%"
+            cy="54%"
+            fx="50%"
+            fy="54%"
+            r="297%"
+            gradienttransform="matrix(-.16 0 0 -.33 .58 .72)"
+          >
+            <stop
+              stop-color="#EBEDF0"
+              offset="0%"
+            >
+            </stop>
+            <stop
+              stop-color="#F2F3F5"
+              offset="100%"
+              stop-opacity="0.3"
+            >
+            </stop>
+          </radialGradient>
+        </defs>
+        <ellipse
+          fill="url(#mi-empty-d)"
+          opacity=".8"
+          cx="80"
+          cy="140"
+          rx="46"
+          ry="8"
+        >
+        </ellipse>
+        <g
+          transform="rotate(-45 113 -4)"
+          fill="none"
+        >
+          <rect
+            fill="url(#mi-empty-9)"
+            x="24"
+            y="52.8"
+            width="5.8"
+            height="19"
+            rx="1"
+          >
+          </rect>
+          <rect
+            fill="url(#mi-empty-10)"
+            x="22.1"
+            y="67.3"
+            width="9.9"
+            height="28"
+            rx="1"
+          >
+          </rect>
+          <circle
+            stroke="url(#mi-empty-11)"
+            stroke-width="8"
+            cx="27"
+            cy="27"
+            r="27"
+          >
+          </circle>
+          <circle
+            fill="url(#mi-empty-12)"
+            cx="27"
+            cy="27"
+            r="16"
+          >
+          </circle>
+          <path
+            d="M37 7c-8 0-15 5-16 12"
+            stroke="url(#mi-empty-11)"
+            stroke-width="3"
+            opacity=".5"
+            stroke-linecap="round"
+            transform="rotate(45 29 13)"
+          >
+          </path>
+        </g>
+      </svg>
+    </div>
+    <p class="mi-empty__description">
+      切换筛选条件后无匹配结果时展示空态
+    </p>
+  </div>
+</div>
+`;
